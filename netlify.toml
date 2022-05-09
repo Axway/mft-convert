@@ -18,7 +18,7 @@ command = "bash build.sh -p"
 
 [context.develop]
 command = "bash build.sh -p"
- 
+
 [dev]
   targetPort = 1313
   port = 1314
