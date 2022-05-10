@@ -1,8 +1,9 @@
-{
+---
     "title": "Transfer CFT: Install, update, upgrade or migrate",
     "linkTitle": "Installation (allOS)",
     "weight": "60"
-}The Transfer CFT installation and migration documentation provides instructions for installing, upgrading, migrating, and deploying your {{< TransferCFT/axwayvariablesComponentShortName  >}}, and includes the following information:
+---
+The Transfer CFT installation and migration documentation provides instructions for installing, upgrading, migrating, and deploying your {{< TransferCFT/axwayvariablesComponentShortName  >}}, and includes the following information:
 
 - How to prepare for installation
 - How to install
