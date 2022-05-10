@@ -1,0 +1,5 @@
+The act of starting Transfer CFT causes Transfer CFT to check for and reload configuration changes. Alternatively, you can dynamically execute the <span class="code">`CFTUTIL RECONFIG type=FOLDER`</span> command to check and reload the configuration.
+
+Upon reloading, if there are any modified configuration parameters or detected errors in the new configuration, Transfer CFT records these in the log. Additionally, Transfer CFT verifies that the updated configuration is compatible with the contents of the current directories.
+
+In particular, if you change the METHOD parameter from FILE to MOVE without modifying the scan_dir and work_dir parameters, and if the work_dir directory is not empty, Transfer CFT displays an error message in the log and will not monitor the corresponding directory.

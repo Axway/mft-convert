@@ -1,0 +1,12 @@
+**UCONF flags legend**
+
+- EXPERT: Extra care must be taken; only advanced users should change this value.
+- RECONFIG: Can be changed dynamically with a CFTUTIL RECONFIG type=UCONF, and a notification is displayed in the LOG.
+- IRECONFIG: Can be changed dynamically with a CFTUTIL RECONFIG type=UCONF, but no notification is displayed in the LOG.
+- RUNTIME MUTABLE READ_ONLY: Cannot be changed by a user.
+- EXPERIMENTAL: Unsupported feature.
+- OBSOLETE: No longer used.
+
+> **Note**
+>
+> Note: By default, all UCONF parameters are static and require a restart. Only parameters with the RECONFIG or IRECONFIG flags are dynamic; for these dynamic parameters only you can use the reconfig command and no restart is required.

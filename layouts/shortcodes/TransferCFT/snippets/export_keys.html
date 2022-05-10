@@ -1,0 +1,9 @@
+You can use PKIEXT to export keys from the local database. To perform an extract, you must use the same PKIPASSW (CFTPARM object) as was originally used to import the key. Using the same logic, to re-import a key that you extracted using PKIEXT, you require the same CFTPARM [PKIPASSW](../../../../c_intro_userinterfaces/command_summary/parameter_intro/pkipassw).
+
+<span class="autonumber">**Problem**: </span>Due to native OS encoding (for example, ASCII on Linux and EBCDIC on z/OS), when you export a key to a different operating system the decode operation may fail even when both systems are using the same password.
+
+<span class="autonumber">**Solution**: </span>Use the correct encoding and put the PKIPASSW in a file, for example, the ASCII string "<span class="code">`password`</span>" on an EBCDIC system. Then point the CFTPARM PKIPASSW to this file, for example<span class="code">` PKIPASSW=#&#124;@/path/to/pkipass_file`</span>. The PKIPASSW is consequently read with the correct encoding, and the file is correctly deciphered.
+
+> **Note**
+>
+> Note: In earlier versions of Transfer CFT, the PKIPASSW parameter was used for encryption in multiple PKI commands. This functionality is now replaced by the UCONF crypto.key_fname parameter.

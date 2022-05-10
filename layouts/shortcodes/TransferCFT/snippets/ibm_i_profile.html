@@ -1,0 +1,29 @@
+1.  In the system Objects menu, type 8 and press Enter to validate.
+1. Modify the user profile to take into account the selections that you made in previous customization steps.
+1. Indicate the name of the job description that you created for the
+
+Transfer CFT working environment.
+
+****Change profile (CHGPRF)****
+
+```
+Type choices, press Enter.
+ 
+Assistance level . . . . . . . . \*SYSVAL \*SAME, \*SYSVAL, \*BASIC...
+Current library . . . . . . . . \*CRTDFT Name, \*SAME, \*CRTDFT
+Initial program to call . . . . CFGINLPGM Name, \*SAME, \*NONE
+Library . . . . . . . . . . . DOICONFIG Name, \*LIBL, \*CURLIB
+Initial menu . . . . . . . . . . MAIN Name, \*SAME, \*SIGNOFF
+Library . . . . . . . . . . . QSYS Name, \*LIBL, \*CURLIB
+Text 'description' . . . . . . . > '<TRANSFER CFT USER PROFILE>'
+ 
+Additional Parameters
+ 
+Job description . . . . . . . . > CFTJOBD Name, \*SAME
+Library . . . . . . . . . . . > CFTPROD Name, \*LIBL, \*CURLIB
+ 
+Additional Parameters
+ 
+Job description . . . . . . . . > CFTJOBD Name, \*SAME
+Library . . . . . . . . . . . > CFTPROD Name, \*LIBL, \*CURLIB
+```

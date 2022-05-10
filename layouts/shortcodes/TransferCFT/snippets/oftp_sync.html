@@ -1,0 +1,32 @@
+To
+specify the synchronization interval, set the SCREDIT and RCREDIT parameters.
+
+These parameters correspond to the maximum number of network messages
+(NSDU) consecutively sent by the requester before the server acknowledges
+their reception. Once the maximum number of network messages has been
+sent, the requester has to wait for permission from the server (reception
+of a FPDU CDT = FPDU from CREDIT) before sending other data.
+
+These parameters are negotiated with the partner’s symmetrical parameter
+during the connection phase. After negotiation, the smallest value is
+selected by Transfer CFT as the CREDIT window (=synchronization interval).
+
+In all cases, the end of the transfer phase (characterized by the sending
+of a FPDU EFID) sets the local value of the authorized CREDIT to zero
+(which is equivalent to a data transfer inhibition). Authorization to
+transfer data again is granted at the next application connection request
+(sending of a FPDU SFID). This means that the sending of a FPDU SFID sets
+the local CREDIT value to the CREDIT value negotiated during the connection
+phase.
+
+> **Note**
+>
+> Note: In accordance with the operation
+> of the Transfer CFT, a transfer in process is acknowledged
+> by determining synchronization points. These points acknowledge the data
+> which have just been transferred. With the Odette protocol, the synchronization
+> points are taken each time a CREDIT is received or sent. All the data
+> sent are consequently acknowledged when the requester receives a CREDIT.
+> Conversely, the previously received data are acknowledged when the Server
+> sends a CREDIT. The CREDIT value ranges from 1 to 999. The recommended
+> value is \*CREDIT = 4 .

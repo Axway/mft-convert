@@ -1,0 +1,22 @@
+
+| FTYPE  | FCODE  | Type of sent file  |
+| --- | --- | --- |
+| Implicit  | BINARY  | Disk sequential files |
+| Implicit  | BINARY  | Members of PDS files (1 transfer per member) |
+| Implicit  | BINARY  | Designated version of a file in GDG |
+| Implicit  | BINARY  | Multi-volume disk file |
+| Implicit  | BINARY  | VSAM KSDS or ESDS file |
+| A | BINARY  | Print file with ASA jump codes (z/OS to z/OS) |
+| M | BINARY  | Print file with machine jump codes (z/OS to z/OS) |
+| S | BINARY  | Spanned variable format file (z/OS to z/OS) |
+
+
+<span class="autonumber"></span>HFS file characteristics
+
+
+| FTYPE  | FCODE  | Type of sent file  |
+| --- | --- | --- |
+| B | BINARY  | Binary file (default) |
+| T | EBCDIC  | Text file |
+| J  | EBCDIC  | Stream text<br/> Using stream text (J) allows a text type file to be sent that contains records that exceed 32 KB. As opposed to text type (FTYPE=T), stream text does not add an EOL sequence (LF or CRLF) to the received file.<br/> When using stream text (FTYPE=J), the sender and the receiver must both have the FTYPE set to J. Setting only the sender or receiver to FTYPE=J results in unexpected content for the transferred file. |
+

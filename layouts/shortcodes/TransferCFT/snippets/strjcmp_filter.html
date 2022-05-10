@@ -1,0 +1,11 @@
+STRJCMP filter
+--------------
+
+A STRJCMP pattern-matching filter can contain the asterisk (\*) and/or the question mark (?) characters. The STRJCMP filter characters are interpreted as follows:
+
+
+| Character  | Description  | Example  |
+| --- | --- | --- |
+| *  | Indicates any sequence of zero or more characters.  | The filter &quot;*.dat&quot; selects any file name that has the extension &quot;.dat&quot;.  |
+| ?  | Indicates any single character.  | The filter &quot;T*.???&quot; selects any file name starting with a 'T' and having an extension of exactly three characters.  |
+

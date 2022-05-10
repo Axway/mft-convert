@@ -1,0 +1,15 @@
+<span id="PI_07_Synchronization_points_option"></span>
+
+### PI 07 Synchronization points option
+
+This field indicates the interval between synchronization points and
+the acknowledgement window. The values negotiated by Transfer CFT depend
+on the type of access to the protocol connection (see PI22).
+
+If a connection is required
+with a mixed type of access, Transfer CFT negotiates the smallest
+value of the **Data transferred between sync points**(S/RPACING) parameters of the of the protocol object (CFTPROT).
+
+In server mode, Transfer CFT cannot increase the value proposed by the
+requester partner. The **Acknowledgement window size** parameters negotiate in the same way as the synchronization
+interval (S/RCHKW of the protocol object (CFTPROT)).

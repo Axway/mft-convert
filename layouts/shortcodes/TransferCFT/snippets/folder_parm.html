@@ -1,0 +1,10 @@
+-   The delay between scans of a given directory is defined by its interval parameter value.
+- By default the ENABLESUBDIR [enable_subdir] parameter is set to YES, and the directory and all its sub-directories are scanned.
+- For each file detected, the name is checked against the configured parameters values in the include and exclude file filters. Files that match the combined criteria are monitored, all others are ignored.
+
+For a file to become a candidate to be submitted, the following conditions must be met:
+
+- File size: If these values are configured, the following rules apply.
+    -   FILESIZEMIN [file_size_min]: The current size must not be less than this value.
+    -   FILESIZEMAX [file_size_max]: The current size must not be greater than this value.
+- The last modification time and duration must not have changed within a number of seconds as defined in the FILEIDLEDELAY [file_idle_delay] parameter value.

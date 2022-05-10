@@ -1,0 +1,24 @@
+ 
+Use this command to define network parameter settings.
+
+
+| Parameters  | Description  |
+| --- | --- |
+| [DISCTD](../../../command_summary/parameter_intro/disctd) | Wait time-out (in seconds) before disconnection, in the absence of a new transfer request to the partner, in requester mode.<br/> The session established for a transfer remains active for DISCTD seconds after the completion of this transfer.<br/> If the value is 0, the wait time-out is infinite. |
+| [see table](../../../command_summary/parameter_intro/discts) | Wait time-out (in seconds) before disconnection, in the absence of a new transfer request from the partner, in server mode.<br/> The session established for a transfer remains active for DISCTS seconds after the completion of this transfer. If at the end of this time-out, no new transfer has been received, the connection is freed by the ABORT FPDU. |
+| [DYNAM](../../../command_summary/parameter_intro/dynam) | Dynamic partner identifier (8 characters) in server mode. |
+| [EXIT](../../../command_summary/parameter_intro/exit)  | Identifier describing the directory EXIT.<br/> The value of this identifier corresponds to the CFTEXIT ID parameter.<br/> The identifier may contain the &amp;NPART symbolic variable. |
+| [EXITA](../../../command_summary/parameter_intro/exita)  | Identifier describing the directory EXIT.<br/> The value of this identifier corresponds to the value of the CFTEXIT ID parameter.<br/> The identifier may contain the &amp;NPART symbolic variable. |
+| [ID](../../../command_summary/parameter_intro/id)  | CFTPROT command identifier.<br/> This name must be referenced in the values taken by the CFTPARM PROT parameter. |
+| [IDF](../../../command_summary/parameter_intro/idf)  | Used to assign an IDF to a file on receiving an NIDF.<br/> This parameter can be used in:<br/> • server mode (sender or receiver)<br/> • receiver requester following the activation of a RECV IDF=&lt;mask&gt; command |
+| [NACK](../../../command_summary/parameter_intro/nack)  | ****PeSIT****<br/> Enables or disables the negative acknowledgement feature. |
+| [NET](../../../command_summary/parameter_intro/net)  | Identifier referring to a CFTNET command associated with this protocol. |
+| [Compression](../../../command_summary/parameter_intro/rcomp). |
+| [RESTART](../../../command_summary/parameter_intro/restart) | Maximum number of transfer restart attempts.<br/> An attempt is taken into account as soon as the physical connection with the remote site is correctly established. |
+| [RTO](../../../command_summary/parameter_intro/rto)  | Network monitoring time-out (in seconds) excluding the protocol connection/disconnection/break phase.<br/> Corresponds to the wait time-out of a reply to an FPDU before disconnection (READ TIME OUT).<br/> If the value is 0, the wait time-out is infinite. |
+| [SAP](../../../command_summary/parameter_intro/sap)  | Name of the local SAP, Service Access Point, associated with this protocol.<br/> Used to identify the &quot;access point&quot; at which incoming connection requests for this communication protocol are placed.<br/> The SAP supplied by a requester partner when making its connection request is retrieved by the local Transfer CFT which uses it to deduce the protocol to be used. Each CFTPROT object in a given resource class must include its specific SAP.<br/> The value of this parameter may be expressed in hexadecimal form. In this case, the first character must be &quot;#&quot; (number sign) (for example: #31 is understood as the ASCII character ‘1’). |
+| [SCOMP](../../../command_summary/parameter_intro/scomp)  | Maximum authorized compression for sending a file.<br/> This compression is negotiated between the sender and the receiver.<br/> A zero value corresponds to no compression. |
+| [SRIN](../../../command_summary/parameter_intro/srin)  | Controls the direction of transfers authorized for the Transfer CFT when it is server, accepter of the protocol connection. |
+| [SROUT](../../../command_summary/parameter_intro/srout) | Controls the direction of transfers authorized for the Transfer CFT when it is requester (initiator of the protocol connection). |
+| [TYPE](../../../command_summary/parameter_intro/type#type_CFTPROT)  | Type of file transfer protocol. |
+

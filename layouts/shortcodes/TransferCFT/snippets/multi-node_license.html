@@ -1,0 +1,12 @@
+<span class="mc-variable axway_variables.Component_Short_Name variable">Transfer CFT</span> in multi-node architecture requires a shared file system for use of a multi-node architecture on several hosts (active/active). Additionally, the system must be configured prior to the multi-node installation and the shared disk ready when starting the Copilot server.
+
+> **Note**
+>
+> Note: See Shared file system prerequisites for details.
+
+You can use a single key for a multi-node installation, as either:
+
+- The hostname must not be defined for the key, or
+- The hostname defined for the key matches the hostname of one of the hosts that composes the multi-node instance
+
+Additionally, the key must have the cluster option.

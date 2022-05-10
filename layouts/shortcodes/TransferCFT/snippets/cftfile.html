@@ -1,0 +1,53 @@
+#### `CFTFILE { PARM &#124; PARAM &#124; PART }`
+
+`TYPE   = { PARM &#124; PARAM &#124; PART }`
+
+`FNAME   = filename  `
+
+`[ HABFNAME   = filename ] `
+
+`[ FBLKSIZE   = { 0   &#124;n } ]`
+
+`[ FSPACE   = n ]`
+
+`[ FSPACEX   = n ]`
+
+`[ MODE   = { CREATE   &#124; REPLACE &#124; DELETE &#124; ERASE } ]`
+
+` `
+
+#### `CFTFILE { CAT &#124; COM }`
+
+`TYPE   = {  CAT   &#124; COM }`
+
+`FNAME   = filename `
+
+`[ RECNB   = n ]`
+
+`[ FBLKSIZE   = { 0   &#124;n } ]`
+
+`[ FSPACE   = { 0   &#124; n } ]`
+
+`[ FSPACEX   =  { 0   &#124; n } ]`
+
+`[ HABFNAME   = filename ]`
+
+`[ MODE   = { CREATE   &#124; REPLACE &#124; DELETE &#124; ERASE} ]`
+
+`[ NODE = { n &#124; 0...16} ] available only when TYPE=CAT`
+
+` `
+
+#### `CFTFILE { ACCNT &#124; LOG }`
+
+`TYPE   = { ACCNT &#124; LOG }`
+
+`FNAME   = filename `
+
+`[ FBLKSIZE   = 0   &#124; n ]`
+
+`[ FSPACE   = 0   &#124;n ]`
+
+`[ FSPACEX   = 0   &#124;n ]`
+
+`[ MODE   = { CREATE   &#124; REPLACE &#124; DELETE &#124; ERASE } ]`

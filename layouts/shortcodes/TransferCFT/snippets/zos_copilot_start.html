@@ -1,0 +1,13 @@
+COPRUN is an example of a JCL statement that starts the Transfer CFT Copilot server. The server can be started as a Start Task. The Transfer CFT Copilot server STEPLIB, and then JOBLIB should be defined as an APF. If it is not defined as an APF, no RACF check can be performed. This results in no log-on check being available and all requests are done with the user associated with the server JOB.
+
+When the <span class="code">`copilot.misc.CreateProcessAsUser`</span> variable is set, STEPLIB or JOBLIB can be non-APF. Only a <span class="mc-variable suite_variables.Central_GovernanceName variable">Central Governance</span>/PassPort user can sign on to Copilot user interface.
+
+> **Note**
+>
+> Note: When the ‘cft.mvs.copilot.check_apf’ uconf variable is set to ‘Yes’, CFTCOPL must be APF authorized to start.
+
+LOG message: <span class="code">`+CFTI42E Copilot must be APF-authorized.`</span>
+
+> **Note**
+>
+> Note: CFTCOPL must be APF authorized to start if the UCONF cft.mvs.copilot.check_apf variable is set to Yes. Otherwise, the Transfer CFT log displays CFTI42E Copilot must be APF-authorized.

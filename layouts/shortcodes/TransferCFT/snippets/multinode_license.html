@@ -1,0 +1,5 @@
+<span class="mc-variable axway_variables.Component_Short_Name variable">Transfer CFT</span> in a multi-node architecture requires a shared file system for use of a multi-node architecture on several hosts (active/active). Additionally, the system must be configured prior to the multi-node installation, and the shared disk ready when starting the Copilot server.
+
+- *Windows only*: You must map the shared disk to a drive letter.
+- *Windows only*: The Copilot Service Mode cannot be started as the LocalSystem account.
+- *Windows only*: If you are running Copilot in Service Mode, you must set up a dependency with the shared disk's service for multi-node.

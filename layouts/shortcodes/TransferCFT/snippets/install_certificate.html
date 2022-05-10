@@ -1,0 +1,44 @@
+The following tables describe the UCONF parameters that determine the certificates used by the Transfer CFT Copilot server to authenticate itself.
+
+You can use the following certificate and private key formats, where the format of the certificate may differ from that of the key.
+
+The certificate type is dictated by the file name extension (.p12, .pkcs12, .der, .pem, for example <span class="code">`my_certificate.pem`</span>).
+
+*For native files in a z/OS or IBM i environment*, Transfer CFT first tries to decode the certificate in PEM format. If the format cannot be determined, the last letters of the file name are used as the suffix. IBM i also handles the certificates stored on the IFS partition.
+
+
+| Supported format  | Type  | Extension  |
+| --- | --- | --- |
+| Certificate  | PKCS#12  | p12, pfx, pkcs12  |
+| Certificate  | PEM  | pem  |
+| Certificate  | DER  | der  |
+| Private key  | PEM  | pem  |
+| Private key  | DER  | der  |
+| Private key  | PKCS#8  | key, pem  |
+
+
+****How to define a PKCS\#12 certificate****
+
+This example uses a single PKCS\#12 certificate where you only require the file name and password.
+
+
+| Parameter | Value |
+| --- | --- |
+| copilot.ssl.SslCertFile | conf/pki/&lt;my_certificate&gt;.p12 |
+| copilot.ssl.SslCertPassword | Certificate password |
+| copilot.ssl.SslKeyFile | Not used |
+| copilot.ssl.SslKeyPassword | Not used |
+
+
+****How to define a DER or PEM certificate****
+
+This example uses a DER(or PEM) certificate with the private key in a separate DER file, where you define the key as well as the certificate.
+
+
+| Parameter | Value |
+| --- | --- |
+| copilot.ssl.SslCertFile | conf/pki /&lt;my_certificate&gt;.der *or* .pem |
+| copilot.ssl.SslCertPassword | Not used |
+| copilot.ssl.SslKeyFile | conf/pki /&lt;my_key&gt;.der *or* .pem |
+| copilot.ssl.SslKeyPassword | Key password, which is mandatory if the key file is encrypted PKCS#8 |
+

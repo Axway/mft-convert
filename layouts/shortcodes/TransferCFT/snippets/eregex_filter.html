@@ -1,0 +1,26 @@
+EREGEX filter
+-------------
+
+EREGEX (extended regular expressions) is the use of special characters and strings to define a search pattern. In Transfer CFT, you can use these search patterns to create filters.
+
+In POSIX-Extended regular expressions, all characters match themselves meaning they match a sub-string anywhere inside the string to be searched. For example *abc*, matches abc123, 123abc, and 123abcxyz. Some symbols are exceptions though; commonly used symbols and example usages are listed in the following table.
+
+
+| Symbol  | Indicates  | Example  |
+| --- | --- | --- |
+| .  | Any character except newline (line break)  | *a.c* matches abc  |
+| [ ]  | Or  | *[def]* means d or e or f  |
+| {}  | Exactly  | *{3}* means exactly three  |
+| ()  | Capture group  | *pand(ora&#124;467)* matches pandora OR pand467  |
+| *  | 0 or more occurrences of the preceding element  | *ab*c* matches ac, abc, abbc, abbbc, and so on |
+| +  | 1 or more occurrences of the preceding element  | *ab+c* matches abc, abbc, abbbc, and so on, but not ac  |
+| ?  | Zero or one occurrence of the preceding element  | *plurals?* matches plural  |
+| &#124;  | Alternation (matches either the right side or the left) / OR operand  | *ab&#124;cd&#124;ef* matches ab or cd or ef  |
+| ^  | Start of a string  | *^a* matches any file that starts with an a  |
+| [^ ...]  | Any single character that is **not** in the class  | *[^/]** matches zero or more occurrences of any character that is not a forward-slash, such as http://  |
+| $  | End of string  | *.*? the end$* matches this is the end  |
+
+
+> **Note**
+>
+> Note: EREGEX refers to POSIX Extended Regular Expression. There are multiple tutorials available online to aid in creating search patterns; for additional information on expression syntax please refer to Regular expressions.

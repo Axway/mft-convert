@@ -1,0 +1,12 @@
+
+| Parameter  | Type  | Default  | Description  |
+| --- | --- | --- | --- |
+| copilot.restapi.enable  | bool  | No  | Enable/disable the REST API service:<br/> • Yes: enable<br/> • No: disable |
+| copilot.restapi.serverport  | int  | 1768  | REST API server port. |
+| copilot.restapi.authentication_method  | string  | system (Windows)<br/> xfbadm (UNIX) | Defines authentication method.<br/> <br/> See also, [xfbadmusr utilitiy.](../../../../cft_intro_install/unix_install_start_here/run_first_time_ux/use_cft_utilities#xfbadmusr1) |
+| copilot.restapi.nb_workers  | int  | 4  | Number of activated workers that process the REST API requests.  |
+| copilot.restapi.maxclient  | int  | 256  | Number of client connections handled per REST worker.  |
+| copilot.restapi.coms_id  | string  | coms  | The TCPIP CFTCOM object identifier used by the REST API server to communicate with the Transfer CFT server.<br/> Leave empty to use the COM file instead. |
+| copilot.restapi.catalog.retry_delay  | int  | 5  |  • The delay between retries in seconds. The Copilot server checks the request status in catalog every retry_delay seconds.<br/> • The delay between retries in seconds. The Copilot server checks the request status in catalog every retry_delay seconds. |
+| copilot.restapi.catalog.retry_timeout  | int  | 30  | The default value of the apiTimeout parameter as defined in the request URL.<br/> Available exclusively for POST requests. |
+

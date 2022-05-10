@@ -1,0 +1,9 @@
+Secure Relay Router Agent installation
+--------------------------------------
+
+Follow the installation instructions provided in the [Secure Relay RA Installation Guide](https://docs.axway.com/bundle/SecureRelay_271_InstallationGuide_allOS_en_PDF/resource/SecureRelayRA_InstallationGuide_allOS_en_PDF.pdf). During installation, it is essential that you configure the Router Agent CA and user certificate as follows to enable secure communication between the Master Agent and Router Agent:
+
+- `<CACertificate>CA_for_RA.der</CACertificate>`
+- `<UserCertificate>USER_for_RA.p12</UserCertificate>`
+
+You need these values when you configure the Master Agent in the <span class="mc-variable axway_variables.Component_Long_Name variable">Transfer CFT</span> configuration, where the user certificate that you use must be signed by <span class="code">`CA_for_RA`</span>. You should use the same CA and USER certificate as for the Master Agent.

@@ -1,0 +1,98 @@
+Command
+
+Parameter
+
+Value
+
+Description
+
+END
+
+DIAGC
+
+string
+
+Specify a comment.
+
+FNAME
+
+string
+
+Modify the FNAME.
+
+NFNAME
+
+string
+
+Modify the NFNAME.
+
+SIGFNAME
+
+string
+
+Modify the SIGFNAME.
+
+RAPPL
+
+string
+
+Modify the RAPPL.
+
+SAPPL
+
+string
+
+Modify the SAPPL.
+
+RUSER
+
+string
+
+Modify the RUSER.
+
+SUSER
+
+string
+
+Modify the SUSER.
+
+RPASSWD
+
+string
+
+Modify the RPASSWD.
+
+SPASSWD
+
+string
+
+Modify the SPASSWD.
+
+ISTATE
+
+NO/YES
+
+Indicates:
+
+- YES: The END command is only a checkpoint.
+- NO (default): This is the final end command indicating that the processing is over. Once the END completes, the transfer enters the next phase.
+
+PHASE
+
+char
+
+The transfer phase at which the command is applied.
+
+PHASE STEP
+
+char
+
+The phase step at which the command is applied.
+
+APPSTATE
+
+string
+
+Specify an application state for the processing
+script that will help the script to restart at the right step if the
+script is relaunched.

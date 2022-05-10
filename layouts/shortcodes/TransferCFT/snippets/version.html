@@ -1,0 +1,20 @@
+Transfer CFT supports:
+
+- TLS version 1.2, 1.1, 1.0 (TLSV1 &#124; TLSV1COMP keyword)
+- SSL version 3.0 (SSLV3 &#124; SSLV3COMP keyword)
+
+**About sessions**
+
+In Transfer CFT, the SSL/TLS session version is proposed by the client and negotiated with the server.
+
+**Client mode**
+
+DIRECT=CLIENT
+
+In client mode, TLSV1COMP or SSLV3COMP sets the header length in the NSDU to enable compatibility with other products.
+
+**Server mode**
+
+DIRECT=SERVER
+
+In server mode, the header length is automatically detected for all SSL versions (SSLV3, TLSV1, SSLV3COMP, TLSV1COMP).

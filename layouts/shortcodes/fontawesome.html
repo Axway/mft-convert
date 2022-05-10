@@ -1,0 +1,8 @@
+<span class="inline-svg" style="font-size:24px; padding: 10px 0px 18px 0px;">
+{{- $fname:=print "fontawesome/" ( .Get 0 ) ".svg" -}}
+{{- $path:="<path" -}}
+{{- $svg:="<svg" -}}
+{{- $fill:="<path fill=\"currentColor\" width=\"20px\" height=\"20px\"" -}}
+{{ replace (readFile $fname) $path $fill | safeHTML }}
+</span>
+

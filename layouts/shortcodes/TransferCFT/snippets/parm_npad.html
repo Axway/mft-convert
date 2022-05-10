@@ -1,0 +1,4 @@
+This parameter defines the padding character at the network level.
+
+- Fixed format: Pads the record with this character up to the size defined by NLRECL. If NPAD is not set, the padding character depends on the FCODE used. When FCODE=ASCII it is an ASCII space, FCODE=EBCDIC it is an EBCDIC space, and FCODE=BINARY it is a binary zero
+- Variable format: Defines the character used to unpad the record. If NPAD is not set, the record is unchanged.

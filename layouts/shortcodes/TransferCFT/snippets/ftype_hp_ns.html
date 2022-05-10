@@ -1,0 +1,13 @@
+
+| FTYPE  | FCODE  | Type of sent file  |
+| --- | --- | --- |
+| ‘ ‘  | BINARY  | Binary  |
+| B  | BINARY  | Binary  |
+| V  | BINARY  | Binary file emulating locally a variable file format  |
+| T  | ASCII  | Text file with LF or CRLF as end-of-line separator  |
+| O  | ASCII  | Text file with CRLF as end-of-line separator  |
+| X  | ASCII  | Text file with LF as end-of-line separator  |
+| J  | ASCII  | Text file with LF or CRLF as end-of-line separator<br/> FTYPE = J refers to stream text. The stream text type allows sending a text file that contains records that are larger than 32 KB. Unlike classical text types (T, O, X) the stream text type does not add an EOL sequence (LF or CRLF) at the end of the received file. |
+| E  | ASCII  | Edit native files.  |
+| N  | BINARY  | Non-edit native file (force the detection of native files rather than OSS ones).  |
+

@@ -1,0 +1,22 @@
+The supported authentication methods are:
+
+
+| Authentication method  | copilot.restapi.authentication_method  | Details  |
+| --- | --- | --- |
+| Operating System  | system  | The user/password is checked against the operating system.<br/> <blockquote> **Note**<br/> Note: We strongly recommend that you set copilot.misc.createprocessasuser=yes when using the system option.<br/> </blockquote> **Unix**<br/> You must use <span ><code>cftsu </code></span>to create users as a superuser is required (sudo or root privilege) to create a group and assign a user to a group. Refer to [Using system users - UNIX](../../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/t_adding_system_user_unix) for details.<br/> • Create a group &quot;group1&quot;: <span >groupadd group1</span><br/> • Add user &quot;user1&quot; to group &quot;group1&quot;: <span >usermod -a -G group1 user1</span><br/> **Windows**<br/> You require a superuser (administrative user account) to create a group and assign a user to a group.<br/> • Create a group &quot;group1&quot;: <span >net localgroup group1 /add</span><br/> • Add user &quot;user1&quot; to group &quot;group1&quot;: <span >net localgroup group1 user1 /add</span><br/> <blockquote> **Note**<br/> Note: For a user belonging to a domain, use: domain\user1 instead of user1<br/> </blockquote>  |
+| Access Management  | am  | This methods uses an indirection towards the Access Management system. The user/password is checked by the configured access management system: <span >Flow Manager</span>, PassPort AM, or internal AM. |
+| xfbadm database<br/> (UNIX and HP NonStop exclusively) | xfbadm  | The user/password is checked using the xfbadm base (see the [xfbadmusr and xfbadmgrp utilities](../../../../cft_intro_install/unix_install_start_here/run_first_time_ux/use_cft_utilities)).<br/> A user that can execute xfbadmusr/xfbadmgrp utilities can create users and groups after executing the <span ><code>profile </code></span>from the runtime directory.<br/> • Create a group &quot;group1&quot; with gid=200:<span > xfbadmgrp add -G group1 -p group1_pw -g 200</span><br/> • From the user prompt, to add a user &quot;user1&quot; to group &quot;group1&quot;enter: <span >xfbadmusr add -l user1 -p user1_pw -u AUTO -g 200</span> |
+
+
+********<span class="autonumber"></span><span id="REST"></span>REST API server authentication method********
+
+********<span class="autonumber"></span>
+![](/Images/TransferCFT/authentication_copilot_server.png)********
+
+> **Note**
+>
+> Note: 1. If copilot.restapi.authentication_method = system, then your access management type must be set to either am.type= none, or both am.type=internal and am.internal.group_database = system.
+
+> **Note**
+>
+> Note: 2. If copilot.restapi.authentication_method = xbfadm, then your access management type must be set to either am.type= none, or both am.type=internal and am.internal.group_database = xbfadm.

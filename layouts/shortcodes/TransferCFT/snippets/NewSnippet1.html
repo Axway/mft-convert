@@ -1,0 +1,13 @@
+Enable Secure Relay and configure the Java
+------------------------------------------
+
+In <span class="mc-variable axway_variables.Component_Long_Name variable">Transfer CFT</span> from the CFTUTIL prompt, perform the following commands:
+
+1. Enable Secure Relay:  
+    ```
+    UCONFSET id=secure_relay.enable ,value=yes
+    ```
+1. Set the full path to Java executable, for example:  
+1. ```
+    UCONFSET id=cft.jre.java_binary_path ,value=/bin/java
+    ```

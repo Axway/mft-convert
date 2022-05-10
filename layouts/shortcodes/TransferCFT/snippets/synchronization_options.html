@@ -1,0 +1,102 @@
+#### Parameters
+
+The SPACING, RPACING, SCHKW and RCHKW parameters
+are used to negotiate the use of the Synchronization function. This function
+comprises the synchronization points
+and acknowledgement anticipation window
+items. The setting of synchronization points allows a transfer to be resumed,
+following an incident, from a point other than the start of the file.
+The resumption point is the last synchronization point acknowledged by
+the file receiver.
+
+The synchronization interval indicates
+the maximum volume of data that the sender can send between two consecutive
+synchronization points. Only the characters of the file to be transferred
+are taken into account in this volume. If the file is compressed, the
+interval between synchronization points must be calculated using the volume
+of data obtained after compression.
+
+The interval between synchronization points must be selected taking
+the following factors into account:
+
+- Exchange of synchronization
+    points: a small interval penalizes performance
+- Spacing of synchronization
+    points: a large interval penalizes restarts
+- Spacing of synchronization
+    points assumes a large "buffering" capability, since this parameter
+    is related to the acknowledgement anticipation
+    window (see below) and consequently to the availability of memory
+    resources
+- Synchronization
+    point can only be set between file articles, even if segmentation has
+    taken place
+
+This means that the negotiated value of the interval between synchronization
+points must always be equal to or greater than the size of the largest
+of the articles of the file to be transferred. If compression is used,
+this then corresponds to the size of the largest article after compression.
+The default value (36 kilo-bytes) has been chosen such that articles of
+up to 32 kilo-bytes in size can be sent without problems, even though
+this would only be necessary under exceptional circumstances.
+
+A zero value of the interval between synchronization points indicates
+that the Synchronization function is not to be used. Although this value
+allows the transfer time to be decreased, the resumption point is the
+start of the file.
+
+The acknowledgement window determines
+the number of synchronization points that the sender of the file can set
+without waiting for an explicit response from the receiver partner for
+each point. A zero value for the acknowledgement window indicates that
+no synchronization point will be acknowledged.
+
+#### In requester mode
+
+When the SROUT
+parameter of the CFTPROT command takes the value BOTH, the synchronization
+interval negotiated by Transfer CFT, whether the transfer type is write (SEND command) or read (RECV command), is the smallest value of the SPACING
+and RPACING parameters.
+
+When the SROUT
+parameter of the CFTPROT command takes the value SENDER (resp. RECEIVER),
+the synchronization interval negotiated by Transfer CFT corresponds to
+the SPACING (or RPACING respectively) parameter for a write
+(or read) transfer type.
+
+The value sent
+may be reduced by the server partner. It is essential for the final value
+negotiated to be greater than the maximum record size of the file. This
+maximum size may also be increased by the compression function on the
+basis of 1 byte every 32 bytes (for example: 32 bytes for a size of 1024,
+128 bytes for a size of 4096).
+
+#### In server mode
+
+If the remote Transfer CFT
+opens a one-way write (or read) session, Transfer CFT negotiates, as synchronization
+interval, the smallest value between what the partner proposes and the
+value of the RPACING parameter of the CFTPROT command for reception
+(or the SPACING parameter for transmission).
+
+For a two-way session,
+Transfer CFT then negotiates the smallest value between the one proposed
+by the partner and the values of the SPACING and RPACING
+parameters.  
+
+The acknowledgement window is negotiated in the same way as the synchronization
+interval, using the SCHKW and RCHKW parameters of the CFTPROT
+command.
+
+The RESYNC parameter is used to negotiate the dynamic resynchronization
+of exchanges option during transfer. The only dynamic resynchronization
+case possible between two Transfer CFTs is in the event of a CRC
+error (PAD = YES).
+
+****Example****
+
+`CFTPROT  ID = INTRAN,         ...         SCHKW   = 2,           SPACING = 4096,         ...`
+
+The sender is able to send up to 4 Mbytes before each synchronization
+point set. The sender can also send up to 8 Mbytes before waiting for
+the last synchronization points to be acknowledged.

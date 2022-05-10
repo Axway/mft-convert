@@ -1,0 +1,30 @@
+The following are commands that you can use to stop Transfer CFT outside of a customized JCL (such as the delivered sample JCL, ******CFTSTOP******, in the target.INSTALL library).
+
+**Normal stop**
+
+```
+/F <Jobname>,SHUT FAST=NO *or* SHUT FAST=YES
+```
+
+**Quick stop**
+
+Enter the operator command:
+
+```
+/P < Transfer CFT
+Jobname>
+```
+
+\- or -
+
+```
+/F < Transfer CFT
+Jobname>,SHUT FAST=YES
+```
+
+**Force** <span class="mc-variable axway_variables.Component_Short_Name variable" style="font-weight: bold;">****Transfer CFT****</span> **shut down**
+
+```
+/F < Transfer CFT
+Jobname>,SHUT FAST=KILL
+```
