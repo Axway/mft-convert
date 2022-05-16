@@ -1,7 +1,9 @@
 ---
-    "title": "Transfer CFT 3.10 User Guide ",
-    "linkTitle": "Transfer CFT User Guide",
-    "weight": "20"
+
+    title: Transfer CFT 3.9 User Guide 
+    linkTitle: Transfer CFT User Guide
+    weight: 20
+
 ---
 Welcome to the Axway {{< TransferCFT/axwayvariablesPlatformorSuiteShortName  >}} Transfer CFT documentation. {{< TransferCFT/axwayvariablesComponentShortName  >}} is the file transfer component in the Axway Managed File Transfer platform, and provides a multi-platform, high-volume, file transfer service. This documentation explains how to install, configure, and manage {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
@@ -13,25 +15,25 @@ Additionally, the Transfer CFT {{< TransferCFT/suitevariablesDocTypeUser  >}} e
 >
 > Visit the Changelog for details on new features in this version as well as previous versions.
 
-For new users
--------------
+QQQ\_QQQ\_DONE
+
+## For new users
 
 [About {{< TransferCFT/axwayvariablesComponentShortName  >}}](overview_intro/about_transfer_cft)
 
-[What are governance services?](overview_intro/c_cg_concepts)
+<a href="overview_intro/c_cg_concepts" class="hyperlink">What are governance services?</a>
 
 [Use command line](c_intro_userinterfaces/about_cftutil)
 
 [Basic administrative tasks](admin_intro/start_stop_cft)
 
-[My first transfer flow](troubleshoot_intro/collecting_information/gettingstarted_intro/my_first_transfer_flow_using_cg)
+<a href="gettingstarted_intro/my_first_transfer_flow_using_cg" class="MCXref xref">My first transfer flow</a>
 
-[My first file transfer (CL)](troubleshoot_intro/collecting_information/gettingstarted_intro/my_first_file_transfer)
+<a href="gettingstarted_intro/my_first_file_transfer" class="MCXref xref">My first file transfer (CL)</a>
 
-[CFTUTIL basics and help](troubleshoot_intro/collecting_information/gettingstarted_intro/my_first_transfer_flow_using_cg)
+[CFTUTIL basics and help](gettingstarted_intro/my_first_transfer_flow_using_cg)
 
-For existing users
-------------------
+## For existing users
 
 [Configure folder monitoring](app_integration_intro/intro_folder_monitor/configure_folder_monitoring)
 
@@ -43,77 +45,61 @@ For existing users
 
 [Set UCONF parameters](admin_intro/uconf/uconf_directory)
 
-Migration and upgrades
-----------------------
+## Migration and upgrades
 
 [Impact and considerations](cft_intro_install/mig_impact_considerations)
 
-Troubleshooting
----------------
+## Troubleshooting
 
 [Troubleshooting information](troubleshoot_intro)
 
 [Messages and error codes](troubleshoot_intro/messages_and_error_codes_start_here)
 
-[Diagnostic codes](troubleshoot_intro/about_error_codes/about_diagnostic_codes/diagi_diagnostic_codes)
+[Diagnostic codes](troubleshoot_intro/messages_and_error_codes_start_here/diagi_diagnostic_codes)
 
-Search tips
------------
+## Documentation
 
-- Use filters to narrow searches.
-- Put words in quotes “like this” for exact matches of phrases.
-- Log in with your Axway ID to access documents that are not available for public users.
+Transfer CFT User Guide [PDF](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_PDF/resource/Transfer_CFT_UsersGuide_allOS_en.pdf) | [Webhelp (Download)]()
 
-Documentation
--------------
+Release Notes [HTML](https://docs.axway.com/bundle/TransferCFT_38_ReleaseNotes_allOS_en_HTML5/page/Content/release_notes/Transfer_CFT_ReleaseNotes_allOS_en.htm) | [PDF](https://docs.axway.com/bundle/TransferCFT_38_ReleaseNotes_allOS_en_PDF/resource/Transfer_CFT_ReleaseNotes_allOS_en.pdf)
 
-Transfer CFT User Guide [PDF](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_PDF/resource/Transfer_CFT_UsersGuide_allOS_en.pdf) &#124; [Webhelp (Download)]()
+Install Unix [HTML](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/UNIX/unix_install_start_here.htm) | [PDF](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_unix_en_PDF/resource/TransferCFT_InstallationGuide_unix_en.pdf)
 
-Release Notes [HTML](https://docs.axway.com/bundle/TransferCFT_38_ReleaseNotes_allOS_en_HTML5/page/Content/release_notes/Transfer_CFT_ReleaseNotes_allOS_en.htm) &#124; [PDF](https://docs.axway.com/bundle/TransferCFT_38_ReleaseNotes_allOS_en_PDF/resource/Transfer_CFT_ReleaseNotes_allOS_en.pdf)
+Install Windows [HTML](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/Windows/Windows/windows_install_start_here.htm) | [PDF](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_windows_en_PDF/resource/TransferCFT_InstallationGuide_windows_en.pdf)
 
-Install Unix [HTML](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/UNIX/unix_install_start_here.htm) &#124; [PDF](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_unix_en_PDF/resource/TransferCFT_InstallationGuide_unix_en.pdf)
+Install z/OS [HTML](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/cft_installation/about_this_document_zos.htm) | [PDF](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_mvs_en_PDF/resource/TransferCFT_InstallationGuide_mvs_en.pdf)
 
-Install Windows [HTML](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/Windows/Windows/windows_install_start_here.htm) &#124; [PDF](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_windows_en_PDF/resource/TransferCFT_InstallationGuide_windows_en.pdf)
+Install IBM i  [HTML](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/cft_installation/about_this_document_ibmi.htm) | [PDF](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_os400_en_PDF/resource/TransferCFT_InstallationGuide_os400_en.pdf)
 
-Install z/OS [HTML](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/cft_installation/about_this_document_zos.htm) &#124; [PDF](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_mvs_en_PDF/resource/TransferCFT_InstallationGuide_mvs_en.pdf)
+Install HP NonStop [HTML](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/HP_NS/preface.htm) | [PDF](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_hp_nonstop_en_PDF/resource/TransferCFT_InstallationGuide_hp_nonstop_en.pdf)
 
-Install IBM i  [HTML](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/cft_installation/about_this_document_ibmi.htm) &#124; [PDF](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_os400_en_PDF/resource/TransferCFT_InstallationGuide_os400_en.pdf)
-
-Install HP NonStop [HTML](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/HP_NS/preface.htm) &#124; [PDF](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_hp_nonstop_en_PDF/resource/TransferCFT_InstallationGuide_hp_nonstop_en.pdf)
-
-Transfer CFT Security Guide (login required) [HTML ](https://docs.axway.com/bundle/TransferCFT_38_SecurityGuide_allOS_en_HTML5/page/Content/AxwayStartsecurity.htm)&#124; [PDF](https://docs.axway.com/bundle/TransferCFT_38_SecurityGuide_allOS_en_PDF/resource/Transfer_CFT_SecurityGuide_allOS_en.pdf)
+Transfer CFT Security Guide (login required) [HTML ](https://docs.axway.com/bundle/TransferCFT_38_SecurityGuide_allOS_en_HTML5/page/Content/AxwayStartsecurity.htm)| [PDF](https://docs.axway.com/bundle/TransferCFT_38_SecurityGuide_allOS_en_PDF/resource/Transfer_CFT_SecurityGuide_allOS_en.pdf)
 
 Swagger Doc [v1.7](http://apidocs.axway.com/swagger-ui/index.html?productname=transfercft&productversion=3.8&filename=transfercft-swagger-api.json)
 
 [VPAT](https://docs.axway.com/bundle/AccessibilityVPATS_allOS_en_HTML5/page/Content/accessibility.htm)
 
-Third-Party Licenses (login required) [PDF](https://support.axway.com/en/documents/document-details/id/1448127)
+Third-Party Licenses (login required) [PDF ](https://support.axway.com/en/documents/document-details/id/1448127)
 
-Additional resources
---------------------
+## Additional resources
 
-[Transfer CFT REST API Swagger](https://apidocs.axway.com/swagger-ui/index.html?productname=transfercft&amp;productversion=3.8&amp;filename=transfercft-swagger-api.json)
+<a href="https://apidocs.axway.com/swagger-ui/index.html?productname=transfercft&amp;productversion=3.8&amp;filename=transfercft-swagger-api.json" class="hyperlink">Transfer CFT REST API Swagger</a>
 
-[Axway Supported Platforms](https://docs.axway.com/bundle/Axway_Products_SupportedPlatforms_allOS_en/resource/Axway_Products_SupportedPlatforms_allOS_en.pdf)
+<a href="https://docs.axway.com/bundle/Axway_Products_SupportedPlatforms_allOS_en/resource/Axway_Products_SupportedPlatforms_allOS_en.pdf" class="hyperlink">Axway Supported Platforms</a>
 
-[Axway Flow Manager](https://apidocs.axway.com/swagger-ui/index.html?productname=transfercft&amp;productversion=3.8&amp;filename=transfercft-swagger-api.json)
+<a href="https://apidocs.axway.com/swagger-ui/index.html?productname=transfercft&amp;productversion=3.8&amp;filename=transfercft-swagger-api.json" class="hyperlink">Axway Flow Manager</a>
 
-[Axway Support](https://support.axway.com/)
+<a href="https://support.axway.com/" class="hyperlink">Axway Support</a>
 
-[Axway Community](https://community.axway.com/s/)
+<a href="https://community.axway.com/s/" class="hyperlink">Axway Community</a>
 
-Other
------
+## Search tips
 
-Sentinel Event Router User Guide PDF
+- Use filters to narrow searches.
+- Put words in quotes “like this” for exact matches of phrases.
+- Log in with your Axway ID to access documents that are not available for public users.
 
-Sentinel Event Router Installation UNIX PDF
-
-Sentinel Event Router Installation Windows PDF
-
-Sentinel Event Router Installation MVS PDF
-
-Sentinel Event Router Installation OS400 PDF
+## Other
 
 Go to Axway [support](https://support.axway.com/) to find documentation for Sentinel versions earlier than 4.2.0.
 
