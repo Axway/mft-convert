@@ -1,6 +1,6 @@
 ---
     title: Transfer CFT 3.10 User Guide 
-    linkTitle: "Transfer CFT User Guide
+    linkTitle: Transfer CFT User Guide
     weight: 20
 ---
 
