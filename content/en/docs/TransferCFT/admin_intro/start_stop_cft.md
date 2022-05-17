@@ -1,17 +1,14 @@
 ---
-
-    title: Manage the Transfer CFT server
-    linkTitle: Start, stop, and administration scripts
-    weight: 200
-
----
-## Server command overview
+    title: "Manage the Transfer CFT server"
+    linkTitle: "Start, stop, and administration scripts"
+    weight: 190
+---## Server command overview
 
 ****This section refers only to non multi-node architecture.****
 
 You can use Central Governance to stop, start, check status, and restart a Transfer CFT, or alternatively use the administration commands and scripts provided in this section to manage the application.
 
-When opening a new session to manage your {{< TransferCFT/axwayvariablesComponentShortName  >}}, you must first set the environmental parameters. See <a href="#Set" class="MCXref xref">Set the Transfer CFT profile</a>.
+When opening a new session to manage your {{< TransferCFT/axwayvariablesComponentShortName  >}}, you must first set the environmental parameters. See [Set the Transfer CFT profile](#Set).
 
 - [Start {{< TransferCFT/axwayvariablesComponentShortName >}} server](#Start)
     -   Standard start
@@ -42,7 +39,7 @@ When opening a new session to manage your {{< TransferCFT/axwayvariablesComponen
 
 ****UNIX only****
 
-To simplify the use of <span class="code">`cft `</span>commands, you can use the autocomplete feature when working in interactive mode. See [Autocomplete](../../c_intro_userinterfaces/about_cftutil/autocomplete).
+To simplify the use of `cft `commands, you can use the autocomplete feature when working in interactive mode. See [Autocomplete](../../c_intro_userinterfaces/about_cftutil/autocomplete).
 
 <span id="Start"></span>
 
@@ -107,10 +104,10 @@ Library . . . . . . . . . . . > CFTPROD Name, \*LIBL, \*CURLIB
 Use the following command to start {{< TransferCFT/axwayvariablesComponentShortName  >}}after installation or stopping the server.
 
 ```
-<span class="code">` cft start`</span>
+cft start
 ```
 
-In Windows only you can also use the Start menu or automatically start the server in Service Mode. See <a href="#Windows2" class="MCXref xref">Windows tasks</a>.
+In Windows only you can also use the Start menu or automatically start the server in Service Mode. See [Windows tasks](#Windows2).
 
 #### Start and suspend interactive mode
 
@@ -192,8 +189,8 @@ cft status
 
 To configure the Transfer CFT start-up PURGE option, set the uconf values for:
 
-- cft.purge.enable\_on\_start: Defines if purge should run when starting Transfer CFT
-- cft.purge.background\_on\_start: Defines if purging on start-up occurs in the background
+- cft.purge.enable_on_start: Defines if purge should run when starting Transfer CFT
+- cft.purge.background_on_start: Defines if purging on start-up occurs in the background
 - cft.purge.quantity: Defines the number of transfers to delete in a step (only applicable for background purging)
 
 <span id="Windows2"></span>
@@ -204,7 +201,7 @@ To configure the Transfer CFT start-up PURGE option, set the uconf values for:
 
 #### Windows menus
 
-From the desktop <span class="bold_in_para">****Start****</span> menu, select<span class="bold_in_para"> ****All Programs &gt; Axway Software &gt;Axway &gt; &lt;product> &gt; Stop &lt;product>****</span>
+From the desktop ****Start**** menu, select ****All Programs &gt; Axway Software &gt;Axway &gt; &lt;product> &gt; Stop &lt;product>****
 
 <span id="Service"></span>
 
@@ -214,9 +211,9 @@ During installation you can elect to run most {{< TransferCFT/axwayvariablesComp
 
 If you installed the products in Windows service mode, you can start and stop most products with Windows already running as follows:
 
-1. From the desktop, select <span class="bold_in_para">****Start > Settings > Control Panel > Administrative Tools > Services****</span>.
+1. From the desktop, select ****Start > Settings > Control Panel > Administrative Tools > Services****.
 1. Scroll down the Services list and right-click the product.
-1. From the menu, select <span class="bold_in_para">****Start****</span>.
+1. From the menu, select ****Start****.
 
 <span id="Multi-node_specific"></span>
 
@@ -247,19 +244,22 @@ The following are commands that you can use to stop Transfer CFT outside of a c
 Enter the operator command:
 
 ```
-/P <{{< TransferCFT/axwayvariablesComponentShortName >}} Jobname>
+/P < Transfer CFT
+Jobname>
 ```
 
 \- or -
 
 ```
-/F <{{< TransferCFT/axwayvariablesComponentShortName >}} Jobname>,SHUT FAST=YES
+/F < Transfer CFT
+Jobname>,SHUT FAST=YES
 ```
 
 **Force** {{< TransferCFT/axwayvariablesComponentShortName  >}} **shut down**
 
 ```
-/F <{{< TransferCFT/axwayvariablesComponentShortName >}} Jobname>,SHUT FAST=KILL
+/F < Transfer CFT
+Jobname>,SHUT FAST=KILL
 ```
 
 #### Restart

@@ -1,11 +1,8 @@
 ---
-
-    title: Using  the LISTPKI command
-    linkTitle: Using LISTPKI
-    weight: 250
-
----
-You can use the LISTPKI
+    title: "Using  the LISTPKI command"
+    linkTitle: "Using LISTPKI"
+    weight: 240
+---You can use the LISTPKI
 command to display the local certificate database according to criteria
 that you set in the command parameters. Additionally, you can use the default model or create a new model to customize the elements displayed in the output. By default, the LISTPKI command uses the`  dspcnf.xml` model file as a basis for the dispaly, which is located in `<installdir>/runtime/conf`.
 
@@ -14,13 +11,13 @@ that you set in the command parameters. Additionally, you can use the default mo
 
 | Parameter  | Description  |
 | --- | --- |
-| [CONTENT = BRIEF | FULL | DEBUG ] | Result display mode.<br/> • FULL: All contents display<br/> • DEBUG: All contents and additional general information display<br/> • BRIEF: a 79-character entry is displayed for each certificate. Additionally, when using the BRIEF value to display content:<br/> • Items display showing a clear parent/child relationship<br/> • If a certificate is marked as **Expired** (!), all of its children are labeled **Parent expired** (?)<br/> • If a certificate's parent is missing, the line displays either a question mark (**?**) if the issuer is filtered, or an exclamation mark (**!**) if the issuer is missing<br/> The <a href="#FMODEL%C2%A0d">FMODEL display example</a> features these elements.<br/> |
+| [CONTENT = BRIEF &#124; FULL &#124; DEBUG ] | Result display mode.<br/> • FULL: All contents display<br/> • DEBUG: All contents and additional general information display<br/> • BRIEF: a 79-character entry is displayed for each certificate. Additionally, when using the BRIEF value to display content:<br/> • Items display showing a clear parent/child relationship<br/> • If a certificate is marked as **Expired** (!), all of its children are labeled **Parent expired** (?)<br/> • If a certificate's parent is missing, the line displays either a question mark (**?**) if the issuer is filtered, or an exclamation mark (**!**) if the issuer is missing<br/> The [FMODEL display example](#FMODEL%C2%A0d) features these elements.<br/> |
 | [ID = {*, string1..8}] | Unique local identifier of the certificate(s) to be displayed.<br/> The * and ? wildcard characters are accepted for the ID parameter value. |
 | [ INUM = {number0...99} ]  | Internal number for the intermediate certificates in an imported chain of certificates (in the PKI database).<br/> You can use this option to select a specific intermediate certificate. |
-| [TYPE = ALL | USER | ROOT | INTER | KEY | CERT | | ENTITY ] | Type of certificate to display:<br/> • ALL: all certificates<br/> • USER: user certificates<br/> • ROOT: root authority certificates<br/> • INTER: intermediate authority certificates<br/> • KEY: list PKIKEY items<br/> • CERT: list ROOT, INTER, and USER certificates for PKICER only<br/> • ENTITY: any entity identifier created using PKIENTITY command |
-| [STATE = ALL | ACT | INACT | EXPIRED] | Status of the certificates to display:<br/> • ALL: all statuses<br/> • ACT: all activated certificates<br/> • INACT: all deactivated certificates<br/> • EXPIRED: all expired certificates |
+| [TYPE = ALL &#124; USER &#124; ROOT &#124; INTER &#124; KEY &#124; CERT &#124; &#124; ENTITY ] | Type of certificate to display:<br/> • ALL: all certificates<br/> • USER: user certificates<br/> • ROOT: root authority certificates<br/> • INTER: intermediate authority certificates<br/> • KEY: list PKIKEY items<br/> • CERT: list ROOT, INTER, and USER certificates for PKICER only<br/> • ENTITY: any entity identifier created using PKIENTITY command |
+| [STATE = ALL &#124; ACT &#124; INACT &#124; EXPIRED] | Status of the certificates to display:<br/> • ALL: all statuses<br/> • ACT: all activated certificates<br/> • INACT: all deactivated certificates<br/> • EXPIRED: all expired certificates |
 | FMODEL | The path to the file containing the models. If no model is found, the default format, which is the same as for the DISPLAY command, is used.<br/> <blockquote> **Note**<br/> Transfer CFT 3.7 and higher uses the dspcnf.xml model fileby default. To have the display format from a previous version, use FMODEL=NONE.<br/> </blockquote>  |
-| ROOTCID  | The certificate authority ID. See an example in <a href="../../../../c_intro_userinterfaces/command_summary/parameter_intro/rootcid">ROOTCID</a>.  |
+| ROOTCID  | The certificate authority ID. See an example in [ROOTCID](../../../../c_intro_userinterfaces/command_summary/parameter_intro/rootcid).  |
 | HELP  | Provides helps for the available fields for the different elements, or lists the available MODELS for the given file. Values include:<br/> • NONE (default)<br/> • FIELDS<br/> • MODELS |
 
 
@@ -32,101 +29,101 @@ The following information is displayed for the CONTENT parameter BRIEF
 value:
 
 ```
-<span style="font-family: &quot;Courier New&quot;;"> 
+ 
 Id.        Root    Type State
-Exp.Date     Delivered to    Delivered by</span>
-<span style="font-family: &quot;Courier New&quot;;"> 
+Exp.Date     Delivered to    Delivered by
+ 
 4KL1CA     4KL1CA  R    INACT
 28/07/2039   4k_l1_ca       
-4k_root</span>
-<span style="font-family: &quot;Courier New&quot;;"> 
+4k_root
+ 
 4KL1CA1    4KL1CA1 R    ACT  
 28/07/2039   4k_l1_ca       
-4k_root</span>
-<span style="font-family: &quot;Courier New&quot;;"> 
+4k_root
+ 
 4KROOT     4KROOT  R    ACT  
 28/07/2039   4k_root        
-4k_root</span>
-<span style="font-family: &quot;Courier New&quot;;">   
+4k_root
+   
 4K1L1EXP 4KROOT  U    ACT   14/10/2009 !
-4k_l1_user2_exp 4k_root</span>
-<span style="font-family: &quot;Courier New&quot;;">   
+4k_l1_user2_exp 4k_root
+   
 4KL1US1  4KROOT  U    ACT  
-28/07/2039   4k_l1_user1     4k_root</span>
-<span style="font-family: &quot;Courier New&quot;;">>      
-5 PKICER selected</span>
+28/07/2039   4k_l1_user1     4k_root
+>      
+5 PKICER selected
  
-<span style="font-family: &quot;Courier New&quot;;">Id.    
-Certificates list</span>
-<span style="font-family: &quot;Courier New&quot;;">ENTITY1 4KL1US1,
-4K1L1EXP</span>
-<span style="font-family: &quot;Courier New&quot;;">>      
-1 PKIENTITY selected</span>
+Id.    
+Certificates list
+ENTITY1 4KL1US1,
+4K1L1EXP
+>      
+1 PKIENTITY selected
  
-<span style="font-family: &quot;Courier New&quot;;">Id.             
-S K Bits</span>
-<span style="font-family: &quot;Courier New&quot;;">4KL1USER1       
-A x 4096</span>
-<span style="font-family: &quot;Courier New&quot;;">4KL1USER1KEYPRIV I x
-4096</span>
-<span style="font-family: &quot;Courier New&quot;;">4KL1USER1KEYPUB 
-A   4096</span>
-<span style="font-family: &quot;Courier New&quot;;">>      
-3 PKIKEY selected</span>
+Id.             
+S K Bits
+4KL1USER1       
+A x 4096
+4KL1USER1KEYPRIV I x
+4096
+4KL1USER1KEYPUB 
+A   4096
+>      
+3 PKIKEY selected
 ```
 <span id="CONTENT_BRIEF_Display"></span>
 
 ### CONTENT=BRIEF display (former format, or no model)
 
 ```
-<span style="font-family: &quot;Courier New&quot;;">Certificates:</span>
+Certificates:
  
-<span style="font-family: &quot;Courier New&quot;;">Id.         
+Id.         
 Root         iNum T S C K E
-Exp.Date   Delivered to  Delivered by</span>
-<span style="font-family: &quot;Courier New&quot;;">------------
------------- ---- - - - - - ---------- ------------- -------------</span>
-<span style="font-family: &quot;Courier New&quot;;">4KL1CA      
+Exp.Date   Delivered to  Delivered by
+------------
+------------ ---- - - - - - ---------- ------------- -------------
+4KL1CA      
 4KL1CA            R I
 x     28/07/2039 4k_l1_ca     
-4k_root</span>
-<span style="font-family: &quot;Courier New&quot;;">4KL1CA1     
+4k_root
+4KL1CA1     
 4KL1CA1           R A
 x     28/07/2039 4k_l1_ca     
-4k_root</span>
-<span style="font-family: &quot;Courier New&quot;;">4KROOT      
+4k_root
+4KROOT      
 4KROOT            R A
 x     28/07/2039
-4k_root       4k_root</span>
-<span style="font-family: &quot;Courier New&quot;;">4K1L1EXP    
+4k_root       4k_root
+4K1L1EXP    
 4KROOT            U A x
-x ! 14/10/2009 4k_l1_user2_e 4k_root</span>
-<span style="font-family: &quot;Courier New&quot;;">4KL1US1     
+x ! 14/10/2009 4k_l1_user2_e 4k_root
+4KL1US1     
 4KROOT            U A x
-x   28/07/2039 4k_l1_user1   4k_root</span>
+x   28/07/2039 4k_l1_user1   4k_root
  
-<span style="font-family: &quot;Courier New&quot;;">Entities:</span>
+Entities:
  
-<span style="font-family: &quot;Courier New&quot;;">Id.                             
-Certificate list</span>
-<span style="font-family: &quot;Courier New&quot;;">--------------------------------
----------------------------------</span>
-<span style="font-family: &quot;Courier New&quot;;">ENTITY1                         
-4KL1US1</span>
-<span style="font-family: &quot;Courier New&quot;;">                                
-4K1L1EXP</span>
-<span style="font-family: &quot;Courier New&quot;;">Keys:</span>
+Id.                             
+Certificate list
+--------------------------------
+---------------------------------
+ENTITY1                         
+4KL1US1
+                                
+4K1L1EXP
+Keys:
  
-<span style="font-family: &quot;Courier New&quot;;">Id.                             
-S K Bits</span>
-<span style="font-family: &quot;Courier New&quot;;">--------------------------------
-- - ----</span>
-<span style="font-family: &quot;Courier New&quot;;">4KL1USER1                       
-A x 4096</span>
-<span style="font-family: &quot;Courier New&quot;;">4KL1USER1KEYPRIV                
-I x 4096</span>
-<span style="font-family: &quot;Courier New&quot;;">4KL1USER1KEYPUB                 
-A   4096</span>
+Id.                             
+S K Bits
+--------------------------------
+- - ----
+4KL1USER1                       
+A x 4096
+4KL1USER1KEYPRIV                
+I x 4096
+4KL1USER1KEYPUB                 
+A   4096
 ```
 
 ****Id****
@@ -170,144 +167,132 @@ CN (Common name) attribute of the certificate signer DN field.
 ### CONTENT=FULL display (default display)
 
 ```
-<span style="font-family: &quot;Courier New&quot;;"><FIELD  Cert
+<FIELD  Cert
 Id.             =
-'4KL1US1'</span>
-<span style="font-family: &quot;Courier New&quot;;">       
+'4KL1US1'
+       
 Cert Type            =
-'U'</span>
-<span style="font-family: &quot;Courier New&quot;;">       
+'U'
+       
 Cert Root            =
-'4KROOT'</span>
-<span style="font-family: &quot;Courier New&quot;;">       
-Internal num         = ''</span>
-<span style="font-family: &quot;Courier New&quot;;">       
+'4KROOT'
+       
+Internal num         = ''
+       
 Signer Id.           =
-'4KROOT'</span>
-<span style="font-family: &quot;Courier New&quot;;">       
+'4KROOT'
+       
 State               
-= 'ACT'</span>
-<span style="font-family: &quot;Courier New&quot;;">       
-Serial number        = '45'</span>
-<span style="font-family: &quot;Courier New&quot;;">       
-Delivered to         = '4k_l1_user1'</span>
-<span style="font-family: &quot;Courier New&quot;;">       
-Delivered by         = '4k_root'</span>
-<span style="font-family: &quot;Courier New&quot;;">       
-Issuer status        = 'missing'</span>
-<span style="font-family: &quot;Courier New&quot;;">       
-Expired Before       = '29/07/2009'</span>
-<span style="font-family: &quot;Courier New&quot;;">       
-Expired After        = '28/07/2039'</span>
-<span style="font-family: &quot;Courier New&quot;;">       
+= 'ACT'
+       
+Serial number        = '45'
+       
+Delivered to         = '4k_l1_user1'
+       
+Delivered by         = '4k_root'
+       
+Issuer status        = 'missing'
+       
+Expired Before       = '29/07/2009'
+       
+Expired After        = '28/07/2039'
+       
 Comment             
-= ''</span>
-<span style="font-family: &quot;Courier New&quot;;">       
+= ''
+       
 Owner's DN           =
-'/C=FR/ST=HAUTS-DE-SEINE/L=PUTEAUX/O=CFT_SAMPLE/OU=CFT_L1_SAMPLE/CN=4k_l1_user1'</span>
-<span style="font-family: &quot;Courier New&quot;;">       
+'/C=FR/ST=HAUTS-DE-SEINE/L=PUTEAUX/O=CFT_SAMPLE/OU=CFT_L1_SAMPLE/CN=4k_l1_user1'
+       
 Signer's DN          =
-'/C=FR/ST=HAUTS-DE-SEINE/L=PUTEAUX/O=CFT_SAMPLE/OU=CFT_SAMPLE/CN=4k_root'</span>
-<span style="font-family: &quot;Courier New&quot;;">       
-Private RSA Key size = '4096'</span>
-<span style="font-family: &quot;Courier New&quot;;">       
+'/C=FR/ST=HAUTS-DE-SEINE/L=PUTEAUX/O=CFT_SAMPLE/OU=CFT_SAMPLE/CN=4k_root'
+       
+Private RSA Key size = '4096'
+       
 Usage Key            =
-'Digital Signature, Key Encipherment, Data Encipherment'</span>
-<span style="font-family: &quot;Courier New&quot;;">       
+'Digital Signature, Key Encipherment, Data Encipherment'
+       
 Extended Usage Key   = 'TLS Web Server Authentication, TLS Web Client
-Authentication'</span>
-<span style="font-family: &quot;Courier New&quot;;">       
-/></span>
-<span style="font-family: &quot;Courier New&quot;;">>      
-1 PKICER selected</span>
-<span style="font-family: &quot;Courier New&quot;;">>      
-1 PKICER without displayed issuer</span>
-<span style="font-family: &quot;Courier New&quot;;">>      
-0 PKIENTITY selected</span>
-<span style="font-family: &quot;Courier New&quot;;">>      
-0 PKIKEY selected</span>
+Authentication'
+       
+/>
+>      
+1 PKICER selected
+>      
+1 PKICER without displayed issuer
+>      
+0 PKIENTITY selected
+>      
+0 PKIKEY selected
 ```
 
 ### CONTENT=FULL display (former format, or no model)
 
 ```
-<span style="font-family: &quot;Courier New&quot;;">         
+         
 Cert  id.     
-ID         = 4KL1US1</span>
-<span style="font-family: &quot;Courier New&quot;;">         
+ID         = 4KL1US1
+         
 Cert  type    
-TYPE       = USER</span>
-<span style="font-family: &quot;Courier New&quot;;">         
+TYPE       = USER
+         
 Root  id.     
-ROOT       = 4KROOT</span>
-<span style="font-family: &quot;Courier New&quot;;">         
-Internal num.  INUM       =</span>
-<span style="font-family: &quot;Courier New&quot;;"> </span>
-<span style="font-family: &quot;Courier New&quot;;">         
+ROOT       = 4KROOT
+         
+Internal num.  INUM       =
+         
 Signer id.    
-SID        = 4KROOT</span>
-<span style="font-family: &quot;Courier New&quot;;"> </span>
-<span style="font-family: &quot;Courier New&quot;;">         
+SID        = 4KROOT
+         
 State         
-STATE      = ACT</span>
-<span style="font-family: &quot;Courier New&quot;;"> </span>
-<span style="font-family: &quot;Courier New&quot;;">         
-Serial number  SNUMB      = 45</span>
-<span style="font-family: &quot;Courier New&quot;;"> </span>
-<span style="font-family: &quot;Courier New&quot;;">         
-Delivered to   Us.CN      =</span>
-<span style="font-family: &quot;Courier New&quot;;">         
-4k_l1_user1</span>
-<span style="font-family: &quot;Courier New&quot;;">         
-</span>
-<span style="font-family: &quot;Courier New&quot;;">         
-Delivered by   Si.CN      =</span>
-<span style="font-family: &quot;Courier New&quot;;">         
-4k_root</span>
-<span style="font-family: &quot;Courier New&quot;;"> </span>
-<span style="font-family: &quot;Courier New&quot;;">         
-Certificat validity</span>
-<span style="font-family: &quot;Courier New&quot;;">         
--------------------</span>
-<span style="font-family: &quot;Courier New&quot;;">         
+STATE      = ACT
+         
+Serial number  SNUMB      = 45
+         
+Delivered to   Us.CN      =
+         
+4k_l1_user1
+         
+         
+Delivered by   Si.CN      =
+         
+4k_root
+         
+Certificat validity
+         
+-------------------
+         
 Expired Before :         29/07/2009
-00:00:00</span>
-<span style="font-family: &quot;Courier New&quot;;">         
+00:00:00
+         
 Expired After  :         28/07/2039
-23:59:59</span>
-<span style="font-family: &quot;Courier New&quot;;"> </span>
-<span style="font-family: &quot;Courier New&quot;;">         
+23:59:59
+         
 Comment       
-COMMENT     =</span>
-<span style="font-family: &quot;Courier New&quot;;"> </span>
-<span style="font-family: &quot;Courier New&quot;;">         
-Owner's DN     OWNER'S DN  =</span>
-<span style="font-family: &quot;Courier New&quot;;">         
-/C=FR/ST=HAUTS-DE-SEINE/L=PUTEAUX/O=CFT_SAMPLE/OU=CFT_L1_SAMPLE/</span>
-<span style="font-family: &quot;Courier New&quot;;">         
-CN=4k_l1_user1</span>
-<span style="font-family: &quot;Courier New&quot;;"> </span>
-<span style="font-family: &quot;Courier New&quot;;">   
-      Signer's DN    SIGNER'S DN =</span>
-<span style="font-family: &quot;Courier New&quot;;">         
-/C=FR/ST=HAUTS-DE-SEINE/L=PUTEAUX/O=CFT_SAMPLE/OU=CFT_SAMPLE/CN=</span>
-<span style="font-family: &quot;Courier New&quot;;">         
-4k_root</span>
-<span style="font-family: &quot;Courier New&quot;;"> </span>
-<span style="font-family: &quot;Courier New&quot;;">         
-Private Key type  RSA      =  4096 bits</span>
-<span style="font-family: &quot;Courier New&quot;;"> </span>
-<span style="font-family: &quot;Courier New&quot;;">         
+COMMENT     =
+         
+Owner's DN     OWNER'S DN  =
+         
+/C=FR/ST=HAUTS-DE-SEINE/L=PUTEAUX/O=CFT_SAMPLE/OU=CFT_L1_SAMPLE/
+         
+CN=4k_l1_user1
+   
+      Signer's DN    SIGNER'S DN =
+         
+/C=FR/ST=HAUTS-DE-SEINE/L=PUTEAUX/O=CFT_SAMPLE/OU=CFT_SAMPLE/CN=
+         
+4k_root
+         
+Private Key type  RSA      =  4096 bits
+         
 Usage
 Key                 
-=</span>
-<span style="font-family: &quot;Courier New&quot;;">         
-Digital Signature, Key Encipherment, Data Encipherment</span>
-<span style="font-family: &quot;Courier New&quot;;"> </span>
-<span style="font-family: &quot;Courier New&quot;;">         
-Extended Usage Key         =</span>
-<span style="font-family: &quot;Courier New&quot;;">         
-TLS Web Server Authentication, TLS Web Client Authentication</span>
+=
+         
+Digital Signature, Key Encipherment, Data Encipherment
+         
+Extended Usage Key         =
+         
+TLS Web Server Authentication, TLS Web Client Authentication
 ```
 
 ****Certificate id****

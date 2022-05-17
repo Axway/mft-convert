@@ -1,13 +1,10 @@
 ---
-
-    title: Transfer  identifiers
-    linkTitle: Transfer object identifiers
-    weight: 210
-
----
-{{< TransferCFT/axwayvariablesComponentShortName  >}} enables the transferring sequential files, or files seen
+    title: "Transfer  identifiers"
+    linkTitle: "Transfer object identifiers"
+    weight: 200
+---{{< TransferCFT/axwayvariablesComponentShortName  >}} enables the transferring sequential files, or files seen
 as such. These files can be accessed through one of the operating system
-access methods . See [File locations: Model and physical files](../../creating_transfers_start_here/model_and_physical_file_concepts).
+access methods . See [File locations: Model and physical files](../../create_transfers_start_here/model_and_physical_file_concepts).
 
 When a transfer occurs, it is labeled with an identifier. There are
 four types of identifiers that can correspond with a transfer, as described
@@ -39,7 +36,7 @@ A CFTSEND and a CFTRECV command may correspond to each model
 file. In the absence of these commands for a given transfer, {{< TransferCFT/axwayvariablesComponentShortName  >}} uses the default CFTSEND and CFTRECV command parameters, which are
 valid regardless of the IDF.
 
-An identifier corresponds to each flow definition. In the absence of this flow identifier, &lt;span class="mc-variable axway\_variables.Component\_Long\_Name variable">Transfer CFT&lt;/span> uses the flow default value.
+An identifier corresponds to each flow definition. In the absence of this flow identifier, &lt;span class="mc-variable axway_variables.Component_Long_Name variable">Transfer CFT&lt;/span> uses the flow default value.
 &lt;/p>
 
 The default command is the command whose file identifier corresponds either to the:

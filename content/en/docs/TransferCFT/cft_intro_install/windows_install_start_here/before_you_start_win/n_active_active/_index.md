@@ -1,11 +1,8 @@
 ---
-
-    title: Active/active installation - Windows
-    linkTitle: Active/active installation
+    title: "Active/active installation - Windows"
+    linkTitle: "Active/active installation"
     weight: 180
-
----
-This section describes how to install active/active failover, as described in [About Multi-node architecture.](../../../../about_multinode)
+---This section describes how to install active/active failover, as described in [About Multi-node architecture.](../../../../about_multinode)
 
 ## Prerequisites
 
@@ -25,7 +22,7 @@ A cluster installation of Transfer CFT with multi-node (HA):
 
 - Install Transfer CFT and enable the multi-node architecture.
 - Installation procedure must be executed on each host:
-    -   The first host installation sets the Shared directory, the &lt;Transfer\_CFT Shared> directory and all of the Transfer CFT configurations.
+    -   The first host installation sets the Shared directory, the &lt;Transfer_CFT Shared> directory and all of the Transfer CFT configurations.
     -   During each hosts installation (meaning additional nodes), you are prompted to specify the shared directory.
 - Transfer CFT binaries are installed on several hosts and runtime files are installed on a shared file system.
 - Only runtime files are shared.
@@ -41,7 +38,7 @@ A cluster installation of Transfer CFT with multi-node (HA):
 
 This is the path and name of the directory where you want to create a shared directory for the cluster installation. The shared directory is used to store product data files.
 
-*Windows only* - When installing a Windows multi-host Transfer CFT architecture, we recommend that you use UNC notation, which defines the path to a shared folder using the format<span class="code">` \\server\sharename.`</span>
+*Windows only* - When installing a Windows multi-host Transfer CFT architecture, we recommend that you use UNC notation, which defines the path to a shared folder using the format` \\server\sharename.`
 
 > **Note**
 >
@@ -70,7 +67,7 @@ Additionally, the key must have the cluster option.
 
 ### Download and uncompress
 
-Download and unzip the {{< TransferCFT/suitevariablesTransferCFTName  >}} install package, as described in <a href="../../../unix_install_start_here/before_you_start_unix" class="MCXref xref">Install Transfer CFT</a>.
+Download and unzip the {{< TransferCFT/suitevariablesTransferCFTName  >}} install package, as described in [Install Transfer CFT](../../../unix_install_start_here/before_you_start_unix).
 
 ### Customize
 
@@ -89,11 +86,11 @@ Create as many copies of the initialize.properties file as you have hosts in the
 ## Installation overview
 
 1. Start the installation.
-1. Transfer\_CFT\_{{< TransferCFT/axwayvariablesReleaseNumber >}}\_Install\_win-x86-64\_BNXXXXXXXX.exe/bat
-1. ./Transfer\_CFT\_{{< TransferCFT/axwayvariablesReleaseNumber >}}\_Install\_&lt;OS>\_&lt;BN>.run
+1. Transfer_CFT_{{< TransferCFT/axwayvariablesReleaseNumber >}}_Install_win-x86-64_BNXXXXXXXX.exe/bat
+1. ./Transfer_CFT_{{< TransferCFT/axwayvariablesReleaseNumber >}}_Install_&lt;OS>_&lt;BN>.run
 1. In the Installation Architecture screen, select **Cluster - first host**.
 1. Complete the installation.
-1. To add a host to create a multi-host, multi-node installation, run the install <span class="code">`exe/bat`</span> again. This time select **Cluster - Additional host**.
+1. To add a host to create a multi-host, multi-node installation, run the install `exe/bat` again. This time select **Cluster - Additional host**.
 
 After installation, but before you can use the cluster installation, you must configure the high-availability operations. The procedure for cluster configuration varies depending on the platform on which the cluster is installed.
 
@@ -101,14 +98,14 @@ After installation, but before you can use the cluster installation, you must co
 
 This section describes the differences when installing using a silent file for a multi-node installation.
 
-If the silent file architecture is either first\_host or additional\_host, there are two important parameters:
+If the silent file architecture is either first_host or additional_host, there are two important parameters:
 
-- multinode\_hostname
-- multinode\_host\_address
+- multinode_hostname
+- multinode_host_address
 
 By default, these 2 attributes are automatically completed if they are not specified in the silent file.
 
-During the runtime creation and for each host, the multinode\_hostname is used as the basis for the cft.multi\_node.hostnames, where cft.multi\_node.hostnames=Cluster\_short\_hostname1, Cluster\_short\_hostname2, Cluster\_short\_hostname3, Cluster\_short\_hostname4. Using the same logic, the multinode\_host\_addresss is used to create each \_ cft.multi\_node.hostnames.\*\*\*\*.host uconf attribute.
+During the runtime creation and for each host, the multinode_hostname is used as the basis for the cft.multi_node.hostnames, where cft.multi_node.hostnames=Cluster_short_hostname1, Cluster_short_hostname2, Cluster_short_hostname3, Cluster_short_hostname4. Using the same logic, the multinode_host_addresss is used to create each _ cft.multi_node.hostnames.\*\*\*\*.host uconf attribute.
 
 In the silent file (initialize.properties), you can use the same other definitions as in the Transfer CFT 3.3.2 silent files.
 
@@ -118,18 +115,4 @@ See the [Multi-node commands and management](../../../../about_multinode/multi_n
 
 ## Troubleshooting
 
-Please see <a href="../../../../troubleshoot_intro/admin_troubleshooting_server/admin_troubleshooting_runtime/troubleshoot_multinode" class="MCXref xref">Troubleshoot multi-node</a>.
-
-## Integrate Transfer CFT in a Microsoft Cluster Service (MSCS)
-
-### Prerequisites
-
-Transfer CFT must be installed in service mode.
-
-### Define Transfer CFT as a Generic Service Resource
-
-Transfer CFT is a cluster-unaware application. However, you can integrate Transfer CFT in a cluster environment as a Generic Service Resource. Use the Microsoft **High Availability Wizard** to create a **Generic Service**, and from the **Select Service** dialog box select the Transfer CFT service.
-
-### License key
-
-The Transfer CFT license key refers to a specific machine, and is based on the machine's hostname. To allow Transfer CFT to start on both cluster nodes, you need one license key per node. Enter the two license keys in the <span class="code">`%CFTKEY%`</span> file located on the shared disk, one key per line.
+Please see [Troubleshoot multi-node](../../../../troubleshoot_intro/admin_troubleshooting_server/admin_troubleshooting_runtime/troubleshoot_multinode).

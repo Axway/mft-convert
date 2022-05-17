@@ -1,17 +1,14 @@
 ---
-
-    title: Manage configuration updates - RECONFIG
-    linkTitle: RECONFIG - Modify the configuration
-    weight: 320
-
----
-Use this command to manage configuration updates for the types listed below.
+    title: "Manage configuration updates - RECONFIG"
+    linkTitle: "RECONFIG - Modify the configuration"
+    weight: 310
+---Use this command to manage configuration updates for the types listed below.
 
 ********Syntax********
 
 **`RECONFIG`**
 
-`[ TYPE   = { CRON | UCONF | CAT | FOLDER  | PARMCACHE | AM   } ] `
+`[ TYPE   = { CRON &#124; UCONF &#124; CAT &#124; FOLDER  &#124; PARMCACHE &#124; AM   } ] `
 
 ********CRON********
 
@@ -59,7 +56,7 @@ CFTUTIL RECONFIG TYPE=FOLDER
 
 ****PARMCACHE****
 
-Use this parameter to clear the cache while Transfer CFT is running. After the command execution, all changes applied to dynamic objects are taken into account, without restarting Transfer CFT. If you have set the UCONF <span class="code">`cft.server.parm.cache_size`</span> value to something other than zero (0), this command reloads both the CFTPART and CFTPARM objects. For example:
+Use this parameter to clear the cache while Transfer CFT is running. After the command execution, all changes applied to dynamic objects are taken into account, without restarting Transfer CFT. If you have set the UCONF `cft.server.parm.cache_size` value to something other than zero (0), this command reloads both the CFTPART and CFTPARM objects. For example:
 
 ```
 CFTUTIL RECONFIG TYPE=PARMCACHE
@@ -67,7 +64,7 @@ CFTUTIL RECONFIG TYPE=PARMCACHE
 
 ****AM****
 
-Reload roles (CFTROLE) and privileges (CFTPRIV). You can manually create these objects or they can be deployed via Flow Manager. For more information on CFTROLEs and CFTPRIVs, please see <a href="../../../internal_a_m_start_here/fm_access_management" class="MCXref xref">Access Management using Flow Manager</a>. For example:
+Reload roles (CFTROLE) and privileges (CFTPRIV). You can manually create these objects or they can be deployed via Flow Manager. For more information on CFTROLEs and CFTPRIVs, please see [Access Management using Flow Manager](../../../internal_a_m_start_here/fm_access_management). For example:
 
 ```
 CFTUTIL RECONFIG TYPE=AM

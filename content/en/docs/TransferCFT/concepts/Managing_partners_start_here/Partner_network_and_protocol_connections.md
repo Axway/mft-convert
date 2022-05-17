@@ -1,11 +1,8 @@
 ---
-
-    title: Partner  network and protocol connections
-    linkTitle: Partner network and protocol connections
-    weight: 240
-
----
-A SEND or RECV command first results in opening a session with the partner
+    title: "Partner  network and protocol connections"
+    linkTitle: "Partner network and protocol connections"
+    weight: 230
+---A SEND or RECV command first results in opening a session with the partner
 server. Transfer CFT provides the possibility of defining several partner
 access paths: logical paths for protocols and physical paths for network
 access methods (network addresses, intermediate partners).

@@ -1,15 +1,10 @@
 ---
-
-    title: Manage the Transfer CFT Copilot server
-    linkTitle: Manage the Transfer CFT UI server
-    weight: 190
-
----
-The Transfer CFT Copilot server provides a number of functions that support the following services: the Transfer CFT UI, REST API services, web services, multi-host/multi-node architectures, and Central Governance.
+    title: "Manage the Transfer CFT Copilot server"
+    linkTitle: "Manage the Transfer CFT UI server"
+    weight: 180
+---The Transfer CFT Copilot server provides a number of functions that support the following services: the Transfer CFT UI, REST API services, web services, multi-host/multi-node architectures, and Central Governance.
 
 This page describes how to start/stop and check the status of the Transfer CFT Copilot server.
-
-<span id="Start_/_stop_Copilot"></span>
 
 ## Start and stop the Copilot server
 
@@ -39,7 +34,7 @@ copstop -kill
 
 > **Note**
 >
-> For details on starting in your specific operating system, refer to the corresponding Transfer CFT 3.9 Installation Guide.
+> For details on starting in your specific operating system, refer to the corresponding Transfer CFT 3.10 Installation Guide.
 
 <span id="Check__status"></span>
 
@@ -48,21 +43,26 @@ copstop -kill
 To check the Copilot status, enter:
 
 ```
-<span class="code">`copstatus`</span>
+copstatus
 ```
 
-The <span class="code">`copstatus `</span>return code is 0 when Copilot is running, and 1 when Copilot is stopped.
+The `copstatus `return code is 0 when Copilot is running, and 1 when Copilot is stopped.
 
-Additional <span class="code">`copstatus `</span>commands include:
+Additional `copstatus `commands include:
 
 ```
-<span class="code">```` copstatus [-p] [-v] [-h|--help]         </span>   -p           print copsmng pid if copilot is started          -v           print status message         </span>   -h|--help    copstatus help     ``` ````</span>
+copstatus [-p] [-v] [-h&#124;--help]
+-p print copsmng pid if copilot is started
+-v print status message
+-
+h&#124;--help copstatus help
+```
 
 ## Windows menus
 
-You can also use the Windows <span class="bold_in_para">****Start**** </span>menu to start Axway software. From the <span class="bold_in_para">****Start**** </span>menu, select <span class="bold_in_para">****Programs**** </span>(or All Programs), <span class="bold_in_para">****Axway Software****</span> and then the product.
+You can also use the Windows ****Start**** menu to start Axway software. From the ****Start**** menu, select ****Programs**** (or All Programs), ****Axway Software**** and then the product.
 
-For example, to start the Copilot server click <span class="bold_in_para">****Start &gt; All Programs &gt; Axway Software &gt; {{< TransferCFT/axwayvariablesComponentShortName  >}} &gt; Start {{< TransferCFT/axwayvariablesComponentShortName  >}} UI Server.****</span>
+For example, to start the Copilot server click ****Start &gt; All Programs &gt; Axway Software &gt; {{< TransferCFT/axwayvariablesComponentShortName  >}} &gt; Start {{< TransferCFT/axwayvariablesComponentShortName  >}} UI Server.****
 
 ## Operating system specific tasks
 
@@ -72,17 +72,17 @@ For example, to start the Copilot server click <span class="bold_in_para">****S
 
 COPRUN is an example of a JCL statement that starts the Transfer CFT Copilot server. The server can be started as a Start Task. The Transfer CFT Copilot server STEPLIB, and then JOBLIB should be defined as an APF. If it is not defined as an APF, no RACF check can be performed. This results in no log-on check being available and all requests are done with the user associated with the server JOB.
 
-When the <span class="code">`copilot.misc.CreateProcessAsUser`</span> variable is set, STEPLIB or JOBLIB can be non-APF. Only a {{< TransferCFT/suitevariablesCentralGovernanceName  >}}/PassPort user can sign on to Copilot user interface.
+When the `copilot.misc.CreateProcessAsUser` variable is set, STEPLIB or JOBLIB can be non-APF. Only a {{< TransferCFT/suitevariablesCentralGovernanceName  >}}/PassPort user can sign on to Copilot user interface.
 
 > **Note**
 >
-> When the ‘cft.mvs.copilot.check\_apf’ uconf variable is set to ‘Yes’, CFTCOPL must be APF authorized to start.
+> When the ‘cft.mvs.copilot.check_apf’ uconf variable is set to ‘Yes’, CFTCOPL must be APF authorized to start.
 
-LOG message: <span class="code">`+CFTI42E Copilot must be APF-authorized.`</span>
+LOG message: `+CFTI42E Copilot must be APF-authorized.`
 
 > **Note**
 >
-> CFTCOPL must be APF authorized to start if the UCONF cft.mvs.copilot.check\_apf variable is set to Yes. Otherwise, the Transfer CFT log displays CFTI42E Copilot must be APF-authorized.
+> CFTCOPL must be APF authorized to start if the UCONF cft.mvs.copilot.check_apf variable is set to Yes. Otherwise, the Transfer CFT log displays CFTI42E Copilot must be APF-authorized.
 
 #### Stop
 
@@ -94,28 +94,28 @@ COPSTOP is an example of the JCL stop statement for the Transfer CFT UI server.
 
 ****Menu****
 
-1. Access the *Transfer CFT* <span class="italic_in_para" style="font-style: italic;">**Main Menu**</span>.  
-    In the Main Menu enter the command <span class="code">`cft`</span> and press <span class="bold_in_para">****Enter****</span> to open the Transfer CFT menu.
+1. Access the *Transfer CFT* **Main Menu**.  
+    In the Main Menu enter the command `cft` and press ****Enter**** to open the Transfer CFT menu.
 1. Enter **1** to access **Common CFT commands**.
-1. Select option <span class="span_5" style="font-weight: bold;">****1 Start Copilot****</span>. The *Copilot server* menu is displayed.  
+1. Select option ****1 Start Copilot****. The *Copilot server* menu is displayed.  
 
 ****Command****
 
-Execute: <span class="code">`COPSTART `</span>
+Execute: `COPSTART `
 
 #### Stop
 
 ****Menu****
 
-1. Access the *Transfer CFT* <span class="italic_in_para" style="font-style: italic;">**Main Menu**</span>.  
-    In the Main Menu enter the command <span class="code">`cft`</span> and press <span class="bold_in_para">****Enter****</span> to open the Transfer CFT menu.
+1. Access the *Transfer CFT* **Main Menu**.  
+    In the Main Menu enter the command `cft` and press ****Enter**** to open the Transfer CFT menu.
 1. Enter **1** to access **Common CFT commands**.
-1. Select option <span class="span_5" style="font-weight: bold;">****2**** </span><span class="span_5" style="font-weight: bold;">****Stop Copilot****</span>.  
+1. Select option ****2**** ****Stop Copilot****.  
     Only the server waiting for a connection is stopped. Other servers that users have logged onto are shut down when the user logs off, or after a network timeout.
 
 ****Command****
 
-Execute: <span class="code">`COPSTOP `</span>
+Execute: `COPSTOP `
 
 <span id="Copilot"></span>
 
@@ -135,7 +135,7 @@ and the default values for the {{< TransferCFT/axwayvariablesComponentShortName 
 
 ****UNIX****
 
-Refer to the [UCONF parameters](../uconf/uconf_directory) table for information on <span class="code">`copilot.*.unix `</span>parameters.
+Refer to the [UCONF parameters](../uconf/uconf_directory) table for information on `copilot.*.unix `parameters.
 
 #### Alias management
 
@@ -153,14 +153,14 @@ To add a new alias, access the Unified Configuration and configure the following
 
 #### View available drives
 
-To view available drives from the <span class="bold_in_para">****Edit a file****</span> icon in the graphical user interface, define the following:
+To view available drives from the ****Edit a file**** icon in the graphical user interface, define the following:
 
 
 | Parameter  | Options  | Description  |
 | --- | --- | --- |
 | copilot.nt.rootdrives  | @REMOVABLE_DRIVES  | To view removable drives such as a USB key, CD, and so on.  |
-|   | @LOCAL_DRIVES  | To view hard drives.  |
-|   | @NET_DRIVES  | To view network drives.  |
+| copilot.nt.rootdrives  | @LOCAL_DRIVES  | To view hard drives.  |
+| copilot.nt.rootdrives  | @NET_DRIVES  | To view network drives.  |
 
 
 #### Client keep-alive
@@ -203,12 +203,12 @@ Use these parameter to configure the REST API server. See also [Transfer CFT RES
 | --- | --- | --- | --- |
 | copilot.restapi.enable  | bool  | No  | Enable/disable the REST API service:<br/> • Yes: enable<br/> • No: disable |
 | copilot.restapi.serverport  | int  | 1768  | REST API server port. |
-| copilot.restapi.authentication_method  | string  | system (Windows)<br/> xfbadm (UNIX) | Defines authentication method.<br/> <br/> See also, <a href="../../cft_intro_install/unix_install_start_here/run_first_time_ux/use_cft_utilities#xfbadmusr1">xfbadmusr utilitiy.</a> |
+| copilot.restapi.authentication_method  | string  | system (Windows)<br/> xfbadm (UNIX) | Defines authentication method.<br/> <br/> See also, [xfbadmusr utilitiy.](../../cft_intro_install/unix_install_start_here/run_first_time_ux/use_cft_utilities#xfbadmusr1) |
 | copilot.restapi.nb_workers  | int  | 4  | Number of activated workers that process the REST API requests.  |
 | copilot.restapi.maxclient  | int  | 256  | Number of client connections handled per REST worker.  |
 | copilot.restapi.coms_id  | string  | coms  | The TCPIP CFTCOM object identifier used by the REST API server to communicate with the Transfer CFT server.<br/> Leave empty to use the COM file instead. |
 | copilot.restapi.catalog.retry_delay  | int  | 5  |  • The delay between retries in seconds. The Transfer CFT Copilot server checks the request status in catalog every retry_delay seconds.<br/> • The delay between retries in seconds. The Transfer CFT Copilot server checks the request status in catalog every retry_delay seconds. |
-| copilot.restapi.catalog.retry_timeout  | int  | 30  | The default value of the <a href="../../app_integration_intro/using_apis/api_intro/api_commands#Manage">apiTimeout</a> parameter as defined in the request URL.<br/> Available exclusively for POST requests. |
+| copilot.restapi.catalog.retry_timeout  | int  | 30  | The default value of the apiTimeout parameter as defined in the request URL.<br/> Available exclusively for POST requests. |
 
 
 <span id="Configur"></span>
@@ -237,34 +237,29 @@ The basic steps are:
 
 #### When using Central Governance
 
-The Transfer CFT Copilot server uses the certificate that was created by Central Governance during the product registration. This certificate is stored in Transfer CFT PKI database and the certificate id is the value of the UCONF <span class="code">`cft.instance_id `</span>parameter. This means that there is no action required to install a certificate.
+The Transfer CFT Copilot server uses the certificate that was created by Central Governance during the product registration. This certificate is stored in Transfer CFT PKI database and the certificate id is the value of the UCONF `cft.instance_id `parameter. This means that there is no action required to install a certificate.
 
 However, to override the default behavior use the procedure described below in *When using Transfer CFT without governance*.
 
 #### When using Transfer CFT without governance
 
-The following tables describe the UCONF parameters that determine the certificates used by the Transfer CFT UI server to authenticate itself.
+The following tables describe the UCONF parameters that determine the certificates used by the Transfer CFT Copilot server to authenticate itself.
 
 You can use the following certificate and private key formats, where the format of the certificate may differ from that of the key.
 
-The certificate type is dictated by the file name extension (.p12, .pkcs12, .der, .pem, for example <span class="code">`my_certificate.pem`</span>).
+The certificate type is dictated by the file name extension (.p12, .pkcs12, .der, .pem, for example `my_certificate.pem`).
 
-*For native files in a z/OS or IBM i environment*, if the format cannot be determined (the file suffix used as the extension), Transfer CFT derives the value from these uconf settings:
-
-- <span class="code">`copilot.ssl.sslkeyfile=<not set>`</span> and <span class="code">`copilot.ssl.sslcertpassword=<set>`</span>, then the format is PKCS12
-- <span class="code">`copilot.ssl.sslkeyfile= <set>`</span> and <span class="code">`copilot.ssl.sslcertpassword=<not set>`</span>, then the format is PEM
-
-QQQ\_QQQ\_QQQ
+*For native files in a z/OS or IBM i environment*, Transfer CFT first tries to decode the certificate in PEM format. If the format cannot be determined, the last letters of the file name are used as the suffix. IBM i also handles the certificates stored on the IFS partition.
 
 
 | Supported format  | Type  | Extension  |
 | --- | --- | --- |
 | Certificate  | PKCS#12  | p12, pfx, pkcs12  |
-|  - " -  | PEM  | pem  |
-|  - " -  | DER  | der  |
+| Certificate  | PEM  | pem  |
+| Certificate  | DER  | der  |
 | Private key  | PEM  | pem  |
-|  - " -  | DER  | der  |
-|  - " -  | PKCS#8  | key, pem  |
+| Private key  | DER  | der  |
+| Private key  | PKCS#8  | key, pem  |
 
 
 ****How to define a PKCS#12 certificate****
@@ -301,7 +296,7 @@ There are two additional UCONF parameters to use for HTTPS connections:
 | Parameter | Value |
 | --- | --- |
 | copilot.http.onlyssl |  • No: Default value.<br/> • Yes: Restricts access to the Transfer CFT Copilot server to HTTPS secured connections only. |
-| <span id="copilot.ssl.SslCipherSuites"></span>copilot.ssl.SslCipherSuites<br/>  | A comma separated list of cipher suites accepted by the Transfer CFT Copilot server, for example: “47, 10, 9, 2”.<br/> See the <a href="../../transport_security_start_here/manage_cipher_suites#cipher_suites">Supported cipher suites</a> for details. |
+| <span id="copilot.ssl.SslCipherSuites"></span>copilot.ssl.SslCipherSuites<br/>  | A comma separated list of cipher suites accepted by the Transfer CFT Copilot server, for example: “47, 10, 9, 2”.<br/> See the [Supported cipher suites](../../transport_security_start_here/manage_cipher_suites#cipher_suites) for details. |
 
 
 ### Install a certificate on the client side
@@ -316,28 +311,32 @@ On Linux, using the Java keystore is the only option.
 
 #### Install a certificate in the Windows keystore
 
-1. In Windows Explorer, navigate to the certificate <span class="code">`<my_root_certificate>.der`</span> and right-click (for example, at &lt;CFTDIRRUNTIME>/conf/pki/&lt;my\_root\_certificate>.der).
-1. Select the <span class="bold_in_para">****Install certificate****</span> option.
-1. Follow the screen instructions. Windows automatically imports the certificate to its keystore in the <span class="code">`Intermediate certificate authorities`</span> folder.
+1. In Windows Explorer, navigate to the certificate `<my_root_certificate>.der` and right-click (for example, at &lt;CFTDIRRUNTIME>/conf/pki/&lt;my_root_certificate>.der).
+1. Select the ****Install certificate**** option.
+1. Follow the screen instructions. Windows automatically imports the certificate to its keystore in the `Intermediate certificate authorities` folder.
 
 ****Alternative method****
 
-1. In Internet Explorer, select <span class="bold_in_para">****Tools > Internet Options.**** </span>
-1. In the <span class="bold_in_para">****Content**** </span>tab select the <span class="bold_in_para">****Certificate**** </span>button.
-1. Select <span class="bold_in_para">****Import,**** </span>which starts the <span class="bold_in_para">****Certificate Import Wizard****</span>.
-1. Click <span class="bold_in_para">****Next****</span>, and <span class="bold_in_para">****Browse**** </span>to the<span class="code">` <my_root_certificate>.der`</span>.
+1. In Internet Explorer, select ****Tools > Internet Options.****
+1. In the ****Content**** tab select the ****Certificate**** button.
+1. Select ****Import,**** which starts the ****Certificate Import Wizard****.
+1. Click ****Next****, and ****Browse**** to the` <my_root_certificate>.der`.
 1. Follow the screen instructions. Windows imports the certificate to its keystore.
 
 #### Install a certificate in the Java keystore
 
-The Java keystore is a file located at<span class="code">` ~/jre/lib/security/cacerts`</span>. The default password for this keystore is “changeit”.
+The Java keystore is a file located at` ~/jre/lib/security/cacerts`. The default password for this keystore is “changeit”.
 
-Use the keytool command as follows to import the<span class="code">` <my_root_certificate>.der `</span>certificate into the Java keystore:
+Use the keytool command as follows to import the` <my_root_certificate>.der `certificate into the Java keystore:
 
 ```
-<span class="span_2">keytool </span><span class="span_2">–</span><span class="span_2">importcert</span>
+keytool
+–
+importcert
    -trustcacerts
    -alias AXWMFTCA
-<span class="span_2">   -file <my_root_certificate></span><span class="span_2">.der</span>
-   -storepass changeit<span class="span_2">-keystore </span><span class="span_2"><keystore></span>
+   -file <my_root_certificate>
+.der
+   -storepass changeit -keystore
+<keystore>
 ```

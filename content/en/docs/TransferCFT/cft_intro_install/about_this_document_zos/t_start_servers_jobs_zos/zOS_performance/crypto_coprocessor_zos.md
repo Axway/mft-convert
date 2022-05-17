@@ -1,11 +1,8 @@
 ---
-
-    title: Guidelines for improving CPU efficiency
-    linkTitle: Guidelines for improving CPU efficiency
+    title: "Guidelines for improving CPU efficiency"
+    linkTitle: "Guidelines for improving CPU efficiency"
     weight: 290
-
----
-Use the following guidelines to help reduce your CPU load and enhance performance.
+---Use the following guidelines to help reduce your CPU load and enhance performance.
 
 - The data compression/decompression functions are CPU-time consuming.
 - The SGTRACE option activation is very CPU-time consuming.

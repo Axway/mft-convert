@@ -1,18 +1,15 @@
 ---
-
-    title: iblksize
-    linkTitle: iblksize
-    weight: 1480
-
----
-<span id="iblksize"></span>
+    title: "iblksize"
+    linkTitle: "iblksize"
+    weight: 1470
+---<span id="iblksize"></span>
 
 ### iblksize
 
 #### COPYFILE
 
-****\[IBLKSIZE = {block size of the
-input file | n}\]****
+****[IBLKSIZE = {block size of the
+input file &#124; n}]****
 
 ****{0...65535}****
 

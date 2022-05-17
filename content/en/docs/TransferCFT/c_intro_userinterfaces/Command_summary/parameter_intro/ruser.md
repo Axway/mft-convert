@@ -1,11 +1,8 @@
 ---
-
-    title: ruser
-    linkTitle: ruser
-    weight: 3020
-
----
-<span id="ruser"></span>
+    title: "ruser"
+    linkTitle: "ruser"
+    weight: 3040
+---<span id="ruser"></span>
 
 ### ruser
 
@@ -13,7 +10,7 @@
 
 #### CFTRECV, CFTSEND, RECV, SEND, DISPLAY, LISTCAT
 
-**\[RUSER = *string* 32 \]** 
+**[RUSER = *string* 32 ]** 
 
 *PeSIT E only*
 
@@ -34,6 +31,6 @@ partner sends and controls this parameter, where:
 >
 > You can use the RUSER and SUSER fields when performing a catalog search. Additionally these fields are integrated into the catalog index. See SUSER.
 
-See [PeSIT extension PI codes]() for information on PI codes.
+See PeSIT extension PI codes for information on PI codes.
 
 [Return to Command index](../../)

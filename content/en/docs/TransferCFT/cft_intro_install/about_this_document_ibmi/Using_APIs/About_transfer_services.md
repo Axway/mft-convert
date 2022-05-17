@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer  services
-    linkTitle: Transfer services
+    title: "Transfer  services"
+    linkTitle: "Transfer services"
     weight: 250
-
----
-Use the transfer services to send transfer control commands to Transfer
+---Use the transfer services to send transfer control commands to Transfer
 CFT, with or without a **syntax analysis**
 of these commands. The programming interface proposes a function integrating
 a syntax analysis of the command to detect any errors, at the source,

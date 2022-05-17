@@ -1,17 +1,14 @@
 ---
-
-    title: icomp
-    linkTitle: icomp
-    weight: 1500
-
----
-<span id="icomp"></span>
+    title: "icomp"
+    linkTitle: "icomp"
+    weight: 1490
+---<span id="icomp"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
 #### COPYFILE
 
-\[ICOMP = {<u>0</u> | 15 \]
+[ICOMP = {<u>0</u> &#124; 15 ]
 
 Compresses the input file data.
 

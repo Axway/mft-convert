@@ -1,11 +1,8 @@
 ---
-
-    title: idfdef
-    linkTitle: idfdef
-    weight: 1550
-
----
-### idfdef
+    title: "idfdef"
+    linkTitle: "idfdef"
+    weight: 1540
+---### idfdef
 
 Default IDF.
 

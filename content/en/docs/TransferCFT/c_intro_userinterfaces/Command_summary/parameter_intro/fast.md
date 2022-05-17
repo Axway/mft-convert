@@ -1,15 +1,12 @@
 ---
-
-    title: fast
-    linkTitle: fast
-    weight: 1050
-
----
-### fast
+    title: "fast"
+    linkTitle: "fast"
+    weight: 1040
+---### fast
 
 #### SHUT
 
-****\[FAST = {<u>NO</u> | YES | KILL}\]****
+****[FAST = {<u>NO</u> &#124; YES &#124; KILL}]****
 
 Type of shutdown:
 

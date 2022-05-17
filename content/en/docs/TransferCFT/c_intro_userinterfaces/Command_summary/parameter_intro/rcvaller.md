@@ -1,17 +1,14 @@
 ---
-
-    title: rcvaller
-    linkTitle: rcvaller
-    weight: 2820
-
----
-<span id="rvcaller"></span>
+    title: "rcvaller"
+    linkTitle: "rcvaller"
+    weight: 2840
+---<span id="rvcaller"></span>
 
 ### rcvaller
 
 #### CFTPARM
 
-****\[RCVALLER = { STOP | CONTINUE }\]****
+****[RCVALLER = { STOP &#124; CONTINUE }]****
 
 Action to perform if an error occurs when receiving available files
 (with the FILE= ALL option).

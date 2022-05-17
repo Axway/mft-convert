@@ -1,11 +1,8 @@
 ---
-
-    title: Receiving OFTP transfers
-    linkTitle: Receiving transfers
-    weight: 200
-
----
-After you configure the OFTP (ODETTE) environment, as described in [Configuring
+    title: "Receiving OFTP transfers"
+    linkTitle: "Receiving transfers"
+    weight: 190
+---After you configure the OFTP (ODETTE) environment, as described in [Configuring
 OFTP](../configuring_odette), you must define the transfer environment in the RECV
 object to receive a request.
 
@@ -65,7 +62,7 @@ Each record is delimited by the characters &lt;CR> and &lt;LF>.
 The size of the records is 2048 bytes, &lt;CR> and &lt;LF> not included.
 If a record is longer than 2048 , the monitor interrupts the transfer
 with the diagnostic codes: DIAGI=230,
-DIAGP=LDT\_TXT.
+DIAGP=LDT_TXT.
 
 If the receiver file type is not defined, {{< TransferCFT/axwayvariablesComponentShortName  >}} assigns the value
 contained in the table below, according to the receiving system.
@@ -76,6 +73,7 @@ contained in the table below, according to the receiving system.
 | z/OS (MVS) | ‘ ’  |
 | IBM i (OS400) | E  |
 | UNIX  | T  |
+| OpenVMS (VMS)  | F  |
 
 
 If the FRECFM and FLRECL parameters are not defined or imposed , data
@@ -162,7 +160,7 @@ the following tasks:
     parameter is executed
 - A new catalog entry
     is created, indicating that there are no more files to be received. This
-    entry is set to the H state with a diagnostic DIAGP=NO\_FILE.
+    entry is set to the H state with a diagnostic DIAGP=NO_FILE.
 
 For each file being transferred, received, the value of the file identifier,
 the IDF, is imposed by the sending partner and will be the value of the
@@ -188,7 +186,7 @@ Note:
     error during the data transfer phase and retrying is forbidden, the transfer
     (requester mode) is restarted from the beginning of the file
 
-********<span class="autonumber"></span>Example of receiving all the pending
+********Example of receiving all the pending
 files********
 
 ![Site A receives all pending files from Site B](/Images/TransferCFT/Image1689.gif)

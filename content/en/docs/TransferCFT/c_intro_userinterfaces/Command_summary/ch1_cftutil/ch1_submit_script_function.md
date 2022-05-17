@@ -1,15 +1,12 @@
 ---
+    title: "Submit script function"
+    linkTitle: "Submit script function"
+    weight: 230
+---This section describes how to submit a script.
 
-    title: Submit script function
-    linkTitle: Submit script function
-    weight: 240
+### _FMSUB
 
----
-This section describes how to submit a script.
-
-### \_FMSUB
-
-\_FMSUB Function starts the execution of a batch file without waiting for the end of the execution of it.
+_FMSUB Function starts the execution of a batch file without waiting for the end of the execution of it.
 
 ```
 _FMSUB PARM = (FILENAME)

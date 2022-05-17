@@ -1,17 +1,14 @@
 ---
-
-    title: selfname
-    linkTitle: selfname
-    weight: 3140
-
----
-<span id="selfname"></span>
+    title: "selfname"
+    linkTitle: "selfname"
+    weight: 3160
+---<span id="selfname"></span>
 
 ### selfname
 
 #### CFTSEND, SEND
 
-****\[SELFNAME = *filename*\]  <span style="font-weight: normal;">{string512}</span>****
+****[SELFNAME = *filename*]  {string512}****
 
 Name of a file that contains a list
 of files selected for sending, where all of the files must be contained in the same folder.

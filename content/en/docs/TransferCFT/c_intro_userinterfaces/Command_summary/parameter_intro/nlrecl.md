@@ -1,11 +1,8 @@
 ---
-
-    title: nlrecl
-    linkTitle: nlrecl
-    weight: 2230
-
----
-<span id="nlrecl"></span>
+    title: "nlrecl"
+    linkTitle: "nlrecl"
+    weight: 2250
+---<span id="nlrecl"></span>
 
 ### nlrecl
 
@@ -13,8 +10,8 @@
 
 #### CFTSEND, SEND
 
-**\[NLRECL = { <u>FLRECL</u>** **<u>value</u>**
-**| n}\]**
+**[NLRECL = { <u>FLRECL</u>** **<u>value</u>**
+**&#124; n}]**
 
 For records of:
 

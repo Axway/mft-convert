@@ -1,11 +1,8 @@
 ---
-
-    title: About  APIs and exits - IBM i
-    linkTitle: Build APIs and exits
+    title: "About  APIs and exits - IBM i"
+    linkTitle: "Build APIs and exits"
     weight: 260
-
----
-This section introduces the two application families that can be developed using
+---This section introduces the two application families that can be developed using
 two interfaces and the development kit contents for building APIs.
 
 - Applications communicating
@@ -43,10 +40,10 @@ into several directories that include the CFTPGM library, which contains all lib
 
 
 To generate a user application based on the {{< TransferCFT/axwayvariablesComponentShortName  >}} APIs and use
-the file exit function, you must link the following with the <span class="code">`libapisrv1.srvpgm`</span> and <span class="code">`libcftexe.srvpgm`</span> libraries:
+the file exit function, you must link the following with the `libapisrv1.srvpgm` and `libcftexe.srvpgm` libraries:
 
-- <span class="code">`<installdir>/runtime/src/capi/`</span> containing
+- `<installdir>/runtime/src/capi/` containing
     a command entry and catalog query example
-- <span class="code">`<installdir>/runtime/src/exit/`</span> containing
+- `<installdir>/runtime/src/exit/` containing
     simple examples of file exits, directory exits, and end
     -of-transfer exits

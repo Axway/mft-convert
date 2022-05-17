@@ -1,11 +1,8 @@
 ---
-
-    title: Issues when starting Transfer CFT
-    linkTitle: Issues when starting
+    title: "Issues when starting Transfer CFT"
+    linkTitle: "Issues when starting"
     weight: 300
-
----
-## Cannot start Transfer CFT
+---## Cannot start Transfer CFT
 
 ### Bind failed
 
@@ -27,4 +24,4 @@ The following error messages display if two CFTPROTs point to the same [SAP](../
 
 CFTI22F CFTPROT=PESITSSL Register request failure CS=
 
-CFTI16F Error code 00000001 \_ Register request
+CFTI16F Error code 00000001 _ Register request

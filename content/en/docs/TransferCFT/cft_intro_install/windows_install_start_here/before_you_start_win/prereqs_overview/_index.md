@@ -1,11 +1,8 @@
 ---
-
-    title: Prerequisites
-    linkTitle: 1. Prerequisites
+    title: "Prerequisites"
+    linkTitle: "1. Prerequisites"
     weight: 140
-
----
-Axway products are delivered electronically from Sphere, the Axway support website. A welcome letter notifies you that your products are ready for download.
+---Axway products are delivered electronically from Sphere, the Axway support website. A welcome letter notifies you that your products are ready for download.
 
 To install you will perform the following tasks:
 
@@ -24,7 +21,7 @@ Before installing or upgrading, make sure you have obtained a license for {{< Tr
 
 For information on applying a license key post installation, or if you have a problem with your license key, refer to the appropriate Troubleshooting topic.
 
-- <span style="font-weight: normal;">[Windows: Applying a license key](../../troubleshoot_registration/license_key_win)</span>
+- [Windows: Applying a license key](license_key_win)
      
 
 ### Multi-node license keys

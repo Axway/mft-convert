@@ -1,17 +1,14 @@
 ---
-
-    title: cnxin
-    linkTitle: cnxin
-    weight: 420
-
----
-<span id="cnxin"></span>
+    title: "cnxin"
+    linkTitle: "cnxin"
+    weight: 410
+---<span id="cnxin"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
 #### CFTTCP
 
-****\[cnxin = { 2 | n }\]****
+****[cnxin = { 2 &#124; n }]****
 
 This parameter defines the maximum number of sessions for incoming connections.
 

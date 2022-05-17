@@ -1,11 +1,8 @@
 ---
-
-    title: About Directory  exits 
-    linkTitle: Directory exit
+    title: "About Directory  exits "
+    linkTitle: "Directory exit"
     weight: 310
-
----
-## What is a directory exit?
+---## What is a directory exit?
 
 You can use the directory exit
 task to modify the parameters used to establish an exit connection with

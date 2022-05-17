@@ -1,18 +1,15 @@
 ---
-
-    title: otype
-    linkTitle: otype
-    weight: 2510
-
----
-<span id="otype"></span>
+    title: "otype"
+    linkTitle: "otype"
+    weight: 2530
+---<span id="otype"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
 #### COPYFILE
 
-**\[OTYPE     = {<u>see
-*Operations Guide*</u> | c}\]  OS**
+**[OTYPE     = {<u>see
+*Operations Guide*</u> &#124; c}]  OS**
 
 **O**utput file type.
 

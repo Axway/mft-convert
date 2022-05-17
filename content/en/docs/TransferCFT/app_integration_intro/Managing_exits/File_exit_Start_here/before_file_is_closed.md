@@ -1,11 +1,8 @@
 ---
-
-    title: Before the file is closed
-    linkTitle: Stage Before the file is closed
+    title: "Before the file is closed"
+    linkTitle: "Stage Before the file is closed"
     weight: 400
-
----
-If the user function manages file accessing, it must close the file.
+---If the user function manages file accessing, it must close the file.
 
 ### Fields to define
 
@@ -20,7 +17,7 @@ If the user function manages file accessing, it must close the file.
 ### Field values
 
 
-| Field  | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
+| Field | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
 | --- | --- | --- | --- | --- |
 | mtype | 7 | 7 | 7 | 7 |
 | masc | = | * | = | * |

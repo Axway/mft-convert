@@ -1,17 +1,14 @@
 ---
-
-    title: tcp
-    linkTitle: tcp
-    weight: 3470
-
----
-<span id="tcp"></span>
+    title: "tcp"
+    linkTitle: "tcp"
+    weight: 3490
+---<span id="tcp"></span>
 
 ### tcp
 
 TCP
-= { <span style="text-decoration: none;">CFT</span>
-| <u>OFTP</u>} \]
+= { CFT
+&#124; <u>OFTP</u>} ]
 
 Processing method used for protocol messages:
 

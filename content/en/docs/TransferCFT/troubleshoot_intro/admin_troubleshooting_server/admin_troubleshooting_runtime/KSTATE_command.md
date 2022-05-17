@@ -1,17 +1,14 @@
 ---
-
-    title: KSTATE - Suspend a transfer when offline
-    linkTitle: Suspend a transfer when offline
+    title: "KSTATE - Suspend a transfer when offline"
+    linkTitle: "Suspend a transfer when offline"
     weight: 390
-
----
-The KSTATE
+---The KSTATE
 command is used to suspend a transfer in the catalog when the Transfer CFT is offline. {{< TransferCFT/axwayvariablesComponentLongName  >}} must
 be shut down before the command is run and then restarted. The transfer
 must exist in the catalog and be in one of the following phasesteps: in process
-<span style="font-weight: bold;">****C****</span>, available <span style="font-weight: bold;">****D****</span>,
-or hold <span style="font-weight: bold;">****H****</span>. After execution of
-the command, the phasestep is set to <span style="font-weight: bold;">****K****</span>.
+****C****, available ****D****,
+or hold ****H****. After execution of
+the command, the phasestep is set to ****K****.
 
 The command generates a WLOG command which reports the event in the
 LOG file.
@@ -19,7 +16,7 @@ LOG file.
 
 | Parameter  | Description  |
 | --- | --- |
-| <a href="../../../../c_intro_userinterfaces/command_summary/parameter_intro/idf">IDF</a> | Model file identifier. |
-| <a href="../../../../c_intro_userinterfaces/command_summary/parameter_intro/idtu">IDTU</a> | Local transfer counter identifier. |
-| <a href="../../../../c_intro_userinterfaces/command_summary/parameter_intro/part">PART</a><br/> **(Mandatory)** | Identifier of the partner. |
+| [IDF](../../../../c_intro_userinterfaces/command_summary/parameter_intro/idf) | Model file identifier. |
+| [IDTU](../../../../c_intro_userinterfaces/command_summary/parameter_intro/idtu) | Local transfer counter identifier. |
+| [PART](../../../../c_intro_userinterfaces/command_summary/parameter_intro/part)<br/> **(Mandatory)** | Identifier of the partner. |
 

@@ -1,11 +1,8 @@
 ---
-
-    title: CFTUTIL  command line interface
-    linkTitle: Manage the server 
-    weight: 230
-
----
-CFTUTIL is the command line interface for Transfer CFT. The Transfer
+    title: "CFTUTIL  command line interface"
+    linkTitle: "Manage the server "
+    weight: 220
+---CFTUTIL is the command line interface for Transfer CFT. The Transfer
 CFT utility is a program which can be activated in batch or interactive
 mode. The CFTUTIL interface is able to translate Transfer CFT parameter
 setting commands and operating commands.
@@ -44,7 +41,7 @@ command topic, refer to the [Command index](../../c_intro_userinterfaces/command
 ### Command syntax
 
 For each command, CFTUTIL checks the command syntax and enters the command. Refer to *[Typographical
-conventions](../../gettingstarted_intro/my_first_transfer_flow_using_cg/typographical_conventions)* for the Transfer CFT command syntax conventions used in this document.
+conventions](../../c_intro_userinterfaces/command_summary/typographical_conventions)* for the Transfer CFT command syntax conventions used in this document.
 
 <span id="CFTUTIL_commands"></span>
 

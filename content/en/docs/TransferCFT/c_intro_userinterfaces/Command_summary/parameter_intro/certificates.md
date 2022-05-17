@@ -1,11 +1,8 @@
 ---
-
-    title: certificates
-    linkTitle: certificates
-    weight: 380
-
----
-### certificates
+    title: "certificates"
+    linkTitle: "certificates"
+    weight: 370
+---### certificates
 
 #### PKIENTITY
 

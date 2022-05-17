@@ -1,11 +1,8 @@
 ---
-
-    title: faction
-    linkTitle: faction
-    weight: 1040
-
----
-<span id="faction"></span>
+    title: "faction"
+    linkTitle: "faction"
+    weight: 1030
+---<span id="faction"></span>
 
 ### faction
 
@@ -13,22 +10,22 @@
 
 #### CFTSEND, SEND
 
-**\[FACTION = {<span style="text-decoration: underline;">NONE</span>
-| DELETE | ERASE | ARCHIVE }\]**
+**[FACTION = {NONE
+&#124; DELETE &#124; ERASE &#124; ARCHIVE }]**
 
 Action on the file after a send transfer:
 
-- <span style="font-weight: bold;">****NONE****</span>: No action on this file on completion
+- ****NONE****: No action on this file on completion
     of the transfer.
-- <span style="font-weight: bold;">****DELETE****</span>: Delete the file after transfer. Note the following specificities:
+- ****DELETE****: Delete the file after transfer. Note the following conditions:
     -   No delete occurs if you are using SELFNAME and the FNAME is set to a directory mask (for example, #dir is deleted, but #dir/\* is ignored).
     -   If a file is added to the directory while a transfer is in progress, neither this new file nor is the directory is deleted.
-- <span style="font-weight: bold;">****ERASE****</span>: erase the contents of the file
+- ****ERASE****: Erase the contents of the file
     after the transfer ("End Of File" mark at the beginning of the
     file)
-- **ARCHIVE**: the source file is moved to the file name specified in the ARCHIVEFNAME parameter when the transfer is completed. If the transfer fails, the file is not moved. If the target file already exists, it is overwritten.
+- **ARCHIVE**: The source file is moved to the file name specified in the ARCHIVEFNAME parameter when the transfer is completed. If the transfer fails, the file is not moved. If the target file already exists, it is overwritten.
 
-<span class="bold_in_para">****FACTION limitations****</span>
+****FACTION limitations****
 
 - ERASE is not supported when using a group of files in homogeneous mode, or when broadcasting (CFTDEST ).
 - DELETE is not supported when broadcasting (CFTDEST ).
@@ -39,8 +36,8 @@ Action on the file after a send transfer:
 
 #### CFTRECV, RECV
 
-**\[FACTION = {<span style="text-decoration: underline;">VERIFY</span>
-| DELETE | ERASE | RENAME | RETRYRENAME }\]**
+**[FACTION = {VERIFY
+&#124; DELETE &#124; ERASE &#124; RENAME &#124; RETRYRENAME }]**
 
 > **Note**
 >
@@ -51,10 +48,10 @@ Action on a file before a receive transfer except when using RENAME or RETRYRENA
 If a receiver file with the same name already exists, {{< TransferCFT/axwayvariablesComponentLongName  >}} performs
 one of the following actions:
 
-- <span style="font-weight: bold;">****VERIFY****</span>: checks that the file is empty before the transfer occurs
-- <span style="font-weight: bold;">****DELETE****</span>:
+- ****VERIFY****: checks that the file is empty before the transfer occurs
+- ****DELETE****:
     deletes the file before the transfer occurs
-- <span style="font-weight: bold;">****ERASE****</span>:
+- ****ERASE****:
     erases the contents of the file before the transfer occurs
 - **RENAME**: replaces the existing FNAME file after the transfer completes by renaming the WFNAME file (*Unix only*)
 - **RETRYRENAME**: Renames the file on transfer completion in the post-processing phase, and includes a configurable retry mechanism. See also [Post-transfer file renaming](../../../../app_integration_intro/spoolout).
@@ -88,4 +85,4 @@ The following table shows the combined effect of the FDISP and FACTION parameter
 | z/OS | For VSAM files, only FACTION = ERASE is accepted. |
 
 
-[Return to Command index](../../)<a href="#" class="selected"> </a>
+[Return to Command index](../../)[ ](#)

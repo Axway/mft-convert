@@ -1,17 +1,14 @@
 ---
-
-    title: ida
-    linkTitle: ida
-    weight: 1530
-
----
-<span id="ida"></span>
+    title: "ida"
+    linkTitle: "ida"
+    weight: 1520
+---<span id="ida"></span>
 
 ### ida
 
 #### SEND, CFTSEND, RECV, LISTCAT, END, START, SUBMIT, KEEP, HALT, DELETE, DISPLAY, RESUME
 
-****\[IDA = \]****
+****[IDA = ]****
 
 Local transfer identifier assigned by the user or user application.
 

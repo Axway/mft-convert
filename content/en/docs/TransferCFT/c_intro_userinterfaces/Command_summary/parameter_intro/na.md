@@ -1,17 +1,14 @@
 ---
-
-    title: na
-    linkTitle: na
+    title: "na"
+    linkTitle: "na"
     weight: 2060
-
----
-<span id="na"></span>
+---<span id="na"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
 #### DISPLAY
 
-****\[ NA = { ANY | string } \]****
+****[ NA = { ANY &#124; string } ]****
 
 Use this parameter to replace the default output of "Non Applicable" values.
 

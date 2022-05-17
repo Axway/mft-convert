@@ -1,17 +1,14 @@
 ---
-
-    title: Support tools /contact Support
-    linkTitle: Support tools / contact Support
-    weight: 230
-
----
-This section describes the tools available to help you collect information and contact support if you are unable to troubleshoot an error or issue.
+    title: "Support tools and contacting Support"
+    linkTitle: "Support tools and contacting Support"
+    weight: 220
+---This section describes the tools available to help you collect information and contact support if you are unable to troubleshoot an error or issue.
 
 <span id="Contacting_the_Axway_support"></span>
 
 ## Accessing the Axway Support site
 
-Visit the Axway [Support](https://support.axway.com/) site to view the knowledgebase, product articles, and browse existing cases. Or, to obtain the email address and phone number of your nearest Axway
+Visit the Axway [Support](https://support.axway.com/) site to view the knowledge base, product articles, and browse existing cases. Or, to obtain the email address and phone number of your nearest Axway
 support site, click **Contact
 us**.
 
@@ -27,7 +24,7 @@ if possible:
 
 - Product version
 - Operating system
-- cft\_support (see <a href="#" class="selected">Support tools</a>)
+- cft_support (see [Support tools](#))
 
 To submit a Support request, you can do the following:
 
@@ -38,27 +35,29 @@ To submit a Support request, you can do the following:
     Support concerning that case.
 - You must have a user account to submit a Support request.
 
-## Using cft\_support
+## Using cft_support
 
-The cft\_support tool collects all of the needed information from the customer's Transfer CFT installation environment, including the static configuration (PARM/PART), Unified Configuration parameters (UCONF), catalog information, communication media file status (CFTCOM), log files, execution environment (variables), disk space, and so on. This information is then packaged into a archive file called <span class="bold_in_para">****cft-support-&lt;date>(.tar.gz|.zip)****</span>.
+The cft_support tool collects all of the needed information from the customer's Transfer CFT installation environment, including the static configuration (PARM/PART), Unified Configuration parameters (UCONF), catalog information, communication media file status (CFTCOM), log files, execution environment (variables), disk space, and so on. This information is then packaged into a archive file called ****cft-support-&lt;date>(.tar.gz&#124;.zip)****.
 
 > **Note**
 >
-> When using the cft\_support tool on other Operating Systems, refer to the OS-specific guide for the correct syntax.
+> When using the cft_support tool on other operating systems, refer to the OS-specific guide for the correct syntax.
 
-### Using Copilot
+### Using the user interface
 
-From the Copilot UI, click the ![Debug command icon](/Images/TransferCFT/debug_alt.gif)debug icon. The report is saved in the Transfer CFT runtime directory, after which you are prompted to download the report to your desktop.
+*Available on Unix and Windows*
+
+You can generate a `cft-support` archive file from the **Support** page in the **Operations** menu of the user interface. The report is saved in the Transfer CFT runtime directory by default. You can modify this directory using the UCONF `cft.support_dir` parameter.
 
 ### Using command line
 
-In command line, enter: <span class="code">`cft_support collect`</span> <span class="code">`[options]`</span>
+In command line, enter: `cft_support collect` `[options]`
 
 Options:
 
 - --help: Display this help and exit.
-- --cat-filter: Filter the CFTUTIL LISTCAT output. See [LISTCAT](../../c_intro_userinterfaces/about_cftutil/monitoring_cftutil_intro/listcat_command), or enter <span class="code">`CFTUTIL HELP CMD=LISTCAT`</span>, to view available parameters.
-- --cat-debug-filter: Filter the CFTUTIL LISTCAT CONTENT=DEBUG output. This option overrides <span class="code">`--cat-filter.`</span>
+- --cat-filter: Filter the CFTUTIL LISTCAT output. See [LISTCAT](../../c_intro_userinterfaces/about_cftutil/monitoring_cftutil_intro/listcat_command), or enter `CFTUTIL HELP CMD=LISTCAT`, to view available parameters.
+- --cat-debug-filter: Filter the CFTUTIL LISTCAT CONTENT=DEBUG output. This option overrides `--cat-filter.`
 - --no-core-analysis-gdb: Do not use gdb to analyze the cores. *Unix only*
 - --no-core-analysis-dbx: Do not use dbx to analyze the cores. *Unix only*
 
@@ -67,19 +66,19 @@ Options:
 Only collect information for a given transfer:
 
 ```
-<span class="code">`cft_support collect --cat-filter="IDTU=A0000001"`</span>
+cft_support collect --cat-filter="IDTU=A0000001"
 ```
 
 Collect information for all transfers in error for a given partner:
 
 ```
-<span class="code">`cft_support collect --cat-filter="DIAGI=ERROR, PART=PARIS"`</span>
+cft_support collect --cat-filter="DIAGI=ERROR, PART=PARIS"
 ```
 
 Collect transfer information related to a given IDF for all transfers in a brief LISTCAT, and only those transfers in error in a debug LISTCAT:
 
 ```
-<span class="code">`cft_support collect --cat-filter="IDF=BIN" --cat-debug-filter="IDF=BIN, DIAGI=ERROR"`</span>
+cft_support collect --cat-filter="IDF=BIN" --cat-debug-filter="IDF=BIN, DIAGI=ERROR"
 ```
 
 #### IBM i
@@ -91,9 +90,9 @@ Additionally, two options are available for CFTSUPPORT:
 - `CATFIL('IDTU=A0000001')`: Filters the CFTUTIL LISTCAT output.
 - `DBGCATFIL('IDTU=A0000002')`: Filters the CFTUTIL LISTCAT CONTENT=DEBUG output.
 
-<span class="bold_in_para">****Example****</span>
+****Example****
 
-<span class="code" style="font-family: 'Courier New';">`CFTSUPPORT IFSPATH('/home/cft/axway/cft/runtime/cftsupport')DBGCATFIL('IDTU=A0000002')`</span>
+`CFTSUPPORT IFSPATH('/home/cft/axway/cft/runtime/cftsupport')DBGCATFIL('IDTU=A0000002')`
 
 > **Note**
 >
@@ -118,4 +117,4 @@ information, and retrieve previously saved Transfer CFT information.
 
 You may need to initiate tracing in order to assist Transfer CFT Support
 service if an error occurs. The Transfer CFT Support service can analyze
-the traces to better help you resolve the issue. See <a href="../traces_in_cft" class="MCXref xref">How to use ATM traces</a>
+the traces to better help you resolve the issue. See [How to use ATM traces](../atm_traces)

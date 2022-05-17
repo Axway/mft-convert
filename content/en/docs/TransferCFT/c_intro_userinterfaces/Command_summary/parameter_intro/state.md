@@ -1,11 +1,8 @@
 ---
-
-    title: state
-    linkTitle: state
-    weight: 3390
-
----
-<span id="state"></span>
+    title: "state"
+    linkTitle: "state"
+    weight: 3410
+---<span id="state"></span>
 
 ### state
 
@@ -13,8 +10,8 @@
 
 #### CFTRECV, CFTSEND, RECV, SEND
 
-**\[STATE = { <span style="text-decoration: underline;">DISP</span>
-| HOLD | KEEP}\]**
+**[STATE = { DISP
+&#124; HOLD &#124; KEEP}]**
 
 Defines the transfer request state:
 
@@ -39,7 +36,7 @@ Defines the transfer request state:
 
 #### LISTCAT, DELETE, START, KEEP, HALT, RESUME, SUBMIT, END, DISPLAY
 
-**\[STATE = {\* | C | CDHKTX } \]**
+**[STATE = {\* &#124; C &#124; CDHKTX } ]**
 
 Select one of the following transfer states:
 
@@ -52,17 +49,17 @@ Select one of the following transfer states:
 
 #### CFTPART
 
-**\[STATE = string \]**
+**[STATE = string ]**
 
 State of the partner:
 
-- <span style="font-weight: bold;">****ACTIVEBOTH****</span> (default)- partner active
+- ****ACTIVEBOTH**** (default)- partner active
     in all modes
-- <span style="font-weight: bold;">****ACTIVEREQ****</span> - partner active in request
+- ****ACTIVEREQ**** - partner active in request
     mode only
-- <span style="font-weight: bold;">****ACTIVESERV****</span> - partner active in server
+- ****ACTIVESERV**** - partner active in server
     mode only
-- <span style="font-weight: bold;">****NOACTIVE****</span> - partner not active
+- ****NOACTIVE**** - partner not active
 
 #### PKICER (PKIUTIL tool)
 
@@ -74,7 +71,7 @@ If activated, it can be used by {{< TransferCFT/axwayvariablesComponentShortName
 
 #### CFTCRON
 
-**\[STATE = { <u>ACTIVE</u> | NOACTIVE } \]**
+**[STATE = { <u>ACTIVE</u> &#124; NOACTIVE } ]**
 
 - To activate CFTCRON, set the state=ACTIVE.
 - Use NOACTIVE to disable use of CFTCRON.

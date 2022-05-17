@@ -1,11 +1,8 @@
 ---
-
-    title: Migrate to CFTFOLDER folder monitoring
-    linkTitle: Migrate to CFTFOLDER folder monitoring
-    weight: 220
-
----
-You can use the<span class="bold_in_para"> ****Folder monitoring migration****</span> **utility** to help you migrate from the UCONF method of folder monitoring to the CFTFOLDER method. This procedure may be useful if you have migrated or upgraded from Transfer CFT 3.1.2 to Transfer CFT 3.2.4.
+    title: "Migrate to CFTFOLDER folder monitoring"
+    linkTitle: "Migrate to CFTFOLDER folder monitoring"
+    weight: 210
+---You can use the ****Folder monitoring migration**** **utility** to help you migrate from the UCONF method of folder monitoring to the CFTFOLDER method. This procedure may be useful if you have migrated or upgraded from Transfer CFT 3.1.2 to Transfer CFT 3.2.4.
 
 Reasons to switch to the CFTFOLDER method include:
 
@@ -14,7 +11,7 @@ Reasons to switch to the CFTFOLDER method include:
 
 ## Procedure
 
-Using the <span class="code">`cftmifm`</span> migration command creates a text file that the CFTUTIL utility can use to migrate the folder definitions, where the CFTFOLDER definitions are an extraction from the UCONF definitions.
+Using the `cftmifm` migration command creates a text file that the CFTUTIL utility can use to migrate the folder definitions, where the CFTFOLDER definitions are an extraction from the UCONF definitions.
 
 You must stop and start, or restart, Transfer CFT for the modifications to be taken into account.
 
@@ -26,7 +23,7 @@ The folder migration utility is supplied as an executable file, and displays hel
 
 Two actions are available, you can extract the folder definitions to migrate, or purge the UCONF folder definitions after migrating.
 
-`cftmifm migrate | purge `
+`cftmifm migrate &#124; purge `
 
 ****Options****
 
@@ -67,7 +64,7 @@ The Transfer CFT purge utility performs the following steps:
 1. When folders in the list also exist as CFTFOLDER objects in the Transfer CFT configuration, and STATE=ACTIVE, these folders are targeted to be purged.
 1. At this point the purge is performed unless you have specified - s (simulate).
 
-- The purge removes all targeted folders from the folder\_monitoring.folders listed in UCONF. As opposed to the migration, this action directly alters the UCONF configuration.
+- The purge removes all targeted folders from the folder_monitoring.folders listed in UCONF. As opposed to the migration, this action directly alters the UCONF configuration.
 - If you are using -s (simulate), the tool only displays folders targeted by the purge.
 
 ## Examples of how to use the migrate and purge commands
@@ -79,26 +76,26 @@ The Transfer CFT purge utility performs the following steps:
 Migrate all folders from UCONF to CFTFOLDER objects.
 
 1. Create CFTFOLDER objects in fm1.cfg file:  
-    <span class="code">`cftmifm migrate -o fm1.cfg`</span>
+    `cftmifm migrate -o fm1.cfg`
 1. Save uconf folder configuration:  
-    <span class="code">`CFTUTIL CFTEXT type=uconf,id=folder_monitoring.*,fout=fm_uconf_save.cfg`</span>
+    `CFTUTIL CFTEXT type=uconf,id=folder_monitoring.*,fout=fm_uconf_save.cfg`
 1. Interpret fm1.cfg file:  
-    <span class="code">`CFTUTIL config type=input,fname=fm1.cfg`</span>
+    `CFTUTIL config type=input,fname=fm1.cfg`
 1. Purge uconf folder configuration:  
-    <span class="code">`cftmifm purge`</span>
+    `cftmifm purge`
 
 ****Example 2****
 
 Only migrate specific folders from the UCONF configuration to the CFTFOLDER option, for example, select all logical folders starting with the letter "A".
 
 1. Create the CFTFOLDER objects in a file called fm2.cfg, for example:  
-    <span class="code">`cftmifm migrate -p A* -o fm2.cfg`</span>
+    `cftmifm migrate -p A* -o fm2.cfg`
 1. Make a backup save of the UCONF folder configuration:  
-    <span class="code">`CFTUTIL CFTEXT type=uconf,id=folder_monitoring.*,fout=fm_uconf_save.cfg`</span>
+    `CFTUTIL CFTEXT type=uconf,id=folder_monitoring.*,fout=fm_uconf_save.cfg`
 1. Interpret the generated fm2.cfg file:  
-    <span class="code">`CFTUTIL config type=input,fname=fm2.cfg`</span>
+    `CFTUTIL config type=input,fname=fm2.cfg`
 1. Purge the UCONF folder configuration:  
-    <span class="code">`cftmifm purge -p A*`</span>
+    `cftmifm purge -p A*`
 
 ### Examples on an IBM i system
 
@@ -128,21 +125,21 @@ CALL PGM(CFTMIFM) PARM('purge' '-p' 'A\*')
 
 Submit the CFTMIFM JCL located in the INSTALL library to migrate from UCONF to CFTFOLDER objects. Next submit the CFTMIFMP JCL, also located in the INSTALL library, to purge the UCONF configuration.
 
-1. Extracts all folder definitions: <span class="code">`cftmifm migrate -p * -o <temp_file>`</span>
+1. Extracts all folder definitions: `cftmifm migrate -p * -o <temp_file>`
 1. Print the output.
-1. Apply the extracted definitions: <span class="code">`CFTUTIL config type=input,fname=<temp_file>`</span>
-1. Purges the all existing UCONF folder definitions: <span class="code">`cftmifm purge -p *`</span>
+1. Apply the extracted definitions: `CFTUTIL config type=input,fname=<temp_file>`
+1. Purges the all existing UCONF folder definitions: `cftmifm purge -p *`
 
 To  migrate or purge using a specific pattern you can modify the CFTMIFM and CFTMIFMP JCLs, otherwise all logical folders are affected.
 
 ### Rollback
 
-A prerequisite to performing a rollback is that you must have made a backup of the UCONF folder configuration prior to having migrated. Using the example above, this is the step: <span class="code">`CFTUTIL CFTEXT type=uconf,id=folder_monitoring.*,fout=fm_uconf_save.cfg`</span>
+A prerequisite to performing a rollback is that you must have made a backup of the UCONF folder configuration prior to having migrated. Using the example above, this is the step: `CFTUTIL CFTEXT type=uconf,id=folder_monitoring.*,fout=fm_uconf_save.cfg`
 
-1. Interpret the backup uconf folder file, for example <span class="code">`fm_uconf_save.cfg`</span>.  
-    <span class="code">`CFTUTIL config type=input,fname=fm_uconf_save.cfg`</span>
+1. Interpret the backup uconf folder file, for example `fm_uconf_save.cfg`.  
+    `CFTUTIL config type=input,fname=fm_uconf_save.cfg`
 1. Manually remove all CFTFOLDER objects:  
-    <span class="code">`CFTFOLDER ID=<folder>,mode=delete`</span>
+    `CFTFOLDER ID=<folder>,mode=delete`
 
 ### Limitations and notes
 
@@ -157,7 +154,7 @@ Parameter mapping and descriptions
 | Parameter  | UCONF  | Type  | Default<br/> UCONF | Default <br/> CFTFOLDER | Description  |
 | --- | --- | --- | --- | --- | --- |
 | same as in UCONF | folder_monitoring.enable  | Boolean  | No  | No  |  • No: No folder monitoring occurs.<br/> • Yes: Enable {{< TransferCFT/axwayvariablesComponentShortName  >}} folder monitoring. |
-| ID<span > </span>  | folder_monitoring.folders  | node  | None  | None  | Add the logical folders to monitor (list of logical identifiers).<br/> You should provide a unique name to identify the set of configuration parameters corresponding to this directory. If you have more than one Folder to monitor, use a space between each logical value.<br/> See the **Comment***** below this table for additional information. |
+| ID  | folder_monitoring.folders  | node  | None  | None  | Add the logical folders to monitor (list of logical identifiers).<br/> You should provide a unique name to identify the set of configuration parameters corresponding to this directory. If you have more than one Folder to monitor, use a space between each logical value.<br/> See the **Comment***** below this table for additional information. |
 | STATE  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.enable | Boolean  | Yes  | Active  | Enables a scan of the folder.<br/> Note: NO = NOACTIVE. |
 | SCANDIR  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.scan_dir | string  | None  | None  | Absolute path name of the top level directory to scan.<br/> This directory must exist before restarting Transfer CFT.<br/> *See NOTE. |
 | WORKDIR  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.work_dir | string  | None  | None  | Absolute path name of the top level directory available for file state information. Do not use the same name as you are using for the corresponding SCANDIR.<br/> • If you are using the MOVE method, files that are ready to be submitted are available in the work_dir.<br/> • If you are using the FILE method, the .met files are stored in the work_dir.<br/> <blockquote> **Note**<br/> Caution Never delete any .met files.<br/> </blockquote> *See NOTE. |
@@ -173,11 +170,11 @@ Parameter mapping and descriptions
 | INCLUDEFILTER  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.file_include_filter | string  | ""  | ""  | If this parameter is defined, only files whose names match this pattern are monitored.  |
 | EXCLUDEFILTER  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.file_exclude_filter | string  | ""  | ""  | If this parameter is defined, files whose names match this pattern are not monitored.  |
 | RESUBMITCHANGED  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.resubmit_changed_file | Boolean  | Yes  | Yes  | This parameter has no effect when the configured method is MOVE.<br/> When the method parameter value is set to FILE:<br/> • Yes: When the state of a previously submitted file is seen as having changed, the file is submitted again.<br/> • No: Files are not resubmitted, regardless of changes.<br/> <blockquote> **Note**<br/> The file is resubmitted after any change regardless of if the modification is a small change, or purging and replacing the file with another file having the same name.<br/> </blockquote>  |
-| FILTERTYPE  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.filter_type | enum  | WILDMAT  | WILDMAT  | Defines the pattern matching algorithm to use for file name filtering. Values:<br/> • STRJCMP: The Transfer CFT pattern matching algorithm.<br/> • WILDMAT: A well known public domain algorithm, and is the default. **Unix/Windows only**<br/> See <a href="#Defining">Create inclusion and exclusion filters</a> for details. |
+| FILTERTYPE  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.filter_type | enum  | WILDMAT  | WILDMAT  | Defines the pattern matching algorithm to use for file name filtering. Values:<br/> • STRJCMP: The Transfer CFT pattern matching algorithm.<br/> • WILDMAT: A well known public domain algorithm, and is the default. **Unix/Windows only**<br/> See [Create inclusion and exclusion filters](#Defining) for details. |
 | RENAMEMETHOD  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.renaming_method | Enum  | TIMESTAMP  | TIMESTAMP  | This parameter applies only to the MOVE method.<br/> • NONE or " ": The filename is unchanged (no timestamp is added). If the file already exists in the work directory, the MOVE process fails.<br/> • TIMESTAMP, a timestamp of the pattern YYYYMMDDHHMMSS is added at the end of the name of the renamed file but before the last '.'.<br/> For example, using timestamp_separators=".": • myfile is renamed myfile.20131025<br/> • myfile.txt is renamed myfile.20131025.txt |
 | RENAMESEPARATOR  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.renaming_separators | string  |   |   | This parameter only applies to the MOVE method. It must contain at most 2 characters from among the following:<br/> .[]()i_-<br/> The first character defines the separator before the timestamp. The second one, when present, defines the separator after the timestamp.<br/> For example, using timestamp_separators "[]": - myfile is renamed myfile.[20131025] - myfile.txt is renamed myfile.[20131025].txt |
 | N/A in this version  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.control | string  |   |   | Metadata used to control user changes.  |
-| USEFSEVENTS<br/>  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.<br/> use_file_system_events<br/> <a href="../folder_monitor_uconf#File-sys">More information</a> | Boolean  | No  | No  | Set to YES to enable the file system events monitoring service to detect newly available files.  |
+| USEFSEVENTS<br/>  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.<br/> use_file_system_events<br/> [More information](../folder_monitor_uconf#File-sys) | Boolean  | No  | No  | Set to YES to enable the file system events monitoring service to detect newly available files.  |
 | USERID  | N/A  | N/A  | N/A  | N/A  | This feature is not available in UCONF folder monitoring.  |
 
 
@@ -186,11 +183,11 @@ Parameter mapping and descriptions
 > \*You cannot use the following characters in the SCANDIR or WORKDIR definition. Additionally you cannot use a comma (,) in the CFTFOLDER SCANDIR or WORKDIR definition.
 
 - {{< TransferCFT/PrimaryForunix >}} /
-- For {{< TransferCFT/PrimaryforWindows >}} \\ / : \* ? " &lt; > |
+- For {{< TransferCFT/PrimaryforWindows >}} \\ / : \* ? " &lt; > &#124;
 
 ****Related topics****
 
-- <a href="../" class="MCXref xref">Introduction to folder monitoring</a>
-- <a href="../../../c_intro_userinterfaces/web_copilot_ui/flow_def_intro/cftfolder" class="MCXref xref">Folder monitoring CFTFOLDER</a>
-- <a href="#" class="MCXref xref selected">Migrate to CFTFOLDER folder monitoring</a>
-- <a href="../folder_customize" class="MCXref xref">Create inclusion and exclusion filters</a>
+- [Introduction to folder monitoring](../)
+- [Folder monitoring CFTFOLDER](../../../c_intro_userinterfaces/web_copilot_ui/flow_def_intro/cftfolder)
+- [Migrate to CFTFOLDER folder monitoring](#)
+- [Create inclusion and exclusion filters](../folder_customize)

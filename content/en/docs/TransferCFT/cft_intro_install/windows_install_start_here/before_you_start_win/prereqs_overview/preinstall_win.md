@@ -1,11 +1,8 @@
 ---
-
-    title: Windows-specific prerequisites 
-    linkTitle: Windows-specific prerequisites
+    title: "Windows-specific prerequisites "
+    linkTitle: "Windows-specific prerequisites"
     weight: 170
-
----
-The following are tasks to perform or issues to address before installing Transfer CFT.
+---The following are tasks to perform or issues to address before installing Transfer CFT.
 
 ## Windows requirements
 
@@ -43,10 +40,10 @@ For Windows versions that support UAC, Windows Vista, Windows Server 2008, Windo
 1. Click **OK**.
 1. Reboot to make the change effective.
 
-For Windows versions prior to the versions listed above, perform the following steps to add yourself in <span class="bold_in_para">****Log on as a service group****</span>:
+For Windows versions prior to the versions listed above, perform the following steps to add yourself in ****Log on as a service group****:
 
-1. Navigate to<span class="spanboldinpara" style="font-weight: bold;"> ****Start**** </span>**&gt;**<span class="spanboldinpara" style="font-weight: bold;"> ****Control Panel**** </span>**&gt;**<span class="spanboldinpara" style="font-weight: bold;"> ****Administrative Tools****</span> **&gt;**<span class="spanboldinpara" style="font-weight: bold;"> ****Local Security Policy****</span>.
-1. From the tree, select <span class="spanboldinpara" style="font-weight: bold;">****Local Policies**** </span>**&gt;**<span class="spanboldinpara" style="font-weight: bold;"> ****User Rights Assignment**** </span>**&gt;**<span class="spanboldinpara" style="font-weight: bold;"> ****Log on as a service****</span>.
+1. Navigate to ****Start**** **&gt;** ****Control Panel**** **&gt;** ****Administrative Tools**** **&gt;** ****Local Security Policy****.
+1. From the tree, select ****Local Policies**** **&gt;** ****User Rights Assignment**** **&gt;** ****Log on as a service****.
 
 > **Note**
 >
@@ -65,7 +62,7 @@ The following tasks require that you have elevated rights and fail if one of the
 
 - Create or remove shortcuts in Start menu or desktop
 - Create or remove Windows services
-- Installing in <span class="code_1">%SystemRoot%</span> or <span class="code_1">%ProgramFiles%</span>
+- Installing in %SystemRoot% or %ProgramFiles%
 - Running product scripts that require elevated rights
 
 <span id="Windows"></span>
@@ -78,8 +75,6 @@ There are certain Windows-specific tasks you must perform to enable system user 
 
 The following sections describe how to:
 
-- [Define rights before starting the Copilot server (REST API/Transfer CFT UI)](../../../windows_install_start_here/running_cft_for_the_first_time_windows/user_rights_and_interface_win#Define%20rights%20before%20starting%20the%20CFT%C2%A0Navigator%20server)
-- [Define rights before logging on the Copilot server](../../../windows_install_start_here/running_cft_for_the_first_time_windows/user_rights_and_interface_win#Define%20rights%20before%20logging%20on%20the%20CFT%C2%A0Navigator%20server)
 - [Define rights before starting](../../../windows_install_start_here/running_cft_for_the_first_time_windows/user_rights_and_interface_win#Define_rights_before_starting_Transfer_CFT)
 - [Define a domain user](../../../windows_install_start_here/running_cft_for_the_first_time_windows/user_rights_and_interface_win#Define%20domain%20user)
 - [Define folder rights](../../../windows_install_start_here/running_cft_for_the_first_time_windows/user_rights_and_interface_win#Define)
@@ -96,7 +91,7 @@ Note the following prerequisites and limitations when installing {{< TransferCFT
 - If you install {{< TransferCFT/axwayvariablesComponentLongName >}} in service mode, to launch the service on a specific account you must grant that user service rights to log in.  
     To grant this right, navigate to **Administrative Tools > Local Security Policy > Local Management > Local Policies**, and select **User Rights Assignment**. Then grant the user **Logon as a Service**.
 - If you install {{< TransferCFT/axwayvariablesComponentLongName >}}in service mode but want to launch the service on a Local System Account, be aware that you cannot start Transfer CFT from the Copilot UI.
-- See also, <a href="../../n_active_active/shared_file_prereq_win" class="MCXref xref">Shared file system prerequisites</a>.
+- See also, [Shared file system prerequisites](../../n_active_active/shared_file_prereq_win).
 
 ## Using a mapped drive
 

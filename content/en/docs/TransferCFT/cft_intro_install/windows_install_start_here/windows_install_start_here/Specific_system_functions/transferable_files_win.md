@@ -1,11 +1,8 @@
 ---
-
-    title: Transferable files 
-    linkTitle: Transferable files
-    weight: 240
-
----
-This
+    title: "Transferable files "
+    linkTitle: "Transferable files"
+    weight: 230
+---This
 topic describes the Transfer
 CFT parameters that are specific to Windows concerning the characteristics of the transferable file.
 

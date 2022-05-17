@@ -1,16 +1,13 @@
 ---
-
-    title: CFTPART
-    linkTitle: nrpart
-    weight: 2290
-
----
-<span id="nrpart"></span>
+    title: "CFTPART"
+    linkTitle: "nrpart"
+    weight: 2310
+---<span id="nrpart"></span>
 
 ### CFTPART
 
-**\[NRPART = {<u>value of the NPART
-parameter of CFTPARM</u> | *string*}\]**
+**[NRPART = {<u>value of the NPART
+parameter of CFTPARM</u> &#124; *string*}]**
 
 - string24     PeSIT  
 - string25     ODETTE

@@ -1,11 +1,8 @@
 ---
-
-    title: execre
-    linkTitle: execre
-    weight: 860
-
----
-<span id="execre"></span>
+    title: "execre"
+    linkTitle: "execre"
+    weight: 850
+---<span id="execre"></span>
 
 ### execre
 
@@ -13,7 +10,7 @@
 
 #### CFTPARM
 
-****\[EXECRE = filename\]
+****[EXECRE = filename]
    {string
 64}****
 
@@ -34,7 +31,7 @@ This name may include the following symbolic variables:
 - &DIAGI, &DIAGP
 - &NIDF
 
-The character ‘&’ designates the char\_symb character defined in
+The character ‘&’ designates the char_symb character defined in
 the {{< TransferCFT/axwayvariablesComponentShortName  >}} *Operations Guide* corresponding to your OS. 
 
 > **Note**

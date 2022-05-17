@@ -1,17 +1,14 @@
 ---
-
-    title: group
-    linkTitle: group
-    weight: 1400
-
----
-<span id="group"></span>
+    title: "group"
+    linkTitle: "group"
+    weight: 1390
+---<span id="group"></span>
 
 ### group
 
 #### CFTPART
 
-**\[GROUP = identifier\]**
+**[GROUP = identifier]**
 
 Group the partner belongs to.
 

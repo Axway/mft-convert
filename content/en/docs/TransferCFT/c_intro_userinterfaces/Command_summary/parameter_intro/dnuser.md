@@ -1,11 +1,8 @@
 ---
-
-    title: dnuser
-    linkTitle: dnuser
-    weight: 770
-
----
-<span id="dnuser"></span>
+    title: "dnuser"
+    linkTitle: "dnuser"
+    weight: 760
+---<span id="dnuser"></span>
 
 ### dnuser
 

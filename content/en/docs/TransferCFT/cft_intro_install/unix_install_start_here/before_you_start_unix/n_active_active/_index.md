@@ -1,11 +1,8 @@
 ---
-
-    title: Active/active installation - Unix
-    linkTitle: Active/active installation
+    title: "Active/active installation - Unix"
+    linkTitle: "Active/active installation"
     weight: 170
-
----
-This section describes how to install active/active failover, as described in [About Multi-node architecture.](../../../../about_multinode)
+---This section describes how to install active/active failover, as described in [About Multi-node architecture.](../../../../about_multinode)
 
 ## Multi-node license keys
 
@@ -24,7 +21,7 @@ Additionally, the key must have the cluster option.
 
 ### Download and uncompress
 
-Download and unzip the {{< TransferCFT/suitevariablesTransferCFTName  >}} install package, as described in <a href="../" class="MCXref xref">Install Transfer CFT</a>.
+Download and unzip the {{< TransferCFT/suitevariablesTransferCFTName  >}} install package, as described in [Install Transfer CFT](../).
 
 ### Customize
 
@@ -43,8 +40,8 @@ Create as many copies of the initialize.properties file as you have hosts in the
 ## Install
 
 1. Start the installation.
-1. Transfer\_CFT\_{{< TransferCFT/axwayvariablesReleaseNumber >}}\_Install\_linux-x86-64\_BNXXXXXXXX.exe
-1. ./Transfer\_CFT\_{{< TransferCFT/axwayvariablesReleaseNumber >}}\_Install\_&lt;OS>\_&lt;BN>.run
+1. Transfer_CFT_{{< TransferCFT/axwayvariablesReleaseNumber >}}_Install_linux-x86-64_BNXXXXXXXX.exe
+1. ./Transfer_CFT_{{< TransferCFT/axwayvariablesReleaseNumber >}}_Install_&lt;OS>_&lt;BN>.run
 1. In the Installation Architecture screen, select **Cluster - first host**.
 1. Complete the installation.
 1. To add a host to create a multi-host, multi-node installation, run the install again. This time select **Cluster - Additional host**.
@@ -53,14 +50,14 @@ Create as many copies of the initialize.properties file as you have hosts in the
 
 This section describes the differences when installing using a silent file for a multi-node installation.
 
-If the silent file architecture is either first\_host or additional\_host, there are two important parameters:
+If the silent file architecture is either first_host or additional_host, there are two important parameters:
 
-- multinode\_hostname
-- multinode\_host\_address
+- multinode_hostname
+- multinode_host_address
 
 By default, these 2 attributes are automatically completed if they are not specified in the silent file.
 
-During the runtime creation and for each host, the multinode\_hostname is used as the basis for the cft.multi\_node.hostnames, where cft.multi\_node.hostnames=Cluster\_short\_hostname1, Cluster\_short\_hostname2, Cluster\_short\_hostname3, Cluster\_short\_hostname4. Using the same logic, the multinode\_host\_addresss is used to create each \_ cft.multi\_node.hostnames.\*\*\*\*.host uconf attribute.
+During the runtime creation and for each host, the multinode_hostname is used as the basis for the cft.multi_node.hostnames, where cft.multi_node.hostnames=Cluster_short_hostname1, Cluster_short_hostname2, Cluster_short_hostname3, Cluster_short_hostname4. Using the same logic, the multinode_host_addresss is used to create each _ cft.multi_node.hostnames.\*\*\*\*.host uconf attribute.
 
 In the silent file (initialize.properties), you can use the same other definitions as in the Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}} silent files.
 
@@ -70,4 +67,4 @@ See the [Multi-node commands and management](../../../../about_multinode/multi_n
 
 ## Troubleshooting
 
-Please see <a href="../../../../troubleshoot_intro/admin_troubleshooting_server/admin_troubleshooting_runtime/troubleshoot_multinode" class="MCXref xref">Troubleshoot multi-node</a>.
+Please see [Troubleshoot multi-node](../../../../troubleshoot_intro/admin_troubleshooting_server/admin_troubleshooting_runtime/troubleshoot_multinode).

@@ -1,15 +1,12 @@
 ---
-
-    title: compression
-    linkTitle: compression
-    weight: 480
-
----
-<span id="compression"></span>
+    title: "compression"
+    linkTitle: "compression"
+    weight: 470
+---<span id="compression"></span>
 
 ### compression
 
-****cpr = { 0 | 15}****
+****cpr = { 0 &#124; 15}****
 
 The default value for compression depends on the parameter and protocol. See:
 

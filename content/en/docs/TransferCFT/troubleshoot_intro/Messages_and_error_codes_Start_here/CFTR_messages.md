@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer CFT messages: CFTR
-    linkTitle: CFTR messages
-    weight: 360
-
----
-This topic lists the CFTRxx (CFT xnnx) messages and provides the type, a description, consequence, and corrective actions when applicable.
+    title: "Transfer CFT messages: CFTR"
+    linkTitle: "CFTR messages"
+    weight: 350
+---This topic lists the CFTRxx (CFT xnnx) messages and provides the type, a description, consequence, and corrective actions when applicable.
 
 **Message format**
 
@@ -15,9 +12,9 @@ Earlier versions of Transfer CFT used a different message format than version 3.
 
 **Example**
 
-CFTLOG FORMAT=\[V23,V24\]
+CFTLOG FORMAT=[V23,V24]
 
-For V23: <span class="code">`CFTT57I PART=&part IDF=&idf IDT=&idt &str transfer started`</span>
+For V23: `CFTT57I PART=&part IDF=&idf IDT=&idt &str transfer started`
 
 For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&idt>`
 
@@ -122,8 +119,8 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
  
 
 
-| V23 format<br/> V24 format<br/> Information | <span id="CFTR12I"></span>CFTR12I &amp;cmd PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm]IDT=&amp;idt Treated FOR USER=&amp;user &amp;str<br/> CFTR12I &amp;cmd PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm]IDT=&amp;idt Treated FOR USER=&amp;user &amp;str |
-| --- | --- | --- | --- |
+| V23 format<br/> V24 format<br/> Information | <span id="CFTR12I"></span>CFTR12I &amp;cmd PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm]IDT=&amp;idt Treated FOR USER=&amp;user &amp;str<br/> CFTR12I &amp;cmd PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm]IDT=&amp;idt Treated FOR USER=&amp;user &amp;str |
+| --- | --- |
 | Explanation | The command was executed correctly.<br/> The partner's name (&amp;part), the IDF (&amp;idf) and the IDT (&amp;idt) are only defined if it is a SEND or RECV command.<br/> If the jobname is set in the catalog, then the information &lt;JOBNAME=PID&gt; (all platforms except z/OS) or &lt;JOBNAME=jobname jobid&gt; (z/OS platforms) displays in the message in place of (&amp;str). |
 
 
@@ -160,7 +157,7 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
 
 | V23 format<br/> V24 format<br/> Information | <span id="CFTR16I"></span>CFTR16I &amp;message<br/> CFTR16I &amp;message |
 | --- | --- |
-| Explanation | Information concerning either the TURN command or the WLOG command.<br/> QQQ_QQQ_QQQ_LIST<br/> • TURN command: • PART=&amp;part<br/> • MODE=&amp;mode (&amp;str) &amp;mode: create,replace,delete<br/> • &amp;str: “part not found”,”part inact”,”prot DMZ not found” ,”part not in requester mode","commutation not available”,"see omintime,omaxtime”,”already in command cache”,”not into command cache”<br/> <br/> QQQ_QQQ_QQQ_LIST<br/> • WLOG command: • &amp;message displayed in the {{< TransferCFT/axwayvariablesComponentShortName  >}} LOG<br/>  |
+| Explanation | Information concerning either the TURN command or the WLOG command.<br/> • TURN command: • PART=&amp;part<br/> • MODE=&amp;mode (&amp;str) &amp;mode: create,replace,delete<br/> • &amp;str: “part not found”,”part inact”,”prot DMZ not found” ,”part not in requester mode","commutation not available”,"see omintime,omaxtime”,”already in command cache”,”not into command cache”<br/> <br/> • WLOG command: • &amp;message displayed in the {{< TransferCFT/axwayvariablesComponentShortName  >}} LOG<br/>  |
 
 
  
@@ -196,7 +193,7 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
 | V23 format<br/> V24 format<br/> Error | <span id="CFTR20E"></span>CFTR20E &amp;message<br/> CFTR20E &amp;message |
 | Explanation | Error messages originating from the folder monitoring functionality.<br/> Usually triggered by error conditions encountered on file manipulation as renaming, deleting. |
 | Warning  | CFTR20W &amp;message  |
-| Explanation | Warning message related to the folder monitoring feature.<br/> Indicates that a system error concerning the event subsystem occurred (see <a href="../../../app_integration_intro/intro_folder_monitor/configure_folder_monitoring">USEFSEVENT</a>=YES). |
+| Explanation | Warning message related to the folder monitoring feature.<br/> Indicates that a system error concerning the event subsystem occurred (see [USEFSEVENT](../../../app_integration_intro/intro_folder_monitor/configure_folder_monitoring)=YES). |
 | V23 format<br/> V24 format<br/> Fatal | <span id="CFTR20F"></span>CFTR20F &amp;message<br/> CFTR20F &amp;message |
 | Explanation | Fatal messages originating from the folder monitoring functionality.<br/> Indicates that a severe error condition was encountered and is preventing this functionality from proceeding normally. |
 

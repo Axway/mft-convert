@@ -1,11 +1,8 @@
 ---
-
-    title: Manage bandwidth control
-    linkTitle: Managing bandwidth
-    weight: 200
-
----
-The bandwidth control feature aides in controlling the network bandwidth used for incoming and outgoing data. This feature is based on the notion of class-of-service.
+    title: "Manage bandwidth control"
+    linkTitle: "Managing bandwidth"
+    weight: 190
+---The bandwidth control feature aides in controlling the network bandwidth used for incoming and outgoing data. This feature is based on the notion of class-of-service.
 
 Class-of-service defines a common set of parameters for all network session established under it, such as :
 
@@ -35,8 +32,6 @@ Transfers are assigned to a specific class of bandwidth through the **COS** fiel
 
 ### Class-of-service parameters
 
-QQQ\_QQQ\_QQQ
-
 
 | Parameter  | Default  | Description  |
 | --- | --- | --- |
@@ -51,7 +46,7 @@ QQQ\_QQQ\_QQQ
 | uconf:cft.server.bandwidth.cos  | 1  | Total number of class-of-services including the class number zero.  |
 
 
-\*\* Do not configure the parameters <span class="bold_in_para">****weight\_in****</span> and <span class="bold_in_para">****weight\_out****</span> for the class-of-service 0, as they cannot be used in this context. See [Concepts.](#Concepts)
+\*\* Do not configure the parameters ****weight_in**** and ****weight_out**** for the class-of-service 0, as they cannot be used in this context. See [Concepts.](#Concepts)
 
 ### Global parameters
 
@@ -77,15 +72,15 @@ QQQ\_QQQ\_QQQ
 ## Class-of-service concepts
 
 - The class of service “0” is directly or indirectly the parent of all others.
-- A rate (max\_rate, ...) or weight (weight\_in, weight\_out) that is not configured or set to -1 indicates an unlimited rate.
+- A rate (max_rate, ...) or weight (weight_in, weight_out) that is not configured or set to -1 indicates an unlimited rate.
 
 <!-- -->
 
 - The class-of-service used by default is:
-    -   uconf:cft.server.bandwidth.cos\_requester\_default for connection in requester mode
-    -   uconf:cft.server.bandwidth.cos\_server\_default for connection in server mode
-- The class-of-service rate is decreased to max\_rate if needed.
-- The class-of-service rate when there are no siblings is set to the max\_rate.
+    -   uconf:cft.server.bandwidth.cos_requester_default for connection in requester mode
+    -   uconf:cft.server.bandwidth.cos_server_default for connection in server mode
+- The class-of-service rate is decreased to max_rate if needed.
+- The class-of-service rate when there are no siblings is set to the max_rate.
 
 ### Borrowing bandwidth from other class-of-service
 

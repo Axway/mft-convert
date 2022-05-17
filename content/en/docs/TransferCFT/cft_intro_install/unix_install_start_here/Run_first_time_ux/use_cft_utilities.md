@@ -1,17 +1,14 @@
 ---
-
-    title: Management utilities
-    linkTitle: Management utilities
-    weight: 180
-
----
-This section describes Transfer
-CFT UNIX utilities located in the <span class="code">`cft/<installdir>/bin/`</span>
+    title: "Management utilities"
+    linkTitle: "Management utilities"
+    weight: 190
+---This section describes Transfer
+CFT UNIX utilities located in the `cft/<installdir>/bin/`
 sub-directory after completing installation.
 
 > **Note**
 >
-> In this section, the term
+> Note: In this section, the term
 > Transfer CFT designates the Transfer
 > CFT software package on UNIX platforms.
 
@@ -27,46 +24,46 @@ The following utilities are detailed in this page.
    <thead>
       <tr>
 <th class="TableStyle-SynchTableStyle_interop-HeadE-Column1-Header1"><p>Utility  </p>         </th>
-<th class="TableStyle-SynchTableStyle_interop-HeadE-Column1-Header1"><p>Definition  </p>         </th>
+<th class="TableStyle-SynchTableStyle_interop-HeadD-Column1-Header1"><p>Definition  </p>         </th>
       </tr>
    </thead>
    <tbody>
       <tr>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><a href="#cftinit">cftinit</a>         </td>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2">General Transfer CFT initialization utility.         </td>
+         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2">[cftinit](#cftinit)         </td>
+         <td class="TableStyle-SynchTableStyle_interop-BodyD-Column1-Body2">General Transfer CFT initialization utility.         </td>
       </tr>
       <tr>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><a href="#cftutil">cftutil</a>         </td>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2">Simplified display of the standard CFTUTIL commands.         </td>
+         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2">[cftutil](#cftutil)         </td>
+         <td class="TableStyle-SynchTableStyle_interop-BodyD-Column1-Body2">Simplified display of the standard CFTUTIL commands.         </td>
       </tr>
       <tr>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><a href="#cftupdate">cftupdate</a>         </td>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2">Management Utility updating the Transfer CFT configuration.         </td>
+         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2">[cftupdate](#cftupdate)         </td>
+         <td class="TableStyle-SynchTableStyle_interop-BodyD-Column1-Body2">Management Utility updating the Transfer CFT configuration.         </td>
       </tr>
       <tr>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><p><a href="#cftcatal">cftcatal</a>  </p>         </td>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><p>Utility migrating and/or extending the {{< TransferCFT/axwayvariablesComponentShortName  >}} catalog
+         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><p>[cftcatal](#cftcatal)  </p>         </td>
+         <td class="TableStyle-SynchTableStyle_interop-BodyD-Column1-Body2"><p>Utility migrating and/or extending the {{< TransferCFT/axwayvariablesComponentShortName  >}} catalog
 file.  </p>         </td>
       </tr>
       <tr>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><p><a href="#xfbadm">xfbadmgrp</a>  </p>         </td>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><p>Group management utility (all users accessing the Transfer CFT Copilot server).  </p>         </td>
+         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><p>[xfbadmgrp](#xfbadm)  </p>         </td>
+         <td class="TableStyle-SynchTableStyle_interop-BodyD-Column1-Body2"><p>Group management utility (all users accessing the Transfer CFT Copilot server).  </p>         </td>
       </tr>
       <tr>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><p><a href="#xfbadmusr1">xfbadmusr</a>  </p>         </td>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><p>Utility managing users accessing the Transfer CFT Copilot server.  </p>         </td>
+         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><p>[xfbadmusr](#xfbadmusr1)  </p>         </td>
+         <td class="TableStyle-SynchTableStyle_interop-BodyD-Column1-Body2"><p>Utility managing users accessing the Transfer CFT Copilot server.  </p>         </td>
       </tr>
       <tr>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><p><a href="#xvi">xvi</a>  </p>         </td>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><p>Utility processing the conversion tables.  </p>         </td>
+         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><p>[xvi](#xvi)  </p>         </td>
+         <td class="TableStyle-SynchTableStyle_interop-BodyD-Column1-Body2"><p>Utility processing the conversion tables.  </p>         </td>
       </tr>
       <tr>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><p><a href="#Conversion_tables">atoe</a>  </p>         </td>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><p>ISO 8859-1 ASCII to EBCDIC conversion table.  </p>         </td>
+         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><p>[atoe](#Conversion_tables)  </p>         </td>
+         <td class="TableStyle-SynchTableStyle_interop-BodyD-Column1-Body2"><p>ISO 8859-1 ASCII to EBCDIC conversion table.  </p>         </td>
       </tr>
       <tr>
-         <td class="TableStyle-SynchTableStyle_interop-BodyB-Column1-Body2"><p><a href="#Conversion_tables">etoa</a>  </p>         </td>
-         <td class="TableStyle-SynchTableStyle_interop-BodyB-Column1-Body2"><p>EBCDIC to ISO 8859-1 ASCII conversion table.  </p>         </td>
+         <td class="TableStyle-SynchTableStyle_interop-BodyB-Column1-Body2"><p>[etoa](#Conversion_tables)  </p>         </td>
+         <td class="TableStyle-SynchTableStyle_interop-BodyA-Column1-Body2"><p>EBCDIC to ISO 8859-1 ASCII conversion table.  </p>         </td>
       </tr>
    </tbody>
 </table>
@@ -100,14 +97,12 @@ the CFTPARM, CFTLOG cards, and so on).
 `cftinit partners.cft the_rest.cft`
 
 > **Note**
->
->  
 
 - If no file name
     is passed as a parameter, the program requests one or more file names.
 - If no name is supplied,
     the program stops.
-- When you run <span class="code">`cftinit`</span>, it creates the catalog and communication files. You can modify the default sizes of these files to suit your requirements by updating the uconf values for <span class="code">`cft.cftcat.default_size`</span> and <span class="code">`cft.cftcom.default_size`</span> (these values are expressed as a number of records).
+- When you run `cftinit`, it creates the catalog and communication files. You can modify the default sizes of these files to suit your requirements by updating the uconf values for `cft.cftcat.default_size` and `cft.cftcom.default_size` (these values are expressed as a number of records).
 
 <span id="cftupdate"></span>
 
@@ -120,8 +115,6 @@ The *cftupdate* utility is used to update the configuration.
 `cftupdate <filename> [<filename> ...]`
 
 > **Note**
->
->  
 
 - You can only update
     the CFTPART, CFTxxx (for the networks), CFTSEND cards, and so on
@@ -193,7 +186,7 @@ is used) or on all existing groups.
 
 ****Standard use****
 
-`xfbadmgrp  add   | delete | modify | print | check | help`
+`xfbadmgrp  add   &#124; delete &#124; modify &#124; print &#124; check &#124; help`
 
 ****Advanced use****
 
@@ -210,7 +203,7 @@ allow you to work in batch mode:
 
 ## xfbadmusr
 
-You can use the <span class="code">`xfbadmusr`</span>
+You can use the `xfbadmusr`
 utility to create, delete, check, and modify a user with access rights
 to the Transfer CFT Copilot server. It can be used in interactive mode associated with
 a command (add, delete, and so on) or in batch mode, specifying each of
@@ -223,12 +216,12 @@ login name.
 
 `xfbadmusr add [-l <login>] [-p <passwd>] [-u   <UID>] [-g <GID>]`
 
-Delete a user. Users in the <span class="code">`group `</span>file are automatically deleted from all the groups
+Delete a user. Users in the `group `file are automatically deleted from all the groups
 with which they are associated.
 
 `xfbadmusr delete [-l <login>]`
 
-Modify a user. If necessary, modifications are applied automatically to the <span class="code">`group `</span>file.
+Modify a user. If necessary, modifications are applied automatically to the `group `file.
 
 `xfbadmusr modify [-l <login>] [-p <passwd>] [-u   <UID>] [-g <GID>]`
 
@@ -243,22 +236,22 @@ is used) or on all existing users.
 
 ****Standard use****
 
-`xfbadmusr add | delete | modify | print | check | help`
+`xfbadmusr add &#124; delete &#124; modify &#124; print &#124; check &#124; help`
 
 ****Advanced use****
 
 You can use the following options to make it easier to enter information,
 or to work in batch mode:
 
-- <span style="font-family: 'Courier New', monospace;font-weight: bold;">****-l
-    &lt; login >****</span>: Login name
-- <span style="font-weight: bold;font-family: 'Courier New', monospace;">****-p
-    &lt; passwd >****</span>: Password
-- <span style="font-weight: bold;font-family: 'Courier New', monospace;">****-u
-    &lt; UID >****</span>: User identifier - When set to AUTO, a UID is generated
+- ****-l
+    &lt; login >****: Login name
+- ****-p
+    &lt; passwd >****: Password
+- ****-u
+    &lt; UID >****: User identifier - When set to AUTO, a UID is generated
     automatically
-- <span style="font-weight: bold;font-family: 'Courier New', monospace;">****-g
-    &lt; GID >****</span>: Group identifier - When set to AUTO, the GID is
+- ****-g
+    &lt; GID >****: Group identifier - When set to AUTO, the GID is
     generated automatically
 
 ****Example****
@@ -286,7 +279,7 @@ The *xvi* utility is used to update a conversion table.
 
 **Syntax**
 
-`xvi [-d | -a | -e | -l   <file> ] <table>`
+`xvi [-d &#124; -a &#124; -e &#124; -l   <file> ] <table>`
 
 ****Standard use****
 

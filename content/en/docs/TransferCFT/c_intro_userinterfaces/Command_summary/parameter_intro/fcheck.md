@@ -1,26 +1,23 @@
 ---
-
-    title: fcheck
-    linkTitle: fcheck
-    weight: 1090
-
----
-<span id="fcheck"></span>
+    title: "fcheck"
+    linkTitle: "fcheck"
+    weight: 1080
+---<span id="fcheck"></span>
 
 ### fcheck
 
 #### CFTRECV
 
-****FCHECK = { NO | YES }****
+****FCHECK = { NO &#124; YES }****
 
 This parameter enables you to reject an incoming transfer if local file
 attributes don't match the virtual file attributes.
 
-- <span style="font-weight: bold;">****NO****</span>
+- ****NO****
     (default value) - {{< TransferCFT/axwayvariablesComponentShortName >}} behavior is unchanged, and no check is
     performed. If the virtual file record length and format do not match the
     FLRECL and FRECFM attributes, the record is truncated or padded.
-- <span style="font-weight: bold;">****YES****</span> - A record check is performed. FLRECL and FRECFM attributes are compared
+- ****YES**** - A record check is performed. FLRECL and FRECFM attributes are compared
     with the virtual file record length and format. If attributes do not match
     the transfer is rejected.
 

@@ -1,13 +1,10 @@
 ---
+    title: "CFTUTIL predefined variables"
+    linkTitle: "CFTUTIL predefined variables"
+    weight: 290
+---A number of variables are predefined in CFTUTIL for the catalog fields. These variables can be used in all of the batch programming commands.
 
-    title: CFTUTIL predefined variables
-    linkTitle: CFTUTIL predefined variables
-    weight: 300
-
----
-A number of variables are predefined in CFTUTIL for the catalog fields. These variables can be used in all of the batch programming commands.
-
-Each variable begins with the underscore character \_. For example, to display the IDTU value of a transfer, specify:
+Each variable begins with the underscore character _. For example, to display the IDTU value of a transfer, specify:
 
 ```
 PRINT MSG='Transfer IDTU value: %_CAT_IDTU%'
@@ -78,7 +75,7 @@ PRINT MSG='Transfer IDTU value: %_CAT_IDTU%'
 | _CAT_SUSER  | SUSER parameter value.  |
 | _CAT_TCYCLE  | TCYCLE parameter value.  |
 | _CAT_TIMEB  | Transfer start time.  |
-| _CAT_TIMEC  | TCYCLE parameter value.<span > </span>  |
+| _CAT_TIMEC  | TCYCLE parameter value.  |
 | _CAT_TIMED  | Creation time of the transfer.  |
 | _CAT_TIMEE  | Transfer end time.  |
 | _CAT_TIMEK  | Time of last writing.  |

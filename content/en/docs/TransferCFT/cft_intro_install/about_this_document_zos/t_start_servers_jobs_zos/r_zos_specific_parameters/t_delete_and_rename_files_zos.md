@@ -1,11 +1,8 @@
 ---
-
-    title: Work with files
-    linkTitle: Work with files
+    title: "Work with files"
+    linkTitle: "Work with files"
     weight: 300
-
----
-> **Note**
+---> **Note**
 >
 > Do not use a dash "-" as a special character in z/OS (MVS) file names. This is an invalid system character.
 

@@ -1,11 +1,8 @@
 ---
-
-    title: CFTUTIL in a z/OS environment
-    linkTitle: CFTUTIL in a z/OS environment
+    title: "CFTUTIL in a z/OS environment"
+    linkTitle: "CFTUTIL in a z/OS environment"
     weight: 270
-
----
-CFTUTIL is the primary utility for Transfer CFT. This section details some functionally related specifically to z/OS. The CFTUTIL utility is called through two procedures: PCFTUTIL and PCFTUTL.
+---CFTUTIL is the primary utility for Transfer CFT. This section details some functionally related specifically to z/OS. The CFTUTIL utility is called through two procedures: PCFTUTIL and PCFTUTL.
 
 > **Note**
 >
@@ -51,7 +48,7 @@ For data set concatenation on Transfer CFT 3.2.4 and higher:
 ```
 
 - File concatenation does not work.
-- cft\_cmd.txt is a EBCDIC text file.
+- cft_cmd.txt is a EBCDIC text file.
 
 ## CFTIN: CFTIN is missing
 

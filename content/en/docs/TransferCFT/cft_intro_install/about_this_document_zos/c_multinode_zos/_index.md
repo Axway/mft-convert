@@ -1,14 +1,11 @@
 ---
-
-    title: Multi-node architecture
-    linkTitle: Multi-node architecture
+    title: "Multi-node architecture"
+    linkTitle: "Multi-node architecture"
     weight: 160
-
----
-This topic describes the Transfer CFT multi-node feature, which provides you with horizontal scalability and high availability for failovers. See the <a href="" class="MCTextPopup popup popupHead">Active/active<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody" aria-hidden="true"><span class="MCTextPopupArrow"> </span>You configure two or more Transfer CFTs, up to four nodes, each having an independent workload. These nodes will then run as individual nodes until a fail over occurs.
+---This topic describes the Transfer CFT multi-node feature, which provides you with horizontal scalability and high availability for failovers. See the <a href="" class="MCTextPopup popup popupHead">Active/active You configure two or more Transfer CFTs, up to four nodes, each having an independent workload. These nodes will then run as individual nodes until a fail over occurs.
 When a fail over occurs, one of the other nodes takes over from the failed node. This secondary node offers services to new and existing transfer requests and tasks, until the original node resumes activity.
 When the failed node restarts, a manual intervention required in Transfer CFT, it resumes its connections from the secondary or replacement node.
-To summarize, when a fail over occurs the external Transfer CFT is oblivious to any change. The requests are directed to the sysplex distributor, which resubmits any uncommitted transactions to the replacement node. During fail back, the connection returns to the original node.</span></a> description for conceptual information.
+To summarize, when a fail over occurs the external Transfer CFT is oblivious to any change. The requests are directed to the sysplex distributor, which resubmits any uncommitted transactions to the replacement node. During fail back, the connection returns to the original node.</a> description for conceptual information.
 
 Multi-node benefits for {{< TransferCFT/axwayvariablesComponentShortName  >}} include:
 

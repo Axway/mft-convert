@@ -1,11 +1,8 @@
 ---
-
-    title: PeSIT partner interactions
-    linkTitle: PeSIT processing
-    weight: 150
-
----
-This topic describes the interactions and processes that occur between
+    title: "PeSIT partner interactions"
+    linkTitle: "PeSIT processing"
+    weight: 140
+---This topic describes the interactions and processes that occur between
 partners when using the PeSIT protocol.
 
 PeSIT provides a set of user services and a protocol
@@ -36,12 +33,9 @@ between Initiator and Responder during file transmission.
 >
 > A file exchange involves more than just sending a file's data. Control information also has to be conveyed before, during and after the data transfer. This extra information is contained in protocol messages called FPDU (File Protocol Data Unit).
 
-QQQ\_QQQ\_CHECK \*\*\*\*\*\*\*\*\*\*\*\*\*\*\* don't know what to do with FPDU column.
 
-
-| PeSIT INITIATOR  |   |   | PeSIT RESPONDER  |
+| SEND FILE<br /> PeSIT INITIATOR  | FPDU  |   | PeSIT<br /> RESPONDER  |
 | --- | --- | --- | --- |
-|   | FPDU  |   |   |
 |   |   | idle |   |
 | F.CONNECT, REQ ------&gt; |   |   | ------&gt;IND, F.CONNECT |
 | F.CONNECT, CNF &lt;------ |   |   | &lt;------RSP, F.CONNECT |
@@ -83,10 +77,8 @@ QQQ\_QQQ\_CHECK \*\*\*\*\*\*\*\*\*\*\*\*\*\*\* don't know what to do with FPDU�
 The following diagram illustrates the communication flows
 between Initiator and Responder during file reception.
 
-QQQ\_QQQ\_CHECK what name to give to middle col?
 
-
-| PeSIT INITIATOR  |   | PeSIT RESPONDER  |
+| RECEIVE FILE<br /> PeSIT INITIATOR |   | PeSIT<br /> RESPONDER |
 | --- | --- | --- |
 |   | connected |   |
 | F.SELECT, REQ ------&gt; |   | ------&gt;IND, F.SELECT |
@@ -123,10 +115,8 @@ QQQ\_QQQ\_CHECK what name to give to middle col?
 The following interaction illustrates the communication flows
 between Initiator and Responder during message transmission.
 
-QQQ\_QQQ\_CHECK what name to give to middle col?
 
-
-| PeSIT INITIATOR  |   | PeSIT RESPONDER  |
+| SEND MESSAGE<br /> PeSIT INITIATOR<br />  |   | PeSIT<br /> RESPONDER<br />  |
 | --- | --- | --- |
 |   | idle |   |
 | F.CONNECT, REQ ------&gt; |   | ------&gt;IND, F.CONNECT |

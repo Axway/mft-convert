@@ -1,17 +1,14 @@
 ---
-
-    title: spart
-    linkTitle: spart
-    weight: 3250
-
----
-<span id="spart"></span>
+    title: "spart"
+    linkTitle: "spart"
+    weight: 3270
+---<span id="spart"></span>
 
 ### spart
 
 #### CFTSEND, SEND
 
-**\[SPART = *string64*}\]**
+**[SPART = *string64*}]**
 
 Network designation by which the local {{< TransferCFT/axwayvariablesComponentShortName  >}} identifies
 itself to its partner.

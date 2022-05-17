@@ -1,18 +1,15 @@
 ---
-
-    title: impl
-    linkTitle: impl
-    weight: 1670
-
----
-<span id="impl"></span>
+    title: "impl"
+    linkTitle: "impl"
+    weight: 1660
+---<span id="impl"></span>
 
 ### impl
 
 #### CFTSEND
 
-**\[IMPL  = { NO
-| YES}\]**
+**[IMPL  = { NO
+&#124; YES}]**
 
 Implicit send.
 

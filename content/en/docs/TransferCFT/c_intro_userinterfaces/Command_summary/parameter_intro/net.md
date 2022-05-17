@@ -1,17 +1,14 @@
 ---
-
-    title: net
-    linkTitle: net
-    weight: 2140
-
----
-<span id="net"></span>
+    title: "net"
+    linkTitle: "net"
+    weight: 2160
+---<span id="net"></span>
 
 ### net
 
 #### CFTPROT
 
-****\[NET = {identifier} \]****
+****[NET = {identifier} ]****
 
 Identifier referring to a CFTNET command.
 
@@ -22,11 +19,11 @@ and for incoming calls. The SAP can be served for each.
 
 #### CFTPARM
 
-****\[NET = {id, id, ...} \]****
+****[NET = {id, id, ...} ]****
 
 Identifier lists of the CFTNET objects which can be used by the CFT
 monitor. For additional information, see the definition of the CFTNET
-command, and refer to the {{< TransferCFT/axwayvariablesComponentShortName  >}} <span style="font-style: italic;">**Operations
-Guide**</span> that corresponds to your OS.
+command, and refer to the {{< TransferCFT/axwayvariablesComponentShortName  >}} **Operations
+Guide** that corresponds to your OS.
 
 [Return to Command index](../../)

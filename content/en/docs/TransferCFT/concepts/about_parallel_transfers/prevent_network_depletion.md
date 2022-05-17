@@ -1,11 +1,8 @@
 ---
-
-    title: Network resource depletion prevention (NRDP)
-    linkTitle: Network resource depletion prevention (NRDP)
-    weight: 280
-
----
-Configuring more network connection than simultaneous file transfers is not always enough to ensure that the MAXTRANS transfers can proceed simultaneously at any given time.
+    title: "Network resource depletion prevention (NRDP)"
+    linkTitle: "Network resource depletion prevention (NRDP)"
+    weight: 270
+---Configuring more network connection than simultaneous file transfers is not always enough to ensure that the MAXTRANS transfers can proceed simultaneously at any given time.
 
 The principal reasons for this are:
 
@@ -52,10 +49,10 @@ The NRDP feature only applies to the TCP/IP network, and requires the configurat
 
 ### Log messages
 
-The [related messages](../../../troubleshoot_intro/messages_and_error_codes_start_here/cftn_messages) only display in the log when the <span class="code">`cft.server.nrdp_enable=yes`</span>.
+The [related messages](../../../troubleshoot_intro/messages_and_error_codes_start_here/cftn_messages) only display in the log when the `cft.server.nrdp_enable=yes`.
 
-- <span class="code">`CFTN05I Network resource depletion prevention enabled for class %d`</span>
-- <span class="code">`CFTN06I No network class suitable for resource depletion prevention activation`</span>
+- `CFTN05I Network resource depletion prevention enabled for class %d`
+- `CFTN06I No network class suitable for resource depletion prevention activation`
 
 ### Calculating the threshold
 
@@ -67,14 +64,14 @@ Given the value of MAXTRANS and the MAXCNX for a selected CFTNET object, the thr
 
 This example uses the following values and shows the different outcomes with and without NRDP enabled. In this example, we have 10 new transfers to perform that require new sessions to be opened (for example, with partners that do not already have an established session).
 
-- <span class="code">`MAXCNX `</span>= 450 and <span class="code">`MAXTRANS `</span>= 400, therefore <span class="code">`THRESHOLD`</span>=425
-- <span class="code">`NBCNX `</span>is the current number of open sessions = 450
-- <span class="code">`NBTRANS `</span>is the number of active transfers = 300
+- `MAXCNX `= 450 and `MAXTRANS `= 400, therefore `THRESHOLD`=425
+- `NBCNX `is the current number of open sessions = 450
+- `NBTRANS `is the number of active transfers = 300
 
 ****NRDP not enabled****
 
-Because the number of sessions would exceed the <span class="code">`MAXCNX `</span>if a new session is established, the 10 new transfers must wait for a network resource to become available (a <span class="code">`416 MAXCNX`</span>  message displays).
+Because the number of sessions would exceed the `MAXCNX `if a new session is established, the 10 new transfers must wait for a network resource to become available (a `416 MAXCNX`  message displays).
 
 ****NRDP enabled****
 
-With NRDP enabled, the 10 new transfers are processed (idle sessions are reused). As a precaution, Transfer CFT closes idle sessions in order to reduce <span class="code">`NBCNX `</span>and defer the network connection request for new sessions until<span class="code">` NBCNX <= THRESHOLD`</span>.
+With NRDP enabled, the 10 new transfers are processed (idle sessions are reused). As a precaution, Transfer CFT closes idle sessions in order to reduce `NBCNX `and defer the network connection request for new sessions until` NBCNX <= THRESHOLD`.

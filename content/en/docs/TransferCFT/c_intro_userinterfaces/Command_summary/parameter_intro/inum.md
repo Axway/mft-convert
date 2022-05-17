@@ -1,17 +1,14 @@
 ---
-
-    title: inum
-    linkTitle: inum
-    weight: 1710
-
----
-<span id="inum"></span>
+    title: "inum"
+    linkTitle: "inum"
+    weight: 1700
+---<span id="inum"></span>
 
 ## inum
 
 #### ACT, INACT, LISTPKI, PKIEXT
 
-****\[ inum = {0...99} \]****
+****[ inum = {0...99} ]****
 
 Internal number for the intermediate certificates in an imported chain of certificates (in the PKI database).
 

@@ -1,11 +1,8 @@
 ---
-
-    title: About Transfer CFT
-    linkTitle: About Transfer CFT
+    title: "About Transfer CFT"
+    linkTitle: "About Transfer CFT"
     weight: 90
-
----
-{{< TransferCFT/axwayvariablesCompanyName  >}} {{< TransferCFT/axwayvariablesPlatformorSuiteShortName  >}} {{< TransferCFT/axwayvariablesComponentShortName  >}} is a powerful data controller that provides file exchange services between disparate hardware and software platforms using open protocols, within or beyond the boundaries of your enterprise. Transfer CFT, part of the {{< TransferCFT/axwayvariablesPlatformorSuiteLongName  >}} Managed File Transfer product offerings, delivers non-intrusive, high-volume file-transfer services as a standalone system or implemented as part of an MFT solution.
+---{{< TransferCFT/axwayvariablesCompanyName  >}} {{< TransferCFT/axwayvariablesPlatformorSuiteShortName  >}} {{< TransferCFT/axwayvariablesComponentShortName  >}} is a powerful data controller that provides file exchange services between disparate hardware and software platforms using open protocols, within or beyond the boundaries of your enterprise. Transfer CFT, part of the {{< TransferCFT/axwayvariablesPlatformorSuiteLongName  >}} Managed File Transfer product offerings, delivers non-intrusive, high-volume file-transfer services as a standalone system or implemented as part of an MFT solution.
 
 To create successful data flows within an enterprise, organizations require a guaranteed level of security, tracking, and data flow management. {{< TransferCFT/axwayvariablesComponentShortName  >}}'s additional value comes from providing the following services that allow for monitored, secure business interactions:
 
@@ -28,7 +25,7 @@ As a transfer exchange system, {{< TransferCFT/axwayvariablesComponentShortName 
 
 - An agile architecture
 
-********<span class="autonumber"></span>High-level view of Transfer CFT in an enterprise architecture********
+********High-level view of Transfer CFT in an enterprise architecture********
 
 ****![View of Transfer CFT in A2A operations within a corporate network](/Images/TransferCFT/2013_g_TransferCFT_Corporate_Network_new.png)****
 

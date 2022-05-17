@@ -1,29 +1,26 @@
 ---
-
-    title: srout
-    linkTitle: srout
-    weight: 3300
-
----
-<span id="srout"></span>
+    title: "srout"
+    linkTitle: "srout"
+    weight: 3320
+---<span id="srout"></span>
 
 ### srout
 
 #### CFTPROT
 
-****\[SROUT = { <span style="text-decoration: underline;">BOTH</span>
-| NONE | SENDER | RECEIVER }\]****
+****[SROUT = { BOTH
+&#124; NONE &#124; SENDER &#124; RECEIVER }]****
 
-<span style="font-weight: bold;">****Requester mode only****</span>
+****Requester mode only****
 
 Select the direction of transfers (files or messages) authorized for
 this protocol on the {{< TransferCFT/axwayvariablesComponentShortName  >}}:
 
-- <span style="font-weight: bold;">****SENDER****</span>: send transfers only
-- <span style="font-weight: bold;">****RECEIVER****</span>: receive transfers only
-- <span style="font-weight: bold;">****BOTH****</span> (default value): both send and
+- ****SENDER****: send transfers only
+- ****RECEIVER****: receive transfers only
+- ****BOTH**** (default value): both send and
     receive transfers
-- <span style="font-weight: bold;">****NONE****</span>: no transfers
+- ****NONE****: no transfers
 
  
 

@@ -1,11 +1,8 @@
 ---
-
-    title: Defining  functions
-    linkTitle: Defining functions
+    title: "Defining  functions"
+    linkTitle: "Defining functions"
     weight: 360
-
----
-<span id="About_the_Functions"></span>This topic describes the directory exit task components and functions.
+---<span id="About_the_Functions"></span>This topic describes the directory exit task components and functions.
 A directory EXIT task comprises two modules:
 
 - The interface supplied
@@ -37,7 +34,7 @@ A directory EXIT task:
 - Calls the initialization
     function **exaini** function in server mode, when a connection is indicated,
     or in requester mode, when a connection request is made. If this function
-    returns a 0 code, the <span style="font-weight: bold;">****usrfct****</span> function
+    returns a 0 code, the ****usrfct**** function
     is called. If not, {{< TransferCFT/axwayvariablesComponentShortName >}} considers that the user does not want
     to take control
 

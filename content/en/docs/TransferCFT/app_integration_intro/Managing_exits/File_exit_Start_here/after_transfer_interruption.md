@@ -1,11 +1,8 @@
 ---
-
-    title: After a transfer interruption
-    linkTitle: Stage After a transfer interruption
+    title: "After a transfer interruption"
+    linkTitle: "Stage After a transfer interruption"
     weight: 380
-
----
-This event occurs if there is a:
+---This event occurs if there is a:
 
 - Mains supply cut
     or protocol fault
@@ -33,7 +30,7 @@ before handing back control to {{< TransferCFT/axwayvariablesComponentShortName 
 ### Field values
 
 
-| Field  | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
+| Field | Sender mode<br /> Before<br />  | Sender mode<br /> After<br />  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
 | --- | --- | --- | --- | --- |
 | mtype | 9 | 9 | 9 | 9 |
 | masc | = | * | = | * |

@@ -1,11 +1,8 @@
 ---
-
-    title: Managing transfers and partners
-    linkTitle: Managing transfers and partners
-    weight: 110
-
----
-## Transfer concepts
+    title: "Managing transfers and partners"
+    linkTitle: "Transfers and partners"
+    weight: 100
+---## Transfer concepts
 
 This section describes transfers, and how to create and
 manage your transfer operations using {{< TransferCFT/axwayvariablesComponentShortName  >}}.
@@ -52,13 +49,13 @@ Additionally, there are basic [transfer control commands](../c_intro_userinterfa
 
 | Command  | Action  |
 | --- | --- |
-| <a href="../admin_intro/admin_commands_intro/delete_command">DELETE</a> | Deletes a catalog entry  |
-| <a href="../c_intro_userinterfaces/about_cftutil/managing_transfer_states/halt_command">HALT</a> | Stops a transfer and sets it to the HOLD state  |
-| <a href="../c_intro_userinterfaces/about_cftutil/managing_transfer_states/keep_command">KEEP</a> | Stops a transfer and sets it to the KEEP state  |
-| <a href="../c_intro_userinterfaces/about_cftutil/managing_transfer_states/start_command">START</a> | Reactivates a transfer  |
-| <a href="../c_intro_userinterfaces/about_cftutil/managing_transfer_states/submit_command">SUBMIT</a> | Runs a preprocessing, a post-processing or an acknowledgment processing procedure according to the current phase of the transfer request.  |
-| <a href="../c_intro_userinterfaces/about_cftutil/managing_transfer_states/end_command">END</a> | Declares the processing subsequent to the transfer terminated  |
-| <a href="../c_intro_userinterfaces/about_cftutil/managing_transfer_states/resume_command">RESUME</a> | Retrieves, in the server mode, a blocked send request having the hold status |
+| [DELETE](../admin_intro/admin_commands_intro/delete_command) | Deletes a catalog entry  |
+| [HALT](../c_intro_userinterfaces/about_cftutil/managing_transfer_states/halt_command) | Stops a transfer and sets it to the HOLD state  |
+| [KEEP](../c_intro_userinterfaces/about_cftutil/managing_transfer_states/keep_command) | Stops a transfer and sets it to the KEEP state  |
+| [START](../c_intro_userinterfaces/about_cftutil/managing_transfer_states/start_command) | Reactivates a transfer  |
+| [SUBMIT](../c_intro_userinterfaces/about_cftutil/managing_transfer_states/submit_command) | Runs a preprocessing, a post-processing or an acknowledgment processing procedure according to the current phase of the transfer request.  |
+| [END](../c_intro_userinterfaces/about_cftutil/managing_transfer_states/end_command) | Declares the processing subsequent to the transfer terminated  |
+| [RESUME](../c_intro_userinterfaces/about_cftutil/managing_transfer_states/resume_command) | Retrieves, in the server mode, a blocked send request having the hold status |
 
 
 <span id="Transfer_owners"></span>
@@ -132,7 +129,7 @@ In this example the partner is PARIS, and the file to send is called REPORT1.
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} enables the transferring sequential files, or files seen
 as such. These files can be accessed through one of the operating system
-access methods . See [File locations: Model and physical files](creating_transfers_start_here/model_and_physical_file_concepts).
+access methods . See [File locations: Model and physical files](create_transfers_start_here/model_and_physical_file_concepts).
 
 When a transfer occurs, it is labeled with an identifier. There are
 two additional types of identifiers, besides the IDM and IDF, that can correspond with a transfer:

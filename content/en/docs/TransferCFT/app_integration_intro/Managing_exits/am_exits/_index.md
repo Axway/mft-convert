@@ -1,24 +1,21 @@
 ---
-
-    title: About access management exits
-    linkTitle: Access Management exit
+    title: "About access management exits"
+    linkTitle: "Access Management exit"
     weight: 340
+---This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
 
----
-This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
-
-{{< TransferCFT/axwayvariablesComponentShortName  >}} offers an access management exit in the form of a dynamic library. This library implements a set of mandatory functions described in the <span class="code">`$CFTINSTALLDIR/inc/exam.h`</span> file.
+{{< TransferCFT/axwayvariablesComponentShortName  >}} offers an access management exit in the form of a dynamic library. This library implements a set of mandatory functions described in the `$CFTINSTALLDIR/inc/exam.h` file.
 
 Functions include:
 
-- int exam\_init(const char \*username)
-- char\* exam\_get\_version(void)
-- int exam\_check\_login(const char \*username, const char \*password)
-- int exam\_change\_password(const char \*username, const char \*old\_password, const char \*new\_password)
-- int exam\_check\_permissions(EXAMPermission \*\*perm\_list)
-- int exam\_check\_potential\_permissions(EXAMPermission \*\*perm\_list)
+- int exam_init(const char \*username)
+- char\* exam_get_version(void)
+- int exam_check_login(const char \*username, const char \*password)
+- int exam_change_password(const char \*username, const char \*old_password, const char \*new_password)
+- int exam_check_permissions(EXAMPermission \*\*perm_list)
+- int exam_check_potential_permissions(EXAMPermission \*\*perm_list)
 
-To help you get started, an Access Management exit sample is delivered in: <span class="code">`$CFTDIRRUNTIME/src/exit/cftexamsmp1.c`</span>
+To help you get started, an Access Management exit sample is delivered in: `$CFTDIRRUNTIME/src/exit/cftexamsmp1.c`
 
 For more information, see [Delivered Access Management exit samples](../../../internal_a_m_start_here/am_exits/am_samples).
 

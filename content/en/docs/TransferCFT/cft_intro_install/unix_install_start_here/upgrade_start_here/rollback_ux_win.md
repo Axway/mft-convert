@@ -1,11 +1,8 @@
 ---
-
-    title: Roll back to a previous version 
-    linkTitle: Roll back to a previous version
-    weight: 190
-
----
-This section describes the procedure to revert to the previous version if, for whatever reason, you need to roll back an upgrade. However, if you executed transfers in the upgraded version that used parameters or metadata that are not available in the earlier version, this metadata is lost when you roll back.
+    title: "Roll back to a previous version "
+    linkTitle: "Roll back to a previous version"
+    weight: 180
+---This section describes the procedure to revert to the previous version if, for whatever reason, you need to roll back an upgrade. However, if you executed transfers in the upgraded version that used parameters or metadata that are not available in the earlier version, this metadata is lost when you roll back.
 
 ## Prerequisites
 

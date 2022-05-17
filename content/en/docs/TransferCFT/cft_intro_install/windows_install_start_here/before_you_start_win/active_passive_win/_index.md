@@ -1,11 +1,8 @@
 ---
-
-    title: Active/passive installation - Windows
-    linkTitle: Active/passive installation
+    title: "Active/passive installation - Windows"
+    linkTitle: "Active/passive installation"
     weight: 190
-
----
-This section describes how to install an active/passive architecture, as described in [About Multi-node architecture.](../../../../about_multinode)
+---This section describes how to install an active/passive architecture, as described in [About Multi-node architecture.](../../../../about_multinode)
 
 > **Note**
 >
@@ -32,7 +29,7 @@ A cluster installation of Transfer CFT without multi-node is an active/passive i
 
 This is the path and name of the directory where you want to create a shared directory for the cluster installation. The shared directory is used to store product data files.
 
-*Windows only* - When installing a Windows multi-host Transfer CFT architecture, we recommend that you use UNC notation, which defines the path to a shared folder using the format<span class="code">` \\server\sharename.`</span>
+*Windows only* - When installing a Windows multi-host Transfer CFT architecture, we recommend that you use UNC notation, which defines the path to a shared folder using the format` \\server\sharename.`
 
 ****Installation Directory****
 
@@ -57,7 +54,7 @@ Additionally, the key must have the cluster option.
 
 ### Download and uncompress
 
-Download and unzip the {{< TransferCFT/suitevariablesTransferCFTName  >}} install package, as described in <a href="../../../unix_install_start_here/before_you_start_unix" class="MCXref xref">Install Transfer CFT</a>.
+Download and unzip the {{< TransferCFT/suitevariablesTransferCFTName  >}} install package, as described in [Install Transfer CFT](../../../unix_install_start_here/before_you_start_unix).
 
 ### Customize
 
@@ -74,11 +71,11 @@ Create as many copies of the initialize.properties file as you have hosts in the
 ## Install
 
 1. Start the installation.
-1. Transfer\_CFT\_{{< TransferCFT/axwayvariablesReleaseNumber >}}\_Install\_win-x86-64\_BNXXXXXXXX.exe
-1. ./Transfer\_CFT\_{{< TransferCFT/axwayvariablesReleaseNumber >}}\_Install\_&lt;OS>\_&lt;BN>.run
+1. Transfer_CFT_{{< TransferCFT/axwayvariablesReleaseNumber >}}_Install_win-x86-64_BNXXXXXXXX.exe
+1. ./Transfer_CFT_{{< TransferCFT/axwayvariablesReleaseNumber >}}_Install_&lt;OS>_&lt;BN>.run
 1. In the Installation Architecture screen, select **Cluster - first host**.
 1. Complete the installation.
-1. To add a host to create a multi-host installation, run the install <span class="code">`exe/bat`</span> again. This time select **Cluster - Additional host**.
+1. To add a host to create a multi-host installation, run the install `exe/bat` again. This time select **Cluster - Additional host**.
 
 ## Silent installation
 
@@ -95,3 +92,7 @@ Transfer CFT must be installed in service mode.
 ### Define Transfer CFT as a Generic Service Resource
 
 Transfer CFT is a cluster-unaware application. However, you can integrate Transfer CFT in a cluster environment as a Generic Service Resource. Use the Microsoft **High Availability Wizard** to create a **Generic Service**, and from the **Select Service** dialog box select the Transfer CFT service.
+
+### License key
+
+The Transfer CFT license key refers to a specific machine, and is based on the machine's hostname. To allow Transfer CFT to start on both cluster nodes, you need one license key per node. Enter the two license keys in the `%CFTKEY%` file located on the shared disk, one key per line.

@@ -1,18 +1,15 @@
 ---
-
-    title: irecfm
-    linkTitle: irecfm
-    weight: 1730
-
----
-<span id="irecfm"></span>
+    title: "irecfm"
+    linkTitle: "irecfm"
+    weight: 1720
+---<span id="irecfm"></span>
 
 ### irecfm
 
 #### COPYFILE
 
-****\[IRECFM
-= {see the specific Operations Guide | F | V | U}\]    ****
+****[IRECFM
+= {see the specific Operations Guide &#124; F &#124; V &#124; U}]    ****
 
 ****OS****
 

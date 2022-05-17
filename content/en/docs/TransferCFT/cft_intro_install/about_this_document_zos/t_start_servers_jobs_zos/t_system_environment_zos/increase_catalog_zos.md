@@ -1,17 +1,14 @@
 ---
-
-    title: Increase the catalog size
-    linkTitle: Increase the catalog size
+    title: "Increase the catalog size"
+    linkTitle: "Increase the catalog size"
     weight: 290
-
----
-You can increase the catalog size either dynamically or statically as described below.
+---You can increase the catalog size either dynamically or statically as described below.
 
 ## Dynamic mode
 
 Use the JCL INSTALL(CFTCATDY). There is no need to stop Transfer CFT or Copilot prior to performing this action. Check the recommendations provided in the CFTCATDY JCL.
 
-Modify the <span class="code">`recnb `</span>parameter (the new number of records), in the <span class="code">`reconfig `</span>command, to the new target catalog size.
+Modify the `recnb `parameter (the new number of records), in the `reconfig `command, to the new target catalog size.
 
 For more general information on expanding the catalog, you can refer to the section *Housekeeping for catalog and output files* in the *Transfer CFT User Guide.*
 

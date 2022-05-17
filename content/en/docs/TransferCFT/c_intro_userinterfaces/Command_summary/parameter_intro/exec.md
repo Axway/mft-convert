@@ -1,11 +1,8 @@
 ---
-
-    title: exec
-    linkTitle: exec
-    weight: 830
-
----
-<span id="exec"></span>
+    title: "exec"
+    linkTitle: "exec"
+    weight: 820
+---<span id="exec"></span>
 
 ### exec
 
@@ -13,7 +10,7 @@
 
 #### CFTSEND, CFTRECV, SEND, RECV
 
-****\[EXEC = filename\]...{string 512}****
+****[EXEC = filename]...{string 512}****
 
 Specify the name of the file that defines the end-of-transfer procedure.
 
@@ -44,7 +41,7 @@ to in CFTPARM. See [Symbolic variables](../../symbolic_variables).
     -   If the file does
         not exist, an error message is generated and no processing is executed on completion of the transfer (even
         if the EXECSF parameter of the CFTPARM command is defined).
-    -   If EXEC is set to \_NONE\_, then no processing is executed even if there is a defined EXECSF or EXECRF.
+    -   If EXEC is set to _NONE_, then no processing is executed even if there is a defined EXECSF or EXECRF.
 - If this EXEC parameter is not defined, the EXECSF or EXECRF parameter
     of the CFTPARM command is taken into account.
 
@@ -56,7 +53,7 @@ to in CFTPARM. See [Symbolic variables](../../symbolic_variables).
 
 #### CFTLOG
 
-****\[EXEC = filename\]
+****[EXEC = filename]
    {string
 64}****
 
@@ -70,7 +67,7 @@ the name of the last log file used before switching (current file).
 
 #### CFTACCNT
 
-****\[EXEC = filename\]    {string 64}****
+****[EXEC = filename]    {string 64}****
 
 Name of the procedure to be executed when {{< TransferCFT/axwayvariablesComponentShortName  >}} switches to the
 other statistical file.
@@ -82,7 +79,7 @@ contains the name of the last statistical file used before switching.
 
 #### CFTDEST
 
-**\[EXEC = { <u>DEST</u> | PART | CHILDREN }\]**
+**[EXEC = { <u>DEST</u> &#124; PART &#124; CHILDREN }]**
 
 The end-of-transfer procedure submit
 mode.
@@ -99,11 +96,11 @@ mode.
 
 #### SUBMIT
 
-**\[EXEC = filename\]**
+**[EXEC = filename]**
 
 #### CFTCRON
 
-****\[EXEC = filename\]...{string 512}****
+****[EXEC = filename]...{string 512}****
 
 Specify the name of the file that describes the CRONJOB procedure.
 

@@ -1,11 +1,8 @@
 ---
-
-    title: Enable Sentinel and Event Router
-    linkTitle: Enable Sentinel and Event Router 
+    title: "Enable Sentinel and Event Router"
+    linkTitle: "Enable Sentinel and Event Router "
     weight: 260
-
----
-Enabling the Axway Sentinel option for Transfer CFT is generally comprised of the following steps, which you must execute in the order listed:
+---Enabling the Axway Sentinel option for Transfer CFT is generally comprised of the following steps, which you must execute in the order listed:
 
 - Install the Event Router
 
@@ -106,9 +103,9 @@ The keywords that are displayed in bold should be substituted by the JCL A00CUST
 
 #### Use the LOGGER file in a SYSPLEX  
 
-To create an overflow file (LOGGER) that is available for all SYSPLEX partitions, in the Coupling Facility Resource Manager (CFRM) add the following structure (<span class="code">`&userstr`</span>) to the coupling data set.
+To create an overflow file (LOGGER) that is available for all SYSPLEX partitions, in the Coupling Facility Resource Manager (CFRM) add the following structure (`&userstr`) to the coupling data set.
 
-<span class="bold_in_para">****Example**** </span>
+****Example****
 
 ```
 The following is an example of a structure definition:
@@ -142,10 +139,9 @@ The following table describes the overflow file definition for the Logger file, 
 |   | Event Router  | TRKUTIL  | Transfer CFT 2.7 and later  |
 | --- | --- | --- | --- |
 | Configuration file  | USEPARIN  | TRKCONF  | UCONF  |
-| Logger file  | (AGENT) api_file= | TRKTNAME=<br /> TRKSHAREDFILE=YES  | UCONFSET ID=sentinel.TRKTNAME, VALUE=xxxx.xxxx.xxx<br /> UCONFSET ID=sentinel.TRKSHAREDFILE,VALUE=YES  |
+| Logger file  | (AGENT)<br/> api_file= | TRKTNAME=  | UCONFSET ID=sentinel.TRKTNAME, VALUE=xxxx.xxxx.xxx  |
+| - " -  | - " -  | TRKSHAREDFILE=YES  | UCONFSET ID=sentinel.TRKSHAREDFILE,VALUE=YES  |
 
-
-QQQ\_QQQ\_QQQ joined rows together
 
 <span id="Communication with the Event Router"></span>
 
@@ -161,7 +157,8 @@ The following parameters define communication with the Event Router via XCF. In 
 | --- | --- | --- | --- |
 | Configuration file  | USEPARIN  | TRKCONF  | UCONF  |
 | SVC  | (SYSTEM)<br/> svc_nb=nnn | TRKSVC=nnn  | UCONFSET ID=sentinel.TRKSVC,VALUE=nnn  |
-| XCF definition  | (AGENT) queue=  | TRKQUEUE=<br /> TRKTYPE=XCF  | UCONFSET ID=sentinel.TRKQUEUE,VALUE=xxxx<br /> UCONFSET ID=sentinel.TRKTYPE,VALUE=XCF  |
+| XCF definition  | (AGENT)queue=  | TRKQUEUE=  | UCONFSET ID=sentinel.TRKQUEUE,VALUE=xxxx  |
+| XCF definition  | (AGENT)queue=  | TRKTYPE=XCF  | UCONFSET ID=sentinel.TRKTYPE,VALUE=XCF  |
 
 
 <span id="Modify the Transfer CFT start-up procedure"></span>
@@ -196,11 +193,11 @@ Possible values:
 
 ### TCP/IP source port conflict
 
-Sentinel notifications can get the source port from the system when the variable sentinel.trk\_min\_port is set to '0' (zero).
+Sentinel notifications can get the source port from the system when the variable sentinel.trk_min_port is set to '0' (zero).
 
 The system will assign one of the Ephemeral Port range (default is 1024 - 65535)
 
-Command: uconfset id='sentinel.trk\_min\_port',value=0
+Command: uconfset id='sentinel.trk_min_port',value=0
 
 ### End-to-End monitoring examples
 
@@ -212,7 +209,7 @@ The following JCLs are available as end-to-end monitoring examples:
 
 - SNTLEXEC: The end of transfer procedure, associating an acknowledgement via the CFTUTIL utility and the ‘COMPUTEIDENT’, ‘SENDEVENT’, and ‘SENDCYCLE’ TRKUTIL command. This is available in the EXEC library.
 
-<span id="Heartbeats zOS"></span><span id="kanchor50"></span>
+<span id="Heartbeats zOS"></span><span id="kanchor49"></span>
 
 ## Implement Heartbeat functionality
 
@@ -220,7 +217,7 @@ The CFTHEART JCL sets the unified configuration heartbeat values as follows:
 
 - sentinel.heartbeat.enable = YES
 - sentinel.heartbeat.periodicity = 300 (This recommended value has a direct correlation with the value defined in the Tracked Object.)
-- sentinel.heartbeat.script = &lt;install\_dir>/extras/sentinel/MFTheartbeat.\*
+- sentinel.heartbeat.script = &lt;install_dir>/extras/sentinel/MFTheartbeat.\*
 - sentinel.trkipaddr = sentinel.server.address
 - sentinel.trkipport = Sentinel.qlt/auto.port value (default = 1305)
 - sentinel.xfb.enable = YES

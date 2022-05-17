@@ -1,11 +1,8 @@
 ---
-
-    title: UCONF: General unified configuration parameters
-    linkTitle: General configuration parameters
-    weight: 280
-
----
-Unified configuration, or UCONF, settings and default values are listed in tables
+    title: "UCONF: General unified configuration parameters"
+    linkTitle: "General configuration parameters"
+    weight: 270
+---Unified configuration, or UCONF, settings and default values are listed in tables
 and grouped into the following categories:
 
 - [Identifier parameters](#Identifi)
@@ -193,7 +190,7 @@ See also [Automatic catalog expansion](../../admin_monitoring_intro/auto_expand_
 
 | Parameter  | Description  |
 | --- | --- |
-| uconf:cft.server.maxtrans  | Modifies the number of parallel transfers. See <a href="../../../c_intro_userinterfaces/command_summary/parameter_intro/trantask">trantask</a>.  |
+| uconf:cft.server.maxtrans  | Modifies the number of parallel transfers. See [trantask](../../../c_intro_userinterfaces/command_summary/parameter_intro/trantask).  |
 
 
 ## Retrieve subdirectories
@@ -285,7 +282,7 @@ This parameter lets you use the SEND or RECV command without requiring an [IDF](
 | Parameter  | Default value  | Description  |
 | --- | --- | --- |
 | Uconf:cft.listcat_compat  | No  | Defines the LISTCAT display:<br/> • Yes = Display using the former product format, which does not include the new columns. The format in LISTCAT is DTSA.<br/> • No= Display using the product version 3.0 and higher catalog format. The format in LISTCAT is DTSASPP. |
-| Uconf:cft.state_compat  | No  | Defines the transfer states:<br/> • Yes= The phase state is fully compatible with the states in versions prior to 3.0.<br/> • No = The state reflects the phase used in Transfer CFT 3.0 and higher. This uses phase instead of the former states, except during the Transfer phase, when the former state is the same as the phase step.<br/> <span >****Note****</span>: Uconf:cft.state_compat also impacts the <a href="../../../concepts/phase_and_phasestep/ack_phase">acknowledgement</a> behavior if ackstate is set to ignore. |
+| Uconf:cft.state_compat  | No  | Defines the transfer states:<br/> • Yes= The phase state is fully compatible with the states in versions prior to 3.0.<br/> • No = The state reflects the phase used in Transfer CFT 3.0 and higher. This uses phase instead of the former states, except during the Transfer phase, when the former state is the same as the phase step.<br/> ****Note****: Uconf:cft.state_compat also impacts the [acknowledgement](../../../concepts/phase_and_phasestep/ack_phase) behavior if ackstate is set to ignore. |
 
 
 <span id="Deactivate_idf"></span>

@@ -1,19 +1,16 @@
 ---
+    title: "UCONF: Copilot server"
+    linkTitle: "Transfer CFT UI server"
+    weight: 280
+---****UNIX****
 
-    title: UCONF: Copilot server
-    linkTitle: Transfer CFT UI server
-    weight: 290
-
----
-****UNIX****
-
-Refer to the [UCONF parameters](../uconf_directory) table for information on <span class="code">`copilot.*.unix `</span>parameters.
+Refer to the [UCONF parameters](../uconf_directory) table for information on `copilot.*.unix `parameters.
 
 ****Alias management****
 
 You can access customized file system directories via the {{< TransferCFT/axwayvariablesComponentShortName  >}} user interface HTTP server using aliases.
 
-To add a new alias, access the Unified Configuration uconf and configure the following:
+To add a new alias, access the Unified Configuration (uconf) and configure the following:
 
 
 | ID  | Description  |
@@ -23,26 +20,24 @@ To add a new alias, access the Unified Configuration uconf and configure the fol
 | copilot.http.aliases.(alias-id).path  | Path that replaces the alias in the URL  |
 
 
-****Security for Cop**i**lot GUI****
+****Security for Cop**i**lot u****
 
 
 | Parameter  | Description  |
 | --- | --- |
-| copilot.http.onlyssl  | Enter Yes to restrict the access of the {{< TransferCFT/axwayvariablesComponentShortName  >}} UI with https.  |
+| copilot.http.onlyssl  | Enter Yes to restrict the access of the {{< TransferCFT/axwayvariablesComponentShortName  >}} user interface with https.  |
 
 
 ****View available drives****
 
-To view available drives from the <span class="bold_in_para">****Edit a file****</span> icon in the graphical user interface, define the following:
-
-QQQ\_QQQ\_QQQ
+To view available drives from the ****Edit a file**** icon in the graphical user interface, define the following:
 
 
 | Parameter  | Options  | Description  |
 | --- | --- | --- |
 | copilot.nt.rootdrives  | @REMOVABLE_DRIVES  | To view removable drives such as a USB key, CD, and so on.  |
-|  - " -  | @LOCAL_DRIVES  | To view hard drives.  |
-|  - " -  | @NET_DRIVES  | To view network drives.  |
+| - " -  | @LOCAL_DRIVES  | To view hard drives.  |
+| - " -  | @NET_DRIVES  | To view network drives.  |
 
 
 ****Client keep-alive****
@@ -80,33 +75,28 @@ Use this parameter to define the {{< TransferCFT/axwayvariablesComponentShortNam
 
 This section describes how to install the certificates that are required to enable HTTPS connections for Copilot. The basic steps are:
 
-- Install a certificate on the server side
-- Install a certificate on the client side
+- Install a certificate on the server
+- Install a certificate on the client
 
-### Install a certificate on the server side
+### Install a certificate on the server
 
-The following tables describe the UCONF parameters that determine the certificates used by the Transfer CFT UI server to authenticate itself.
+The following tables describe the UCONF parameters that determine the certificates used by the Transfer CFT Copilot server to authenticate itself.
 
 You can use the following certificate and private key formats, where the format of the certificate may differ from that of the key.
 
-The certificate type is dictated by the file name extension (.p12, .pkcs12, .der, .pem, for example <span class="code">`my_certificate.pem`</span>).
+The certificate type is dictated by the file name extension (.p12, .pkcs12, .der, .pem, for example `my_certificate.pem`).
 
-*For native files in a z/OS or IBM i environment*, if the format cannot be determined (the file suffix used as the extension), Transfer CFT derives the value from these uconf settings:
-
-- <span class="code">`copilot.ssl.sslkeyfile=<not set>`</span> and <span class="code">`copilot.ssl.sslcertpassword=<set>`</span>, then the format is PKCS12
-- <span class="code">`copilot.ssl.sslkeyfile= <set>`</span> and <span class="code">`copilot.ssl.sslcertpassword=<not set>`</span>, then the format is PEM
-
-QQQ\_QQQ\_QQQ
+*For native files in a z/OS or IBM i environment*, Transfer CFT first tries to decode the certificate in PEM format. If the format cannot be determined, the last letters of the file name are used as the suffix. IBM i also handles the certificates stored on the IFS partition.
 
 
 | Supported format  | Type  | Extension  |
 | --- | --- | --- |
 | Certificate  | PKCS#12  | p12, pfx, pkcs12  |
-|  - " -  | PEM  | pem  |
-|  - " -  | DER  | der  |
+| Certificate  | PEM  | pem  |
+| Certificate  | DER  | der  |
 | Private key  | PEM  | pem  |
-|  - " -  | DER  | der  |
-|  - " -  | PKCS#8  | key, pem  |
+| Private key  | DER  | der  |
+| Private key  | PKCS#8  | key, pem  |
 
 
 ****How to define a PKCS#12 certificate****
@@ -143,6 +133,6 @@ There are two additional UCONF parameters to use for HTTPS connections:
 | Parameter | Value |
 | --- | --- |
 | copilot.http.onlyssl |  • No: Default value.<br/> • Yes: Restricts access to the Transfer CFT Copilot server to HTTPS secured connections only. |
-| <span id="copilot.ssl.SslCipherSuites"></span>copilot.ssl.SslCipherSuites<br/>  | A comma separated list of cipher suites accepted by the Transfer CFT Copilot server.<br/> • “47, 10, 9, 2”: Default value.<br/> <br/> List of supported cipher suites:<br/> • 1 = RSA_WITH_NULL_MD5<br/> • 2 = RSA_WITH_NULL_SHA<br/> • 4 = RSA_WITH_RC4_MD5<br/> • 5 = RSA_WITH_RC4_SHA<br/> • 9 = RSA_WITH_DES_CBC_SHA1<br/> • 10 = RSA_WITH_3DES_EDE_CBC_SHA<br/> • 47 = RSA_WITH_AES_128_CBC_SHA<br/> • 53 = RSA_WITH_AES_256_CBC_SHA<br/> • 59 = RSA_WITH_NULL_SHA256<br/> • <span >60 = RSA_WITH_AES_128_CBC_SHA</span><span >2</span><span >56</span><br/> • <span >61 = RSA_WITH_AES_256_CBC_SHA</span><span >2</span><span >56</span> |
+| <span id="copilot.ssl.SslCipherSuites"></span>copilot.ssl.SslCipherSuites<br/>  | A comma separated list of cipher suites accepted by the Transfer CFT Copilot server.<br/> • “47, 10, 9, 2”: Default value.<br/> <br/> List of supported cipher suites:<br/> • 1 = RSA_WITH_NULL_MD5<br/> • 2 = RSA_WITH_NULL_SHA<br/> • 4 = RSA_WITH_RC4_MD5<br/> • 5 = RSA_WITH_RC4_SHA<br/> • 9 = RSA_WITH_DES_CBC_SHA1<br/> • 10 = RSA_WITH_3DES_EDE_CBC_SHA<br/> • 47 = RSA_WITH_AES_128_CBC_SHA<br/> • 53 = RSA_WITH_AES_256_CBC_SHA<br/> • 59 = RSA_WITH_NULL_SHA256<br/> • 60 = RSA_WITH_AES_128_CBC_SHA256<br/> • 61 = RSA_WITH_AES_256_CBC_SHA256 |
 | copilot.ssl.version_min  | Indicates the minimum version of SSL that the Copilot and the REST API server accept.<br/> • Default: tls_1.0<br/> • Possible values are: ssl_3.0 (not recommended), tls_1.0, tls_1.0, tls_1.2 |
 

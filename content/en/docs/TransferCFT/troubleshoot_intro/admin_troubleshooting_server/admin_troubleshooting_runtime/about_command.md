@@ -1,11 +1,8 @@
 ---
-
-    title: Display product information
-    linkTitle: Display product information
+    title: "Display product information"
+    linkTitle: "Display product information"
     weight: 340
-
----
-## Use the ABOUT command
+---## Use the ABOUT command
 
 Use the ABOUT command to display
 the Transfer CFT product, host, and key information. This command displays the characteristics of the platform
@@ -15,18 +12,18 @@ on which Transfer CFT is installed.
 
 `[ COMMENT   = string ]`
 
-`[ TYPE   = { ALL   | HOST | CFT } ]`
+`[ TYPE   = { ALL   &#124; HOST &#124; CFT } ]`
 
-`[ KEY = { FIRST | ALL } ]`
+`[ KEY = { FIRST &#124; ALL } ]`
 
 ****Parameters****
 
 
 | Parameter  | Description  |
 | --- | --- |
-| <a href="../../../../c_intro_userinterfaces/command_summary/parameter_intro/comment">COMMENT</a> | Free comment.<br/> This comment is displayed and can be used to indicate a specific item of information, such as the customer name.<br/> This information is then used to determine a software license key. |
-| <a href="../../../../c_intro_userinterfaces/command_summary/parameter_intro/type">TYPE</a>  | Displays the Transfer CFT product, host, and key information.  |
-| <a href="../../../../c_intro_userinterfaces/command_summary/parameter_intro/key">KEY</a>  | Defines the number of keys that display.  |
+| [COMMENT](../../../../c_intro_userinterfaces/command_summary/parameter_intro/comment) | Free comment.<br/> This comment is displayed and can be used to indicate a specific item of information, such as the customer name.<br/> This information is then used to determine a software license key. |
+| [TYPE](../../../../c_intro_userinterfaces/command_summary/parameter_intro/type)  | Displays the Transfer CFT product, host, and key information.  |
+| [KEY](../../../../c_intro_userinterfaces/command_summary/parameter_intro/key)  | Defines the number of keys that display.  |
 
 
 ****Example****
@@ -58,7 +55,8 @@ Host information :
 \* release = Seven Service Pack 1
 \* distrib =
 Axway information :
-\* product = {{< TransferCFT/axwayvariablesPlatformorSuiteShortName >}} Transfer CFT
+\* product = Amplify
+Transfer CFT
 \* version = 3.3.2_SP1.0
 \* applied-patches =
 \* forbidden-patches =
@@ -85,9 +83,9 @@ CFTU00I ABOUT _ Correct ()
 
 UNIX and Windows only
 
-This executable file retrieves system information, for example information needed to request a key. To use <span class="code">`cfttell`</span>:
+This executable file retrieves system information, for example information needed to request a key. To use `cfttell`:
 
-- Navigate to the<span class="code">` <CFTDIRINSTALL>/bin`</span> directory
+- Navigate to the` <CFTDIRINSTALL>/bin` directory
 - Run cfttell
 
 Options:
@@ -107,21 +105,21 @@ Keys:
 ****Examples****
 
 ```
-C:\\projects><span class="code">`cfttell target`</span>
+C:\\projects> cfttell target
 win-x86-64
 ```
 
  
 
 ```
-C:\\projects><span class="code">`cfttell version`</span>
+C:\\projects> cfttell version
 3000
 ```
 
  
 
 ```
-C:\\projects><span class="code">`cfttell hostinfo`</span>
+C:\\projects> cfttell hostinfo
 CFT version : 3010
 Target : win-x86-32
 Processor architecture : x64

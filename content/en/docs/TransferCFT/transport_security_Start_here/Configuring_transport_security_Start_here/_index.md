@@ -1,11 +1,8 @@
 ---
-
-    title: Configuring  transport security: Start here
-    linkTitle: Configuring transport security
-    weight: 160
-
----
-This section describes how to configure Transfer CFT objects transport
+    title: "Configuring  transport security: Start here"
+    linkTitle: "Configuring transport security"
+    weight: 150
+---This section describes how to configure Transfer CFT objects transport
 security configuration. The following topics describe the objects that
 are involved in the Transfer CFT transport security configuration. The
 CFTPARM, CFTPROT, and CFTPART objects include parameters that are directly
@@ -184,4 +181,4 @@ this operating mode, a PKI does not need to be implemented.
 
 ### Using delivered SSL templates
 
-Transfer CFT no longer delivers certificates and private key samples in the product packaging. However Transfer CFT does provide a template, which you can update and use as described in the delivered samples (<span class="code">`$CFTDIRRUNTIME\conf`</span>). The file cft-pki.conf describes how to insert a certificate in the local database in the various formats. The file cft-tcp.conf contains general configuration, and commented SSL profiles.
+Transfer CFT no longer delivers certificates and private key samples in the product packaging. However Transfer CFT does provide a template, which you can update and use as described in the delivered samples (`$CFTDIRRUNTIME\conf`). The file cft-pki.conf describes how to insert a certificate in the local database in the various formats. The file cft-tcp.conf contains general configuration, and commented SSL profiles.

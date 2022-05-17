@@ -1,22 +1,19 @@
 ---
-
-    title: Administrative configuration commands
-    linkTitle: Manage the configuration
-    weight: 210
-
----
-The topics in this section describe how to use command line operations to administer Transfer CFT configuration options, and is comprised of the following:
+    title: "Administrative configuration commands"
+    linkTitle: "Manage the configuration"
+    weight: 200
+---The topics in this section describe how to use command line operations to administer Transfer CFT configuration options, and is comprised of the following:
 
 
 | Command  | Description  |
 | --- | --- |
-| <a href="cftaccnt_concepts">CFTACCNT</a>  | Recording mode for statistical data  |
-| <a href="catalog_parameter_concepts">CFTCAT</a>  | Catalog attributes  |
-| <a href="communication_media_concepts">CFTCOM</a>  | Communication media  |
-| <a href="../../c_intro_userinterfaces/web_copilot_ui/conf_intro/cftlog">CFTLOG</a>  | Transfer log files  |
-| <a href="network_resource_concepts">CFTNET</a>  | Network resources  |
-| <a href="cftparm_general_parameters">CFTPARM</a>  | General parameters definition  |
-| <a href="transfer_protocol_concepts">CFTPROT</a>  | Transfer protocol  |
+| [CFTACCNT](cftaccnt_concepts)  | Recording mode for statistical data  |
+| [CFTCAT](catalog_parameter_concepts)  | Catalog attributes  |
+| [CFTCOM](communication_media_concepts)  | Communication media  |
+| [CFTLOG](../../c_intro_userinterfaces/web_copilot_ui/conf_intro/cftlog)  | Transfer log files  |
+| [CFTNET](network_resource_concepts)  | Network resources  |
+| [CFTPARM](cftparm_general_parameters)  | General parameters definition  |
+| [CFTPROT](transfer_protocol_concepts)  | Transfer protocol  |
 
 
 ## What is a service file medium
@@ -40,7 +37,7 @@ The following terms are used in this section:
 - PHYSICAL FILE which
     describes the name and physical location of a file type medium
 - If the file name
-    begins with a reserved character, designated by <span style="font-weight: bold;">****char-file****</span> - see the {{< TransferCFT/axwayvariablesComponentShortName >}}*Operations Guide* corresponding to your OS,
+    begins with a reserved character, designated by ****char-file**** - see the {{< TransferCFT/axwayvariablesComponentShortName >}}*Operations Guide* corresponding to your OS,
     this is a logical name interpreted by {{< TransferCFT/axwayvariablesComponentShortName >}}
 - CFTIN and CFTOUT
     for standard task input/output
@@ -65,8 +62,8 @@ The {{< TransferCFT/axwayvariablesComponentShortName  >}} medium names can be se
 
 ### {{< TransferCFT/axwayvariablesComponentShortName  >}} media files
 
-You cannot change the name of the <span style="font-style: italic;">**parameter
-file**</span>. It constitutes the {{< TransferCFT/axwayvariablesComponentShortName  >}} anchor point containing all the data
+You cannot change the name of the **parameter
+file**. It constitutes the {{< TransferCFT/axwayvariablesComponentShortName  >}} anchor point containing all the data
 defined by the parameter setting, and in particular the names of the other
 files and media. However, you can establish a correspondence between this
 logical name and a physical name in the flow of CFT activation commands.

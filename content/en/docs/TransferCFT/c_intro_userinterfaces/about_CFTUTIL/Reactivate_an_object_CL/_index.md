@@ -1,11 +1,8 @@
 ---
-
-    title: ACT  - Reactivating objects
-    linkTitle: Files and configuration
-    weight: 250
-
----
-This topic describes the ACT command and its parameters. You can use
+    title: "ACT  - Reactivating objects"
+    linkTitle: "Files and configuration"
+    weight: 240
+---This topic describes the ACT command and its parameters. You can use
 the ACT command to reactivate:
 
 - One or more partners (CFTPART)
@@ -18,9 +15,9 @@ the ACT command to reactivate:
 
 | Parameter | Description |
 | --- | --- |
-| <a href="../../command_summary/parameter_intro/id">ID</a>  | Identifier for the object to be reactivated. To reactivate several objects with a single command, use wildcard characters or meta characters. |
-| <a href="../../command_summary/parameter_intro/mode">MODE</a> | Mode to be reactivated on partners (only when TYPE=PART object):<br/> • BOTH (default)<br/> • REQUESTER<br/> • SERVER<br/> You can use the shortcuts B, R and S in place of the keywords. |
-| <a href="../../command_summary/parameter_intro/type">TYPE</a>  | Object to reactivate:<br/> • PART<br/> • TRK<br/> • CRON<br/> • FOLDER |
+| [ID](../../command_summary/parameter_intro/id)  | Identifier for the object to be reactivated. To reactivate several objects with a single command, use wildcard characters or meta characters. |
+| [MODE](../../command_summary/parameter_intro/mode) | Mode to be reactivated on partners (only when TYPE=PART object):<br/> • BOTH (default)<br/> • REQUESTER<br/> • SERVER<br/> You can use the shortcuts B, R and S in place of the keywords. |
+| [TYPE](../../command_summary/parameter_intro/type)  | Object to reactivate:<br/> • PART<br/> • TRK<br/> • CRON<br/> • FOLDER |
 
 
 ## Using the ACT command
@@ -37,8 +34,8 @@ ACT TYPE=PART,ID=<CFTPART_ID>,MODE=<mode>
 
 Where:
 
-- <span style="font-family: 'Courier New';">CFTPART\_ID</span> is the identifier for the partner to activate. To activate several partners with a single command, use wildcard characters or meta characters
-- <span style="font-family: 'Courier New';">Mode</span> is the mode to be activated, with values: "BOTH" , "B", "REQUESTER", "R" , "SERVER", "S"
+- CFTPART_ID is the identifier for the partner to activate. To activate several partners with a single command, use wildcard characters or meta characters
+- Mode is the mode to be activated, with values: "BOTH" , "B", "REQUESTER", "R" , "SERVER", "S"
 
 ****Example****
 

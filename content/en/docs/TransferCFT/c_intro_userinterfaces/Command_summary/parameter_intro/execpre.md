@@ -1,15 +1,12 @@
 ---
-
-    title: execpre
-    linkTitle: execpre
-    weight: 950
-
----
-### execpre
+    title: "execpre"
+    linkTitle: "execpre"
+    weight: 940
+---### execpre
 
 #### CFTDEST
 
-****\[ EXECPRE = { <u>DEST</u> | PART | CHILDREN \] \]****
+****[ EXECPRE = { <u>DEST</u> &#124; PART &#124; CHILDREN ] ]****
 
 Preprocessing procedure submit mode type.
 

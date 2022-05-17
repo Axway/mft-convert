@@ -1,15 +1,12 @@
 ---
-
-    title: Update upgrade, or migrate,
-    linkTitle: Update, upgrade, or migrate 
+    title: "Update, upgrade, or migrate"
+    linkTitle: "Update, upgrade, or migrate "
     weight: 180
-
----
-## Before you start
+---## Before you start
 
 This section describes how to upgrade or migrate to Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}}. Additionally, it describes the two methods for updating {{< TransferCFT/axwayvariablesComponentLongName  >}} z/OS and provides links to detailed information.
 
-See the section <a href="../c_about_zos/r_prerequistes_zos" class="MCXref xref">System requirements</a> for details on system prerequisites.
+See the section [System requirements](../c_about_zos/r_prerequistes_zos) for details on system prerequisites.
 
 > **Note**
 >
@@ -24,7 +21,7 @@ Applying a service pack (or patch) updates the product without changing the vers
 
 ## Upgrade procedure
 
-This procedure involves a change in product version and the replacement of binary artifacts. See <a href="upgrade" class="MCXref xref">Upgrade</a> for details.
+This procedure involves a change in product version and the replacement of binary artifacts. See [Upgrade](upgrade) for details.
 
 <span id="Upgrade_or_migrate_procedures"></span>
 

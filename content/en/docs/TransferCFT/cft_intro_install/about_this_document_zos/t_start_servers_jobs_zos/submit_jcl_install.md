@@ -1,17 +1,14 @@
 ---
-
-    title: Submit the JCL 
-    linkTitle: Submit the JCL install(XSUPPORA)
+    title: "Submit the JCL "
+    linkTitle: "Submit the JCL install(XSUPPORA)"
     weight: 200
-
----
-The JCL XSUPPORA extracts information about the current instance for Axway Support, a very useful JCL. This JCL must be able to run for all Transfer CFT instances (Test, PREPROD, PROD).
+---The JCL XSUPPORA extracts information about the current instance for Axway Support, a very useful JCL. This JCL must be able to run for all Transfer CFT instances (Test, PREPROD, PROD).
 
 Collected information includes:
 
 Index:
 
-- ID=SSILIST - Transfer CFT LOAD \_ SSI list
+- ID=SSILIST - Transfer CFT LOAD _ SSI list
 - ID=PATCHLOG - Patchs log
 - ID=DSINLOAD - DSINFO Transfer CFT LOAD
 - ID=DSINUCNF - DSINFO UCONF file
@@ -37,7 +34,7 @@ Index:
 - ID=CNFENV - L.E. Environment variables
 - ID=CFTCGREG - Member INSTALL(CFTCGREG)
 - ID=USSCOP - List USS Copilot files
-- ID=USSDISKC - USS Disk space \_ COPILOT
+- ID=USSDISKC - USS Disk space _ COPILOT
 - ID=UCONF - UCONF file
 - ID=UCONFRUN - UCONFRUN file
 - ID=UCONFDEF - UCONF dictionary file

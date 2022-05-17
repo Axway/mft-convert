@@ -1,11 +1,8 @@
 ---
-
-    title: Create an Express Package
-    linkTitle: Create an Express Package
+    title: "Create an Express Package"
+    linkTitle: "Create an Express Package"
     weight: 180
-
----
-A product deployment package in Transfer CFT is called an Express Package. For the iSeries platform, you can create a deployment package for Transfer CFTs to be used with {{< TransferCFT/suitevariablesCentralGovernanceName  >}}, or for standalone Transfer CFTs.
+---A product deployment package in Transfer CFT is called an Express Package. For the iSeries platform, you can create a deployment package for Transfer CFTs to be used with {{< TransferCFT/suitevariablesCentralGovernanceName  >}}, or for standalone Transfer CFTs.
 
 This section describes how to create a reusable and distributable {{< TransferCFT/axwayvariablesComponentShortName  >}} package to simplify and ease the task of installing and configuring {{< TransferCFT/axwayvariablesComponentShortName  >}}s on multiple servers of the same architecture.
 
@@ -17,7 +14,7 @@ This section describes how to create a reusable and distributable {{< TransferCF
 
 Perform the following steps:
 
-1. Create a user profile using the command: <span class="code">`CRTUSRPRF`</span>
+1. Create a user profile using the command: `CRTUSRPRF`
 1. Create a temporary library, for example:  
     ```
     CRTLIB CFTTMP
@@ -39,7 +36,7 @@ Perform the following steps:
     ```
 1. Install a Transfer CFT 3.2.4 with Central Governance (you must use this command for all iSeries Transfer CFT deployments).
 
-- See the example and options described in the INSTALL section and customize to suit your business needs. Details on <a href="../install_intro_ibmi/perform_auto_installation" class="MCXref xref">Silent installation</a>.
+- See the example and options described in the INSTALL section and customize to suit your business needs. Details on [Silent installation](../install_intro_ibmi/perform_auto_installation).
 
 > **Note**
 >
@@ -76,7 +73,8 @@ On the local machine where you have {{< TransferCFT/suitevariablesTransferCFTNam
     CPYF FROMFILE(CFTPROD/UTIN) TOFILE(CFTCONF/UTIN) FROMMBR(CGPARAM) TOMBR(TCPPARAM)
     ```
 1. Create a backup for your library CFTCONF, for example:  
-    ``` 1. CRTSAVF FILE(CFTCONF/CFTCONFSVF) 2. SAVLIB LIB(CFTCONF) DEV(\*SAVF) SAVF(CFTCONF/CFTCONFSVF) 3. Get the CFTCONFSVF.savf (in binary mode)
+    ```  
+     1. CRTSAVF FILE(CFTCONF/CFTCONFSVF) 2. SAVLIB LIB(CFTCONF) DEV(\*SAVF) SAVF(CFTCONF/CFTCONFSVF) 3. Get the CFTCONFSVF.savf (in binary mode)
     ```
 
 On the other machines, where you want to deploy {{< TransferCFT/suitevariablesTransferCFTName  >}}:
@@ -86,7 +84,8 @@ On the other machines, where you want to deploy {{< TransferCFT/suitevariablesTr
     CRTLIB CFTTMP
     ```
 1. Create two save file (\*SAVF) in the CFTTMP library, for example:  
-    ``` 1. CRTSAVF FILE(CFTTMP/CFT32XL) TEXT('Transfer CFT Distribution') 2. CRTSAVF FILE(CFTTMP/CFTCONFSVF) TEXT('CFT configuration')
+    ```  
+     1. CRTSAVF FILE(CFTTMP/CFT32XL) TEXT('Transfer CFT Distribution') 2. CRTSAVF FILE(CFTTMP/CFTCONFSVF) TEXT('CFT configuration')
     ```
 1. Use FTP in binary mode to send the save file to an Iserie system. Open an FTP session, and enter:  
     ```
@@ -118,7 +117,8 @@ On the other machines, where you want to deploy {{< TransferCFT/suitevariablesTr
     RSTLIB SAVLIB(CFTCONF) DEV(\*SAVF) SAVF(CFTTMP/CFTCONFSVF) RSTLIB(CFTPROD)
     ```
 1. Apply your configuration to your new environment, for example:  
-    ``` 1. CFTUTIL PARAM('#CFTPROD/<CFTCONF>) 2. PKIUTIL PARAM('#CFTPROD/<PKICONF>')
+    ```  
+     1. CFTUTIL PARAM('#CFTPROD/<CFTCONF>) 2. PKIUTIL PARAM('#CFTPROD/<PKICONF>')
     ```
 
 ## Limitations

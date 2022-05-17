@@ -1,11 +1,8 @@
 ---
-
-    title: Certificates
-    linkTitle: Certificates 
+    title: "Certificates"
+    linkTitle: "Certificates "
     weight: 210
-
----
-Using the default certificates that are supplied with {{< TransferCFT/axwayvariablesComponentShortName  >}} is strongly discouraged in a production environment. You should use your own certificates to enhance security.
+---Using the default certificates that are supplied with {{< TransferCFT/axwayvariablesComponentShortName  >}} is strongly discouraged in a production environment. You should use your own certificates to enhance security.
 
 
 | Type  | Location  | Certificate  | Expires  |

@@ -1,13 +1,8 @@
 ---
-
-    title: Defining CFTPROT in PeSIT
-    linkTitle: Defining CFTPROT in PeSIT
-    weight: 190
-
----
-sd
-
-The CFTPROT object defines a file transfer protocol application. This topic describes the CFTPROT parameter
+    title: "Defining CFTPROT in PeSIT"
+    linkTitle: "Defining CFTPROT in PeSIT"
+    weight: 180
+---The CFTPROT object defines a file transfer protocol application. This topic describes the CFTPROT parameter
 setting object as it applies to the PeSIT protocol. It mainly defines
 the parameters negotiated with the remote partner at the time the protocol
 connection is established, the F.CONNECT service of the PeSIT protocol.
@@ -128,6 +123,8 @@ of one or more desired types of compression:
 
 ### Synchronization options
 
+#### Parameters
+
 The SPACING, RPACING, SCHKW and RCHKW parameters
 are used to negotiate the use of the Synchronization function. This function
 comprises the synchronization points
@@ -179,36 +176,39 @@ without waiting for an explicit response from the receiver partner for
 each point. A zero value for the acknowledgement window indicates that
 no synchronization point will be acknowledged.
 
-In requester mode, when the SROUT
+#### In requester mode
+
+When the SROUT
 parameter of the CFTPROT command takes the value BOTH, the synchronization
-interval negotiated by Transfer CFT, whether the transfer type is write  
-(SEND command) or read (RECV command), is the smallest value of the SPACING
+interval negotiated by Transfer CFT, whether the transfer type is write (SEND command) or read (RECV command), is the smallest value of the SPACING
 and RPACING parameters.
 
-In requester mode, when the SROUT
+When the SROUT
 parameter of the CFTPROT command takes the value SENDER (resp. RECEIVER),
 the synchronization interval negotiated by Transfer CFT corresponds to
 the SPACING (or RPACING respectively) parameter for a write
 (or read) transfer type.
 
-In requester mode, the value sent
+The value sent
 may be reduced by the server partner. It is essential for the final value
 negotiated to be greater than the maximum record size of the file. This
 maximum size may also be increased by the compression function on the
 basis of 1 byte every 32 bytes (for example: 32 bytes for a size of 1024,
 128 bytes for a size of 4096).
 
-In server mode, if the remote Transfer CFT
+#### In server mode
+
+If the remote Transfer CFT
 opens a one-way write (or read) session, Transfer CFT negotiates, as synchronization
 interval, the smallest value between what the partner proposes and the
 value of the RPACING parameter of the CFTPROT command for reception
 (or the SPACING parameter for transmission).
 
-In server mode, for a two-way session,
+For a two-way session,
 Transfer CFT then negotiates the smallest value between the one proposed
 by the partner and the values of the SPACING and RPACING
 parameters.  
-  
+
 The acknowledgement window is negotiated in the same way as the synchronization
 interval, using the SCHKW and RCHKW parameters of the CFTPROT
 command.
@@ -224,7 +224,7 @@ error (PAD = YES).
 
 The sender is able to send up to 4 Mbytes before each synchronization
 point set. The sender can also send up to 8 Mbytes before waiting for
-the last synchronization points to be acknowledged.  
+the last synchronization points to be acknowledged.
 
 <span id="NSDU_size"></span>
 
@@ -306,13 +306,13 @@ The second message is sent by the server partner by way of an acknowledgement
 
 #### PeSIT E CFT/CFT
 
-In requester mode, the pre-connection phase is
-mandatory. In
-PeSIT E CFT profile, the SSERV parameter is used to particularize
-this string.
+- In requester mode, the pre-connection phase is
+    mandatory. In
+    PeSIT E CFT profile, the SSERV parameter is used to particularize
+    this string.
 
-In server mode, Transfer CFT waits for a preconnection
-message prior to any connection.
+- In server mode, Transfer CFT waits for a preconnection
+    message prior to any connection.
 
 #### PeSIT E
 
@@ -362,8 +362,6 @@ on the number of protocol exchanges. To do so, use the following command:
 As this mode does not comply with the PeSIT external to SIT standard,
 it is recommended that you leave the default LOGON value when the partners
 concerned do not all use Transfer CFT.
-
-QQQ\_QQQ\_CHECK only "Note" gets the vertical line to the left
 
 > **Note**
 >
@@ -455,10 +453,8 @@ the level of the CFTPROT command:
 The table below summarizes the parameter values authorized according
 to the functional levels negotiated.
 
-QQQ\_QQQ\_CHECK added header row
 
-
-| CFTPROT parameter  | PeSIT E  | PeSIT E + CFT extensions  |
+| CFTPROT parameter <br /> for Negotiated functional levels  | PeSIT E  | PeSIT E +<br /> CFT extensions  |
 | --- | --- | --- |
 | DISCTD  | 0..3600<br /> (dft: 120)  | 0..3600<br /> (dft: 120)  |
 | DISCTS  | 0..3600<br /> (dft: 165)  | 0..3600<br /> (dft: 65)  |

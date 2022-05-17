@@ -1,15 +1,12 @@
 ---
-
-    title: npad
-    linkTitle: npad
-    weight: 2250
-
----
-### npad
+    title: "npad"
+    linkTitle: "npad"
+    weight: 2270
+---### npad
 
 #### SEND, CFTSEND, RECV and CFTRECV    TYPE = FILE
 
-****\[ NPAD = string \]****
+****[ NPAD = string ]****
 
 This parameter defines the padding character at the network level.
 

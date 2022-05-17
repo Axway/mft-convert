@@ -1,11 +1,8 @@
 ---
-
-    title: Recording  mode for statistical data
-    linkTitle: CFTACCNT - Recording mode for statistical data 
-    weight: 230
-
----
-The CFTACCNT object defines the recording mode for statistical data
+    title: "Recording  mode for statistical data"
+    linkTitle: "CFTACCNT - Recording mode for statistical data "
+    weight: 220
+---The CFTACCNT object defines the recording mode for statistical data
 of correctly terminated transfers. See also the parameter list
 [CFTACCNT.](../../../c_intro_userinterfaces/web_copilot_ui/conf_intro/cftaccnt)
 
@@ -179,15 +176,15 @@ CFTACCNT TYPE = FILE
 
 `[ EXEC   = filename ]`
 
-`[ LANGUAGE   = { COBOL   | C } ]`
+`[ LANGUAGE   = { COBOL   &#124; C } ]`
 
-`[ MAXREC   = { 0   | n } ]`
+`[ MAXREC   = { 0   &#124; n } ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
-`[ SWITCH   = { 00000000   | time } ]`
+`[ SWITCH   = { 00000000   &#124; time } ]`
 
-`[ FORMAT   = { V23   | 23 | V24 | 24} ]`
+`[ FORMAT   = { V23   &#124; 23 &#124; V24 &#124; 24} ]`
 
  
 
@@ -201,8 +198,8 @@ CFTACCNT TYPE = SYST
 
 `[ COMMENT   = string ]`
 
-`[ FORMAT   = { V23   | 23 | V24 | 24} ]`
+`[ FORMAT   = { V23   &#124; 23 &#124; V24 &#124; 24} ]`
 
-`[ LANGUAGE   = { COBOL   | C } ]`
+`[ LANGUAGE   = { COBOL   &#124; C } ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`

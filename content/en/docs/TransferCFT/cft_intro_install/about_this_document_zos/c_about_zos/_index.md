@@ -1,11 +1,8 @@
 ---
-
-    title: z/OS: Installation and Operation
-    linkTitle: Prerequisites
+    title: "z/OS: Installation and Operation"
+    linkTitle: "Prerequisites"
     weight: 130
-
----
-## Preface
+---## Preface
 
 The {{< TransferCFT/axwayvariablesComponentShortName  >}} Installation Guide provides instructions for installing and deploying your {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
@@ -80,13 +77,13 @@ The Transfer CFT z/OS components include:
 ## Special characters
 
 
-|   | Description  | Windows  | Unix  | z/OS  | IBM i  |
-| --- | --- | --- | --- | --- | --- |
-| char_file  | Logical name prefix | $  | _  | $  | +  |
-| char_mask  | Wildcard character  | ?  | ?  | ?  | ?  |
-| char_unit  | Separator character (volume)  | %  | \01  | %  | ;  |
-| char_symb  | Symbolic variable prefix  | &amp;  | &amp;  | &amp;  | ?  |
-| file_symb  | Character introducing a file name passed to CFTUTIL as a parameter  | #  | @  | #  | #  |
+|   | Description  | Windows  | Unix  | OpenVMS  | z/OS  | IBM i  |
+| --- | --- | --- | --- | --- | --- | --- |
+| char_file  | Logical name prefix | $  | _  | No specific character;<br/> logical names are<br/> processed transparently by RMS | $  | +  |
+| char_mask  | Wildcard character  | ?  | ?  | %  | ?  | ?  |
+| char_unit  | Separator character (volume)  | %  | \01  | No volume concept on VMS  | %  | ;  |
+| char_symb  | Symbolic variable prefix  | &amp;  | &amp;  | &amp;  | &amp;  | ?  |
+| file_symb  | Character introducing a file name passed to CFTUTIL as a parameter  | #  | @  | Either # or @  | #  | #  |
 
 
 ****Related topics****

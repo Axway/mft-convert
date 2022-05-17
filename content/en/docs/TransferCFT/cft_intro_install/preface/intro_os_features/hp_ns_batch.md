@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer CFT batch procedures
-    linkTitle: Batch procedures
+    title: "Transfer CFT batch procedures"
+    linkTitle: "Batch procedures"
     weight: 220
-
----
-Transfer CFT supports batch procedure from both native and OSS environments. This section describes the rules that determine the type of batch procedure and how it is executed.
+---Transfer CFT supports batch procedure from both native and OSS environments. This section describes the rules that determine the type of batch procedure and how it is executed.
 
 ## How it works
 
@@ -42,7 +39,7 @@ The characters following the initial " == " either set certain information for t
     -   A direct TACL procedure execution
     -   This execution type performed by default
     -   This parameter is kept to ensure compatibility with existing batch procedures
-- <span id="CFT^BT^FORCE^ZBAT"></span>== CFT^BT^FORCE^ZBAT<span style="color: #b22222;"> == </span>
+- <span id="CFT^BT^FORCE^ZBAT"></span>== CFT^BT^FORCE^ZBAT ==
     -   Use NetBatch Interface
     -   To specify a given environment, you can declare it in the first line of the actual procedure. Add the following optional values in the first line of the skeleton procedure, in the order listed. If no values are declared, the [UCONF](#UCONF) default values are used.
         -   NetBatch process
@@ -87,7 +84,7 @@ The started procedure MUST delete the temporary files, regardless of the environ
     -   rm $0
     -   rm $0.err
 - NATIVE
-    -   #PURGE \[#IN\]
+    -   #PURGE [#IN]
     -   The same BTPURGE procedure as in the previous version is delivered and can be executed:
 
 <span id="UCONF"></span>
@@ -99,7 +96,7 @@ The following unified configuration parameters are specific to HP Nonstop.
 
 | Parameter | Default | Description |
 | --- | --- | --- |
-| <span id="cft.guardian.cftwrk"></span>cft.guardian.cftwrk |   | The default working directory for the TACL and NETBATCH scripts.<br/> The parameter is set with the default value of “<span ><code>&lt;</code></span><span  data-xmlns="http://www.w3.org/TR/REC-html40"><code>subvolume</code></span><span ><code>&gt;UD</code></span>” (see <a href="#Guardian" >Guardian files</a>) during the Guardian files installation. |
+| <span id="cft.guardian.cftwrk"></span>cft.guardian.cftwrk |   | The default working directory for the TACL and NETBATCH scripts.<br/> The parameter is set with the default value of “<code>&lt;</code><code>subvolume</code><code>&gt;UD</code>” (see [Guardian files](#Guardian)) during the Guardian files installation. |
 | <span id="cft.guardian.process_name_prefix"></span>cft.guardian.process_name_prefix | LA | The first two letters of the Guardian process names.<br/> Each Transfer CFT process is assigned a name using this prefix and a suffix, which depends on the executable name.<br/> For instance, using the default setting, CFTLOG is run with the name $LALOG with the Guardian convention (or /G/LALOG with the OSS convention).<br/> If empty, no Guardian process name is given.<br/> If you plan to run several instances of Transfer CFT at the same time on the same machine, you should assign each instance a unique value. |
 | <span id="cft.guardian.processor"></span>cft.guardian.processor | -1 | Processor on which Transfer CFT is started.<br/> • -1 indicates that Transfer CFT is started on the processor from which the start-up command is executed<br/> • Processor number |
 | <span id="cft.guardian.backup_processor"></span>cft.guardian.backup_processor | -1 | Backup processor on which Transfer CFT is started.<br/> • -1 indicates that no processor number is assigned<br/> • Backup processor number |
@@ -111,9 +108,9 @@ The following unified configuration parameters are specific to HP Nonstop.
 | cft.guardian.tacl.priority | 90 | Priority of a started TACL. |
 | cft.guardian.tacl.output | '$S.#ABTT' | Output destination of the started TACL. |
 | cft.guardian.tacl.home_terminal | '$ZHOME' | TACL home terminal. |
-| cft.guardian.netbatch.process | '$ZBAT' | NetBatch process with which you send a request.<br/> You can override this value in the <a href="#CFT%5EBT%5EFORCE%5EZBAT">first line of a TACL procedure</a>. |
-| cft.guardian.netbatch.jobname_prefix | 'ZBBT' | A jobname prefix used to build a jobname having 8 characters, and comprised of:<br/> • This prefix<br/> • A suffix that is composed of the last characters of the temporary file name<br/> You can override this value in the <a href="#CFT%5EBT%5EFORCE%5EZBAT">first line of a TACL procedure</a>. |
-| <span id="cft.guardian.netbatch.attachment_set"></span>cft.guardian.netbatch.attachment_set | 'NBASCFTLI' | NetBatch attachment-set name.<br/> You can override this value in the <a href="#CFT%5EBT%5EFORCE%5EZBAT">first line of a TACL procedure</a>. |
+| cft.guardian.netbatch.process | '$ZBAT' | NetBatch process with which you send a request.<br/> You can override this value in the [first line of a TACL procedure](#CFT%5EBT%5EFORCE%5EZBAT). |
+| cft.guardian.netbatch.jobname_prefix | 'ZBBT' | A jobname prefix used to build a jobname having 8 characters, and comprised of:<br/> • This prefix<br/> • A suffix that is composed of the last characters of the temporary file name<br/> You can override this value in the [first line of a TACL procedure](#CFT%5EBT%5EFORCE%5EZBAT). |
+| <span id="cft.guardian.netbatch.attachment_set"></span>cft.guardian.netbatch.attachment_set | 'NBASCFTLI' | NetBatch attachment-set name.<br/> You can override this value in the [first line of a TACL procedure](#CFT%5EBT%5EFORCE%5EZBAT). |
 | cft.guardian.netbatch.priority | 90 | Priority of TACL run started. |
 | cft.guardian.netbatch.selpri | 4 | JOB selection priority. |
 | cft.guardian.netbatch.output | '$S.#ABTZ' | Output destination of the started TACL. |

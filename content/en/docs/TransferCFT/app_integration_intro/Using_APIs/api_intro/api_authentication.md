@@ -1,11 +1,8 @@
 ---
-
-    title: Client authentication
-    linkTitle: Client authentication 
+    title: "Client authentication"
+    linkTitle: "Client authentication "
     weight: 310
-
----
-{{< TransferCFT/suitevariablesTransferCFTName  >}} REST API supports *HTTP Basic* and *HTTP Bearer* as the authentication method. Confidentiality is ensured by the use of an HTTPS connection.
+---{{< TransferCFT/suitevariablesTransferCFTName  >}} REST API supports *HTTP Basic* and *HTTP Bearer* as the authentication method. Confidentiality is ensured by the use of an HTTPS connection.
 
 We recommended that you use the HTTP Bearer as opposed to Basic method for the following reasons:
 
@@ -39,7 +36,7 @@ In the {{< TransferCFT/axwayvariablesComponentLongName  >}} UI:
 1. Select **My Access Tokens** in the drop-down menu.  
     The **My Access Token** page displays.
 1. Click **Generate Token**.  
-    The Action, User, Creation date, and Token fields display. In the **Token** field, click the ![](/Images/TransferCFT/copy_icon.png)copy icon to easily copy the entire token.
+    The Action, User, Creation date, and Token fields display. In the **Token** field, click the ![](/Images/TransferCFT/copy_icon.png)copy icon to copy the entire token.
 
 ## Basic authentication
 
@@ -66,7 +63,7 @@ You can use the following UCONF parameters to manage this option:
 
 > **Note**
 >
-> In a multi-host environment, an attacker may have up to the copilot.general.max\_login\_failures \* &lt;number of host> tries before the user is locked if the file is not in a directory shared by all hosts.
+> In a multi-host environment, an attacker may have up to the copilot.general.max_login_failures \* &lt;number of host> tries before the user is locked if the file is not in a directory shared by all hosts.
 
 When the maximum number of login failures is reached, the user account is locked for 30 seconds.
 
@@ -74,3 +71,4 @@ When the maximum number of login failures is reached, the user account is locked
 
 - On IBM i systems, there is no action if the password is incorrect as the system offers methods that you can rely on to avoid brute force attacks (the system value is [QMAXSIGN](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/rzarl/rzarlmaxsgn.htm)).
 - On z/OS systems, only the inherent system protection is available (refer to the RACF suboperand [REVOKE](https://www.ibm.com/support/knowledgecenter/SSLTBW_2.3.0/com.ibm.zos.v2r3.icha700/setrpw.htm) for the PASSWORD option).
+- On OpenVMS systems, only existing system protection is available.

@@ -1,11 +1,8 @@
 ---
-
-    title: modout
-    linkTitle: modout
+    title: "modout"
+    linkTitle: "modout"
     weight: 2030
-
----
-<span id="modout"></span>
+---<span id="modout"></span>
 
 ### modout
 
@@ -13,8 +10,8 @@
 
 ****Initiator mode only****
 
-******\[MODOUT    
-= {string1...32}\]******
+******[MODOUT    
+= {string1...32}]******
 
 Hayes modem initialization string for outgoing connections.
 

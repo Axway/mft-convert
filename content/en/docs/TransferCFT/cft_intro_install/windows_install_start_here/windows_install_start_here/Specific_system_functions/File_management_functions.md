@@ -1,11 +1,8 @@
 ---
-
-    title: File  management functions
-    linkTitle: File management functions
-    weight: 270
-
----
--   [Managing
+    title: "File  management functions"
+    linkTitle: "File management functions"
+    weight: 260
+----   [Managing
     file flushes](#Managing_file_flushes)
 - [Managing
     access conflicts to CFT working files](#Managing_access_conflicts_to_CFT_working_files)
@@ -43,7 +40,7 @@ Since this security behavior is time-consuming,you may feel that such behavior i
 
 ### Deactivating the flush function
 
-<span class="bold_in_para">****Environment variable****</span>
+****Environment variable****
 
 #### CFTNOFLUSH
 
@@ -166,8 +163,7 @@ generated, provided the parameterization is adequate, by Transfer CFT
 or by its COPYFILE utility. In the Transfer CFT parameter setting, this
 type of file is characterized by the letter "V".
 
-Adding types for the Transfer CFT/Server
-– Transfer CFT/Client architecture
+## Adding types for the Transfer CFT/Server – Transfer CFT/Client architecture
 
 In this architecture, you can operate Transfer CFT/Client
 Windows with a UNIX Transfer CFT/Server.
@@ -228,11 +224,11 @@ case
 
 ****Environment variable****
 
-#### CFT\_CSFN
+#### CFT_CSFN
 
 Transfer CFT/Windows does not differentiate between upper and lower
 case in the suffix names described in the suffix file. Such differentiation
-does take place if the environment variable CFT\_CSFN is set.
+does take place if the environment variable CFT_CSFN is set.
 
 For example:
 
@@ -246,7 +242,7 @@ This section describes how to create a command to send a group
 of files. To better understand this section, refer to the following general group file information:
 
 - [Sending
-    a group of files](../../../../../concepts/using_the_send_command/send_group_of_files_cl)
+    a group of files](../../../../../concepts/send_command/send_group_of_files_cl)
 - The [FNAME](../../../../../c_intro_userinterfaces/command_summary/parameter_intro/fname)
     and [WFNAME](../../../../../c_intro_userinterfaces/command_summary/parameter_intro/wfname) parameters
     in the CFTSEND and CFTRECV commands
@@ -278,7 +274,7 @@ systems (not the same file system).
 It is not necessary for the SYST parameter between standardized systems
 to contain data.
 
-#### Sending a group of files in mixed mode
+### Sending a group of files in mixed mode
 
 Transfer CFT detects that it is in a mixed environment because the SYST
 parameter of the CFTPART command contains data and is different from the
@@ -290,7 +286,7 @@ meta-characters is the object of a special transfer.
 This request to send generates as many posts in the catalogue as there
 are files to transfer.
 
-#### Sending a group of files in standardized mode
+### Sending a group of files in standardized mode
 
 The fact that Transfer CFT is sending a group of files in standardized
 mode allows the supplementary functions described below to be implemented.
@@ -351,7 +347,7 @@ These batch files are automatically called by the following parameters:
 The other batch call parameters are unused, and therefore
 insignificant.
 
-#### Parameter setting
+### Parameter setting
 
 To implement the transfer of a group of files in standardized
 mode, the conditions on the Transfer CFT parameters are as follows:
@@ -394,4 +390,4 @@ transferring groups of files in mixed mode.
 
 ## Disabling the homogeneous mode
 
-Use the unified configuration parameter [uconf:cft.server.force\_heterogeneous\_mode](../../../../../admin_intro/uconf/uconf_heterogeneous_mode) to enable forced heterogeneous mode exchanges, and disable homogeneous mode.
+Use the unified configuration parameter [uconf:cft.server.force_heterogeneous_mode](../../../../../admin_intro/uconf/uconf_heterogeneous_mode) to enable forced heterogeneous mode exchanges, and disable homogeneous mode.

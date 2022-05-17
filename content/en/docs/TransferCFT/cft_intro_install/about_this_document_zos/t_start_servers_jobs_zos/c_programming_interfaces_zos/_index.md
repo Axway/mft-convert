@@ -1,11 +1,8 @@
 ---
-
-    title: Programming interfaces
-    linkTitle: Build APIs and exits
+    title: "Programming interfaces"
+    linkTitle: "Build APIs and exits"
     weight: 250
-
----
-This section describes the Transfer CFT batch programming interfaces for Transfer CFT.
+---This section describes the Transfer CFT batch programming interfaces for Transfer CFT.
 
 ## Transfer CFT APIs in a z/OS environment
 
@@ -144,40 +141,24 @@ In this case cftu, cfti, and cftc are defined as pointer functions (see OCFTAPD2
 
 The compile, link-edit, and run JCLs for these samples can be found in the CFTV2.INSTALL file and are called I91APICP, I92APILK and I93APIRN. The compile JOB must be customized to reflect your environment.
 
-QQQ\_QQQ\_QQQ split table
-
-**Main delivered samples for COBOL NODYNAM**
+**Main delivered samples**
 
 
-| Source file<br/> cftv2.SAMPLE* | Copy,<br/> Macro,<br/> Include used | API  | LINK EDIT command files (DLL) distlib.CNTL  | Load module  |
-| --- | --- | --- | --- | --- |
-| OAPIC | OPAICST | CFTC | LINRDACO | OPAIC |
-| OAPII | OAPIUST or OAPI24 | CFTI | LINRDAIO | OAPII |
-| OAPIW | OAPIUST or OAPI24 | CFTI<br/> CFTU | LINRDAWO | OAPIW |
-| OAPIX | OAPI24 + OAPICX4 or<br/> OAPIUST + AOPICX | cftaix | LINRDAXO | OAPIX |
-| OAPI2A | OCFTAPI2 | API 2 | LINRDA2O | OAPI2A |
-| OAPI2B | OCFTAPI2 | API 2 | LINRDA3O | OAPI2B |
-| OAPISYN  | OAPICST OAPIINF OAPIMSG  | cftau or CFTU  | LINRDAYO  | OAPISYN  |
-
-
-**Main delivered samples for C**
-
-
-| Source file<br/> cftv2.SAMPLE* | Copy,<br/> Macro,<br/> Include used | API  | LINK EDIT command files (DLL) distlib.CNTL  | Load module  |
-| --- | --- | --- | --- | --- |
-| CAPIC | CAPIUST | cftai<br/> cftau<br/> cftac | LINRDACC | CAPIC |
-| CAPIW | CAPIUST | cftai<br/> cftau | LINRDAWC | CAPIW |
-| CAPIX | CAPIUST | cftaix | LINRDAXC | CAPIX |
-| CAPII | CAPIUST | cfti | LINRDAIC | CAPII |
-| CAPI2A | CAPI2UST | API 2 | LINRDA2C | CAPI2A |
-| CAPI2B | CAPI2UST | API 2 | LINRDA3C | CAPI2B |
-
-
-**Main delivered samples for ASM**
-
-
-| Source file<br/> cftv2.SAMPLE* | Copy,<br/> Macro,<br/> Include used | API  | LINK EDIT command files (DLL) distlib.CNTL  | Load module  |
-| --- | --- | --- | --- | --- |
-| AAPIDLL | - | cftai | LINKALE | AAPIDLL |
-| AXPIDLL  |   | cftaix  | LINKALEX  | AXPIDLL  |
+| Language  | Source file<br/> cftv2.SAMPLE* | Copy,<br/> Macro,<br/> Include used | API  | LINK EDIT command files (DLL) distlib.CNTL  | Load module  |
+| --- | --- | --- | --- | --- | --- |
+| COBOL NODYNAM  | OAPIC | OPAICST | CFTC | LINRDACO | OPAIC |
+| - " -  | OAPII | OAPIUST or OAPI24 | CFTI | LINRDAIO | OAPII |
+| - " -  | OAPIW | OAPIUST or OAPI24 | CFTI<br/> CFTU | LINRDAWO | OAPIW |
+| - " -  | OAPIX | OAPI24 + OAPICX4 or<br/> OAPIUST + AOPICX | cftaix | LINRDAXO | OAPIX |
+| - " -  | OAPI2A | OCFTAPI2 | API 2 | LINRDA2O | OAPI2A |
+| - " -  | OAPI2B | OCFTAPI2 | API 2 | LINRDA3O | OAPI2B |
+| - " -  | OAPISYN  | OAPICST OAPIINF OAPIMSG  | cftau or CFTU  | LINRDAYO  | OAPISYN  |
+| **C** | CAPIC | CAPIUST | cftai<br/> cftau<br/> cftac | LINRDACC | CAPIC |
+| - " -  | CAPIW | CAPIUST | cftai<br/> cftau | LINRDAWC | CAPIW |
+| - " -  | CAPIX | CAPIUST | cftaix | LINRDAXC | CAPIX |
+| - " -  | CAPII | CAPIUST | cfti | LINRDAIC | CAPII |
+| - " -  | CAPI2A | CAPI2UST | API 2 | LINRDA2C | CAPI2A |
+| - " -  | CAPI2B | CAPI2UST | API 2 | LINRDA3C | CAPI2B |
+| ASM  | AAPIDLL | - | cftai | LINKALE | AAPIDLL |
+| - " -  | AXPIDLL  |   | cftaix  | LINKALEX  | AXPIDLL  |
 

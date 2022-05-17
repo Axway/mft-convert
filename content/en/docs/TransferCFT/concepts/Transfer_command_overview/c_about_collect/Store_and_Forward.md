@@ -1,11 +1,8 @@
 ---
-
-    title: Store  and forward 
-    linkTitle: Store and forward relays
+    title: "Store  and forward "
+    linkTitle: "Store and forward relays"
     weight: 340
-
----
-Store and forward, or transfer routing, allows you to define and automate file transfer using an intermediate site. This page describes using store-and-forward services either in a {{< TransferCFT/suitevariablesCentralGovernanceName  >}} context or using a standalone {{< TransferCFT/suitevariablesTransferCFTName  >}}.
+---Store and forward, or transfer routing, allows you to define and automate file transfer using an intermediate site. This page describes using store-and-forward services either in a {{< TransferCFT/suitevariablesCentralGovernanceName  >}} context or using a standalone {{< TransferCFT/suitevariablesTransferCFTName  >}}.
 
 - [Store and forward with {{< TransferCFT/suitevariablesCentralGovernanceName >}}](#Store)
 - [Store and forward standalone {{< TransferCFT/suitevariablesTransferCFTName >}}](#Store2)
@@ -25,8 +22,8 @@ To implement a relay in conjunction with {{< TransferCFT/PrimaryCGorUM  >}}:
 
 1. Create the flow as described in the [Central Governance User Guide](https://docs.axway.com/bundle/CentralGovernance_113_UsersGuide_allOS_en_HTML5/page/Content/AxwayStartPage.htm).
 1. In the SEND command include at a minimum:
-    -   The name of the final receiver, for example TARGET\_APPLICATION.
-    -   The name of the flow, for example TEST\_RELAY.
+    -   The name of the final receiver, for example TARGET_APPLICATION.
+    -   The name of the flow, for example TEST_RELAY.
     -   The file to be transferred, for example `report`.
 
     ```
@@ -37,7 +34,7 @@ To implement a relay in conjunction with {{< TransferCFT/PrimaryCGorUM  >}}:
 > **Note**
 >
 > Tip  
-> You can use the script delivered with Transfer CFT in the runtime/exec directory/BIN\_re.cmd as a basis for your ACK reply from the target application.
+> You can use the script delivered with Transfer CFT in the runtime/exec directory/BIN_re.cmd as a basis for your ACK reply from the target application.
 
 > **Note**
 >
@@ -86,10 +83,10 @@ Configure the following for the final receiver (Site C):
 >
 > If the initial sender A is not
 > required to establish any direct physical connection with the final receiver
-> C, then the command CFTTCP ID=ID\_C has no impact. Similarly, there is no need to set CFTTCP ID=ID\_A
+> C, then the command CFTTCP ID=ID_C has no impact. Similarly, there is no need to set CFTTCP ID=ID_A
 > for the final receiver C.
 
-********<span class="autonumber"></span>Intentional store and forward********
+********Intentional store and forward********
 
 ![](/Images/TransferCFT/Intentional_store_and_forward.gif)
 
@@ -99,7 +96,7 @@ Configure the following for the final receiver (Site C):
 
 Use the same conditions as indicated in the [Intentional STORE and FORWARD](#Intentional_Store_and_Forward)
 to establish the routing. For the store and forward site to be in VAN mode, you must additionally complete the store
-and forward parameters as follows: <span class="code">`CFTPART ID=ID_A,COMMUT=SERVER,...`</span>
+and forward parameters as follows: `CFTPART ID=ID_A,COMMUT=SERVER,...`
 
 The following descriptions correspond with the
 parameter setting example in the
@@ -120,9 +117,9 @@ Configure the following for the store and forward (Site B):
 - Define both the initiator and the receiver CFTPART partner definitions.
 - Set COMMUT=SERVER.
 - Define a procedure to execute and reference in the CFTPARM (in this example).
-    -   In the store and forward example below, the procedure identified by <span class="code">`myproc `</span>
-        includes the following command on completion of processing: <span class="code">`CFTUTIL SEND PART= &RPART, SPART= &SPART, FNAME= &FNAME, IDF=   &IDF`</span>
-    -   When the symbolic variables are replaced: <span class="code">`CFTUTIL SEND PART=ID_C,SPART=ID_A,FNAME=frecv, IDF=test`</span>
+    -   In the store and forward example below, the procedure identified by `myproc `
+        includes the following command on completion of processing: `CFTUTIL SEND PART= &RPART, SPART= &SPART, FNAME= &FNAME, IDF=   &IDF`
+    -   When the symbolic variables are replaced: `CFTUTIL SEND PART=ID_C,SPART=ID_A,FNAME=frecv, IDF=test`
 
 ****Configure the receiver****
 
@@ -134,7 +131,7 @@ Configure the following for the final receiver (Site C):
 >
 > In the example, the receiver (C) configuration defines the sender (Site A) CFTPART with OMINTIME and OMAXTIME parameters equal to zero, and defines the relay (Site B) as the IPART, which enables acknowledgments from the receiver C to the sender A.
 
-********<span class="autonumber"></span>Intentional VAN store and forward********
+********Intentional VAN store and forward********
 
 ![](/Images/TransferCFT/Intentional_VAN_store_and_forward.gif)
 
@@ -192,7 +189,7 @@ In the SEND command you must specify the final network partner (the NSPART of 
 CFTUTIL SEND PART=NFINAL, IPART=IDNAT, ...
 ```
 
-********<span class="autonumber"></span>Forced store and forward********
+********Forced store and forward********
 
 ![](/Images/TransferCFT/Forced_Store_and_forward.gif)
 

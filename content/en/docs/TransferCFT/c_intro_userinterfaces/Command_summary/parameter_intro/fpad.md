@@ -1,15 +1,12 @@
 ---
-
-    title: fpad
-    linkTitle: fpad
-    weight: 1290
-
----
-### fpad
+    title: "fpad"
+    linkTitle: "fpad"
+    weight: 1280
+---### fpad
 
 #### SEND, CFTSEND, RECV and CFTRECV    TYPE = FILE
 
-****\[ FPAD = string \]****
+****[ FPAD = string ]****
 
 This parameter defines the padding character at the file level.
 

@@ -1,11 +1,8 @@
 ---
-
-    title: Creating  a directory exit
-    linkTitle: Creating a directory exit
-    weight: 230
-
----
-The following example was designed from a modified version of the <span class="bold_in_para">****cft-tcp.conf**** </span>configuration example, located in <span class="bold_in_para">****&lt;installdir>/runtime/conf****</span>. For this example, you should have customized
+    title: "Creating  a directory exit"
+    linkTitle: "Creating a directory exit"
+    weight: 240
+---The following example was designed from a modified version of the ****cft-tcp.conf**** configuration example, located in ****&lt;installdir>/runtime/conf****. For this example, you should have customized
 at least one of these files, using the instructions in [Running Transfer
 CFT for the first time.]()
 
@@ -38,8 +35,9 @@ the following *cftprot* command:
 
 ```
 cftprot id      = PeSITCFT,
-type<span class="code">`      = PESIT,`</span>  
-<span class="code">`prof`</span>      = CFT,
+type      = PESIT,  
+prof
+     = CFT,
 ...
 exita= EXIT_A,
 mode      = replace
@@ -97,7 +95,7 @@ The *&lt;installdir>/runtime/src/exit/* subdirectory contains:
 
 <!-- -->
 
-- The *mk\_cftexita*
+- The *mk_cftexita*
     compilation procedure used to generate the CFTEXITA program
 
 The *&lt;installdir>/lib* subdirectory contains:
@@ -117,25 +115,25 @@ To generate the sample CFTEXITA application, proceed as follows.
 1. Access the *&lt;installdir>/runtime/conf* directory.
 1. Generate the {{< TransferCFT/axwayvariablesComponentShortName >}} databases
     using *cftinit* the configuration file provided
-    and modified for this EXIT:<span class="code">` cft-tcp.conf`</span>
+    and modified for this EXIT:` cft-tcp.conf`
 1. When the *cftinit complete*
-    message is displayed, run {{< TransferCFT/axwayvariablesComponentShortName >}} using the *cftstart* utility: <span class="code">`cftstart`</span>
+    message is displayed, run {{< TransferCFT/axwayvariablesComponentShortName >}} using the *cftstart* utility: `cftstart`
 1. When the *CFTMAIN process
     ID is xxxxx* message is displayed, perform an initial standard transfer
     using the command:  
-    <span class="code">`CFTUTIL send part=BOSTON, idf=TXT`</span>
+    `CFTUTIL send part=BOSTON, idf=TXT`
 1. Now submit a second transfer
-    to the NCFT\_OK partner.  
-    <span class="code">`CFTUTIL send part=NCFT_OK,idf=TXT`</span>
+    to the NCFT_OK partner.  
+    `CFTUTIL send part=NCFT_OK,idf=TXT`
 1. After a few seconds, you can
     check the transfer state by entering the  
-    command: <span class="code">`cftcatab`</span>
+    command: `cftcatab`
 1. The transfer is successful
     because NRPART01 is defined in the DIRECTORY EXIT as being the EXTPTN01
     non- {{< TransferCFT/axwayvariablesComponentShortName >}} partner.
 1. Now submit a third transfer
-    to the NCFT\_OK partner.  
-    <span class="code">`CFTUTIL send part=NCFT_NOK,idf=TXT`</span>
+    to the NCFT_OK partner.  
+    `CFTUTIL send part=NCFT_NOK,idf=TXT`
 1. After a few seconds, you can
     check the transfer state by entering the  
     command:

@@ -1,11 +1,8 @@
 ---
-
-    title: End-of-transfer  exit example
-    linkTitle: End-of-transfer exit example
+    title: "End-of-transfer  exit example"
+    linkTitle: "End-of-transfer exit example"
     weight: 380
-
----
-This page introduces the following end-of-transfer elements, Parameter
+---This page introduces the following end-of-transfer elements, Parameter
 settings, Structure
 in C language, User
 program in C.
@@ -33,10 +30,10 @@ cftexit id = exe1          ,
 
 ****Structure in C****
 
-Refer to the <span style="font-weight: bold;font-family: 'Courier New', monospace;">****exeus.h****</span>
+Refer to the ****exeus.h****
 delivered with the {{< TransferCFT/axwayvariablesComponentShortName  >}} product samples.
 
 ****User program in C****
 
-Refer to the <span style="font-weight: bold;font-family: 'Courier New', monospace;">****exexmp1.c****</span>
+Refer to the ****exexmp1.c****
 delivered with the {{< TransferCFT/axwayvariablesComponentShortName  >}} product samples.

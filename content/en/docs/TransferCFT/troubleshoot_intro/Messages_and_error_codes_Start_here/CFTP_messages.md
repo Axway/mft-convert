@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer CFT messages: CFTP
-    linkTitle: CFTP messages
-    weight: 350
-
----
-This topic lists the CFTPxx (CFT xnnx) messages and provides the type, a description, consequence, and corrective actions when applicable.
+    title: "Transfer CFT messages: CFTP"
+    linkTitle: "CFTP messages"
+    weight: 340
+---This topic lists the CFTPxx (CFT xnnx) messages and provides the type, a description, consequence, and corrective actions when applicable.
 
 **Message format**
 
@@ -15,9 +12,9 @@ Earlier versions of Transfer CFT used a different message format than version 3.
 
 **Example**
 
-CFTLOG FORMAT=\[V23,V24\]
+CFTLOG FORMAT=[V23,V24]
 
-For V23: <span class="code">`CFTT57I PART=&part IDF=&idf IDT=&idt &str transfer started`</span>
+For V23: `CFTT57I PART=&part IDF=&idf IDT=&idt &str transfer started`
 
 For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&idt>`
 
@@ -244,7 +241,7 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
 
 | V23 format<br/> V24 format<br/> Warning  | <span id="CFTP24W"></span>CFTP25W CFTCOM &amp;id uses TYPE 'MBX' Disabled<br/> CFTP25W CFTCOM &amp;id uses TYPE 'MBX' Disabled |
 | --- | --- |
-| Explanation  | The CFTCOM mailbox is no longer supported on z/OS, Windows platforms.  |
+| Explanation  | The CFTCOM mailbox is no longer supported on z/OS, Windows, and OpenVMS platforms.  |
 | Action  | Remove the unsupported TYPE.  |
 
 

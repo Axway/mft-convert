@@ -1,18 +1,15 @@
 ---
-
-    title: logon
-    linkTitle: logon
-    weight: 1830
-
----
-<span id="logon"></span>
+    title: "logon"
+    linkTitle: "logon"
+    weight: 1820
+---<span id="logon"></span>
 
 ### logon
 
 #### CFTPRO
 
-****\[LOGON = { <span style="text-decoration: underline;">YES</span>
-| NO } \]****
+****[LOGON = { YES
+&#124; NO } ]****
 
 Use of the pre-connection phase. Available only in requester mode.
 

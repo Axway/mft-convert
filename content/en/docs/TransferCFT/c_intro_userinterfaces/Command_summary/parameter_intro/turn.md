@@ -1,15 +1,12 @@
 ---
+    title: "turn"
+    linkTitle: "turn"
+    weight: 3650
+---### turn
 
-    title: turn
-    linkTitle: turn
-    weight: 3630
+[ TURN = { FILE &#124; MESSAGE } ]
 
----
-### turn
-
-\[ TURN = { FILE | MESSAGE } \]
-
-TURN = {FILE|MESSAGE}
+TURN = {FILE&#124;MESSAGE}
 
 Method of data exchange.
 

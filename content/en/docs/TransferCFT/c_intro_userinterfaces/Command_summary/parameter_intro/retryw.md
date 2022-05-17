@@ -1,24 +1,21 @@
 ---
-
-    title: retryw
-    linkTitle: retryw
-    weight: 2900
-
----
-<span id="retryw"></span>
+    title: "retryw"
+    linkTitle: "retryw"
+    weight: 2920
+---<span id="retryw"></span>
 
 ### retryw
 
 #### CFTTCP
 
-****\[RETRYW = { <u>1</u> | n }\]****
+****[RETRYW = { <u>1</u> &#124; n }]****
 
 The time interval (in minutes) between reconnection attempts.
 
-- <span style="font-weight: bold;">****1****</span>
+- ****1****
     : default value
 - any other value
-    from <span style="font-weight: bold;">****0****</span> to <span style="font-weight: bold;">****32767****</span>
+    from ****0**** to ****32767****
 
 When specifying multiple hosts in CFTTCP and PROTs/SAPs in CFTPART, Transfer CFT first retries the host and then the PROT/SAP.
 

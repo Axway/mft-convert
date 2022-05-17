@@ -1,17 +1,14 @@
 ---
-
-    title: fkeypos
-    linkTitle: fkeypos
-    weight: 1190
-
----
-<span id="fkeypos"></span>
+    title: "fkeypos"
+    linkTitle: "fkeypos"
+    weight: 1180
+---<span id="fkeypos"></span>
 
 ### fkeypos
 
 #### CFTSEND, CFTRECV, SEND, RECV
 
-****\[FKEYPOS = {0 | n}\]    ****
+****[FKEYPOS = {0 &#124; n}]    ****
 
 ****{0...32767}****
 

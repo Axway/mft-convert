@@ -1,11 +1,8 @@
 ---
-
-    title: General  operating functions
-    linkTitle: General operating functions
-    weight: 250
-
----
--   [Logical
+    title: "General  operating functions"
+    linkTitle: "General operating functions"
+    weight: 240
+----   [Logical
     file names](#Logical_file_names)
 - [Using
     a definition file](#Using%20a%20definition%20file)
@@ -81,7 +78,7 @@ When settings parameters for Transfer CFT, a user wanting to invoke
 a logical file name, must systematically prefix the character string for
 the logical name with the "$" symbol.
 
-Example of a logical name statement: <span class="code">`fname = $CFTCOM`</span>
+Example of a logical name statement: `fname = $CFTCOM`
 
 Using operating system environment variables
 

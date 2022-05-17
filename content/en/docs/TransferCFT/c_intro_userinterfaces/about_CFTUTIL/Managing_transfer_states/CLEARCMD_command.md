@@ -1,11 +1,8 @@
 ---
-
-    title: CLEARCMD - Delete a command in the COM file
-    linkTitle: CLEARCMD - Deleting a transfer request
-    weight: 300
-
----
-This page describes the <span id="CLEARCMD_command"></span>CLEARCMD. Use this
+    title: "CLEARCMD - Delete a command in the COM file"
+    linkTitle: "CLEARCMD - Deleting a transfer request"
+    weight: 290
+---This page describes the <span id="CLEARCMD_command"></span>CLEARCMD. Use this
 command to delete a transfer request from the communication file. A log message is generated to trace who has cleared which command.
 
 > **Note**
@@ -16,7 +13,7 @@ command to delete a transfer request from the communication file. A log message 
 | Parameters  | Description  |
 | --- | --- |
 | COMMAND | Request keyword. |
-| INDEX | Request number as displayed by the LISTCOM command.<br/> For example:<br/> • <span ><code>INDEX=*</code></span> Selects all record numbers.<br/> • <span ><code>INDEX=12345</code></span> Selects the record number 12345 in the COM file. |
+| INDEX | Request number as displayed by the LISTCOM command.<br/> For example:<br/> • <code>INDEX=*</code> Selects all record numbers.<br/> • <code>INDEX=12345</code> Selects the record number 12345 in the COM file. |
 | JOBNAME  | Jobname (string 15), which you can combine with wildcard characters.<br/> For example:<br/> • <code>JOBNAME=12345</code><br/> • <code>JOBNAME=123*</code><br/> • <code>JOBNAME=12?45</code> |
 | USERID | Identifier of the request owner. |
 
@@ -30,7 +27,7 @@ To use CLEARCMD to delete a single command, the USERID, INDEX, and COMMAND para
 Begin by running the LISTCOM command.
 
 ```
-**cftutil listcom**
+cftutil listcom
 RECORDS
 RECORD N 1 ACTIVE : YES
 COMMAND-TYPE : SEND USERID : AXWAY\\Manager
@@ -43,13 +40,13 @@ part=bclpm,idf=un,fname=cc,mintime=+1
 Enter the CLEARCMD command.
 
 ```
-**cftutil clearcmd userid=AXWAY\\Manager,command=send,index=1**
+cftutil clearcmd userid=AXWAY\\Manager,command=send,index=1
 ```
 
 Repeat the LISTCOM command, and the example below displays  the results (note the record is now set to CLEARED).
 
 ```
-**cftutil listcom**
+cftutil listcom
 RECORD N 1 ACTIVE : CLEARED
 COMMAND-TYPE : SEND USERID : AXWAY\\Manager
 GROUPID :
@@ -85,7 +82,7 @@ INDEX=\*,JOBNAME= job,COMMAND=cmd ,USERID=userid
 To delete all RECV commands that have the JOBNAME 9168 for the Axway/Manager account user begin by executing the LISTCOM command.
 
 ```
-**cftutil listcom**
+cftutil listcom
 RECORD N 3 ACTIVE : YES
 COMMAND-TYPE : RECV USERID : AXWAY\\Manager
 GROUPID :
@@ -103,13 +100,13 @@ part=pesit1,idf=\*
 Enter the CLEARCMD command.
 
 ```
-**cftutil clearcmd userid=AXWAY\\Manager,command=recv,index=\*,jobname=9168**
+cftutil clearcmd userid=AXWAY\\Manager,command=recv,index=\*,jobname=9168
 ```
 
 Run LISTCOM; the selected records now display as CLEARED.
 
 ```
-**cftutil listcom**
+cftutil listcom
 RECORD N 3 ACTIVE : CLEARED
 COMMAND-TYPE : RECV USERID : AXWAY\\Manager
 GROUPID :

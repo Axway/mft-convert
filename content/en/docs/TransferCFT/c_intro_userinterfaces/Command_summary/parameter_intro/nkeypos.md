@@ -1,17 +1,14 @@
 ---
-
-    title: nkeypos
-    linkTitle: nkeypos
-    weight: 2220
-
----
-<span id="nkeypos"></span>
+    title: "nkeypos"
+    linkTitle: "nkeypos"
+    weight: 2240
+---<span id="nkeypos"></span>
 
 ### nkeypos
 
 #### CFTSEND, SEND
 
-**NKEYPOS = {<u>FKEYPOS</u> <span style="text-decoration: underline;">value</span>  | n}\]
+**NKEYPOS = {<u>FKEYPOS</u> value  &#124; n}]
           PeSIT
 E**
 

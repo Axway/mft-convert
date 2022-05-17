@@ -1,11 +1,8 @@
 ---
-
-    title: Creating  an API application
-    linkTitle: Creating an API application
-    weight: 210
-
----
-The example provided below was designed for the <span class="bold_in_para">****cft-tcp.conf****</span> configuration example located in *&lt;installdir>/runtime/conf/*. For
+    title: "Creating  an API application"
+    linkTitle: "Creating an API application"
+    weight: 220
+---The example provided below was designed for the ****cft-tcp.conf**** configuration example located in *&lt;installdir>/runtime/conf/*. For
 this example, you should have already customized this file using the method described in [*Running
 {{< TransferCFT/axwayvariablesComponentShortName  >}} for the first time*]().
 
@@ -29,7 +26,7 @@ The *&lt;installdir>/lib* subdirectory contains the:
 To generate the *APIXMP1* sample program, proceed as follows.
 
 1. Access the *&lt;installdir>/runtime/src/capi* directory.
-1. Enter the command:  <span style="font-weight: bold;"> ****<span class="code">`make`</span>****</span>
+1. Enter the command:   ****`make`****
 
 ## Testing the configuration
 
@@ -60,7 +57,7 @@ To test the configuration, proceed as follows:
 
 `     cd <installdir>/runtime/src/capi ; ./APIXMP1`
 
-<span class="bold_in_para">****Results****</span>: The result should correspond to the catalog contents:
+****Results****: The result should correspond to the catalog contents:
 
 > `PART=NEW YORK, IDT=<dynamic identifier>,IDF=TXTPART=BOSTON ,IDT=<dynamic identifier>,IDF=TXTAPIXMP1 _ 2 record(s) found`
 

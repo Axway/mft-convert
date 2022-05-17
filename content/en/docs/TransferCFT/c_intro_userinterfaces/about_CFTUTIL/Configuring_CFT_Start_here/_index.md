@@ -1,18 +1,15 @@
 ---
-
-    title: About CFTUTIL configuration operations
-    linkTitle: Object configuration
-    weight: 260
-
----
-This topic
+    title: "About CFTUTIL configuration operations"
+    linkTitle: "Object configuration"
+    weight: 250
+---This topic
 gives an overview of the Transfer CFT configuration and object conventions.
 
 ## About the Transfer CFT configuration
 
-The Transfer CFT initially must have an <span style="font-style: italic;font-weight: bold;">******initial******</span>
+The Transfer CFT initially must have an ******initial******
 default configuration in order to startup. After the initial startup the
-<span style="font-style: italic;font-weight: bold;">******ongoing******</span> Transfer
+******ongoing****** Transfer
 CFT configuration feature enables you to modify parameters while Transfer
 CFT is running. The modifications are taken into account immediately without
 having to shut down the Transfer CFT for most object modifications. When

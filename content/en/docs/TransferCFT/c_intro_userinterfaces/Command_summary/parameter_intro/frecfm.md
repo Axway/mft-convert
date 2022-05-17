@@ -1,11 +1,8 @@
 ---
-
-    title: frecfm
-    linkTitle: frecfm
-    weight: 1330
-
----
-<span id="frecfm"></span>
+    title: "frecfm"
+    linkTitle: "frecfm"
+    weight: 1320
+---<span id="frecfm"></span>
 
 ### frecfm
 
@@ -13,8 +10,8 @@
 
 #### CFTRECV, CFTSEND, SEND, RECV
 
-****\[FRECFM = {see the platform specific
-*Operations Guide* | F | U | V}\]    ****
+****[FRECFM = {see the platform specific
+*Operations Guide* &#124; F &#124; U &#124; V}]    ****
 
 Record format of the receiver (local) file:
 
@@ -42,7 +39,7 @@ The possible values for each system are indicated in the corresponding
 | --- | --- |
 
 
-<span style="font-weight: bold;">****z/OS (MVS)****</span> If this parameter is not
-defined, the default value is <span style="font-weight: bold;">****U****</span>.
+****z/OS (MVS)**** If this parameter is not
+defined, the default value is ****U****.
 
 [Return to Command index](../../)

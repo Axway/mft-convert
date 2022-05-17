@@ -1,11 +1,8 @@
 ---
-
-    title: UNIX specific requirements
-    linkTitle: Unix-specific prerequisies
+    title: "UNIX specific requirements"
+    linkTitle: "Unix-specific prerequisies"
     weight: 160
-
----
-UNIX users are required to have Korn Shell (ksh) installed on all UNIX machines.
+---UNIX users are required to have Korn Shell (ksh) installed on all UNIX machines.
 
 ### UNIX user for starting the products
 
@@ -13,9 +10,9 @@ For Transfer CFT you can use any user to install and start the product except th
 
 ### Umask information
 
-The various processes create files during the runtime execution. To ensure that these files are properly used by all the processes, you must make sure that the user has all the rights on the created files. Use the command, <span class="code_1">umask -S u=rwx</span>.
+The various processes create files during the runtime execution. To ensure that these files are properly used by all the processes, you must make sure that the user has all the rights on the created files. Use the command, umask -S u=rwx.
 
-Depending on your information system architecture and whether or not you need to share files with other products, you can grant rights on these files to users from <span class="spanboldinpara">group </span>or <span class="spanboldinpara">others</span>. For this option use the command, <span class="code_1">umask -S go=rx.</span>
+Depending on your information system architecture and whether or not you need to share files with other products, you can grant rights on these files to users from group or others. For this option use the command, umask -S go=rx.
 
 ### Red Hat 6 platform
 
@@ -46,9 +43,9 @@ The installation directory must not contain any sub-folders or files that are ow
 
 The installer needs a temporary directory when it starts to unzip and prepare the environment it requires for product or update installation.
 
-By default, it will try one of the following directories: <span class="code_1">/tmp , /var/tmp , /usr/tmp , $HOME , $PWD</span>.
+By default, it will try one of the following directories: /tmp , /var/tmp , /usr/tmp , $HOME , $PWD.
 
-You can force the use of another temporary directory by setting the following environment variable, <span class="code_1">TEMPORARY\_DIR</span>.
+You can force the use of another temporary directory by setting the following environment variable, TEMPORARY_DIR.
 
 If you do this, make sure the temporary directory has:
 

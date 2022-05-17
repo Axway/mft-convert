@@ -1,18 +1,15 @@
 ---
-
-    title: Active/passive installation - Unix
-    linkTitle: Active/passive installation
+    title: "Active/passive installation - Unix"
+    linkTitle: "Active/passive installation"
     weight: 180
-
----
-This section describes how to install an active/passive architecture, as described in [About Multi-node architecture.](../../../../about_multinode)
+---This section describes how to install an active/passive architecture, as described in [About Multi-node architecture.](../../../../about_multinode)
 
 ## Prerequisites
 
 Transfer CFT in multi-host architecture requires:
 
 - A shared file system
-- You must configure the system prior to the multi-node installation, and the shared disk should be ready when you start the Transfer CFT Copilot server. See <a href="../../../windows_install_start_here/before_you_start_win/n_active_active/shared_file_prereq_win" class="MCXref xref">Shared file system prerequisites</a> for details.
+- You must configure the system prior to the multi-node installation, and the shared disk should be ready when you start the Transfer CFT Copilot server. See [Shared file system prerequisites](../../../windows_install_start_here/before_you_start_win/n_active_active/shared_file_prereq_win) for details.
 
 ### License keys
 
@@ -31,7 +28,7 @@ Additionally, the key must have the cluster option.
 
 ### Download and uncompress
 
-Download and unzip the {{< TransferCFT/suitevariablesTransferCFTName  >}} install package, as described in <a href="../" class="MCXref xref">Install Transfer CFT</a>.
+Download and unzip the {{< TransferCFT/suitevariablesTransferCFTName  >}} install package, as described in [Install Transfer CFT](../).
 
 ### Customize
 
@@ -48,11 +45,11 @@ Create as many copies of the initialize.properties file as you have hosts in the
 ## Install
 
 1. Start the installation.
-1. Transfer\_CFT\_{{< TransferCFT/axwayvariablesReleaseNumber >}}\_Install\_win-x86-64\_BNXXXXXXXX.exe
-1. ./Transfer\_CFT\_{{< TransferCFT/axwayvariablesReleaseNumber >}}\_Install\_&lt;OS>\_&lt;BN>.run
+1. Transfer_CFT_{{< TransferCFT/axwayvariablesReleaseNumber >}}_Install_win-x86-64_BNXXXXXXXX.exe
+1. ./Transfer_CFT_{{< TransferCFT/axwayvariablesReleaseNumber >}}_Install_&lt;OS>_&lt;BN>.run
 1. In the Installation Architecture screen, select **Cluster - first host**.
 1. Complete the installation.
-1. To add a host to create a multi-host installation, run the install <span class="code">`exe/bat`</span> again. This time select **Cluster - Additional host**.
+1. To add a host to create a multi-host installation, run the install `exe/bat` again. This time select **Cluster - Additional host**.
 
 ## Silent installation
 

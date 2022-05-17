@@ -1,17 +1,14 @@
 ---
-
-    title: fbufsize
-    linkTitle: fbufsize
-    weight: 1070
-
----
-<span id="fbufsize"></span>
+    title: "fbufsize"
+    linkTitle: "fbufsize"
+    weight: 1060
+---<span id="fbufsize"></span>
 
 ### fbufsize
 
 #### CFTPARM
 
-****fbufsize = \[0 | n \] <span style="font-weight: normal;">  {<u>0</u>...65535}</span>****
+****fbufsize = [0 &#124; n ]   {<u>0</u>...65535}****
 
 Size of CFTTFIL buffer used for interprocess communication, where the default value 0 means it is calculated internally.
 

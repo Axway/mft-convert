@@ -1,11 +1,8 @@
 ---
-
-    title: CFTUTIL commands for z/OS
-    linkTitle: CFTUTIL commands for z/OS
+    title: "CFTUTIL commands for z/OS"
+    linkTitle: "CFTUTIL commands for z/OS"
     weight: 350
-
----
-This section lists the Transfer CFT z/OS CFTUTIL commands, and additional object and class information for:
+---This section lists the Transfer CFT z/OS CFTUTIL commands, and additional object and class information for:
 
 - Users with all rights
 
@@ -14,8 +11,6 @@ This section lists the Transfer CFT z/OS CFTUTIL commands, and additional object
 - Users with all rights except for the $CFTOPER class
 
 ## User with all rights
-
-QQQ\_QQQ\_QQQ split table
 
 
 | Command  | Object  | Class  | VARS  | UserID  | Actions  | File/ACC  | Notes  |
@@ -58,16 +53,18 @@ QQQ\_QQQ\_QQQ split table
 | LISTCOM | ALL_COM | opercls | &amp;FNAME | Cmduser | Read | COM(READ) |   |
 |   |   |   |   |   |   |   |   |
 | ACT | ACT | cmdecls |   | Cmduser | Create | PART(UPDATE) |   |
-| - " -  | ALL_PART | opercls | &amp;FNAME | Cmduser | Read |  - " -  |   |
-| - " -  | CFTPART | parmcls | &amp;ID | Cmduser | Control |  - " -  |   |
+| - " -  | ALL_PART | opercls | &amp;FNAME | Cmduser | Read |   |   |
+| - " -  | CFTPART | parmcls | &amp;ID | Cmduser | Control |   |   |
 | INACT | INACT | cmdercls |   | Cmduser | Create | PART(UPDATE) |   |
-| - " -  | ALL_PART | opercls | &amp;FNAME | Cmduser | Read |  - " -  |   |
-| - " -  | CFTPART | parmcls | &amp;ID | Cmduser | Control |  - " -  |   |
+| - " -  | ALL_PART | opercls | &amp;FNAME | Cmduser | Read |   |   |
+| - " -  | CFTPART | parmcls | &amp;ID | Cmduser | Control |   |   |
 
 
 Cmduser = System user (TSO) of the user submitting the command.
 
 ## User with all rights except the $CFTOPER class
+
+QQQ_QQQ Table colspan
 
 
 | Command  | Object  | Class  | VARS  | UserID  | Actions  | File/ACC  | Notes  |
@@ -102,11 +99,11 @@ Cmduser = System user (TSO) of the user submitting the command.
 | LISTCAT | APPL | applcls | &amp;ID | Cmduser | Read | CATLG(READ) |   |
 | LISTCOM |   |   |   |   |   |   | Access denied |
 | ACT | ACT | cmdecls |   | Cmduser | Create | PART(UPDATE) |   |
-| - " -  | CFTPART | parmcls | &amp;ID | Cmduser | Read |  - " -  |   |
-| - " -  | CFTPART | parmcls | &amp;ID | Cmduser | Control |  - " -  |   |
+| - " -  | CFTPART | parmcls | &amp;ID | Cmduser | Read | - " -  |   |
+| - " -  | CFTPART | parmcls | &amp;ID | Cmduser | Control | - " -  |   |
 | INACT | INACT | cmdecls |   | Cmduser | Create | PART(UPDATE) |   |
-| - " -  | CFTPART | parmcls | &amp;ID | Cmduser | Read |  - " -  |   |
-| - " -  | CFTPART | parmcls | &amp;ID | Cmduser | Control |  - " -  |   |
+| - " -  | CFTPART | parmcls | &amp;ID | Cmduser | Read | - " -  |   |
+| - " -  | CFTPART | parmcls | &amp;ID | Cmduser | Control | - " -  |   |
 
 
 CFTxxx\* = PARM file configuration commands.

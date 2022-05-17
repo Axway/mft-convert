@@ -1,11 +1,8 @@
 ---
-
-    title: Return codes
-    linkTitle: REST API return codes
+    title: "Return codes"
+    linkTitle: "REST API return codes"
     weight: 340
-
----
-The Rest server returns some data in HTTP format, including a status header, but the data may also contain a body. You can refer to the Swagger web interface for the exact reply syntax.
+---The Rest server returns some data in HTTP format, including a status header, but the data may also contain a body. You can refer to the Swagger web interface for the exact reply syntax.
 
 HTTP status codes include:
 

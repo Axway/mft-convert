@@ -1,11 +1,8 @@
 ---
-
-    title: Pad records for text files
-    linkTitle: Padding records for text files
+    title: "Pad records for text files"
+    linkTitle: "Padding records for text files"
     weight: 330
-
----
-You can define the pad/unpad character for fixed and variable formats at both the file and network level in the SEND, CFTSEND, CFTRECV and RECV commands when TYPE = FILE.
+---You can define the pad/unpad character for fixed and variable formats at both the file and network level in the SEND, CFTSEND, CFTRECV and RECV commands when TYPE = FILE.
 
 <span id="Format"></span>
 
@@ -68,7 +65,7 @@ npad=@
 ```
 Axway
 Transfer CFT
-v{{< TransferCFT/PrimaryTransferCFTversionlong >}}
+v 3.10
 ```
 
 File sent over the network, when nlrecl=20:
@@ -88,7 +85,8 @@ Input file when flrecl=20:
 ```
 Axway@@@@@@@@@@@@@@@
 Transfer CFT@@@@@@@@
-v{{< TransferCFT/PrimaryTransferCFTversionlong >}}@@@@@@@@@@@@@@
+v 3.10
+@@@@@@@@@@@@@@
 ```
 
 File sent over the network:
@@ -96,7 +94,7 @@ File sent over the network:
 ```
 Axway
 Transfer CFT
-v{{< TransferCFT/PrimaryTransferCFTversionlong >}}
+v 3.10
 ```
 
 #### Example of padding a variable format file on the receiver side
@@ -115,7 +113,7 @@ File received from the network:
 ```
 Axway
 Transfer CFT
-v{{< TransferCFT/PrimaryTransferCFTversionlong >}}
+v 3.10
 ```
 
 **Output file**
@@ -123,7 +121,8 @@ v{{< TransferCFT/PrimaryTransferCFTversionlong >}}
 ```
 Axway@@@@@@@@@@@@@@@
 Transfer CFT@@@@@@@@
-v{{< TransferCFT/PrimaryTransferCFTversionlong >}}@@@@@@@@@@@@@@
+v 3.10
+@@@@@@@@@@@@@@
 ```
 
 #### Example of unpadding a fixed format file on the receiver side
@@ -143,7 +142,8 @@ File received from the network
 ```
 Axway@@@@@@@@@@@@@@@
 Transfer CFT@@@@@@@@
-v{{< TransferCFT/PrimaryTransferCFTversionlong >}}@@@@@@@@@@@@@@
+v 3.10
+@@@@@@@@@@@@@@
 ```
 
 Output file
@@ -151,5 +151,5 @@ Output file
 ```
 Axway
 Transfer CFT
-v{{< TransferCFT/PrimaryTransferCFTversionlong >}}
+v 3.10
 ```

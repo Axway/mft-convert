@@ -1,11 +1,8 @@
 ---
-
-    title: Running Transfer CFT
-    linkTitle: Running Transfer CFT
+    title: "Running Transfer CFT"
+    linkTitle: "Running Transfer CFT"
     weight: 280
-
----
-To start the Transfer CFT server from the <span class="bold_in_para">****Operations**** </span>menu, enter<span class="bold_in_para"> ******<span class="bold_in_para">**1.**</span> Common Transfer CFT commands******</span>, then<span class="bold_in_para">********</span> **3. Start Transfer CFT**. Press ENTER to execute. Note that this starts the Transfer CFT subsystem if it was not already running.
+---To start the Transfer CFT server from the ****Operations**** menu, enter ********1.** Common Transfer CFT commands******, then******** **3. Start Transfer CFT**. Press ENTER to execute. Note that this starts the Transfer CFT subsystem if it was not already running.
 
 Operations that recreate files prior to the start-up are only required in specific restart conditions, such as after changing the configuration.
 

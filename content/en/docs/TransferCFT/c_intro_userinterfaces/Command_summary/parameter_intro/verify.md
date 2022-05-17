@@ -1,26 +1,23 @@
 ---
-
-    title: verify
-    linkTitle: verify
-    weight: 3720
-
----
-<span id="verify"></span>
+    title: "verify"
+    linkTitle: "verify"
+    weight: 3740
+---<span id="verify"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
 #### LISTCOM
 
-****\[VERIFY = { YES | <span style="text-decoration: underline;">NO</span>
-}\]****
+****[VERIFY = { YES &#124; NO
+}]****
 
 Request to verify the validity of each record in the file at the time
 it is listed or displayed.
 
 #### CFTTCP
 
-****\[VERIFY = {<span style="text-decoration: underline;">0</span>
-| n } \]****
+****[VERIFY = {0
+&#124; n } ]****
 
 Option to verify the partner number (DIALNO) on an incoming connection
 request (the first "n" digits of the caller number are checked).
@@ -29,8 +26,8 @@ If VERIFY = 0 no verification is performed.
 
 #### CFTSSL DIRECT=SERVER
 
-****\[VERIFY = { NONE | <span style="text-decoration: underline;">REQUIRED</span>
-| OPTIONAL } \]****
+****[VERIFY = { NONE &#124; REQUIRED
+&#124; OPTIONAL } ]****
 
 - NONE: Only the server must be authenticated. 
 - REQUIRED: The server and the client must be authenticated.
@@ -40,8 +37,8 @@ If VERIFY = 0 no verification is performed.
 
 The DIRECT=CLIENT VERIFY options are available as of {{< TransferCFT/axwayvariablesComponentLongName  >}} 3.3.2 SP2.
 
-****\[VERIFY = { <u>NONE</u> | REQUIRED
-| OPTIONAL | ENFORCED } \]****
+****[VERIFY = { <u>NONE</u> &#124; REQUIRED
+&#124; OPTIONAL &#124; ENFORCED } ]****
 
 - ENFORCED: Ensures client authentication with the server. During the handshake, if the server does not ask for the client certificate, then the transfer fails.
 - OPTIONAL and REQUIRED: The same as NONE (for backward compatibility), but should not be used.
@@ -51,7 +48,7 @@ The DIRECT=CLIENT VERIFY options are available as of {{< TransferCFT/axwayvaria
 
 ****Example 1****
 
-This example demonstrates the use of the client <span class="code">`NONE`</span> value.
+This example demonstrates the use of the client `NONE` value.
 
 `CFTSSL type=client, verify=none and CFTSSL type=server, verify=none`
 
@@ -59,7 +56,7 @@ This example demonstrates the use of the client <span class="code">`NONE`</span>
 
 ****Example 2****
 
-This example demonstrates the use of the client <span class="code">`ENFORCED `</span>value.
+This example demonstrates the use of the client `ENFORCED `value.
 
 `CFTSSL type=client, verify=ENFORCED and CFTSSL type=server, verify=required`
 
@@ -69,7 +66,7 @@ This example demonstrates the use of the client <span class="code">`ENFORCED `</
 
 ****Example 3****
 
-This example demonstrates a different use of the <span class="code">`ENFORCED `</span>value. When acting as a client, <span class="code">`ENFORCED `</span>enables Transfer CFT to cancel a transfer if the server does not require the client authentication. Here, the transfer fails with diagi 260 due to the fact that the client requires authentication:
+This example demonstrates a different use of the `ENFORCED `value. When acting as a client, `ENFORCED `enables Transfer CFT to cancel a transfer if the server does not require the client authentication. Here, the transfer fails with diagi 260 due to the fact that the client requires authentication:
 
 `CFTSSL type=client, verify=ENFORCED and CFTSSL type=server, verify=NONE`
 

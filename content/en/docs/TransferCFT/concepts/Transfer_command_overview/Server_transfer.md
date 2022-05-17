@@ -1,11 +1,8 @@
 ---
-
-    title: Server  transfer
-    linkTitle: Server transfer
-    weight: 200
-
----
-This topic describes the steps involved in a server transfer. These
+    title: "Server  transfer"
+    linkTitle: "Server transfer"
+    weight: 190
+---This topic describes the steps involved in a server transfer. These
 steps include:
 
 - [Receiving

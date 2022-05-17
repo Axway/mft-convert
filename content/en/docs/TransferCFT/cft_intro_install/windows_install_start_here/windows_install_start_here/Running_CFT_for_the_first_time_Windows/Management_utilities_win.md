@@ -1,11 +1,8 @@
 ---
-
-    title: Management  utilities
-    linkTitle: Management utilities
-    weight: 270
-
----
-This topic describes the following management utilities:
+    title: "Management  utilities"
+    linkTitle: "Management utilities"
+    weight: 280
+---This topic describes the following management utilities:
 
 - [cftinit](#cftinit)
 - [cft start](#cftstart)
@@ -19,7 +16,7 @@ This topic describes the following management utilities:
 ## cftinit
 
 *cftinit* is a general {{< TransferCFT/axwayvariablesComponentShortName  >}}
-initialization utility. Prior to running <span class="code">`cftinit`</span>,<span class="code">` `</span>you must stop both the Copilot and Transfer CFT server.
+initialization utility. Prior to running `cftinit`,` `you must stop both the Copilot and Transfer CFT server.
 
 **Syntax**
 
@@ -30,7 +27,7 @@ initialization utility. Prior to running <span class="code">`cftinit`</span>,<sp
 *cftinit* is normally used with a single
 parameter, which is the name of the {{< TransferCFT/axwayvariablesComponentShortName  >}} configuration file.
 
-cftinit my\_config.cft
+cftinit my_config.cft
 
 **Advanced use**
 
@@ -40,7 +37,7 @@ reasons, you may wish to separate the configuration into several files
 (for example, a file describing the CFTPART cards and another file containing
 the CFTPARM, CFTLOG cards, and so on).
 
-cftinit partners.cft the\_rest.cft
+cftinit partners.cft the_rest.cft
 
 > **Note**
 >
@@ -50,7 +47,7 @@ cftinit partners.cft the\_rest.cft
     is passed as a parameter, the program requests one or more file names
 - If no name is supplied,
     the program stops
-- When you run <span class="code">`cftinit`</span>, it creates the catalog and communication files. You can modify the default sizes of these files to suit your requirements by updating the uconf values for <span class="code">`cft.cftcat.default_size`</span> and <span class="code">`cft.cftcom.default_size`</span> (these values are expressed as a number of records).
+- When you run `cftinit`, it creates the catalog and communication files. You can modify the default sizes of these files to suit your requirements by updating the uconf values for `cft.cftcat.default_size` and `cft.cftcom.default_size` (these values are expressed as a number of records).
 
 <span id="cftstart"></span>
 
@@ -96,7 +93,7 @@ CFT.
 **Standard use**
 
 The *cft stop* command, used without parameters, shuts down Transfer
-CFT by sending the <span class="code">`SHUT FAST=YES`</span>command. It then waits until the
+CFT by sending the `SHUT FAST=YES`command. It then waits until the
 various {{< TransferCFT/axwayvariablesComponentShortName  >}} processes are stopped.
 
 ```
@@ -116,12 +113,12 @@ it displays the following message:
 
 `% cft stopInvalid state of  {{< TransferCFT/axwayvariablesComponentShortName >}}.`
 
-Use <span class="code">`Cft force-stop`</span> to force {{< TransferCFT/axwayvariablesComponentShortName  >}} to shut down.
+Use `Cft force-stop` to force {{< TransferCFT/axwayvariablesComponentShortName  >}} to shut down.
 
 **Advanced use**
 
 In the event of a problem, the program recommends that you shut down
-{{< TransferCFT/axwayvariablesComponentShortName  >}} using the<span class="code">`Cft force-stop`</span>command.
+{{< TransferCFT/axwayvariablesComponentShortName  >}} using the`Cft force-stop`command.
 
 This command then forces a {{< TransferCFT/axwayvariablesComponentShortName  >}} shutdown. It is normally successful,
 but depending on the state of the system, more serious malfunctions may
@@ -134,7 +131,8 @@ you about the possible consequences of the next command.
 ```
 % cft stop
 Invalid state of CFT.
-Use<span class="code">`Cft force-stop`</span> to force shutdown of {{< TransferCFT/axwayvariablesComponentShortName >}}
+Use Cft force-stop
+to force shutdown of Transfer CFT
 % cft stop -kill
 Stopping Transfer CFT...
 Transfer CFT stopped correctly.
@@ -143,7 +141,7 @@ Transfer CFT stopped correctly.
 
 ## cftupdate
 
-The <span class="code">`cftupdate`</span> utility is used to update the configuration.
+The `cftupdate` utility is used to update the configuration.
 
 **Syntax**
 

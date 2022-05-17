@@ -1,18 +1,15 @@
 ---
-
-    title: segment
-    linkTitle: segment
-    weight: 3120
-
----
-<span id="segment"></span>
+    title: "segment"
+    linkTitle: "segment"
+    weight: 3140
+---<span id="segment"></span>
 
 ## segment
 
 #### CFTPROT
 
-**\[SEGMENT     = { NO
-| <u>YES</u> }\]** Only in sender mode          **Profile = ANY**
+**[SEGMENT     = { NO
+&#124; <u>YES</u> }]** Only in sender mode          **Profile = ANY**
 
 Option to segment file records in several FPDUs.
 

@@ -1,11 +1,8 @@
 ---
-
-    title: Manage multi-node  
-    linkTitle: Manage multi-node
+    title: "Manage multi-node  "
+    linkTitle: "Manage multi-node"
     weight: 250
-
----
-This section describes how to set up and manage your multi-node environment.
+---This section describes how to set up and manage your multi-node environment.
 
 ## Start the Transfer CFT cluster
 

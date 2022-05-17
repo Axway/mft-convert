@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer CFT command guide and syntax 
-    linkTitle: Command guide and parameters
-    weight: 130
-
----
-This topic provides a useful list of {{< TransferCFT/axwayvariablesComponentShortName  >}} commands,
+    title: "Transfer CFT command guide and syntax "
+    linkTitle: "Command guide and parameters"
+    weight: 120
+---This topic provides a useful list of {{< TransferCFT/axwayvariablesComponentShortName  >}} commands,
 syntax, and parameters. For a more detailed description of the Transfer
 CFT commands, refer to the link displayed below each command
 syntax.
@@ -25,9 +22,9 @@ Syntax
 
 `[ COMMENT   = string ]`
 
-`[ TYPE   = { ALL   | HOST | CFT } ]`
+`[ TYPE   = { ALL   &#124; HOST &#124; CFT } ]`
 
-`[ KEY = { FIRST | ALL } ]`
+`[ KEY = { FIRST &#124; ALL } ]`
 
 [ABOUT details](../about_cftutil/about_command)
 
@@ -39,9 +36,9 @@ Syntax
 
 `ID = identifier `
 
-`[ TYPE   = { PART   | TRK | CRON | FOLDER } ]`
+`[ TYPE   = { PART   &#124; TRK &#124; CRON &#124; FOLDER } ]`
 
-`[ MODE   = { BOTH   | REQUESTER|   SERVER } ]`
+`[ MODE   = { BOTH   &#124; REQUESTER&#124;   SERVER } ]`
 
 [ACT details](../about_cftutil/reactivate_an_object_cl)
 
@@ -65,15 +62,15 @@ CFTACCNT TYPE = FILE
 
 `[ EXEC   = filename ]`
 
-`[ LANGUAGE   = { COBOL   | C } ]`
+`[ LANGUAGE   = { COBOL   &#124; C } ]`
 
-`[ MAXREC   = { 0   | n } ]`
+`[ MAXREC   = { 0   &#124; n } ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
-`[ SWITCH   = { 00000000   | time } ]`
+`[ SWITCH   = { 00000000   &#124; time } ]`
 
-`[ FORMAT   = { V23   | 23 | V24 | 24} ]`
+`[ FORMAT   = { V23   &#124; 23 &#124; V24 &#124; 24} ]`
 
  
 
@@ -87,11 +84,11 @@ CFTACCNT TYPE = SYST
 
 `[ COMMENT   = string ]`
 
-`[ FORMAT   = { V23   | 23 | V24 | 24} ]`
+`[ FORMAT   = { V23   &#124; 23 &#124; V24 &#124; 24} ]`
 
-`[ LANGUAGE   = { COBOL   | C } ]`
+`[ LANGUAGE   = { COBOL   &#124; C } ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
 [CFTACCNT details](../web_copilot_ui/conf_intro/cftaccnt)
 
@@ -114,7 +111,7 @@ Syntax
 
 `[ GROUPID   = string ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
 CFTAPPL MODE = DELETE
 
@@ -122,13 +119,13 @@ CFTAPPL MODE = DELETE
 
 `USERID   = string`
 
-`DIRECT   = { BOTH   |  SEND   | RECV }`
+`DIRECT   = { BOTH   &#124;  SEND   &#124; RECV }`
 
 `[ COMMENT   = string ]`
 
 `[ GROUPID   = string ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
 [CFTAPPL details](../web_copilot_ui/flow_def_intro/cftappl)
 
@@ -144,7 +141,7 @@ Syntax
 
 `[ COMMENT   = string ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
 ` `
 
@@ -152,15 +149,15 @@ Or
 
  
 
-`IDF = (identifier | mask, identifier | mask, …)`
+`IDF = (identifier &#124; mask, identifier &#124; mask, …)`
 
 `ID = identifier`
 
 `[ COMMENT   = string ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
-<span style="font-weight: bold;">**** ****</span>
+**** ****
 
 <span id="CFTCAT"></span>
 
@@ -174,37 +171,37 @@ Syntax
 
 `[ COMMENT   = string ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
-`[ RH   = { 10   | n }  ]`
+`[ RH   = { 10   &#124; n }  ]`
 
-`[ RKERROR   = { KEEP   | DELETE } ]`
+`[ RKERROR   = { KEEP   &#124; DELETE } ]`
 
-`[ RT   = { 10   | n } ]`
+`[ RT   = { 10   &#124; n } ]`
 
-`[ RX   = { 10   | n } ]`
+`[ RX   = { 10   &#124; n } ]`
 
-`[ SH   = { 10   | n } ]`
+`[ SH   = { 10   &#124; n } ]`
 
-`[ ST   = { 10   | n } ]`
+`[ ST   = { 10   &#124; n } ]`
 
-`[ SX   = { 10   | n } ]`
+`[ SX   = { 10   &#124; n } ]`
 
-`[ TIMEP   = { 23595999   | HHMMSSCC } ]`
+`[ TIMEP   = { 23595999   &#124; HHMMSSCC } ]`
 
 `[ TLVCEXEC   = { n } ]`
 
-`[ TLVCLEAR   = { TLVWARN-10 | n } ]`
+`[ TLVCLEAR   = { TLVWARN-10 &#124; n } ]`
 
 `[ TLVWEXEC   = { n } ]`
 
-`[ TLVWRATE   = { 60 | n } ]`
+`[ TLVWRATE   = { 60 &#124; n } ]`
 
-`[ TLVWARN   = { 80 | n } ]`
+`[ TLVWARN   = { 80 &#124; n } ]`
 
-`[ UPDAT   = { 256   | n } ]`
+`[ UPDAT   = { 256   &#124; n } ]`
 
-`[ WSCAN   = { 5   | n } ]`
+`[ WSCAN   = { 5   &#124; n } ]`
 
 [CFTCAT details](../web_copilot_ui/conf_intro/cftcat)
 
@@ -226,19 +223,19 @@ Syntax
 
 `[ COMMENT   =  string   ]`
 
-`[ MODE   = { REPLACE | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE &#124; CREATE &#124; DELETE } ]`
 
 `[ TLVCEXEC   = { n } ]`
 
-`[ TLVCLEAR   = { TLVWARN-20 | n } ]`
+`[ TLVCLEAR   = { TLVWARN-20 &#124; n } ]`
 
 `[ TLVWEXEC   = { n } ]`
 
-`[ TLVWRATE   = { 60 | n } ]`
+`[ TLVWRATE   = { 60 &#124; n } ]`
 
-`[ TLVWARN   = { 70 | n } ]`
+`[ TLVWARN   = { 70 &#124; n } ]`
 
-`[ WSCAN   = { 60   | n } ]`
+`[ WSCAN   = { 60   &#124; n } ]`
 
 ` `
 
@@ -256,9 +253,9 @@ Syntax
 
 `[ COMMENT   =  string   ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
-<span style="font-weight: bold;">**** ****</span>[CFTCOM](../web_copilot_ui/conf_intro/cftcom)
+**** ****[CFTCOM](../web_copilot_ui/conf_intro/cftcom)
 
 [Communication
 media](../../admin_intro/admin_config_commands/communication_media_concepts)
@@ -275,19 +272,19 @@ Syntax
 
 `EXEC   = filename`
 
-`EXECPOLICY        = [ INSTANCE |ALLNODES ]`
+`EXECPOLICY        = [ INSTANCE &#124;ALLNODES ]`
 
-`TIME   = { string | @shutdown | @startup } [FOR   DETAILS: CFTCRON   time syntax]`
+`TIME   = { string &#124; @shutdown &#124; @startup } [FOR   DETAILS: CFTCRON   time syntax]`
 
 `[ PARM   = string ]`
 
 `[ COMMENT   = string ]`
 
-`[ STATE = { ACTIVE | NOACTIVE } ]`
+`[ STATE = { ACTIVE &#124; NOACTIVE } ]`
 
-`[ TYPE   = { EXEC   | CFTUTIL } ]`
+`[ TYPE   = { EXEC   &#124; CFTUTIL } ]`
 
-`[ USERID   = { CFT   server "userid"   | string } ]`
+`[ USERID   = { CFT   server "userid"   &#124; string } ]`
 
 [Define script execution](../web_copilot_ui/flow_def_intro/cftcron)
 
@@ -303,21 +300,19 @@ CFTDEST FNAME
 
 `FNAME   = filename `
 
-`[ EXEC   = { DEST   | PART | CHILDREN} ]`
+`[ EXEC   = { DEST   &#124; PART &#124; CHILDREN} ]`
 
-`[ EXECA = { DEST   | PART | CHILDREN} ]`
+`[ EXECA = { DEST   &#124; PART &#124; CHILDREN} ]`
 
-`[ EXECPRE = { DEST   | PART | CHILDREN} ]`
+`[ EXECPRE = { DEST   &#124; PART &#124; CHILDREN} ]`
 
 `[ COMMENT   = string ]`
 
-`[ FOR   = { BOTH   | COMMUT |   LOCAL } ]`
+`[ FOR   = { BOTH   &#124; COMMUT &#124;   LOCAL } ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
-`[ NOPART   = { ABORT   | CONTINUE | IGNORE } ]`
-
-####  
+`[ NOPART   = { ABORT   &#124; CONTINUE &#124; IGNORE } ]`
 
 CFTDEST PART
 
@@ -325,15 +320,15 @@ CFTDEST PART
 
 `PART   = (identifier, identifier, ...) `
 
-`[ EXEC   = { DEST   | PART } ]`
+`[ EXEC   = { DEST   &#124; PART } ]`
 
 `[ COMMENT   = string ]`
 
-`[ FOR   = { BOTH   | COMMUT |   LOCAL } ]`
+`[ FOR   = { BOTH   &#124; COMMUT &#124;   LOCAL } ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
-`[ NOPART   = { ABORT   | CONTINUE | IGNORE } ]`
+`[ NOPART   = { ABORT   &#124; CONTINUE &#124; IGNORE } ]`
 
 [CFTDEST details](../web_copilot_ui/flow_def_intro/cftdest)
 
@@ -354,45 +349,45 @@ Syntax
 
 `[ COMMENT   = string ]`
 
-`[ FORMAT   = { V23   | 23 | V24 | 24 } ]`
+`[ FORMAT   = { V23   &#124; 23 &#124; V24 &#124; 24 } ]`
 
-`[ LANGUAGE   = { COBOL   | C } ]`
+`[ LANGUAGE   = { COBOL   &#124; C } ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
 `[ PARM   = string ]`
 
-`[ PROG   = { CFTEXIT   | string } ]`
+`[ PROG   = { CFTEXIT   &#124; string } ]`
 
-`[ RESERV   = { 16384   | n } ]`
+`[ RESERV   = { 16384   &#124; n } ]`
 
-`[ WAITTASK   = { 1441   | n } ]`
+`[ WAITTASK   = { 1441   &#124; n } ]`
 
  
 
-#### <span style="font-weight: normal;">CFTEXIT TYPE = { FILE | ACCESS | EXEC | BOT}</span>
+#### CFTEXIT TYPE = { FILE &#124; ACCESS &#124; EXEC &#124; BOT}
 
 `ID   = identifier `
 
-`TYPE   = { FILE | ACCESS |  EXEC | BOT } `
+`TYPE   = { FILE &#124; ACCESS &#124;  EXEC &#124; BOT } `
 
 `[ COMMENT   = string ]`
 
-`[ FORMAT   = { V23   | 23 | V24 | 24 } ]`
+`[ FORMAT   = { V23   &#124; 23 &#124; V24 &#124; 24 } ]`
 
-`[ LANGUAGE   = { COBOL   | C } ]`
+`[ LANGUAGE   = { COBOL   &#124; C } ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
 `[ PARM   = string ]`
 
-`[ PROG   = { CFTEXIT   | string } ]`
+`[ PROG   = { CFTEXIT   &#124; string } ]`
 
-`[ RESERV   = { 1024   | n } ]`
+`[ RESERV   = { 1024   &#124; n } ]`
 
-`[ WAITTASK   = { 1441   | n } ]`
+`[ WAITTASK   = { 1441   &#124; n } ]`
 
-<span style="font-weight: bold;">**** ****</span>CFTEXIT details
+**** ****CFTEXIT details
 
 [Exit
 tasks](../../app_integration_intro/managing_exits)
@@ -403,9 +398,9 @@ tasks](../../app_integration_intro/managing_exits)
 
 Syntax
 
-`[ TYPE   = { ALL   | ACCNT | APPL | AUTH | CAT | COM | CRON | DEST |  EXIT | IDF | LOG   |  NET | PARM | PART | PROT | RECV | SEND | SSL |  TCP |  XLATE } ]`
+`[ TYPE   = { ALL   &#124; ACCNT &#124; APPL &#124; AUTH &#124; CAT &#124; COM &#124; CRON &#124; DEST &#124;  EXIT &#124; IDF &#124; LOG   &#124;  NET &#124; PARM &#124; PART &#124; PROT &#124; RECV &#124; SEND &#124; SSL &#124;  TCP &#124;  XLATE } ]`
 
-`[ CONTENT = { FULL | BRIEF } ]`
+`[ CONTENT = { FULL &#124; BRIEF } ]`
 
 `[ FOUT   = filename ]`
 
@@ -413,7 +408,7 @@ Syntax
 
 `[ FPART   = filename ]`
 
-`[ ID   = { *   | identifier | mask } ]`
+`[ ID   = { *   &#124; identifier &#124; mask } ]`
 
 [Export
 configuration](../about_cftutil/configuring_cft_start_here/cftext_command)
@@ -424,57 +419,57 @@ configuration](../about_cftutil/configuring_cft_start_here/cftext_command)
 
 Syntax
 
-`TYPE   = { PARM | PART }`
+`TYPE   = { PARM &#124; PART }`
 
 `FNAME   = filename  `
 
 `[ HABFNAME   = filename ] `
 
-`[ FBLKSIZE   = { 0   |n } ]`
+`[ FBLKSIZE   = { 0   &#124;n } ]`
 
 `[ FSPACE   = n ]`
 
 `[ FSPACEX   = n ]`
 
-`[ MODE   = { CREATE   | REPLACE | DELETE } ]`
+`[ MODE   = { CREATE   &#124; REPLACE &#124; DELETE } ]`
 
 ` `
 
-#### CFTFILE { CAT | COM }
+#### CFTFILE { CAT &#124; COM }
 
-`TYPE   = {  CAT   | COM }`
+`TYPE   = {  CAT   &#124; COM }`
 
 `FNAME   = filename `
 
 `[ RECNB   = n ]`
 
-`[ FBLKSIZE   = { 0   |n } ]`
+`[ FBLKSIZE   = { 0   &#124;n } ]`
 
-`[ FSPACE   = { 0   | n } ]`
+`[ FSPACE   = { 0   &#124; n } ]`
 
-`[ FSPACEX   =  { 0   | n } ]`
+`[ FSPACEX   =  { 0   &#124; n } ]`
 
 `[ HABFNAME   = filename ]`
 
-`[ MODE   = { CREATE   | REPLACE | DELETE } ]`
+`[ MODE   = { CREATE   &#124; REPLACE &#124; DELETE } ]`
 
-`[ NODE = { 0   | n } ] available for TYPE=CAT`
+`[ NODE = { 0   &#124; n } ] available for TYPE=CAT`
 
 ` `
 
-#### CFTFILE { ACCNT | LOG }
+#### CFTFILE { ACCNT &#124; LOG }
 
-`TYPE   = { ACCNT | LOG }`
+`TYPE   = { ACCNT &#124; LOG }`
 
 `FNAME   = filename `
 
-`[ FBLKSIZE   = 0   | n ]`
+`[ FBLKSIZE   = 0   &#124; n ]`
 
-`[ FSPACE   = 0   |n ]`
+`[ FSPACE   = 0   &#124;n ]`
 
-`[ FSPACEX   = 0   |n ]`
+`[ FSPACEX   = 0   &#124;n ]`
 
-`[ MODE   = { CREATE   | REPLACE | DELETE } ]`
+`[ MODE   = { CREATE   &#124; REPLACE &#124; DELETE } ]`
 
 [Manually create internal datafile files](../../admin_intro/admin_commands_intro/cftfile)
 
@@ -492,13 +487,13 @@ See [CFTFOLDER](../web_copilot_ui/flow_def_intro/cftfolder) for additional para
 
 `[ ARCHIVEDIR = string ]`
 
-`[ ENABLESUBDIR = { YES | NO } ]`
+`[ ENABLESUBDIR = { YES &#124; NO } ]`
 
 `[ FILEIDLEDELAY = n ]`
 
-`[ METHOD = { FILE | MOVE }] `
+`[ METHOD = { FILE &#124; MOVE }] `
 
-`[ STATE = { ACTIVE | } ]`
+`[ STATE = { ACTIVE &#124; } ]`
 
 `[ INTERVAL = n ]`
 
@@ -512,7 +507,7 @@ See [CFTFOLDER](../web_copilot_ui/flow_def_intro/cftfolder) for additional para
 
 `[ EXCLUDEFILTER = string ]`
 
-`[ RESUBMITCHANGED { YES | NO }]`
+`[ RESUBMITCHANGED { YES &#124; NO }]`
 
 `[ FILTERTYPE ]`
 
@@ -522,7 +517,7 @@ See [CFTFOLDER](../web_copilot_ui/flow_def_intro/cftfolder) for additional para
 
 `[ RENAMESEPARATOR = string ] `
 
-`[ USEFSEVENTS = { YES | NO } ]`
+`[ USEFSEVENTS = { YES &#124; NO } ]`
 
 `[ USERID = string ]`
 
@@ -536,13 +531,13 @@ Syntax
 
 `PART   = identifier `
 
-`TYPE   = { RECV   | SEND } `
+`TYPE   = { RECV   &#124; SEND } `
 
 `[ COMMENT   = string ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
-<span style="font-weight: bold;">**** ****</span>[CFTIDF details](../web_copilot_ui/flow_def_intro/cftidf)
+**** ****[CFTIDF details](../web_copilot_ui/flow_def_intro/cftidf)
 
 [File
 template/virtual file association](../../concepts/cft_configuration_concepts_start_here/network_file_identifier_concepts)
@@ -559,23 +554,23 @@ Syntax
 
 `[ COMMENT   = string ]`
 
-`[ CONTENT   = { FULL   | BRIEF } ]`
+`[ CONTENT   = { FULL   &#124; BRIEF } ]`
 
 `[ EXEC   = filename ]`
 
-`[ FORMAT   = { V23   | 23 | V24 | 24 } ]`
+`[ FORMAT   = { V23   &#124; 23 &#124; V24 &#124; 24 } ]`
 
-`[ LENGTH   = { 160   | n } ]`
+`[ LENGTH   = { 160   &#124; n } ]`
 
-`[ MAXREC   = { 0   | n } ]`
+`[ MAXREC   = { 0   &#124; n } ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
 `[ NOTIFY   = identifier ]`
 
 `[ OPERMSG   = n ]`
 
-`[ SWITCH   = { 00000000   | time } ]`
+`[ SWITCH   = { 00000000   &#124; time } ]`
 
 [CFTLOG details]()
 
@@ -590,19 +585,19 @@ Syntax
 
 #### CFTNET TYPE = TCP
 
-`HOST   = { string | INADDR_ANY } `
+`HOST   = { string &#124; INADDR_ANY } `
 
-`ID   = { identifier | *identifier } `
+`ID   = { identifier &#124; *identifier } `
 
-`[ CALL   = { INOUT   | IN | OUT } ]`
+`[ CALL   = { INOUT   &#124; IN &#124; OUT } ]`
 
-`[ CLASS   = { 1 | n } ]`
+`[ CLASS   = { 1 &#124; n } ]`
 
-`[ MAXCNX   = { 384   | n } ]`
+`[ MAXCNX   = { 384   &#124; n } ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
-`[ SRCHOST=   { hostname1 | n} ]`
+`[ SRCHOST=   { hostname1 &#124; n} ]`
 
 `[ SRCPORTS= { string } ]`
 
@@ -610,9 +605,9 @@ Syntax
 
 #### CFTNET TYPE = SR
 
-`HOST   = { string | INADDR_ANY } `
+`HOST   = { string &#124; INADDR_ANY } `
 
-`ID   = { identifier | *identifier } `
+`ID   = { identifier &#124; *identifier } `
 
 `[ RECALLHOST = { string } ]`
 
@@ -620,7 +615,7 @@ Syntax
 
 `[ SRCHOST    = { string } ] `
 
-`[ SSLTERM           { YES | NO } ]`
+`[ SSLTERM           { YES &#124; NO } ]`
 
 #### PROTOCOL = GENERIC
 
@@ -632,17 +627,17 @@ Syntax
 
 `PORT   =  n `
 
-`[ CALL   = { INOUT   | IN | OUT } ]`
+`[ CALL   = { INOUT   &#124; IN &#124; OUT } ]`
 
-`[ CLASS   = { 1 | n } ]`
+`[ CLASS   = { 1 &#124; n } ]`
 
-`[ MAXCNX   = { 384   | n } ]`
+`[ MAXCNX   = { 384   &#124; n } ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
 `[ PARM   = string ]`
 
-`[ SRCHOST=   { hostname1 | n} ]`
+`[ SRCHOST=   { hostname1 &#124; n} ]`
 
 ` `
 
@@ -658,15 +653,15 @@ Syntax
 
 `PORT   =  n `
 
-`[ CALL   = { INOUT   | IN | OUT } ]`
+`[ CALL   = { INOUT   &#124; IN &#124; OUT } ]`
 
-`[ CLASS   = { 1 | n } ]`
+`[ CLASS   = { 1 &#124; n } ]`
 
-`[ MAXCNX   = { 32   | n } ]`
+`[ MAXCNX   = { 32   &#124; n } ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
-`[ SRCHOST=   { hostname1 | n} ]`
+`[ SRCHOST=   { hostname1 &#124; n} ]`
 
 `[ USER   = string ]`
 
@@ -689,7 +684,7 @@ Syntax
 
 `ID   = identifier `
 
-`KEY   = {string | #filename } `
+`KEY   = {string &#124; #filename } `
 
 `NET   = ( identifier ,  identifier   ,...) `
 
@@ -701,13 +696,13 @@ Syntax
 
 `[ ACCNT   = identifier  ]`
 
-`[ BUFSIZE   =  { 4096   | n } ]`
+`[ BUFSIZE   =  { 4096   &#124; n } ]`
 
 `[ COMMENT   = string ]`
 
 `[ CRONTABS   = (crontab, crontab, …) ]`
 
-`[ DEFAULT   = { DEFAUT   | identifier } ]`
+`[ DEFAULT   = { DEFAUT   &#124; identifier } ]`
 
 `[ EXECRE   = filename ]`
 
@@ -729,49 +724,49 @@ Syntax
 
 `[ EXITEOT   = identifier  ]`
 
-`[ FBUFSIZE   = { 0   |65535 } ]`
+`[ FBUFSIZE   = { 0   &#124;65535 } ]`
 
-`[ LENAPPL   = { 32   | 1 } ]`
+`[ LENAPPL   = { 32   &#124; 1 } ]`
 
 `[ LOG   = identifier  ]`
 
-`[ MAXTASK   = { 8   | n }  ]`
+`[ MAXTASK   = { 8   &#124; n }  ]`
 
-`[ MAXTRANS   =  { 256   | 1 } ]`
+`[ MAXTRANS   =  { 256   &#124; 1 } ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE }  ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE }  ]`
 
 `[ NPART   = string ]`
 
-`[ PKIPASSW   = { PKIPASSW | string } ]`
+`[ PKIPASSW   = { PKIPASSW &#124; string } ]`
 
-`[ RCVALLER   = { STOP   | CONTINUE } ]`
+`[ RCVALLER   = { STOP   &#124; CONTINUE } ]`
 
 `[ SECFNAME   = filename ]`
 
-`[ SSLMTASK   = { 8   | n } ]`
+`[ SSLMTASK   = { 8   &#124; n } ]`
 
-`[ SSLTTASK   =  {3   | n } ]`
+`[ SSLTTASK   =  {3   &#124; n } ]`
 
-`[ SSLWTASK   = { 10   |n } ]`
+`[ SSLWTASK   = { 10   &#124;n } ]`
 
-`[ SSLWRESP   = { 60   | n } ]`
+`[ SSLWRESP   = { 60   &#124; n } ]`
 
 `[ TRACE   = string ]`
 
-`[ TRANTASK   = { 3   | n } ]`
+`[ TRANTASK   = { 3   &#124; n } ]`
 
-`[ TRKPART   =  { UNDEFINED   | ALL | SUMMARY | NO } ]`
+`[ TRKPART   =  { UNDEFINED   &#124; ALL &#124; SUMMARY &#124; NO } ]`
 
-`[ TRKRECV   =  { UNDEFINED   | ALL | SUMMARY | NO } ]`
+`[ TRKRECV   =  { UNDEFINED   &#124; ALL &#124; SUMMARY &#124; NO } ]`
 
-`[ TRKSEND   = { UNDEFINED   | ALL | SUMMARY | NO } ]`
+`[ TRKSEND   = { UNDEFINED   &#124; ALL &#124; SUMMARY &#124; NO } ]`
 
-`[ USERCTRL   = { NO   | YES } ]`
+`[ USERCTRL   = { NO   &#124; YES } ]`
 
-`[ WAITRESP   = { 60   | n } ]`
+`[ WAITRESP   = { 60   &#124; n } ]`
 
-`[ WAITTASK   = { 10   | n } ] `
+`[ WAITTASK   = { 10   &#124; n } ] `
 
 [CFTPARM details](../web_copilot_ui/conf_intro/cftparm)
 
@@ -784,13 +779,13 @@ parameters](../../admin_intro/admin_config_commands/cftparm_general_parameters)
 
 Syntax
 
-`PROT   = { (identifier | mask , identifier | mask , .... ) } `
+`PROT   = { (identifier &#124; mask , identifier &#124; mask , .... ) } `
 
 `[ COMMENT   = string  ]`
 
-`[ COMMUT   = { YES   | NO | SERVER }   ]`
+`[ COMMUT   = { YES   &#124; NO &#124; SERVER }   ]`
 
-`[ CTRLPART   = { IGNORE   | ALL | RPART | SPART } ]`
+`[ CTRLPART   = { IGNORE   &#124; ALL &#124; RPART &#124; SPART } ]`
 
 `[ FPREFIX   = string ]`
 
@@ -798,15 +793,15 @@ Syntax
 
 `[ IDF   = identifier  ]`
 
-`[ IMAXTIME   = { 23595999   | time } ]`
+`[ IMAXTIME   = { 23595999   &#124; time } ]`
 
-`[ IMINTIME   = { 0   | time } ]`
+`[ IMINTIME   = { 0   &#124; time } ]`
 
 `[ IPART   = identifier ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
-`[ NACK = { YES | NO | ANY } ]`
+`[ NACK = { YES &#124; NO &#124; ANY } ]`
 
 `[ NRPART   = string ]`
 
@@ -816,23 +811,23 @@ Syntax
 
 `[ NSPASSW   = string  ]`
 
-`[ OMAXTIME   = { 23595999   | time } ]`
+`[ OMAXTIME   = { 23595999   &#124; time } ]`
 
-`[ OMINTIME   = { 0   | time } ]`
+`[ OMINTIME   = { 0   &#124; time } ]`
 
-`[ RAUTH   = { *   | identifier } ]`
+`[ RAUTH   = { *   &#124; identifier } ]`
 
 `[ SAP   = (string, string, …) ]`
 
-`[ SAUTH   = { *   | identifier } ]`
+`[ SAUTH   = { *   &#124; identifier } ]`
 
 `[ SSL   = identifier ]`
 
-`[ STATE   = {ACTIVEBOTH   | ACTIVEREQ | ACTIVESERV | NOACTIVE } ]`
+`[ STATE   = {ACTIVEBOTH   &#124; ACTIVEREQ &#124; ACTIVESERV &#124; NOACTIVE } ]`
 
-`[ SYST   = { ‘   ‘ | GCOS7 | GCOS8 | GUARD |  MVS |  OS400 |   UNIX | VM | VMS |  VSE | WINNT | BS2000 } ]`
+`[ SYST   = { ‘   ‘ &#124; GCOS7 &#124; GCOS8 &#124; GUARD &#124;  MVS &#124;  OS400 &#124;   UNIX &#124; VM &#124; VMS &#124;  VSE &#124; WINNT &#124; BS2000 } ]`
 
-`[ TRK   = { UNDEFINED   | ALL | SUMMARY | NO } ]`
+`[ TRK   = { UNDEFINED   &#124; ALL &#124; SUMMARY &#124; NO } ]`
 
 `[ XLATE   = identifier ]`
 
@@ -853,51 +848,51 @@ CFTPROT TYPE = ODETTE
 
 `NET   = identifier `
 
-`[ DISCTD   = { 20   | n } ]`
+`[ DISCTD   = { 20   &#124; n } ]`
 
-`[ DISCTS   = { 65   | n } ]`
+`[ DISCTS   = { 65   &#124; n } ]`
 
 `[ DYNAM   = identifier  ]`
 
-`[ EERP   = { 91   | 86 } ]`
+`[ EERP   = { 91   &#124; 86 } ]`
 
 `[ EXITA   = identifier ]`
 
 `[ IDF   = string  ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
-`[ PAD   = { NO   | YES } ] <Deprecated in Transfer CFT 3.5>`
+`[ PAD   = { NO   &#124; YES } ] <Deprecated in Transfer CFT 3.5>`
 
-`[ RCOMP   =  { 0   | 15 } ]`
+`[ RCOMP   =  { 0   &#124; 15 } ]`
 
-`[ RCREDIT   = { 4   | n } ]`
+`[ RCREDIT   = { 4   &#124; n } ]`
 
-`[ RESTART   = { 5   | n } ]`
+`[ RESTART   = { 5   &#124; n } ]`
 
-`[ RESYNC   = { NO   | YES } ]`
+`[ RESYNC   = { NO   &#124; YES } ]`
 
-`[ REVERSE   = { YES   | NO } ]`
+`[ REVERSE   = { YES   &#124; NO } ]`
 
-`[ RRUSIZE   = { 2048   | n } ]`
+`[ RRUSIZE   = { 2048   &#124; n } ]`
 
-`[ RTO   = { 260   | n } ]`
+`[ RTO   = { 260   &#124; n } ]`
 
 `[ SAP   = string ]`
 
-`[ SCOMP   = { 0 | 1 |15 } ]`
+`[ SCOMP   = { 0 &#124; 1 &#124;15 } ]`
 
-`[ SCREDIT   = { 4   | n } ]`
+`[ SCREDIT   = { 4   &#124; n } ]`
 
-`[ SRIN   = { BOTH   | NONE | RECEIVER | SENDER } ]`
+`[ SRIN   = { BOTH   &#124; NONE &#124; RECEIVER &#124; SENDER } ]`
 
-`[ SROUT   = { BOTH   | NONE | RECEIVER | SENDER } ]`
+`[ SROUT   = { BOTH   &#124; NONE &#124; RECEIVER &#124; SENDER } ]`
 
-`[ SRUSIZE   = { 2048 | n } ]`
+`[ SRUSIZE   = { 2048 &#124; n } ]`
 
 `[ SSL   = identifier ]`
 
-`[ TCP   = { CFT   | OFTP} ]`
+`[ TCP   = { CFT   &#124; OFTP} ]`
 
 ` `
 
@@ -909,67 +904,67 @@ CFTPROT TYPE = PESIT
 
 `NET   = identifier `
 
-`[ CONCAT   = { NO   | YES } ] `
+`[ CONCAT   = { NO   &#124; YES } ] `
 
-`[ DISCTC   = { 60   | n } ] `
+`[ DISCTC   = { 60   &#124; n } ] `
 
-`[ DISCTD   = { 10   | n } ] `
+`[ DISCTD   = { 10   &#124; n } ] `
 
-`[ DISCTR   = { 45   | n } ] `
+`[ DISCTR   = { 45   &#124; n } ] `
 
-`[ DISCTS   = { 60   |n } ] `
+`[ DISCTS   = { 60   &#124;n } ] `
 
 `[ DYNAM   = identifier ] `
 
 `[ EXITA   = identifier ] `
 
-`[ HIDE99   = { NO   | YES } ] `
+`[ HIDE99   = { NO   &#124; YES } ] `
 
 `[ IDF   = string ] `
 
-`[ LOGON   = { YES   | NO } ] `
+`[ LOGON   = { YES   &#124; NO } ] `
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ] `
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ] `
 
-`[ MULTART   = { NO   | YES } ] `
+`[ MULTART   = { NO   &#124; YES } ] `
 
-`[ NACK = { YES | NO | ANY} ]`
+`[ NACK = { YES &#124; NO &#124; ANY} ]`
 
-`[ PAD   = { NO   | YES } ] <Deprecated in Transfer CFT 3.5>`
+`[ PAD   = { NO   &#124; YES } ] <Deprecated in Transfer CFT 3.5>`
 
-`[ RCHKW   = { 3   | n } ] `
+`[ RCHKW   = { 3   &#124; n } ] `
 
-`[ RCOMP   = { 0    | 15 } ] `
+`[ RCOMP   = { 0    &#124; 15 } ] `
 
-`[ RESTART   = { 5   | n } ] `
+`[ RESTART   = { 5   &#124; n } ] `
 
-`[ RESYNC   = { NO   | YES } ] `
+`[ RESYNC   = { NO   &#124; YES } ] `
 
-`[ REVERSE   = { NO   | YES } ] `
+`[ REVERSE   = { NO   &#124; YES } ] `
 
-`[ RPACING   = { 32767   | n } ] `
+`[ RPACING   = { 32767   &#124; n } ] `
 
-`[ RRUSIZE   = { 32750   |n } ] `
+`[ RRUSIZE   = { 32750   &#124;n } ] `
 
-`[ RTO   = { 260   | n } ] `
+`[ RTO   = { 260   &#124; n } ] `
 
 `[ SAP   = string ] `
 
-`[ SCHKW   = { 3   | n } ] `
+`[ SCHKW   = { 3   &#124; n } ] `
 
-`[ SCOMP   = { 0 | 15} ] `
+`[ SCOMP   = { 0 &#124; 15} ] `
 
-`[ SEGMENT   = { NO   | YES } ] `
+`[ SEGMENT   = { NO   &#124; YES } ] `
 
-`[ SPACING   = { 32767   | n } ] `
+`[ SPACING   = { 32767   &#124; n } ] `
 
-`[ SRIN   = { BOTH   | NONE | RECEIVER | SENDER } ] `
+`[ SRIN   = { BOTH   &#124; NONE &#124; RECEIVER &#124; SENDER } ] `
 
-`[ SROUT   = { BOTH   | NONE | RECEIVER | SENDER } ] `
+`[ SROUT   = { BOTH   &#124; NONE &#124; RECEIVER &#124; SENDER } ] `
 
-`[ SRUSIZE   = { 32750   | n } ] `
+`[ SRUSIZE   = { 32750   &#124; n } ] `
 
-`[ SSERV   = { GSIT   | string } ] `
+`[ SSERV   = { GSIT   &#124; string } ] `
 
 `[ SSL   = identifier ]`
 
@@ -983,65 +978,65 @@ CFTPROT TYPE = PESIT  
 
 `NET   = identifier `
 
-`[ CONCAT   = { NO   | YES } ]`
+`[ CONCAT   = { NO   &#124; YES } ]`
 
-`[ DISCTC   = { 90   | n }  ]`
+`[ DISCTC   = { 90   &#124; n }  ]`
 
-`[ DISCTD   =  { 20   | n } ]`
+`[ DISCTD   =  { 20   &#124; n } ]`
 
-`[ DISCTR   = { 45   | n } ]`
+`[ DISCTR   = { 45   &#124; n } ]`
 
-`[ DISCTS   = { 65   | n } ]`
+`[ DISCTS   = { 65   &#124; n } ]`
 
 `[ DYNAM   = identifier  ]`
 
 `[ EXITA   = identifier  ]`
 
-`[ HIDE99   = { NO   |YES } ]`
+`[ HIDE99   = { NO   &#124;YES } ]`
 
 `[ IDF   = string ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
-`[ MULTART   = { NO   | YES } ]`
+`[ MULTART   = { NO   &#124; YES } ]`
 
-`[ PAD   = { NO   | YES } ] <Deprecated in Transfer CFT 3.5>`
+`[ PAD   = { NO   &#124; YES } ] <Deprecated in Transfer CFT 3.5>`
 
-`[ RCHKW   = { 2   | n }  ]`
+`[ RCHKW   = { 2   &#124; n }  ]`
 
-`[ RCOMP   = { 0 |15} ]`
+`[ RCOMP   = { 0 &#124;15} ]`
 
-`[ RESTART   = { 5   | n } ]`
+`[ RESTART   = { 5   &#124; n } ]`
 
-`[ RESYNC   = { NO   | YES } ]`
+`[ RESYNC   = { NO   &#124; YES } ]`
 
-`[ REVERSE   = { NO   | YES } ]`
+`[ REVERSE   = { NO   &#124; YES } ]`
 
-`[ RPACING   = { 36   | n } ]`
+`[ RPACING   = { 36   &#124; n } ]`
 
-`[ RRUSIZE   = { 4056   | n } ]`
+`[ RRUSIZE   = { 4056   &#124; n } ]`
 
 `[ RSERV   = string ]`
 
-`[ RTO   = { 260   | n }  ]`
+`[ RTO   = { 260   &#124; n }  ]`
 
 `[ SAP   = string ]`
 
-`[ SCHKW   = { 2   | n } ]`
+`[ SCHKW   = { 2   &#124; n } ]`
 
-`[ SCOMP   = { 0| 15  } ]`
+`[ SCOMP   = { 0&#124; 15  } ]`
 
-`[ SEGMENT   = { NO   | YES } ]`
+`[ SEGMENT   = { NO   &#124; YES } ]`
 
-`[ SPACING   = { 36   | n } ]`
+`[ SPACING   = { 36   &#124; n } ]`
 
-`[ SRIN   = { BOTH   | NONE | RECEIVER | SENDER } ]`
+`[ SRIN   = { BOTH   &#124; NONE &#124; RECEIVER &#124; SENDER } ]`
 
-`[ SROUT   = { BOTH   | NONE | RECEIVER | SENDER } ]`
+`[ SROUT   = { BOTH   &#124; NONE &#124; RECEIVER &#124; SENDER } ]`
 
-`[ SRUSIZE   = { 4056   |n } ]`
+`[ SRUSIZE   = { 4056   &#124;n } ]`
 
-`[ SSERV   = { CFTPSITX | string } ]`
+`[ SSERV   = { CFTPSITX &#124; string } ]`
 
 `[ SSL   = identifier ]`
 
@@ -1055,65 +1050,65 @@ CFTPROT TYPE = PESIT
 
 `NET   = identifier `
 
-`[ CONCAT   = { NO   | YES } ]`
+`[ CONCAT   = { NO   &#124; YES } ]`
 
-`[ DISCTC   = { 90   | n } ]`
+`[ DISCTC   = { 90   &#124; n } ]`
 
-`[ DISCTD   =  { 120   | n } ]`
+`[ DISCTD   =  { 120   &#124; n } ]`
 
-`[ DISCTR   = { 45   | n } ]`
+`[ DISCTR   = { 45   &#124; n } ]`
 
-`[ DISCTS   = { 165   | n } ]`
+`[ DISCTS   = { 165   &#124; n } ]`
 
 `[ DYNAM   = identifier  ]`
 
 `[ EXITA   = identifier   ]`
 
-`[ HIDE99   = { NO   |YES } ]`
+`[ HIDE99   = { NO   &#124;YES } ]`
 
 `[ IDF   = string  ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
-`[ LOGON   = { YES   | NO } ]`
+`[ LOGON   = { YES   &#124; NO } ]`
 
-`[ MULTART   = { NO   | YES } ]`
+`[ MULTART   = { NO   &#124; YES } ]`
 
-`[ NACK = { YES | NO | ANY } ]`
+`[ NACK = { YES &#124; NO &#124; ANY } ]`
 
-`[ RCHKW   = { 2   | n } ]`
+`[ RCHKW   = { 2   &#124; n } ]`
 
-`[ RCOMP   =  { 0 | 10   |15 } ]`
+`[ RCOMP   =  { 0 &#124; 10   &#124;15 } ]`
 
-`[ RESTART   = { 5   | n } ]`
+`[ RESTART   = { 5   &#124; n } ]`
 
-`[ RESYNC   = { NO   | YES } ]`
+`[ RESYNC   = { NO   &#124; YES } ]`
 
-`[ REVERSE   = { YES | NO } ]`
+`[ REVERSE   = { YES &#124; NO } ]`
 
-`[ RPACING   = { 36 | n } ]`
+`[ RPACING   = { 36 &#124; n } ]`
 
-`[ RRUSIZE   = { 4056 | n } ]`
+`[ RRUSIZE   = { 4056 &#124; n } ]`
 
-`[ RTO   = { 260   | n } ]`
+`[ RTO   = { 260   &#124; n } ]`
 
 `[ SAP   = string ]`
 
-`[ SCHKW   = { 2   | n } ]`
+`[ SCHKW   = { 2   &#124; n } ]`
 
-`[ SCOMP   =  { 0 | 10   | 15} ]`
+`[ SCOMP   =  { 0 &#124; 10   &#124; 15} ]`
 
-`[ SEGMENT   = { NO | YES } ]`
+`[ SEGMENT   = { NO &#124; YES } ]`
 
-`[ SPACING   = { 36 | n } ]`
+`[ SPACING   = { 36 &#124; n } ]`
 
-`[ SRIN   = { BOTH   | NONE | RECEIVER | SENDER } ]`
+`[ SRIN   = { BOTH   &#124; NONE &#124; RECEIVER &#124; SENDER } ]`
 
-`[ SROUT   = { BOTH   | NONE | RECEIVER | SENDER } ]`
+`[ SROUT   = { BOTH   &#124; NONE &#124; RECEIVER &#124; SENDER } ]`
 
-`[ SRUSIZE   = { 4056 | n } ]`
+`[ SRUSIZE   = { 4056 &#124; n } ]`
 
-`[ SSERV   = { PESIT   | string } ]`
+`[ SSERV   = { PESIT   &#124; string } ]`
 
 `[ SSL   = identifier ]`
 
@@ -1127,15 +1122,15 @@ CFTPROT TYPE = PESIT
 
 `NET   = identifier  `
 
-`[ CONCAT   = { NO   | YES } ]`
+`[ CONCAT   = { NO   &#124; YES } ]`
 
-`[ DISCTC   = { 90   | n } ]`
+`[ DISCTC   = { 90   &#124; n } ]`
 
-`[ DISCTD   = { 240 | n } ]`
+`[ DISCTD   = { 240 &#124; n } ]`
 
-`[ DISCTR   = { 45 | n } ]`
+`[ DISCTR   = { 45 &#124; n } ]`
 
-`[ DISCTS   = { 285 | n } ]`
+`[ DISCTS   = { 285 &#124; n } ]`
 
 `[ DYNAM   = identifier ]`
 
@@ -1143,41 +1138,41 @@ CFTPROT TYPE = PESIT
 
 `[ IDF   = string ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
-`[ MULTART   =  { NO   | YES } ]`
+`[ MULTART   =  { NO   &#124; YES } ]`
 
-`[ RCHKW   = { 2   | n } ]`
+`[ RCHKW   = { 2   &#124; n } ]`
 
-`[ RCOMP   =  { 0 |   15 } ]`
+`[ RCOMP   =  { 0 &#124;   15 } ]`
 
-`[ RESTART   = { 5   | n } ]`
+`[ RESTART   = { 5   &#124; n } ]`
 
-`[ RESYNC   = { NO   | YES } ]`
+`[ RESYNC   = { NO   &#124; YES } ]`
 
-`[ REVERSE   = { NO   | string } ]`
+`[ REVERSE   = { NO   &#124; string } ]`
 
-`[ RPACING   = { 36   | n } ]`
+`[ RPACING   = { 36   &#124; n } ]`
 
-`[ RRUSIZE   = { 4050 | n } ]`
+`[ RRUSIZE   = { 4050 &#124; n } ]`
 
-`[ RTO   = { 260 | n } ]`
+`[ RTO   = { 260 &#124; n } ]`
 
 `[ SAP   = string ]`
 
-`[ SCHKW   = { 2 | n } ]`
+`[ SCHKW   = { 2 &#124; n } ]`
 
-`[ SCOMP   = { 0 | 15 } ]`
+`[ SCOMP   = { 0 &#124; 15 } ]`
 
-`[ SEGMENT   = { NO | YES } ]`
+`[ SEGMENT   = { NO &#124; YES } ]`
 
-`[ SPACING   = { 36   | n } ]`
+`[ SPACING   = { 36   &#124; n } ]`
 
-`[ SRIN   = { BOTH   | NONE | RECEIVER | SENDER } ]`
+`[ SRIN   = { BOTH   &#124; NONE &#124; RECEIVER &#124; SENDER } ]`
 
-`[ SROUT   = { BOTH   | NONE | RECEIVER | SENDER } ]`
+`[ SROUT   = { BOTH   &#124; NONE &#124; RECEIVER &#124; SENDER } ]`
 
-`[ SRUSIZE   = { 4050 | n } ]`
+`[ SRUSIZE   = { 4050 &#124; n } ]`
 
 `[ SSL   = identifier ]`
 
@@ -1191,19 +1186,19 @@ CFTPROT TYPE = PESIT
 
 `NET   = identifier `
 
-`[ CONCAT   = { NO   | YES } ]`
+`[ CONCAT   = { NO   &#124; YES } ]`
 
-`[ CTO   = { 1   | n } ]`
+`[ CTO   = { 1   &#124; n } ]`
 
-`[ CYCLE   = { 10   | n } ]`
+`[ CYCLE   = { 10   &#124; n } ]`
 
-`[ DISCTC   = { 90   | n } ]`
+`[ DISCTC   = { 90   &#124; n } ]`
 
-`[ DISCTD   = { 120   | n } ]`
+`[ DISCTD   = { 120   &#124; n } ]`
 
-`[ DISCTR   = { 45   | n } ]`
+`[ DISCTR   = { 45   &#124; n } ]`
 
-`[ DISCTS   = { 65   | n  } ]`
+`[ DISCTS   = { 65   &#124; n  } ]`
 
 `[ DYNAM   = identifier ]`
 
@@ -1211,51 +1206,51 @@ CFTPROT TYPE = PESIT
 
 `[ IDF   = string ]`
 
-`[ LOGON   = { YES   | NO } ]`
+`[ LOGON   = { YES   &#124; NO } ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
-`[ MULTART   = { NO   | YES } ]`
+`[ MULTART   = { NO   &#124; YES } ]`
 
-`[ PAD   = { NO   | YES } ] <Deprecated in Transfer CFT 3.5>`
+`[ PAD   = { NO   &#124; YES } ] <Deprecated in Transfer CFT 3.5>`
 
 `[ PART   = ( identifier, identifier, …) ]`
 
-`[ RCHKW   = { 2   | n } ]`
+`[ RCHKW   = { 2   &#124; n } ]`
 
-`[ RCOMP   = { 0 | 10   | 15 } ]`
+`[ RCOMP   = { 0 &#124; 10   &#124; 15 } ]`
 
-`[ RESTART   = { 5   | n  } ]`
+`[ RESTART   = { 5   &#124; n  } ]`
 
-`[ RESYNC   = { NO   | YES } ]`
+`[ RESYNC   = { NO   &#124; YES } ]`
 
-`[ REVERSE   = { NO   | YES } ]`
+`[ REVERSE   = { NO   &#124; YES } ]`
 
-`[ RPACING   = { 36   | n } ]`
+`[ RPACING   = { 36   &#124; n } ]`
 
 `[ RRUSIZE   = n ]`
 
-`[ RTO   = { 260   | n } ]`
+`[ RTO   = { 260   &#124; n } ]`
 
 `[ SAP   = string ]`
 
-`[ SCHKW   = { 2   | n } ]`
+`[ SCHKW   = { 2   &#124; n } ]`
 
-`[ SCOMP   = { 0 | 10   | 15 } ]`
+`[ SCOMP   = { 0 &#124; 10   &#124; 15 } ]`
 
-`[ SEGMENT   = { NO   | YES } ]`
+`[ SEGMENT   = { NO   &#124; YES } ]`
 
-`[ SPACING   = { 36   | n }]`
+`[ SPACING   = { 36   &#124; n }]`
 
-`[ SRIN   = { BOTH   | NONE | RECEIVER | SENDER } ]`
+`[ SRIN   = { BOTH   &#124; NONE &#124; RECEIVER &#124; SENDER } ]`
 
-`[ SROUT   = { BOTH   | NONE | RECEIVER | SENDER } ]`
+`[ SROUT   = { BOTH   &#124; NONE &#124; RECEIVER &#124; SENDER } ]`
 
-`[ SSERV   = { PESIT   | string } ]`
+`[ SSERV   = { PESIT   &#124; string } ]`
 
 `[ SSL   = identifier ]`
 
-`[ TURN   = { FILE   | MESSAGE } ]`
+`[ TURN   = { FILE   &#124; MESSAGE } ]`
 
 ` `
 
@@ -1274,95 +1269,99 @@ Syntax
 
 `[ COMMENT   = string ]`
 
-`[ CYCDATE   = { 0   | date } ]`
+`[ CYCDATE   = { 0   &#124; date } ]`
 
-`[ CYCTIME   = { 0   | time } ]`
+`[ CYCTIME   = { 0   &#124; time } ]`
 
-`[ DELETE   = { NO   | YES } ]`
+`[ DELETE   = { NO   &#124; YES } ]`
 
-`[ DIRNB   = { 0   | n } ]`
+`[ DIRNB   = { 0   &#124; n } ]`
 
 `[ DUPLICATE = { string 512 } ]`
 
 `[ EXEC   = filename ]`
 
-`[ EXECRALL = { all | parent| children} ]`
+`[ EXECRALL = { all &#124; parent&#124; children} ]`
 
 `[ EXIT   = identifier  ]`
 
-`[ FACC   = { ‘   ‘ | character } ]`
+`[ FACC   = { ‘   ‘ &#124; character } ]`
 
-`[ FACTION   = { ‘   ‘ | DELETE | ERASE |  RENAME | VERIFY  } ]`
+`[ FACTION   = { ‘   ‘ &#124; DELETE &#124; ERASE &#124;  RENAME &#124; VERIFY  } ]`
 
-`[ FBLKSIZE   = { 0   | n } ]`
+`[ FBLKSIZE   = { 0   &#124; n } ]`
 
-`[ FCHECK   = { NO   | YES } ]`
+`[ FCHECK   = { NO   &#124; YES } ]`
 
-`[ FCODE   = { ‘   ‘ |BINARY | EBCDIC | ASCII } ]`
+`[ FCODE   = { ‘   ‘ &#124;BINARY &#124; EBCDIC &#124; ASCII } ]`
 
 `[ FDB   = filename ]`
 
-`[ FDELETE = " " |* | C |D | K | H | T | X]`
+`[ FDELETE = " " &#124;* &#124; C &#124;D &#124; K &#124; H &#124; T &#124; X]`
 
-`[ FDISP   = { BOTH   | NEW | OLD } ]`
+`[ FDISP   = { BOTH   &#124; NEW &#124; OLD } ]`
 
-`[ FILENOTFOUND = { ABORT | IGNORE } ]`
+`[ FILENOTFOUND = { ABORT &#124; IGNORE } ]`
 
-`[ FKEYLEN   = { 0   | n } ]`
+`[ FKEYLEN   = { 0   &#124; n } ]`
 
-`[ FKEYPOS   = { 0   | n } ]`
+`[ FKEYPOS   = { 0   &#124; n } ]`
 
 `[ FLOWNAME = string ]`
 
-`[ FLRECL   =  { 0   | n  } ]`
+`[ FLRECL   =  { 0   &#124; n  } ]`
 
 `[ FNAME   = filename ]`
 
-`[ FORCE   = { NO   | YES }  ]`
+`[ FORCE   = { NO   &#124; YES }  ]`
 
-`[ FORG   = { SEQ   | DIRECT | INDEXED | PART } ]`
+`[ FORG   = { SEQ   &#124; DIRECT &#124; INDEXED &#124; PART } ]`
 
-`[ FPAD = { ' ' | character } ]`
+`[ FPAD = { ' ' &#124; character } ]`
 
-`[ FRECFM   = { ‘   ‘ |F | V | U } ]`
+`[ FRECFM   = { ‘   ‘ &#124;F &#124; V &#124; U } ]`
 
-`[ FSPACE   =  { 0   | n } ]`
+`[ FSPACE   =  { 0   &#124; n } ]`
 
-`[ FTYPE   =  { ‘   ‘ | character } ]`
+`[ FTYPE   =  { ‘   ‘ &#124; character } ]`
 
 `[ GROUPID   = string ]`
 
-`[ MACTION   =  { '   ' | REPLACE } ]`
+`[ MACTION   =  { '   ' &#124; REPLACE } ]`
 
-`[ MAXDATE   =  { 99991231   | date } ]`
+`[ MAXDATE   =  { 99991231   &#124; date } ]`
 
 `[ MAXDURATION =  {0...32767} ]`
 
-`[ MAXTIME   = { 23595999   | time } ]`
+`[ MAXTIME   = { 23595999   &#124; time } ]`
 
-`[ MINDATE   = { 10000101   | date } ]`
+`[ MINDATE   = { 10000101   &#124; date } ]`
 
-`[ MINTIME   = { 0   | time } ]`
+`[ MINTIME   = { 0   &#124; time } ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
-`[ NCOMP   = { 0 | 15   } ]`
+`[ NACTION = NONE &#124; DELETE &#124; ARCHIVE } ]`
+
+`[ NARCHIVENAME = string ]`
+
+`[ NCOMP   = { 0 &#124; 15   } ]`
 
 `[ NETBAND = { 1...16} ]`
 
 `[ NOTIFY   = string ]`
 
-`[ NPAD = { ' ' | character } ]`
+`[ NPAD = { ' ' &#124; character } ]`
 
-`[ NCODE   = { ‘   ‘ |ASCII | BINARY | EBCDIC } ] *available only when the protocol is SFTP`
+`[ NCODE   = { ‘   ‘ &#124;ASCII &#124; BINARY &#124; EBCDIC } ] *available only when the protocol is SFTP`
 
-`[ OPERMSG   = { 0   | 255 } ]`
+`[ OPERMSG   = { 0   &#124; 255 } ]`
 
-`[ PRI   = { 128 | n } ]`
+`[ PRI   = { 128 &#124; n } ]`
 
 `[ RAPPL   = string ]`
 
-`[ RKERROR   = { ' ' | DELETE | KEEP } ]`
+`[ RKERROR   = { ' ' &#124; DELETE &#124; KEEP } ]`
 
 `[ RPASSWD = string ]`
 
@@ -1370,13 +1369,13 @@ Syntax
 
 `[ SAPPL   = string ]`
 
-`[ SERIAL = { ' ' | Y | Z | X } ]`
+`[ SERIAL = { ' ' &#124; Y &#124; Z &#124; X } ]`
 
 `[ SOURCEAPPL =  string ]`
 
 `[ SPASSWD = string ]`
 
-`[ STATE   = { DISP | HOLD | KEEP } ]`
+`[ STATE   = { DISP &#124; HOLD &#124; KEEP } ]`
 
 `[ STORAGEACCOUNT = string ]`
 
@@ -1384,9 +1383,9 @@ Syntax
 
 `[ TARGETAPPL = string ]`
 
-`[ TRK   =  { UNDEFINED   | ALL | SUMMARY | NO } ]`
+`[ TRK   =  { UNDEFINED   &#124; ALL &#124; SUMMARY &#124; NO } ]`
 
-`[ USERID   = { CFT server"userid" | string } ]`
+`[ USERID   = { CFT server"userid" &#124; string } ]`
 
 `[ WFNAME   = filename ]`
 
@@ -1394,7 +1393,7 @@ Syntax
 
 `[ XLATE   = identifier ]`
 
-<span style="font-weight: bold;">**** ****</span>[CFTRECV details](../web_copilot_ui/flow_def_intro/cftrecv)
+**** ****[CFTRECV details](../web_copilot_ui/flow_def_intro/cftrecv)
 
 <span id="CFTSEND"></span>
 
@@ -1408,119 +1407,119 @@ Syntax
 
 `[ COMMENT   = string ]`
 
-`[ CYCDATE   = { 0   | date } ]`
+`[ CYCDATE   = { 0   &#124; date } ]`
 
-`[ CYCLE   = { 0   | n } ]`
+`[ CYCLE   = { 0   &#124; n } ]`
 
-`[ CYCTIME   = { 0   | time } ]`
+`[ CYCTIME   = { 0   &#124; time } ]`
 
-`[ DELETE   = { NO   | YES } ]`
+`[ DELETE   = { NO   &#124; YES } ]`
 
 `[ DUPLICATE = { string 512 } ]`
 
 `[ EXEC   = filename ]`
 
-`[ EXECSUB   = { LIST   | FILE | SUBF } ]`
+`[ EXECSUB   = { LIST   &#124; FILE &#124; SUBF } ]`
 
-`[ EXECSUBA = {LIST | FILE | SUBF } ]`
+`[ EXECSUBA = {LIST &#124; FILE &#124; SUBF } ]`
 
-`[ EXECSUBPRE = { LIST   | FILE | SUBF } ]`
+`[ EXECSUBPRE = { LIST   &#124; FILE &#124; SUBF } ]`
 
 `[ EXIT   =  identifier   ]`
 
-`[ FACC   = { ‘   ‘ | character } ]`
+`[ FACC   = { ‘   ‘ &#124; character } ]`
 
-`[ FACTION   = { NONE   | DELETE | ERASE | ARCHIVE } ]`
+`[ FACTION   = { NONE   &#124; DELETE &#124; ERASE &#124; ARCHIVE } ]`
 
-`[ FBLKSIZE   = { 0   | n } ]`
+`[ FBLKSIZE   = { 0   &#124; n } ]`
 
-`[ FCODE   = { ‘   ‘ |ASCII | BINARY | EBCDIC } ]`
+`[ FCODE   = { ‘   ‘ &#124;ASCII &#124; BINARY &#124; EBCDIC } ]`
 
 `[ FDB   = filename ]`
 
-`[ FDELETE = " " |* | C |D | K | H | T | X]`
+`[ FDELETE = " " &#124;* &#124; C &#124;D &#124; K &#124; H &#124; T &#124; X]`
 
-`[ FDISP   = { SHR   | OLD | CHECK } ]`
+`[ FDISP   = { SHR   &#124; OLD &#124; CHECK } ]`
 
-`[ FILENOTFOUND =  { ABORT | IGNORE } ]`
+`[ FILENOTFOUND =  { ABORT &#124; IGNORE } ]`
 
 `[ FILTER = string ]`
 
 `[ FILTERTYPE = string ]`
 
-`[ FKEYLEN   = { 0   | n } ]`
+`[ FKEYLEN   = { 0   &#124; n } ]`
 
-`[ FKEYPOS   = { 0   | n } ]`
+`[ FKEYPOS   = { 0   &#124; n } ]`
 
 `[ FLOWNAME = string ]`
 
-`[ FLRECL   = { 0   | n } ]`
+`[ FLRECL   = { 0   &#124; n } ]`
 
-`[ FNAME    = { filename   | mask | dirname | #filename | #mask | #dirname } ]`
+`[ FNAME    = { filename   &#124; mask &#124; dirname &#124; #filename &#124; #mask &#124; #dirname } ]`
 
-`[ FORCE   = { NO   | YES } ]`
+`[ FORCE   = { NO   &#124; YES } ]`
 
-`[ FORG   = { SEQ   | DIRECT | INDEXED | PART } ]`
+`[ FORG   = { SEQ   &#124; DIRECT &#124; INDEXED &#124; PART } ]`
 
-`[ FPAD = { ' ' | character } ]`
+`[ FPAD = { ' ' &#124; character } ]`
 
-`[ FRECFM   = { ‘   ‘ | F | U | V } ]`
+`[ FRECFM   = { ‘   ‘ &#124; F &#124; U &#124; V } ]`
 
-`[ FSPACE   = { 0   | n } ]`
+`[ FSPACE   = { 0   &#124; n } ]`
 
-`[ FTYPE   = { ‘   ‘ | character } ]`
+`[ FTYPE   = { ‘   ‘ &#124; character } ]`
 
 `[ GROUPID   = string ]`
 
 `[ IDA = string ]`
 
-`[ IMPL   = { NO   | YES } ]`
+`[ IMPL   = { NO   &#124; YES } ]`
 
-`[ MAXDATE   =  { 99991231   | date } ]`
+`[ MAXDATE   =  { 99991231   &#124; date } ]`
 
 `[ MAXDURATION =  {0...32767} ]`
 
-`[ MAXTIME   = { 23595999   | time } ]`
+`[ MAXTIME   = { 23595999   &#124; time } ]`
 
-`[ MINDATE   = { 10000101|   date } ]`
+`[ MINDATE   = { 10000101&#124;   date } ]`
 
-`[ MINTIME   = { 0   | time } ]`
+`[ MINTIME   = { 0   &#124; time } ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
-`[ NBLKSIZE   = { 0   | n } ]`
+`[ NBLKSIZE   = { 0   &#124; n } ]`
 
-`[ NCODE   = { ‘   ‘ |ASCII | BINARY | EBCDIC } ]`
+`[ NCODE   = { ‘   ‘ &#124;ASCII &#124; BINARY &#124; EBCDIC } ]`
 
-`[ NCOMP   =  { 0 |   15   } ]`
+`[ NCOMP   =  { 0 &#124;   15   } ]`
 
 `[ NETBAND   = { 1...16} ]`
 
-`[ NFNAME   =  { filename   | *filename } ]`
+`[ NFNAME   =  { filename   &#124; *filename } ]`
 
-`[ NKEYLEN   = { 0   | n } ]`
+`[ NKEYLEN   = { 0   &#124; n } ]`
 
-`[ NKEYPOS   = { 0|   n } ]`
+`[ NKEYPOS   = { 0&#124;   n } ]`
 
-`[ NLRECL   =  { 0   | n } ]`
+`[ NLRECL   =  { 0   &#124; n } ]`
 
 `[ NOTIFY   = string  ]`
 
-`[ NPAD = { ' ' | character } ]`
+`[ NPAD = { ' ' &#124; character } ]`
 
-`[ NRECFM   = { ‘   ‘ | F | U | V } ]`
+`[ NRECFM   = { ‘   ‘ &#124; F &#124; U &#124; V } ]`
 
-`[ NSPACE   =  { 0   | n } ]`
+`[ NSPACE   =  { 0   &#124; n } ]`
 
 `[ NTYPE   = character ]`
 
-`[ OPERMSG   = { 0   | 255 } ]`
+`[ OPERMSG   = { 0   &#124; 255 } ]`
 
 `[ PARM   = string  ]`
 
 `[ PREEXEC = filename ]`
 
-`[ PRI   = { 128   | n } ]`
+`[ PRI   = { 128   &#124; n } ]`
 
 `[ RAPPL   = string ]`
 
@@ -1532,7 +1531,7 @@ Syntax
 
 `[ SELFNAME   = filename ]`
 
-`[ SERIAL = { ' ' | Y | Z | X } ]`
+`[ SERIAL = { ' ' &#124; Y &#124; Z &#124; X } ]`
 
 `[ SPART   = string ]`
 
@@ -1540,7 +1539,7 @@ Syntax
 
 `[ SOURCEAPPL =  string ]`
 
-`[ STATE   = { DISP   | HOLD | KEEP } ]`
+`[ STATE   = { DISP   &#124; HOLD &#124; KEEP } ]`
 
 `[ STORAGEACCOUNT = string ]`
 
@@ -1548,11 +1547,11 @@ Syntax
 
 `[ TARGETAPPL = string ]`
 
-`[ TCYCLE   = { DAY   | MIN | MONTH } ]`
+`[ TCYCLE   = { DAY   &#124; MIN &#124; MONTH } ]`
 
-`[ TRK   =  { UNDEFINED   | ALL | SUMMARY | NO } ]`
+`[ TRK   =  { UNDEFINED   &#124; ALL &#124; SUMMARY &#124; NO } ]`
 
-`[ USERID   = { CFT   server "userid" | string } ]`
+`[ USERID   = { CFT   server "userid" &#124; string } ]`
 
 `[ WFNAME   = filename ]`
 
@@ -1573,25 +1572,25 @@ Syntax
 
 `CIPHLIST   = ( number, number, …) `
 
-`DIRECT   = { CLIENT   | SERVER }`
+`DIRECT   = { CLIENT   &#124; SERVER }`
 
-`[ CACHE   = { NO   | YES } ]`
+`[ CACHE   = { NO   &#124; YES } ]`
 
 `[ CERFNAME   = string ]`
 
 `[ COMMENT   = string ]`
 
-`[ DEPTH   = { 10   | n } ]`
+`[ DEPTH   = { 10   &#124; n } ]`
 
 `[ DNISSUER   = ( string, string, …) ]`
 
-`[ DNUSER   = { ( string, string, …) | ( string, OP (see Note), string ) } ] `
+`[ DNUSER   = { ( string, string, …) &#124; ( string, OP (see Note), string ) } ] `
 
 `[ INTERCID   = string ] `
 
-`[ KEYEXT = { VERIFY | NONE } ]`
+`[ KEYEXT = { VERIFY &#124; NONE } ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
 `[ PARM   = string ]`
 
@@ -1599,17 +1598,17 @@ Syntax
 
 `[ ROOTCID   = ( string, string, …) ]`
 
-`[ TRACE   = { 0   | n } ]`
+`[ TRACE   = { 0   &#124; n } ]`
 
 `[ USERCID   = string ]`
 
-`[ VERIFY   = { NONE| REQUIRED   | OPTIONAL } ] *When DIRECT=SERVER`
+`[ VERIFY   = { NONE&#124; REQUIRED   &#124; OPTIONAL } ] *When DIRECT=SERVER`
 
-`[ VERIFY   = { NONE| REQUIRED   | ENFORCED | OPTIONAL } ] *When DIRECT=CLIENT `
+`[ VERIFY   = { NONE&#124; REQUIRED   &#124; ENFORCED &#124; OPTIONAL } ] *When DIRECT=CLIENT `
 
-`[ VERSION   = { TLSV1  | SSLV3 | TLSV1 | SSLV3COMP | TLSV1COMP} ]`
+`[ VERSION   = { TLSV1  &#124; SSLV3 &#124; TLSV1 &#124; SSLV3COMP &#124; TLSV1COMP} ]`
 
-<span style="font-weight: bold;">****Note****</span>: <span id="OP"></span>You can configure Transfer
+****Note****: <span id="OP"></span>You can configure Transfer
 CFT to accept or reject SSL connections based on logical operators used
 within the DN of the certificate. For details refer to [dnuser](parameter_intro/dnuser)
 parameter details.
@@ -1628,31 +1627,31 @@ Syntax
 
 `ID   = identifier `
 
-`[ CLASS   = { 1   | n } ]`
+`[ CLASS   = { 1   &#124; n } ]`
 
-`[ CNXIN   = { 2   | n } ]`
+`[ CNXIN   = { 2   &#124; n } ]`
 
-`[ CNXINOUT   = { 4   | n } ]`
+`[ CNXINOUT   = { 4   &#124; n } ]`
 
-`[ CNXOUT   = { 2   | n } ]`
+`[ CNXOUT   = { 2   &#124; n } ]`
 
-`[ IMAXTIME   = { 23595999   | time } ]`
+`[ IMAXTIME   = { 23595999   &#124; time } ]`
 
-`[ IMINTIME   = { 0   | time } ]`
+`[ IMINTIME   = { 0   &#124; time } ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
-`[ OMAXTIME   = { 23595999   | time } ]`
+`[ OMAXTIME   = { 23595999   &#124; time } ]`
 
-`[ OMINTIME   = { 0   | time } ]`
+`[ OMINTIME   = { 0   &#124; time } ]`
 
-`[ RETRYM   = { 12   | n } ]`
+`[ RETRYM   = { 12   &#124; n } ]`
 
-`[ RETRYN   = { 4   | n } ]`
+`[ RETRYN   = { 4   &#124; n } ]`
 
-`[ RETRYW   = { 1   | n } ]`
+`[ RETRYW   = { 1   &#124; n } ]`
 
-`[ VERIFY   = { 0   | n } ]`
+`[ VERIFY   = { 0   &#124; n } ]`
 
 [TCP
 attributes for a partner](../../admin_intro/admin_config_commands/network_resource_concepts)
@@ -1661,19 +1660,19 @@ attributes for a partner](../../admin_intro/admin_config_commands/network_resour
 
 #### CFTUIPREF MODE=mode
 
-MODE= { CREATE | <u>REPLACE</u> | DELETE }
+MODE= { CREATE &#124; <u>REPLACE</u> &#124; DELETE }
 
 [ID](parameter_intro/id)
 = identifier  
 
 [TYPE](parameter_intro/type) = string
 
-\[ [COMMENT](parameter_intro/comment)
-= string \]
+[ [COMMENT](parameter_intro/comment)
+= string ]
 
-`[ CONTENT   = { ACTIVE   | FULL } ]`
+`[ CONTENT   = { ACTIVE   &#124; FULL } ]`
 
-\[ [ORIGIN](parameter_intro/origin) \] = string \]
+[ [ORIGIN](parameter_intro/origin) ] = string ]
 
 <span id="CFTXLATE"></span>
 
@@ -1685,20 +1684,20 @@ Syntax
 
 `[ COMMENT   = string ]`
 
-`[ DIRECT   = { BOTH   | RECV | SEND } ]`
+`[ DIRECT   = { BOTH   &#124; RECV &#124; SEND } ]`
 
-`[ FCODE   = { '   ' | ASCII | EBCDIC } ]`
+`[ FCODE   = { '   ' &#124; ASCII &#124; EBCDIC } ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE } ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
-`[ NCODE   = { '   ' | ASCII | EBCDIC } ]`
+`[ NCODE   = { '   ' &#124; ASCII &#124; EBCDIC } ]`
 
 `[ ORIGIN ] = string ]`
 
 `[ TABLE ] = string ]`
 
 [Conversion
-tables](../../concepts/cft_configuration_concepts_start_here/translation_table_concepts)
+tables](../../concepts/transfer_command_overview/using_transcoding/translation_table_concepts)
 
 <span id="CLEARCMD"></span>
 
@@ -1716,9 +1715,9 @@ Syntax
 
 #### CONFIG: Designate the communication medium and the files accessed by CFTUTIL
 
-<span style="font-weight: normal;">Syntax</span>
+Syntax
 
-CONFIG TYPE = { CAT | INPUT | OUTPUT | PARM | PART }
+CONFIG TYPE = { CAT &#124; INPUT &#124; OUTPUT &#124; PARM &#124; PART }
 
 `FNAME = filename `
 
@@ -1738,9 +1737,9 @@ CONFIG TYPE = COM
 
 `FNAME= string `
 
-`[ HIGHPORT   =  { 65535   | n } ]`
+`[ HIGHPORT   =  { 65535   &#124; n } ]`
 
-`[ LOWPORT   = { 5000   | n } ]`
+`[ LOWPORT   = { 5000   &#124; n } ]`
 
 `[ PASSWORD = string } ]`
 
@@ -1748,7 +1747,7 @@ CONFIG TYPE = COM
 
 `[ ROOTCERT   = string ]`
 
-`[ TIMEOUT   = 60   | n ]`
+`[ TIMEOUT   = 60   &#124; n ]`
 
 [Setting default CFTUTIL file names](../about_cftutil/redefining_cftutil_data_media)
 
@@ -1760,41 +1759,41 @@ Syntax
 
 `OFNAME   = filename `
 
-`[ CREATE   = { ‘   ‘ | YES | NO } ]`
+`[ CREATE   = { ‘   ‘ &#124; YES &#124; NO } ]`
 
-`[ IBLKSIZE   = { 0   | n } ]`
+`[ IBLKSIZE   = { 0   &#124; n } ]`
 
 `[ ICHARSET = string ]`
 
-`[ ICODE   = { ASCII | EBCDIC } ]`
+`[ ICODE   = { ASCII &#124; EBCDIC } ]`
 
-`[ ICOMP   = { 0   | 15 } ]`
+`[ ICOMP   = { 0   &#124; 15 } ]`
 
-`[ ICT   =  { H   | C } ]`
+`[ ICT   =  { H   &#124; C } ]`
 
-`[ ILRECL   = { 0   | n } ]`
+`[ ILRECL   = { 0   &#124; n } ]`
 
-`[ IRECFM   = { F | V | U } ]`
+`[ IRECFM   = { F &#124; V &#124; U } ]`
 
-`[ ITYPE   = { ‘ ‘ | character } ]`
+`[ ITYPE   = { ‘ ‘ &#124; character } ]`
 
-`[ OBLKSIZE   = { 0 |n  }   ]`
+`[ OBLKSIZE   = { 0 &#124;n  }   ]`
 
 `[ OCHARSET = string ] `
 
-`[ OCODE   = { ASCII | EBCDIC } ]`
+`[ OCODE   = { ASCII &#124; EBCDIC } ]`
 
-`[ OCOMP   = { 0   | 15 } ]`
+`[ OCOMP   = { 0   &#124; 15 } ]`
 
-`[ OCT   = { H | C } ]`
+`[ OCT   = { H &#124; C } ]`
 
-`[ OLRECL   = { 0   |n } ]`
+`[ OLRECL   = { 0   &#124;n } ]`
 
-`[ ORECFM   = { IRECFM   value | F | V| U } ]`
+`[ ORECFM   = { IRECFM   value &#124; F &#124; V&#124; U } ]`
 
-`[ OSPACE   = { 0   | n } ]`
+`[ OSPACE   = { 0   &#124; n } ]`
 
-`[ OTYPE   = { ‘   ‘ | character } ]`
+`[ OTYPE   = { ‘   ‘ &#124; character } ]`
 
 `[ XLATE = string ]`
 
@@ -1802,29 +1801,29 @@ Syntax
 
 <span id="DELETE"></span>
 
-#### DELETE PART = { identifier | mask }: Delete a catalog entry
+#### DELETE PART = { identifier &#124; mask }: Delete a catalog entry
 
 Syntax
 
-`[ BLKNUM   = { 0   | n } ]`
+`[ BLKNUM   = { 0   &#124; n } ]`
 
-`[ DIRECT   = { BOTH   | RECV | SEND } ]`
+`[ DIRECT   = { BOTH   &#124; RECV &#124; SEND } ]`
 
-`[ FORCE   =  { YES   | NO   } ]`
+`[ FORCE   =  { YES   &#124; NO   } ]`
 
 `[ IDA   = identifier  ]`
 
 `[ IDF   = identifier ]`
 
-`[ IDT   = { *   | transid } ]`
+`[ IDT   = { *   &#124; transid } ]`
 
 `[ IDTU   = string ]`
 
-`[ STATE   = { *   | C | D | H | K | T | X } ]`
+`[ STATE   = { *   &#124; C &#124; D &#124; H &#124; K &#124; T &#124; X } ]`
 
-`[ KDATE   = { 0   | n } ]`
+`[ KDATE   = { 0   &#124; n } ]`
 
-`[ KTIME   = { 0   | n } ]`
+`[ KTIME   = { 0   &#124; n } ]`
 
 `[ PHASE = string ]`
 
@@ -1836,19 +1835,19 @@ Syntax
 
 <span id="DISPLAY"></span>
 
-#### DISPLAY \[ CONTENT = { <span style="text-decoration: underline;">listcat</span> | identifier }\]: Display a model-formatted catalog
+#### DISPLAY [ CONTENT = { listcat &#124; identifier }]: Display a model-formatted catalog
 
 Syntax
 
-`[ DATETIMEMAX = { 0 | 991231235959 } ]`
+`[ DATETIMEMAX = { 0 &#124; 991231235959 } ]`
 
-`[ DATETIMEMIN = { 0 | 991231235959 } ]`
+`[ DATETIMEMIN = { 0 &#124; 991231235959 } ]`
 
-`[ DIAGI = { * | 0 | ERROR } ]`
+`[ DIAGI = { * &#124; 0 &#124; ERROR } ]`
 
-`[ DIRECT   = { BOTH   | RECV | SEND } ]`
+`[ DIRECT   = { BOTH   &#124; RECV &#124; SEND } ]`
 
-`[ EMPTY   = { ANY   | string } ]`
+`[ EMPTY   = { ANY   &#124; string } ]`
 
 `[ FILE   = filename ]`
 
@@ -1856,7 +1855,7 @@ Syntax
 
 `[ FOUT = string ]`
 
-`[ HELP   = { NONE   | FIELDS | MODELS | COMMAND } ]`
+`[ HELP   = { NONE   &#124; FIELDS &#124; MODELS &#124; COMMAND } ]`
 
 `[ IDA   =  string   ]`
 
@@ -1866,9 +1865,9 @@ Syntax
 
 `[ IDTU   = string ]`
 
-`[ MODE   = { ANY   | COLUMN | LINE } ]`
+`[ MODE   = { ANY   &#124; COLUMN &#124; LINE } ]`
 
-`[ NA   = { ANY   | string } ]`
+`[ NA   = { ANY   &#124; string } ]`
 
 `[ NIDT    = { string of 8 digits } ]`
 
@@ -1882,15 +1881,15 @@ Syntax
 
 `[ SUSER   = string ]`
 
-`[ STATE   = { *   | character } ]`
+`[ STATE   = { *   &#124; character } ]`
 
-`[ TYPE   = { *   | FILE | MESSAGE | REPLY | ALL } ]`
+`[ TYPE   = { *   &#124; FILE &#124; MESSAGE &#124; REPLY &#124; ALL } ]`
 
 [Catalog output display model](../about_cftutil/monitoring_cftutil_intro/display_command)
 
 <span id="END"></span>
 
-#### END PART = { identifier | mask }: Change transfer to X state
+#### END PART = { identifier &#124; mask }: Change transfer to X state
 
 Syntax
 
@@ -1910,13 +1909,13 @@ Syntax
 
 `[ SPASSWD    = string ]`
 
-`[ BLKNUM   = { 0   | n } ]`
+`[ BLKNUM   = { 0   &#124; n } ]`
 
 `[ DIAGC = string ]`
 
-`[ DIRECT   = { BOTH   | RECV | SEND } ]`
+`[ DIRECT   = { BOTH   &#124; RECV &#124; SEND } ]`
 
-`[ FORCE   = { NO   | YES } ]`
+`[ FORCE   = { NO   &#124; YES } ]`
 
 `[ FNAME    = string ]`
 
@@ -1924,17 +1923,17 @@ Syntax
 
 `[ IDF   = identifier ]`
 
-`[ IDT   = { *   | transid } ] `
+`[ IDT   = { *   &#124; transid } ] `
 
 `[ IDTU   = string ]`
 
-`[ ISTATE = { YES | NO } ]`
+`[ ISTATE = { YES &#124; NO } ]`
 
 `[ ISTATE    = string ]`
 
-`[ KDATE   = { 0   | n } ]`
+`[ KDATE   = { 0   &#124; n } ]`
 
-`[ KTIME   = { 0   | n } ]`
+`[ KTIME   = { 0   &#124; n } ]`
 
 `[ NFNAME    = string ]`
 
@@ -1958,33 +1957,33 @@ Syntax
 
 <span id="HALT"></span>
 
-#### HALT PART = { identifier | mask }: Suspend a transfer
+#### HALT PART = { identifier &#124; mask }: Suspend a transfer
 
 Syntax
 
-`[ BLKNUM   = { 0   | n } ]`
+`[ BLKNUM   = { 0   &#124; n } ]`
 
 `[ DIAGC = string ]`
 
 `[ DIAGP = string ]`
 
-`[ DIRECT   = { BOTH   | RECV | SEND } ]`
+`[ DIRECT   = { BOTH   &#124; RECV &#124; SEND } ]`
 
-`[ FORCE   = { YES | NO   } ]`
+`[ FORCE   = { YES &#124; NO   } ]`
 
 `[ IDA   = identifier  ]`
 
 `[ IDF   = identifier  ]`
 
-`[ IDT   = { *   | transid } ]`
+`[ IDT   = { *   &#124; transid } ]`
 
 `[ IDTU   = string  ]`
 
 `[ STATE  = string ]`
 
-`[ KDATE   = { 0   | n } ]`
+`[ KDATE   = { 0   &#124; n } ]`
 
-`[ KTIME   = { 0   | n } ]`
+`[ KTIME   = { 0   &#124; n } ]`
 
 `[ PHASE = string ]`
 
@@ -2000,9 +1999,9 @@ Syntax
 
 `[ CMD = { string } ]`
 
-`[ CONTENT = { BRIEF | DETAIL} ]`
+`[ CONTENT = { BRIEF &#124; DETAIL} ]`
 
-`[ OFORMAT = { txt | xsd } ]`
+`[ OFORMAT = { txt &#124; xsd } ]`
 
 <span id="INACT"></span>
 
@@ -2010,43 +2009,43 @@ Syntax
 
 Syntax
 
-`[ MODE   = { BOTH   | REQUESTER| SERVER } ]`
+`[ MODE   = { BOTH   &#124; REQUESTER&#124; SERVER } ]`
 
-`[ FORCE   = { NO   | YES } ]`
+`[ FORCE   = { NO   &#124; YES } ]`
 
-`[ TYPE   = PART   | TRK | CRON | FOLDER ]`
+`[ TYPE   = PART   &#124; TRK &#124; CRON &#124; FOLDER ]`
 
 [INACT details](../about_cftutil/reactivate_an_object_cl/inact_command)
 
 <span id="KEEP"></span>
 
-#### KEEP PART = { identifier | mask }: Abort a transfer
+#### KEEP PART = { identifier &#124; mask }: Abort a transfer
 
 Syntax
 
-`[ BLKNUM   = 0   | n ]`
+`[ BLKNUM   = 0   &#124; n ]`
 
 `[ DIAGC = string ]`
 
 `[ DIAGP = string ]`
 
-`[ DIRECT   = { BOTH   | RECV | SEND } ]`
+`[ DIRECT   = { BOTH   &#124; RECV &#124; SEND } ]`
 
-`[ FORCE   = { YES   | NO } ]`
+`[ FORCE   = { YES   &#124; NO } ]`
 
 `[ IDA   = identifier  ]`
 
 `[ IDF   = identifier ]`
 
-`[ IDT   = { *   | transid } ]`
+`[ IDT   = { *   &#124; transid } ]`
 
 `[ IDTU   = string  ]`
 
 `[ STATE   = string ]`
 
-`[ KDATE   = { 0   | n } ]`
+`[ KDATE   = { 0   &#124; n } ]`
 
-`[ KTIME   = { 0   | n } ]`
+`[ KTIME   = { 0   &#124; n } ]`
 
 `[ PHASE = string ]`
 
@@ -2054,7 +2053,7 @@ Syntax
 
 `[ SCOPE = string ]`
 
-<span style="font-weight: bold;">**** ****</span>[Suspend transfers](../about_cftutil/managing_transfer_states/keep_command)
+**** ****[Suspend transfers](../about_cftutil/managing_transfer_states/keep_command)
 
 <span id="KSTATE"></span>
 
@@ -2070,59 +2069,59 @@ Syntax
 
 <span id="LISTCAT"></span>
 
-#### LISTCAT TYPE = { <span style="text-decoration: underline;">ALL</span> | \* | FILE | MESSAGE | REPLY }: List catalog entries
+#### LISTCAT TYPE = { ALL &#124; \* &#124; FILE &#124; MESSAGE &#124; REPLY }: List catalog entries
 
 Syntax
 
-`[ CONTENT   = { BRIEF   | FULL | DEBUG | EXTEND | COMMUT | STAT | BLKNUM } ]`
+`[ CONTENT   = { BRIEF   &#124; FULL &#124; DEBUG &#124; EXTEND &#124; COMMUT &#124; STAT &#124; BLKNUM } ]`
 
-`[ DATETIMEMAX = { 0 | 991231235959 } ]`
+`[ DATETIMEMAX = { 0 &#124; 991231235959 } ]`
 
-`[ DATETIMEMIN = { 0 | 991231235959 } ]`
+`[ DATETIMEMIN = { 0 &#124; 991231235959 } ]`
 
-`[ DIAGI = { * | 0 | ERROR } ]`
+`[ DIAGI = { * &#124; 0 &#124; ERROR } ]`
 
-`[ DIRECT   = { BOTH   | RECV | SEND } ]`
+`[ DIRECT   = { BOTH   &#124; RECV &#124; SEND } ]`
 
 `[ FILE   = filename ]`
 
-`[ IDA   = { *   | identifier } ]`
+`[ IDA   = { *   &#124; identifier } ]`
 
-`[ IDF   = { *   | identifier } ]`
+`[ IDF   = { *   &#124; identifier } ]`
 
-`[ IDT   = { *   | transid } ]`
+`[ IDT   = { *   &#124; transid } ]`
 
 `[ IDTU   = string  ]`
 
 `[ NIDT    = { string of 8 digits } ]`
 
-`[ NPART   = { identifier | mask } ]`
+`[ NPART   = { identifier &#124; mask } ]`
 
-`[ PART   = { *   | identifier | mask } ]`
+`[ PART   = { *   &#124; identifier &#124; mask } ]`
 
 `[ SORTBY   = string ]`
 
-`[ STATE   = { *   | string } ]`
+`[ STATE   = { *   &#124; string } ]`
 
-<span style="font-weight: bold;">**** ****</span>[LISTCAT details](../about_cftutil/monitoring_cftutil_intro/listcat_command)
+**** ****[LISTCAT details](../about_cftutil/monitoring_cftutil_intro/listcat_command)
 
 <span id="LISTCOM"></span>
 
-#### LISTCOM: Display contents of a communication media
+#### LISTCOM: Display contents of communication media
 
 Syntax
 
-`[ CONTENT   = { ACTIVE   | FULL } ]`
+`[ CONTENT   = { ACTIVE   &#124; FULL &#124; STAT } ]`
 
 `[ FILE   = filename ]`
 
-`[ FIRST   = { 0   | n } ]`
+`[ FIRST   = { 0   &#124; n } ]`
 
-`[ LAST   = { 0   | max. number of records } ]`
+`[ LAST   = { 0   &#124; max. number of records } ]`
 
-`[ VERIFY   = { NO   | YES } ]`
+`[ VERIFY   = { NO   &#124; YES } ]`
 
-<span style="font-weight: bold;">**** ****</span>[LISTCOM details](../about_cftutil/monitoring_cftutil_intro/listcom_command)<span style="font-weight: bold;">**** ****</span>
+**** ****[LISTCOM details](../about_cftutil/monitoring_cftutil_intro/listcom_command)**** ****
 
 <span id="LISTLOG"></span>
 
@@ -2130,25 +2129,25 @@ Syntax
 
 Syntax
 
-`[ LOGLEVEL = { F | E | W | I } ]`
+`[ LOGLEVEL = { F &#124; E &#124; W &#124; I } ]`
 
-`[ LINES = { -10000 | -20 | 10000 } ]`
+`[ LINES = { -10000 &#124; -20 &#124; 10000 } ]`
 
-`[ DATEMAX =  { 0 | 991231 } ]`
+`[ DATEMAX =  { 0 &#124; 991231 } ]`
 
-`[ DATEMIN           = { 0 | 991231 } ]`
+`[ DATEMIN           = { 0 &#124; 991231 } ]`
 
-`[ DATETIMEMAX = { 0 | 99123123595999 } ]`
+`[ DATETIMEMAX = { 0 &#124; 99123123595999 } ]`
 
-`[ DATETIMEMIN { 0 | 99123123595999 } ]`
+`[ DATETIMEMIN { 0 &#124; 99123123595999 } ]`
 
-`[ TIMEMIN = { 0| 23595999 } ]`
+`[ TIMEMIN = { 0&#124; 23595999 } ]`
 
-`[ TIMEMAX           = { 0 | 23595999 } ]`
+`[ TIMEMAX           = { 0 &#124; 23595999 } ]`
 
 `[ PATTERN           =     string ]`
 
-`[ DISPLAYNODEID     = { YES | NO } ]`
+`[ DISPLAYNODEID     = { YES &#124; NO } ]`
 
 `[ NODE = string ]`
 
@@ -2166,13 +2165,13 @@ No parameters
 
 Syntax
 
-`[ ID   = { *   | identifier } ]`
+`[ ID   = { *   &#124; identifier } ]`
 
-`[ CONTENT   = { FULL   | BRIEF } ]`
+`[ CONTENT   = { FULL   &#124; BRIEF } ]`
 
 `[ PART   = identifier  ]`
 
-`[ TYPE   = { ACCNT | ALL   | APPL | AUTH | CAT | COM | CRON | EXIT | IDF | LOG | NET | PARM | PROT   | RECV | SEND | SSL | XLATE } ]`
+`[ TYPE   = { ACCNT &#124; ALL   &#124; APPL &#124; AUTH &#124; CAT &#124; COM &#124; CRON &#124; EXIT &#124; IDF &#124; LOG &#124; NET &#124; PARM &#124; PROT   &#124; RECV &#124; SEND &#124; SSL &#124; XLATE } ]`
 
 [LISTPARM details](../about_cftutil/configuring_cft_start_here/listparm)
 
@@ -2182,11 +2181,11 @@ Syntax
 
 Syntax
 
-`[ ID   = { *   |identifier } ]`
+`[ ID   = { *   &#124;identifier } ]`
 
-`[ CONTENT   = { FULL   | BRIEF } ]`
+`[ CONTENT   = { FULL   &#124; BRIEF } ]`
 
-`[ TYPE   = { ALL   | DEST |  PART |  TCP | } ]`
+`[ TYPE   = { ALL   &#124; DEST &#124;  PART &#124;  TCP &#124; } ]`
 
 [LISTPART details](../about_cftutil/configuring_cft_start_here/listpart_command)
 
@@ -2198,33 +2197,33 @@ Syntax
 
 OBJECT = CACHE
 
-`[ OBJECT   = { CACHE   | SYSTEM | STATS | PROBE } ]`
+`[ OBJECT   = { CACHE   &#124; SYSTEM &#124; STATS &#124; PROBE } ]`
 
-`[ CONTENT   = { BRIEF   | FULL | STAT } ]`
+`[ CONTENT   = { BRIEF   &#124; FULL &#124; STAT } ]`
 
-`[ NAME   = { CAT   | COMMAND | CRON | DMZ | STAT } ]`
+`[ NAME   = { CAT   &#124; COMMAND &#124; CRON &#124; DMZ &#124; STAT } ]`
 
 ` `
 
 OBJECT = SYSTEM
 
-`[ OBJECT   = { CACHE   | SYSTEM | STATS | PROBE } ]`
+`[ OBJECT   = { CACHE   &#124; SYSTEM &#124; STATS &#124; PROBE } ]`
 
-`[ CONTENT   = { BRIEF   | FULL | STAT } ]`
+`[ CONTENT   = { BRIEF   &#124; FULL &#124; STAT } ]`
 
-`[ NAME   = { CFTMAIN | CFTTRK | CFTTFIL | CFTCOM | CFTTPRO | CFTEXIT | CFTPRX | CFTDSCAN } ]`
+`[ NAME   = { CFTMAIN &#124; CFTTRK &#124; CFTTFIL &#124; CFTCOM &#124; CFTTPRO &#124; CFTEXIT &#124; CFTPRX &#124; CFTDSCAN } ]`
 
 ` `
 
 OBJECT = STATS or PROBE
 
-`[ OBJECT   = { CACHE   | SYSTEM | STATS | PROBE } ]`
+`[ OBJECT   = { CACHE   &#124; SYSTEM &#124; STATS &#124; PROBE } ]`
 
-`[ CONTENT   = { XMLBRIEF   | XMLFULL | RAW } ]`
+`[ CONTENT   = { XMLBRIEF   &#124; XMLFULL &#124; RAW } ]`
 
-`[ NAME   = { CAT   | COMMAND | CRON | DMZ | STAT } ]`
+`[ NAME   = { CAT   &#124; COMMAND &#124; CRON &#124; DMZ &#124; STAT } ]`
 
-<span style="font-weight: bold;">**** ****</span>[MQUERY details](../../admin_intro/admin_commands_intro/querying_a_component_)
+**** ****[MQUERY details](../../admin_intro/admin_commands_intro/querying_a_component_)
 
 <span id="PURGE"></span>
 
@@ -2232,7 +2231,7 @@ OBJECT = STATS or PROBE
 
 Syntax
 
-`[ TIMEP   = { 23595999   | time } ]`
+`[ TIMEP   = { 23595999   &#124; time } ]`
 
 [PURGE details](../../admin_intro/admin_commands_intro/purge_catalog)
 
@@ -2242,13 +2241,13 @@ Syntax
 
 Syntax
 
-`[ TYPE   = { CRON | UCONF | CAT |  FOLDER | PARMCACHE | AM  } ] `
+`[ TYPE   = { CRON &#124; UCONF &#124; CAT &#124;  FOLDER &#124; PARMCACHE &#124; AM  } ] `
 
  [Manage configuration updates](../../admin_intro/admin_commands_intro/reconfig)
 
 <span id="RECV"></span>
 
-#### RECV IDF = { identifier | mask }: Request to receive transfer
+#### RECV IDF = { identifier &#124; mask }: Request to receive transfer
 
 Syntax
 
@@ -2264,89 +2263,93 @@ Syntax
 
 `[ CYCDATE   =  date    ]`
 
-`[ CYCLE   =  { 0   | n } ]`
+`[ CYCLE   =  { 0   &#124; n } ]`
 
 `[ CYCTIME   = time ]`
 
-`[ DACTION = { ERROR | RESUME } ]`
+`[ DACTION = { ERROR &#124; RESUME } ]`
 
 `[ DIRNB   = n ]`
 
 `[ EXEC   = filename ]`
 
-`[ EXECRALL = { all | parent| children} ]`
+`[ EXECRALL = { all &#124; parent&#124; children} ]`
 
 `[ EXIT   = identifier  ]`
 
-`[ FACC   = { ‘   ‘ | character }  ]`
+`[ FACC   = { ‘   ‘ &#124; character }  ]`
 
-`[ FACTION   = { ‘   ‘ | DELETE | ERASE | RENAME | VERIFY } ]`
+`[ FACTION   = { ‘   ‘ &#124; DELETE &#124; ERASE &#124; RENAME &#124; VERIFY } ]`
 
 `[ FBLKSIZE   = n ]`
 
-`[ FCODE   = { BINARY | EBCDIC | ASCII } ]`
+`[ FCODE   = { BINARY &#124; EBCDIC &#124; ASCII } ]`
 
-`[ FCOMP   = { 0   | 15 } ]`
+`[ FCOMP   = { 0   &#124; 15 } ]`
 
-`[ FDATE   = { 0   | date } ]`
+`[ FDATE   = { 0   &#124; date } ]`
 
 `[ FDB   = filename ]`
 
-`[ FDISP   = { BOTH   | NEW | OLD }  ]`
+`[ FDISP   = { BOTH   &#124; NEW &#124; OLD }  ]`
 
-`[ FILE   = { FIRST   | ALL }  ]`
+`[ FILE   = { FIRST   &#124; ALL }  ]`
 
-`[ FKEYLEN   = { 0   | n }  ]`
+`[ FKEYLEN   = { 0   &#124; n }  ]`
 
-`[ FKEYPOS   = { 0   | n }   ]`
+`[ FKEYPOS   = { 0   &#124; n }   ]`
 
 `[ FLRECL   = n ]`
 
 `[ FNAME   = filename ]`
 
-`[ FORG   = { SEQ   | DIRECT | INDEXED | PART } ]`
+`[ FORG   = { SEQ   &#124; DIRECT &#124; INDEXED &#124; PART } ]`
 
-`[ FPAD = { ' ' | character } ]`
+`[ FPAD = { ' ' &#124; character } ]`
 
-`[ FRECFM   = { ‘   ‘ | F | V | U }  ]`
+`[ FRECFM   = { ‘   ‘ &#124; F &#124; V &#124; U }  ]`
 
 `[ FSPACE   = n ]`
 
-`[ FTIME   = { 0 | time } ]`
+`[ FTIME   = { 0 &#124; time } ]`
 
-`[ FTYPE   =  { ‘   ‘ | character } ]`
+`[ FTYPE   =  { ‘   ‘ &#124; character } ]`
 
 `[ IDA   = identifier ]`
 
-`[ MACTION   = { '   ' | REPLACE }  ]`
+`[ MACTION   = { '   ' &#124; REPLACE }  ]`
 
-`[ MAXDATE   =  { 99991231   | date } ]`
+`[ MAXDATE   =  { 99991231   &#124; date } ]`
 
 `[ MAXDURATION =  {0...32767} ]`
 
-`[ MAXTIME   = { 23595999   | time }  ]`
+`[ MAXTIME   = { 23595999   &#124; time }  ]`
 
-`[ MINDATE   = { current system date | date } ]`
+`[ MINDATE   = { current system date &#124; date } ]`
 
-`[ MINTIME   = { 0   | time } ]`
+`[ MINTIME   = { 0   &#124; time } ]`
 
-`[ MODE   = { REPLACE   | CREATE | DELETE }  ]`
+`[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
-`[ NCOMP   = { 0   | 15 } ]`
+`[ NACTION = NONE &#124; DELETE &#124; ARCHIVE } ]`
+
+`[ NARCHIVENAME = string ]`
+
+`[ NCOMP   = { 0   &#124; 15 } ]`
 
 `[ NETBAND = { 1...16} ]`
 
 `[ NFNAME   = filename ]`
 
-`[ NFVER   =  { 0   | 255 } ]`
+`[ NFVER   =  { 0   &#124; 255 } ]`
 
 `[ NIDF   = string ]`
 
-`[ NPAD = { ' ' | character } ]`
+`[ NPAD = { ' ' &#124; character } ]`
 
 `[ PARM   = string ]`
 
-`[ PRI   = { 128   | n } ]`
+`[ PRI   = { 128   &#124; n } ]`
 
 `[ PROT = identifier ] `
 
@@ -2356,15 +2359,15 @@ Syntax
 
 `[ SAPPL   = string ]`
 
-`[ SERIAL = { ' ' | Y | Z | X } ]`
+`[ SERIAL = { ' ' &#124; Y &#124; Z &#124; X } ]`
 
-`[ STATE   = { DISP   | HOLD | KEEP } ]`
+`[ STATE   = { DISP   &#124; HOLD &#124; KEEP } ]`
 
 `[ SUSER   = string ]`
 
-`[ TCYCLE   = { DAY   | MIN | MONTH }  ]`
+`[ TCYCLE   = { DAY   &#124; MIN &#124; MONTH }  ]`
 
-`[ TRK   = { UNDEFINED   | ALL | SUMMARY | NO } ]`
+`[ TRK   = { UNDEFINED   &#124; ALL &#124; SUMMARY &#124; NO } ]`
 
 `[ WFNAME   = filename ]`
 
@@ -2386,11 +2389,11 @@ Syntax
 
 `PART   = string`
 
-`[ DIRECT   = { SEND |RECV | BOTH   } ]`
+`[ DIRECT   = { SEND &#124;RECV &#124; BOTH   } ]`
 
-`[ BLKNUM   = { 0   | n } ]`
+`[ BLKNUM   = { 0   &#124; n } ]`
 
-`[ FORCE   = { NO   | YES } ]`
+`[ FORCE   = { NO   &#124; YES } ]`
 
 `[ IDA   = string ]`
 
@@ -2402,9 +2405,9 @@ Syntax
 
 `[ STATE  = string ]`
 
-`[ KDATE   = { 0   | n } ]`
+`[ KDATE   = { 0   &#124; n } ]`
 
-`[ KTIME   = { 0   | n } ]`
+`[ KTIME   = { 0   &#124; n } ]`
 
 `[ PHASE = string ]`
 
@@ -2420,7 +2423,7 @@ Syntax
 
 #### SEND: Request to send transfer
 
-<span class="MCDropDownHead dropDownHead">![Closed](/Images/TransferCFT/transparent.gif)Syntax</span>
+![Closed](/Images/TransferCFT/transparent.gif)Syntax
 
 [TYPE](parameter_intro/type)
 = FILE
@@ -2435,9 +2438,9 @@ Syntax
 
 `[ ACKMINTIME = time ]`
 
-`[ ACKSTATE = { REQUIRE | IGNORE } ]`
+`[ ACKSTATE = { REQUIRE &#124; IGNORE } ]`
 
-`[ ACKTIMEOUT = { 0 | n }   ]`
+`[ ACKTIMEOUT = { 0 &#124; n }   ]`
 
 `[ APPCYCID   = string ]`
 
@@ -2449,79 +2452,79 @@ Syntax
 
 `[ CYCDATE   = date ]`
 
-`[ CYCLE   = { 0   | n }  ]`
+`[ CYCLE   = { 0   &#124; n }  ]`
 
 `[ CYCTIME   = time ]`
 
-`[ DACTION = { ERROR | RESUME } ]`
+`[ DACTION = { ERROR &#124; RESUME } ]`
 
 `[ EXEC   = filename ]`
 
-`[ EXECSUB   = { LIST   | FILE | SUBF } ]`
+`[ EXECSUB   = { LIST   &#124; FILE &#124; SUBF } ]`
 
-`[ EXECSUBA = {LIST | FILE | SUBF }]`
+`[ EXECSUBA = {LIST &#124; FILE &#124; SUBF }]`
 
 `[ EXIT   = identifier  ]`
 
-`[ FACC   = { ‘ ‘ | character } ]`
+`[ FACC   = { ‘ ‘ &#124; character } ]`
 
-`[ FACTION   = { NONE   | DELETE | ERASE |  ARCHIVE } ]`
+`[ FACTION   = { NONE   &#124; DELETE &#124; ERASE &#124;  ARCHIVE } ]`
 
 `[ FBLKSIZE   = n ]`
 
-`[ FCODE   = { ASCII | BINARY | EBCDIC } ]`
+`[ FCODE   = { ASCII &#124; BINARY &#124; EBCDIC } ]`
 
 `[ FDATE   = date ]`
 
 `[ FDB   = filename ]`
 
-`[ FDISP   = { SHR   | OLD | CHECK } ]`
+`[ FDISP   = { SHR   &#124; OLD &#124; CHECK } ]`
 
 `[ FILTER = string ]`
 
 `[ FILTERTYPE = string ]`
 
-`[ FKEYLEN   = { 0   | n } ]`
+`[ FKEYLEN   = { 0   &#124; n } ]`
 
-`[ FKEYPOS   = { 0   | n } ]`
+`[ FKEYPOS   = { 0   &#124; n } ]`
 
 `[ FLRECL   = n ]`
 
-`[ FNAME    = { filename   | mask | dirname | #filename | #mask | #dirname } ]`
+`[ FNAME    = { filename   &#124; mask &#124; dirname &#124; #filename &#124; #mask &#124; #dirname } ]`
 
-`[ FNAMEABS   = { YES | NO }  ]`
+`[ FNAMEABS   = { YES &#124; NO }  ]`
 
-`[ FORG   = { SEQ   | DIRECT | INDEXED } ]`
+`[ FORG   = { SEQ   &#124; DIRECT &#124; INDEXED } ]`
 
-`[ FPAD = { ' ' | character } ]`
+`[ FPAD = { ' ' &#124; character } ]`
 
-`[ FRECFM   = { ‘ ‘ | F | U | V }  ]`
+`[ FRECFM   = { ‘ ‘ &#124; F &#124; U &#124; V }  ]`
 
 `[ FSPACE   = n ]`
 
 `[ FTIME   = time  ]`
 
-`[ FTYPE   =  { ‘ ‘   | character } ]`
+`[ FTYPE   =  { ‘ ‘   &#124; character } ]`
 
 `[ IDA   = identifier ]`
 
 `[ IPART   = identifier ]`
 
-`[ MAXDATE   = { 99991231   | date } ]`
+`[ MAXDATE   = { 99991231   &#124; date } ]`
 
-`[ MAXTIME   = { 23595999   | time } ]`
+`[ MAXTIME   = { 23595999   &#124; time } ]`
 
-`[ MINDATE   = { current   system date | date } ]`
+`[ MINDATE   = { current   system date &#124; date } ]`
 
 `[ MAXDURATION =  0...32767} ]`
 
-`[ MINTIME   = { 0   | time } ]`
+`[ MINTIME   = { 0   &#124; time } ]`
 
 `[ NBLKSIZE   = n ]`
 
-`[ NCODE   = { ASCII | BINARY | EBCDIC } ]`
+`[ NCODE   = { ASCII &#124; BINARY &#124; EBCDIC } ]`
 
-`[ NCOMP   = { 0 | 15 } ]`
+`[ NCOMP   = { 0 &#124; 15 } ]`
 
 `[ NETBAND   = { 1...16} ]`
 
@@ -2529,35 +2532,35 @@ Syntax
 
 `[ NIDF   = string ]`
 
-`[ NKEYLEN   = { 0   | n } ]`
+`[ NKEYLEN   = { 0   &#124; n } ]`
 
-`[ NKEYPOS   = { 0   | n }]`
+`[ NKEYPOS   = { 0   &#124; n }]`
 
 `[ NLRECL   = n  ]`
 
-`[ NPAD = { ' ' | character } ]`
+`[ NPAD = { ' ' &#124; character } ]`
 
-`[ NRECFM   = { ‘   ‘ | F | U | V } ]`
+`[ NRECFM   = { ‘   ‘ &#124; F &#124; U &#124; V } ]`
 
-`[ NSPACE   = { FSPACE   value | n } ]`
+`[ NSPACE   = { FSPACE   value &#124; n } ]`
 
-`[ NTYPE   = { ' ' | character } ]`
+`[ NTYPE   = { ' ' &#124; character } ]`
 
 `[ PARM   = string ]`
 
-`[ PRESTATE = { ' ' | character } ]`
+`[ PRESTATE = { ' ' &#124; character } ]`
 
 `[ PREMINDATE = date ]`
 
 `[ PREMINTIME = time ]`
 
-`[ PRETIMEOUT = { 0 | n } ]`
+`[ PRETIMEOUT = { 0 &#124; n } ]`
 
 `[ POSTMINDATE = date ]`
 
 `[ POSTMINTIME = time ]`
 
-`[ PRI   = { 128   | n } ]`
+`[ PRI   = { 128   &#124; n } ]`
 
 `[ PROT = identifier ]`
 
@@ -2569,17 +2572,17 @@ Syntax
 
 `[ SELFNAME    = filename   ]`
 
-`[ SERIAL = { ' ' | Y | Z | X } ]`
+`[ SERIAL = { ' ' &#124; Y &#124; Z &#124; X } ]`
 
 `[ SPART   = identifier ]`
 
-`[ STATE   = { DISP   | HOLD | KEEP } ]`
+`[ STATE   = { DISP   &#124; HOLD &#124; KEEP } ]`
 
 `[ SUSER   = string ]`
 
-`[ TCYCLE   = { DAY   | MIN | MONTH } ]`
+`[ TCYCLE   = { DAY   &#124; MIN &#124; MONTH } ]`
 
-`[ TRK   = { UNDEFINED   | ALL | SUMMARY | NO } ]`
+`[ TRK   = { UNDEFINED   &#124; ALL &#124; SUMMARY &#124; NO } ]`
 
 `[ WORKINGDIR = string ]`
 
@@ -2609,11 +2612,11 @@ SEND TYPE = MESSAGE  
 
 `[ CYCDATE   = date ]`
 
-`[ CYCLE   = { 0   | n } ]`
+`[ CYCLE   = { 0   &#124; n } ]`
 
 `[ CYCTIME   = time ]`
 
-`[ DACTION = { ERROR | RESUME} ]`
+`[ DACTION = { ERROR &#124; RESUME} ]`
 
 `[ EXEC   = filename ]`
 
@@ -2621,13 +2624,13 @@ SEND TYPE = MESSAGE  
 
 `[ IPART   = identifier ]`
 
-`[ MAXDATE   = { 99991231   | date  }   ]`
+`[ MAXDATE   = { 99991231   &#124; date  }   ]`
 
-`[ MAXTIME   = { 23595999   | time }  ]`
+`[ MAXTIME   = { 23595999   &#124; time }  ]`
 
-`[ MINDATE   = { current   system date | date } ]`
+`[ MINDATE   = { current   system date &#124; date } ]`
 
-`[ MINTIME   = { 0   | time } ]`
+`[ MINTIME   = { 0   &#124; time } ]`
 
 `[ PRI   = pri  ]`
 
@@ -2641,13 +2644,13 @@ SEND TYPE = MESSAGE  
 
 `[ SPART   = identifier ]`
 
-`[ STATE   = { DISP   | HOLD | KEEP } ]`
+`[ STATE   = { DISP   &#124; HOLD &#124; KEEP } ]`
 
 `[ SUSER   = string ]`
 
-`[ TCYCLE   = { DAY   | MIN | MONTH } ]`
+`[ TCYCLE   = { DAY   &#124; MIN &#124; MONTH } ]`
 
-`[ TRK   = { UNDEFINED   | ALL | SUMMARY | NO } ]`
+`[ TRK   = { UNDEFINED   &#124; ALL &#124; SUMMARY &#124; NO } ]`
 
 ` `
 
@@ -2675,13 +2678,13 @@ SEND TYPE = REPLY
 
 `[ IPART   = string ]`
 
-`[ MAXDATE   =  { 99991231   | date } ]`
+`[ MAXDATE   =  { 99991231   &#124; date } ]`
 
-`[ MAXTIME   = { 23595999   | time } ]`
+`[ MAXTIME   = { 23595999   &#124; time } ]`
 
-`[ MINDATE   = { current   system date | date } ]`
+`[ MINDATE   = { current   system date &#124; date } ]`
 
-`[ MINTIME   = { 0   | time } ]`
+`[ MINTIME   = { 0   &#124; time } ]`
 
 `[ PRI   = pri ]`
 
@@ -2695,9 +2698,9 @@ SEND TYPE = REPLY
 
 `[ SUSER   = string ]`
 
-`[ TCYCLE   = { DAY   | MIN | MONTH } ]`
+`[ TCYCLE   = { DAY   &#124; MIN &#124; MONTH } ]`
 
-`[ TRK   = { UNDEFINED   | ALL | SUMMARY | NO } ]`
+`[ TRK   = { UNDEFINED   &#124; ALL &#124; SUMMARY &#124; NO } ]`
 
 ` `
 
@@ -2725,13 +2728,13 @@ SEND TYPE = NACK
 
 `[ IPART   = string ]`
 
-`[ MAXDATE   =  { 99991231   | date } ]`
+`[ MAXDATE   =  { 99991231   &#124; date } ]`
 
-`[ MAXTIME   = { 23595999   | time } ]`
+`[ MAXTIME   = { 23595999   &#124; time } ]`
 
-`[ MINDATE   = { current   system date | date } ]`
+`[ MINDATE   = { current   system date &#124; date } ]`
 
-`[ MINTIME   = { 0   | time } ]`
+`[ MINTIME   = { 0   &#124; time } ]`
 
 `[ PRI   = pri ]`
 
@@ -2745,11 +2748,11 @@ SEND TYPE = NACK
 
 `[ SUSER   = string ]`
 
-`[ TCYCLE   = { DAY   | MIN | MONTH } ]`
+`[ TCYCLE   = { DAY   &#124; MIN &#124; MONTH } ]`
 
-`[ TRK   = { UNDEFINED   | ALL | SUMMARY | NO } ]`
+`[ TRK   = { UNDEFINED   &#124; ALL &#124; SUMMARY &#124; NO } ]`
 
-[Sending files](../../concepts/using_the_send_command/send_command_basics)
+[Sending files](../../concepts/send_command/send_command_basics)
 
 <span id="SHUT"></span>
 
@@ -2757,9 +2760,9 @@ SEND TYPE = NACK
 
 Syntax
 
-`[ FAST   = { NO   | YES | KILL } ]`
+`[ FAST   = { NO   &#124; YES &#124; KILL } ]`
 
-`[ RESTART = { YES | NO } ] `
+`[ RESTART = { YES &#124; NO } ] `
 
 [Manage the {{< TransferCFT/axwayvariablesComponentLongName  >}} server: stop the server](../../admin_intro/start_stop_cft#Stop__server)
 
@@ -2769,19 +2772,19 @@ Syntax
 
 Syntax
 
-`PART   = { identifier | mask }   `
+`PART   = { identifier &#124; mask }   `
 
-`[ BLKNUM   = { 0   | n } ]`
+`[ BLKNUM   = { 0   &#124; n } ]`
 
-`[ DIRECT   = { BOTH   | RECV | SEND } ]`
+`[ DIRECT   = { BOTH   &#124; RECV &#124; SEND } ]`
 
-`[ FORCE   = YES | NO   ]`
+`[ FORCE   = YES &#124; NO   ]`
 
 `[ IDA   = identifier ]`
 
 `[ IDF   = identifier ]`
 
-`[ IDT   = { *   | transid } ]`
+`[ IDT   = { *   &#124; transid } ]`
 
 `[ IDTU   = string ]`
 
@@ -2789,9 +2792,9 @@ Syntax
 
 `[ STATE  = string ]`
 
-`[ KDATE   = { 0   | n } ]`
+`[ KDATE   = { 0   &#124; n } ]`
 
-`[ KTIME   = { 0   | n } ]`
+`[ KTIME   = { 0   &#124; n } ]`
 
 `[ PHASE = string ]`
 
@@ -2807,13 +2810,13 @@ Syntax
 
 Syntax
 
-`PART   = { identifier | mask }  `
+`PART   = { identifier &#124; mask }  `
 
 `[ APPSTATE =  string ]`
 
-`[ BLKNUM   = { 0   | n } ]`
+`[ BLKNUM   = { 0   &#124; n } ]`
 
-`[ DIRECT   = { BOTH   | RECV | SEND } ]`
+`[ DIRECT   = { BOTH   &#124; RECV &#124; SEND } ]`
 
 `[ EXEC   = filename ]`
 
@@ -2821,15 +2824,15 @@ Syntax
 
 `[ IDF   = identifier ]`
 
-`[ IDT   = { * | transid } ]`
+`[ IDT   = { * &#124; transid } ]`
 
 `[ IDTU   = string ]`
 
 `[ STATE  = string ]`
 
-`[ KDATE   = { 0   | n } ]`
+`[ KDATE   = { 0   &#124; n } ]`
 
-`[ KTIME   = { 0   | n } ]`
+`[ KTIME   = { 0   &#124; n } ]`
 
 `[ PHASE = string ]`
 
@@ -2857,7 +2860,7 @@ Syntax
 
 [SWAITCAT concepts](../about_cftutil/managing_transfer_states/swaitcat_concepts) 
 
-[SWAITCAT examples](../about_cftutil/managing_transfer_states/sync_transfer_request_tasks)
+[SWAITCAT examples](../../app_integration_intro/synch_comm_tcpip_intro/sync_transfer_request_tasks)
 
 <span id="SWITCH"></span>
 
@@ -2865,7 +2868,7 @@ Syntax
 
 Syntax
 
-`[ TYPE   = { LOG | ACCNT } ]`
+`[ TYPE   = { LOG &#124; ACCNT } ]`
 
 [SWITCH details](../../admin_intro/admin_commands_intro/switching_files_manually)
 
@@ -2902,11 +2905,11 @@ Syntax
 
 `ID   = string  `
 
-`[ CONTENT = BRIEF | FULL ]`
+`[ CONTENT = BRIEF &#124; FULL ]`
 
 `[ FOUT = string ]`
 
-`[ SCOPE   = { INSTANCE | SET | * | ALL } ]  `
+`[ SCOPE   = { INSTANCE &#124; SET &#124; * &#124; ALL } ]  `
 
 `[ VALUE = string ]`
 
@@ -2920,9 +2923,9 @@ UCONF details
 
 Syntax
 
-`[ DURING   = { 0   | n } ]    *Time   in seconds`
+`[ DURING   = { 0   &#124; n } ]    *Time   in seconds`
 
-`[ TIME   = { 0   | 23595999 } ] `
+`[ TIME   = { 0   &#124; 23595999 } ] `
 
 [Suspending CFTUTIL execution](../about_cftutil/wait_command)
 
@@ -2952,19 +2955,19 @@ general conventions.
 
 ### Typographic conventions
 
-- \[   \]
+- [   ]
     Optional parameters or values are displayed between square brackets
 - {   }
     Parameter choices or values are displayed  between
     braces
-- | The vertical
+- &#124; The vertical
     bar separates an enumerated list of parameter values
-- \_\_\_ Default values
+- ___ Default values
     for a parameter are underlined
 - , A comma separates
     a list of parameter values
 
-For more information, see [TYPOGRAPHICAL CONVENTIONS.](../../gettingstarted_intro/my_first_transfer_flow_using_cg/typographical_conventions)
+For more information, see [TYPOGRAPHICAL CONVENTIONS.](typographical_conventions)
 
 ### Symbolic variables
 
@@ -2976,9 +2979,9 @@ environment:
 - &nVAR:
 - &p.VAR
 - &p.nVAR
-- &(-string\_prefix)
-    (+string\_suffix)
-    (=string\_alternate)p.nVAR
+- &(-string_prefix)
+    (+string_suffix)
+    (=string_alternate)p.nVAR
 
 For information on using symbolic variables in Transfer
 CFT, refer to the topic [Symbolic
@@ -3048,7 +3051,7 @@ The basic CFTUTIL services provided are:
 - LISTUCONF id=\*\*\*\*
 
 This configuration replaces all prior configuring methods, such as manually
-editing cft.ini, ENV\_CFT, \*.ini, trkapi.conf, and so on, which have been
+editing cft.ini, ENV_CFT, \*.ini, trkapi.conf, and so on, which have been
 replaced by a global profile file.
 
 Additionally, UCONF can create all OS specific files that enable Transfer
@@ -3071,12 +3074,12 @@ Accepted types include:
 The ‘$’ sign is a reserved character that is used to reference an environmental
 variable. You have abstract use of environment variables using the $ sign.
 
-For example: $(CFT\_INSTALL) -à getenv(“CFT\_INSTALL”)
+For example: $(CFT_INSTALL) -à getenv(“CFT_INSTALL”)
 
 Variables containing a period “.” refer to sections in the configuration
 file. Do not modify this file.
 
-For example: cft.working\_dir = $(cft.runtime\_dir)
+For example: cft.working_dir = $(cft.runtime_dir)
 
 The [UCONF](../../admin_intro/uconf) table lists the new UCONF
 identifiers, the default values, and the former file values.

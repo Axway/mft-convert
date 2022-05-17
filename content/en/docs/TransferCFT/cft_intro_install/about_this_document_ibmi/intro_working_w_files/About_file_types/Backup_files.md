@@ -1,11 +1,8 @@
 ---
-
-    title: Backup files 
-    linkTitle: Backup files
+    title: "Backup files "
+    linkTitle: "Backup files"
     weight: 230
-
----
-The records in this type of file (SAVF) have a specific format. They contain backed-up sequencing and parity data controlled by{{< TransferCFT/PrimaryForOS400  >}}. SAVF files can generally only be used on {{< TransferCFT/PrimaryForOS400  >}} systems. Consequently, backup files are predominantly transferred between two {{< TransferCFT/PrimaryForOS400  >}} partners.
+---The records in this type of file (SAVF) have a specific format. They contain backed-up sequencing and parity data controlled by{{< TransferCFT/PrimaryForOS400  >}}. SAVF files can generally only be used on {{< TransferCFT/PrimaryForOS400  >}} systems. Consequently, backup files are predominantly transferred between two {{< TransferCFT/PrimaryForOS400  >}} partners.
 
 Another system can be used as an intermediate partner, in which it must process the SAVF file as a sequential file with a fixed format and a length of 528 (bytes).
 

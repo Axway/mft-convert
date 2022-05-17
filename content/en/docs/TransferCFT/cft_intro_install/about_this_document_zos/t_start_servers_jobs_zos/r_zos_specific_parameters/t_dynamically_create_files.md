@@ -1,11 +1,8 @@
 ---
-
-    title: Dynamically create files
-    linkTitle: Dynamically create files
+    title: "Dynamically create files"
+    linkTitle: "Dynamically create files"
     weight: 290
-
----
-## File characteristics overview
+---## File characteristics overview
 
 Dynamically created Transfer CFT z/OS files have the following characteristics:
 
@@ -31,7 +28,7 @@ The file allocation is in the form SPACE=(BBBB,(PPPP,SSSS)),DCB=(BLKSIZE=BBBB), 
 - PPPP: Primary allocation, which is updated with the % factor defined in JOB A12OPTS ALLPRIM= or ALLONE=
 - SSSS: 10 % of PPPP, which is computed as a % of the primary allocation defined in ALLSEC=, for a single volume allocation, or updated with the % factor defined in ALLNEXT=
 
-Transfer CFT z/OS may also create multi-volume files through the DF/SMS 'ACS ROUTINES', using a DATACLASS that describes striped files. For more information, refer to the IBM documentation DFSMS Storage Administration Reference \[Document Number SC26-7402-xx\].
+Transfer CFT z/OS may also create multi-volume files through the DF/SMS 'ACS ROUTINES', using a DATACLASS that describes striped files. For more information, refer to the IBM documentation DFSMS Storage Administration Reference [Document Number SC26-7402-xx].
 
 <span id="Dynamically creating multi-volume files"></span>
 

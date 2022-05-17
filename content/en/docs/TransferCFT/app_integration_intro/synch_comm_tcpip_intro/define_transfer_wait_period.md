@@ -1,16 +1,13 @@
 ---
-
-    title: Wait for the catalog value to reach a state - SWAITCAT
-    linkTitle: Wait for catalog value to reach a state - SWAITCAT
+    title: "Wait for the catalog value to reach a state - SWAITCAT"
+    linkTitle: "Using the SWAITCAT command"
     weight: 270
-
----
-The SWAITCAT command enables a client to wait until
+---The SWAITCAT command enables a client to wait until
 a given transfer reaches a particular predefined phase, phasestep, or state before acting.
 
-****Command syntax: <span style="font-weight: normal;">[SWAITCAT](../../../c_intro_userinterfaces/command_summary)</span>****
+****Command syntax: [SWAITCAT](../../../c_intro_userinterfaces/command_summary)****
 
-****Task examples: [SWAITCAT tasks](../../../c_intro_userinterfaces/about_cftutil/managing_transfer_states/sync_transfer_request_tasks)****
+****Task examples: [SWAITCAT tasks](../sync_transfer_request_tasks)****
 
 Alternatively, you can use the parameters [WSTATES]() and [WTIMEOUT]() to replace SWAITCAT functionality.
 
@@ -34,16 +31,16 @@ is not reached (K or H phasestep).
 If the command fails, CFTUTIL sends the return code 8. The SWAITCAT
 command specific errors are:
 
-- SWAITCAT\_FAILED:
+- SWAITCAT_FAILED:
     the transfer reached the K or H phasestep
-- SWAITCAT\_TIMEOUT:
+- SWAITCAT_TIMEOUT:
     the defined timeout was reached
-- SWAITCAT\_NFOUND:
+- SWAITCAT_NFOUND:
     no matching transfer was found
-- SWAITCAT\_DELETED:
+- SWAITCAT_DELETED:
     the transfer was deleted
-- SWAITCAT\_PARAM\_ERROR: invalid parameter
-- SWAITCAT\_TOO\_MANY:
+- SWAITCAT_PARAM_ERROR: invalid parameter
+- SWAITCAT_TOO_MANY:
     too many transfers were selected (more than 2)
 
 ### Parameters
@@ -65,7 +62,7 @@ SWAITCAT select="EXPRESSION"
 
 ******Expression******
 
-<span class="code">`Select `</span>is a Boolean expression that identifies one transfer.
+`Select `is a Boolean expression that identifies one transfer.
 
 **Syntax**
 
@@ -77,9 +74,9 @@ See the value section for a list of possible values.
 
 `CAT_ID OP VALUE && CAT_ID OP VALUE`
 
-`CAT_ID OP VALUE || CAT_ID OP VALUE`
+`CAT_ID OP VALUE ùùù_insert_pipe_here_ùù_insert_pipe_here_ùùù CAT_ID OP VALUE`
 
-Possible values for CAT\_ID, which filters on the current state:
+Possible values for CAT_ID, which filters on the current state:
 
 - IDTU
 - IDT
@@ -128,7 +125,7 @@ The Phasesteps parameter is a string that can be composed of D, H, C, K, X, E an
 - \(D\) At disposal: The processing of the Phase is ready to be executed; it is ready to go.
 - \(H\) Hold: The processing of the Phase is on hold and waiting for an action to be executed.
 - \(C\) Processing/Current: The Phase processing is being executed.
-- \(R\) Retry: Retries renaming the file using the <span class="code">`FACTION retryrename `</span>value.
+- \(R\) Retry: Retries renaming the file using the `FACTION retryrename `value.
 - \(X\) Done: This phase step only exists for the Done phase, once all previous phases are complete.
 - \(E\) Exit EOT: This phase step only exists for the Post-processing phase, to signal an [end-of-transfer exit](../../managing_exits/about_the_end_of_transfer_type_exit).
 
@@ -170,4 +167,50 @@ The following example filters on transfers having the D state, but completes as 
 
 ```
 SWAITCAT select='state=="D"',states=TX
+```
+
+<span id="SWAITCAT ex 1"></span>The following example is a way to execute a batch processing task using SWAITCAT, which is a task that you cannot perform using the SEND command with WSTATES.
+
+```
+config type=com,mediacom=tcpip,fname=xhttp://localhost:1765
+ 
+send part=paris,ida=batch_proccesing,idf=t1
+char name=idtu1,init=%_CAT_IDTU%
+send part=paris,ida=batch_proccesing,idf=t2
+char name=idtu2,init=%_CAT_IDTU%
+send part=paris,ida=batch_proccesing,idf=t3
+char name=idtu3,init=%_CAT_IDTU%
+send part=paris,ida=batch_proccesing,idf=t4
+char name=idtu4,init=%_CAT_IDTU%
+swaitcat select='IDTU=="%idtu1%"',phases=X,phasesteps=X
+swaitcat select='IDTU=="%idtu2%"',phases=X,phasesteps=X
+swaitcat select='IDTU=="%idtu3%"',phases=X,phasesteps=X
+swaitcat select='IDTU=="%idtu4%"',phases=X,phasesteps=X
+ 
+PRINT MSG='batch processing completed with ERROR = %_CMDRET%'
+ 
+Output
+CFTU00I CONFIG _ Correct (type=com,mediacom=tcpip,fname=xhttp://localhost:1765)
+CFTU00I SEND _ Correct (IDT=B1817083 IDTU=A000008N )
+CFTU00I SEND _ Correct (part=paris,ida=batch_proccesing,idf=t1)
+CFTU00I CHAR _ Correct (name=IDTU1,init=A000008N)
+CFTU00I SEND _ Correct (IDT=B1817084 IDTU=A000008P )
+CFTU00I SEND _ Correct (part=paris,ida=batch_proccesing,idf=t2)
+CFTU00I CHAR _ Correct (name=IDTU2,init=A000008P)
+CFTU00I SEND _ Correct (IDT=B1817085 IDTU=A000008R )
+CFTU00I SEND _ Correct (part=paris,ida=batch_proccesing,idf=t3)
+CFTU00I CHAR _ Correct (name=IDTU3,init=A000008R)
+CFTU00I SEND _ Correct (IDT=B1817090 IDTU=A000008T )
+CFTU00I SEND _ Correct (part=paris,ida=batch_proccesing,idf=t4)
+CFTU00I CHAR _ Correct (name=IDTU4,init=A000008T)
+CFTU00I SWAITCAT _ Correct (SWAITCAT_OK: reached phase X, phasestep X, state X)
+CFTU00I SWAITCAT _ Correct (select='IDTU=="A000008N"',phases=X,phasesteps=X)
+CFTU00I SWAITCAT _ Correct (SWAITCAT_OK: reached phase X, phasestep X, state X)
+CFTU00I SWAITCAT _ Correct (select='IDTU=="A000008P"',phases=X,phasesteps=X)
+CFTU00I SWAITCAT _ Correct (SWAITCAT_OK: reached phase X, phasestep X, state X)
+CFTU00I SWAITCAT _ Correct (select='IDTU=="A000008R"',phases=X,phasesteps=X)
+CFTU00I SWAITCAT _ Correct (SWAITCAT_OK: reached phase X, phasestep X, state X)
+CFTU00I SWAITCAT _ Correct (select='IDTU=="A000008T"',phases=X,phasesteps=X)
+ 
+batch processing completed with ERROR = 0
 ```

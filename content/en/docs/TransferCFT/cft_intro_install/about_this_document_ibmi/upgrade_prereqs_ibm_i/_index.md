@@ -1,11 +1,8 @@
 ---
-
-    title: Update upgrade, or migrate ,
-    linkTitle: Update, upgrade, or migrate
+    title: "Update, upgrade, or migrate "
+    linkTitle: "Update, upgrade, or migrate"
     weight: 190
-
----
-This section describes how to update, upgrade, or migrate to Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}}.
+---This section describes how to update, upgrade, or migrate to Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}}.
 
 ## About updates
 

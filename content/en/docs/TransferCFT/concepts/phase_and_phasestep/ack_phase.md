@@ -1,11 +1,8 @@
 ---
-
-    title: Acknowledgement phase
-    linkTitle: Acknowledgement phase
-    weight: 200
-
----
-Acknowledgment phase consists of running a script, which is specified using the parameter ACKEXEC (of CFTSEND, CFTRECV, SEND and RECV commands) or parameters EXECSFA or EXECSMA (of CFTPARM command), when the transfer request has been acknowledged locally or by the remote partner. Once the Acknowledgment is done, the transfer request goes to the Done phase.
+    title: "Acknowledgement phase"
+    linkTitle: "Acknowledgement phase"
+    weight: 190
+---Acknowledgment phase consists of running a script, which is specified using the parameter ACKEXEC (of CFTSEND, CFTRECV, SEND and RECV commands) or parameters EXECSFA or EXECSMA (of CFTPARM command), when the transfer request has been acknowledged locally or by the remote partner. Once the Acknowledgment is done, the transfer request goes to the Done phase.
 
 To notify the end of the processing to Transfer CFT, the acknowledgment processing script must perform a END command with istate=no.
 
@@ -37,7 +34,7 @@ There are two possibilities for ackstate:
 
     > **Note**
     >
-    > To configure backward compatibility ack behavior, set the unified configuration to: uconf:cft.state\_compat=Yes
+    > To configure backward compatibility ack behavior, set the unified configuration to: uconf:cft.state_compat=Yes
 
 - Not backward compatible:  
     If an Acknowledgement is received during the post-processing, it waits until the end of the post-processing to move to the Acknowledgement phase (Z) and launch the ackexec/execsfa/execsma with phasestep (C) if applicable. When that finishes, it moves to the Done phase.  

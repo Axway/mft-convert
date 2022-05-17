@@ -1,11 +1,8 @@
 ---
-
-    title: Use  a proxy with SOCKS protocol
-    linkTitle: Transfers via proxy and SOCKS
+    title: "Use  a proxy with SOCKS protocol"
+    linkTitle: "Transfers via proxy and SOCKS"
     weight: 320
-
----
-A proxy is a program
+---A proxy is a program
 that acts as an intermediary between a client and server. It is often
 used to interconnect two networks via a single point.
 
@@ -200,7 +197,7 @@ The step is only required for your first log in through a proxy. Copilot retains
 
 To remove proxy and revert to the standard log in, simply remove the proxy address and port settings in the connection dialog box.
 
-********<span class="autonumber"></span>Connect to a product dialog box********
+********Connect to a product dialog box********
 
 ![Copilot Connect to a product login screen ](/Images/TransferCFT/copilot_connection_box.png)
 

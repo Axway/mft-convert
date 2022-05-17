@@ -1,11 +1,8 @@
 ---
-
-    title: Using  PKI exits: Start here
-    linkTitle: Using PKI exits
-    weight: 200
-
----
-This book describes the rules for implementing the PKI exit. This book
+    title: "Using  PKI exits: Start here"
+    linkTitle: "Using PKI exits"
+    weight: 190
+---This book describes the rules for implementing the PKI exit. This book
 begins with this topic which describes
 the following PKI exit concepts:
 
@@ -86,16 +83,16 @@ It is first called at each step described previously and:
 
 ****Unix/Windows only****
 
-A Transfer CFT PKI exit is called through a C function called <span class="code">`cftpkie`</span>. How the PKI exit is processed by Transfer CFT then depends on the operating system.
+A Transfer CFT PKI exit is called through a C function called `cftpkie`. How the PKI exit is processed by Transfer CFT then depends on the operating system.
 
 To define a PKI exit, generate a DLL and set the following UCONF parameters:
 
-- Set <span class="code">`pki.type`</span> = <span class="code">`exit`</span>
-- Specify <span class="code">`pki.exit.libpath`</span> as the path to the dynamic load library
+- Set `pki.type` = `exit`
+- Specify `pki.exit.libpath` as the path to the dynamic load library
 
-A sample of how to generate this exit is located in the <span class="code">`<cft.runtime_dir>/src/exit`</span> directory. You can invoke a makefile to generate this DLL (among other things) from the <span class="code">`cftpkie.c`</span> source file located in the same directory. Before calling this makefile, load the Transfer CFT profile.
+A sample of how to generate this exit is located in the `<cft.runtime_dir>/src/exit` directory. You can invoke a makefile to generate this DLL (among other things) from the `cftpkie.c` source file located in the same directory. Before calling this makefile, load the Transfer CFT profile.
 
-You can define only one user function, <span class="code">`cftpkie`</span>, for Transfer
+You can define only one user function, `cftpkie`, for Transfer
 CFT, with the syntax as follows:
 
 ```
@@ -103,9 +100,9 @@ int
 cftpkie(struct pkicom \*zpki)
 ```
 
-The <span class="code">`pkicom `</span>structure is used to exchange data between Transfer CFT and
+The `pkicom `structure is used to exchange data between Transfer CFT and
 the user function. The function must return an integer, which represents
 a general execution code (processing successfully completed by the function,
 processing error, processing not handled by the exit).
 
-In addition to the information found in this User Guide, the <span class="code">`<cft.install_dir>/inc/cftpkie.h`</span> file contains all the definitions required to develop a user function, such as constants, communication structure definition, and comments.
+In addition to the information found in this User Guide, the `<cft.install_dir>/inc/cftpkie.h` file contains all the definitions required to develop a user function, such as constants, communication structure definition, and comments.

@@ -1,24 +1,21 @@
 ---
+    title: "About phase and phasestep"
+    linkTitle: "Transfer workflow"
+    weight: 140
+---{{< TransferCFT/axwayvariablesComponentShortName  >}} provides a complete processing workflow that includes file preprocessing, transfer processing, post processing script execution and acknowledgement. As  of {{< TransferCFT/axwayvariablesComponentShortName  >}} 3.0 processing features have evolved, replacing the former ****state**** with the Phase/Phase step pair, to improve the visibility of a flow. The processing phase shows where you are in your transfer. Within each phase there is a phase step, which can be either a process or a step.
 
-    title: About phase and phasestep
-    linkTitle: Transfer workflow
-    weight: 150
+This topic presents processing ****concepts****, step overviews in the following sections:
 
----
-{{< TransferCFT/axwayvariablesComponentShortName  >}} provides a complete processing workflow that includes file preprocessing, transfer processing, post processing script execution and acknowledgement. As  of {{< TransferCFT/axwayvariablesComponentShortName  >}} 3.0 processing features have evolved, replacing the former <span class="bold_in_para">****state**** </span>with the Phase/Phase step pair, to improve the visibility of a flow. The processing phase shows where you are in your transfer. Within each phase there is a phase step, which can be either a process or a step.
-
-This topic presents processing <span class="bold_in_para">****concepts****</span>, step overviews in the following sections:
-
-- <a href="#Types" class="MCXref xref">Types of processing phases</a>
-- <a href="#Types2" class="MCXref xref">Phasesteps in each phase</a>
-- <a href="#About" class="MCXref xref">About backward compatibility</a>
-- <a href="#Example" class="MCXref xref">Example usage</a>
+- [Types of processing phases](#Types)
+- [Phasesteps in each phase](#Types2)
+- [About backward compatibility](#About)
+- [Example usage](#Example)
 
 <span id="Types"></span>
 
 ## Types of processing phases
 
-The term <span class="bold_in_para">****phase**** </span>refers to the highest level in the transfer flow cycle:
+The term ****phase**** refers to the highest level in the transfer flow cycle:
 
 - \(A\) Pre-processing: All pre-transfer script execution occurs here
 - \(T\) Transferring: All transfer execution occurs in this phase
@@ -32,7 +29,7 @@ The term <span class="bold_in_para">****phase**** </span>refers to the highest l
 
 ## Phasesteps in each phase
 
-The <span class="bold_in_para">****phasestep****</span> refers to the details that can occur during any given phase:
+The ****phasestep**** refers to the details that can occur during any given phase:
 
 - \(D\) At disposal: The processing of the Phase is ready to be executed; it is ready to go.
 - \(H\) Hold: The processing of the Phase is on hold and waiting for an action to be executed.

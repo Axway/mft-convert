@@ -1,11 +1,8 @@
 ---
-
-    title: Typographical  conventions
-    linkTitle: Typographical conventions
-    weight: 170
-
----
-The typographical conventions specify the
+    title: "Typographical  conventions"
+    linkTitle: "Typographical conventions"
+    weight: 160
+---The typographical conventions specify the
 syntax to use in {{< TransferCFT/axwayvariablesComponentShortName  >}} commands, the
 parameters and their values. These rules apply equally for any additional
 parameter information, or information pertaining to the operating system
@@ -31,11 +28,11 @@ The description of each command is generally organized in parts:
 
 ```
 CFTFILE [MODE = {CREATE
-| DELETE},]
+&#124; DELETE},]
 FNAME = filename,
 TYPE = {PARM
-| PART | CAT | LOG | ACCNT
-| COM},
+&#124; PART &#124; CAT &#124; LOG &#124; ACCNT
+&#124; COM},
 ```
 
 - Detailed description
@@ -63,7 +60,7 @@ There are two types of parameters mandatory and optional:
     are followed by the word (*Mandatory*)
     in italics
 - Optional parameters
-    (placed between square brackets \[ \])
+    (placed between square brackets [ ])
 
 Each parameter description applies the following general syntax:
 
@@ -101,7 +98,7 @@ parameter is:
     a physical filename
 - Optional with no
     default value, the optional nature being indicated by square brackets
-    \[ \]
+    [ ]
 - Reserved for transfer
     cases in PeSIT E
     profile between two {{< TransferCFT/axwayvariablesComponentShortName >}}s
@@ -117,11 +114,11 @@ are listed in the following table.
 | Description  | Notation  | Example  |
 | --- | --- | --- |
 | List of possible values  | {value, value}  | {filename, string}  |
-| Choice  | {1 | 2}  | {CREATE | DELETE}  |
+| Choice  | {1 &#124; 2}  | {CREATE &#124; DELETE}  |
 | Numeric field<br /> (value indicated between a and b)  | {a..b}  | {0..255}  |
-| Default value  | underlined  | {CREATE | DELETE}  |
+| Default value  | underlined  | {CREATE &#124; DELETE}  |
 | Optional parameter  | [PARAMETER]  | [NFNAME = filename]  |
-| {value|text} must be indicated  | italic  | filename  |
+| {value&#124;text} must be indicated  | italic  | filename  |
 | Mandatory parameter | (Mandatory) |   |
 
 
@@ -155,9 +152,9 @@ notations are used in the detailed parameter descriptions.
 
 When using the CFTUTIL HELP command, as shown in the example below, the following rules apply to parameter values:
 
-- If <span class="code">`STRING `</span>is in upper case, the parameter value is not case sensitive
-- If <span class="code">`String `</span>is mixed case, the parameter value is case sensitive
-- If <span class="code">`STRING or "String"`</span>, the parameter value is only case sensitive when enclosed in quotes
+- If `STRING `is in upper case, the parameter value is not case sensitive
+- If `String `is mixed case, the parameter value is case sensitive
+- If `STRING or "String"`, the parameter value is only case sensitive when enclosed in quotes
 
 ****Example****
 
@@ -169,11 +166,14 @@ COMMAND CFTSEND USAGE
  'CREATE'
 
    ...
- PRESTATE **STRING** max_length=0 The transfer phase step as it enters the A phase < > (' ','DISP','HOLD')
+ PRESTATE STRING
+max_length=0 The transfer phase step as it enters the A phase < > (' ','DISP','HOLD')
    ...
- RAPPL **STRING or "String"** max_length=48 Identifier of the file receiver application
+ RAPPL STRING or "String"
+max_length=48 Identifier of the file receiver application
   ...
- RPASSWD **String** max_length=32 Password for the user who is receiving the file
+ RPASSWD String
+max_length=32 Password for the user who is receiving the file
 
 ```
 
@@ -206,7 +206,7 @@ in the following table.
 | Compression: numeric value between 0 and 15 indicating the compression algorithm  | cpr  |
 | Date: 8-digit string | YYYYMMDD  |
 | File name: 512 characters including the drive, path, root, suffix, where limitations are imposed by file system or operating system (such as list of unauthorized characters , length, case-sensitivity, etc.) | filename  |
-| Identifier: alphanumeric string of 1 to 32 alphanumeric characters and additional characters:<br/> @ # &amp; % ! : - _ + \ / | ? { } [ ] ; * &lt; &gt; ~ ^ | identifier  |
+| Identifier: alphanumeric string of 1 to 32 alphanumeric characters and additional characters:<br/> @ # &amp; % ! : - _ + \ / &#124; ? { } [ ] ; * &lt; &gt; ~ ^ | identifier  |
 | Mask: string containing wildcard characters (* and ?) :<br/> When referring to ReGEX expressions, other value are possible. | mask  |
 | Time: string containing 2 to 8 digits  | HHMMSSSS |
 | Transfer identifier assigned by {{< TransferCFT/axwayvariablesComponentShortName  >}}  | transid  |
@@ -234,8 +234,8 @@ MVS
 The default value of a parameter may differ from one system to another;
 this is indicated as follows: Dft: OS
 
-Example: \[FCODE    
-= {BINARY | EBCDIC | ASCII}          Dft:
+Example: [FCODE    
+= {BINARY &#124; EBCDIC &#124; ASCII}          Dft:
 OS
 
 <span id="Protocol_dependent_parameters"></span>
@@ -256,8 +256,8 @@ cases:
 - Associated parameter
     is only defined for certain protocols
 
-Example: \[NSPACE = {value of FSPACE
-| n},\]           ODETTE,
+Example: [NSPACE = {value of FSPACE
+&#124; n},]           ODETTE,
 PeSIT
 
 - Length of the value
@@ -273,7 +273,7 @@ this is indicated as follows: Dft: PROTOCOL
 
 ****Example****
 
-`[NCODE = {see the comment   | BINARY | EBCDIC | ASCII}]      Dft: PROTOCOL`
+`[NCODE = {see the comment   &#124; BINARY &#124; EBCDIC &#124; ASCII}]      Dft: PROTOCOL`
 
 The default value of a parameter may differ from one PeSIT protocol
 profile to another; this specificity is indicated as follows: Dft:
@@ -329,8 +329,8 @@ in CFTUTIL.
 
 ### Referencing environment variables
 
-You can reference a environment variable in the Transfer CFT configuration using the `%env:<variable>%`, for example, `FNAME=%env:CFTDIRPUB%/FTEST`, which is resolved when you create or modify the associated object.
+You can reference a environment variable in the Transfer CFT configuration using the `%env:<variable>%`, for example, `FNAME=%env:CFTDIRPUB%/FTEST`. This value is replaced with the actual value when you define the object and is never used again as a variable.
 
 ### Referencing UCONF parameters
 
-You can reference a UCONF parameter in the Transfer CFT configuration using the `%uconf:<parameter>%`, for example, `PART=%uconf:cft.instance_id%`, which is resolved when you create or modify the associated object.
+You can reference a UCONF parameter in the Transfer CFT configuration using the `%uconf:<parameter>%`, for example, `PART=%uconf:cft.instance_id%`. This value is replaced with the actual value when you define the object and is never used again as a variable.

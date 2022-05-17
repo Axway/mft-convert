@@ -1,11 +1,8 @@
 ---
-
-    title: execsma
-    linkTitle: execsma
-    weight: 930
-
----
-<span id="execsma"></span>
+    title: "execsma"
+    linkTitle: "execsma"
+    weight: 920
+---<span id="execsma"></span>
 
 ### execsma
 
@@ -13,7 +10,7 @@
 
 #### CFTPARM
 
-****\[EXECSMA = filename\]
+****[EXECSMA = filename]
    {string
 64}****
 

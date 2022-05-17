@@ -1,11 +1,8 @@
 ---
-
-    title: Install Transfer CFT
-    linkTitle: Install Transfer CFT 
+    title: "Install Transfer CFT"
+    linkTitle: "Install Transfer CFT "
     weight: 110
-
----
-## Before you start
+---## Before you start
 
 If you are installing {{< TransferCFT/axwayvariablesComponentLongName  >}} as part of a managed file transfer solution, you may want to check the installation order and prerequisites. For more information, please refer to the {{< TransferCFT/suitevariablesCentralGovernanceName  >}} documentation.
 
@@ -13,18 +10,20 @@ If you want to enable {{< TransferCFT/suitevariablesCentralGovernanceName  >}} d
 
 ### Installation overview
 
-This table presents a high-level overview of the installation process. By default, the {{< TransferCFT/axwayvariablesComponentLongName  >}} installation uses a delivered configuration file called <span class="code">`initialize.properties`</span> that provides a series of default values to simplify installation. It is important that you understand the difference between customizing this file before or after running the installer prior to starting the process.
+This table presents a high-level overview of the installation process. By default, the {{< TransferCFT/axwayvariablesComponentLongName  >}} installation uses a delivered configuration file called `initialize.properties` that provides a series of default values to simplify installation. It is important that you understand the difference between customizing this file before or after running the installer prior to starting the process.
 
 
 |   | Step  | Details  | More info  |
 | --- | --- | --- | --- |
-| 1  | Complete prerequisites  | Check and fulfill prerequisites such as obtaining a key or system-specific prerequisites.  | <a href="prereqs_overview" >Prerequisites</a>  |
-| 2  | Download and unzip  | Download the installation package from the support site and unzip.  | <a href="#Download" >Install Transfer CFT</a>  |
-| 3  | Customize the properties file  | Some installation parameters are mandatory to run Transfer CFT.<br/> You can customize the <span ><code>initialize.properties</code></span> file before the install, use your own file, or use the unmodified default file, but you cannot start Transfer CFT until the mandatory values are set. | <a href="new_install_ux" >Customize the initialize.properties file</a> <a href="../../windows_install_start_here/before_you_start_win/properties_file_win"></a>  |
-|   | Run chmod  | Make the file executable.  | <a href="install_transfer_cft_1#Make" >Make the file executable</a>  |
-| 4  | Start the installation  | Select the installation mode and run using either the default configuration file or your customized file.  | <a href="install_transfer_cft_1" >Start the installation</a>  |
+| 1  | Complete prerequisites  | Check and fulfill prerequisites such as obtaining a key or system-specific prerequisites.  | [Prerequisites](prereqs_overview)  |
+| 2  | Download and unzip  | Download the installation package from the support site and unzip.  | Download the installation package  |
+| 3  | Customize the properties file  | Some installation parameters are mandatory to run Transfer CFT.<br/> You can customize the <code>initialize.properties</code> file before the install, use your own file, or use the unmodified default file, but you cannot start Transfer CFT until the mandatory values are set. | [](new_install_ux#top)  |
+|   | Run chmod  | Make the file executable.  | [Make the file executable](install_transfer_cft_1#Make)  |
+| 4  | Start the installation  | Select the installation mode and run using either the default configuration file or your customized file.  | [Start the installation](install_transfer_cft_1)  |
 | *  | Optional customization  | If you used the default configuration file, you must customize the Transfer CFT settings before starting the product.  |   |
 
+
+## Limitations
 
 ### Installation restrictions for multi-node
 
@@ -50,11 +49,11 @@ You can perform the following installation functions:
 
 ### Check the "noexec" mount option before installing
 
-Before running the InstallBuilder, ensure that the<span class="code">` /tmp `</span>directory and the user's <span class="code">`homedir`</span> do not have the "noexec" option on that mount point. See [Troubleshooting the installation](../troubleshoot_registration) for workarounds.
+Before running the InstallBuilder, ensure that the` /tmp `directory and the user's `homedir` do not have the "noexec" option on that mount point. See [Troubleshooting the installation](../troubleshoot_registration) for workarounds.
 
 ### Installation configuration file
 
-The {{< TransferCFT/axwayvariablesComponentLongName  >}} installation is based on a delivered configuration file called <span class="code">`initialize.properties`</span> that provides as series of default values to simplify installation. As described in <a href="new_install_ux" class="MCXref xref">Customize the initialize.properties file</a>, you can make a copy of this file and customize it prior to running the installation procedure.
+The {{< TransferCFT/axwayvariablesComponentLongName  >}} installation is based on a delivered configuration file called `initialize.properties` that provides as series of default values to simplify installation. As described in [Customize the initialize.properties file](new_install_ux), you can make a copy of this file and customize it prior to running the installation procedure.
 
 ### Installation modes
 
@@ -72,19 +71,42 @@ The following installation modes use the delivered initialize.properties file as
 
 `./Transfer_CFT_{{< TransferCFT/axwayvariablesReleaseNumber >}}_Install_<OS>_<BN>.run --mode unattended --conf-file initialize.properties`
 
+> **Note**
+>
+> For all installation types, including silent installations, you must accept the installation General Terms and Conditions.
+
 ### Create or modify the runtime
 
-You can use the following command to repair the runtime if there was an issue during the installation, or to update values that you have modified in the <span class="code">`initialize.properties`</span> file. From the &lt;installation\_directory>, run the following:
+You can use the following command to repair the runtime if there was an issue during the installation, or to update values that you have modified in the `initialize.properties` file. From the &lt;installation_directory>, run the following:
 
 `<installation directory> ./initialize filename`
 
-### Using symbolic links
+### How to use symbolic links with a Transfer CFT installation
 
-To install Transfer CFT using symbolic links, you must use the silent mode, <span class="code">`option '--mode unattended'`</span>, and assign all parameters using only the configuration file (do not use parameters in the command line except the conf-file).
+To install Transfer CFT using symbolic links, you must use the `option '--mode unattended'` silent mode and the `initialize.properties` configuration file to assign parameters. Do not declare parameters in the command line.
+
+#### Install using symbolic link example
+
+This example is based on a UNIX extraction from the `initialize.properties` file.
+
+- runtimedir: `/share1/CFT39_GPFS` ( refers to the shared disk for a multi-node/multi-host installation)
+- installdir: `/home/cftqa/CFT39_GPFS_LINK` (refers to the symbolic link)
+
+Before installing with symbolic links, perform the following steps on each host:
+
+1. Configure `initialize.properties` file.
+
+1. Create the actual directory, called `REAL `in this example:
+
+    `mkdir /home/cft/CFT39_GPFS_REAL`
+
+1. Create the symbolic link, called `LINK `in this example:
+
+    ` mklink /home/cftqa/CFT39_GPFS_REAL /home/cftqa/CFT39_GPFS_LINK `
 
 > **Note**
 >
-> If an installation that uses symbolic links fails, once you have corrected the silent files, you must delete the Transfer CFT home installation directory, to which the symbolic link points, prior to retrying the installation.
+> If an installation that uses symbolic links fails: correct the silent file, delete the Transfer CFT home installation directory to which the symbolic link points, and retry the installation.
 
 ### Get help
 

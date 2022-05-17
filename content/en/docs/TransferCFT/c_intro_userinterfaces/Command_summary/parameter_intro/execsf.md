@@ -1,11 +1,8 @@
 ---
-
-    title: execsf
-    linkTitle: execsf
-    weight: 900
-
----
-<span id="execsf"></span>
+    title: "execsf"
+    linkTitle: "execsf"
+    weight: 890
+---<span id="execsf"></span>
 
 ### execsf
 
@@ -13,7 +10,7 @@
 
 #### CFTPARM
 
-****\[EXECSF = filename\]
+****[EXECSF = filename]
    {string
 64}****
 
@@ -30,7 +27,7 @@ This name may include the following symbolic variables:
 - &RAPPL, &SAPPL
 - &NIDF
 
-The character ‘&’ designates the char\_symb character defined in
+The character ‘&’ designates the char_symb character defined in
 the {{< TransferCFT/axwayvariablesComponentShortName  >}} *Operations Guide* that corresponds with your OS.
 
 > **Note**

@@ -1,25 +1,22 @@
 ---
+    title: "LISTLOG - List the log content "
+    linkTitle: "LISTLOG - List log content"
+    weight: 320
+---This topic describes how to use the LISTLOG command to display the log content according to certain defined criteria, such as date or node. Additionally, you can filter the log depending on multiple criteria, or view a merged log for several nodes in cluster mode.
 
-    title: LISTLOG - List the log content 
-    linkTitle: LISTLOG - List log content
-    weight: 340
-
----
-This topic describes how to use the LISTLOG command to display the log content according to certain defined criteria, such as date or node. Additionally, you can filter the log depending on multiple criteria, or view a merged log for several nodes in cluster mode.
-
-****Command syntax: <span class="code">`listlog <filter list>`</span>****
+****Command syntax: `listlog <filter list>`****
 
 
 | Parameter  | Default  | Description  |
 | --- | --- | --- |
 | loglevel  | I  | Minimum severity level for the log lines to display.<br/> • I: INFORMATION<br/> • E: ERROR<br/> • W: WARNING<br/> • F: FATAL |
 | lines  | -100  | Defines the number of lines to display from all log files, both current and backup.<br/> • A positive value displays the *x* oldest lines.<br/> • The value zero (0) displays all of the lines.<br/> • A negative value displays the **x** most recent lines.<br/> Enter zero (0), or a positive or negative value between 1 and 10,000. |
-| datemin  | 0  | There are multiple formats to use to define the minimum date for log display.<br/> • Use the format YYMMDD to display logs that happened on or after this date.<br/> • Use a partial date for a more generic display. For example, <span ><code>1604 </code></span>displays the log since April 2016.<br/> • Use a negative value to display logs for x number of days prior to today. For example, entering -2 displays the log since the day before yesterday, and -0 displays today’s log. |
+| datemin  | 0  | There are multiple formats to use to define the minimum date for log display.<br/> • Use the format YYMMDD to display logs that happened on or after this date.<br/> • Use a partial date for a more generic display. For example, <code>1604 </code>displays the log since April 2016.<br/> • Use a negative value to display logs for x number of days prior to today. For example, entering -2 displays the log since the day before yesterday, and -0 displays today’s log. |
 | datetimemin | 0  | Use to display logs that happened on or after this start date and time.  |
 | datetimemax | 99123123595999  | Use to display logs that happened on or before this end date and time.  |
-| datemax  | 991231  | There are multiple formats to use to define the maximum date for log display.<br/> • Use to display logs that happened on or before this date. Use the format: YYMMDD<br/> • You can also enter a partial date. For example, <span ><code>16 </code></span>displays the log prior to 2016.<br/> • A negative value is interpreted as a number of days before today. For example, -1 displays the log till yesterday (included). |
-| timemin  | 0  |  • Logs only happened at this time or after this time during the day. Use the format HHMMSSss.<br/> • A negative value is interpreted as a number of minutes before the current time. For example, -20 displays the log for the last 20 minutes.<br/> <span >See also </span><a href="#Time" >Time log precision</a><span >.</span> |
-| timemax  | 23595999  |  • Logs only happened at this time or before this time during the day. Use the format HHMMSSss.<br/> • <span >A negative value is interpreted as a number of minutes before current time. For example , -20 displays the log with the last 20 minutes filtered out.</span><br/> <span >See also </span><a href="#Time" >Time log precision</a><span >.</span> |
+| datemax  | 991231  | There are multiple formats to use to define the maximum date for log display.<br/> • Use to display logs that happened on or before this date. Use the format: YYMMDD<br/> • You can also enter a partial date. For example, <code>16 </code>displays the log prior to 2016.<br/> • A negative value is interpreted as a number of days before today. For example, -1 displays the log till yesterday (included). |
+| timemin  | 0  |  • Logs only happened at this time or after this time during the day. Use the format HHMMSSss.<br/> • A negative value is interpreted as a number of minutes before the current time. For example, -20 displays the log for the last 20 minutes.<br/> See also [Time log precision](#Time). |
+| timemax  | 23595999  |  • Logs only happened at this time or before this time during the day. Use the format HHMMSSss.<br/> • A negative value is interpreted as a number of minutes before current time. For example , -20 displays the log with the last 20 minutes filtered out.<br/> See also [Time log precision](#Time). |
 | pattern  |   | Only displays the log lines that match this specific pattern. Enter any pattern with a maximum of 63 characters.  |
 | displaynodeid  | YES  | Defines if the node ID displays at the beginning of each line in the log. Enter:<br/> • YES: display<br/> • NO: does not display |
 | node  | -  | Defines which nodes you want to display the log for. Specify the node by entering the node number :<br/> • Empty: if you do not define this parameter LISTLOG displays all nodes<br/> • Enter the node number(s) and separate with a comma. Node numbers cannot be more than two digits. For example: 00, 01, 02 |
@@ -74,13 +71,13 @@ NODE S L 2 \*99 STRING LIST max_length=1 max_entries=99
 
 ### Time log precision
 
-By default, the data sent to Sentinel as the EventTime has the format HH:MM:SS. To add milliseconds to the format, HH:MM:SS.sss, set the Transfer CFT UCONF <span class="code">`cft.cftlog.time_precision`</span> parameter, where:
+By default, the data sent to Sentinel as the EventTime has the format HH:MM:SS. To add milliseconds to the format, HH:MM:SS.sss, set the Transfer CFT UCONF `cft.cftlog.time_precision` parameter, where:
 
 - 1 (default): the time in CFTLOG displays in seconds
 - 10: the time in CFTLOG displays in tenths of seconds
 - 100: the time in CFTLOG displays in hundredths of seconds
 
-If the<span class="code">` cft.cftlog.time_precision`</span> value is greater than 1, the Transfer CFT EventTime message sent to Sentinel has the HH:MM:SS.dh0 format.
+If the` cft.cftlog.time_precision` value is greater than 1, the Transfer CFT EventTime message sent to Sentinel has the HH:MM:SS.dh0 format.
 
 **Example**
 

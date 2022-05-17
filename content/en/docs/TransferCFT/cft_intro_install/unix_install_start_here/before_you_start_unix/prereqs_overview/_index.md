@@ -1,11 +1,8 @@
 ---
-
-    title: Prerequisites
-    linkTitle: 1. Prerequisites 
+    title: "Prerequisites"
+    linkTitle: "1. Prerequisites "
     weight: 130
-
----
-## Overview
+---## Overview
 
 Axway products are delivered electronically from Sphere, the Axway support website. A welcome letter notifies you that your products are ready for download.
 
@@ -18,7 +15,7 @@ To install you will perform the following tasks:
 
 > **Note**
 >
-> If you have a 32-bit Transfer CFT installed, the Transfer CFT installer will update this to a 64-bit installation during a version 3.9 upgrade or migration.
+> If you have a 32-bit Transfer CFT installed, the Transfer CFT installer will update this to a 64-bit installation during a version 3.10 upgrade or migration.
 
 ## License keys
 
@@ -26,7 +23,7 @@ Before installing or upgrading, make sure you have obtained a license for {{< Tr
 
 For information on applying a license key post installation, or if you have a problem with your license key, refer to the appropriate Troubleshooting topic.
 
-- <span style="font-weight: normal;">[UNIX: Applying a license key](../../troubleshoot_registration/t_license_key_unix)</span>
+- [UNIX: Applying a license key](../../troubleshoot_registration/t_license_key_unix)
 
 ### Multi-node license keys
 

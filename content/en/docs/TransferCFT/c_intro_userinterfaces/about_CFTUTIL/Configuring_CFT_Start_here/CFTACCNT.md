@@ -1,11 +1,8 @@
 ---
-
-    title: Accounting records - CFTACCNT  
-    linkTitle: CFTACCNT - Accounting records transfer
-    weight: 280
-
----
-<span id="About_CFTACCNT"></span>This page describes the <span id="kanchor47"></span>CFTACCNT command.
+    title: "Accounting records - CFTACCNT  "
+    linkTitle: "CFTACCNT - Accounting records transfer"
+    weight: 270
+---<span id="About_CFTACCNT"></span>This page describes the <span id="kanchor46"></span>CFTACCNT command.
 
 Use this command to define the recording mode of the statistical data
 concerning correctly terminated transfers (T or X state).
@@ -37,15 +34,15 @@ topics****
 | --- | --- |
 | ID | Identifier of the CFTACCNT command. |
 | MODE  | Select to perform one of the following:<br/> • CREATE<br/> • REPLACE<br/> • DELETE |
-| <a href="../../../command_summary/parameter_intro/type#type_CFTACCNT">TYPE</a>  | Defines the accounting type.<br/> • FILE: statistical data is recorded in the Transfer CFT files described by the FNAME and AFNAME parameters.<br/> • SYST: statistical data is recorded in a "system" file, through an interface with the system accounting utility. If TYPE=SYST then you must define ACCID. |
-| <a href="../../../command_summary/parameter_intro/accid#accid_CFTACCNT">ACCID</a>  | Only used if TYPE=SYST Accounting system file identifier records. |
+| [TYPE](../../../command_summary/parameter_intro/type#type_CFTACCNT)  | Defines the accounting type.<br/> • FILE: statistical data is recorded in the Transfer CFT files described by the FNAME and AFNAME parameters.<br/> • SYST: statistical data is recorded in a "system" file, through an interface with the system accounting utility. If TYPE=SYST then you must define ACCID. |
+| [ACCID](../../../command_summary/parameter_intro/accid#accid_CFTACCNT)  | Only used if TYPE=SYST Accounting system file identifier records. |
 | COMMENT  |   |
 | LANGUAGE | Programming language of the application using the statistical data recorded.<br/> • COBOL<br/> • C |
-| <a href="../../../command_summary/parameter_intro/fname#fname_CFTACCNT">FNAME</a> | Name of the statistical file. |
-| <a href="../../../command_summary/parameter_intro/afname#afname_CFTACCNT">AFNAME</a> | Name of the alternate statistical file. |
-| <a href="../../../command_summary/parameter_intro/maxrec">MAXREC</a>  | Statistical file maximum number of records. |
-| <a href="../../../command_summary/parameter_intro/exec#exec_CFTACCNT">EXEC</a>  | Name of the procedure to be executed when Transfer CFT switches to the other statistical file<br/> (SWITCH). |
-| <a href="../../../command_summary/parameter_intro/switch#switch">SWITCH</a>  | Time at which Transfer CFT automatically switches to the alternate statistical file.<br/> When this parameter is not defined, Transfer CFT switches statistical files daily at midnight. |
+| [FNAME](../../../command_summary/parameter_intro/fname#fname_CFTACCNT) | Name of the statistical file. |
+| [AFNAME](../../../command_summary/parameter_intro/afname#afname_CFTACCNT) | Name of the alternate statistical file. |
+| [MAXREC](../../../command_summary/parameter_intro/maxrec)  | Statistical file maximum number of records. |
+| [EXEC](../../../command_summary/parameter_intro/exec#exec_CFTACCNT)  | Name of the procedure to be executed when Transfer CFT switches to the other statistical file<br/> (SWITCH). |
+| [SWITCH](../../../command_summary/parameter_intro/switch#switch)  | Time at which Transfer CFT automatically switches to the alternate statistical file.<br/> When this parameter is not defined, Transfer CFT switches statistical files daily at midnight. |
 
 
 ## Examples

@@ -1,15 +1,12 @@
 ---
-
-    title: prestate
-    linkTitle: prestate
-    weight: 2680
-
----
-### prestate
+    title: "prestate"
+    linkTitle: "prestate"
+    weight: 2700
+---### prestate
 
 #### SEND
 
-****\[ PRESTATE = { ' ', DISP, HOLD } \]****
+****[ PRESTATE = { ' ', DISP, HOLD } ]****
 
 The transfer phase step as it enters the A phase.
 

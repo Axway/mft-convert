@@ -1,11 +1,8 @@
 ---
-
-    title: Check the runtime
-    linkTitle: Troubleshoot the Transfer CFT runtime
+    title: "Check the runtime"
+    linkTitle: "Troubleshoot the Transfer CFT runtime"
     weight: 280
-
----
-Runtime issues can include the following for the server, Copilot, CFTUTIL and other system services:
+---Runtime issues can include the following for the server, Copilot, CFTUTIL and other system services:
 
 - Abend
 - Performance
@@ -15,8 +12,6 @@ Runtime issues can include the following for the server, Copilot, CFTUTIL and ot
 - Service pack issues (applying or removing), also for migrating issues, updates
 
 ## Common causes
-
-QQQ\_QQQ\_QQQ
 
 
 | Issue vs<br /> Possible causes  | Hard disk bottleneck  | Catalog<br/> full | Network<br/> bottleneck | Memory or processor bottleneck*  | Corrupt<br/> file or DB ** |

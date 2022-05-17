@@ -1,17 +1,14 @@
 ---
-
-    title: ncomp
-    linkTitle: ncomp
-    weight: 2130
-
----
-<span id="ncomp"></span>
+    title: "ncomp"
+    linkTitle: "ncomp"
+    weight: 2150
+---<span id="ncomp"></span>
 
 ### ncomp
 
 #### CFTSEND, CFTRECV, SEND, RECV
 
-****\[NCOMP = { 0 | 15 }\]****
+****[NCOMP = { 0 &#124; 15 }]****
 
 ****PeSIT D CFT profile, PeSIT E****
 

@@ -1,11 +1,8 @@
 ---
-
-    title: System interface messages
-    linkTitle: System interface messages
+    title: "System interface messages"
+    linkTitle: "System interface messages"
     weight: 270
-
----
-The Transfer CFT system interfaces generate z/OS operator messages that display on the system console, and appear when:
+---The Transfer CFT system interfaces generate z/OS operator messages that display on the system console, and appear when:
 
 - A severe error is detected by a system function
 

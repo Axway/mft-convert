@@ -1,11 +1,8 @@
 ---
-
-    title: IBM i: Installation and Operation
-    linkTitle: Installation and operation IBM i
+    title: "IBM i: Installation and Operation"
+    linkTitle: "Installation and operation IBM i"
     weight: 120
-
----
-This documentation provides information to aide you in installing, updating, upgrading, or migrating {{< TransferCFT/axwayvariablesComponentShortName  >}}.
+---This documentation provides information to aide you in installing, updating, upgrading, or migrating {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
 For more information on Axway products, visit [www.axway.com](https://www.axway.com/en).
 

@@ -1,15 +1,12 @@
 ---
-
-    title: preexec
-    linkTitle: preexec
-    weight: 2650
-
----
-### preexec
+    title: "preexec"
+    linkTitle: "preexec"
+    weight: 2670
+---### preexec
 
 #### CFTSEND, SEND
 
-****\[ PREEXEC = filename \]****
+****[ PREEXEC = filename ]****
 
 Name of the file describing the procedure to be executed in preprocessing phase, before the transfer. See [EXEC](../exec) for more information.
 

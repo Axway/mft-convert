@@ -1,18 +1,15 @@
 ---
-
-    title: rto
-    linkTitle: rto
-    weight: 3010
-
----
-<span id="rto"></span>
+    title: "rto"
+    linkTitle: "rto"
+    weight: 3030
+---<span id="rto"></span>
 
 ### rto
 
 #### CFTPROT
 
-******\[RTO =
-{<u>260</u> | n}\]** <span style="font-weight: normal;">{0..3600}</span>****
+******[RTO =
+{<u>260</u> &#124; n}]** {0..3600}****
 
 Network monitoring timeout (expressed in seconds) excluding the protocol
 connection/disconnection/break phase.

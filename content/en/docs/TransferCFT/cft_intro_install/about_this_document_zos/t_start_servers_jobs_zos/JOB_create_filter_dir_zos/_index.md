@@ -1,11 +1,8 @@
 ---
-
-    title: Copilot options for log and catalog filters
-    linkTitle: Set up optional features
+    title: "Copilot options for log and catalog filters"
+    linkTitle: "Set up optional features"
     weight: 220
-
----
-You can optionally set up log and catalog filters in Copilot using the JCL described in this section.
+---You can optionally set up log and catalog filters in Copilot using the JCL described in this section.
 
 The JCL **COPFILTR** lets you create a directory under the USS to store the Copilot catalog and log filters. This server directory has read, write, and delete rights for Transfer CFT Copilot users, but is independent of the Copilot component directory.
 

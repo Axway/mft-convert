@@ -1,11 +1,8 @@
 ---
-
-    title: Post-installation
-    linkTitle: Post-installation
+    title: "Post-installation"
+    linkTitle: "Post-installation"
     weight: 160
-
----
-## Transfer CFT in production
+---## Transfer CFT in production
 
 This chapter describes how to operate Transfer CFT, and is comprised of the following sections:
 

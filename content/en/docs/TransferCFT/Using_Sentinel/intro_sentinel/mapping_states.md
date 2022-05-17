@@ -1,11 +1,8 @@
 ---
-
-    title: Map Transfer CFT and Sentinel states
-    linkTitle: Mapping Transfer CFT and Sentinel states
-    weight: 260
-
----
-You can use the <span class="bold_in_para">****Mapping states****</span> table to find equivalent states and phases as described below.
+    title: "Map Transfer CFT and Sentinel states"
+    linkTitle: "Mapping Transfer CFT and Sentinel states"
+    weight: 250
+---You can use the ****Mapping states**** table to find equivalent states and phases as described below.
 
 - Phase: The phase indicates where you are in your transfer.
 - Phasestep: Within each phase there is a phase step, which is either a process or a step.
@@ -16,7 +13,7 @@ You can use the <span class="bold_in_para">****Mapping states****</span> table t
 
 For details on Sentinel states, see [XFBTransfer Tracked Objects]().
 
-<span class="autonumber"></span>Mapping states
+Mapping states
 
 In the following table, the state that is sent to Sentinel when the COMPAT parameter is set to NO, is displayed in the Sentinel state column. When COMPAT is set to YES, the state listed in the Compatible Sentinel state column is sent to Sentinel. For more information on the COMPAT settings, see [{{< TransferCFT/axwayvariablesComponentShortName  >}} backward compatibility](../../../concepts/phase_and_phasestep/processing_compatability).
 

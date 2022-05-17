@@ -1,17 +1,14 @@
 ---
-
-    title: fcharset
-    linkTitle: fcharset
-    weight: 1080
-
----
-<span id="fcharset"></span>
+    title: "fcharset"
+    linkTitle: "fcharset"
+    weight: 1070
+---<span id="fcharset"></span>
 
 ### fcharset
 
 #### SEND, RECV, CFTSEND CFTRECV CFTPROT CFTPART
 
-**\[FCHARSET = { None / CFT\_EBCDIC-FR / CFT\_ UTF-8 / UTF-16BE / UTF-16LE / CFT\_ISO8859-1 / ASCII / EBCDIC / UTF-8 / ISO8859-1 / . . . }\]**
+**[FCHARSET = { None / CFT_EBCDIC-FR / CFT_ UTF-8 / UTF-16BE / UTF-16LE / CFT_ISO8859-1 / ASCII / EBCDIC / UTF-8 / ISO8859-1 / . . . }]**
 
 Defines the local file encoding.  
 
@@ -42,6 +39,6 @@ NCHARSET = UTF-16,
 FTYPE = T
 ```
 
-See also [ncharset](../ncharset) and *[Using character sets for transcoding](../../../../concepts/transfer_command_overview/use_extended_character_sets).*
+See also [ncharset](../ncharset) and *[Using character sets for transcoding](../../../../concepts/transfer_command_overview/using_transcoding/use_extended_character_sets).*
 
 [Return to Command index](../../)

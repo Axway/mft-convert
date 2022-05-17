@@ -1,11 +1,8 @@
 ---
-
-    title: About exit  lists
-    linkTitle: Exit list
+    title: "About exit  lists"
+    linkTitle: "Exit list"
     weight: 290
-
----
-An exit list is an optional component supplied with certain Transfer
+---An exit list is an optional component supplied with certain Transfer
 CFT products. The Exit list is a file exit designed to allow remote partners to consult
 the {{< TransferCFT/axwayvariablesComponentShortName  >}} server's catalog. The {{< TransferCFT/axwayvariablesComponentShortName  >}}
 Exit list is an EXIT used for consulting the catalog.
@@ -57,16 +54,16 @@ PROG = FileExe
 ### 2. Prepare the selection criteria file
 
 After you have set the parameters for the sender site,
-load the <span style="font-weight: bold;">****selection criteria****</span> file.
+load the ****selection criteria**** file.
 The selection commands contained in this file are described in the section *Selection
 criteria file*. You must load this file on the server **before**
 requesting the catalog.
 
-The LOGICAL name of the <span style="font-weight: bold;">****Selection
-criteria****</span> must be the CFTEXIT command identifier. For z/OS environments, the correspondence between the physical name and the
+The LOGICAL name of the ****Selection
+criteria**** must be the CFTEXIT command identifier. For z/OS environments, the correspondence between the physical name and the
 logical name must be given by the JCL initiating {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
-The name of the <span style="font-weight: bold;">****Selection criteria****</span>
+The name of the ****Selection criteria****
 file may be defined by  either the:
 
 - Physical name in
@@ -97,7 +94,7 @@ The server:
 
 - Recognizes the
     request for the catalog list using the transfer IDF
-- Processes the <span style="font-weight: bold;">****Selection criteria****</span> file
+- Processes the ****Selection criteria**** file
 - Consults the catalog
 - Sends the entries
     selected from the catalog to the requesting partner as fixed-length records.

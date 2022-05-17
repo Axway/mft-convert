@@ -1,18 +1,15 @@
 ---
-
-    title: restart
-    linkTitle: restart
-    weight: 2860
-
----
-<span id="restart"></span>
+    title: "restart"
+    linkTitle: "restart"
+    weight: 2880
+---<span id="restart"></span>
 
 ### restart
 
 #### CFTPROT
 
-******\[RESTART =
-{<u>5</u> | n}\]** {0..32767} ****
+******[RESTART =
+{<u>5</u> &#124; n}]** {0..32767} ****
 
 ****In requester mode****
 
@@ -23,7 +20,7 @@ with the remote site is correctly established.
 
 #### SHUT
 
-****\[ RESTART = { YES | NO } \]****
+****[ RESTART = { YES &#124; NO } ]****
 
 Option to manage the restart.
 

@@ -1,11 +1,8 @@
 ---
-
-    title: PassPort AM persistent cache 
-    linkTitle: PassPort AM persistent cache 
-    weight: 210
-
----
-This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
+    title: "PassPort AM persistent cache "
+    linkTitle: "PassPort AM persistent cache "
+    weight: 200
+---This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
 
 When enabled, {{< TransferCFT/axwayvariablesComponentShortName  >}} retrieves all permissions from the PassPort AM server and stores this information in the cache. This allows {{< TransferCFT/axwayvariablesComponentShortName  >}} to continue to operate using the stored information if the PassPort AM server is non-operational.
 
@@ -24,7 +21,7 @@ When enabled, {{< TransferCFT/axwayvariablesComponentShortName  >}} retrieves al
 
 ## Updating the cache
 
-When Transfer CFT or Copilot is configured to use PassPort AM , it periodically scans for changes in user rights. The changes are then saved in the file defined in <span class="code">`am.passport.persistency.fname`</span>. These scans occur at regular intervals as defined by the <span class="code">`am.passport.persistency.check_interval`</span> parameter.
+When Transfer CFT or Copilot is configured to use PassPort AM , it periodically scans for changes in user rights. The changes are then saved in the file defined in `am.passport.persistency.fname`. These scans occur at regular intervals as defined by the `am.passport.persistency.check_interval` parameter.
 
 - To force an immediate cache update, you can manually run CFTSXPAM (as described below).
 - If a user (a non-superuser) is not listed in the cache and tries to start Transfer CFT, Transfer CFT cannot start and displays the [CFTX03W](../../../troubleshoot_intro/messages_and_error_codes_start_here/cftx_messages) error in the log. To fix, you can manually execute CFTSXPAM and restart Transfer CFT.
@@ -33,8 +30,8 @@ When Transfer CFT or Copilot is configured to use PassPort AM , it periodically 
 
 1. Log on as a Transfer CFT superuser, meaning a user that is defined in `am.passport.superuser`.
 1. Load the Transfer CFT profile.
-1. Check that CFTSXPAM is enabled, <span class="code">`am.passport.persistency.cftsxpam.enable = yes`</span>.
-1. Execute the command: <span class="code">`CFTSXPAM`</span>
+1. Check that CFTSXPAM is enabled, `am.passport.persistency.cftsxpam.enable = yes`.
+1. Execute the command: `CFTSXPAM`
 
 > **Note**
 >

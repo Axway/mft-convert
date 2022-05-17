@@ -1,14 +1,11 @@
 ---
-
-    title: Extended exit structure
-    linkTitle: Extended exit structure
-    weight: 230
-
----
-This table displays the fields and communication structure for the
+    title: "Extended exit structure"
+    linkTitle: "Extended exit structure"
+    weight: 220
+---This table displays the fields and communication structure for the
 directory, end of transfer, and file exits in server mode:
 
-<span class="autonumber"></span>Exit structure
+Exit structure
 
 ```
 char cMode;      /\* Client/Server \*/

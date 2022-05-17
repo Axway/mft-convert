@@ -1,15 +1,12 @@
 ---
-
-    title: pretimeout
-    linkTitle: pretimeout
-    weight: 2690
-
----
-### pretimeout
+    title: "pretimeout"
+    linkTitle: "pretimeout"
+    weight: 2710
+---### pretimeout
 
 #### SEND
 
-****\[ PRETIMEOUT = { <u>0</u>..3600 } \]****
+****[ PRETIMEOUT = { <u>0</u>..3600 } ]****
 
 Timeout for switching the phase step to K if no END is received during preprocessing.
 

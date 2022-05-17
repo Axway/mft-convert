@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer CFT user interfaces
-    linkTitle: User interfaces 
-    weight: 90
-
----
-{{< TransferCFT/axwayvariablesComponentShortName  >}} describes the following user
+    title: "Transfer CFT user interfaces"
+    linkTitle: "User interfaces "
+    weight: 80
+---{{< TransferCFT/axwayvariablesComponentShortName  >}} describes the following user
 interfaces in this section:
 
 - CFTUTIL command

@@ -1,16 +1,13 @@
 ---
-
-    title: AM exits
-    linkTitle: Activate AM exits
+    title: "AM exits"
+    linkTitle: "Activate AM exits"
     weight: 300
-
----
-<span id="Activat"></span>
+---<span id="Activat"></span>
 
 ## Activating a platform-generic exit
 
-1. Check that the '<span class="code">`am.exit.custom.safclass.value`</span>' parameter is not set to a value.
-1. Ensure that the parameter '<span class="code">`am.exit.custom.rbac_fname.value`</span>' is associated with a correct configuration file.
+1. Check that the '`am.exit.custom.safclass.value`' parameter is not set to a value.
+1. Ensure that the parameter '`am.exit.custom.rbac_fname.value`' is associated with a correct configuration file.
 
 ## API and CFTUTIL
 

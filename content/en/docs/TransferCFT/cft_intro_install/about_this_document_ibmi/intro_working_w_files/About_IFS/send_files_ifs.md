@@ -1,11 +1,8 @@
 ---
-
-    title: Configure send mode on IFS
-    linkTitle: Configure send mode (IFS)
+    title: "Configure send mode for files (IFS)"
+    linkTitle: "Configure send mode (IFS)"
     weight: 220
-
----
-## File types
+---## File types
 
 The following table lists the different types of files that can be used according to the type of data to be sent when using IFS.
 

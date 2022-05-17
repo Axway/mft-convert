@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer  services in COBOL
-    linkTitle: Transfer services in COBOL
+    title: "Transfer  services in COBOL"
+    linkTitle: "Transfer services in COBOL"
     weight: 340
-
----
-Use the transfer services to send transfer control commands to Transfer
+---Use the transfer services to send transfer control commands to Transfer
 CFT, with or without a **syntax analysis**
 of these commands. The programming interface proposes a function integrating
 a syntax analysis of the command to detect any errors, at the source,

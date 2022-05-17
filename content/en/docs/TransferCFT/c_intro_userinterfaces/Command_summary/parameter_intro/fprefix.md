@@ -1,17 +1,14 @@
 ---
-
-    title: fprefix
-    linkTitle: fprefix
-    weight: 1320
-
----
-<span id="fprefix"></span>
+    title: "fprefix"
+    linkTitle: "fprefix"
+    weight: 1310
+---<span id="fprefix"></span>
 
 ### fprefix
 
 #### CFTPART
 
-**\[FPREFIX = *string1..512*\]**
+**[FPREFIX = *string1..512*]**
 
 File name prefix.
 

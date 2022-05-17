@@ -1,11 +1,8 @@
 ---
-
-    title: Usage tracking for subscriptions
-    linkTitle: Usage tracking for subscriptions
-    weight: 190
-
----
-This page describes usage tracking and why you might need to enable it for your on-premises Axway product.
+    title: "Usage tracking for subscriptions"
+    linkTitle: "Usage tracking for subscriptions"
+    weight: 180
+---This page describes usage tracking and why you might need to enable it for your on-premises Axway product.
 
 ## What is usage tracking
 

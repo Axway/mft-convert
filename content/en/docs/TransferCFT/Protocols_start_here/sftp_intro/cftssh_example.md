@@ -1,11 +1,8 @@
 ---
-
-    title: SFTP use case examples
-    linkTitle: SFTP examples
-    weight: 190
-
----
-The supported operating systems are listed in the [Platform features](../../../datasheet) table.
+    title: "SFTP use case examples"
+    linkTitle: "SFTP examples"
+    weight: 180
+---******The supported operating systems are listed in the [Platform features](../../../datasheet) table.******
 
 ## {{< TransferCFT/suitevariablesTransferCFTName  >}} acting as a SFTP client
 
@@ -22,6 +19,12 @@ The equivalent command for SFTP on Linux:
 ```
 sftp login@host
 sftp> put localfiletosend remotefile
+```
+
+If you want to additionally provide the IDF for the {{< TransferCFT/axwayvariablesComponentLongName  >}} server, you must use the following syntax `/idf/file` for the remote file where the IDF is `flow01`:
+
+```
+put LocalFile01.txt /flow01/RemoteFile01.txt
 ```
 
 ****Get command****
@@ -44,7 +47,7 @@ sftp> mput file\*
 
 ****Mget command****
 
-The {{< TransferCFT/axwayvariablesComponentLongName  >}} server must<span style="font-weight: normal;"> </span>be using open mode.
+The {{< TransferCFT/axwayvariablesComponentLongName  >}} server must be using open mode.
 
 ```
 recv part=app1,idf=groupoffiles,nfname=(@/#)file\*,file=all
@@ -55,7 +58,7 @@ sftp> mget file\*
 
 ## Transfer CFT client with a Transfer CFT server
 
-This example sends an acknowledgment following a file transfer (<span class="code">`cft_flow`</span> in the example).
+This example sends an acknowledgment following a file transfer (`cft_flow` in the example).
 
 ****On the Transfer CFT 1****
 
@@ -74,18 +77,20 @@ CFTTCP ID=CFT_1_SFTP,host=<CFT_1_HOST>
 ****Execute the send on Transfer CFT 1****
 
 ```
-send part=CFT_2_SFTP,idf=**cft_flow**,fname=localfiletosend,nfname=remotefile
+send part=CFT_2_SFTP,idf=cft_flow
+,fname=localfiletosend,nfname=remotefile
 ```
 
 ****Execute the acknowledgment from Transfer CFT 2****
 
 ```
-send part=CFT_1_SFTP,idm=cft_ack,type=reply, msg=completed, idt=&idt(of the **cft_flow**)
+send part=CFT_1_SFTP,idm=cft_ack,type=reply, msg=completed, idt=&idt(of the cft_flow
+)
 ```
 
 ### Transfer CFT requester downloading multiple files
 
-This example demonstrates receiving multiple files from a Transfer CFT SFTP server and is the equivalent of an <span class="code">`mget file*`</span>.
+This example demonstrates receiving multiple files from a Transfer CFT SFTP server and is the equivalent of an `mget file*`.
 
 ****On the Transfer CFT server****
 
@@ -101,7 +106,7 @@ cftsend id=groupoffiles,impl=yes,fname=&nfname
 recv part=app1,idf=groupoffiles,nfname=(@/#)test/file\*,file=all
 ```
 
-This results in downloading all remote files in the <span class="code">`test `</span>folder with the path relative to the workingdir.
+This results in downloading all remote files in the `test `folder with the path relative to the workingdir.
 
 ## Transfer CFT client with a SecureTransport server
 
@@ -120,7 +125,7 @@ Server Control: the SSH server is running with **Enable Secure File Transfer Pro
 Port=<ST_SFTP_PORT>
 ```
 
-Accounts: the Account Name is <span class="code">`st_sftp Active`</span> with the Login <span class="code">`Name=st_sftp`</span> and <span class="code">`Password=st_sftp`</span>
+Accounts: the Account Name is `st_sftp Active` with the Login `Name=st_sftp` and `Password=st_sftp`
 
 ```
 send part=ST_SFTP,idf=st_flow,fname=localfiletosend,nfname=remotefile
@@ -135,10 +140,12 @@ In this use case, the clients are using the key authentication method where the 
 ```
 For each user define a CFTPART (in this example there are two users USER1 and USER2) as follows:
  
-CFTPART ID=**USER1**,NRPART=USER1,SSH=USER1_SSH,PROT=SFTP,...
+CFTPART ID=USER1
+,NRPART=USER1,SSH=USER1_SSH,PROT=SFTP,...
 CFTSSH ID=USER1_SSH,DIRECT=SERVER,CLIPUBKEY=USER1_PUB, ...
  
-CFTPART ID=**USER2**,NRPART=USER2,SSH=USER2_SSH,PROT=SFTP,...
+CFTPART ID=USER2
+,NRPART=USER2,SSH=USER2_SSH,PROT=SFTP,...
 CFTSSH ID=USER2_SSH,DIRECT=SERVER,CLIPUBKEY=USER2_PUB,...
  
 CFTPROT ID=SFTP,TYPE=SFTP,SSH=SSH_DEFAULT,SAP=1763,...
@@ -155,9 +162,25 @@ PKIUTIL PKIKEY ID=USER2_PUB, IKNAME=USER2_PUB.KEY, IKFORM=SSH
 
 The client must log in as USER1 or USER2, in this example, and provide the corresponding private key as required for server connection.
 
-## {{< TransferCFT/axwayvariablesComponentLongName  >}} transcoding when using {{< TransferCFT/PrimaryCGorUM  >}}
+## Delete or rename a file on the remote SFTP server
 
-This example uses two {{< TransferCFT/axwayvariablesComponentLongName  >}} applications in {{< TransferCFT/PrimaryCGorUM  >}}, where the Source application is a UNIX machine and the Target is a z/OS system. On these applications, navigate to the indicated sections in the flow definition and define the following parameters to enable the transcoding.
+Transfer CFT can perform a delete or a rename operation on the remote SFTP server after a pull request using the NACTION and NARCHIVE parameters in the receive command.
+
+This get (or mget for all files) operation occurs on the remote server after each transfer is completed. When defining the `nfame`, use the operating system character that corresponds with your system (# Windows, @ UNIX).
+
+```
+RECV part=app1, idf=groupoffiles, nfname=@file\*, file=all, naction=delete
+```
+
+Or, for example, rename `remotefile `to `archive/remotefile` on the remote server after the transfer is completed.
+
+```
+recv part=app1, idf=flow01, fname=localfiletowrite, nfname=remotefile, naction=archive, narchivefname=archives/remotefile
+```
+
+## {{< TransferCFT/axwayvariablesComponentLongName  >}} transcoding when using Flow Manager or {{< TransferCFT/PrimaryCGorUM  >}}
+
+This example uses two {{< TransferCFT/axwayvariablesComponentLongName  >}} applications in Flow Manager or {{< TransferCFT/PrimaryCGorUM  >}}, where the Source application is a UNIX machine and the Target is a z/OS system. On these applications, navigate to the indicated sections in the flow definition and define the following parameters to enable the transcoding.
 
 ****On the Source****
 
@@ -170,6 +193,24 @@ This example uses two {{< TransferCFT/axwayvariablesComponentLongName  >}} appli
 ****On the Target****
 
 *File properties &gt; File encoding* &gt; File Type= Text , Encoding = EBCDIC , Transcoding = EBCDIC
+
+<span id="Using"></span>
+
+## Using Amazon S3, Ceph Storage, or GCS
+
+Define the UCONF `aws.credentials.*`, `workingdir`, and `storageaccount `parameters.
+
+For Amazon S3 you can optionally add a sub-folder to the `workingdir `to restrict access to S3 objects in a specified bucket. To add a `workingdir `sub-folder, use the format:
+
+```
+WORKINGDIR = 's3://cft-test-ci.eu-west-3/pub/share',
+```
+
+For GCS, see the [Google Cloud Storage](../../../app_integration_intro/google_cloud) page for configuration details, and note that the `workingdir `value must start with `gs://` followed by the bucket name, `gs://my-bucket`.
+
+```
+WORKINGDIR = 'gs://cft-test-ci.eu-west-3/pub/share',
+```
 
 ****Related topics****
 

@@ -1,17 +1,9 @@
 ---
+    title: "PassPort overview"
+    linkTitle: "PassPort "
+    weight: 130
+---{{< TransferCFT/axwayvariablesCompanyName  >}} PassPort provides a core set of services that can be used in conjunction with {{< TransferCFT/axwayvariablesComponentShortName  >}}, providing identity and access management services, as well as SSO and user access audit functionality. These services are described in detail in [About PassPort AM](../../internal_a_m_start_here/about_passport_am).
 
-    title: PassPort overview
-    linkTitle: PassPort 
-    weight: 140
-
----
-{{< TransferCFT/axwayvariablesCompanyName  >}} PassPort provides two core sets of services that can be used in conjunction with {{< TransferCFT/axwayvariablesComponentShortName  >}}.
-
-PassPort AM provides identity and access management services, as well as SSO and user access audit functionality.
-
-PassPort PS provides PKI (public key int) services for {{< TransferCFT/axwayvariablesComponentShortName  >}} users.
-
-These services are described in detail in the service-specific topics for PassPort.
-
-- [About PassPort AM](../../internal_a_m_start_here/about_passport_am): Describes PassPort access management and {{< TransferCFT/axwayvariablesComponentShortName >}} parameter settings
-- [About PassPort PS](): Describes how to set up a connection between Transfer CFT and PassPort PS
+> **Note**
+>
+> PassPort PS PKI (public key int) services were discontinued in Transfer CFT 3.10.

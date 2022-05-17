@@ -1,11 +1,8 @@
 ---
-
-    title: UNIX: Installation and operation
-    linkTitle: Installation and operation UNIX
+    title: "UNIX: Installation and operation"
+    linkTitle: "Installation and operation UNIX"
     weight: 90
-
----
-This section introduces prerequisite information as well as installation and information on operating Transfer CFT in UNIX.
+---This section introduces prerequisite information as well as installation and information on operating Transfer CFT in UNIX.
 
 The information in this section
 may be supplemented, corrected, or even contradicted by the
@@ -36,18 +33,18 @@ The installation section describes prerequisites and how to install, migrate, up
 - [Building
     {{< TransferCFT/axwayvariablesComponentShortName >}} API applications](run_first_time_ux/api_applications_start_here)
 - [Activating
-    security]()
+    security](run_first_time_ux/run_first_time_ux/user_rights_and_interface_unix)
 - [Specific
-    configurations](run_first_time_ux/aix_with_ibm_hacmp_intro/specific_configurations_intro)
+    configurations](run_first_time_ux/run_first_time_ux/specific_configurations_intro)
 
 ## UNIX high availability
 
 When installing a cluster for high availability, after enabling the cluster option you must set the multi-node option to NO.
 
-- [Using
-    AIX with IBM](run_first_time_ux/aix_with_ibm_hacmp_intro)
-- [Solaris
-    Sun cluster](run_first_time_ux/aix_with_ibm_hacmp_intro/solaris_sun_cluster_start_here)
+- Using
+    AIX with IBM
+- Solaris
+    Sun cluster
 
 > **Note**
 >

@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer CFT messages: CFTC
-    linkTitle: CFTC messages
-    weight: 290
-
----
-This topic lists the CFTC (CFT xnnx) messages and provides the type, a description, consequence, and corrective actions when applicable.
+    title: "Transfer CFT messages: CFTC"
+    linkTitle: "CFTC messages"
+    weight: 280
+---This topic lists the CFTC (CFT xnnx) messages and provides the type, a description, consequence, and corrective actions when applicable.
 
 **Message format**
 
@@ -15,9 +12,9 @@ Earlier versions of Transfer CFT used a different message format than version 3.
 
 **Example**
 
-CFTLOG FORMAT=\[V23,V24\]
+CFTLOG FORMAT=[V23,V24]
 
-For V23: <span class="code">`CFTT57I PART=&part IDF=&idf IDT=&idt &str transfer started`</span>
+For V23: `CFTT57I PART=&part IDF=&idf IDT=&idt &str transfer started`
 
 For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&idt>`
 
@@ -58,8 +55,8 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
  
 
 
-| V23 format<br/> V24 format<br/> Warning | <span id="CFTC05W"></span>CFTC05W PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm] IDT=&amp;idt _ Delete failed<br/> CFTC05W _ Delete failed &lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm] IDT=&amp;idt |
-| --- | --- | --- | --- |
+| V23 format<br/> V24 format<br/> Warning | <span id="CFTC05W"></span>CFTC05W PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm] IDT=&amp;idt _ Delete failed<br/> CFTC05W _ Delete failed &lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm] IDT=&amp;idt |
+| --- | --- |
 | Explanation | A DELETE command was executed on a catalog request (in a state other than C or D), but it failed as a result of a catalog access error. |
 | Consequence | The catalog entry could not be deleted.<br/> The CFTT21E message may be displayed before this message. |
 
@@ -76,8 +73,8 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
  
 
 
-| V23 format<br/> V24 format<br/> Information | <span id="CFTC07I"></span>CFTC07I PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm]IDT=&amp;idt STATE=&amp;state - Deleted<br/> CFTC07I Transfer Deleted &lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm] IDT=&amp;idt STATE=&amp;state DIRECT=&amp;direct |
-| --- | --- | --- | --- |
+| V23 format<br/> V24 format<br/> Information | <span id="CFTC07I"></span>CFTC07I PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm]IDT=&amp;idt STATE=&amp;state - Deleted<br/> CFTC07I Transfer Deleted &lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm] IDT=&amp;idt STATE=&amp;state DIRECT=&amp;direct |
+| --- | --- |
 | Explanation | A Transfer CFT catalog entry for partner &amp;part, with identifier &amp;idf, idt &amp;idt and state &amp;state, has been deleted. |
 
 
@@ -101,8 +98,8 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
  
 
 
-| V23 format<br/> V24 format<br/> Information | <span id="CFTC10I"></span>CFTC10I PART=&amp;part IDF or IDM=&amp;idf STATE=&amp;state MODE=&amp;mode : &amp;cmd not executed<br/> CFTC10I PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm] STATE=&amp;state MODE=&amp;mode : &amp;cmd not executed |
-| --- | --- | --- |
+| V23 format<br/> V24 format<br/> Information | <span id="CFTC10I"></span>CFTC10I PART=&amp;part IDF or IDM=&amp;idf STATE=&amp;state MODE=&amp;mode : &amp;cmd not executed<br/> CFTC10I PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm] STATE=&amp;state MODE=&amp;mode : &amp;cmd not executed |
+| --- | --- |
 | Explanation | The security system does not allow this user to execute this command on the catalog. |
 | Consequence | The command is ignored. One of the following messages displays after CFTC10I to provide additional information: CFTX01W , CFTX03W , or CFTX04W. |
 
@@ -110,8 +107,8 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
  
 
 
-| V23 format<br/> V24 format<br/> Information | <span id="CFTC11I"></span>CFTC11I PART=&amp;part IDM=&amp;idf IDT=&amp;idt : SEND REPLY not executed<br/> CFTC11I Command not executed &lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm] IDT=&amp;idt : Cmd=&amp;cmd |
-| --- | --- | --- |
+| V23 format<br/> V24 format<br/> Information | <span id="CFTC11I"></span>CFTC11I PART=&amp;part IDM=&amp;idf IDT=&amp;idt : SEND REPLY not executed<br/> CFTC11I Command not executed &lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm] IDT=&amp;idt : Cmd=&amp;cmd |
+| --- | --- |
 | Explanation | The security system does not allow the user to execute this command on the catalog. |
 | Consequence | The command is ignored.<br/> <blockquote> **Note**<br/> This message is followed by the CFTX01W message.<br/> </blockquote>  |
 
@@ -148,7 +145,7 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
 
 | V23 format<br/> V24 format<br/> Information | <span id="CFTC13E"></span><span id="CFTC15I"></span>CFTC15I Deprecated command not executed BLKNUM=&amp;blknum PART=&amp;part IDT=&amp;idt : Cmd=&amp;cmd&gt;<br/> CFTC15I Deprecated command not executed BLKNUM=&amp;blknum PART=&amp;part IDT=&amp;idt : Cmd=&amp;cmd |
 | --- | --- |
-| Explanation | Set the uconf parameter <span ><code>cft.cftcat.enable_deprecated_blknum=Yes</code></span> to enable BLKNUM.<br/> <blockquote> **Note**<br/> Regardless of the cft.cftcat.enable_deprecated_blknum parameter setting, BLKNUM is disabled in a multi-node configuration (uconf:cft.multi_node.enable=Yes), and this message is displayed.<br/> </blockquote>  |
+| Explanation | Set the uconf parameter <code>cft.cftcat.enable_deprecated_blknum=Yes</code> to enable BLKNUM.<br/> <blockquote> **Note**<br/> Regardless of the cft.cftcat.enable_deprecated_blknum parameter setting, BLKNUM is disabled in a multi-node configuration (uconf:cft.multi_node.enable=Yes), and this message is displayed.<br/> </blockquote>  |
 | Consequence | The command is ignored. |
 
 

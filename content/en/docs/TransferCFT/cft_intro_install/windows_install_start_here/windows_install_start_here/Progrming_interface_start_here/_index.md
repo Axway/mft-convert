@@ -1,11 +1,8 @@
 ---
-
-    title: About Windows Application Programming Interfaces (API)
-    linkTitle: Building APIs and exits
+    title: "About Windows Application Programming Interfaces (API)"
+    linkTitle: "Building APIs and exits"
     weight: 230
-
----
-This section describes the application build features of the {{< TransferCFT/axwayvariablesComponentShortName  >}}
+---This section describes the application build features of the {{< TransferCFT/axwayvariablesComponentShortName  >}}
 Windows Application Programming Interfaces, and introduces concepts
 including:
 
@@ -87,7 +84,7 @@ A {{< TransferCFT/axwayvariablesComponentShortName  >}} API application must com
     starts, but before a {{< TransferCFT/axwayvariablesComponentShortName >}} API is called, the {{< TransferCFT/axwayvariablesComponentShortName >}} API
     initialization function must be called in:
 - Visual Basic:
-    Cft\_Api\_Open (ByVal Version As String) As Integer
+    Cft_Api_Open (ByVal Version As String) As Integer
 - C++ or Delphi:
     CftInitialize of prototype BOOL CftInitialize (void)
 - When the application
@@ -116,11 +113,11 @@ the following options:
 
 <!-- -->
 
-- D\_X86=1 /\*
+- D_X86=1 /\*
     Machine code generation for Intel x 86 processors \*/
 - DWIN32 /\* Win
     32 application \*/
-- D\_MT /\* Multi-thread
+- D_MT /\* Multi-thread
     application \*/
 - G3 /\* Machine
     code generation compatible with 386 processors and compatibles \*/
@@ -165,4 +162,4 @@ workstation, so that the application developed with the {{< TransferCFT/axwayvar
 can run correctly.
 
 A Visual Basic program requires an additional DLL to encapsulate calls
-to the {{< TransferCFT/axwayvariablesComponentShortName  >}} APIs \[cftvb.dll\].
+to the {{< TransferCFT/axwayvariablesComponentShortName  >}} APIs [cftvb.dll].

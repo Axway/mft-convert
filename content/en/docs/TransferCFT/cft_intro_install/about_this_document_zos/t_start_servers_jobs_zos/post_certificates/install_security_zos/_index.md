@@ -1,11 +1,8 @@
 ---
-
-    title: Install with security
-    linkTitle: External access management  (RACF)
+    title: "Install with security"
+    linkTitle: "External access management  (RACF)"
     weight: 280
-
----
-To protect its objects, Transfer CFT uses the SAF interface (System Authorization Facility) on z/OS platforms to address authorization requests to an ESM, such as RACF. Transfer CFT does not perform any checks itself, and accepts the ESM decision. Before implementing specific protection, you must protect any Transfer CFT objects that the operating system recognizes from a file, an operator command, or program protection mechanisms.
+---To protect its objects, Transfer CFT uses the SAF interface (System Authorization Facility) on z/OS platforms to address authorization requests to an ESM, such as RACF. Transfer CFT does not perform any checks itself, and accepts the ESM decision. Before implementing specific protection, you must protect any Transfer CFT objects that the operating system recognizes from a file, an operator command, or program protection mechanisms.
 
 When installing Transfer CFT, all procedures that update RACF must be performed by users with RACF rights. Other procedures are performed by the Transfer CFT administrator. For information on the Transfer CFT administrator definition, see the H83SAFDA member details.
 
@@ -85,9 +82,6 @@ When the general resource class (safcftcl) is applied by RACF, the authorized us
 | --- | --- |
 | H84SAFDF | Creates RACF general resource CFT profiles |
 | H85SAFPR | Executes RACF PERMIT commands |
-| H86SAFCR | Creates the LOADMAIN library and SECINI file |
-| H87SECEN | Creates dictionaries, actions and objects |
-| H88INIT | Creates CFT files with the security system enabled (replacing D40INIT) |
 | H88PARM | Edits the parameter file (adds CFTAPPL) |
 | H89SAFAS | Creates CFT file protection profiles with PADS (upgrades from security level 1 to level 2) |
 | H89SAFAU | Sample allowing certain users to modify parameters and/or perform transfers |

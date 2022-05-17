@@ -1,18 +1,15 @@
 ---
-
-    title: Transfer CFT object protection
-    linkTitle: Object protection
+    title: "Transfer CFT object protection"
+    linkTitle: "Object protection"
     weight: 330
-
----
-This section describes protecting Transfer CFT objects and how to configure the following:
+---This section describes protecting Transfer CFT objects and how to configure the following:
 
 [Resource name generation](#Add)
 
 [General resource profile definition](#Transfer)
 
 - [Control the CFTxxx configuration commands](#Controll)
-- [Control via ALL\_xxx objects](#Controll2)
+- [Control via ALL_xxx objects](#Controll2)
 - [Control the SWITCH, MQUERY and SHUT commands](#Controll3)
 - [Control via the APPL object](#Controll4)
 - [Control FILE type transfers](#Controll5)
@@ -70,7 +67,7 @@ CFTAPPL.DEFAULT      USER(usercmd)    ACCESS(read)
 
 If the RACF return code is equal to zero, the Transfer CFT program lists the entry.
 
-<a href="../file_lists_zos" class="MCXref xref">Transfer CFT z/OS files</a> explains the commands controlled by the Transfer CFT programs.
+[Transfer CFT z/OS files](../file_lists_zos) explains the commands controlled by the Transfer CFT programs.
 
 <span id="Transfer"></span>
 
@@ -93,9 +90,9 @@ CONNECT   userb   GROUP( grpfprm ) OWNER( grpcft )
 ```
 <span id="Controll2"></span>
 
-#### Control via ALL\_xxx objects
+#### Control via ALL_xxx objects
 
-Only users in the grpdesk group are supposed to execute commands, the control of which is performed via ALL\_xxx objects (ALL\_CAT, ALL\_COM, ALL\_PART, ALL\_PARM, ALL\_EXT).  
+Only users in the grpdesk group are supposed to execute commands, the control of which is performed via ALL_xxx objects (ALL_CAT, ALL_COM, ALL_PART, ALL_PARM, ALL_EXT).  
 The definitions supplied in the samples are sufficient to grant the necessary rights.
 
 <span id="Controll3"></span>
@@ -150,7 +147,7 @@ PERMIT APPL.TEXT CLASS(safcftcl) ID(Usrtso1) ACCESS(CONTROL)
 
 > **Note**
 >
-> As end-of-transfer commands are submitted from the transfer owner account (Usrtso2), these procedures cannot execute certain commands (DELETE, START, KEEP, and so on) unless the USRTSO2 user corresponds to a RACF profile type:PERMIT APPL.TEXT CLASS(safcftcl) ID(usrtso2) ACCESS(CONTROL)orPERMIT ALL\_CAT.\*\* CLASS(safcftcl) ID(usrtso2) ACCESS(CONTROL)
+> As end-of-transfer commands are submitted from the transfer owner account (Usrtso2), these procedures cannot execute certain commands (DELETE, START, KEEP, and so on) unless the USRTSO2 user corresponds to a RACF profile type:PERMIT APPL.TEXT CLASS(safcftcl) ID(usrtso2) ACCESS(CONTROL)orPERMIT ALL_CAT.\*\* CLASS(safcftcl) ID(usrtso2) ACCESS(CONTROL)
 
 <span id="Controll5"></span>
 

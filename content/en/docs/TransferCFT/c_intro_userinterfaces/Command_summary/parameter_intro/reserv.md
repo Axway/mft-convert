@@ -1,18 +1,15 @@
 ---
-
-    title: reserv
-    linkTitle: reserv
-    weight: 2850
-
----
-<span id="reserv"></span>
+    title: "reserv"
+    linkTitle: "reserv"
+    weight: 2870
+---<span id="reserv"></span>
 
 ### reserv
 
 #### CFTEXIT
 
-**\[RESERV = {<u>8192</u> | <u>1024</u> |
-n}\]   **{0..8192}
+**[RESERV = {<u>8192</u> &#124; <u>1024</u> &#124;
+n}]   **{0..8192}
   {0..1024}
 
 Size of the work area reserved for the user exit program. Enter the
@@ -21,13 +18,13 @@ size, in bytes.
 This field only applies to the following EXITS:
 
 - Access/EXEC:
-    -   range {<span style="font-weight: bold;">****0 to 1024****</span>}
+    -   range {****0 to 1024****}
     -   default value
-        <span style="font-weight: bold;">****1024****</span>
+        ****1024****
 - file:
-    -   range {<span style="font-weight: bold;">****0 to 8192****</span>}
+    -   range {****0 to 8192****}
     -   default value
-        <span style="font-weight: bold;">****8192****</span>
+        ****8192****
 
 This area is not used by the {{< TransferCFT/axwayvariablesComponentShortName  >}} interface. You can use it
 to save the information that you consider necessary for the processing

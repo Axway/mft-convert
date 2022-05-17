@@ -1,17 +1,14 @@
 ---
-
-    title: ncharset
-    linkTitle: ncharset
-    weight: 2110
-
----
-<span id="ncharset"></span>
+    title: "ncharset"
+    linkTitle: "ncharset"
+    weight: 2130
+---<span id="ncharset"></span>
 
 ### ncharset
 
 #### SEND, RECV, CFTSEND, CFTRECV, CFTPROT, CFTPART
 
-******\[ NCHARSET = { None / CFT\_EBCDIC-FR / CFT\_ UTF-8 / CFT\_ISO8859-1 / ASCII / EBCDIC / UTF-8 / UTF-16BE / UTF-16LE / ISO8859-1 / . . . }\]******
+******[ NCHARSET = { None / CFT_EBCDIC-FR / CFT_ UTF-8 / CFT_ISO8859-1 / ASCII / EBCDIC / UTF-8 / UTF-16BE / UTF-16LE / ISO8859-1 / . . . }]******
 
 The ncharset is the destination file encoding that is used on a file
 to encode or decode network data.
@@ -47,6 +44,6 @@ FTYPE = T
 
 If an error occurs while trying to transcode a file, this results in a DIAGI=154 (DIAGP=ERRTRCOD).
 
-See also [fcharset](../fcharset) and *[Using character sets for transcoding](../../../../concepts/transfer_command_overview/use_extended_character_sets)*.
+See also [fcharset](../fcharset) and *[Using character sets for transcoding](../../../../concepts/transfer_command_overview/using_transcoding/use_extended_character_sets)*.
 
 [Return to Command index](../../)

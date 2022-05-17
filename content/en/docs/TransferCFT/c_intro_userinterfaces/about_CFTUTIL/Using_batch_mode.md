@@ -1,11 +1,8 @@
 ---
-
-    title: Use  batch mode
-    linkTitle: Using batch mode
-    weight: 160
-
----
-CFTUTIL is a command-line mode user interface, which serves to create
+    title: "Use  batch mode"
+    linkTitle: "Using batch mode"
+    weight: 150
+---CFTUTIL is a command-line mode user interface, which serves to create
 the Transfer CFT working environment and set up Transfer CFT application
 parameters. You use it to:
 
@@ -26,7 +23,7 @@ medium defined by the CONFIG TYPE = COM MEDIACOM = ... command.
 
 <span id="Batch_execution"></span>
 
-### Batch execution
+## Batch execution
 
 In batch mode with input flow rerouting, CFTUTIL reads the Transfer
 CFT commands in the file being submitted or in any text file. Output is

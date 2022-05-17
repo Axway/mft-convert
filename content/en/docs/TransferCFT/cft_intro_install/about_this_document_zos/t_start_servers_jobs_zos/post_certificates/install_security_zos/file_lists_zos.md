@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer CFT z/OS files 
-    linkTitle: Transfer CFT z/OS files list
+    title: "Transfer CFT z/OS files "
+    linkTitle: "Transfer CFT z/OS files list"
     weight: 370
-
----
-The Transfer CFT z/OS file types are listed and defined below.
+---The Transfer CFT z/OS file types are listed and defined below.
 
 
 | File  | Definition  | Note  | Grpaprm  | Grpdesk  | Grptrf  |

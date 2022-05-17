@@ -1,17 +1,14 @@
 ---
-
-    title: length
-    linkTitle: length
-    weight: 1790
-
----
-<span id="length"></span>
+    title: "length"
+    linkTitle: "length"
+    weight: 1780
+---<span id="length"></span>
 
 ### length
 
 #### CFTLOG
 
-****\[LENGTH = {160 | n}\]    { 70..1024}****
+****[LENGTH = {160 &#124; n}]    { 70..1024}****
 
 Size of log file records. In general, this value should not be modified.
 

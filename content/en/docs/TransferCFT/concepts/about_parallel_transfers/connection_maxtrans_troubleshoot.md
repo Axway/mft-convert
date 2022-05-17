@@ -1,26 +1,23 @@
 ---
-
-    title: Connection and maximum transfer troubleshooting
-    linkTitle: Connection / maximum transfer troubleshooting
-    weight: 250
-
----
-This section provides transfer examples that demonstrate parameter dependencies and typical log outputs, including errors, which you may encounter when using similar values. The goal is to understand the effect of parameter combinations, and be able to adapt settings to your particular needs.
+    title: "Connection and maximum transfer troubleshooting"
+    linkTitle: "Connection and maximum transfer troubleshooting"
+    weight: 240
+---This section provides transfer examples that demonstrate parameter dependencies and typical log outputs, including errors, which you may encounter when using similar values. The goal is to understand the effect of parameter combinations, and be able to adapt settings to your particular needs.
 
 The following examples show the output from both the server and requester sides.
 
-- <a href="#Example:4" class="MCXref xref">Example: the number of transfers exceeds the CNXINOUT</a>
-- <a href="#Example:3" class="MCXref xref">Example: MAXCNX is greater than MAXTRANS</a>
-- <a href="#Example:4" class="MCXref xref">Example: the number of transfers exceeds the CNXINOUT</a>
-- <a href="#Example:5" class="MCXref xref">Example: MAXCNX greater than MAXTRANS with session limit</a>
+- [Example: the number of transfers exceeds the CNXINOUT](#Example:4)
+- [Example: MAXCNX is greater than MAXTRANS](#Example:3)
+- [Example: the number of transfers exceeds the CNXINOUT](#Example:4)
+- [Example: MAXCNX greater than MAXTRANS with session limit](#Example:5)
 
-See <a href="../session_troubleshooting" class="MCXref xref">Session related troubleshooting</a> for session related output.
+See [Session related troubleshooting](../session_troubleshooting) for session related output.
 
-See the <a href="../faq" class="MCXref xref">Frequently asked questions</a> for common questions and answers on parameter usage, license keys, and so on.
+See the [Frequently asked questions](../faq) for common questions and answers on parameter usage, license keys, and so on.
 
 ## Remote (partner) diagnostic codes
 
-When troubleshooting, remember that if the [DIAG](../../../troubleshoot_intro/messages_and_error_codes_start_here/diagi_diagnostic_codes) is greater than 500, it refers to a remote issue. To find the actual DIAG, subtract 500 from the displayed code. If the DIAG is 962, for example, the issue is a remote problem corresponding to DIAG 462 (no data sent on network).
+When troubleshooting, remember that if the [DIAG](../../../troubleshoot_intro/about_error_codes/about_diagnostic_codes/diagi_diagnostic_codes) is greater than 500, it refers to a remote issue. To find the actual DIAG, subtract 500 from the displayed code. If the DIAG is 962, for example, the issue is a remote problem corresponding to DIAG 462 (no data sent on network).
 
 <span id="Example:"></span>
 

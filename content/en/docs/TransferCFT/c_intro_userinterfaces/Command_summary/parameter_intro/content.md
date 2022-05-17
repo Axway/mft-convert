@@ -1,11 +1,8 @@
 ---
-
-    title: content
-    linkTitle: content
-    weight: 510
-
----
-<span id="content"></span>
+    title: "content"
+    linkTitle: "content"
+    weight: 500
+---<span id="content"></span>
 
 ### content
 
@@ -13,7 +10,7 @@
 
 #### CFTLOG
 
-**\[CONTENT = {<u>FULL</u> | BRIEF }\]**
+**[CONTENT = {<u>FULL</u> &#124; BRIEF }]**
 
 The messages written in the active
 LOG file are filtered.
@@ -64,36 +61,38 @@ two messages:
 
 #### LISTCAT
 
-****\[CONTENT = { <u>BRIEF</u>
-| FULL | DEBUG | COMMUT | EXTEND | | BLKNUM} \]****
+****[CONTENT = { <u>BRIEF</u>
+&#124; FULL &#124; DEBUG &#124; COMMUT &#124; EXTEND &#124; &#124; BLKNUM} ]****
 
 Used to obtain part or all of the information of a catalog entry.
 
 The possible values are:
 
-- <span style="font-weight: bold;">****BRIEF****</span>: Displays the most basic, essential information
+- BRIEF: Displays the most basic, essential information
     concerning the selected transfers with one line per transfer
-- <span style="font-weight: bold;">****EXTEND****</span>: Displays information concerning
+- EXTEND: Displays information concerning
     security, exits and end-of-transfer procedures, as well as the BRIEF type
     information with one line per transfer
-- **COMMUT**: Displays a sort of BRIEF output, but contains some network-oriented details
-- <span style="font-weight: bold;">****FULL****</span>: Displays complete information concerning
+- COMMUT: Displays a sort of BRIEF output, but contains some network-oriented details
+- FULL: Displays complete information concerning
     each transfer
-- <span style="font-weight: bold;">****DEBUG****</span>: Displays the most complete output with additional information beyond the FULL content
-- **BLKNUM**: Displays the same information as BRIEF, but the **Appli id** and **Appstate** columns are replaced by the **blknum** column
+- DEBUG: Displays the most complete output with additional information beyond the FULL content
+- STAT: Displays statistical information about the catalog file
+- BLKNUM: Displays the same information as BRIEF, but the **Appli id** and **Appstate** columns are replaced by the **blknum** column
 
 #### LISTCOM
 
-**\[CONTENT = {<span style="text-decoration: underline;"> ACTIVE</span> |
-FULL }\]**
+**[CONTENT = { ACTIVE &#124;
+FULL &#124; STAT }]**
 
 Used to obtain part or all of the
 information of a catalog entry.
 
 - ACTIVE: Displays only communication records that are not empty
 - FULL: Displays all communication records
+- STAT: Displays the header and footer but not the command records
 
-<span class="bold_in_para">****Example****</span>
+****Example****
 
 ```
 LISTCOM CONTENT =FULL
@@ -111,16 +110,16 @@ CFTU00I RETURN _ Correct (CODE=0)
 
 #### LISTPARM, LISTPART
 
-******\[CONTENT =
-{<u>FULL</u> | BRIEF}\]******
+******[CONTENT =
+{<u>FULL</u> &#124; BRIEF}]******
 
 Used to obtain part or all of the
 information.
 
 #### CFTEXT
 
-****\[CONTENT =
-{<u>FULL</u> | BRIEF}\]****
+****[CONTENT =
+{<u>FULL</u> &#124; BRIEF}]****
 
 Level of content included in output:
 
@@ -129,30 +128,30 @@ Level of content included in output:
 
 #### MQUERY (OBJECT=CACHE or SYSTEM)
 
-******\[CONTENT =
-{ <span style="text-decoration: underline;">BRIEF</span>
-| FULL | STAT } \]******
+******[CONTENT =
+{ BRIEF
+&#124; FULL &#124; STAT } ]******
 
 Used to obtain part or all of the
 information.
 
 #### MQUERY (OBJECT=PROBE or STATS)
 
-******\[CONTENT =
-{ <span style="text-decoration: underline;">XMLBRIEF</span>
-| XMLFULL | RAW } \]******
+******[CONTENT =
+{ XMLBRIEF
+&#124; XMLFULL &#124; RAW } ]******
 
 Used to obtain part or all of the
 information.
 
 #### DISPLAY
 
-******\[CONTENT =
-listcat\]******
+******[CONTENT =
+listcat]******
 
 #### LISTUCONF, UCONFGET
 
-******\[CONTENT= { BRIEF | FULL | EXTRACT | DEBUG | PROPS }\]******
+******[CONTENT= { BRIEF &#124; FULL &#124; EXTRACT &#124; DEBUG &#124; PROPS }]******
 
 Indicates the amount of information to display. Here, the options are listed in order of increasing details that are displayed.
 

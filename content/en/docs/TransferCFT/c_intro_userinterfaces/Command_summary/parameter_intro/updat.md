@@ -1,18 +1,15 @@
 ---
-
-    title: updat
-    linkTitle: updat
-    weight: 3650
-
----
-<span id="updat"></span>
+    title: "updat"
+    linkTitle: "updat"
+    weight: 3670
+---<span id="updat"></span>
 
 ### updat
 
 #### CFTCAT
 
-**\[UPDAT = {<span style="text-decoration: underline;">256</span>
-| n}\]  **{0..32767}
+**[UPDAT = {256
+&#124; n}]  **{0..32767}
 
 Number of synchronization points between two consecutive updates of
 the catalog file during a transfer.

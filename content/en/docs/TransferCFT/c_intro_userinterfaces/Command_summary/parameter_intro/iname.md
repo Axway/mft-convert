@@ -1,17 +1,14 @@
 ---
-
-    title: iname
-    linkTitle: iname
-    weight: 1680
-
----
-<span id="iname"></span>
+    title: "iname"
+    linkTitle: "iname"
+    weight: 1670
+---<span id="iname"></span>
 
 ### iname
 
 #### PKICER
 
-****\[INAME = filename \]****
+****[INAME = filename ]****
 
 Used in PKIUTIL tool.
 

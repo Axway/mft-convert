@@ -1,17 +1,14 @@
 ---
-
-    title: npart
-    linkTitle: npart
-    weight: 2280
-
----
-<span id="npart"></span>
+    title: "npart"
+    linkTitle: "npart"
+    weight: 2300
+---<span id="npart"></span>
 
 ### npart
 
 #### LISTCAT
 
-****\[NPART = { identifier | mask }\]****
+****[NPART = { identifier &#124; mask }]****
 
 Network name of the transfer partner. The value of this parameter may
 be:
@@ -28,7 +25,7 @@ be:
 
 #### CFTPARM
 
-**\[NPART = { <u>PART</u> <u>value</u>| string }\]**
+**[NPART = { <u>PART</u> <u>value</u>&#124; string }]**
 
 The default network identifier for the local site.
 
@@ -37,13 +34,13 @@ The default network identifier for the local site.
 
 #### DISPLAY
 
-**\[NPART = {string }\]**
+**[NPART = {string }]**
 
 <span id="npart_CFTPART"></span>
 
 #### CFTPART
 
-**\[NPART = {<u>ID value</u> | string 64}\] **
+**[NPART = {<u>ID value</u> &#124; string 64}] **
 
 Network identifier for the partner(s) for the selected transfers.
 

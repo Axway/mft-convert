@@ -1,13 +1,10 @@
 ---
-
-    title: Building  an API in C
-    linkTitle: Building API in C
+    title: "Building  an API in C"
+    linkTitle: "Building API in C"
     weight: 260
+---This section explains how to build Transfer CFT API samples in C. You can also refer to the {{< TransferCFT/axwayvariablesComponentShortName  >}} *User Guide [About APIs](../../../../about_this_document_zos/using_apis) topics* for information such as links to sample files.
 
----
-This section explains how to build Transfer CFT API samples in C. You can also refer to the {{< TransferCFT/axwayvariablesComponentShortName  >}} *User Guide <span style="font-style: normal;"><a href="../../../../about_this_document_zos/using_apis" class="MCXref xref">About APIs</a> topics</span>* for information such as links to sample files.
-
-The API samples and the makefile used to build them are located in your {{< TransferCFT/axwayvariablesComponentLongName  >}} <span class="code">`<installdir>\runtime\src\capi`</span> directory.
+The API samples and the makefile used to build them are located in your {{< TransferCFT/axwayvariablesComponentLongName  >}} `<installdir>\runtime\src\capi` directory.
 
 ## Prerequisites
 
@@ -15,7 +12,7 @@ The following steps require that you have Microsoft Visual Studio (VS) and a com
 
 ## Procedure
 
-1. From the Windows Start menu, select **All programs > Axway software > \[Transfer CFT name\] > Transfer CFT > Command Prompt**.  
+1. From the Windows Start menu, select **All programs > Axway software > [Transfer CFT name] > Transfer CFT > Command Prompt**.  
     This opens a command window, which executes profile.bat.
 1. In the same command window, initialize the VS environment by executing the appropriate vcvarsall.bat based on your system architecture.
     -   Windows 32 bits: `<ProgramFiles>\<VS directory>\VC\vcvarsall.bat x86`
@@ -30,7 +27,7 @@ The following steps require that you have Microsoft Visual Studio (VS) and a com
 
 ## Results
 
-The <span class="code">`nmake `</span>command generates the following as either 32-bit or 64-bit executable programs, depending on the Transfer CFT architecture. The current directory contains the generated object files and executable programs:
+The `nmake `command generates the following as either 32-bit or 64-bit executable programs, depending on the Transfer CFT architecture. The current directory contains the generated object files and executable programs:
 
 - api2xmp1.exe
 - api2xmp2.exe
@@ -40,7 +37,7 @@ The <span class="code">`nmake `</span>command generates the following as either 
 
 > **Note**
 >
-> The capi.makfile contains a variable called LIB\_BUFFEROVERFLOWU whose value may be set to bufferoverflowU.lib, or left empty depending on the compiler version. You may have to manually change this variable if it is incompatible with your compiler. Normally this variable is empty in 64-bit environments.
+> The capi.makfile contains a variable called LIB_BUFFEROVERFLOWU whose value may be set to bufferoverflowU.lib, or left empty depending on the compiler version. You may have to manually change this variable if it is incompatible with your compiler. Normally this variable is empty in 64-bit environments.
 
 ## Remove generated files
 

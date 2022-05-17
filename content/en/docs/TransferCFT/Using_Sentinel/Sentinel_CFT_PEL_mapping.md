@@ -1,11 +1,8 @@
 ---
-
-    title: Sentinel to Transfer CFT to InterPEL mapping
-    linkTitle: Sentinel to Transfer CFT to InterPEL mapping
-    weight: 270
-
----
-The following tables list parameter correspondence between Transfer CFT, Sentinel, and InterPEL. You find this mapping using in migrating from InterPEL to Transfer CFT.
+    title: "Sentinel to Transfer CFT to InterPEL mapping"
+    linkTitle: "Sentinel to Transfer CFT to InterPEL mapping"
+    weight: 260
+---The following tables list parameter correspondence between Transfer CFT, Sentinel, and InterPEL. You find this mapping using in migrating from InterPEL to Transfer CFT.
 
 > **Note**
 >
@@ -15,12 +12,10 @@ The following tables list parameter correspondence between Transfer CFT, Sentine
 
 ### Roles
 
-QQQ\_QQQ\_QQQ removed useless colspans
-
 
 | Sentinel<br/> attribute | Data type  | Length  | Description  | Transfer CFT  | InterPEL Core  | InterPEL MVS  |
 | --- | --- | --- | --- | --- | --- | --- |
-| Direction  | Integer  | -  | S: The file is sent (Sender).<br/> R: The file is received (Receiver). | DIRECT  | From direction:<br/> "R" "E" "B" | TYPEREQ={S|M or C}  |
+| Direction  | Integer  | -  | S: The file is sent (Sender).<br/> R: The file is received (Receiver). | DIRECT  | From direction:<br/> "R" "E" "B" | TYPEREQ={S&#124;M or C}  |
 | IsServer  | Integer  | -  | 1: The Sender or the Receiver is a Server.<br/> 0: The Sender the Receiver is a Requester. | FLAG  | From mode:<br/> Initiator "R" Responder "S" | MLHMODR - Initiator “R” Responder “S” (depending on the STOSR parameter)  |
 
 
@@ -94,15 +89,13 @@ The product that sends the events is identified with the following:
 
 | Sentinel  | Data type  | Length  | Description  | Transfer CFT  | InterPEL Core  | InterPEL MVS  |
 | --- | --- | --- | --- | --- | --- | --- |
-| EarliestDate  | Date  | N/A  | Date on which the validity period begins.  | DATEM (Catalog)  | From date_to_begin: date  | SDATE {aaqqq | +n}  |
+| EarliestDate  | Date  | N/A  | Date on which the validity period begins.  | DATEM (Catalog)  | From date_to_begin: date  | SDATE {aaqqq &#124; +n}  |
 | EarliestTime  | Time  | N/A  | Time at which the validity period begins.  | TIMEM (Catalog)  | From date_to_begin: time  | HSDEB  |
 | LatestDate  | Date  | N/A  | Date on which the validity period ends.  | DATEMAX (Catalog)  | From date_to_end: date  | N/A  |
 | LatestTime  | Time  | N/A  | Time at which the validity period ends.  | TIMEMAX (Catalog)  | From date_to_end: time  | HSFIN  |
 
 
 ### Transfer dates and times
-
-QQQ\_QQQ\_QQQ
 
 
 | Sentinel  | Data type  | Length  | Description  | Name in  | InterPEL Core  | InterPEL MVS  |
@@ -117,8 +110,8 @@ QQQ\_QQQ\_QQQ
 | StartTime  | Time  | N/A  | If the value of the State attribute is:<br/> • SENT: The value of this attribute is the local time at which the Sender began sending the transfer.<br/> • RECEIVED: The value of this attribute is the local time at which the Receiver began receiving the transfer.<br/> These times are expressed in hh:mn:ss format. | From TIMEB (Catalog)  | From date_begin: time  |  MLHHEUDT<br/> (MVS does not exist in Pelica2 requests) |
 | EndDate  | Date  | N/A  | If the value of the State attribute is:<br/> • SENT: The value of this attribute is the date on which the Sender stopped sending the transfer.<br/> • RECEIVED: The value of this attribute is the date on which the Receiver stopped receiving the transfer.<br/> These dates are expressed in dd.mm.yyyy format. | From DATEE (Catalog)  | From date_end: date  |  MLHDATFT  |
 | EndTime  | Time  | N/A  | If the value of the State attribute is:<br/> • SENT: The value of this attribute is the local time at which the Sender stopped sending the transfer.<br/> • RECEIVED: The value of this attribute is the local time at which the Receiver stopped receiving the transfer.<br/> These times are expressed in hh:mn:ss format. | From TIMEE (Catalog)  | From date_end: time  |  MLHHEUFT  |
-| RequestCreationDate  | Date  | N/A  | If the value of the State attribute is:<br/> • SENT: The value of this attribute is local date of the creation of the file on the Sender side.<br/> • <span >RECEIVED: The value of this attribute is the date of the creation of the file on the Sender side. </span><br/> <span >ITP: transfer request creation date</span> | From FDATE (Catalog)  | From date_create: date  |  MLHDATR  |
-| RequestCreationTime  | Time  | N/A  | If the value of the State attribute is:<br/> • SENT: The value of this attribute is local time of the creation of the file on the Sender side.<br/> • <span >RECEIVED: The value of this attribute is the time of the creation of the file on the Sender side. </span><br/> <span >ITP: transfer request creation time.</span> | From FTIME (Catalog)  | From date_create: time  |  MLHTIMR  |
+| RequestCreationDate  | Date  | N/A  | If the value of the State attribute is:<br/> • SENT: The value of this attribute is local date of the creation of the file on the Sender side.<br/> • RECEIVED: The value of this attribute is the date of the creation of the file on the Sender side.<br/> ITP: transfer request creation date | From FDATE (Catalog)  | From date_create: date  |  MLHDATR  |
+| RequestCreationTime  | Time  | N/A  | If the value of the State attribute is:<br/> • SENT: The value of this attribute is local time of the creation of the file on the Sender side.<br/> • RECEIVED: The value of this attribute is the time of the creation of the file on the Sender side.<br/> ITP: transfer request creation time. | From FTIME (Catalog)  | From date_create: time  |  MLHTIMR  |
 | TransmissionDuration  | Integer  | N/A  | Transfer duration, expressed in seconds.  | From TIMES (Catalog)  | date_end-date_begin  | MLHDATDT - MLHDATFT  |
 
 
@@ -150,8 +143,6 @@ QQQ\_QQQ\_QQQ
 
 ## Transfer size
 
-QQQ\_QQQ\_QQQ
-
 
 | Sentinel attribute  | Data type  | Length  | Description  | Transfer CFT | InterPEL Core  | InterPEL MVS  |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -161,18 +152,17 @@ QQQ\_QQQ\_QQQ
 
 ### Transfer structure and content
 
-QQQ\_QQQ\_QQQ
-
 
 | Sentinel attribute  | Data type  | Length  | Description  | Transfer CFT | InterPEL Core  | InterPEL MVS  |
 | --- | --- | --- | --- | --- | --- | --- |
-| CommandType  | String  | 1  |  • F: File transfer<br/> • M: Message transfer<br/> • A: Message reply<br/> • N: Message nack | TYPE  | type F or M (ack/nack is in "State")  | TYPEREQ={S|C or M} |
-| <span >FileOrganization (ITP Core :</span><span >FileOrganisation)</span>  | String  | 25  |  • org_sequential: The transferred data is not indexed.<br/> • indexed: The transferred data is indexed.<br/> • direct: The transferred data is assigned relative access. | FORG  | file_org  | GENFILE FORG={AUTO|SEQ|…}  |
-| FileType  | String  | 60  | B: The transferred file is a binary file.<br /> J, T, O, X: The transferred file is a text file.  | FTYPE  | file_type  | GENFILE RECFM= {FB | … }  |
+| CommandType  | String  | 1  |  • F: File transfer<br/> • M: Message transfer<br/> • A: Message reply<br/> • N: Message nack | TYPE  | type F or M (ack/nack is in "State")  | TYPEREQ={S&#124;C or M} |
+| FileOrganization (ITP Core :FileOrganisation)  | String  | 25  |  • org_sequential: The transferred data is not indexed.<br/> • indexed: The transferred data is indexed.<br/> • direct: The transferred data is assigned relative access. | FORG  | file_org  | GENFILE FORG={AUTO&#124;SEQ&#124;…}  |
+| FileType  | String  | 60  | B: The transferred file is a binary file.  | FTYPE  | file_type  | GENFILE RECFM= {FB &#124; … }  |
+| - " -  | - " -  | - " -  | J, T, O, X: The transferred file is a text file.  | - " -  | - " -  | - " -  |
 | RecordNumber  | Integer  | N/A  | Number of record in the file. This size is expressed in bytes. <br/> <blockquote> **Note**<br/> For PeSIT, this value sent is crosschecked by both the sender and receiver.<br/> </blockquote>  | FREC  | rec_count  | MLHNBRER  |
 | RecordFormat  | String  | 64  |  • F: Fixed - The transferred data contains fixed-length records.<br/> • V: Variable - The transferred data contains variable-length records.<br/> • U: Undefined - The structure of the transferred data is unknown. | FRECFM  | xfer_rec_fmt:<br/> "F", "V",<br/> "S": Stream<br/> "T" : Text |  MLH1RECF  |
 | RecordSize  | Integer  | N/A  | If the value of RecordFormat attribute is fixed, the value of this attribute is the size of all records in the transferred file, expressed in bytes.<br/> If the value of RecordFormat is variable or undefined, the value of this attribute is the size of the largest record in the transferred file, expressed in bytes. | FLRECL  | rec_len  | GENFILE LRECL=nnn  |
-| Transcoding  | <span >Integer </span><span >(ITP Core : String)</span>  | (ITP Core: 25)  | Character code of the transferred data:<br/> • A: ASCII<br/> • B: Binary<br/> • E: EBCDIC | FCODE  | From: xfer_data_code,data_code:<br/> A/AT: ASCII (with Transco)<br/> E/ET: EBCDIC (with Transco)<br/> B/BT: Binary (with Transco)<br/> U/UT: Undefined (with Transco) |  FILECODE {A|E|B}  |
+| Transcoding  | Integer (ITP Core : String)  | (ITP Core: 25)  | Character code of the transferred data:<br/> • A: ASCII<br/> • B: Binary<br/> • E: EBCDIC | FCODE  | From: xfer_data_code,data_code:<br/> A/AT: ASCII (with Transco)<br/> E/ET: EBCDIC (with Transco)<br/> B/BT: Binary (with Transco)<br/> U/UT: Undefined (with Transco) |  FILECODE {A&#124;E&#124;B}  |
 | TranslationTableId  | String  | 25  | Name of the local translation table use during the transfer (if any).  | XLATE  | N/A (data_code, not set)  | N/A  |
 | BlockSize  | Integer  | N/A  | File block size (used by some OS)  | From FBLKSIZE (Catalog)  | block_size  | N/A  |
 

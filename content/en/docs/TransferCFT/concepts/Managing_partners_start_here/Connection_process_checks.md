@@ -1,11 +1,8 @@
 ---
-
-    title: Connection  process checks
-    linkTitle: Connection process checks
-    weight: 260
-
----
-This topic describes the Transfer CFT mechanism for performing checks
+    title: "Connection  process checks"
+    linkTitle: "Connection process checks"
+    weight: 250
+---This topic describes the Transfer CFT mechanism for performing checks
 on connection.
 
 ## Explicit parameter setting
@@ -13,7 +10,7 @@ on connection.
 The notation convention for the local identifier values in the examples
 indicated in this paragraph (ID, IPART, PART parameters) begins with the
 character ID as its scope is limited to the local Transfer CFT. For example:
-IDPARM0, ID\_LOCAL, ID\_A.
+IDPARM0, ID_LOCAL, ID_A.
 
 The example below indicates the values of the parameters, defined in
 [Partner naming](../partner_naming_conventions), in the parameter setting and catalog to allow parties
@@ -23,12 +20,12 @@ to mutually recognize each other.
 
 ![](/Images/TransferCFT/Recongnition_explicit_parameter_setting.gif)
 
-To send a file with a defined IDF ID\_EM to partner B, corresponding
+To send a file with a defined IDF ID_EM to partner B, corresponding
 command is:
 
 `     SEND     PART       =     ID_B,          IDF       =     ID_EM,          ....`
 
-To receive a file with a defined IDF (ID\_REC) from partner B, corresponding
+To receive a file with a defined IDF (ID_REC) from partner B, corresponding
 command is:
 
 `     RECV     PART       =     ID_B,          IDF       =     ID_REC,          ....`

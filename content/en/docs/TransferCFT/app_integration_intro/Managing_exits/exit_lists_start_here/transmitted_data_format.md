@@ -1,11 +1,8 @@
 ---
-
-    title: Critera file and data format
-    linkTitle: Transmitted data format
+    title: "Critera file and data format"
+    linkTitle: "Transmitted data format"
     weight: 320
-
----
-This section describes  the criteria file format, which corresponds to
+---This section describes  the criteria file format, which corresponds to
 the system version, and the physical characteristics
 of the transmitted data.
 
@@ -31,7 +28,7 @@ Where:
 
 ## Format of sent records
 
-Indicates the file format of the communication area, where values are <u>1</u>, 2 C, T, J, or X (<span class="code">`1 `</span>is the default).
+Indicates the file format of the communication area, where values are <u>1</u>, 2 C, T, J, or X (`1 `is the default).
 
 ****Format 1****
 
@@ -98,7 +95,7 @@ The fields are as described in the following table, where the field size depends
 
 Each field is separated by a comma.
 
-For example: <span class="code">`S,X,X,X,MARTIN,PARIS,BIN,L1111482,2,,128,20191211,11481147,,,,,0,CP NONE`</span>
+For example: `S,X,X,X,MARTIN,PARIS,BIN,L1111482,2,,128,20191211,11481147,,,,,0,CP NONE`
 
 ****Format T: TSV - Tab Separated Value****
 

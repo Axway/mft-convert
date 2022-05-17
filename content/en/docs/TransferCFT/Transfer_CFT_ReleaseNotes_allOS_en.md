@@ -1,11 +1,8 @@
 ---
-
-    title: Axway AMPLIFY Transfer CFT 3.8 Release Notes
-    linkTitle: Release Notes
+    title: "Axway Amplify Transfer CFT 3.10 Release Notes"
+    linkTitle: "Release Notes"
     weight: 30
-
----
--   [New features and enhancements](#New)
+----   [New features and enhancements](#New)
 - [Platform features](#Platform)
 - [Limitations](#Limitations)
 - [Prerequisites](#Prerequisites)
@@ -20,70 +17,80 @@
 
 This section lists new features and product enhancements added since the last major Transfer CFT release.
 
-- Support file transfers using Google Cloud Storage on Linux x64 systems.
-- Enhanced Internal Access Management to use custom roles and privileges, CFTROLE and CFTPRIV objects, which are defined in the general configuration.
-- Support for additional languages, French, Portuguese, Spanish in the Transfer CFT user interface.
+- Support for Azure Blob Storage (add here as well as below?)
+- You can now use the Group of files feature with sending to and receiving from:
+    -   Amazon S3
+    -   Google Cloud Storage
+    -   Microsoft Azure Blob Storage
+
+<!-- -->
+
+- Added an audit log that tracks user authentication, administration, configuration, and denied transfer actions. This feature can be useful in helping to diagnose Transfer CFT production problems or for security purposes.
 
 ### Minor enhancements
 
-- You can now customize the **Transfers** page in the user interface to manage the layout display.
-- You can define custom catalog filters.
-- Select transfers with CFTUTIL LISTCAT and DISPLAY commands using absolute and relative date and time criteria.
-- Added the NIDF field in accounting files (in V24 structures).
-- Add accounting API samples for C on IBM i.
+- Support 64-character identifiers for CFTSSH and PKIKEY.
+- Added new UCONF `pki.expiration.check` parameters to enable warnings and indicate certificate expiration details such as the threshold in the CFTLOG.
+- Improved processing and exec script management by adding a new process responsible for starting and monitoring a new process. The most noticeable improvement is an increase in transfer throughput on z/OS platforms.
+- You can customize the columns when exporting a CSV file from the Transfer CFT UI.
 
 <span id="Platform"></span>
 
 ## Platform features
 
-The table below lists the available Transfer CFT 3.8 features according to the version and operating system where they were introduced.
-
-QQQ\_QQQ\_QQQ
+The table below lists the available Transfer CFT 3.9 features according to the version and operating system where they were introduced.
 
 
-| Features  | Windows  | UNIX  | z/OS  | IBM i  | HP NS  |
-| --- | --- | --- | --- | --- | --- |
-| Google Cloud storage  | -  | 3.8  | -  | -  | -  |
-| Flow Manager  | 3.3.2  | 3.3.2  | 3.3.2  | 3.3.2  | 3.3.2  |
-| Flow Manager SaaS  | 3.6  | 3.6  | 3.6  | 3.6  | 3.6  |
-| Using tracking with<br/> Edge Agent | 3.5  | 3.5  | 3.5  | 3.5  | 3.5  |
-| SAML  | 3.5  | 3.5  | 3.6  | 3.6 SP1  | 3.5  |
-| REST API  | 3.2.4  | 3.2.4  | 3.2.4  | 3.2.4  | 3.2.4  |
-| New browser-based user interface  | 3.3.2  | 3.3.2  | 3.3.2  | 3.3.2  | 3.3.2  |
-| Central Governance management  | 3.1.3  | 3.1.3  | 3.1.3  | 3.1.3  | 3.2.4  |
-| Folder monitoring  | 3.1.2  | 3.1.2  | 3.1.3<sup>4</sup>  | 3.1.3<sup>4</sup>  | 3.2.4  |
-| Secure Relay  | 3.1.2  | 3.1.2  | 3.1.3  | 3.1.3  | -  |
-| Multi-node architecture  | 3.0.1  | 3.0.1<sup>1</sup>  | 3.0.1  | -  | -  |
-| TrustedFile (PGP S-MIME CMS)  | 3.0.1<sup>3</sup>  | 3.0.1<sup>1</sup>  | 3.0.1  | -  | -  |
-| PassPort AM  | 2.7.1  | 2.7.1<sup>1</sup>  | 3.0.1  | 3.0.1  | 3.2.4  |
-| SFTP  | 3.4  | 3.4 <sup>5</sup>  | 3.5 <sup>6</sup>  | -  | 3.6<sup>6</sup>  |
-| IPv6  | 2.7.1  | 2.7.1<sup>1</sup>  | 2.7.1  | 2.7.1  | 3.3.2  |
-| pTCP  | 2.7.1  | 2.7.1<sup>1</sup>  | -  | -  | -  |
-| UDT (excluding multi-node)  | 2.7.1  | 2.7.1<sup>2</sup>  | -  | -  | -  |
-| SOCKS  | 2.7.1  | 2.7.1  | 3.0.1  | 2.7.1  | 3.3.2  |
-| Heartbeat functionality  | 2.7.1  | 2.7.1  | 2.7.1  | 2.7.1  | 3.2.4  |
-| Bandwidth control  | 3.0.1  | 3.0.1  | 3.0.1  | 3.0.1  | 3.3.2  |
-| System users (USERCTRL)  | 2.7.0  | 2.6.2  | 3.2.2  | 3.1.3  | -  |
+| Function  | Windows  | UNIX  | z/OS  | IBM i  | HP NS  | OpenVMS  |
+| --- | --- | --- | --- | --- | --- | --- |
+| should we add Azure Blob?  |   |   |   |   |   |   |
+| should we add Am S3?  |   |   |   |   |   |   |
+| Google Cloud storage  | 3.9  | 3.8  | -  | -  | -  | -  |
+| Flow Manager  | 3.3.2  | 3.3.2  | 3.3.2  | 3.3.2  | 3.3.2  | -  |
+| Flow Manager SaaS  | 3.6  | 3.6  | 3.6  | 3.6  | 3.6  | -  |
+| Using tracking with<br/> Edge Agent | 3.5  | 3.5  | 3.5  | 3.5  | 3.5  | 3.5  |
+| SAML  | 3.5  | 3.5  | 3.6  | 3.6 SP1  | 3.5  | -  |
+| REST API  | 3.2.4  | 3.2.4  | 3.2.4  | 3.2.4  | 3.2.4  | 3.9  |
+| Browser-based user interface  | 3.3.2  | 3.3.2  | 3.3.2  | 3.3.2  | 3.3.2  | 3.9  |
+| Central Governance  | 3.1.3  | 3.1.3  | 3.1.3  | 3.1.3  | 3.2.4  | -  |
+| Folder monitoring  | 3.1.2  | 3.1.2  | 3.1.3<sup>4</sup>  | 3.1.3<sup>4</sup>  | 3.2.4  | 3.1.3  |
+| Secure Relay  | 3.1.2  | 3.1.2  | 3.1.3  | 3.1.3  | -  | -  |
+| Multi-node architecture  | 3.0.1  | 3.0.1<sup>1</sup>  | 3.0.1  | -  | -  | 3.0.1  |
+| TrustedFile (PGP S-MIME CMS)  | 3.0.1<sup>3</sup>  | 3.0.1<sup>1</sup>  | 3.0.1  | -  | -  | -  |
+| PassPort AM  | 2.7.1  | 2.7.1<sup>1</sup>  | 3.0.1  | 3.0.1  | 3.2.4  | 2.7.1  |
+| SFTP  | 3.4  | 3.4 <sup>5</sup>  | 3.5 <sup>6</sup>  | 3.9  | 3.6<sup>6</sup>  | -  |
+| IPv6  | 2.7.1  | 2.7.1<sup>1</sup>  | 2.7.1  | 2.7.1  | 3.3.2  | 2.7.1  |
+| pTCP  | 2.7.1  | 2.7.1<sup>1</sup>  | -  | -  | -  | -  |
+| UDT (excluding multi-node)  | 2.7.1  | 2.7.1<sup>2</sup>  | -  | -  | -  | -  |
+| SOCKS  | 2.7.1  | 2.7.1  | 3.0.1  | 2.7.1  | 3.3.2  | 2.7.1  |
+| Heartbeat functionality  | 2.7.1  | 2.7.1  | 2.7.1  | 2.7.1  | 3.2.4  | 2.7.1  |
+| Bandwidth control  | 3.0.1  | 3.0.1  | 3.0.1  | 3.0.1  | 3.3.2  | 3.0.1  |
+| System users (USERCTRL)  | 2.7.0  | 2.6.2  | 3.2.2  | 3.1.3  | -  | -  |
 
 
 <sup>1</sup>Enabled for all UNIX except SCO, UnixWare, IRIX, Tru64.
+&lt;/p>
 
 <sup>2</sup> Enabled only for Linux-x86-32, Linux-x86-64, Linux-ia64-64.
+&lt;/p>
 
 <sup>3</sup>Enabled for versions 3.0.1 to 3.3.2 on Windows 32-bit systems. As of Transfer CFT 3.4, Trusted File is supported on Windows 64-bit systems.
+&lt;/p>
 
 <sup>4</sup>Limited to USS (z/OS) and IFS (IBM i) systems. On IBM i, native files folder monitoring is available for Transfer CFT 3.3.2 SP2 and higher.
+&lt;/p>
 
-<sup>5</sup>Available on AIX, HPUX ia64, Linux, Solaris, Windows
+<sup>5</sup>Available on AIX, HPUX ia64, Linux, Solaris, Windows.
+&lt;/p>
 
-<sup>6</sup>For UNIX type files only
-
+<sup>6</sup>For UNIX type files only.
+&lt;/p>
 <span id="User"></span>
 
 #### User interface comparison
 
 
-| Functionality  | Central Governance<br /> <span > or Flow Manager </span> | Transfer CFT user interface<br />  |
+| Functionality  | Central Governance<br /> or Flow Manager | Transfer CFT user interface<br />  |
 | --- | --- | --- |
 | Administration | X  | X  |
 | Configuration  | X*  | X  |
@@ -120,6 +127,7 @@ The following non-exhaustive table lists shared file systems that have been test
 | AIX  | GPFS (recommended), NFSv4  | NFSv3, CXFS, VeritasSF  |
 | HP-UX  | NFSv4  | NFSv3, CXFS, VeritasSF  |
 | Linux-x86  | GPFS (recommended), NFSv4, GFS2, AWS EFS  | NFSv3, CXFS, ACFS, OCFSv1, OCFSv2, QFS, VeritasSF  |
+| OpenVMS  | RMS  |   |
 | Solaris  | NFSv4  | NFSv3, CXFS, QFS, VeritasSF  |
 | Windows-x86  | SMB/CIFS, GPFS  | CXFS, NFS  |
 | z/OS  | Sharing DASD across Sysplex  |   |
@@ -129,14 +137,9 @@ The following non-exhaustive table lists shared file systems that have been test
 
 ## Limitations
 
-- Installation limitations include:
-    -   For a Windows cluster, all machines in the cluster must have the same service definition (same name, display name, etc.)
-    -   You cannot use the installation template file (initialize.properties) in a directory where the directory name contains accents
-- SFTP implementation does not support messages or the store-and-forward functionality
-- When using folder monitoring on behalf of another user (USERID):
-    -   Linux: You cannot use both USERCTRL and events modes
-    -   This is not supported in the obsolete folder configuration mode via UCONF parameters
-- When using AWS, Transfer CFT Windows presently only supports HTTP proxies (not HTTPS proxies)
+ 
+
+ 
 
 <span id="Prerequisites"></span>
 
@@ -152,20 +155,23 @@ Transfer CFT on Windows requires the **Visual C++ Redistributable Package for Vi
 
 ### Secure Relay
 
-Transfer CFT delivers an embedded Secure Relay MA 2.7.3. You must then additionally install the Secure Relay RA 2.7.3. Please refer to the *Secure Relay* [Installation Guide](https://docs.axway.com/bundle/SecureRelay_273_InstallationGuide_allOS_en_HTML5/page/Content/AxwayStartPageRA_install.htm) for details.
+Transfer CFT delivers an embedded Secure Relay MA 2.7.4. You must then additionally install the Secure Relay RA 2.7.4. Please refer to the *Secure Relay* [Installation Guide](https://docs.axway.com/bundle/SecureRelay_273_InstallationGuide_allOS_en_HTML5/page/Content/AxwayStartPageRA_install.htm) for details.
 
 <span id="Deprecat"></span>
 
 ## Deprecated functions
 
-The following section lists deprecated functions for Transfer CFT version 3.7 and higher:
+The following section lists deprecated functions for Transfer CFT version 3.10 and higher
 
-- Deprecated the former Habilitation Access Management method (SECUTIL).
-
-The following section lists deprecated functions for Transfer CFT version 3.5 and higher:
-
-- Referencing a certificate with the PKIFNAME using the format (PKIFNAME=TXT://certificate) is no longer supported.
-- Deprecated the PAD parameter.
+- IBM i commands:
+    -   XFBOVRDBF
+    -   CFTMG_ALC
+    -   OVRDBF_ALL
+    -   CFTTCOM_@
+    -   FFT10412P, FFT1043P, UFT10412P and UFT1043P
+    -   CFTINS301
+    -   SI_PGM_BT2
+    -   T_QXXCHGDT
 
 <span id="Not supported"></span>
 
@@ -210,6 +216,14 @@ For a comprehensive list of supported platforms for Transfer CFT, please refer t
 
 - Protocol: EBICS is deprecated in Transfer CFT 3.4, with an EOL scheduled for 2020.
 
+### Discontinued in Transfer CFT 3.10
+
+- Discontinued the Transfer CFT PKI connector (pki.type=passport)
+
+### Discontinued in Transfer CFT 3.9
+
+- Discontinued the former Habilitation Access Management method (SECUTIL).
+
 ### Discontinued in Transfer CFT 3.8
 
 - PARTFNAM and PKIFNAME parameters in the CFTPARM object are obsolete (Windows/UNIX)
@@ -229,7 +243,7 @@ For a comprehensive list of supported platforms for Transfer CFT, please refer t
 
 ### Discontinued in Transfer CFT 3.5
 
-- Removed the cipher suite 9 (SSL\_RSA\_WITH\_DES\_CBC\_SHA).
+- Removed the cipher suite 9 (SSL_RSA_WITH_DES_CBC_SHA).
 
 ### Discontinued in Transfer CFT 3.4
 
@@ -238,15 +252,15 @@ The following list summarizes discontinued functions for Transfer CFT version 3.
 ****OS specific****
 
 - z/OS Removed the CFTMI23A executable (COM and catalog migration utility) for migrating from version 2.3.2
-- IBM i - Removed the SI\_TEMPLIB library and the CLEANER/BACKGRND program
+- IBM i - Removed the SI_TEMPLIB library and the CLEANER/BACKGRND program
 
 ****Platform support****
 
 Axway no longer delivers 32-bit versions of Transfer CFT, but does offer an automatic migration from an existing 32-bit version to Transfer CFT 3.4 64-bit on 64-bit OS.
 
-### Discontinued in Transfer CFT 3.1.3 and higher
+### Discontinued in Transfer CFT 3.1.3
 
-The following list summarizes discontinued functions for Transfer CFT version 3.1.3 and higher. Deprecated and discontinued features are non operational in the new version when you migrate, even though they display in the upgraded configuration. You should check for, and replace, these features as part of the migration procedure.
+The following list summarizes discontinued functions for Transfer CFT version 3.1.3. Deprecated and discontinued features are non operational in the new version when you migrate, even though they display in the upgraded configuration. You should check for, and replace, these features as part of the migration procedure.
 
 ****Interoperability****
 
@@ -268,13 +282,13 @@ This section describes documentation enhancements and related documentation.
 
 For more information about Transfer CFT, refer to:
 
-- Transfer CFT 3.8 User Guide
-- Transfer CFT 3.8 Security Guide
-- Transfer CFT 3.8 UNIX Installation and Operations Guide
-- Transfer CFT 3.8 Windows Installation and Operations Guide
-- Transfer CFT 3.8 z/OS Installation and Operations Guide
-- Transfer CFT 3.8 IBM i Installation and Operations Guide
-- Transfer CFT 3.8 HP NonStop Installation and Operations Guide
+- Transfer CFT 3.9 User Guide
+- Transfer CFT 3.9 Security Guide
+- Transfer CFT 3.9 UNIX Installation and Operations Guide
+- Transfer CFT 3.9 Windows Installation and Operations Guide
+- Transfer CFT 3.9 z/OS Installation and Operations Guide
+- Transfer CFT 3.9 IBM i Installation and Operations Guide
+- Transfer CFT 3.9 HP NonStop Installation and Operations Guide
 
 <span id="Support"></span>
 
@@ -283,4 +297,4 @@ For more information about Transfer CFT, refer to:
 The Axway Global Support team provides worldwide 24 x 7 support for customers with active support agreements.  
 Email <support@axway.com> or visit Axway Sphere at [https://support.axway.com](https://support.axway.com/).
 
-Copyright © 2021 Axway. All rights reserved.
+Copyright © 2022 Axway. All rights reserved.

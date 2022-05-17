@@ -1,11 +1,8 @@
 ---
-
-    title: Use  interactive mode 
-    linkTitle: Using interactive mode
-    weight: 140
-
----
-CFTUTIL can be used in an interactive mode, which consists of several
+    title: "Use  interactive mode "
+    linkTitle: "Using interactive mode"
+    weight: 130
+---CFTUTIL can be used in an interactive mode, which consists of several
 operating modes that use the same CFTUTIL operations regardless of the operating system.
 
 <span id="Data_entry_in_command_line"></span>
@@ -19,9 +16,9 @@ screen by default, or to a file. For more information see the CONFIG command.
 
 In this syntax:
 
-- ‘file\_symb’ designates a character specific to
+- ‘file_symb’ designates a character specific to
     each environment. Refer to the Transfer CFT Operating Guide that corresponds
-    to your OS
+    to your OS:
 
 
 | OS |  file_symb |
@@ -30,32 +27,32 @@ In this syntax:
 | UNIX |  @ |
 
 
-- file\_in is a file
+- file_in is a file
     containing the Transfer CFT commands
-- file\_out is a file
+- file_out is a file
     into which the results of the commands are written
 
 Specifying parameters is optional, the default values are the
 standard input and output respectively.
 
 The CFTUTIL module is activated in the Transfer CFT executable file
-directory. The file\_in and file\_out designate the complete path or path
+directory. The file_in and file_out designate the complete path or path
 relative to the current directory.
 
 On all systems:
 
 - CFTUTIL standard
     input and standard output are equivalent to:
-    -   CFTUTIL ‘file\_symb’
+    -   CFTUTIL ‘file_symb’
         CFTIN CFTOUT
 - CFTIN and CFTOUT
     are reserved words corresponding to the standard input and output
 - Standard input
-    and output to a file: CFTUTIL ‘file\_symb’ CFTIN file\_out
+    and output to a file: CFTUTIL ‘file_symb’ CFTIN file_out
 - File input and
-    standard output: CFTUTIL ‘file\_symb’ file\_in CFTOUT
+    standard output: CFTUTIL ‘file_symb’ file_in CFTOUT
 - File input, file
-    output: CFTUTIL ‘file\_symb’ file\_in file\_out
+    output: CFTUTIL ‘file_symb’ file_in file_out
 
 #### CONFIG TYPE=...,FNAME=...
 

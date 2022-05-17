@@ -1,11 +1,8 @@
 ---
-
-    title: Administration
-    linkTitle: Administration
-    weight: 160
-
----
-This section describes common management tasks that the {{< TransferCFT/axwayvariablesComponentShortName  >}} {{< TransferCFT/axwayvariablesComponentVersion  >}} administrator may need to perform. The described tasks are post-installation tasks, to set up, start, or maintain your {{< TransferCFT/axwayvariablesComponentShortName  >}} server.
+    title: "Administration"
+    linkTitle: "Administration"
+    weight: 150
+---This section describes common management tasks that the {{< TransferCFT/axwayvariablesComponentShortName  >}} {{< TransferCFT/axwayvariablesComponentVersion  >}} administrator may need to perform. The described tasks are post-installation tasks, to set up, start, or maintain your {{< TransferCFT/axwayvariablesComponentShortName  >}} server.
 
 [Manage user rights](../internal_a_m_start_here/user_rights_overview) - Describes how to use the two basic types of rights needed to enable {{< TransferCFT/axwayvariablesComponentLongName  >}} flows - the rights required to perform activities, such as starting or configuring Transfer CFT, and the rights that apply to files themselves.
 

@@ -1,18 +1,15 @@
 ---
-
-    title: wscan
-    linkTitle: wscan
-    weight: 3780
-
----
-<span id="wscan"></span>
+    title: "wscan"
+    linkTitle: "wscan"
+    weight: 3800
+---<span id="wscan"></span>
 
 ### wscan
 
 #### CFTCOM
 
-\[WSCAN = {60
-| n}\]  {1..3600}
+[WSCAN = {60
+&#124; n}]  {1..3600}
 
 Enter the frequency (in seconds) with which the {{< TransferCFT/axwayvariablesComponentShortName  >}} scans the communication
 file:
@@ -25,7 +22,7 @@ file:
 
 #### CFTCAT
 
-\[WSCAN = {5 | n}\]  {1..60}
+[WSCAN = {5 &#124; n}]  {1..60}
 
 Enter the frequency (in minutes) with which Transfer CFT scans the catalog file when restarting a transfer:
 

@@ -1,11 +1,8 @@
 ---
-
-    title: Before the end of the transfer
-    linkTitle: Stage Before the end of the transfer
+    title: "Before the end of the transfer"
+    linkTitle: "Stage Before the end of the transfer"
     weight: 420
-
----
-If the user function manages file accessing, it must de-allocate the
+---If the user function manages file accessing, it must de-allocate the
 file.
 
 ### Fields to define
@@ -23,7 +20,7 @@ file.
 ### Field values
 
 
-| Field  | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
+| Field | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
 | --- | --- | --- | --- | --- |
 | mtype | 8 | 8 | 8 | 8 |
 | masc | = | * | = | * |

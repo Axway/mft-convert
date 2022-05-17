@@ -1,18 +1,15 @@
 ---
-
-    title: Configure exchanges that use SSL
-    linkTitle: Configure exchanges that use SSL
-    weight: 260
-
----
-There are two ways to configure Transfer CFT with Secure Relay using the TLS protocol:
+    title: "Configure exchanges that use SSL"
+    linkTitle: "Configure exchanges that use SSL"
+    weight: 250
+---There are two ways to configure Transfer CFT with Secure Relay using the TLS protocol:
 
 - End-to-end SSL: The remote peer communicates with Transfer CFT via Secure Relay (RA) using end-to-end SSL.
 - SSL termination: The remote peer communicates with Secure Relay (RA) through an SSL channel. In this scenario, the handshake occurs between the remote peer and the Secure Relay RA. The RA retrieves the key and certificate stored in Transfer CFT through the Master Agent (MA) in order to complete the handshake.
 
 The communication between the Master Agent (MA) and {{< TransferCFT/axwayvariablesComponentLongName  >}} occurs over a plain-text channel.
 
-<span class="autonumber"></span>End-to-end SSL compared with SSL termination
+End-to-end SSL compared with SSL termination
 
 ![](/Images/TransferCFT/sr_schema.png)
 
@@ -33,7 +30,7 @@ SSL termination in Secure Relay is possible using the internal PKI database. As 
     -   TYPE=TCP
     -   PROTOCOL=SR
 1. Define the mandatory parameters RECALLHOST, HOST, and SSLTERM.
-    -   RECALLHOST: The host address on which the Master Agent calls Transfer CFT when<span style="color: #ff0000;"> </span>Secure Relay receives an incoming call. If Transfer CFT and the Master Agent run of the same host, use the loopback network interface (for example, 127.0.0.1) instead of the public network interface.
+    -   RECALLHOST: The host address on which the Master Agent calls Transfer CFT when Secure Relay receives an incoming call. If Transfer CFT and the Master Agent run of the same host, use the loopback network interface (for example, 127.0.0.1) instead of the public network interface.
     -   HOST: Designates the network interface that is used on the Router Agent side.
     -   SSLTERM: Set this Boolean to NO for end-to-end SSL.
 
@@ -95,12 +92,13 @@ usercid = AXWMFTUSER,
 rootcid = AXWMFTCA,
 ciphlist = (47),
 passw = <user_cid_password>
-**NOTE**: You must enter a value in this field even if you are using "pki.type=cft", which normally does not require a password.
+NOTE
+: You must enter a value in this field even if you are using "pki.type=cft", which normally does not require a password.
 
  
 ```
 
-Here the CFTSSL object is used for incoming connections (direct=client).
+This CFTSSL object is used for incoming connections (direct=client).
 
 ```
 CFTSSL id = PESITSSL,
@@ -140,13 +138,13 @@ host = <remote_partner_host_address>
 
 #### Prerequisites
 
-- You require an installed Secure Relay Router Agent 2.7.3 that has a license for FIPS mode. Please refer to the *Secure Relay Router Agent 2.7.3 documentation* at [docs.axway.com](https://docs.axway.com/bundle) for more information.
+- You require an installed Secure Relay Router Agent 2.7.4 that has a license for FIPS mode. Please refer to the *Secure Relay Router Agent 2.7.4 documentation* at [docs.axway.com](https://docs.axway.com/bundle) for more information.
 - Your {{< TransferCFT/axwayvariablesComponentLongName >}} license key requires the FIPS option.
 
 #### Configure the Master Agent in {{< TransferCFT/axwayvariablesComponentLongName  >}}
 
-1. Go to the in the` $CFTDIRINSTALL/distrib/xsr/` folder, and rename the <span class="code">`iaik_jce-3.16.jar`</span> file as `iaik_jce-3.16.unused.`
-1. Move the <span class="code">`entrust-toolkit-8.0.36.jar`</span> file from the <span class="code">`$CFTDIRINSTALL/distrib/xsr/fips`</span> folder to the <span class="code">`$CFTDIRINSTALL/distrib/xsr/`</span> folder.
+1. Go to the in the` $CFTDIRINSTALL/distrib/xsr/` folder, and rename the `iaik_jce-3.16.jar` file as `iaik_jce-3.16.unused.`
+1. Move the `entrust-toolkit-8.0.36.jar` file from the `$CFTDIRINSTALL/distrib/xsr/fips` folder to the `$CFTDIRINSTALL/distrib/xsr/` folder.
 
 ## SSL termination with Secure Relay
 
@@ -218,7 +216,8 @@ usercid = AXWMFTUSER,
 rootcid = AXWMFTCA,
 ciphlist = (47),
 passw = <user_cid_password>
-**NOTE**: You must enter a value in this field even if you are using "pki.type=cft", which normally does not require a password.
+NOTE
+: You must enter a value in this field even if you are using "pki.type=cft", which normally does not require a password.
 
  
 ```

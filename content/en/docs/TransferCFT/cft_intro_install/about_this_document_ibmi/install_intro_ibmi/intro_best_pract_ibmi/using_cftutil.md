@@ -1,13 +1,10 @@
 ---
-
-    title: Using CFTUTIL Transfer CFT IBM i specific commands
-    linkTitle: Using CFTUTIL IBM i specific commands
+    title: "Using CFTUTIL Transfer CFT IBM i specific commands"
+    linkTitle: "Using CFTUTIL IBM i specific commands"
     weight: 290
+---## Line-mode commands
 
----
-## Line-mode commands
-
-The Transfer CFT utility CFTUTIL can accept line-mode commands. Enter the command at the <span class="code">`CFTUTIL > `</span>prompt and press ENTER to validate. To exit CFTUTIL, enter the<span class="code">` /end `</span>command.
+The Transfer CFT utility CFTUTIL can accept line-mode commands. Enter the command at the `CFTUTIL > `prompt and press ENTER to validate. To exit CFTUTIL, enter the` /end `command.
 
 ****Examples****
 
@@ -15,15 +12,17 @@ The Transfer CFT utility CFTUTIL can accept line-mode commands. Enter the comma
 
     Enter the selection or command at the prompt.
 
-    ``` > CFTUTIL
     ```
 
-- Enter the command <span class="code">`LISTCAT `</span>and press ENTER to confirm.
+     > CFTUTIL
+    ```
+
+- Enter the command `LISTCAT `and press ENTER to confirm.
     ```
     1:Input : > LISTCAT
     ```
 
-- Enter the command<span class="code">` /end `</span>and press ENTER to exit CFTUTIL.
+- Enter the command` /end `and press ENTER to exit CFTUTIL.
     ```
     1:Input : > /END
     ```
@@ -48,7 +47,7 @@ CFTUTIL PARAM('LISTPARM’ ‘TYPE=RECV')
 
 ### File passed as a parameter
 
-The following command runs the CFTUTIL utility, which reads the commands to be executed in the <span class="code">`scen.cft`</span> file and displays the results.
+The following command runs the CFTUTIL utility, which reads the commands to be executed in the `scen.cft` file and displays the results.
 
 ****Example****
 

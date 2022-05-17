@@ -1,13 +1,10 @@
 ---
-
-    title: Synchronous transfer request examples
-    linkTitle: Request examples
+    title: "Using WSTATES, WPHASES, and WPHASESTEPS in the SEND/RECV command"
+    linkTitle: "Using WSTATES, WPHASES, and WPHASESTEPS"
     weight: 280
+---This topic presents synchronous transfer request examples using the WSTATES or WPHASES/WPHASESTEPS parameters with the SEND/RECV command.
 
----
-This topic presents synchronous transfer request examples using the WSTATES or WPHASES/WPHASESTEPS parameters with the SEND/RECV command, or the SWAITCAT command.
-
-## WPHASES and WPHASESTEPS
+## Using WPHASES and WPHASESTEPS
 
 The WPHASES and WPHASESTEPS parameters allow for more precision and possibilities than using WSTATES alone.
 
@@ -31,7 +28,7 @@ CFTU00I SEND _ Correct (SWAITCAT_OK: reached phase Z, phasestep H, state Z)
 CFTU00I SEND _ Correct (part=paris,idf=t2,wphases=Z,wtimeout=40,ackstate=require)
 ```
 
-## WSTATES and WTIMEOUT examples
+## Using WSTATES and WTIMEOUT
 
 - Example 1: Transfer request using WSTATES
 - Example 2: Use a SEND with WSTATES and WTIMEOUT
@@ -130,56 +127,4 @@ Log
 7082 >...
 00 16/02/18 17:07:27 CFTT58I Requester transfer ended <IDTU=A000008L PART=paris IDF=BIN IDT=B181
 7082>...
-```
-
-## SWAITCAT example
-
-The examples describe how to use SWAITCAT to perform the following task, wstates is the best way to wait (or wphases).
-
-****<span id="SWAITCAT ex 1"></span>**Example: Execute a command once all transfers have completed******
-
-The following example is a way to execute a batch processing task using SWAITCAT, which is a task that you cannot perform using the SEND command with WSTATES.
-
-```
-config type=com,mediacom=tcpip,fname=xhttp://localhost:1765
- 
-send part=paris,ida=batch_proccesing,idf=t1
-char name=idtu1,init=%_CAT_IDTU%
-send part=paris,ida=batch_proccesing,idf=t2
-char name=idtu2,init=%_CAT_IDTU%
-send part=paris,ida=batch_proccesing,idf=t3
-char name=idtu3,init=%_CAT_IDTU%
-send part=paris,ida=batch_proccesing,idf=t4
-char name=idtu4,init=%_CAT_IDTU%
-swaitcat select='IDTU=="%idtu1%"',phases=X,phasesteps=X
-swaitcat select='IDTU=="%idtu2%"',phases=X,phasesteps=X
-swaitcat select='IDTU=="%idtu3%"',phases=X,phasesteps=X
-swaitcat select='IDTU=="%idtu4%"',phases=X,phasesteps=X
- 
-PRINT MSG='batch processing completed with ERROR = %_CMDRET%'
- 
-Output
-CFTU00I CONFIG _ Correct (type=com,mediacom=tcpip,fname=xhttp://localhost:1765)
-CFTU00I SEND _ Correct (IDT=B1817083 IDTU=A000008N )
-CFTU00I SEND _ Correct (part=paris,ida=batch_proccesing,idf=t1)
-CFTU00I CHAR _ Correct (name=IDTU1,init=A000008N)
-CFTU00I SEND _ Correct (IDT=B1817084 IDTU=A000008P )
-CFTU00I SEND _ Correct (part=paris,ida=batch_proccesing,idf=t2)
-CFTU00I CHAR _ Correct (name=IDTU2,init=A000008P)
-CFTU00I SEND _ Correct (IDT=B1817085 IDTU=A000008R )
-CFTU00I SEND _ Correct (part=paris,ida=batch_proccesing,idf=t3)
-CFTU00I CHAR _ Correct (name=IDTU3,init=A000008R)
-CFTU00I SEND _ Correct (IDT=B1817090 IDTU=A000008T )
-CFTU00I SEND _ Correct (part=paris,ida=batch_proccesing,idf=t4)
-CFTU00I CHAR _ Correct (name=IDTU4,init=A000008T)
-CFTU00I SWAITCAT _ Correct (SWAITCAT_OK: reached phase X, phasestep X, state X)
-CFTU00I SWAITCAT _ Correct (select='IDTU=="A000008N"',phases=X,phasesteps=X)
-CFTU00I SWAITCAT _ Correct (SWAITCAT_OK: reached phase X, phasestep X, state X)
-CFTU00I SWAITCAT _ Correct (select='IDTU=="A000008P"',phases=X,phasesteps=X)
-CFTU00I SWAITCAT _ Correct (SWAITCAT_OK: reached phase X, phasestep X, state X)
-CFTU00I SWAITCAT _ Correct (select='IDTU=="A000008R"',phases=X,phasesteps=X)
-CFTU00I SWAITCAT _ Correct (SWAITCAT_OK: reached phase X, phasestep X, state X)
-CFTU00I SWAITCAT _ Correct (select='IDTU=="A000008T"',phases=X,phasesteps=X)
- 
-batch processing completed with ERROR = 0
 ```

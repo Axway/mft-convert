@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer CFT commands
-    linkTitle: Command usage
+    title: "Transfer CFT commands"
+    linkTitle: "Command usage"
     weight: 200
-
----
-This chapter describes how to use Transfer CFT commands in a Tandem/Guardian environment.
+---This chapter describes how to use Transfer CFT commands in a Tandem/Guardian environment.
 
 ## About the commands
 
@@ -13,7 +10,7 @@ Transfer CFT offers a set of commands which can be used interactively or within 
 
 ### Prerequisites
 
-Prior to executing Transfer CFT commands, you must install them. If you have not already done so, perform the task as described in <a href="#Install" class="MCXref xref">Install the Guardian specific files</a>.
+Prior to executing Transfer CFT commands, you must install them. If you have not already done so, perform the task as described in [Install the Guardian specific files](#Install).
 
 You cannot use Transfer CFT Guardian 2.3.2 CFTUTIL commands with Transfer CFT {{< TransferCFT/PrimaryTransferCFTversionlong  >}}.
 
@@ -43,7 +40,7 @@ From the native command window enter the following to start, for example, CFTUTI
 
 ```
 $ YOURCO HOME > volume $DATA14.CFT32AIX
-$DATA14 CFT32AIX 1> **CFTUTIL**
+$DATA14 CFT32AIX 1> CFTUTIL
 ```
 
 ### Command structure
@@ -167,9 +164,9 @@ $SAS51 FORD36IX 9> pop CFT^UTLOUT
 
 ### Tracing command execution
 
-To gather command details, Axway support may ask you to set the <span class="code">`CFTUTLX^TRACE^LEVEL`</span> parameter for a <span class="code">`CFTUTLX `</span>command trace.
+To gather command details, Axway support may ask you to set the `CFTUTLX^TRACE^LEVEL` parameter for a `CFTUTLX `command trace.
 
-The <span class="code">`CFTUTLX^TRACE^LEVEL`</span> values are:
+The `CFTUTLX^TRACE^LEVEL` values are:
 
 
 | Value  | Description  | Temporary CFTUTLX files are deleted  |

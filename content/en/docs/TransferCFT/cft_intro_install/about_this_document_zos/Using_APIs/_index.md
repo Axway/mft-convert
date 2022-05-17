@@ -1,11 +1,8 @@
 ---
-
-    title: About APIs 
-    linkTitle: Appendix A: Delivered samples 
+    title: "About APIs "
+    linkTitle: "Appendix A: Delivered samples "
     weight: 210
-
----
-Application Programming Interfaces, or APIs, are a set of functions
+---Application Programming Interfaces, or APIs, are a set of functions
 that use a service. The service is followed by an application program.
 
 Each of these services is described in one of the following sections, which provides an overview

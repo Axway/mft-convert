@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer CFT maintenance (non-SMP/E)
-    linkTitle: Transfer CFT maintenance (non-SMP/E)
-    weight: 240
-
----
-## Update or apply a service pack (non-SMP/E)
+    title: "Transfer CFT maintenance (non-SMP/E)"
+    linkTitle: "Transfer CFT maintenance (non-SMP/E)"
+    weight: 250
+---## Update or apply a service pack (non-SMP/E)
 
 This section describes how to install a patch or service pack on your z/OS Transfer CFT using the non-SMP/E method.
 
@@ -26,7 +23,7 @@ A PTF file results from the fixed formatting (80) of an ADRDSSU-type file contai
 >
 > PTF files are cumulative. A basic Transfer CFT z/OS installation can integrate PTFs. If you use this method, apply the PTFs one at a time.
 
-<span class="autonumber"></span>Libraries taken into account during a DUMP ADRDSSU
+Libraries taken into account during a DUMP ADRDSSU
 
 
 | Libraries  | Contents  |
@@ -91,10 +88,6 @@ If an FTP server is configured on the workstation, you can use the sample JCL, A
 
 All of the A13\* JCLs are used to update or apply a Service Pack to Transfer CFT as described here.
 
-QQQ\_QQQ\_CHECK check h4 titles
-
-#### JCL updates on {{< TransferCFT/axwayvariablesComponentLongName  >}}
-
 
 | JCL  | Description  |
 | --- | --- |
@@ -105,33 +98,15 @@ QQQ\_QQQ\_CHECK check h4 titles
 | A13PTFLK  | To apply a patch in the Transfer CFT loadlib (create a save library/link-edit).  |
 | A13RSTOR  | To restore the loadlib from a save library.  |
 | A13SDEL  | To delete a save-load library when a patch is validated, or if the loadlib is restored to reapply a patch.  |
-
-
-#### JCL updates on {{< TransferCFT/suitevariablesCopilotName  >}}
-
-
-| JCL  | Description  |
-| --- | --- |
+|   | **Transfer CFT Copilot update**  |
 | A13UCOPA  | To apply a patch to Transfer CFT Copilot (Create a save file).  |
 | A13UCOPR  | To restore the Transfer CFT Navigator environment from a save file in USS environment.  |
 | A13UCOPD  | To delete a save file when a patch is validated.  |
-
-
-#### Transfer CFT - Secure Relay - Master Agent update
-
-
-| JCL  | Description  |
-| --- | --- |
+|   | Transfer CFT - Secure Relay - Master Agent update  |
 | A13UXSRA  | To apply a patch to Secure Relay - Master Agent (creates a save file).  |
 | A13UXSRR  | To restore the Transfer CFT {{< TransferCFT/suitevariablesSecureRelayName  >}} environment from a save file in USS environment.  |
 | A13UXSRD  | To delete a save file when a patch is validated.  |
-
-
-#### Updates on other JCL
-
-
-| JCL  | Description  |
-| --- | --- |
+|   | **Other JCL**  |
 | A13JCL  | To customize the patched JCL.  |
 | A13UCONF  | To update the unified configuration parameter definitions.  |
 | A13XML  | To update the XML library.  |
@@ -213,7 +188,7 @@ When you apply a patch to the Transfer CFT Copilot server, the update is not aut
 
 > **Note**
 >
-> The user applying the PTFs should have write access rights for the ‘cftroot\\wwwroot’ \* directory. The \* cftroot is a customizable parameter (A03PARM member in the target.INSTALL library).
+> The user applying the PTFs should have write access rights for the coppath directory, where coppath is a customizable parameter (A03PARM member in the target.INSTALL library).
 
 The following three JCLs mange the PTFs for Copilot:
 

@@ -1,17 +1,14 @@
 ---
-
-    title: timep
-    linkTitle: timep
-    weight: 3510
-
----
-<span id="timep"></span>
+    title: "timep"
+    linkTitle: "timep"
+    weight: 3530
+---<span id="timep"></span>
 
 ### timep
 
 #### CFTCAT
 
-**TIMEP = {<u>23595999</u> | HHMMSSCC}**
+**TIMEP = {<u>23595999</u> &#124; HHMMSSCC}**
 
 User-defined daily purge time.
 
@@ -25,7 +22,7 @@ The default purge time is midnight.
 
 #### PURGE
 
-**\[TIMEP = {<u>23595999</u> | HHMMSSCC}**
+**[TIMEP = {<u>23595999</u> &#124; HHMMSSCC}**
 
 User-defined purge time.
 

@@ -1,11 +1,8 @@
 ---
-
-    title: origin
-    linkTitle: origin
-    weight: 2490
-
----
-### origin
+    title: "origin"
+    linkTitle: "origin"
+    weight: 2510
+---### origin
 
 #### All CFTXXX commands
 
@@ -22,7 +19,7 @@ IMPL = 'NO',
 STATE = 'DISP',
 CYCLE = '0',
 ...
-**ORIGIN = 'CFTUTIL',**
+ORIGIN = 'CFTUTIL',
 MAXDURATION = '0',
 ...
 MODE = 'REPLACE'

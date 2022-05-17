@@ -1,11 +1,8 @@
 ---
-
-    title: About end-of-transfer exits
-    linkTitle: End-of-transfer exit
+    title: "About end-of-transfer exits"
+    linkTitle: "End-of-transfer exit"
     weight: 330
-
----
-The exit interface provides
+---The exit interface provides
 the user program with a structure containing information relating to the
 transfer. This book describes the end-of-transfer exit. It begins with this topic, which explains the
 transfer state and how it relates to an end-of-transfer exit.

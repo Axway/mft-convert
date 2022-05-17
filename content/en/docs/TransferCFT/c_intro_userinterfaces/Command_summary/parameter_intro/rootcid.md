@@ -1,17 +1,14 @@
 ---
-
-    title: rootcid
-    linkTitle: rootcid
-    weight: 2950
-
----
-<span id="rootcid"></span>
+    title: "rootcid"
+    linkTitle: "rootcid"
+    weight: 2970
+---<span id="rootcid"></span>
 
 ### rootcid
 
 #### PKICER  
 
-****\[ ROOTCID = string 32 \]****
+****[ ROOTCID = string 32 ]****
 
 This parameter must be indicated for a certificate authority.
 In this case, the ID and ROOTCID parameters have the same value.
@@ -27,11 +24,11 @@ the identifier of the certificate authority to be deleted or updated.
 
 #### PKIEXT, LISTPKI
 
-****\[ ROOTCID = string 32 \]****
+****[ ROOTCID = string 32 ]****
 
 This parameter allows you to chose the ROOTCID of the certificates to extract or display, respectively.
 
-<span class="bold_in_para">****Example****</span>
+****Example****
 
 ```
 Id.       Root iNum T S C K E  Exp.Date   Delivered to  Delivered by
@@ -44,7 +41,7 @@ Id.       Root iNum T S C K E  Exp.Date   Delivered to  Delivered by
 
 ****PKIEXT example****
 
-The result is a file that contains only information about the 2K\_ROOT and 2K\_INTER certificates.
+The result is a file that contains only information about the 2K_ROOT and 2K_INTER certificates.
 
 ```
 PKIUTIL PKIEXT FOUT=PKI.CMD, ROOTCID=2K_ROOT
@@ -62,7 +59,7 @@ Id. Root iNum T S C K E  Exp.Date   Delivered to  Delivered by
 
 #### CFTSSL
 
-****\[ ROOTCID = string 32 \]****
+****[ ROOTCID = string 32 ]****
 
 List of certificate authorities, where the total length of all identifiers cannot exceed 256 characters for CFTSSL. This list references a maximum of 10 identifiers in the local certificate database.
 

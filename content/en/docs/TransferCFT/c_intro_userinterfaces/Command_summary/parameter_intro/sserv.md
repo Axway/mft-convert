@@ -1,15 +1,12 @@
 ---
-
-    title: sserv
-    linkTitle: sserv
-    weight: 3320
-
----
-### **<span id="sserv"></span><span style="font-weight: bold;">****sserv****</span>**
+    title: "sserv"
+    linkTitle: "sserv"
+    weight: 3340
+---### **<span id="sserv"></span>****sserv******
 
 #### **CFTPROT**
 
-**\[SSERV = {see table below | *identifier*}\]**
+**[SSERV = {see table below &#124; *identifier*}]**
 
 Identifies the service, or protocol
 variant, required of the incoming partner.

@@ -1,11 +1,8 @@
 ---
-
-    title: About kernel customization
-    linkTitle: Customize the kernel
+    title: "About kernel customization"
+    linkTitle: "Customize the kernel"
     weight: 170
-
----
-Depending on the operating system, some customization may
+---Depending on the operating system, some customization may
 be mandatory to ensure that {{< TransferCFT/axwayvariablesComponentShortName  >}} operates correctly, and to maintain
 the overall system performance levels.
 

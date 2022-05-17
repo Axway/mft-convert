@@ -1,11 +1,8 @@
 ---
-
-    title: z/OS: Installation and Operation
-    linkTitle: Installation and operation z/OS
+    title: "z/OS: Installation and Operation"
+    linkTitle: "Installation and operation z/OS"
     weight: 110
-
----
-This documentation provides information to aide you in installing, updating, upgrading, or migrating {{< TransferCFT/axwayvariablesComponentShortName  >}}.
+---This documentation provides information to aide you in installing, updating, upgrading, or migrating {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
 For more information on Axway products, visit [www.axway.com](https://www.axway.com/en).
 

@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer serialization
-    linkTitle: Transfer serialization
+    title: "Transfer serialization"
+    linkTitle: "Transfer serialization"
     weight: 220
-
----
-Business users today expect that applications can transfer files sequentially. Additionally, when sending files sequentially (first in/first out), users may want to define a processing phase that the transfer must reach before Transfer CFT begins executing the next transfer. This process in Transfer CFT is known as transfer serialization.
+---Business users today expect that applications can transfer files sequentially. Additionally, when sending files sequentially (first in/first out), users may want to define a processing phase that the transfer must reach before Transfer CFT begins executing the next transfer. This process in Transfer CFT is known as transfer serialization.
 
 On the sender side, the next file cannot be sent until the previously sent file is written on the disk by the receiving {{< TransferCFT/headerfootervariableshflongproductname  >}}, and a certain phase reached, for example the post-processing is executed. Once this occurs, the sending {{< TransferCFT/headerfootervariableshflongproductname  >}} can then send the next file.
 
@@ -39,7 +36,7 @@ SEND PART=PARIS, IDF=BIN, SERIAL=X, IDA=A
 SEND PART=PARIS, IDF=BIN, SERIAL=X, IDA=B
 SEND PART=PARIS, IDF=BIN, SERIAL=X, IDA=C
  
-**Results**
+Results
 CFTT57I Requester transfer started <IDTU=<transfer A> PART=PARIS IDF=BIN
 CFTT58I Requester transfer ended <IDTU=<transfer A> PART=PARIS IDF=BIN
 CFTR12I END Treated for USER <my user> <PART=PARIS IDF=BIN >
@@ -62,7 +59,7 @@ SEND PART=PARIS, IDF=BIN, SERIAL=Y, IDA=A
 SEND PART=PARIS, IDF=BIN, SERIAL=Y, IDA=B
 SEND PART=PARIS, IDF=BIN, SERIAL=Y, IDA=C
  
-**Results**
+Results
 CFTT57I Requester transfer started <IDTU=<transfer A> PART=PARIS IDF=BIN
 CFTT58I Requester transfer ended <IDTU=<transfer A> PART=PARIS IDF=BIN
  
@@ -93,7 +90,7 @@ SEND PART=RS43, IDF=BIN, SERIAL=X, IDA=A, ACKSTATE=REQUIRE
 SEND PART=RS43, IDF=BIN, SERIAL=X, IDA=B, ACKSTATE=REQUIRE
 SEND PART=RS43, IDF=BIN, SERIAL=X, IDA=C, ACKSTATE=REQUIRE
  
-**Results**
+Results
 CFTT57I Requester transfer started <IDTU=<transfer A> PART=RS43 IDF=BIN
 CFTT58I Requester transfer ended <IDTU=<transfer A> PART=RS43 IDF=BIN
 CFTT59I Server reply transferred <IDT=<IDT transfer A> PART=RS43 IDM=BIN

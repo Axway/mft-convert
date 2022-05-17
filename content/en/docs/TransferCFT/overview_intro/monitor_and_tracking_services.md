@@ -1,17 +1,14 @@
 ---
-
-    title: Tracking and monitoring services
-    linkTitle: Tracking and monitoring services
+    title: "Tracking and monitoring services"
+    linkTitle: "Tracking and monitoring services"
     weight: 140
-
----
-{{< TransferCFT/axwayvariablesComponentShortName  >}} offers transfer tracking, auditing (for configuration changes), and monitoring features that provide end-to-end transfer visibility, where additionally you can link transfers with your applications. See [Using Sentinel](../../using_sentinel).
+---{{< TransferCFT/axwayvariablesComponentShortName  >}} offers transfer tracking, auditing (for configuration changes), and monitoring features that provide end-to-end transfer visibility, where additionally you can link transfers with your applications. See [Using Sentinel](../../using_sentinel).
 
 Additionally, you may implement Edge Agent reporting, as described in [Usage tracking](../../reporting).
 
-When using governance services, {{< TransferCFT/PrimaryCGorUM  >}} provides visibility services for {{< TransferCFT/axwayvariablesComponentLongName  >}} flows and statuses. See [About Governance services](../../governance_services_intro/governance_overview).
+When using governance services, both {{< TransferCFT/suitevariablesFlowManager  >}} and {{< TransferCFT/PrimaryCGorUM  >}} provide visibility services for {{< TransferCFT/axwayvariablesComponentLongName  >}} flows and statuses. See [About Governance services](../../governance_services_intro/governance_overview).
 
-{{< TransferCFT/PrimaryCGorUM  >}} provides:
+Flow Manager and {{< TransferCFT/PrimaryCGorUM  >}} provide:
 
 - Monitoring of registered Transfer CFTs status through heartbeats. Transfer CFT and its Copilot send heartbeats via the persistent mutually authenticated connection with Central Governance.
 - Deployment monitoring for:
@@ -20,4 +17,4 @@ When using governance services, {{< TransferCFT/PrimaryCGorUM  >}} provides visi
     -   Flows: The state of a flow deployment on each Transfer CFT the flow uses.
     -   Updates: The status of an applied update.
 
-For more information on {{< TransferCFT/PrimaryCGorUM  >}} functionality and features, refer to the Central Governance {{< TransferCFT/PrimaryCGversion  >}} documentation.
+For more information on functionality and features, refer to the {{< TransferCFT/suitevariablesFlowManager  >}} 2.0 or Central Governance {{< TransferCFT/PrimaryCGversion  >}} documentation.

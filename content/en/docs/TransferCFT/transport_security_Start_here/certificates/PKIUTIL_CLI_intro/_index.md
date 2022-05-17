@@ -1,11 +1,8 @@
 ---
-
-    title: PKIUTIL  command line utility: Start here
-    linkTitle: Command line operations
-    weight: 200
-
----
-This section describes the PKIUTIL commands that are used to manage the
+    title: "PKIUTIL  command line utility: Start here"
+    linkTitle: "Command line operations"
+    weight: 190
+---This section describes the PKIUTIL commands that are used to manage the
 local certificate database. This topic
 introduces the command line PKIUTIL utility CFTPKI.
 
@@ -36,7 +33,7 @@ display command](cftutil_utility_display_commands) for transport security uses.
 
 ****UNIX/Windows only****
 
-To simplify the use of <span class="code">`PKIUTIL `</span>commands, you can use the autocomplete feature when working in interactive mode. See [Autocomplete](../../../c_intro_userinterfaces/about_cftutil/autocomplete).
+To simplify the use of `PKIUTIL `commands, you can use the autocomplete feature when working in interactive mode. See [Autocomplete](../../../c_intro_userinterfaces/about_cftutil/autocomplete).
 
 ****Related topics****
 

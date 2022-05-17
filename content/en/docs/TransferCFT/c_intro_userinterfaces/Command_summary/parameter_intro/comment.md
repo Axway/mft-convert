@@ -1,18 +1,15 @@
 ---
-
-    title: comment
-    linkTitle: comment
-    weight: 460
-
----
-<span id="Comment"></span>
+    title: "comment"
+    linkTitle: "comment"
+    weight: 450
+---<span id="Comment"></span>
 
 ### comment
 
 #### ABOUT, SEND, RECV, CFTPART
 
-**\[COMMENT =
-*string80 characters*\]**
+**[COMMENT =
+*string80 characters*]**
 
 Free comment.
 
@@ -33,7 +30,7 @@ If this parameter is not defined, the explicit value is set in the protocol defi
 
 #### CFTSEND, CFTRECV, SEND, RECV
 
-**\[COMMENT = *string160*\]**
+**[COMMENT = *string160*]**
 
 Enter a local free-text description for the receive transfer. You can
 enter up to 160 alphanumeric characters. The content of this field:
@@ -47,12 +44,12 @@ enter up to 160 alphanumeric characters. The content of this field:
 
 #### CFTACCNT, CFTEXIT, CFTIDF, CFTLOG, CFTAUTH, CDTCAT, CFTCOM, CFTDEST, CFTETB
 
-**\[COMMENT =
-*string80 characters*\]**
+**[COMMENT =
+*string80 characters*]**
 
 #### CFTXLATE, CFTPARM, CFTPART, CFTAPPL, CFTPROT, CFTTCP
 
-**\[COMMENT =
-*string80 characters*\]**
+**[COMMENT =
+*string80 characters*]**
 
 [Return to Command index](../../)

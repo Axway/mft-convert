@@ -1,11 +1,8 @@
 ---
-
-    title: Creating  an exit file
-    linkTitle: Creating an exit file
-    weight: 220
-
----
-The example described in this topic was designed to operate using the <span class="bold_in_para">****cft-tcp.conf****</span> configuration example located in <span class="bold_in_para">****&lt;installdir>/runtime/conf****</span>.
+    title: "Creating  an exit file"
+    linkTitle: "Creating an exit file"
+    weight: 230
+---The example described in this topic was designed to operate using the ****cft-tcp.conf**** configuration example located in ****&lt;installdir>/runtime/conf****.
 For this example, you should have already customized the
 file using the instructions in [*Running Transfer
 CFT for the First Time*]().
@@ -18,11 +15,11 @@ The *&lt;installdir>/runtime/src/exit/* subdirectory contains:
     module, called *exfxmp1.c*, with its associated include file *exfus.h*
 - This program
     demonstrates the various user functions:
-- ALLOC\_TYP:
+- ALLOC_TYP:
     the EXIT allocates the file
-- OPEN\_TYP: the
+- OPEN_TYP: the
     EXIT opens the file
-- DATA\_TYP: the
+- DATA_TYP: the
     EXIT writes or reads the file
 
 <!-- -->
@@ -31,7 +28,7 @@ The *&lt;installdir>/runtime/src/exit/* subdirectory contains:
 
 <!-- -->
 
-- The *mk\_cftexitf*
+- The *mk_cftexitf*
     compilation procedure, which uses *exfxmp2.c* to generate the *CFTEXITF*
     program
 
@@ -77,7 +74,7 @@ To generate the sample CFTEXITF application, proceed as follows:
     `cftstop`
 
 1. Examine the contents of the
-    *cft\_log. sav* file in the *&lt;installdir>/runtime/log/* directory and locate the
+    *cft_log. sav* file in the *&lt;installdir>/runtime/log/* directory and locate the
     messages inserted by the EXIT.  
       
     The files created in *&lt;installdir>/runtime/* are empty, as the sample EXIT is

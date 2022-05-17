@@ -1,11 +1,8 @@
 ---
-
-    title: severity
-    linkTitle: severity
-    weight: 3170
-
----
-<span id="severity"></span>
+    title: "severity"
+    linkTitle: "severity"
+    weight: 3190
+---<span id="severity"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 

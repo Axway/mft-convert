@@ -1,18 +1,15 @@
 ---
-
-    title: maxtask
-    linkTitle: maxtask
+    title: "maxtask"
+    linkTitle: "maxtask"
     weight: 1940
-
----
-<span id="maxtask"></span>
+---<span id="maxtask"></span>
 
 ### maxtask
 
 #### CFTPARM
 
 **MAXTASK = { <u>8</u>
-| n}    **
+&#124; n}    **
 
 Enter the number of authorized file access tasks (default = 8). This refers to the number of authorized file access tasks, for example CFTTFIL. The used value may be recomputed, and be greater than the defined value, depending on the fixed number of files a task can handle on the system.
 
@@ -30,6 +27,7 @@ system.
 | Windows  | 64 |
 | z/OS (MVS) | 400 |
 | IBM i | 64 |
+| OpenVMS  | 64 |
 
 
 The following CFTI18I  message displays in the CFTLOG when Transfer CFT is started so that you can view the actual MAXTRANS, MAXTASK, TRANTASK values.

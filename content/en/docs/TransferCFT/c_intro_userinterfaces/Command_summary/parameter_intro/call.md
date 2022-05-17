@@ -1,17 +1,14 @@
 ---
-
-    title: call
-    linkTitle: call
-    weight: 360
-
----
-<span id="call"></span>
+    title: "call"
+    linkTitle: "call"
+    weight: 350
+---<span id="call"></span>
 
 ### call
 
 #### CFTNET
 
-****\[call = {<u>inout</u> | in | out }\]****
+****[call = {<u>inout</u> &#124; in &#124; out }]****
 
 Call direction possible through this network resource. Select from:
 

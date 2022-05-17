@@ -1,11 +1,8 @@
 ---
-
-    title:  Secure Relay with a multi-node architecture
-    linkTitle: Secure Relay with a multi-node architecture
-    weight: 250
-
----
-You can install {{< TransferCFT/axwayvariablesComponentLongName  >}} in an active/active architecture where you add multiple SecureRelay Router Agents behind a load balancer. The architecture could resemble the diagrams in the [Example architectures](#Examples) section of this page.
+    title: " Secure Relay with a multi-node architecture"
+    linkTitle: "Secure Relay with a multi-node architecture"
+    weight: 240
+---You can install {{< TransferCFT/axwayvariablesComponentLongName  >}} in an active/active architecture where you add multiple SecureRelay Router Agents behind a load balancer. The architecture could resemble the diagrams in the [Example architectures](#Examples) section of this page.
 
 This page describes how to configure Transfer CFT in a multi-node architecture to use Secure Relays:
 
@@ -31,7 +28,7 @@ Follow the installation instructions provided in the [Secure Relay RA Installat
 - `<CACertificate>CA_for_RA.der</CACertificate>`
 - `<UserCertificate>USER_for_RA.p12</UserCertificate>`
 
-You need these values when you configure the Master Agent in the {{< TransferCFT/axwayvariablesComponentLongName  >}} configuration, where the user certificate that you use must be signed by <span class="code">`CA_for_RA`</span>. You should use the same CA and USER certificate as for the Master Agent.
+You need these values when you configure the Master Agent in the {{< TransferCFT/axwayvariablesComponentLongName  >}} configuration, where the user certificate that you use must be signed by `CA_for_RA`. You should use the same CA and USER certificate as for the Master Agent.
 
 ## Configure the Router Agents in {{< TransferCFT/axwayvariablesComponentLongName  >}}
 
@@ -39,7 +36,7 @@ After completing installation, configure the Router Agents in the {{< TransferCF
 
 1. Set the value for the number of Router Agents using the `secure_relay.ra` parameter. {{< TransferCFT/axwayvariablesComponentLongName >}} generates a set of `secure_relay.ra.n.*` parameters, where the number, *n*, corresponds to the number of Router Agents you defined in this parameter.
 1. You can use the default values for most fields, but you must customize the` secure_relay.ra.0.dmz` parameter. This value must be unique; for example, you can increment the DMZ0 value by one for each Router Agent so that the  second Router Agent has the value` secure_relay.ra.0.dmz = DMZ1`.
-1. Configure the host address for each Secure Relay host using <span class="code">`secure_relay.ra.0.host`</span>.
+1. Configure the host address for each Secure Relay host using `secure_relay.ra.0.host`.
 
 ****Example of two Router Agent definitions****
 
@@ -47,8 +44,8 @@ After completing installation, configure the Router Agents in the {{< TransferCF
 secure_relay.ra = 2
  
 secure_relay.ra.0.enable = yes
-secure_relay.ra.0.dmz = <span style="color: #ff4500;">DMZ0</span>
-secure_relay.ra.0.host = <span style="color: #ff4500;">@hostF</span>
+secure_relay.ra.0.dmz = DMZ0
+secure_relay.ra.0.host = @hostF
 secure_relay.ra.0.admin_port = 6810
 secure_relay.ra.0.comm_port = 6811
 secure_relay.ra.0.nb_data_connections = 5
@@ -56,8 +53,8 @@ secure_relay.ra.0.data_channel_ciphering = No
 secure_relay.ra.0.outcall_network_interface =
  
 secure_relay.ra.1.enable = Yes
-secure_relay.ra.1.dmz = <span style="color: #ff4500;">DMZ1</span>
-secure_relay.ra.1.host = <span style="color: #ff4500;">@hostG</span>
+secure_relay.ra.1.dmz = DMZ1
+secure_relay.ra.1.host = @hostG
 secure_relay.ra.1.admin_port = 6810
 secure_relay.ra.1.comm_port = 6811
 secure_relay.ra.1.nb_data_connections = 5
@@ -96,7 +93,7 @@ If you need to set listening ports, for example if you are using a firewall, pro
     ```
 1. Define the protocol listening ports for Secure Relay, which correspond to the SAP values in the CFTPROT object. For each node this value  increments by one port number. Therefore, when configuring the CFTPROT object ensure that there is no  listening port overlap.
 
-<span class="bold_in_para">****Example****</span>
+****Example****
 
 For example, if you set the SAP=1761 when you have 4 nodes, Secure Relay opens the ports 1761, 1762, 1763 and 1764.
 
@@ -107,15 +104,15 @@ CFTPROT ID=PROT1,SAP=1764,...
 
 In the scenario above if 4 nodes are configured in {{< TransferCFT/axwayvariablesComponentLongName  >}} multi-node, then Secure relay will open the listening ports 1761, 1762,1763, 1764 causing an issue for the second defined protocol, PROT1, as it has a SAP=1764.
 
-Additionally, for each node the comm\_port also increments. That is, the `secure_relay.ra.N.comm_port` parameter, where N is an index.
+Additionally, for each node the comm_port also increments. That is, the `secure_relay.ra.N.comm_port` parameter, where N is an index.
 
 - N = 0: first RA
 - N =1: second RA
 - N = 2: third RA
 
-However, when you define the <span class="code">`secure_relay.ra.N.admin_port  `</span>value, where N is an index, the value does not increment according to the number of nodes.
+However, when you define the `secure_relay.ra.N.admin_port  `value, where N is an index, the value does not increment according to the number of nodes.
 
-<span class="bold_in_para">****Example****</span>
+****Example****
 
 If a multi-node {{< TransferCFT/axwayvariablesComponentLongName  >}} has 4 nodes and the setting `secure_relay.ra.N.comm_port= 6811`, {{< TransferCFT/axwayvariablesComponentLongName  >}} opens the ports 6811, 6812, 6813, and 6814.
 
@@ -128,7 +125,7 @@ If a multi-node {{< TransferCFT/axwayvariablesComponentLongName  >}} has 4 nodes
     -   PROTOCOL = SR
 1. Define the RECALLHOST, HOST, and SSLTERM parameters.
     -   RECALLHOST (mandatory): The host address on which the Master Agent calls Transfer CFT when Secure Relay receives an incoming call. If Transfer CFT and the Master Agent run of the same host, use the loopback network interface (for example, 127.0.0.1) instead of the public network interface.
-    -   HOST: Designates the network interface that is used on the Router Agent side. We recommend setting this to INADDR\_ANY.
+    -   HOST: Designates the network interface that is used on the Router Agent side. We recommend setting this to INADDR_ANY.
     -   SSLTERM: Set this Boolean to YES to enable SSL termination.
 1. If there are existing CFTNET object(s), the class parameter must be different.
 
@@ -159,9 +156,9 @@ This section describes the CFTPROT object, and how various parameters are relate
 
 - CFTPROT is related to the CFTNET object through the NET parameter.
 - The SAP parameter is the listening port that is used on the RA side (using the CFTNET HOST parameter as the network interface).  
-    This value automatically increments by one per node, where the range is <span style="font-family: 'Courier New';">&lt;number of nodes>-1</span>. Therefore, be certain that you do not use the ports in this range for another protocol.
+    This value automatically increments by one per node, where the range is &lt;number of nodes>-1. Therefore, be certain that you do not use the ports in this range for another protocol.
 
-<span class="bold_in_para">****Example**** </span>
+****Example****
 
 This example uses a CFTNET object called NETXSR, and PROTXSR is bound to port 1861 for node 0, and port 1862 for node 1.
 

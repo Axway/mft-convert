@@ -1,11 +1,8 @@
 ---
-
-    title: Set the default CFTUTIL file names (CONFIG)
-    linkTitle: CONFIG - Set default file names
-    weight: 210
-
----
-The <span id="CONFIG_command"></span>CONFIG command redefines the data media
+    title: "Set the default CFTUTIL file names (CONFIG)"
+    linkTitle: "CONFIG - Set default file names"
+    weight: 200
+---The <span id="CONFIG_command"></span>CONFIG command redefines the data media
 that the CFTUTIL utility uses. A medium refers to any data medium or local
 communication means.
 
@@ -80,18 +77,14 @@ media</a>
 
 **Command syntax**: [CONFIG](../../command_summary#CONFIG)
 
-QQQ\_QQQ\_QQQ
 
-Use the CONFIG command to redefine the data media with which
-the CFTUTIL utility operates.
-
-
-| Parameter  | Description  |
+| Command and Parameters | Description |
 | --- | --- |
-| <a href="../../command_summary/parameter_intro/fname">FNAME</a><br/>  | For TYPE = {CAT | INPUT | OUTPUT | PARM | PART }<br/> Name of the file associated with the medium type accessed by CFTUTIL.<br/>  |
-| <a href="../../command_summary/parameter_intro/fname">FNAME</a><br/>  | For TYPE = COM<br/> There must be a correspondence with the CFTCOM NAME parameter that defines the communication medium as seen from Transfer CFT.<br/> For a communication medium supported by TCP/IP (MEDIACOM=TCPIP) this is either:<br/> • A host name (string) using the format: "protocol://machine:port", or<br/> • A configuration file (filename) |
-| <a href="../../command_summary/parameter_intro/mediacom">MEDIACOM</a>  | Defines the communication medium type if this medium is relevant to the system. |
-| <a href="../../command_summary/parameter_intro/type#type_CONFIG">TYPE</a>  | Defines the medium concerned. |
+| **CONFIG** command | Use this command to redefine the data media with which the CFTUTIL utility operates.  |
+|  [FNAME](../../command_summary/parameter_intro/fname)<br/>  | For TYPE = {CAT &#124; INPUT &#124; OUTPUT &#124; PARM &#124; PART }<br/> Name of the file associated with the medium type accessed by CFTUTIL. |
+|  [FNAME](../../command_summary/parameter_intro/fname)<br/>  | For TYPE = COM<br/> There must be a correspondence with the CFTCOM NAME parameter that defines the communication medium as seen from Transfer CFT.<br/> For a communication medium supported by TCP/IP (MEDIACOM=TCPIP) this is either:<br/> • A host name (string) using the format: "protocol://machine:port", or<br/> • A configuration file (filename) |
+|  [MEDIACOM](../../command_summary/parameter_intro/mediacom)  | Defines the communication medium type if this medium is relevant to the system. |
+|  [TYPE](../../command_summary/parameter_intro/type#type_CONFIG)  | Defines the medium concerned. |
 
 
 ## Examples

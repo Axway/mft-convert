@@ -1,11 +1,8 @@
 ---
-
-    title: Customize the VIPA and execute commands
-    linkTitle: Customize the VIPA and execute commands
+    title: "Customize the VIPA and execute commands"
+    linkTitle: "Customize the VIPA and execute commands"
     weight: 190
-
----
-This sections describes how to customize the LPAR (hosts) for your multi-node setup. It is based on an example implementation of an Active/Active High Availability multi-host configuration use case. For a mono host, multi-node installation, you only customize one LPAR (host).
+---This sections describes how to customize the LPAR (hosts) for your multi-node setup. It is based on an example implementation of an Active/Active High Availability multi-host configuration use case. For a mono host, multi-node installation, you only customize one LPAR (host).
 
 After you complete the customization and configuration checks, execute the program commands.
 
@@ -18,7 +15,7 @@ To customize the hosts in your setup and submit the customization, perform the t
 
 | Step  | Task  |
 | --- | --- |
-| 1  | If you have not done so, customize <a href="">MNINIT</a>.  |
+| 1  | If you have not done so, customize [MNINIT]().  |
 | 2  | Customize the UPARM(TC*) members.<br/> The example (below) demonstrates how to customize LPAR1 and LPAR2. If you have additional machines in your configuration, repeat this step for each host machine. For a single host installation, you only customize UPARM(TCPSHAP1). |
 | 3  | Perform a Transfer CFT configuration check:<br/> • Verify that the CFTNET object host parameter corresponds with what you defined for the VIPA.<br/> • Verify that the CFTNET command SRCPORT parameter is set to 1. |
 | 4  | Submit the MNINIT. The Transfer CFT is now configured for multi-node.  |
@@ -107,11 +104,11 @@ Two command samples contain the VIPAdistribute Statement, which concerns the SYS
 
 ### About REST API
 
-When using REST API (<span class="code">`copilot.restapi.enable=yes`</span>) in a multi-node environment, you must also define the <span class="code">`copilot.restapi.serverport`</span> value in the VIPA configuration. See, for example, the delivered UPARM(TCVIPRN5) and UPARM(TCVIPWG5) files.
+When using REST API (`copilot.restapi.enable=yes`) in a multi-node environment, you must also define the `copilot.restapi.serverport` value in the VIPA configuration. See, for example, the delivered UPARM(TCVIPRN5) and UPARM(TCVIPWG5) files.
 
 ## Define a distribution method
 
-The following examples, <span class="code">`WeightedActive `</span>and <span class="code">`RounRobin`</span>, represent two of the possible load distribution methods that you can use in VIPA. Select a load distribution method, and execute the corresponding VARY OBEYFILE  command once you have finished customizing this option.
+The following examples, `WeightedActive `and `RounRobin`, represent two of the possible load distribution methods that you can use in VIPA. Select a load distribution method, and execute the corresponding VARY OBEYFILE  command once you have finished customizing this option.
 
 **Weighted active example**
 

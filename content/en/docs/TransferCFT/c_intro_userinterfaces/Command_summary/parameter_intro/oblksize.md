@@ -1,17 +1,14 @@
 ---
-
-    title: oblksize
-    linkTitle: oblksize
-    weight: 2380
-
----
-<span id="oblksize"></span>
+    title: "oblksize"
+    linkTitle: "oblksize"
+    weight: 2400
+---<span id="oblksize"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
 #### COPYFILE
 
-****\[OBLKSIZE = {IBLKSIZE value | n }\]****
+****[OBLKSIZE = {IBLKSIZE value &#124; n }]****
 
 Output file block size, in bytes. The value indicated must be greater
 than the value of the OLRECL parameter.  

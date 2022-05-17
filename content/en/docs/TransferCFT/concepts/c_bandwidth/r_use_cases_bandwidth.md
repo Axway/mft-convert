@@ -1,11 +1,8 @@
 ---
-
-    title: Bandwidth use cases
-    linkTitle: Bandwidth use cases
-    weight: 230
-
----
-This topic presents three bandwidth scenarios, with suggested unified configuration (UCONF) setting required to implement each of the following use cases:
+    title: "Bandwidth use cases"
+    linkTitle: "Bandwidth use cases"
+    weight: 220
+---This topic presents three bandwidth scenarios, with suggested unified configuration (UCONF) setting required to implement each of the following use cases:
 
 - [Limiting overall bandwidth](#Limit)
 - [Prioritizing data transfer](#Prioriti)

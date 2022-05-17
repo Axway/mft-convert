@@ -1,11 +1,8 @@
 ---
-
-    title: Verify your installation
-    linkTitle: Verify your installation
+    title: "Verify your installation"
+    linkTitle: "Verify your installation"
     weight: 150
-
----
-See the installation if you encounter problems when starting {{< TransferCFT/axwayvariablesComponentLongName  >}}.
+---See the installation if you encounter problems when starting {{< TransferCFT/axwayvariablesComponentLongName  >}}.
 
 ## Installed directories
 

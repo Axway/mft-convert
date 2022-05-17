@@ -1,11 +1,8 @@
 ---
-
-    title: Using requester mode
-    linkTitle: Using requester mode
+    title: "Using requester mode"
+    linkTitle: "Using requester mode"
     weight: 400
-
----
-The communication structure is defined by the interface before
+---The communication structure is defined by the interface before
 the user function is called. You must provide, complete, or modify the
 parameters that {{< TransferCFT/axwayvariablesComponentShortName  >}} needs to establish network and protocol connections.
 
@@ -24,8 +21,6 @@ If the partner is:
     fields)
 
 ### Partner information fields
-
-QQQ\_QQQ\_QQQ changes are minimal
 
 
 | Field  | Explanation  |
@@ -79,7 +74,7 @@ empty:
 - addr: remote partner
     address
 
-The <span style="font-weight: bold;">****ret1****</span> return code field must
+The ****ret1**** return code field must
 be defined when the user function is returned from.
 
 If there is a connection refusal (return code value of 2), the ret2
@@ -103,7 +98,7 @@ except the general information fields or the ptype and ntype fields.
 | part  | If this field:<br/> • is empty when the user function is returned from, the partner local identifier "UNDEFPTN" appears in the catalog and on the {{< TransferCFT/axwayvariablesComponentShortName  >}} standard output.<br/> • has been modified and if the new identifier is located in the {{< TransferCFT/axwayvariablesComponentShortName  >}} partner base, {{< TransferCFT/axwayvariablesComponentShortName  >}} sets the ret1 field to 9 (processing error) and the diag field to "PTNEXIST"<br/> • has been modified, during any network or protocol connection attempts that may have been made, the system behaves as if the partner is not known to Transfer CFT |
 | ipart  | If the ipart field is defined, a voluntary store and forward or backup mechanism<br /> (omintime = omaxtime) is possible.<br /> The user function is called to provide complete information or modify the intermediate partner information<br /> In the store and forward case, the commutfl field is set to 1. |
 | idprot, idnet, prot and prof  | The idnet, prot and prof fields are connected to the CFTPROT command identifier (idprot). If the idprot field is modified, the new value must correspond to a CFTPROT command ( {{< TransferCFT/axwayvariablesComponentShortName  >}} updates the fields that are associated with it)<br /> If not, {{< TransferCFT/axwayvariablesComponentShortName  >}} sets the ret1 field to 9 (processing error) and the diag field to "NOPROT".<br /> <br/> The protl field indicates the list of {{< TransferCFT/axwayvariablesComponentShortName  >}} parameter setting protocols.  |
-| nspart, nspassw, sap and addr  | If the nspart (and nspassw as applicable), sap and addr fields are not defined when the user function is returned from, the network and protocol connections will not be able to be established<br /> <br /> The maximum length taken into account for the remote partner address depends on the network type:<br/> • Network type = TCP : Length = 64<br/><br/>  |
+| nspart, nspassw, sap and addr  | If the nspart (and nspassw as applicable), sap and addr fields are not defined when the user function is returned from, the network and protocol connections will not be able to be established<br /> <br /> The maximum length taken into account for the remote partner address depends on the network type:<br/> • TCP: 64<br/> |
 | nrpart  | If the field nrpart is empty when the user function is returned from, it is set to the value of the part field.<br/> A network partner is identified by a network name (nrpart).<br/> If the user establishes simultaneous connections with several network partners using the same name, the values of the counters below will be the sum of these connections and will be the same for each partner:<br/> • curreqc: current number of transfers in requester mode, for the given network partner<br/> • cursrvc: current number of transfers in server mode, for the given network<br /> partner |
 | maxrty<br /> and currty  | During network connection attempts, the currty value may be used to assign a new address to the remote partner<br /> This counter is reset to zero each time the remote partner address is changed.<br/> If the currty value reaches the maxrty value, Transfer CFT attempts to go on to the next backup address.<br /> If there are no further backup addresses, {{< TransferCFT/axwayvariablesComponentShortName  >}} attempts to go on to the next backup protocol. If there are no further backup protocols, {{< TransferCFT/axwayvariablesComponentShortName  >}} attempts to perform a backup store and forward<br/> With the directory type EXIT task in requester mode, and one and only one protocol and a single address associated with a partner, {{< TransferCFT/axwayvariablesComponentShortName  >}} attempts the backup store and forward. If the intermediate partner does not exist, the transfer changes to the K state. |
 | maxrtyp and currtyp  | During protocol connection attempts, the currtyp value may be used to assign a new protocol to the remote partner<br /> The counter is reset to zero each time the protocol is changed<br/> If the currtyp value reaches the maxrtp value, Transfer CFT attempts to go on to the next backup protocol<br /> If there are no further backup protocol, the transfer changes to the K state<br/> With the directory type EXIT in requester mode, and a single protocol associated with the partner, the transfer changes to the K state  |

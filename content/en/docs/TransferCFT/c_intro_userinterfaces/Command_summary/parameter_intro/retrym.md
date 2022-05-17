@@ -1,18 +1,15 @@
 ---
-
-    title: retrym
-    linkTitle: retrym
-    weight: 2880
-
----
-<span id="retrym"></span>
+    title: "retrym"
+    linkTitle: "retrym"
+    weight: 2900
+---<span id="retrym"></span>
 
 ### retrym
 
 #### CFTTCP
 
-****\[RETRYM = {<span style="text-decoration: underline;">12</span>
-| 0...32767 } \]****
+****[RETRYM = {12
+&#124; 0...32767 } ]****
 
 Use this field to specify the maximum number of reconnection attempts.
 

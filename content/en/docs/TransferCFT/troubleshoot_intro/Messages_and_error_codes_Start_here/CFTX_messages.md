@@ -1,11 +1,8 @@
 ---
-
-    title:  Transfer CFT messages:  CFTW and CFTX
-    linkTitle: CFTX messages
-    weight: 400
-
----
-This topic lists the CFTWxx and CFTXxx messages and provides the type, a description, consequence, and corrective actions when applicable.
+    title: " Transfer CFT messages:  CFTW and CFTX"
+    linkTitle: "CFTX messages"
+    weight: 390
+---This topic lists the CFTWxx and CFTXxx messages and provides the type, a description, consequence, and corrective actions when applicable.
 
 **Message format**
 
@@ -15,9 +12,9 @@ Earlier versions of Transfer CFT used a different message format than version 3.
 
 **Example**
 
-CFTLOG FORMAT=\[V23,V24\]
+CFTLOG FORMAT=[V23,V24]
 
-For V23: <span class="code">`CFTT57I PART=&part IDF=&idf IDT=&idt &str transfer started`</span>
+For V23: `CFTT57I PART=&part IDF=&idf IDT=&idt &str transfer started`
 
 For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&idt>`
 
@@ -62,9 +59,9 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
  
 
 
-| V23 format<br/> V24 format<br/> Warning | <span id="CFTX10I"></span>CFTX10I Warning : security file commands were modified CFTX10I Warning : security file commands were modified |
+| V23 format<br/> V24 format<br/> Information | <span id="CFTX10I"></span>CFTX10I Warning : security file commands were modified<br/> CFTX10I Warning : security file commands were modified |
 | --- | --- |
-| V23 format<br/> V24 format<br/> Information | <span id="CFTX11I"></span>CFTX11I+ without a generation was done CFTX11I+ without a generation was done |
-| V23 format<br/> V24 format<br/> Information | <span id="CFTX12I"></span>CFTX12I+ Some queer comportements will happenned. CFTX12I+ Some queer comportements will happenned. |
+|   | <span id="CFTX11I"></span>CFTX11I+ without a generation was done<br/> CFTX11I+ without a generation was done |
+|   | <span id="CFTX12I"></span>CFTX12I+ Some queer comportements will happenned.<br/> CFTX12I+ Some queer comportements will happenned. |
 | Explanation | Modifications have been made to the authorization system, but the system has not been regenerated.<br/> Abnormal behavior may arise when {{< TransferCFT/axwayvariablesComponentShortName  >}} is executed. |
 

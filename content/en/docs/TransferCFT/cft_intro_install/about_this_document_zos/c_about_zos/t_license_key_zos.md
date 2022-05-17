@@ -1,11 +1,8 @@
 ---
-
-    title: Apply a license key 
-    linkTitle: Apply a license key 
+    title: "Apply a license key "
+    linkTitle: "Apply a license key "
     weight: 200
-
----
-## Check your authorization
+---## Check your authorization
 
 Verify that you can access Sphere by going to [support.axway.com](https://support.axway.com/) and logging in. If you do not have an account, follow the instructions in your welcome letter.
 

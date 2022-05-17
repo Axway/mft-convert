@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer  services in C
-    linkTitle: Transfer services
+    title: "Transfer  services in C"
+    linkTitle: "Transfer services"
     weight: 360
-
----
-Transfer services allow actions to be taken
+---Transfer services allow actions to be taken
 on transfers with the security system performing an authorization check
 when the request is submitted, and not when the request is processed by
 the monitor, the behavior of unprotected IPC with an error message in

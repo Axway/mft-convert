@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer  error procedures
-    linkTitle: Transfer error procedures
-    weight: 220
-
----
-You can define parameters so that the Transfer CFT performs certain
+    title: "Transfer  error procedures"
+    linkTitle: "Transfer error procedures"
+    weight: 210
+---You can define parameters so that the Transfer CFT performs certain
 terminating procedures if a transfer error occurs. A transfer error is
 defined as a problem leading to the Transfer CFT discontinuing the transfer.
 If this occurs, Transfer CFT can initiate one of the two procedures:
@@ -85,9 +82,9 @@ following types of transfers:
 - Whose activation
     time slot is expired
 - Which is interrupted,
-    in the <span style="font-weight: bold;">****H****</span> state (except for particular
+    in the ****H**** state (except for particular
     cases, see the Transfer CFT *[Codes,
-    Diagnostics and Messages](../../../troubleshoot_intro/messages_and_error_codes_start_here)*) or <span style="font-weight: bold;">****K****</span>
+    Diagnostics and Messages](../../../troubleshoot_intro/messages_and_error_codes_start_here)*) or ****K****
     state
 - Which is refused
     by the partner, for example, if the password is incorrect
@@ -127,7 +124,7 @@ variables](../../../c_intro_userinterfaces/command_summary/symbolic_variables)* 
 be used to define the procedure name, and the symbolic variables which
 can be used in the body of the procedure.
 
-When the transfer is in the <span style="font-weight: bold;">****T****</span>
+When the transfer is in the ****T****
 state, you can submit these procedures, or other external procedures,
 using the SUBMIT command.
 

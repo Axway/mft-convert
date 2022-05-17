@@ -1,11 +1,8 @@
 ---
-
-    title: Configuring Transfer CFT parameters
-    linkTitle: Configuring Transfer CFT parameters
+    title: "Configuring Transfer CFT parameters"
+    linkTitle: "Configuring Transfer CFT parameters"
     weight: 310
-
----
-From the <span class="italic_in_para">Main Menu</span>, enter the command <span class="code" style="font-weight: bold;">**`cft`**</span> and press <span class="bold_in_para">****Enter****</span> to open the <span class="italic_in_para">Manager Menu</span>.
+---From the Main Menu, enter the command **`cft`** and press ****Enter**** to open the Manager Menu.
 
 1. Select option 1 Customization and press ENTER.
 1. In the Customization screen, select option 1 CFT parameters and press ENTER.
@@ -27,7 +24,7 @@ The parameter and partner files can be created, re-created, or updated prior to 
 
 If you select 1 Configuration interpretation, Transfer CFT displays following messages.
 
-<span class="autonumber"></span>View messages
+View messages
 
 ```
 CFTU20I CFT OS/400

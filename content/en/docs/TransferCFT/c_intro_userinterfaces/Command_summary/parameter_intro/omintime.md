@@ -1,18 +1,15 @@
 ---
-
-    title: omintime
-    linkTitle: omintime
-    weight: 2460
-
----
-<span id="omintime"></span>
+    title: "omintime"
+    linkTitle: "omintime"
+    weight: 2480
+---<span id="omintime"></span>
 
 ### omintime
 
 #### CFTTCP
 
-****\[OMINTIME = { <span style="text-decoration: underline;">00000000</span>
-| N }\]****
+****[OMINTIME = { 00000000
+&#124; N }]****
 
 The authorized time slot for calls coming over this type of network.
 
@@ -25,8 +22,8 @@ make a call over this type of network.
 
 #### CFTPART
 
-****\[OMINTIME = { <span style="text-decoration: underline;">0
-|</span> N }\]****
+****[OMINTIME = { 0
+&#124; N }]****
 
 The minimum time of
 the authorized time slot for calls coming for a partner.

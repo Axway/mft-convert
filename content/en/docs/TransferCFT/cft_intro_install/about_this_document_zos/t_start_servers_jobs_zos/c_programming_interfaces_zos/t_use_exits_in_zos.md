@@ -1,11 +1,8 @@
 ---
-
-    title: Specific z/OS exits in Transfer CFT
-    linkTitle: Specific z/OS exits in Transfer CFT
+    title: "Specific z/OS exits in Transfer CFT"
+    linkTitle: "Specific z/OS exits in Transfer CFT"
     weight: 290
-
----
-This section describes exits in Transfer CFT z/OS, and includes information about:
+---This section describes exits in Transfer CFT z/OS, and includes information about:
 
 - Exit lists
 - File-type Exits

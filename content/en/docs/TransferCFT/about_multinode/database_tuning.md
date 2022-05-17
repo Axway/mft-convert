@@ -1,11 +1,8 @@
 ---
-
-    title: Tuning the database cache
-    linkTitle: Tuning the database cache
-    weight: 230
-
----
-This section describes how you can enhance performance using the database cache feature.
+    title: "Tuning the database cache"
+    linkTitle: "Tuning the database cache"
+    weight: 220
+---This section describes how you can enhance performance using the database cache feature.
 
 ## Overview
 
@@ -19,11 +16,11 @@ To reduce file I/O operations, thus improving performance on a non-performant di
 
 The database cache feature affects the management of dynamic objects such as transfer objects (CFTAUTH, CFTIDF, CFTXLATE, CFTSEND, CFTRECV, CFTEXIT,...), partner objects (CFTPART, CFTDEST,...), and the security object (CFTSSL direct=client). See Dynamic commands modification for more information.
 
-If you modify an object that is already loaded in the cache, meaning the object was used to execute a transfer since the last Transfer CFT start up, your modifications are not taken into account for following transfers until you either restart {{< TransferCFT/axwayvariablesComponentLongName  >}} or execute the <span class="code">`RECONFIG type=PARMCACHE`</span> command as described below.
+If you modify an object that is already loaded in the cache, meaning the object was used to execute a transfer since the last Transfer CFT start up, your modifications are not taken into account for following transfers until you either restart {{< TransferCFT/axwayvariablesComponentLongName  >}} or execute the `RECONFIG type=PARMCACHE` command as described below.
 
 ## Set the database cache size
 
-You can manage the database cache size using the UCONF <span class="code">`cft.server.parm.cache_size`</span> and <span class="code">`cft.server.parm.cache_timeout`</span> parameters. The <span class="code">`size `</span>parameter allows you to define the number of entries in the cache for the CFTPARM database. Setting the value to zero disables the cache, the default is 5000, and the maximum value is 10,000. And the <span class="code">`timeout `</span>defines the parm/part cache expiration time.
+You can manage the database cache size using the UCONF `cft.server.parm.cache_size` and `cft.server.parm.cache_timeout` parameters. The `size `parameter allows you to define the number of entries in the cache for the CFTPARM database. Setting the value to zero disables the cache, the default is 5000, and the maximum value is 10,000. And the `timeout `defines the parm/part cache expiration time.
 
 If memory is not an issue on the machine where Transfer CFT is running, we recommend setting the cache size to the maximum value (10,000). When setting the cache value to either 100 or 10,000, Transfer CFT consumes no more than an additional 2 MB or 200 MB, respectively.
 
@@ -35,4 +32,4 @@ If you set the cache size to a value that is lower than the space needed to stor
 
 You can use the command RECONFIG [type](../../c_intro_userinterfaces/command_summary/parameter_intro/type)=PARMCACHE to clear the cache while Transfer CFT is running. After the commands executes, all modifications applied to dynamic objects are taken into account without restarting Transfer CFT.
 
-For more information on the RECONFIG command, see <a href="../../admin_intro/admin_commands_intro/reconfig" class="MCXref xref">Manage configuration updates - RECONFIG</a>.
+For more information on the RECONFIG command, see [Manage configuration updates - RECONFIG](../../admin_intro/admin_commands_intro/reconfig).

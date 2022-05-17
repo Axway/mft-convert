@@ -1,11 +1,8 @@
 ---
-
-    title: Use the communication structure
-    linkTitle: Using the communication structure
+    title: "Use the communication structure"
+    linkTitle: "Using the communication structure"
     weight: 370
-
----
-The following topics describe the stages in a file transfer. These are:
+---The following topics describe the stages in a file transfer. These are:
 
 - [Before
     the file is allocated](#Before_the_File_is_Allocated)
@@ -74,7 +71,7 @@ the stages at which you want to take control by defining the masc parameter.
 ### Field values
 
 
-| Field  | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
+| Field | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After<br />  |
 | --- | --- | --- | --- | --- |
 | mtype | 0 | 0 | 0 | 0 |
 | masc | 10000000...000 | * | 10000000...000 | * |
@@ -189,7 +186,7 @@ this stage.
 ### Field values
 
 
-| Field  | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
+|   | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
 | --- | --- | --- | --- | --- |
 | mtype | 1 | 1 | 1 | 1 |
 | masc | = | * | = | * |
@@ -305,7 +302,7 @@ stage.
 ### Field values
 
 
-| Field  | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
+|   | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
 | --- | --- | --- | --- | --- |
 | mtype | 2 | 2 |   |   |
 | masc | = | * |   |   |
@@ -417,7 +414,7 @@ record is written if {{< TransferCFT/axwayvariablesComponentShortName  >}} manag
 is managed by the user function, the latter has to write the record before
 handing back control to {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
-At this stage (DATA\_TYP) and before the record is sent or after it is
+At this stage (DATA_TYP) and before the record is sent or after it is
 received, the user function can perform the following operations:
 
 - Modify the record
@@ -453,12 +450,12 @@ value of this field is the value specified in the NCOMP parameter of the
 CFTSEND or CFTRECV command associated with the File type EXIT.
 
 The user function can modify the ncomp field at the first stage in the
-transfer (ALLOC\_TYP). A zero value inhibits compression.
+transfer (ALLOC_TYP). A zero value inhibits compression.
 
 ### Field values
 
 
-| Field  | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
+| Field | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
 | --- | --- | --- | --- | --- |
 | mtype | 3 | 3 | 3 | 3 |
 | masc | = | * | = | * |

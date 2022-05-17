@@ -1,18 +1,15 @@
 ---
-
-    title: nspart
-    linkTitle: nspart
-    weight: 2340
-
----
-<span id="nspart"></span>
+    title: "nspart"
+    linkTitle: "nspart"
+    weight: 2360
+---<span id="nspart"></span>
 
 ### nspart
 
 #### CFTPART
 
-**\[NSPART = {<u>value of the NPART
-parameter of CFTPARM</u> | *string*}\]**
+**[NSPART = {<u>value of the NPART
+parameter of CFTPARM</u> &#124; *string*}]**
 
 - string24     PeSIT
     E  

@@ -1,11 +1,8 @@
 ---
-
-    title: forg
-    linkTitle: forg
-    weight: 1260
-
----
-<span id="forg"></span>
+    title: "forg"
+    linkTitle: "forg"
+    weight: 1250
+---<span id="forg"></span>
 
 ### forg
 
@@ -13,7 +10,7 @@
 
 #### CFTRECV, RECV, CFTSEND, SEND
 
-****\[FORG = {SEQ | DIRECT | INDEXED}\]
+****[FORG = {SEQ &#124; DIRECT &#124; INDEXED}]
   ****
 
 Organization of the file to be transferred:

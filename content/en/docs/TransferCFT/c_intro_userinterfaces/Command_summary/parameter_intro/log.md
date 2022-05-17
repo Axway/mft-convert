@@ -1,17 +1,14 @@
 ---
-
-    title: log
-    linkTitle: log
-    weight: 1820
-
----
-<span id="log"></span>
+    title: "log"
+    linkTitle: "log"
+    weight: 1810
+---<span id="log"></span>
 
 ### log
 
 #### CFTPARM
 
-\[LOG      = identifier\]
+[LOG      = identifier]
 
 Identifier for the {{< TransferCFT/axwayvariablesComponentShortName  >}} event
 log file description command (CFTLOG).

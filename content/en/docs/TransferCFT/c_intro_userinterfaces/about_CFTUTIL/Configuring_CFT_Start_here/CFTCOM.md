@@ -1,11 +1,8 @@
 ---
-
-    title: Communication media - CFTCOM  
-    linkTitle: CFTCOM - Communication media
-    weight: 310
-
----
-This topic describes the CFTCOM object and parameters. You can use this
+    title: "Communication media - CFTCOM  "
+    linkTitle: "CFTCOM - Communication media"
+    weight: 300
+---This topic describes the CFTCOM object and parameters. You can use this
 command to define the communication media used by Transfer CFT.
 
 ****Related
@@ -36,14 +33,10 @@ First define the TYPE, and then define the corresponding communication media par
 
 Designates the communication file name.  
 
-`[WSCAN = {60   | n}] {1..3600}`
+`[ WSCAN = { 60   &#124; n}] {1..3600}`
 
-Communication file scanning time (in seconds).
-
-Determines the time taken for the Transfer CFT
-to process a command.
-
-The optimum value is a tradeoff between the desired
+Communication file scanning time in seconds. Determines the time taken for the Transfer CFT
+to process a command. The optimum value is a tradeoff between the desired
 response time and the computer’s workload.
 
 <span id="TYPE=TCPIP"></span>
@@ -52,38 +45,19 @@ response time and the computer’s workload.
 
 Use CFTCOM TCP/IP for synchronous Transfer CFT communication on the local network.
 
-`[ADDRLIST = (string1..64,string1..64…)]`
+`[ DISCTS = n ]`
 
-The <span class="code">`ADDRLIST `</span>parameter is non-functional in that you can only use TCPIP in local networks for synchronous communication.
-
-`[DISCTS = n]`
-
-Without a request , the timeout (in seconds) before
+Without a request , the timeout in seconds before
 freeing a channel opened by a client.
 
 `HOST = string1..64`
 
-IP address of the local resource.
-
-This address (expressed in string format) can be completed
-with one of the following:
-
-- The real IP address
-    in notation point (ex: 192.9.200.10)
-
-<!-- -->
-
-- The logical name,
-    HOSTNAME, associated with the real IP address
-- The value, ALL,
-    specifying all the local network addresses.
+The IP address of the local resource, localhost or 127.0.0.1.
 
 `PROTOCOL = { XHTTP }`
 
-Request/reply protocol implemented on the TCP/IP layer:
-
-- XHTTP: HTTP protocol
-    variant, property of Axway Software
+Request/reply protocol implemented on the TCP/IP layer is XHTTP; and HTTP protocol
+variant, property of Axway Software.
 
 `PORT = n`
 
@@ -100,13 +74,12 @@ type is TCPIP.
 
 | Parameters  | Description  |
 | --- | --- |
-| <a href="../../../command_summary/parameter_intro/addrlist">ADDRLIST</a> | This field defines a list of authorized addresses that you can use to connect to the communication media. |
-| <a href="../../../command_summary/parameter_intro/host">HOST</a> | Networking IP address of the local resource. |
-| <a href="../../../command_summary/parameter_intro/id">ID</a>  | Identifier of the CFTCOM object. |
-| <a href="../../../command_summary/parameter_intro/mode">MODE</a> | Action to do in the parameter or partner base. This parameter applies to all commands that affect CFT bases. |
-| <a href="../../../command_summary/parameter_intro/port">PORT</a> | Listening port of the network. |
-| <a href="../../../command_summary/parameter_intro/protocol">PROTOCOL</a> | Defines the remote TCP network resource |
-| <a href="../../../command_summary/parameter_intro/type">TYPE</a> | Transfer CFT communication means. |
+| [HOST](../../../command_summary/parameter_intro/host) | Networking IP address of the local resource. |
+| [ID](../../../command_summary/parameter_intro/id)  | Identifier of the CFTCOM object. |
+| [MODE](../../../command_summary/parameter_intro/mode) | Action to do in the parameter or partner base. This parameter applies to all commands that affect CFT bases. |
+| [PORT](../../../command_summary/parameter_intro/port) | Listening port of the network. |
+| [PROTOCOL](../../../command_summary/parameter_intro/protocol) | Defines the remote TCP network resource |
+| [TYPE](../../../command_summary/parameter_intro/type) | Transfer CFT communication means. |
 
 
 <span id="Defining_CFTCOM_FILE"></span>
@@ -119,57 +92,24 @@ type is FILE.
 
 | Parameters  | Description  |
 | --- | --- |
-| <a href="../../../command_summary/parameter_intro/id">ID</a>  | Identifier of the CFTCOM command. |
-| <a href="../../../command_summary/parameter_intro/mode">MODE</a> | Action to do in the parameter or partner base. This parameter applies to all commands that affect Transfer CFT bases. |
-| <a href="../../../command_summary/parameter_intro/tlvcexec">TLVCEXEC</a>  | Batch to execute when the alert ends.  |
-| <a href="../../../command_summary/parameter_intro/tlvclear">TLVCLEAR</a>  | Level below which the alert ceases, as a percentage of filling, where 0% indicates the file is empty and 100% that it is full. |
-| <a href="../../../command_summary/parameter_intro/tlvwarn">TLVWARN</a>  | Command file usage limit before issuing an alert, as is a percentage of filling, where 0% indicates the file is empty, and 100% that it is full.<br/> Once this limit is reached, the CFTCOM/TLVWEXEC is executed. |
-| <a href="../../../command_summary/parameter_intro/tlvwexec">TLVWEXEC</a>  | Batch to execute when CFTCOM/TLVWARN is reached.  |
-| <a href="../../../command_summary/parameter_intro/tlvwrate">TLVWRATE</a>  | The minimum amount of time, in seconds, to wait before resending an alert.  |
-| <a href="../../../command_summary/parameter_intro/type">TYPE</a>  | Transfer CFT communication means. |
-| <a href="../../../command_summary/parameter_intro/wscan">WSCAN</a> | The frequency, in seconds, with which the Transfer CFT scans the communication file. |
+| [ID](../../../command_summary/parameter_intro/id)  | Identifier of the CFTCOM command. |
+| [MODE](../../../command_summary/parameter_intro/mode) | Action to do in the parameter or partner base. This parameter applies to all commands that affect Transfer CFT bases. |
+| [TLVCEXEC](../../../command_summary/parameter_intro/tlvcexec)  | Batch to execute when the alert ends.  |
+| [TLVCLEAR](../../../command_summary/parameter_intro/tlvclear)  | Level below which the alert ceases, as a percentage of filling, where 0% indicates the file is empty and 100% that it is full. |
+| [TLVWARN](../../../command_summary/parameter_intro/tlvwarn)  | Command file usage limit before issuing an alert, as is a percentage of filling, where 0% indicates the file is empty, and 100% that it is full.<br/> Once this limit is reached, the CFTCOM/TLVWEXEC is executed. |
+| [TLVWEXEC](../../../command_summary/parameter_intro/tlvwexec)  | Batch to execute when CFTCOM/TLVWARN is reached.  |
+| [TLVWRATE](../../../command_summary/parameter_intro/tlvwrate)  | The minimum amount of time, in seconds, to wait before resending an alert.  |
+| [TYPE](../../../command_summary/parameter_intro/type)  | Transfer CFT communication means. |
+| [WSCAN](../../../command_summary/parameter_intro/wscan) | The frequency, in seconds, with which the Transfer CFT scans the communication file. |
 
 
-<span class="bold_in_para">****Example****</span>
+****Example****
 
 TYPE=FILE
 
 ```
-CFTCOM ID = IDCOM,
+CFTCOM ID = IDCOM1,
 TYPE = FILE
 NAME = <filename>,
 WSCAN = 120
-```
-
-### Communication media characteristics
-
-- For file communication:
-
-<!-- -->
-
-- The {{< TransferCFT/axwayvariablesComponentShortName >}} can be inactive at the time
-    the commands assigned to it are issued, to the limit of the file size.
-    Commands are taken into account at the time the {{< TransferCFT/axwayvariablesComponentShortName >}} is activated,
-    if a CFTCOM command relative to this communication file has been defined.
-    A communication file can be created by the CFTFILE command.
-
-<!-- -->
-
-- For TCP synchronous
-    mediums:
-    -   Communication is only possible if the Transfer
-        CFT is present.
-        To retrieve the IDT and the IDTU values of the transfer, you can use the
-        variables %\_CAT\_IDT% and %\_CAT\_IDTU%.
-
-**Example**
-
-```
-SEND
-PART = PART1
-IDF = TEST1
- 
-Then...
-LISTCAT
-IDT = %_CAT_IDT%
 ```

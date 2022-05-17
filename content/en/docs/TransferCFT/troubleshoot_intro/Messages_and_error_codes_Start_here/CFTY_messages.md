@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer CFT messages: CFTY
-    linkTitle: CFTY messages
-    weight: 410
-
----
-This topic lists the CFTYxx (CFT xnnx) messages and provides the type, a description, consequence, and corrective actions when applicable.
+    title: "Transfer CFT messages: CFTY"
+    linkTitle: "CFTY messages"
+    weight: 400
+---This topic lists the CFTYxx (CFT xnnx) messages and provides the type, a description, consequence, and corrective actions when applicable.
 
 **Message format**
 
@@ -15,9 +12,9 @@ Earlier versions of Transfer CFT used a different message format than version 3.
 
 **Example**
 
-CFTLOG FORMAT=\[V23,V24\]
+CFTLOG FORMAT=[V23,V24]
 
-For V23: <span class="code">`CFTT57I PART=&part IDF=&idf IDT=&idt &str transfer started`</span>
+For V23: `CFTT57I PART=&part IDF=&idf IDT=&idt &str transfer started`
 
 For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&idt>`
 
@@ -267,30 +264,6 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
 | Explanation | SSL session handshake failure. An alert has been received from the remote peer.  |
 | Consequence | The SSL session in progress is aborted.  |
 | Action | Analyze the &amp;cr error code (refer to the SSL protocol error codes). Also check the remote partner log for more details. Contact Axway support if necessary.  |
-
-
- 
-
-
-| V23 format<br/> V24 format<br/> Information | <span id="CFTY41E"></span>CFTY41E CFTCTX=&lt;session_reference&gt;, xpp call &lt;PassportPS_API_function&gt;: error [&lt;PassportPS_API_function_returncode&gt;]<br/> CFTY41E CFTCTX=&lt;session_reference&gt;, xpp call &lt;PassportPS_API_function&gt;: error [&lt;PassportPS_API_function_returncode&gt;] |
-| --- | --- |
-| Explanation | An error occurred during an exchange or connection with the PassPort PS server.<br/> &lt;PassportPS_API_function&gt; and &lt;PassportPS_API_function_returncode&gt; identify the function in error and provide the return code for the function. |
-
-
- 
-
-
-| V23 format<br/> V24 format<br/> Information | <span id="CFTY44E"></span>CFTY44E CFTCTX=&lt;session_reference&gt;, long err msg : [&lt;PassportPS_API_error_code&gt;]  |
-| --- | --- |
-| Explanation | An error occurred during an exchange or connection with the PassPort PS server. The &lt;PassportPS_API_error_code&gt; describes the error. |
-
-
- 
-
-
-| V23 format<br/> V24 format<br/> Information | <span id="CFTY45E"></span>CFTY45E CFTCTX=&lt;session_reference&gt;, &lt;PassportPS_API_error_message&gt;  |
-| --- | --- |
-| Explanation | An error occurred during an exchange or connection with the PassPort PS server. The &lt;PassportPS_API_error_message&gt; describes the error. |
 
 
  

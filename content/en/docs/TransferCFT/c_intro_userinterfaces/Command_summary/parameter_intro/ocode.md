@@ -1,19 +1,16 @@
 ---
-
-    title: ocode
-    linkTitle: ocode
-    weight: 2390
-
----
-<span id="ocode"></span>
+    title: "ocode"
+    linkTitle: "ocode"
+    weight: 2410
+---<span id="ocode"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
 #### COPYFILE
 
-**<span style="font-weight: bold;">****\[OCODE =
+******[OCODE =
 {<u>internal code determined by the system</u>
-| ASCII | EBCDIC}\]****</span><span style="font-weight: normal;"> </span>**
+&#124; ASCII &#124; EBCDIC}]******
 
 Output file data code.
 

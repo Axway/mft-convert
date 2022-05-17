@@ -1,18 +1,15 @@
 ---
-
-    title: nblksize
-    linkTitle: nblksize
-    weight: 2090
-
----
-<span id="nblksize"></span>
+    title: "nblksize"
+    linkTitle: "nblksize"
+    weight: 2100
+---<span id="nblksize"></span>
 
 ### nblksize
 
 #### CFTSEND, SEND
 
-**\[NBLKSIZE = {<u>value of FBLKSIZE</u>
-| n}\]**
+**[NBLKSIZE = {<u>value of FBLKSIZE</u>
+&#124; n}]**
 
 File block size in protocol terms.
 

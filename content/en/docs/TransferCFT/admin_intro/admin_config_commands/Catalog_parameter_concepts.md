@@ -1,12 +1,9 @@
 ---
-
-    title: Catalog attributes 
-    linkTitle: CFTCAT - Catalog attributes 
-    weight: 240
-
----
-****<span style="color: #800000; text-decoration: none; font-weight: normal;">Related
-topics</span>****
+    title: "Catalog attributes "
+    linkTitle: "CFTCAT - Catalog attributes "
+    weight: 230
+---****Related
+topics****
 
 - Command syntax
     [CFTCAT](../../../c_intro_userinterfaces/command_summary#CFTCAT)
@@ -32,7 +29,7 @@ but does not disrupt transfers.
 Catalog functions include a method to recover information about the
 CFT that is using the catalog.
 
-For each <span style="font-weight: bold;">****PARM****</span>, there is one
+For each ****PARM****, there is one
 associated CFTCAT.
 
 ### Catalog levels

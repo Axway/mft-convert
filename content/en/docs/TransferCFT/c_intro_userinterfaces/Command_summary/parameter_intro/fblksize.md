@@ -1,11 +1,8 @@
 ---
-
-    title: fblksize
-    linkTitle: fblksize
-    weight: 1060
-
----
-<span id="fblksize"></span>
+    title: "fblksize"
+    linkTitle: "fblksize"
+    weight: 1050
+---<span id="fblksize"></span>
 
 ### fblksize
 
@@ -13,19 +10,19 @@
 
 #### CFTFILE
 
-**\[FBLKSIZE = {<u>see
-table below</u> | n}\]  **{0...32768}
+**[FBLKSIZE = {<u>see
+table below</u> &#124; n}]  **{0...32768}
 
 According to TYPE/**OS**
 
 Defines the block size, in bytes, of the file to be created.
 
 The table below indicates, for each system, the default value supported
-according to the type of file to be created. When the default
+according to the type of file to be created.When the default
 value of the block size of the file to be created is "no" in the following table, the
 FBLKSIZE parameter does not need to be defined.
 
-QQQ\_QQQ\_QQQ removed fblksize from top row
+QQQ_QQQ_QQQ removed fblksize from top row
 
 
 | OS  | PARM  | PART  | CAT  | COM  | LOG  | ACCNT  |
@@ -33,12 +30,13 @@ QQQ\_QQQ\_QQQ removed fblksize from top row
 |  z/OS (MVS) | no  | no  | no  | no  | 1028 | 482  |
 | IBM i (OS400)  | 0  | 0  | 0  | 0  | 0  | 0  |
 | UNIX  | no  | no  | no  | no  | no  | no  |
+| VMS  | no  | no  | no  | no  | no  | no  |
 | Windows | no  | no  | no  | no  | no  | no  |
 
 
 #### CFTRECV, RECV
 
-**\[FBLKSIZE = n \]              **{0..62563}
+**[FBLKSIZE = n ]              **{0..62563}
 
 This parameter, in bytes, controls the "blocking factor" of
 the receiver file records: according to the system, it defines the disk
@@ -50,6 +48,7 @@ block size and/or the file input/output buffer size.
 | MVS (z/OS) | YES  |
 | OS400 (IBM i) | NO  |
 | UNIX  | NO  |
+| VMS  | NO  |
 | Windows | NO  |
 
 
@@ -62,7 +61,7 @@ block size and/or the file input/output buffer size.
 
 #### CFTSEND, SEND
 
-****\[FBULKSIZ = n\]   {
+****[FBULKSIZ = n]   {
 0...65536}****
 
 Block size of file to be sent.
@@ -77,6 +76,7 @@ taken into account when activating the transfer.
 | MVS (z/OS) | YES  |
 | OS400 (IBM i) | NO  |
 | UNIX  | NO  |
+| OpenVMS  | NO  |
 | Windows  | NO  |
 
 

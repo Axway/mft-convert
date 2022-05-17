@@ -1,11 +1,8 @@
 ---
-
-    title: Client and server recommendations
-    linkTitle: Client and server recommendations
-    weight: 240
-
----
-This section provides recommendations and examples based on:
+    title: "Client and server recommendations"
+    linkTitle: "Client and server recommendations"
+    weight: 230
+---This section provides recommendations and examples based on:
 
 - [Client mode outgoing transfers](#Client)
 - [Server mode incoming transfers](#Server)
@@ -33,7 +30,7 @@ SUN35-1 SFT XX TEST2 F1517084 14 14 0 CP NONE
 SUN35-2 SFT XX TEST2 F1517085 14 14 0 CP NONE
 SUN35-3 SFT XX TEST2 F1517090 14 14 0 CP NONE
 SUN35-4 SFT XX TEST2 F1517091 14 14 0 CP NONE
-**SUN35-5 SFD TD TEST2 F1517092 0 0 416 MAXCNX**
+SUN35-5 SFD TD TEST2 F1517092 0 0 416 MAXCNX
 ```
 <span id="Session"></span>
 

@@ -1,11 +1,8 @@
 ---
-
-    title: Creating  a SEND template
-    linkTitle: Default send templates CFTSEND
-    weight: 180
-
----
-This topic describes the
+    title: "Creating  a SEND template"
+    linkTitle: "Default send templates CFTSEND"
+    weight: 170
+---This topic describes the
 CFTSEND template object, used to specify the default values for:
 
 - The name and local
@@ -26,8 +23,8 @@ CFTPARM object.
 
 Certain default template objects cannot be deleted. The template CFTSEND and CFTRECV objects can not be deleted if they are used by another configuration.
 
-****<span style="color: #800000; text-decoration: none; font-weight: normal;">Related
-topics</span>****
+****Related
+topics****
 
 - Command syntax
     [CFTSEND](../../../c_intro_userinterfaces/command_summary#CFTSEND)
@@ -46,8 +43,8 @@ topics</span>****
 CFTSEND commands include parameters controlling the access to the data
 to be sent and the send transfer process.
 
-A CFTSEND command (*default <span style="font-style: normal;">command
-excluded</span>*) controls the sending of the model file with the same
+A CFTSEND command (*default command
+excluded*) controls the sending of the model file with the same
 identifier (IDF equal to the ID of the CFTSEND command).
 
 This command is taken into account in one or other of the following

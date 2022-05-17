@@ -1,11 +1,8 @@
 ---
-
-    title: Scheduling script execution - CFTCRON
-    linkTitle: Cron jobs - CFTCRON
-    weight: 260
-
----
-The <a href="" class="MCTextPopup popup popupHead">CRONJOB<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody" aria-hidden="true"><span class="MCTextPopupArrow"> </span>Job Scheduler</span></a> feature enables Transfer CFT to execute scripts at predetermined
+    title: "Scheduling script execution - CFTCRON"
+    linkTitle: "Cron jobs - CFTCRON"
+    weight: 250
+---The [CRONJOB Job Scheduler]() feature enables Transfer CFT to execute scripts at predetermined
 dates and times. An example script, `cron-wlog.cmd`, is delivered in the installed product
 packaging ($CFTDIRRUNTIME/exec on Unix/Windows). You can adapt this example to suit your local requirements.
 
@@ -40,7 +37,7 @@ For CFTCRON command parameter details, see the [Command reference](../../../comm
 This section provides CFTCRON examples.
 
 The following command inserts the cronjob CRON1 in the crontab CRONTAB1.
-The job my\_exec is executed every 10 minutes once Transfer CFT is started.
+The job my_exec is executed every 10 minutes once Transfer CFT is started.
 This means that the job is submitted on the minute at 0, 10, 20,
 30, 40, 50 minutes of every hour.
 
@@ -68,8 +65,6 @@ minutes, while an upper case M defines months.
 - Italic characters
     are grammar rule non-terminators
 - A, b, c are integers
-
-QQQ\_QQQ\_CHECK - 2 cells merged, left of
 
 
 | Rule | Syntax | Alternate syntax |
@@ -154,4 +149,4 @@ procedure. Define these using the EXEC parameter of the CFTCRON command.
 ****Related
 topics****
 
-- Command syntax<span style="font-weight: bold;"> **** </span>[CFTCRON](../../../command_summary#CFTCRON)
+- Command syntax **** [CFTCRON](../../../command_summary#CFTCRON)

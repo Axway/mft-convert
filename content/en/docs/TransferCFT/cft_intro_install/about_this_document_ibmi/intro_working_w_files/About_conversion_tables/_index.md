@@ -1,11 +1,8 @@
 ---
-
-    title: Conversion tables 
-    linkTitle: Conversion tables
+    title: "Conversion tables "
+    linkTitle: "Conversion tables"
     weight: 210
-
----
-This section describes how to use a conversion table in Transfer CFT {{< TransferCFT/PrimaryForOS400  >}} in the following sections:
+---This section describes how to use a conversion table in Transfer CFT {{< TransferCFT/PrimaryForOS400  >}} in the following sections:
 
 - Using a conversion table
 - Configuration sample
@@ -15,7 +12,7 @@ This section describes how to use a conversion table in Transfer CFT {{< Transfe
 During Transfer CFT operations conversion problems may occur when:
 
 - A file to be transferred contains various special characters:  
-          |, !, \\, `, #, ~, \[, \], ^, {, }, /, $ and £
+          &#124;, !, \\, `, #, ~, [, ], ^, {, }, /, $ and £
 
 <!-- -->
 
@@ -29,7 +26,7 @@ During Transfer CFT operations conversion problems may occur when:
 
 The default EBCDIC character set used by Transfer CFT has code 297 (EBCDIC France).
 
-The default ASCII character set used by Transfer CFT is not fully compatible with code 850 (IBM multilingual personal computer). For more information refer to the *Transfer CFT User Guide*. <span style="color: #b22222;">ADD LINK</span>
+The default ASCII character set used by Transfer CFT is not fully compatible with code 850 (IBM multilingual personal computer). For more information refer to the *[Transfer CFT User Guide](../../../../concepts/transfer_command_overview/using_transcoding/use_extended_character_sets)*.
 
 Consequently, two files supplied in the production library are used to enter and create a conversion table in Transfer CFT:
 
@@ -43,7 +40,7 @@ These two files can be modified by DFU (Option 18 in PDM - Member Management).
 
 ### Creating the conversion table
 
-To create the actual conversion table, you must run the make\_tcd.c utility program after modifying the characters at fault: `call make_tcd.c parm('CFTPROD/tabaseb')`
+To create the actual conversion table, you must run the make_tcd.c utility program after modifying the characters at fault: `call make_tcd.c parm('CFTPROD/tabaseb')`
 
 The CFTPROD/tabaseb.x binary file is created: it constitutes the conversion table to be specified in the Transfer CFT configuration. The same applies to tabebas.x.
 
@@ -52,7 +49,7 @@ The CFTPROD/tabaseb.x binary file is created: it constitutes the conversion tabl
 The following is a full Transfer CFT {{< TransferCFT/PrimaryForOS400  >}} configuration sample for a Windows system, which is a typical and frequent scenario.
 
 ```
-**Transfer CFT IBM i configuration**
+Transfer CFT IBM i configuration
 CFTXLATE MODE=REPLACE,
          ID=TABASEB,
          DIRECT=RECV,
@@ -61,7 +58,6 @@ CFTXLATE MODE=REPLACE,
          ID=TABEBAS,
          DIRECT=SEND,
          FNAME=CFTPROD/TABEBAS.X
- 
 CFTSEND MODE=REPLACE, ID=……..,
          XLATE=TABEBAS,
           …………………….
@@ -70,8 +66,7 @@ CFTRECV MODE=REPLACE, ID=………,
          XLATE=TABASEB,
           …………………….
  
- 
-**Transfer CFT WIN/NT configuration**
+Transfer CFT WIN/NT configuration
 ============
  
 cftrecv  id       = …………,

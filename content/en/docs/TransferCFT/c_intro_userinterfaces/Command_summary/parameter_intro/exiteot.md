@@ -1,17 +1,14 @@
 ---
-
-    title: exiteot
-    linkTitle: exiteot
-    weight: 1020
-
----
-<span id="exiteot"></span>
+    title: "exiteot"
+    linkTitle: "exiteot"
+    weight: 1010
+---<span id="exiteot"></span>
 
 ### exiteot
 
 #### CFTPARM
 
-**\[EXITEOT = *identifier*\]**
+**[EXITEOT = *identifier*]**
 
 EXIT identifier of 32 characters.
 

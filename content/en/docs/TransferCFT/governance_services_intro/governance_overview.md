@@ -1,17 +1,14 @@
 ---
-
-    title: About governance services
-    linkTitle: About governance services
-    weight: 160
-
----
-In this guide, *flow* refers to the complete interaction between the source and target applications, more specifically Transfer CFT systems, to enable data exchanges between business applications or partners.
+    title: "About governance services"
+    linkTitle: "About governance services"
+    weight: 150
+---In this guide, *flow* refers to the complete interaction between the source and target applications, more specifically Transfer CFT systems, to enable data exchanges between business applications or partners.
 
 ## Managed File Transfer services
 
 Managed File Transfer services, using a blend of Axway products, can centralize flow definition and configuration deployment for {{< TransferCFT/axwayvariablesComponentLongName  >}} (file transfer) engines.
 
-You can use Central Governance in your MFT architecture to easily create and deploy flows. You then trigger your flows at the system level.
+You can use {{< TransferCFT/suitevariablesFlowManager  >}} or Central Governance in your MFT architecture to easily create and deploy flows. You then trigger your flows at the system level.
 
 ![Multiple Transfer CFTs can send events from the data exchange environment towards Central Governance](/Images/TransferCFT/data_exchange_env.png)
 
@@ -21,9 +18,9 @@ You can use Central Governance in your MFT architecture to easily create and de
 
 ### Additional documentation
 
-- {{< TransferCFT/axwayvariablesPlatformorSuiteLongName >}} Supported Platforms
-- {{< TransferCFT/suitevariablesCentralGovernanceName >}} documentation
+- Axway Supported Platforms
 - {{< TransferCFT/suitevariablesFlowManager >}} documentation
+- {{< TransferCFT/suitevariablesCentralGovernanceName >}} documentation
 
 ## Governance exchanges
 
@@ -61,7 +58,7 @@ Transfer CFTs running under {{< TransferCFT/suitevariablesCentralGovernanceName 
 | Multi-node architecture  | no  | yes  |
 | CRONJOB  | yes  | yes  |
 | Exits  | no  | yes  |
-| Network and protocol features  |   |   |
+| Network features  |   |   |
 | IPv6  | yes  | yes  |
 | pTCP (UNIX/Windows only)  | yes  | yes  |
 | UDT (UNIX/Windows only)  | yes  | yes  |
@@ -71,13 +68,11 @@ Transfer CFTs running under {{< TransferCFT/suitevariablesCentralGovernanceName 
 | Secure Relay  | no  | yes  |
 | TrustedFile (UNIX/Windows/and z/OS)  | no  | yes |
 | PassPort AM  | embedded  | no (*)  |
-| PassPort PS  | no  | yes  |
 | Sentinel  | embedded  | yes  |
-| Composer  | no  | no  |
 | Protocols &lt;/th&gt;  |   |   |
 | PeSIT  | yes  | yes  |
 | ODETTE  | no  | yes  |
-| SFTP *(UNIX, Windows)*  | no  | yes  |
+| SFTP  | yes  | yes  |
 
 
 \* If you perform a migration or upgrade from a previous version, you must migrate your PassPort AM.

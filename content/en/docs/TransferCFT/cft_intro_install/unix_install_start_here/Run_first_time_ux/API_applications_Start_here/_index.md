@@ -1,11 +1,8 @@
 ---
-
-    title: About  API applications
-    linkTitle: Build API applications and exits
-    weight: 190
-
----
-This book describes one of two {{< TransferCFT/axwayvariablesComponentShortName  >}} programming interfaces,
+    title: "About  API applications"
+    linkTitle: "Build API applications and exits"
+    weight: 200
+---This book describes one of two {{< TransferCFT/axwayvariablesComponentShortName  >}} programming interfaces,
 the API applications. This interface enables {{< TransferCFT/axwayvariablesComponentShortName  >}} to work in conjunction
 with external applications.
 
@@ -30,9 +27,9 @@ create an API application.
 
 | Topic  | Details  |
 | --- | --- |
-| <a href="creating_an_api_application">Creating an API application</a> | Describes the procedure to create an API application in {{< TransferCFT/axwayvariablesComponentShortName  >}} UNIX. |
-| <a href="creating_an_exit_file">Creating an exit file</a> | Describes how to create an exit file for {{< TransferCFT/axwayvariablesComponentShortName  >}} UNIX. |
-| <a href="creating_a_directory_exit">Creating a directory exit</a> | Describes how to create a directory exit in {{< TransferCFT/axwayvariablesComponentShortName  >}} UNIX. |
+| [Creating an API application](creating_an_api_application) | Describes the procedure to create an API application in {{< TransferCFT/axwayvariablesComponentShortName  >}} UNIX. |
+| [Creating an exit file](creating_an_exit_file) | Describes how to create an exit file for {{< TransferCFT/axwayvariablesComponentShortName  >}} UNIX. |
+| [Creating a directory exit](creating_a_directory_exit) | Describes how to create a directory exit in {{< TransferCFT/axwayvariablesComponentShortName  >}} UNIX. |
 | Creating an accounting exit | Describes how to create an accounting exit in UNIX. |
 
 

@@ -1,11 +1,8 @@
 ---
-
-    title: CFTSSH - Security profile
-    linkTitle: SSH Security Profiles - CFTSSH
-    weight: 200
-
----
-Use the CFTSSH command to describe a security profile.
+    title: "CFTSSH - Security profile"
+    linkTitle: "SSH Security Profiles - CFTSSH"
+    weight: 190
+---Use the CFTSSH command to describe a security profile.
 
 > **Note**
 >
@@ -25,7 +22,7 @@ The CFTSSH object parameters for a server definition (DIRECT = SERVER).
 | DIRECT<br/>  | The security profile is applicable in this mode (SERVER). |
 | HMAC  | List of accepted HMAC (keyed-hash message authentication code).<br/> • Choose from the following: hmac-sha2-512, hmac-sha2-256, hmac-sha1, none.<br /> <br/> • If the field is empty, the default list is hmac-sha2-512, hmac-sha2-256, hmac-sha1. |
 | KEYEXCHG  | List of key exchange methods to use.<br/> Choose from the following: curve25519-sha256@libssh.org, ecdh-sha2-nistp256, diffie-hellman-group14-sha1, diffie-hellman-group1-sha1. |
-| MODE = {REPLACE | CREATE | DELETE} | Action for the command. For DELETE mode, the command is deleted from the PARAMETERS database; only the ID and DIRECT parameters are required. |
+| MODE = {REPLACE &#124; CREATE &#124; DELETE} | Action for the command. For DELETE mode, the command is deleted from the PARAMETERS database; only the ID and DIRECT parameters are required. |
 | ORIGIN = string  | This parameter indicates the object's origin.  |
 | SRVPRIVKEY  | When DIRECT=SERVER:<br/> Key Id containing the server private key (RSA) to use with key authentication. |
 
@@ -44,14 +41,14 @@ The CFTSSH object parameters for a client definition (DIRECT = CLIENT).
 | DIRECT | The security profile is applicable in this mode (CLIENT). |
 | HMAC  | List of accepted HMAC (keyed-hash message authentication code).<br/> • Choose from the following: hmac-sha2-512, hmac-sha2-256, hmac-sha1, none.<br /> <br/> • If the field is empty, the default list is hmac-sha2-512, hmac-sha2-256, hmac-sha1. |
 | KEYEXCHG  | List of key exchange methods to use. Choose from the following: curve25519-sha256@libssh.org, ecdh-sha2-nistp256, diffie-hellman-group14-sha1, diffie-hellman-group1-sha1.  |
-| MODE = {REPLACE | CREATE | DELETE} | Action for the command. For DELETE mode, the command is deleted from the PARAMETERS database; only the ID and DIRECT parameters are required. |
+| MODE = {REPLACE &#124; CREATE &#124; DELETE} | Action for the command. For DELETE mode, the command is deleted from the PARAMETERS database; only the ID and DIRECT parameters are required. |
 | ORIGIN = string  | This parameter indicates the object's origin.  |
 | SRVPUBKEY  | When DIRECT=CLIENT:<br/> Key Id containing the server public key (RSA) for the server. When defined, the Transfer CFT client checks that the public key referenced by SRVPUBKEY matches the key provided by the server.<br/> If an error occurs, the connection is rejected with a DIAGI 264. |
 
 
 ****Example 1****
 
-This example demonstrates an SSH default profile that has no client key authentication (CLIPUBKEY is not defined). The server private key is referenced by the SRVPRIVKEY parameter (SSH\_PRIV\_KEY in the example). The SRVPRIVKEY value is a key identifier that corresponds to a key stored in the local PKI database.
+This example demonstrates an SSH default profile that has no client key authentication (CLIPUBKEY is not defined). The server private key is referenced by the SRVPRIVKEY parameter (SSH_PRIV_KEY in the example). The SRVPRIVKEY value is a key identifier that corresponds to a key stored in the local PKI database.
 
 ```
 CFTSSH ID = 'SSH_DEFAULT',
@@ -63,11 +60,11 @@ CFTSSH ID = 'SSH_DEFAULT',
 
 ****Example 2****
 
-The next example demonstrates an SSH default profile that uses client key authentication (CLIPUBKEY is defined). The client public key is referenced by the CLIPUBKEY parameter (SSH\_PUB\_KEY). The CLIPUBKEY value is a key identifier that corresponds to a key stored in the local PKI database.
+The next example demonstrates an SSH default profile that uses client key authentication (CLIPUBKEY is defined). The client public key is referenced by the CLIPUBKEY parameter (SSH_PUB_KEY). The CLIPUBKEY value is a key identifier that corresponds to a key stored in the local PKI database.
 
 ****Example 3****
 
-The server private key is referenced by the SRVPRIVKEY parameter (SSH\_PRIV\_KEY in the example). The value is also a key identifier that corresponds to a key stored in the local PKI database.
+The server private key is referenced by the SRVPRIVKEY parameter (SSH_PRIV_KEY in the example). The value is also a key identifier that corresponds to a key stored in the local PKI database.
 
 ```
 CFTSSH ID = 'SSH_DEFAULT',
@@ -89,7 +86,7 @@ CFTSSH ID = 'SSH_DEFAULT',
 
 ****Example 5****
 
-This example demonstrates an SSH default profile with server key authentication (SRVPUBKEY is defined), but where there is no client key authentication (CLIPRIVKEY is not defined). The server public key is referenced by the SRVPUBKEY parameter (SSH\_PUB\_KEY in the example). The SRVPUBKEY value is a key identifier that corresponds to a key stored in the local PKI database.
+This example demonstrates an SSH default profile with server key authentication (SRVPUBKEY is defined), but where there is no client key authentication (CLIPRIVKEY is not defined). The server public key is referenced by the SRVPUBKEY parameter (SSH_PUB_KEY in the example). The SRVPUBKEY value is a key identifier that corresponds to a key stored in the local PKI database.
 
 ```
 CFTSSH ID = 'SSH_DEFAULT',
@@ -102,8 +99,8 @@ CFTSSH ID = 'SSH_DEFAULT',
 
 This example demonstrates an SSH default profile with server key authentication (SRVPUBKEY is defined) and client key authentication (CLIPRIVKEY is defined).
 
-- The server public key is referenced by the SRVPUBKEY parameter (SSH\_PUB\_KEY). The SRVPUBKEY value is a key identifier that corresponds to a key stored in the local PKI database.
-- The client private key is referenced by the CLIPRIVKEY parameter (SSH\_PRIV\_KEY in this example). The CLIPRIVKEY value is a key identifier that corresponds to a key stored in the local PKI database.
+- The server public key is referenced by the SRVPUBKEY parameter (SSH_PUB_KEY). The SRVPUBKEY value is a key identifier that corresponds to a key stored in the local PKI database.
+- The client private key is referenced by the CLIPRIVKEY parameter (SSH_PRIV_KEY in this example). The CLIPRIVKEY value is a key identifier that corresponds to a key stored in the local PKI database.
 
 ```
 CFTSSH ID = 'SSH_DEFAULT',

@@ -1,11 +1,8 @@
 ---
-
-    title: Catalog querying services 
-    linkTitle: Catalog querying services
+    title: "Catalog querying services "
+    linkTitle: "Catalog querying services"
     weight: 240
-
----
-This service provides access to the {{< TransferCFT/axwayvariablesComponentShortName  >}} catalog entries, for
+---This service provides access to the {{< TransferCFT/axwayvariablesComponentShortName  >}} catalog entries, for
 querying and modification, and enables you to sort the selected catalog
 entries. Additionally, you can sort the current selection in memory.
 

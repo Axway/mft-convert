@@ -1,17 +1,14 @@
 ---
+    title: "phases"
+    linkTitle: "phases"
+    weight: 2590
+---### phases
 
-    title: phases
-    linkTitle: phases
-    weight: 2570
+#### SWAITCAT
 
----
-### phases
+****[ PHASES = { A &#124; T &#124; Y &#124; Z &#124; X } ]****
 
-****SWAITCAT****
-
-**`[ PHASES =  { A | T | Y | Z | X }  ]`**
-
-Where the string <span class="bold_in_para">****sizemax= 5****</span>.
+Where the string ****sizemax= 5****.
 
 Possible values:
 
@@ -19,10 +16,12 @@ Possible values:
 - \(T\) Transferring: All transfer execution occurs in this phase
 - (Y) Post-processing: All the post-transfer script execution occurs here
 - (Z) Acknowledgement: Acknowledgement reception/send steps and ack script execution occur here
-- (<u>X</u>) Done: End condition when all of the previous phases are completed (default)
+- \(X\) Done: End condition when all of the previous phases are completed
 
 ****Example****
 
 ```
 swaitcat select='(IDTU=="%_CAT_IDTU%")',timeout=30,phases=y,phasesteps=ch
 ```
+
+[Return to Command index](../../)

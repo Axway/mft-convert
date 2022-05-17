@@ -1,18 +1,15 @@
 ---
-
-    title: About broadcast and collecting
-    linkTitle: File transfers
+    title: "About broadcast and collecting"
+    linkTitle: "File transfers"
     weight: 300
-
----
-Files from several partners can be collected
+---Files from several partners can be collected
 through a single RECV command, making reference to a list of partners
 associated with this collection; this list is defined in the CFTDEST command.
 
 The following illustration displays the relationships
 to be established to perform a collection.
 
-********<span class="autonumber"></span>Define a list
+********Define a list
 of partners********
 
 **![](/Images/TransferCFT/Define_list_of_partner_RECV.gif)**

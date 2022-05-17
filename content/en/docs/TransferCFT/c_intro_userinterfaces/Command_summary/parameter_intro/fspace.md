@@ -1,11 +1,8 @@
 ---
-
-    title: fspace
-    linkTitle: fspace
-    weight: 1360
-
----
-<span id="fspace"></span>
+    title: "fspace"
+    linkTitle: "fspace"
+    weight: 1350
+---<span id="fspace"></span>
 
 ### fspace
 
@@ -13,8 +10,8 @@
 
 #### CFTRECV, RECV
 
-******\[FSPACE = {** **0**
-**| n } \]******
+******[FSPACE = {** **0**
+**&#124; n } ]******
 
 Size of the receiver file, in Kbytes
 (1 Kbyte = 1024 bytes).
@@ -30,8 +27,8 @@ This size usually corresponds to the primary allocation.
 
 #### CFTSEND, SEND
 
-**\[FSPACE = { <span style="text-decoration: underline;">0</span>
-| n } \]**
+**[FSPACE = { 0
+&#124; n } ]**
 
 Size of the file to be sent, in Kbytes (1 Kbyte = 1024 bytes).
 
@@ -44,8 +41,8 @@ supported by the system in question).
 
 #### CFTFILE
 
-****\[FSPACE
-= {see [table](#FSPACE_Table) | n}\]****
+****[FSPACE
+= {see [table](#FSPACE_Table) &#124; n}]****
 
 ****{0..65536}****
 
@@ -60,9 +57,9 @@ from the value of the RECNB parameter (number of records in the file).
 The table below indicates, for each system, the default value supported
 according to the type of file to be created. In this table, the FSPACE
 parameter does not need to be defined when the default value of the primary
-allocation of the file to be created is "no".
+allocation of the file to be created is "no".<span id="FSPACE_Table"></span>
 
-QQQ\_QQQ\_QQQ removed fspace from top row
+QQQ_QQQ_QQQ removed fspace from top row
 
 
 | OS  | PARM  | PART  | CAT  | COM  | LOG  | ACCNT  |
@@ -70,6 +67,7 @@ QQQ\_QQQ\_QQQ removed fspace from top row
 | MVS (z/OS) | 50  | 100  | no  | no  | 200  | 200  |
 | IBM i (OS400)  | 512  | 512  | no  | no  | 512  | 512  |
 | UNIX  | no  | no  | no  | no  | no  | no  |
+| OpenVMS  | no  | no  | no  | no  | no  | no  |
 | Windows | no  | no  | no  | no  | no  | no  |
 
 

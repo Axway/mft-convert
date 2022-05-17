@@ -1,13 +1,10 @@
 ---
-
-    title: Example send file transfer request
-    linkTitle: Example send file request
+    title: "Example send file transfer request"
+    linkTitle: "Example send file request"
     weight: 320
+---This section describes how to execute a SEND transfer request using Web services. After submitting a request you can retrieve transfer processing information in the {{< TransferCFT/axwayvariablesComponentLongName  >}} catalog using a [Web services catalog search request](../example_search_catalog). Responses to SEND requests may differ depending on the type of COM media file that you are using (File or TCP).
 
----
-This section describes how to execute a SEND transfer request using Web services. After submitting a request you can retrieve transfer processing information in the {{< TransferCFT/axwayvariablesComponentLongName  >}} catalog using a [Web services catalog search request](../example_search_catalog). Responses to SEND requests may differ depending on the type of COM media file that you are using (File or TCP).
-
-## XFER\_CMD\_SEND\_FILE request
+## XFER_CMD_SEND_FILE request
 
 This example request uses only the minimal number of options needed to submit the SEND file SOAP request. You can modify as needed.
 
@@ -27,7 +24,7 @@ This example request uses only the minimal number of options needed to submit th
 
 &lt;soapenv:Body>
 
-> > &lt;axw:XFER\_CMD\_SEND\_FILE &gt;
+> > &lt;axw:XFER_CMD_SEND_FILE &gt;
 >
 > > &lt;axw:IDF>TEST&lt;/axw:IDF>
 > >
@@ -35,7 +32,7 @@ This example request uses only the minimal number of options needed to submit th
 >
 > > &lt;axw:PARTID>PARIS&lt;/axw:PARTID>
 >
-> > &lt;/axw:XFER\_CMD\_SEND\_FILE>
+> > &lt;/axw:XFER_CMD_SEND_FILE>
 
 &lt;/soapenv:Body>
 
@@ -43,21 +40,21 @@ This example request uses only the minimal number of options needed to submit th
 
 ## Successful response
 
-In the following successful response, you can see that the IDTU value CAT\_IDTU is returned. While the IDTU value CAT\_IDTU indicates that the request is correctly delivered to {{< TransferCFT/axwayvariablesComponentLongName  >}}, you do not know the transfer status. To obtain the transfer status, see the section describing how to use the [XFER\_CAT\_SELECT](../example_search_catalog) function to view the catalog.
+In the following successful response, you can see that the IDTU value CAT_IDTU is returned. While the IDTU value CAT_IDTU indicates that the request is correctly delivered to {{< TransferCFT/axwayvariablesComponentLongName  >}}, you do not know the transfer status. To obtain the transfer status, see the section describing how to use the [XFER_CAT_SELECT](../example_search_catalog) function to view the catalog.
 
 &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 &lt;soap:Body>
 
-> &lt;XFER\_CMD\_SEND\_FILEResponse &gt;
+> &lt;XFER_CMD_SEND_FILEResponse &gt;
 >
-> > &lt;CAT\_IDTU>A000002M&lt;/CAT\_IDTU>
+> > &lt;CAT_IDTU>A000002M&lt;/CAT_IDTU>
 > >
-> > &lt;RETURN\_CODE>3&lt;/RETURN\_CODE>
+> > &lt;RETURN_CODE>3&lt;/RETURN_CODE>
 > >
-> > &lt;RETURN\_MESSAGE/>
+> > &lt;RETURN_MESSAGE/>
 >
-> &lt;/XFER\_CMD\_SEND\_FILEResponse>
+> &lt;/XFER_CMD_SEND_FILEResponse>
 
 &lt;/soap:Body>
 
@@ -83,15 +80,15 @@ If Transfer CFT is not started and you are using TCP, an error message is displ
 
 > &lt;soap:Body>
 >
-> &lt;XFER\_CMD\_SEND\_FILEResponse xmlns="http://www.axway.com">
+> &lt;XFER_CMD_SEND_FILEResponse xmlns="http://www.axway.com">
 >
-> > &lt;RETURN\_CODE>7&lt;/RETURN\_CODE>
+> > &lt;RETURN_CODE>7&lt;/RETURN_CODE>
 > >
-> > &lt;RETURN\_MESSAGE>ERROR : Open channel failed  (-6006/0).
+> > &lt;RETURN_MESSAGE>ERROR : Open channel failed  (-6006/0).
 > >
-> > CSCcom()&lt;/RETURN\_MESSAGE>
+> > CSCcom()&lt;/RETURN_MESSAGE>
 >
-> &lt;/XFER\_CMD\_SEND\_FILEResponse>
+> &lt;/XFER_CMD_SEND_FILEResponse>
 >
 > &lt;/soap:Body>
 
@@ -109,13 +106,13 @@ In this scenario no IDTU value is displayed because the request is not immediate
 
 > &lt;soap:Body>
 >
-> &lt;XFER\_CMD\_SEND\_FILEResponse xmlns="http://www.axway.com">
+> &lt;XFER_CMD_SEND_FILEResponse xmlns="http://www.axway.com">
 >
-> > &lt;RETURN\_CODE>3&lt;/RETURN\_CODE>
+> > &lt;RETURN_CODE>3&lt;/RETURN_CODE>
 > >
-> > &lt;RETURN\_MESSAGE/>
+> > &lt;RETURN_MESSAGE/>
 >
-> &lt;/XFER\_CMD\_SEND\_FILEResponse>
+> &lt;/XFER_CMD_SEND_FILEResponse>
 >
 > &lt;/soap:Body>
 

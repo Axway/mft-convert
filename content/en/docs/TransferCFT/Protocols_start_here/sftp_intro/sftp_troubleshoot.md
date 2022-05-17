@@ -1,11 +1,8 @@
 ---
-
-    title: Troubleshoot SFTP
-    linkTitle: Troubleshoot SFTP
-    weight: 200
-
----
-The supported operating systems are listed in the [Platform features](../../../datasheet) table.
+    title: "Troubleshoot SFTP"
+    linkTitle: "Troubleshoot SFTP"
+    weight: 190
+---******The supported operating systems are listed in the [Platform features](../../../datasheet) table.******
 
 ## Start Transfer CFT issues
 
@@ -83,7 +80,7 @@ CFTT16I _ No implicit send <PART=<part> IDF=<idf> > :
 
 #### Working directory
 
-Here the connection is interrupted because of a <span class="code">`workingdir `</span>issue when connecting to the Transfer CFT SFTP via an SFTP client:
+Here the connection is interrupted because of a `workingdir `issue when connecting to the Transfer CFT SFTP via an SFTP client:
 
 ```
 Error: Unable to open .: received failure with description 'The working directories in CFTSEND and CFTRECV for the IDF are not the same'
@@ -93,7 +90,7 @@ Error: Cannot recover the folder contents
 
 #### SAUTH/RAUTH
 
-These parameters check the authorized IDF for the user. For example, in the following messages an error occurred because when performing a RECV (<span class="code">`get`</span>) command, the IDF was not included in the remote authorization list.
+These parameters check the authorized IDF for the user. For example, in the following messages an error occurred because when performing a RECV (`get`) command, the IDF was not included in the remote authorization list.
 
 ****Server****
 
@@ -154,7 +151,7 @@ CFTT82E+ DIAGP=KEY DIAGC=The client key doesn't correspond to the server key
 
 Check that the public key stored in the PKI database corresponds with the server's (SRVPUBKEY value). This issue may occur due to a Transfer CFT limitation where when an SFTP server refers to multiple hostkeys (located in `etc/ssh/sshd_config`), the Transfer CFT related hostkey must be placed in the first position.
 
-As shown in the following example, the Transfer CFT public key references the <span class="code">`ssh_host_rsa_key`</span>, an error occurs:
+As shown in the following example, the Transfer CFT public key references the `ssh_host_rsa_key`, an error occurs:
 
 ```
 HostKey /etc/ssh/ssh_host_rsa_key_not_in_CFT
@@ -163,7 +160,7 @@ HostKey /etc/ssh/ssh_host_rsa_key
 
 ### Resources
 
-[Diagi:Diagnostic codes](../../../troubleshoot_intro/messages_and_error_codes_start_here/diagi_diagnostic_codes). Codes with a value between 001 and 499 indicate a local issue; values between 501 and 999 correspond to a fault reported by the partner. Therefore when troubleshooting if the code is greater than 500 it refers to a remote issue.
+[Diagi:Diagnostic codes](../../../troubleshoot_intro/about_error_codes/about_diagnostic_codes/diagi_diagnostic_codes). Codes with a value between 001 and 499 indicate a local issue; values between 501 and 999 correspond to a fault reported by the partner. Therefore when troubleshooting if the code is greater than 500 it refers to a remote issue.
 
 ## Check updates to the configuration (delay)
 
@@ -176,11 +173,11 @@ The parameters used by SFTP in CFTPARM and CFTPART files are loaded in memory wh
 If you were not able to remedy the issue as described in the previous sections, you may want to perform an SFTP trace. After performing the following commands, you must restart {{< TransferCFT/suitevariablesTransferCFTName  >}}.
 
 ```
-{{< TransferCFT/PrimaryforWindows >}}
+Windows
 set XTRACE_CFT_SFTP_LEVEL=5
 set XTRACE_OUTPUT_FILENAME=sftptrace.txt
  
-{{< TransferCFT/suitevariablesUNIX >}}
+UNIX
 export XTRACE_CFT_SFTP_LEVEL=5
 export XTRACE_OUTPUT_FILENAME=sftptrace.txt
 ```

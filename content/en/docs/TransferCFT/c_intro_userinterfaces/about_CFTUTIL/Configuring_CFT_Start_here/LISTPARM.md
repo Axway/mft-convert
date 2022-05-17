@@ -1,11 +1,8 @@
 ---
-
-    title: Listing parameters - LISTPARM 
-    linkTitle: LISTPARM - List parameters
-    weight: 480
-
----
-This page describes the LISTPARM command. You can use this command
+    title: "Listing parameters - LISTPARM "
+    linkTitle: "LISTPARM - List parameters"
+    weight: 470
+---This page describes the LISTPARM command. You can use this command
 to query Transfer CFT parameters.
 
 ****Command syntax: [LISTPARM](../../../command_summary#LISTPARM)****
@@ -18,9 +15,9 @@ the execution report is written on the standard CFTUTIL program output.
 
 | Parameters  | Description  |
 | --- | --- |
-| <a href="../../../command_summary/parameter_intro/id">ID</a>  | Identifier of the Transfer CFT command selected using the TYPE parameter.<br/> Used to limit the query to this identifier. |
-| <a href="../../../command_summary/parameter_intro/part">PART</a> <br/> For TYPE = IDF | Partner identifier.<br/> Used to limit the search to the IDFs defined in the CFTIDF objects, relative to this partner. |
-| <a href="../../../command_summary/parameter_intro/type">TYPE</a> | Defines the type of object to be selected.<br/> TYPE can take the predefined values indicated in the <a href="#Type_table">Type table</a>. |
+| [ID](../../../command_summary/parameter_intro/id)  | Identifier of the Transfer CFT command selected using the TYPE parameter.<br/> Used to limit the query to this identifier. |
+| [PART](../../../command_summary/parameter_intro/part) <br/> For TYPE = IDF | Partner identifier.<br/> Used to limit the search to the IDFs defined in the CFTIDF objects, relative to this partner. |
+| [Type table](../../../command_summary/parameter_intro/type). |
 
 
 ****Example****
@@ -41,7 +38,7 @@ Displays the parameters of all the CFTSEND objects configured.
 
 <span id="Type_table"></span>
 
-#### Type table
+## Type table
 
 TYPE can take the predefined values indicated in the table below.
 

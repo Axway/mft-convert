@@ -1,11 +1,8 @@
 ---
-
-    title: wfname
-    linkTitle: wfname
-    weight: 3760
-
----
-<span id="wfname"></span>
+    title: "wfname"
+    linkTitle: "wfname"
+    weight: 3780
+---<span id="wfname"></span>
 
 ### wfname
 
@@ -13,8 +10,8 @@
 
 #### CFTRECV, RECV
 
-****\[WFNAME =
-filename\]  {STRING512}
+****[WFNAME =
+filename]  {STRING512}
 OS****
 
 ****MVS {String
@@ -48,7 +45,7 @@ available at the end of the transfer.
 - &BDATE,
     &BTIME, &BYEAR, &BMONTH, &BDAY
 
-The ‘&’ character here replaces the char\_symb character specific
+The ‘&’ character here replaces the char_symb character specific
 to each operating system. Refer to the {{< TransferCFT/axwayvariablesComponentShortName  >}} *"Operations
 Guide"* corresponding to your OS.
 
@@ -70,8 +67,8 @@ during the send, transfer of a group of files in PeSIT CFT/CFT mode.
 
 #### CFTSEND, SEND
 
-******\[WFNAME =
-*filename*\]  {STRING
+******[WFNAME =
+*filename*]  {STRING
 512}   OS******
 
 ******MVS {String
@@ -85,8 +82,8 @@ target machine. Once sent, it is deleted.
 
 Example:
 
-****MVS - <span style="font-weight: normal;">IEBCOPY
-procedure for partitioned files (PDSE)</span>****
+****MVS - IEBCOPY
+procedure for partitioned files (PDSE)****
 
 For additional information on the file and its structure, refer to the
 *Installation and Operations Guide* specific to your operating system.
@@ -97,9 +94,9 @@ The file is transferred in the same way as a sequential file.
 
 This process can only be used for:
 
-- t<span style="font-style: normal;">ransfers
+- transfers
     between systems of the same type (same SYST parameter value in the CFTPART
-    command)</span>
+    command)
 - the
     following protocol: **PeSIT CFT to CFT**
 
@@ -120,7 +117,7 @@ The following variables may be used to form the WFNAME character string:
 - &BDATE,
     &BTIME, &BYEAR, &BMONTH, &BDAY
 
-The ‘&’ character here replaces the char\_symb character specific
+The ‘&’ character here replaces the char_symb character specific
 to each operating system. Refer to the {{< TransferCFT/axwayvariablesComponentShortName  >}} *Operations Guide*
 corresponding to your OS.
 

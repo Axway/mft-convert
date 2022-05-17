@@ -1,17 +1,14 @@
 ---
-
-    title: diagi
-    linkTitle: diagi
-    weight: 680
-
----
-<span id="diagi"></span>
+    title: "diagi"
+    linkTitle: "diagi"
+    weight: 670
+---<span id="diagi"></span>
 
 ### diagi
 
 ****LISTCAT, DISPLAY****
 
-`[ DIAGI = { * | 0 | ERROR }] `
+`[ DIAGI = { * &#124; 0 &#124; ERROR }] `
 
 Internal diagnostic code. Use the following values to define the diagi catalog transfer field display:
 

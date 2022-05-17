@@ -1,18 +1,15 @@
 ---
-
-    title: nfname
-    linkTitle: nfname
-    weight: 2180
-
----
-<span id="nfname"></span>
+    title: "nfname"
+    linkTitle: "nfname"
+    weight: 2200
+---<span id="nfname"></span>
 
 ### nfname
 
 #### CFTSEND, SEND
 
-**\[NFNAME =**<span style="font-weight: bold;">****{****</span>***filename
-| \*filename*}\]     {string
+**[NFNAME =**{***filename
+&#124; \*filename*}]     {string
 512, or string 80 depending on the PeSIT PROF setting}**
 
 **PeSIT**
@@ -37,8 +34,8 @@ The file is transferred providing the following conditions are met:
 
 #### CFTRECV, RECV
 
-**\[NFNAME =**<span style="font-weight: bold;">****{****</span>***filename*
-}\]     {string
+**[NFNAME =**{***filename*
+}]     {string
 512}**
 
 **PeSIT**
@@ -83,7 +80,7 @@ The following variables may be used to form the NFNAME character string:
 - &BDATE,
     &BTIME, &BYEAR, &BMONTH, &BDAY
 
-The ‘&’ character here replaces the char\_symb character specific
+The ‘&’ character here replaces the char_symb character specific
 to each operating system (refer to the {{< TransferCFT/axwayvariablesComponentShortName  >}} *Operations Guide*
 corresponding to your OS).
 

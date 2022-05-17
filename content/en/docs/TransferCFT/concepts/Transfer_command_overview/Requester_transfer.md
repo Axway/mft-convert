@@ -1,11 +1,8 @@
 ---
-
-    title: Requester  transfer
-    linkTitle: Requester transfer
-    weight: 190
-
----
-A requester transfer involves the following steps:
+    title: "Requester  transfer"
+    linkTitle: "Requester transfer"
+    weight: 180
+---A requester transfer involves the following steps:
 
 - [Registering
     the request](#Registering_the_request)

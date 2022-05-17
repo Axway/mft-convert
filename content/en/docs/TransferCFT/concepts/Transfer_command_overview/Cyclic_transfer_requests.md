@@ -1,11 +1,8 @@
 ---
-
-    title: Cyclic  transfer requests
-    linkTitle: Cyclic transfer requests
-    weight: 260
-
----
-A cyclic transfer
+    title: "Cyclic  transfer requests"
+    linkTitle: "Cyclic transfer requests"
+    weight: 250
+---A cyclic transfer
 request is a periodic, repeated transfer request. The period, the time
 between 2 transfer activation cycles, is defined by the CYCLE and TCYCLE parameters.
 

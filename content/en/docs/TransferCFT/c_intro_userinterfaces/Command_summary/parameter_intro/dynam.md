@@ -1,17 +1,14 @@
 ---
-
-    title: dynam
-    linkTitle: dynam
-    weight: 800
-
----
-<span id="dynam"></span>
+    title: "dynam"
+    linkTitle: "dynam"
+    weight: 790
+---<span id="dynam"></span>
 
 ### dynam
 
 #### CFTPROT
 
-****\[dynam = string 1...32 \]****
+****[dynam = string 1...32 ]****
 
 Dynamic partner identifier, of 32 characters, in server mode.
 

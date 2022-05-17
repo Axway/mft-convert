@@ -1,18 +1,15 @@
 ---
-
-    title: check
-    linkTitle: check
-    weight: 390
-
----
-<span id="check"></span>
+    title: "check"
+    linkTitle: "check"
+    weight: 380
+---<span id="check"></span>
 
 ### check
 
 #### PKICER
 
-****\[check = { <span style="text-decoration: underline;">YES</span>
-| NO } \]****
+****[check = { YES
+&#124; NO } ]****
 
 For PKIUTIL the certificate check during an import.
 

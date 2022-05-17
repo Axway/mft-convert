@@ -1,11 +1,8 @@
 ---
-
-    title: Defining TCP/IP parameters  
-    linkTitle: Defining TCP/IP parameters
+    title: "Defining TCP/IP parameters  "
+    linkTitle: "Defining TCP/IP parameters"
     weight: 240
-
----
-This topic describes the parameter settings for {{< TransferCFT/axwayvariablesComponentShortName  >}} when using
+---This topic describes the parameter settings for {{< TransferCFT/axwayvariablesComponentShortName  >}} when using
 TCP/IP.
 
 <span id="Specific_parameter_settings_for_TCP_IP"></span>
@@ -35,7 +32,7 @@ For a period of 20 seconds:
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} uses TCP/IP for data transfers with defined remote partners.
 It also uses this layer for its own internal exchanges. More particularly
-for exchanges between the cfttpro.exe and cftn\_005.exe processes.
+for exchanges between the cfttpro.exe and cftn_005.exe processes.
 
 Certain configurations on the TCP/IP network are incompatible with the
 default options set for {{< TransferCFT/axwayvariablesComponentShortName  >}} internal exchanges. These configurations
@@ -128,7 +125,7 @@ Structure of the cftras.ini file
 
 Each section has the format:
 
-- \[PPPxx\]          :
+- [PPPxx]          :
     the name of the section (xx between 00 and 99 inclusive)
 - linkentry=LINK1    
     : the entry defined in the Windows RAS directory
@@ -158,7 +155,7 @@ If a machine possesses several IP addresses, it can receive incoming
 calls only on the IP address given in the HOST field of the CFTNET command.
 
 To receive incoming calls without taking account of the machine’s IP
-address, you need to set the value INADDR\_ANY in the HOST field of the
+address, you need to set the value INADDR_ANY in the HOST field of the
 CFTNET command.
 
 ### Flow performance
@@ -169,7 +166,8 @@ Access the cftnet.conf file and modify the variable: TCP TCPWINDOWSIZE.
 There is no minimum or maximum value. You must run {{< TransferCFT/axwayvariablesComponentShortName  >}} to test the new
 variable performance.
 
-Example  
+****Example****  
+
 Define the following line in the cftnet.conf file:
 
      TCP TCPWINDOWSIZE=64240

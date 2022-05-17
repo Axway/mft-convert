@@ -1,11 +1,8 @@
 ---
-
-    title: Configuring  the environment
-    linkTitle: Configuring the environment
+    title: "Configuring  the environment"
+    linkTitle: "Configuring the environment"
     weight: 350
-
----
-This topic describes how to configure the environment for a directory
+---This topic describes how to configure the environment for a directory
 type exit. Before you submit a directory type EXIT, you must customize
 the following {{< TransferCFT/axwayvariablesComponentShortName  >}} objects:
 
@@ -39,8 +36,8 @@ identifier******
 
 Protocol identifier.
 
-******\[[EXITA](../../../../c_intro_userinterfaces/command_summary/parameter_intro/exita) =
-identifier\]     ******
+******[[EXITA](../../../../c_intro_userinterfaces/command_summary/parameter_intro/exita) =
+identifier]     ******
 
 Directory EXIT identifier.
 
@@ -66,7 +63,7 @@ object ID parameter.
 
 ### Syntax
 
-`CFTEXITID = identifier,TYPE = ACCESS,[FORMAT = { V23   | V24 }][LANGUAGE = {COBOL | C},][MODE = MODE,][PARM = string,][PROG = {CFTEXIT | string},][RESERV = {1024 | n}]`
+`CFTEXITID = identifier,TYPE = ACCESS,[FORMAT = { V23   &#124; V24 }][LANGUAGE = {COBOL &#124; C},][MODE = MODE,][PARM = string,][PROG = {CFTEXIT &#124; string},][RESERV = {1024 &#124; n}]`
 
 ### Parameters
 
@@ -78,17 +75,17 @@ Command identifier.
 The value of this identifier corresponds to the identifier defined in
 the EXITA parameter of the related CFTPROT object.
 
-****\[[FORMAT](../../../../c_intro_userinterfaces/command_summary/parameter_intro/format)
-= V23 | V24 \]****
+****[[FORMAT](../../../../c_intro_userinterfaces/command_summary/parameter_intro/format)
+= V23 &#124; V24 ]****
 
 Optional parameter. Indicates the format
 for the communication area.
 
-- <span style="font-weight: bold;">****V23**** </span>(Default value)
-- <span style="font-weight: bold;">****V24****</span>
+- ****V23**** (Default value)
+- ****V24****
 
-******\[[LANGUAGE](../../../../c_intro_userinterfaces/command_summary/parameter_intro/language)
-= {COBOL | C}\]******
+******[[LANGUAGE](../../../../c_intro_userinterfaces/command_summary/parameter_intro/language)
+= {COBOL &#124; C}]******
 
 Language in which the user program is written.
 
@@ -98,13 +95,13 @@ The possible values are COBOL and C language.
 the EXIT via the structure best suited to the language in which it is
 implemented.
 
-******\[[PARM](../../../../c_intro_userinterfaces/command_summary/parameter_intro/parm) =
-string64\]******
+******[[PARM](../../../../c_intro_userinterfaces/command_summary/parameter_intro/parm) =
+string64]******
 
 Free user field.
 
-******\[[PROG](../../../../c_intro_userinterfaces/command_summary/parameter_intro/prog)  =
-{CFTEXIT | string512}\]******
+******[[PROG](../../../../c_intro_userinterfaces/command_summary/parameter_intro/prog)  =
+{CFTEXIT &#124; string512}]******
 
 Name of the executable module associated with the EXIT task.
 
@@ -112,9 +109,8 @@ This module is built from the interface provided with {{< TransferCFT/axwayvaria
 to the program written by the user. In order to facilitate identification
 of the associated module, it is advised to name it CFTEXIA.
 
-****\[[RESERV](../../../../c_intro_userinterfaces/command_summary/parameter_intro/reserv)  =
-{<u>1024</u> | n}\]    <span style="font-weight: bold;"> ****{0 ...1024}    ****
-</span>****
+****[[RESERV](../../../../c_intro_userinterfaces/command_summary/parameter_intro/reserv)  =
+{<u>1024</u> &#124; n}]     ****{0 ...1024}    ********
 
 Size of the working area reserved for the user.
 

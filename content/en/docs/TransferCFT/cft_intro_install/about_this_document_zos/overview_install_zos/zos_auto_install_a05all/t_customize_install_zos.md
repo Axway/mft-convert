@@ -1,11 +1,8 @@
 ---
-
-    title: Customize the z/OS installation
-    linkTitle: Customize the z/OS installation
+    title: "Customize the z/OS installation"
+    linkTitle: "Customize the z/OS installation"
     weight: 230
-
----
-Each target environment corresponds to a Transfer CFT. This topic describes the specific Transfer CFT customization. Transfer CFT customization is application dependent, as opposed to the target environment, which is system dependent.
+---Each target environment corresponds to a Transfer CFT. This topic describes the specific Transfer CFT customization. Transfer CFT customization is application dependent, as opposed to the target environment, which is system dependent.
 
 ## JCL CFTENV (include member)
 
@@ -15,7 +12,7 @@ For z/OS 2.1, you can export JCL variables:
 
 Export Global
 
-Uncomment <span class="code">`//*     EXPORT SYMLIST=* in CFTENV`</span> member
+Uncomment `//*     EXPORT SYMLIST=* in CFTENV` member
 
 Or
 
@@ -58,7 +55,7 @@ Example:
 //SYSTSPRT DD SYSOUT=&OUT
 //SYSTSIN DD DUMMY
 //    SET QUAL=&CFTENV
-//    <span class="bold_in_para">****INCLUDE MEMBER=CFTINC****</span>
+//     INCLUDE MEMBER=CFTINC
 ```
 
 ## PCFTUTIL / PCFTUTL procedures
@@ -133,7 +130,7 @@ The target.EXEC library contains an example of Transfer CFT procedures:
 - CRONSHUT: Sample of the JCL that is submitted at Transfer CFT shutdown
 - EXECIDF: End of file reception procedure sample with conditional steps
 - EXECIFD2: The value of the IDF is checked among a list of values ​​by a REXX that sets a return code
-- EXECIDF3: The JCL is conditional and uses the )SEL and )ENDSEL syntax - see <a href="#Syntax" class="MCXref xref">Syntax for )SEL and )ENDSEL</a>
+- EXECIDF3: The JCL is conditional and uses the )SEL and )ENDSEL syntax - see [Syntax for )SEL and )ENDSEL](#Syntax)
 
 These procedures are customized during the A00CUSTO phase.
 
@@ -162,9 +159,9 @@ The maximum number of nested )SELs is 32, where:
 >
 > &lt;= or LTE: less than or equal to
 >
-> &lt;&gt; or != or |= or NEQ: different from
+> &lt;&gt; or != or &#124;= or NEQ: different from
 
-<span class="bold_in_para">****Examples****</span>
+****Examples****
 
 )SEL &P1 = SITE1: includes the following cards if parameter 1 is equal to SITE1
 
@@ -186,21 +183,21 @@ The parameters in this JCL were customized during the (A00CUSTO) process, while 
 
 List of updated variables:
 
-- cft.runtime\_dir
-- cft.full\_hostname
-- cft.state\_compat
-- cft.listcat\_compat
-- cft.instance\_id
-- cft.instance\_group
-- samples.pesitany\_sap.value
-- samples.pesitssl\_sap.value
-- samples.coms\_port.value
+- cft.runtime_dir
+- cft.full_hostname
+- cft.state_compat
+- cft.listcat_compat
+- cft.instance_id
+- cft.instance_group
+- samples.pesitany_sap.value
+- samples.pesitssl_sap.value
+- samples.coms_port.value
 
 You can run the JCL multiple times, once to create the member .. SAMPLE (CFTPARM), which the procedure does not modify.
 
 <span id="D40INIT"></span>
 
-## Format Transfer CFT work files <span id="kanchor44"></span>D40INIT
+## Format Transfer CFT work files <span id="kanchor43"></span>D40INIT
 
 The JOB D40INIT prepares the Transfer CFT z/OS files. Before submitting this JOB, adapt the following points to the requirements of the operating service:
 
@@ -245,7 +242,7 @@ The following data is required to use the basic Transfer CFT installation custom
 
 <span id="JOB E50PARM CFTPARM"></span>
 
-## CFTPARM configuration update <span id="kanchor45"></span>E50PARM
+## CFTPARM configuration update <span id="kanchor44"></span>E50PARM
 
 The JCL E50PARM, located in the target.INSTALL library, updates the Transfer CFT configuration PARAM and PART files (PARM step).
 

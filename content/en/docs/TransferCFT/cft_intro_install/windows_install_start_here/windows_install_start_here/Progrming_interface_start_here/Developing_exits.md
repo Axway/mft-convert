@@ -1,11 +1,8 @@
 ---
-
-    title: Developing  exits
-    linkTitle: Developing exits
+    title: "Developing  exits"
+    linkTitle: "Developing exits"
     weight: 270
-
----
-This topic describes using exits
+---This topic describes using exits
 in Transfer CFT Windows. Every Transfer CFT is supplied
 with a toolkit that enables you to develop your own EXITs
 in C. This topic provides additional information
@@ -97,9 +94,9 @@ in the CFTPART command:
 ****Example  
 ****
 
-<span class="code">`CFTPART ID=PART1`</span>  
-<span class="code">`NSPART=*`</span>  
-<span class="code">`NSPASSW = **`</span>  
+`CFTPART ID=PART1`  
+`NSPART=*`  
+`NSPASSW = **`  
 
 In this example, Transfer CFT will request the NSPART
 to be entered when the connection is made for the first time, and for
@@ -118,7 +115,7 @@ of an executable *cftexl.exe* (loaded into memory when the consultation
 takes place), accompanied by a sample file containing the selection criteria,
 *exitlist.txt*, which allows the data to be output by the Exit list
 to be selected from the central site (or from the server). To use the exit list you also need a definition file CFTNMLOG (see
-the section <span class="italic_in_para">Logical File Names</span>, the paragraph *Using
+the section Logical File Names, the paragraph *Using
 a definition file*). This is supplied as a sample and can be used only
 on condition that the file name for the selection criteria is *exitlist.txt.*
 

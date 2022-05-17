@@ -1,11 +1,8 @@
 ---
-
-    title: Extended character set mapping
-    linkTitle: Transcoding character set mapping
+    title: "Extended character set mapping"
+    linkTitle: "Transcoding character set mapping"
     weight: 230
-
----
-Character transcoding defines how data are encoded during the transfer process. This is important when transferring files that do not have the same coding requirements on the sending and receiving systems. See the section **Character set transcoding** in the *Transfer CFT User Guide* for more information.
+---Character transcoding defines how data are encoded during the transfer process. This is important when transferring files that do not have the same coding requirements on the sending and receiving systems. See the section **Character set transcoding** in the *Transfer CFT User Guide* for more information.
 
 ## NCHARSET and FCHARSET parameter mapping
 

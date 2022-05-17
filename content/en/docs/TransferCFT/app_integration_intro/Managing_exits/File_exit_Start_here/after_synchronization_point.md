@@ -1,11 +1,8 @@
 ---
-
-    title: After a synchronization point
-    linkTitle: Stage After a synchronization point
+    title: "After a synchronization point"
+    linkTitle: "Stage After a synchronization point"
     weight: 430
-
----
-The value of the synchronization point designates:
+---The value of the synchronization point designates:
 
 - For the sender, the position of
     the last record read in the file
@@ -16,7 +13,7 @@ EXIT (DIRECT = R) with file accessing managed by the user, the
 user function has to return to {{< TransferCFT/axwayvariablesComponentShortName  >}} the value of the synchronization
 point, the number of records and the number of bytes written in the file.
 This information is used by the monitor to complete the catalog entry
-and is supplied to the user function during the RESTART\_TYP stage.
+and is supplied to the user function during the RESTART_TYP stage.
 
 At the sender end for a file type
 EXIT (DIRECT = S) or if file accessing is managed by {{< TransferCFT/axwayvariablesComponentShortName  >}}, the
@@ -39,7 +36,7 @@ point.
 ### Field values
 
 
-| Field  | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
+| Field | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
 | --- | --- | --- | --- | --- |
 | mtype | 4 | 4 | 4 | 4 |
 | masc | = | * | = | * |

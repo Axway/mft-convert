@@ -1,11 +1,8 @@
 ---
-
-    title: Managing bandwidth sessions
-    linkTitle: Managing bandwidth sessions
-    weight: 220
-
----
-This topic describes bandwidth session concepts. For parameter details, see the topic [About bandwidth control](../).
+    title: "Managing bandwidth sessions"
+    linkTitle: "Managing bandwidth sessions"
+    weight: 210
+---This topic describes bandwidth session concepts. For parameter details, see the topic [About bandwidth control](../).
 
 In {{< TransferCFT/axwayvariablesComponentShortName  >}}, bandwidth control can occur at the following levels:
 

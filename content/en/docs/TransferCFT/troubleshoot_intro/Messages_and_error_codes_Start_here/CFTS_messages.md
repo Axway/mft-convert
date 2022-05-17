@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer CFT messages: CFTS
-    linkTitle: CFTS messages
-    weight: 370
-
----
-This topic lists the CFTSxx (CFT xnnx) messages and provides the type, a description, consequence, and corrective actions when applicable.
+    title: "Transfer CFT messages: CFTS"
+    linkTitle: "CFTS messages"
+    weight: 360
+---This topic lists the CFTSxx (CFT xnnx) messages and provides the type, a description, consequence, and corrective actions when applicable.
 
 **Message format**
 
@@ -15,9 +12,9 @@ Earlier versions of Transfer CFT used a different message format than version 3.
 
 **Example**
 
-CFTLOG FORMAT=\[V23,V24\]
+CFTLOG FORMAT=[V23,V24]
 
-For V23: <span class="code">`CFTT57I PART=&part IDF=&idf IDT=&idt &str transfer started`</span>
+For V23: `CFTT57I PART=&part IDF=&idf IDT=&idt &str transfer started`
 
 For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&idt>`
 
@@ -31,16 +28,16 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
  
 
 
-| V23 format<br/> V24 format<br/> Error | <span id="CFTS02E"></span>CFTS02E PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm] IDT=&amp;idt DIRECT=&amp;direct &amp;fname not found<br/> CFTS02E _ &amp;fname not found &lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm] IDT=&amp;idt DIRECT=&amp;direct&gt; |
-| --- | --- | --- | --- |
+| V23 format<br/> V24 format<br/> Error | <span id="CFTS02E"></span>CFTS02E PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm] IDT=&amp;idt DIRECT=&amp;direct &amp;fname not found<br/> CFTS02E _ &amp;fname not found &lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm] IDT=&amp;idt DIRECT=&amp;direct&gt; |
+| --- | --- |
 | Explanation | The &amp;fname procedure was not found for a given transfer (&amp;idt).<br/> This procedure was requested after a file or message transfer or subsequent to an error (see the {{< TransferCFT/axwayvariablesComponentShortName  >}} Online documentation, EXEC parameters). |
 
 
  
 
 
-| V23 format<br/> V24 format<br/> Information | <span id="CFTS03I"></span>CFTS03I PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm]IDT=&amp;idt _ &amp;fname submitted<br/> CFTS03I _ &amp;fname submitted&lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm] IDT=&amp;idt&gt; (&amp;n sec) |
-| --- | --- | --- | --- |
+| V23 format<br/> V24 format<br/> Information | <span id="CFTS03I"></span>CFTS03I PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm]IDT=&amp;idt _ &amp;fname submitted<br/> CFTS03I _ &amp;fname submitted&lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm] IDT=&amp;idt&gt; (&amp;n sec) |
+| --- | --- |
 | Explanation | The procedure (&amp;fname) was submitted for a given transfer (&amp;idt).<br/> This procedure was requested at the end of a file or message transfer, or in the event of an error (see the EXECxxx parameters). |
 
 
@@ -97,7 +94,7 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
 
 | V23 format<br/> V24 format<br/> Error | <span id="CFTS10E"></span>CFTS10E File communication task error (&amp;str1) _ &amp;str2<br/> CFTS10E File communication task error (&amp;str1) _ &amp;str2 |
 | --- | --- |
-| Explanation | Following a synchronous message queue time-out, the communication task aborted.<br/> The str1 and str2 values are:<br/> QQQ_QQQ_CHECK converted a table, used different fonts for str1 - str2<br/> • str1 : <code>Associated str2 value</code><br/><br/> • define sem : <code>terminating</code><br/><br/> • open : <code>terminating</code><br/><br/> • memory : <code>terminating</code><br/><br/> • post : <code>terminating</code><br/><br/> • invalid sem : <code>terminating</code><br/><br/> • catalog full : <code>terminating</code><br/><br/> • &lt;cs code&gt; : <code>terminating</code><br/><br/> • read : <code>continue</code><br/><br/> • delete shut : <code>continue</code><br/> |
+| Explanation | Following a synchronous message queue time-out, the communication task aborted.<br/> The str1 and str2 values are:<br/> • str1: Associated str2 value<br/><br/> • define sem: terminating<br/><br/> • open: terminating<br/><br/> • memory: terminating<br/><br/> • post: terminating<br/><br/> • invalid sem: terminating<br/><br/> • catalog full: terminating<br/><br/> • &lt;cs code&gt;: terminating<br/><br/> • read: continue<br/><br/> • delete shut: continue<br/> |
 | Action | Contact Axway Support. |
 
 
@@ -172,8 +169,8 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
  
 
 
-| V23 format<br/> V24 format<br/> Error | <span id="CFTS18W"></span><span id="CFTS18E"></span>CFTS18E PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm] IDT=&amp;idt _ Catalog record Update Error: &amp;scs<br/> CFTS18E _ Catalog Update Error: &amp;scs &lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm] IDT=&amp;idt&gt; |
-| --- | --- | --- | --- |
+| V23 format<br/> V24 format<br/> Error | <span id="CFTS18W"></span><span id="CFTS18E"></span>CFTS18E PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm] IDT=&amp;idt _ Catalog record Update Error: &amp;scs<br/> CFTS18E _ Catalog Update Error: &amp;scs &lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm] IDT=&amp;idt&gt; |
+| --- | --- |
 | Explanation | Transfer CFT catalog update issue with error code = &amp;scs.  |
 | Consequence | The transfer record is not updated.  |
 
@@ -181,8 +178,8 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
  
 
 
-| V23 format<br/> V24 format<br/> Warning | <span id="CFTS18W"></span>CFTS18W PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm] IDT=&amp;idt _ Catalog record label<br/> CFTS18W _ Catalog record &amp;label &lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm] IDT=&amp;idt&gt; |
-| --- | --- | --- | --- |
+| V23 format<br/> V24 format<br/> Warning | <span id="CFTS18W"></span>CFTS18W PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm] IDT=&amp;idt _ Catalog record label<br/> CFTS18W _ Catalog record &amp;label &lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm] IDT=&amp;idt&gt; |
+| --- | --- |
 | Explanation | Label equals "State not updated x -&gt; y" (x = current state, y = requested state) or "not deleted".<br/> Transfer CFT catalog update issue. |
 | Consequence | The catalog entry corresponding to the transfer is not updated. |
 | Action | Inform Product Support. |
@@ -191,8 +188,8 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
  
 
 
-| V23 format<br/> V24 format<br/> Information | <span id="CFTS19I"></span>CFTS19I PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm]IDT=&amp;idt _ Catalog record label<br/> CFTS19I _ Catalog record &amp;str &lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm] IDT=&amp;idt&gt; |
-| --- | --- | --- | --- |
+| V23 format<br/> V24 format<br/> Information | <span id="CFTS19I"></span>CFTS19I PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm]IDT=&amp;idt _ Catalog record label<br/> CFTS19I _ Catalog record &amp;str &lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm] IDT=&amp;idt&gt; |
+| --- | --- |
 | Explanation | Information message label equals "updated x to y" (x = current state, y = requested state) or "deleted". The Transfer CFT catalog is updated. |
 
 
@@ -207,8 +204,8 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
  
 
 
-| V23 format<br/> V24 format<br/> Information | <span id="CFTS21I"></span>CFTS21I PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm]IDT=&amp;idt Exit request ID=&amp;id<br/> CFTS21I Exit request ID=&amp;id &lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm] IDT=&amp;idt&gt; |
-| --- | --- | --- | --- |
+| V23 format<br/> V24 format<br/> Information | <span id="CFTS21I"></span>CFTS21I PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm]IDT=&amp;idt Exit request ID=&amp;id<br/> CFTS21I Exit request ID=&amp;id &lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm] IDT=&amp;idt&gt; |
+| --- | --- |
 | Explanation | Information message prior to sending information to the end of transfer exit. |
 | Consequence | None. |
 
@@ -226,9 +223,9 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
  
 
 
-| V23 format<br/> V24 format<br/> Error | <span id="CFTS23E"></span>CFTS23E Bad user return code &lt;details&gt;<br/> CFTS23E &amp;str PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm] IDT=&amp;idt ", &amp;str = Bad End transfer exit version : &amp;ver / &amp;ver<br/> or<br/> CFTS23E &amp;str &lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm] IDT=&amp;idt &gt;") Invalid state transit '&amp;state'-&gt;'&amp;state' or Unknown state &amp;state<br/> or<br/> Unknown action &amp;action or Bad User return code : &amp;scs |
-| --- | --- | --- | --- |
-| Explanation | Error message specific to the end-of-transfer user exit. The details that display in the message depend on the CFTLOG format (v23 or v24).<br/> **Example**<br/> V24 format:<br/> <span ><code>CFTS23E Bad User return code: 4 &lt;IDTU=idtu PART=part1 IDF=idf1 IDT=idt &gt;</code></span><br/> V23 format:<br/> <code>CFTS23E Bad User return code : 4 PART=part1 IDF=idf1 IDT=idt</code> |
+| V23 format<br/> V24 format<br/> Error | <span id="CFTS23E"></span>CFTS23E Bad user return code &lt;details&gt;<br/> CFTS23E &amp;str PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm] IDT=&amp;idt ", &amp;str = Bad End transfer exit version : &amp;ver / &amp;ver<br/> or<br/> CFTS23E &amp;str &lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm] IDT=&amp;idt &gt;") Invalid state transit '&amp;state'-&gt;'&amp;state' or Unknown state &amp;state<br/> or<br/> Unknown action &amp;action or Bad User return code : &amp;scs |
+| --- | --- |
+| Explanation | Error message specific to the end-of-transfer user exit. The details that display in the message depend on the CFTLOG format (v23 or v24).<br/> **Example**<br/> V24 format:<br/> <code>CFTS23E Bad User return code: 4 &lt;IDTU=idtu PART=part1 IDF=idf1 IDT=idt &gt;</code><br/> V23 format:<br/> <code>CFTS23E Bad User return code : 4 PART=part1 IDF=idf1 IDT=idt</code> |
 | Consequence | None. |
 
 
@@ -349,8 +346,8 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
  
 
 
-| V23 format<br/> V24 format<br/> Fatal | <span id="CFTS40F"></span>CFTS40F CFTACCNT FORMAT=(V23/V24) not available for &amp;fname<br/> CFTS40F CFTACCNT FORMAT=(V23|V24) not available for &amp;fname |
-| --- | --- | --- |
+| V23 format<br/> V24 format<br/> Fatal | <span id="CFTS40F"></span>CFTS40F CFTACCNT FORMAT=(V23/V24) not available for &amp;fname<br/> CFTS40F CFTACCNT FORMAT=(V23&#124;V24) not available for &amp;fname |
+| --- | --- |
 | Explanation | An error occurred in the FORMAT=V23/V24 (V23 default) parameter of CFTFILE TYPE=ACCNT. When using the V23 format, the saved description (for ACCOUNT files) is the same as in previous versions. However when using the V24 format, the length for saving is 2048, and the saved description takes into account the new longer field lengths.<br /> <br/> <blockquote> **Note**<br/> The FORMAT parameter for the CFTACCNT command must be the same setting as for CFTFILE TYPE=ACCNT. If not, a message displays in the LOG and Transfer CFT doesnot start.<br/> </blockquote> <div> The message is either:<br /> CFTS40F CFTACCNT FORMAT=V24 not available for CFT.ACCNT <br/> CFTS40F CFTACCNT FORMAT=V23 not available for CFT.ACCNT<br /> Followed by the message: CFTI17F Init error _ Account file .CFT.ACCNT<br/> </div>  |
 
 
@@ -367,7 +364,7 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
 
 | V23 format<br/> V24 format<br/> Error | <span id="CFTS42E"></span>CFTS42E Catalog Alert exec &amp;fname &amp;str" where &amp;str= "not found" or "failed"<br/> CFTS42E Catalog Alert exec &amp;fname &amp;str |
 | --- | --- |
-| Explanation | The procedure &amp;FNAME for a catalog alert was not found or failed on access producing this error.<br/> QQQ_QQQ_QQQ_LIST<br/> • When the critical fill threshold is reached, a message CFTC29W is recorded in the {{< TransferCFT/axwayvariablesComponentShortName  >}} log.<br /> ==&gt; The batch, which is defined by the CFTCAT TLVWEXEC parameter, is not executed<br/> • When the alert ceases, a message CFTC30W is recorded in the {{< TransferCFT/axwayvariablesComponentShortName  >}} log<br /> ==&gt; The batch, which is defined by the CFTCAT TLVCEXEC parameter, is not executed. |
+| Explanation | The procedure &amp;FNAME for a catalog alert was not found or failed on access producing this error.<br/> • When the critical fill threshold is reached, a message CFTC29W is recorded in the {{< TransferCFT/axwayvariablesComponentShortName  >}} log. • The batch, which is defined by the CFTCAT TLVWEXEC parameter, is not executed<br/> <br/> • When the alert ceases, a message CFTC30W is recorded in the {{< TransferCFT/axwayvariablesComponentShortName  >}} log • The batch, which is defined by the CFTCAT TLVCEXEC parameter, is not executed.<br/>  |
 
 
  
@@ -565,7 +562,7 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
 
 | V23 format<br/> V24 format<br/> Error  | <span id="CFTS64I"></span><span id="CFTS66E"></span>CFTS66E TFIL error _ &amp;str", &amp;str = Regular expression &amp;mask parsing error or List generation error &amp;scs<br/> CFTS66E TFIL error _ &amp;str |
 | --- | --- |
-| Explanation  | The regular expression (REGEX) &amp;mask configured in fname (SEND or CFTSEND) can not be parsed with error &amp;scs Consequence.<br/> Where;<br/> • &amp;str = "Regular expression &amp;mask parsing error", or<br/> • &amp;str = " List generation error &amp;scs" |
+| Explanation  | The regular expression (REGEX) &amp;mask configured in fname (SEND or CFTSEND) can not be parsed with error &amp;scs Consequence.<br/> Where:<br/> • &amp;str: "Regular expression &amp;mask parsing error", or<br/> • &amp;str: " List generation error &amp;scs" |
 | Consequence  | Transfer is not executed.  |
 | Action  | Check and modify the REGEX &amp;mask value.  |
 
@@ -581,8 +578,8 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
  
 
 
-| V23 format<br/> V24 format<br/> Error  | <span id="CFTS68E"></span>CFTS68E PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm]IDT=&amp;idt _ &amp;fname not executed<br/> CFTS68E _ &amp;fname not executed &lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf | IDM=&amp;idm] IDT=&amp;idt DIRECT=&amp;direct&gt; |
-| --- | --- | --- | --- |
+| V23 format<br/> V24 format<br/> Error  | <span id="CFTS68E"></span>CFTS68E PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm]IDT=&amp;idt _ &amp;fname not executed<br/> CFTS68E _ &amp;fname not executed &lt;IDTU=&amp;idtu PART=&amp;part [IDF=&amp;idf &#124; IDM=&amp;idm] IDT=&amp;idt DIRECT=&amp;direct&gt; |
+| --- | --- |
 | Explanation  | The **&amp;fname** script was not executed because a variable contained blacklisted characters. The file was nonetheless created, and may contain some data.  |
 
 
@@ -615,5 +612,25 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
 
 | V23 format<br/> V24 format<br/> Error | <span id="CFTS74E"></span>CFTS74E Command file Alert exec &amp;fname &amp;str"<br/> CFTS74E Command file Alert exec &amp;fname &amp;str" |
 | --- | --- |
-| Explanation  | The &amp;FNAME procedure for a command file alert was not found or failed on access, producing this error.<br/> • If the critical fill threshold is reached, the CFTS71W message is recorded in the Transfer CFT log.<br/> • If the alert ceases, the CFTS72W message is recorded in the Transfer CFT log.<br/> In either case, the batch defined by the CFTCOM TLVCEXEC parameter is not executed.<br/> Where:<br/> • &amp;str = "not found", or<br/> • &amp;str = "failed" |
+| Explanation  | The &amp;FNAME procedure for a command file alert was not found or failed on access, producing this error.<br/> • If the critical fill threshold is reached, the CFTS71W message is recorded in the Transfer CFT log.<br/> • If the alert ceases, the CFTS72W message is recorded in the Transfer CFT log.<br/> In either case, the batch defined by the CFTCOM TLVCEXEC parameter is not executed.<br/> Where:<br/> • &amp;str: "not found" or "failed" |
 
+
+ 
+
+
+| V23 format<br/> V24 format<br/> Warning | <span id="CFTS79W"></span>CFTS79W Certificate (ID=&amp;id ROOTCID=&amp;rootcid TYPE=&amp;type) will expire on &amp;date<br/> CFTS79W Certificate (ID=&amp;id ROOTCID=&amp;rootcid TYPE=&amp;type) will expire on &amp;date |
+| --- | --- |
+| Explanation  | A warning message displays if a certificate is about to expire and the UCONF<code> pki.expiration_check.* </code>parameters are set and enabled.<br/> Where:<br/> • &amp;id: is the certificate identifier<br/><br/> • &amp;rootcid: is the certificate authority identifier<br/><br/> • &amp;type: is the type of certificate (root, user,...)<br/><br/> • &amp;date: is the date in UTC format YYYY-MM-DD hh:mm:ss<br/> |
+
+
+ 
+
+
+| V23 format<br/> V24 format<br/> Error | <span id="CFTS79E"></span>CFTS79E Certificate (ID=&amp;id ROOTCID=&amp;rootcid TYPE=&amp;type) expired on &amp;date<br/> CFTS79E Certificate (ID=&amp;id ROOTCID=&amp;rootcid TYPE=&amp;type) expired on &amp;date |
+| --- | --- |
+| Explanation  | An error message displays if a certificate has expired and the UCONF<code> pki.expiration_check.* </code>parameters are set and enabled.<br/> Where: • &amp;id: is the certificate identifier<br/><br/> • &amp;rootcid: is the certificate authority identifier<br/><br/> • &amp;type: is the type of certificate (root, user,...)<br/><br/> • &amp;date: is the date in UTC format YYYY-MM-DD hh:mm:ss<br/> |
+
+
+ 
+
+ 

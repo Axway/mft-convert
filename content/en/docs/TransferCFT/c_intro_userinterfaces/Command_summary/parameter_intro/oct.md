@@ -1,17 +1,14 @@
 ---
-
-    title: oct
-    linkTitle: oct
-    weight: 2410
-
----
-<span id="oct"></span>
+    title: "oct"
+    linkTitle: "oct"
+    weight: 2430
+---<span id="oct"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
 #### COPYFILE
 
-******<span style="font-weight: bold;">****\[****</span>**<span style="font-weight: bold;">****| C},\] <u>H</u>{ = OCT****</span>****
+**********[******&#124; C},] <u>H</u>{ = OCT********
 
 Type of output file data compression:
 

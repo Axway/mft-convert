@@ -1,17 +1,14 @@
 ---
-
-    title: secfname
-    linkTitle: secfname
-    weight: 3110
-
----
-<span id="secfname"></span>
+    title: "secfname"
+    linkTitle: "secfname"
+    weight: 3130
+---<span id="secfname"></span>
 
 ### secfname
 
 #### CFTPARM
 
-****\[SECFNAME = filename \]****
+****[SECFNAME = filename ]****
 
 Filename. Name of the {{< TransferCFT/axwayvariablesComponentShortName  >}} internal security file.
 

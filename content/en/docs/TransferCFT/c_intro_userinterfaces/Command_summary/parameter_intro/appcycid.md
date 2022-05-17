@@ -1,17 +1,14 @@
 ---
-
-    title: appcycid
-    linkTitle: appcycid
-    weight: 290
-
----
-<span id="appcycid"></span>
+    title: "appcycid"
+    linkTitle: "appcycid"
+    weight: 280
+---<span id="appcycid"></span>
 
 ### appcycid
 
 #### RECV, SEND
 
-****\[appcycid = string 249\]****
+****[appcycid = string 249]****
 
 Identifier.
 

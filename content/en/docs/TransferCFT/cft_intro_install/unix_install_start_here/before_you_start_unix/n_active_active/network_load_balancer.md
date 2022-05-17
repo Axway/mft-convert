@@ -1,11 +1,8 @@
 ---
-
-    title: Network load balancer
-    linkTitle: Network load balancer
+    title: "Network load balancer"
+    linkTitle: "Network load balancer"
     weight: 200
-
----
-This section describes how load balancing works with {{< TransferCFT/suitevariablesTransferCFTName  >}}.
+---This section describes how load balancing works with {{< TransferCFT/suitevariablesTransferCFTName  >}}.
 
 {{< TransferCFT/suitevariablesTransferCFTName  >}} only uses a load balancer for incoming traffic; outgoing traffic does not require a load balancer. Additionally, incoming traffic does not connect directly to {{< TransferCFT/suitevariablesTransferCFTName  >}} processes, it is handled by the connection dispatcher (copcod), which is a child process of Copilot (copsmng).
 

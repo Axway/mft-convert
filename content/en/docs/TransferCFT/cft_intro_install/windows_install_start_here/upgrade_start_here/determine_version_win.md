@@ -1,11 +1,8 @@
 ---
-
-    title: Determine the installer and product version
-    linkTitle: Determine the installer and product version
-    weight: 170
-
----
-You should determine the product and Installer version and service pack level prior to upgrading or updating for Transfer CFTs having a version lower than 3.4. You can use the following procedure on any version of the Axway Installer.
+    title: "Determine the installer and product version"
+    linkTitle: "Determine the installer and product version"
+    weight: 160
+---You should determine the product and Installer version and service pack level prior to upgrading or updating for Transfer CFTs having a version lower than 3.4. You can use the following procedure on any version of the Axway Installer.
 
 Start the Axway Installer. The command depends on the Installer version and your OS, as follows:
 
@@ -41,7 +38,7 @@ The "Application Experience" service should be enabled when using Transfer CFT. 
 Before beginning the upgrade or update procedure:
 
 - You require the product and Installer version number and SP level in order to choose the appropriate procedure. See the section [Determine the Installer and product version](#Determin).
-- Download the Transfer CFT Upgrade Pack, available on Sphere at [support.axway.com](https://support.axway.com/). The Transfer CFT Upgrade Pack name has the general format <span class="code">`Transfer_CFT_3.x_<Install/SP/Patch>_<OS>_<BN>.zip`</span>. Do not unzip the .zip file.
+- Download the Transfer CFT Upgrade Pack, available on Sphere at [support.axway.com](https://support.axway.com/). The Transfer CFT Upgrade Pack name has the general format `Transfer_CFT_3.x_<Install/SP/Patch>_<OS>_<BN>.zip`. Do not unzip the .zip file.
 
 Stop the Transfer CFT server and the Transfer CFT UI server, by entering:
 

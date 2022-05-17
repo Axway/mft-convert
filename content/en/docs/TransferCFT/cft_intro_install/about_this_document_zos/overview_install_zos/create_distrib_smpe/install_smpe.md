@@ -1,11 +1,8 @@
 ---
-
-    title: Create a Transfer CFT instance 
-    linkTitle: Create a Transfer CFT instance
+    title: "Create a Transfer CFT instance "
+    linkTitle: "Create a Transfer CFT instance"
     weight: 180
-
----
-## SMP/E FMIDs list
+---## SMP/E FMIDs list
 
 The Transfer CFT software has a SYSMOD FMID (Function Module ID) that identifies the software and its release number. For example, FMID TCF0300 identifies the Transfer CFT 3.3.2 release.
 
@@ -17,7 +14,7 @@ The Transfer CFT software has a SYSMOD FMID (Function Module ID) that identifie
 
 ## Upload the SMP/E package to the mainframe
 
-1. Unzip the package file, for example Transfer\_CFT\_3.3.2\_install\_mvs\_BNnnnnnnnn.smpe.zip.
+1. Unzip the package file, for example Transfer_CFT_3.3.2_install_mvs_BNnnnnnnnn.smpe.zip.
 1. Run the setup.bat (Windows) or setup.sh (Unix).
 1. Enter the following parameters in the console. Upon completion you require an FTP client.
 
@@ -32,14 +29,14 @@ The Transfer CFT software has a SYSMOD FMID (Function Module ID) that identifie
 
 - The setup procedure allocates the destination library dataset (default is AXWAY.SMPE.CFT332.SMPCNTL),  
     with the attributes recfm=fb,lrecl=80,blksize=27920,space=(cyl,(1,5)).
-    -   To add a volume or device name, edit the &vol= or &unit= field in the silent\_smpe\_install.conf file.
+    -   To add a volume or device name, edit the &vol= or &unit= field in the silent_smpe_install.conf file.
 - The sample member $C\* is transferred to the dataset using FTP in text mode.
 - The setup procedure creates the destination USS directory (default is /home/AXWAY/smpnts), and subdirectory (default is CFT332).
-- The Transfer\_CFT\_mvs.pax.Z SMP/E package file is transferred to the subdirectory using FTP in binary mode, and renamed to CFT332.pax.Z  (approximately 150 Mbytes).
+- The Transfer_CFT_mvs.pax.Z SMP/E package file is transferred to the subdirectory using FTP in binary mode, and renamed to CFT332.pax.Z  (approximately 150 Mbytes).
 
 ### Silent mode
 
-You can run the setup procedure in silent mode, <span class="code">`setup –s`</span>. In this case, you do not have to enter parameters in the console, but prior to starting you must update the s<span class="code">`ilent_smpe_install.conf`</span> file located in the install directory.
+You can run the setup procedure in silent mode, `setup –s`. In this case, you do not have to enter parameters in the console, but prior to starting you must update the s`ilent_smpe_install.conf` file located in the install directory.
 
 ## Create a new Transfer CFT SMP/E environment
 

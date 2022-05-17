@@ -1,18 +1,15 @@
 ---
-
-    title:  file
-    linkTitle: file
-    weight: 1150
-
----
-<span id="file"></span>
+    title: " file"
+    linkTitle: "file"
+    weight: 1140
+---<span id="file"></span>
 
 ###  file
 
 #### DISPLAY
 
-****\[ FILE
-= filename \]****
+****[ FILE
+= filename ]****
 
 Enter filename.
 

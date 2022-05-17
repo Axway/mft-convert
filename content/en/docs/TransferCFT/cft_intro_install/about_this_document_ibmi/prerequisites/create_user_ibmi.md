@@ -1,11 +1,8 @@
 ---
-
-    title: Create users and set security rights
-    linkTitle: Create users and set security rights
+    title: "Create users and set security rights"
+    linkTitle: "Create users and set security rights"
     weight: 200
-
----
-This section describes the user rights procedures that you must perform prior to installing Transfer CFT IBM i. Additionally, verify that your operating system and environment requirements are met as described in <a href="../" class="MCXref xref">Prerequisites</a>.
+---This section describes the user rights procedures that you must perform prior to installing Transfer CFT IBM i. Additionally, verify that your operating system and environment requirements are met as described in [Prerequisites](../).
 
 Prior to installation, ensure the following:
 
@@ -17,11 +14,13 @@ Please note that these users must exist prior to the Transfer CFT installation. 
 ****Example****
 
 ```
-CRTUSRPRF USRPRF(CFTINST) PASSWORD(CFTINST) PWDEXP(\*YES) USRCLS(\*USER) INLPGM(\*NONE) INLMNU(MAIN) LMTCPB(\*NO) TEXT('\*SHARED: MFT Axway Installer User Profile') SPCAUT(<span class="bold_in_para">****\*JOBCTL \*SPLCTL \*ALLOBJ****</span>) PWDEXPITV(\*SYSVAL)
+CRTUSRPRF USRPRF(CFTINST) PASSWORD(CFTINST) PWDEXP(\*YES) USRCLS(\*USER) INLPGM(\*NONE) INLMNU(MAIN) LMTCPB(\*NO) TEXT('\*SHARED: MFT Axway Installer User Profile') SPCAUT( \*JOBCTL \*SPLCTL \*ALLOBJ
+) PWDEXPITV(\*SYSVAL)
 ```
 
  
 
 ```
-CRTUSRPRF USRPRF(CFT) PASSWORD(CFT) PWDEXP(\*YES) USRCLS(\*USER) INLPGM(\*NONE) INLMNU(MAIN) LMTCPB(\*NO) TEXT('\*SHARED: MFT Axway CFT Profile') SPCAUT(**\*JOBCTL \*SPLCTL**) PWDEXPITV(\*SYSVAL)
+CRTUSRPRF USRPRF(CFT) PASSWORD(CFT) PWDEXP(\*YES) USRCLS(\*USER) INLPGM(\*NONE) INLMNU(MAIN) LMTCPB(\*NO) TEXT('\*SHARED: MFT Axway CFT Profile') SPCAUT(\*JOBCTL \*SPLCTL
+) PWDEXPITV(\*SYSVAL)
 ```

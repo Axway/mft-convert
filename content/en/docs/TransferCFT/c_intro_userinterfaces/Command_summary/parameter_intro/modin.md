@@ -1,17 +1,14 @@
 ---
-
-    title: modin
-    linkTitle: modin
+    title: "modin"
+    linkTitle: "modin"
     weight: 2020
-
----
-<span id="modin"></span>
+---<span id="modin"></span>
 
 ### modin
 
 #### CFTNET
 
-**\[MODIN = {string1...32}\]**
+**[MODIN = {string1...32}]**
 
 Hayes modem initialization string for incoming connections (server mode).
 

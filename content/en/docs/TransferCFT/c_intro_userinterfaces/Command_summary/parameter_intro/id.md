@@ -1,11 +1,8 @@
 ---
-
-    title: id
-    linkTitle: id
-    weight: 1520
-
----
-<span id="id"></span>
+    title: "id"
+    linkTitle: "id"
+    weight: 1510
+---<span id="id"></span>
 
 ### id
 
@@ -16,7 +13,7 @@ This affects all {{< TransferCFT/axwayvariablesComponentShortName  >}} commands.
 
 #### CFTAUTH
 
-****\[ID = identifier \]****
+****[ID = identifier ]****
 
 Authorization list identifier.
 
@@ -35,7 +32,7 @@ keywords SAUTH or RAUTH.
 
 #### CFTCAT
 
-****\[ID = identifier \]****
+****[ID = identifier ]****
 
 Identifier for the CFTCAT object.
 
@@ -43,7 +40,7 @@ Identifier for the CFTCAT object.
 
 #### CFTDEST
 
-****\[ID = identifier \]****
+****[ID = identifier ]****
 
 Identifier of the list of partners.
 
@@ -54,7 +51,7 @@ the same ID.
 
 #### CFTEXIT
 
-****\[ID = identifier \]****
+****[ID = identifier ]****
 
 ******See
 Identifier table below******
@@ -81,8 +78,8 @@ commands listed below.
 
 #### CFTPARM
 
-****\[ID = identifier
-\]****
+****[ID = identifier
+]****
 
 Identifier of the CFTPARM command.
 
@@ -99,8 +96,8 @@ the monitor uses the default value 'IDPARM0'.
 
 #### CFTPART
 
-****\[ID = identifier
-\]****
+****[ID = identifier
+]****
 
 Local partner identifier.
 
@@ -108,8 +105,8 @@ Local partner identifier.
 
 #### CFTPROT
 
-****\[ID =
-identifier \]****
+****[ID =
+identifier ]****
 
 CFTPROT command identifier.
 
@@ -120,8 +117,8 @@ taken by the CFTPARM PROT parameter.
 
 #### CFTLOG
 
-****\[ID = identifier
-\]****
+****[ID = identifier
+]****
 
 Identifier of the CFTLOG command.
 
@@ -129,8 +126,8 @@ Identifier of the CFTLOG command.
 
 #### CFTXLATE
 
-****\[ID = identifier
-\]****
+****[ID = identifier
+]****
 
 Translation table identifier.
 
@@ -141,8 +138,8 @@ of DIRECT, FCODE or NCODE are different.
 
 #### CFTRECV
 
-****\[ID = identifier
-\]****
+****[ID = identifier
+]****
 
 Local model file identifier (IDF)
 
@@ -153,7 +150,7 @@ the command (CFTRECV ID = COMMUT) has to be customized explicitly on the
 store and forward site. If not, the store and forward is refused.
 
 
-| **PeSIT SIT profile** | For the PeSIT SIT profile, the model file identifier is subjected to the format constraint (Fnnnnn). See <a href="../../../../protocols_start_here/about_pesit">Protocols: PeSIT</a>. |
+| **PeSIT SIT profile** | For the PeSIT SIT profile, the model file identifier is subjected to the format constraint (Fnnnnn). See [Protocols: PeSIT](../../../../protocols_start_here/about_pesit). |
 | --- | --- |
 
 
@@ -161,14 +158,14 @@ store and forward site. If not, the store and forward is refused.
 
 #### CFTSEND
 
-****\[ID = identifier
-\]****
+****[ID = identifier
+]****
 
 Local
 identifier of the model file (IDF) to be sent.
 
 
-| PeSIT SIT profile | In the PeSIT protocol with the SIT profile, the model file identifier is subject to the format constraint (Fnnnnn). See <a href="../../../../protocols_start_here/about_pesit">Protocols: PeSIT</a>. |
+| PeSIT SIT profile | In the PeSIT protocol with the SIT profile, the model file identifier is subject to the format constraint (Fnnnnn). See [Protocols: PeSIT](../../../../protocols_start_here/about_pesit). |
 | --- | --- |
 
 
@@ -180,23 +177,23 @@ Network resource identifier.
 
 #### CFTACCNT, CFTCOM, CFTIDF, CFTNET, CFTTCP, CFTTRACE, CFTAPPL, CFTSSL, CFTEXT, LISTPARM, LISTPART
 
-****\[ID = identifier \]****
+****[ID = identifier ]****
 
 #### PKIENTITY
 
-****\[ID = identifier \]****
+****[ID = identifier ]****
 
 Identifier for a list of certificate authorities.
 
 #### EXTAMCACHE
 
-**\[ ID = identifier \]**
+**[ ID = identifier ]**
 
 Selects the user, or users, for which you want to obtain access rights.
 
 #### CFTUIPREF
 
-**\[ ID = identifier \]**
+**[ ID = identifier ]**
 
 Identifier for the user interface preferences.
 

@@ -1,18 +1,15 @@
 ---
-
-    title: config
-    linkTitle: config
-    weight: 500
-
----
-<span id="config"></span>
+    title: "config"
+    linkTitle: "config"
+    weight: 490
+---<span id="config"></span>
 
 ### config
 
 #### CFTNET
 
-**\[CONFIG 
-= *string1...64*\]**
+**[CONFIG 
+= *string1...64*]**
 
 Modem configuration file name in CFTNET.
 This file describes the modem and/or PAD connection, disconnection and

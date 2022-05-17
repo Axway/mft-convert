@@ -1,11 +1,8 @@
 ---
-
-    title: Configure multi-node simultaneous transfers
-    linkTitle: Configure simultaneous transfers 
-    weight: 210
-
----
-The Transfer CFT session management in a multi-node architecture differs from a standalone implementation. This section describes parameters you can use to customize a multi-node environment, and offers some recommendations.
+    title: "Configure multi-node simultaneous transfers"
+    linkTitle: "Configure simultaneous transfers "
+    weight: 200
+---The Transfer CFT session management in a multi-node architecture differs from a standalone implementation. This section describes parameters you can use to customize a multi-node environment, and offers some recommendations.
 
 > **Note**
 >
@@ -18,19 +15,19 @@ The MAXCNX and MAXTRANS parameters control the Transfer CFT maximum number of s
 
 If you have limited resources, set the MAXTRANS to a low value. If resources are not limited, a rule of thumb might be to set MAXTRANS to the sum of all partner CNXINOUT values (maximum value of 1000).
 
-See also <a href="../../concepts/about_parallel_transfers" class="MCXref xref">Configure simultaneous transfers</a>.
+See also [Configure simultaneous transfers](../../concepts/about_parallel_transfers).
 
 ## Session parameters
 
-You can use the CNXIN, CNXOUT, and CNXINOUT parameters in CFTTCP to define the number of sessions. The formulas in this section apply equally to both a multi-node to multi-node configuration, and to a multi-node to standalone configuration, where the standalone installation has (<span class="code">`nb_nodes=1`</span>) and the multi-node has (<span class="code">`nb_nodes=nodes`</span>).
+You can use the CNXIN, CNXOUT, and CNXINOUT parameters in CFTTCP to define the number of sessions. The formulas in this section apply equally to both a multi-node to multi-node configuration, and to a multi-node to standalone configuration, where the standalone installation has (`nb_nodes=1`) and the multi-node has (`nb_nodes=nodes`).
 
-In the following example, the formulas calculate optimal values to help you avoid connection errors (such as [DIAGI 418](../../troubleshoot_intro/messages_and_error_codes_start_here/diagi_diagnostic_codes)):
+In the following example, the formulas calculate optimal values to help you avoid connection errors (such as [DIAGI 418](../../troubleshoot_intro/about_error_codes/about_diagnostic_codes/diagi_diagnostic_codes)):
 
-<span style="font-family: 'Courier New';">CNXIN</span><sub>(local)</sub><span style="font-family: 'Courier New';"> = CNXOUT</span><sub>(remote)</sub><span style="font-family: 'Courier New';"> \* nb\_nodes</span><sub>(remote)</sub>
+CNXIN<sub>(local)</sub> = CNXOUT<sub>(remote)</sub> \* nb_nodes<sub>(remote)</sub>
 
-<span style="font-family: 'Courier New';">CNXOUT<sub>(local)</sub> = CNXIN<sub>(remote)</sub> / nb\_nodes<sub>(local)</sub></span>
+CNXOUT<sub>(local)</sub> = CNXIN<sub>(remote)</sub> / nb_nodes<sub>(local)</sub>
 
-<span style="font-family: 'Courier New';">CNXINOUT = CNXIN + CNXOUT</span> (you can use this value to limit resource usage, that is, a value less than the sum of CNXIN + CNXOUT)
+CNXINOUT = CNXIN + CNXOUT (you can use this value to limit resource usage, that is, a value less than the sum of CNXIN + CNXOUT)
 
 You can reverse the formula for the remote Transfer CFT.
 

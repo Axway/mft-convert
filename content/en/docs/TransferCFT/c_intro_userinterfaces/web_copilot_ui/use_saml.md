@@ -1,11 +1,8 @@
 ---
-
-    title: SSO using SAML
-    linkTitle: SSO using SAML
-    weight: 130
-
----
-{{< TransferCFT/axwayvariablesComponentLongName  >}} supports a web browser single sign-on, SSO, profile that enables users to use the same logging details for {{< TransferCFT/axwayvariablesComponentLongName  >}} as other Axway products (for example, Flow Manager), eliminating the need to log in multiple times on different web-based UIs.
+    title: "SSO using SAML"
+    linkTitle: "SSO using SAML"
+    weight: 120
+---{{< TransferCFT/axwayvariablesComponentLongName  >}} supports a web browser single sign-on, SSO, profile that enables users to use the same logging details for {{< TransferCFT/axwayvariablesComponentLongName  >}} as other Axway products (for example, Flow Manager), eliminating the need to log in multiple times on different web-based UIs.
 
 ## Single sign-on using SAML
 
@@ -57,7 +54,7 @@ This section describes the UCONF parameter settings required for SAML implement
 1. Start the Copilot server.
 1. <span id="step6"></span>Export the SAML SP ({{< TransferCFT/axwayvariablesComponentLongName >}}) metadata.
 
-- From a web browser, enter the URL <span style="font-family: 'Courier New';">https://\[Transfer CFT host\]:\[REST API port\]/saml2/metadata</span> to extract the XML configuration data required to configure your IdP.
+- From a web browser, enter the URL https://[Transfer CFT host]:[REST API port]/saml2/metadata to extract the XML configuration data required to configure your IdP.
 - Save the displayed XML content in a file.
 
 Create your {{< TransferCFT/axwayvariablesComponentLongName  >}} client in the IdP by importing the saved XML file. Remember that you must create a client for each {{< TransferCFT/axwayvariablesComponentLongName  >}}.  
@@ -67,11 +64,11 @@ Set up the single logout.
 When the IdP connects to Transfer CFT using an HTTPS connection, it validates the Transfer CFT’s certificate to ensure it is connecting to a trusted server. This is necessary in order to prevent man-in-the-middle attacks.
 
 - Put the Transfer CFT certificate, or the CA that signed the certificate, in the truststore used by the IdP.
-- Refer the specific IdP documentation for more information. For Keycloak details, go to [www.keycloak.org/docs/latest/server\_installation/index.html](https://www.keycloak.org/docs/latest/server_installation/index.html#_truststore).
+- Refer the specific IdP documentation for more information. For Keycloak details, go to [www.keycloak.org/docs/latest/server_installation/index.html](https://www.keycloak.org/docs/latest/server_installation/index.html#_truststore).
 
 ## Test
 
-From a web browser, enter the URL <span style="font-family: 'Courier New';">https://\[Transfer CFT host\]:\[REST API port\]/cft/ui</span> - you are redirected to your IdP and prompted to enter your ID and credentials.
+From a web browser, enter the URL https://[Transfer CFT host]:[REST API port]/cft/ui - you are redirected to your IdP and prompted to enter your ID and credentials.
 
 ## Revoked user rights
 
@@ -91,4 +88,4 @@ If you change the private key, you must repeat the steps 6 - 8 as described [abo
 
 After performing the "Set up SAML" steps, sometimes the exported SAML SP (Transfer CFT) metadata is incorrect when imported into the IDP (for example Keycloak) generating an error from the IDP.
 
-<span class="bold_in_para">****Solution****</span>: This issue seems to occur when using Firefox. We recommend that you check using another internet browser, such as Chrome.
+****Solution****: This issue seems to occur when using Firefox. We recommend that you check using another internet browser, such as Chrome.

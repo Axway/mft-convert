@@ -1,11 +1,8 @@
 ---
-
-    title: Post-transfer file renaming
-    linkTitle: Post-transfer file renaming
+    title: "Post-transfer file renaming"
+    linkTitle: "Post-transfer file renaming"
     weight: 230
-
----
-You can configure  post-transfer, file renaming on the receiver side of a flow. The file is renamed on transfer completion, in the post processing phase, and includes a configurable retry mechanism.
+---You can configure  post-transfer, file renaming on the receiver side of a flow. The file is renamed on transfer completion, in the post processing phase, and includes a configurable retry mechanism.
 
 ****Limitation****
 
@@ -34,11 +31,11 @@ Use the following uconf parameters to customize the retry mechanism.
 
 ### Monitoring
 
-<span class="bold_in_para">****Log****</span>
+****Log****
 
-Following a successful renaming, <span class="code">`CFTF33I `</span>is displayed.
+Following a successful renaming, `CFTF33I `is displayed.
 
-Once the maximum number of retries is reached, the transfer moves to the YK state, and displays a DIAGI=156, <span class="code">`DIAGP=RETRYRENAME`</span>, a DIAGC=<span class="code">`RETRYRENAME MAX RETRIES REACHED`</span> or = `RETRYRENAME WFNAME NOT FOUND`, and the log messages [CFTF32E](../../troubleshoot_intro/messages_and_error_codes_start_here/cftf_messages#CFTF32E) and [CFTF34E](../../troubleshoot_intro/messages_and_error_codes_start_here/cftf_messages#CFTF34E).
+Once the maximum number of retries is reached, the transfer moves to the YK state, and displays a DIAGI=156, `DIAGP=RETRYRENAME`, a DIAGC=`RETRYRENAME MAX RETRIES REACHED` or = `RETRYRENAME WFNAME NOT FOUND`, and the log messages [CFTF32E](../../troubleshoot_intro/messages_and_error_codes_start_here/cftf_messages#CFTF32E) and [CFTF34E](../../troubleshoot_intro/messages_and_error_codes_start_here/cftf_messages#CFTF34E).
 
 ****Catalog****
 
@@ -59,9 +56,9 @@ If you have several transfers with RETRYRENAME set for the same FNAME in a singl
 This example combines the use of the serialization with the rename/retry mechanism to ensure a spooling of file transfers without overwriting an un-consumed file at the destination.
 
 - Our user defines a transfer flow, for example `DailyReport,`based on a transfer state (acknowledgement) using the serialization option.
-- Several applications generate files that use the same flow, <span class="code">`DailyReport`</span>; these file transfer requests are queued.
-- The source Transfer CFT for the flow executes the first file transfer request, <span class="code">`Report1`</span>.  
-- The target Transfer CFT receives <span class="code">`Report1`</span>.
+- Several applications generate files that use the same flow, `DailyReport`; these file transfer requests are queued.
+- The source Transfer CFT for the flow executes the first file transfer request, `Report1`.  
+- The target Transfer CFT receives `Report1`.
 - Post-processing makes the file available to a target application, and immediately sends an acknowledgment to the source. This enables the next file transfer in the queue to be executed.
 - Upon receiving the acknowledgement, the source Transfer CFT executes the next transfer request. However:
 
@@ -69,7 +66,7 @@ This example combines the use of the serialization with the rename/retry mechani
 >
 > <!-- -->
 >
-> -   If the file still exists on the target Transfer CFT, then the next new file transfer (<span class="code">`Report2`</span>) enters a retry cycle while it waits for the previous file to be deleted (moved/copied).
+> -   If the file still exists on the target Transfer CFT, then the next new file transfer (`Report2`) enters a retry cycle while it waits for the previous file to be deleted (moved/copied).
 
 ### Example configuration
 
@@ -139,10 +136,10 @@ send part=paris, idf=dailyreport, ida=report3
 
 Error and information messages include the following:
 
-- [CFTF32E](../../troubleshoot_intro/messages_and_error_codes_start_here/cftf_messages#CFTF32E): PART=&part IDF=&idf IDT=&idt \_ Maximum number of rename retries reached
-- [CFTF34E](../../troubleshoot_intro/messages_and_error_codes_start_here/cftf_messages#CFTF34E): PART=&part IDF=&idf IDT=&idt \_ WFNAME=&wfname not found
+- [CFTF32E](../../troubleshoot_intro/messages_and_error_codes_start_here/cftf_messages#CFTF32E): PART=&part IDF=&idf IDT=&idt _ Maximum number of rename retries reached
+- [CFTF34E](../../troubleshoot_intro/messages_and_error_codes_start_here/cftf_messages#CFTF34E): PART=&part IDF=&idf IDT=&idt _ WFNAME=&wfname not found
 - [CFTF35W](../../troubleshoot_intro/messages_and_error_codes_start_here/cftf_messages#CFTF35W) PART=&part IDF=&idf IDT=&idt Rename to FNAME=&fname failed, will be retried at &datetime
 
 Diagnostic code values related to RETRYRENAME include:
 
-- [diagi=156](../../troubleshoot_intro/messages_and_error_codes_start_here/diagi_diagnostic_codes) / diagc=RETRYRENAME
+- [diagi=156](../../troubleshoot_intro/about_error_codes/about_diagnostic_codes/diagi_diagnostic_codes) / diagc=RETRYRENAME

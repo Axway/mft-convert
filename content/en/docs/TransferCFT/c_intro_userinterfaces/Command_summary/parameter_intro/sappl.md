@@ -1,18 +1,15 @@
 ---
-
-    title: sappl
-    linkTitle: sappl
-    weight: 3050
-
----
-<span id="sappl"></span>
+    title: "sappl"
+    linkTitle: "sappl"
+    weight: 3070
+---<span id="sappl"></span>
 
 ### sappl
 
 #### CFTSEND, SEND, RECV
 
-****\[SAPPL     =    
-*string*\]****
+****[SAPPL     =    
+*string*]****
 
 *****string8*
    **PeSIT
@@ -48,7 +45,7 @@ partner can send and control this field.
 
 In standard PeSIT E, this value is transported in the PI 03. Its maximum
 length is limited by the eight-character standard. The PI 03 contains
-this value concatenated with the value of the <span style="font-weight: bold;">****suser****</span>
+this value concatenated with the value of the ****suser****
 field.
 
 In PeSIT E between two {{< TransferCFT/axwayvariablesComponentShortName  >}}s, the value of this SUSER parameter is transported in the PI 99, the value defined in the PI 03 being truncated to 8 characters.

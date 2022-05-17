@@ -1,11 +1,8 @@
 ---
-
-    title: Utility commands
-    linkTitle: Utility commands
-    weight: 250
-
----
-This section describes the utility commands.
+    title: "Utility commands"
+    linkTitle: "Utility commands"
+    weight: 240
+---This section describes the utility commands.
 
 - Capture
 - Dump

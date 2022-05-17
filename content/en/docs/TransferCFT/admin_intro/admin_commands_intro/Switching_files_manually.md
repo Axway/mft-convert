@@ -1,11 +1,8 @@
 ---
-
-    title: Housekeeping for statistical files
-    linkTitle: SWITCH - Switch files manually
-    weight: 340
-
----
-Transfer CFT extracts certain details for each transfer that you perform if you have defined the account (ACCNT) feature. This information is stored in a statistical file if you have defined TYPE = FILE. To manage the contents of this file, you can specify two criteria in the CFTACCNT object to trigger a switch (MAXREC and SWITCH).
+    title: "Housekeeping for statistical files"
+    linkTitle: "SWITCH - Switch files manually"
+    weight: 330
+---Transfer CFT extracts certain details for each transfer that you perform if you have defined the account (ACCNT) feature. This information is stored in a statistical file if you have defined TYPE = FILE. To manage the contents of this file, you can specify two criteria in the CFTACCNT object to trigger a switch (MAXREC and SWITCH).
 
 #### Automatic SWITCH 
 

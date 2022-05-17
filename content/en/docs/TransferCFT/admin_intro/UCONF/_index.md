@@ -1,11 +1,8 @@
 ---
-
-    title: About the unified configuration tool (UCONF)
-    linkTitle: Set UCONF parameters
-    weight: 220
-
----
-Configurable {{< TransferCFT/suitevariablesTransferCFTName  >}} parameters fall into two basic categories, definable objects or UCONF values. For some Transfer CFT parameters, you can use either method to define parameter values.
+    title: "About the unified configuration tool (UCONF)"
+    linkTitle: "Set UCONF parameters"
+    weight: 210
+---Configurable {{< TransferCFT/suitevariablesTransferCFTName  >}} parameters fall into two basic categories, definable objects or UCONF values. For some Transfer CFT parameters, you can use either method to define parameter values.
 
 When using {{< TransferCFT/suitevariablesCentralGovernanceName  >}} to manage {{< TransferCFT/axwayvariablesComponentShortName  >}}, some parameter values are specific to UCONF and modifiable only through the {{< TransferCFT/suitevariablesCentralGovernanceName  >}} interface or using the UCONF utility as described in this section.
 
@@ -54,7 +51,7 @@ The [UCONF parameters topic](uconf_directory) contains a complete listing of al
 - EXPERT: Extra care must be taken; only advanced users should change this value.
 - RECONFIG: Can be changed dynamically with a CFTUTIL RECONFIG type=UCONF, and a notification is displayed in the LOG.
 - IRECONFIG: Can be changed dynamically with a CFTUTIL RECONFIG type=UCONF, but no notification is displayed in the LOG.
-- RUNTIME MUTABLE READ\_ONLY: Cannot be changed by a user.
+- RUNTIME MUTABLE READ_ONLY: Cannot be changed by a user.
 - EXPERIMENTAL: Unsupported feature.
 - OBSOLETE: No longer used.
 
@@ -64,9 +61,9 @@ The [UCONF parameters topic](uconf_directory) contains a complete listing of al
 
 ### UCONF data
 
-When you install Transfer CFT, the <span class="code">`home`</span> directory is created and populated under the <span class="code">`Transfer_CFT`</span> installation directory. This <span class="code">`home `</span>directory contains installation libraries, binaries, and templates. Do not store any personal files in the <span class="code">`home `</span>directory, as they are erased during updates.
+When you install Transfer CFT, the `home` directory is created and populated under the `Transfer_CFT` installation directory. This `home `directory contains installation libraries, binaries, and templates. Do not store any personal files in the `home `directory, as they are erased during updates.
 
-The UCONF data are stored in both a dictionary located in the <span class="code">`Transfer_CFT>home `</span>directory, and in a runtime file in the<span class="code">` Transfer_CFT>runtime>data`</span> directory. You should not modify the default values stored in the <span class="code">`home `</span>UCONF dictionary.
+The UCONF data are stored in both a dictionary located in the `Transfer_CFT>home `directory, and in a runtime file in the` Transfer_CFT>runtime>data` directory. You should not modify the default values stored in the `home `UCONF dictionary.
 
 ****Related topics****
 

@@ -1,15 +1,12 @@
 ---
-
-    title: Example catalog search request
-    linkTitle: Example catalog search request
+    title: "Example catalog search request"
+    linkTitle: "Example catalog search request"
     weight: 330
+---Use this request to search for information in the catalog, for example details about the status of a transfer request.
 
----
-Use this request to search for information in the catalog, for example details about the status of a transfer request.
+## XFER_CAT_SELECT request with IDTU
 
-## XFER\_CAT\_SELECT request with IDTU
-
-In this example the XFER\_CAT\_SELECT request uses the IDTU.
+In this example the XFER_CAT_SELECT request uses the IDTU.
 
 &lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
@@ -27,35 +24,35 @@ In this example the XFER\_CAT\_SELECT request uses the IDTU.
 
 > &lt;SOAP-ENV:Body>
 >
-> > &lt;m:XFER\_CAT\_SELECT xmlns:m="http://www.axway.com">
+> > &lt;m:XFER_CAT_SELECT xmlns:m="http://www.axway.com">
 > >
-> > &lt;m:CAT\_FILENAME>$CFTCATA&lt;/m:CAT\_FILENAME>
+> > &lt;m:CAT_FILENAME>$CFTCATA&lt;/m:CAT_FILENAME>
 >
-> &lt;m:PERSISTENCE\_LOCALIZATION>PERSISTENCE\_ON\_WORKSTATION&lt;/m:PERSISTENCE\_LOCALIZATION>
+> &lt;m:PERSISTENCE_LOCALIZATION>PERSISTENCE_ON_WORKSTATION&lt;/m:PERSISTENCE_LOCALIZATION>
 >
-> &lt;m:PERSISTENCE\_ACCESSIBILITY>PERSISTENCE\_USER\_ALL&lt;/m:PERSISTENCE\_ACCESSIBILITY>
+> &lt;m:PERSISTENCE_ACCESSIBILITY>PERSISTENCE_USER_ALL&lt;/m:PERSISTENCE_ACCESSIBILITY>
 >
 > > &lt;m:DIRECT>BOTH&lt;/m:DIRECT>
 > >
-> > &lt;m:IDTU\_ARRAY>
+> > &lt;m:IDTU_ARRAY>
 > >
 > > > &lt;m:IDTU>A0000030&lt;/m:IDTU>
 > >
-> > &lt;/m:IDTU\_ARRAY>
+> > &lt;/m:IDTU_ARRAY>
 > >
-> > &lt;m:CONTENT\_SUBSET>
+> > &lt;m:CONTENT_SUBSET>
 > >
-> > > &lt;m:CAT\_CONTENT>CAT\_BRIEF&lt;/m:CAT\_CONTENT>
+> > > &lt;m:CAT_CONTENT>CAT_BRIEF&lt;/m:CAT_CONTENT>
 > > >
-> > > &lt;m:SELECT\_FIELDS\_ARRAY>
+> > > &lt;m:SELECT_FIELDS_ARRAY>
 > > >
-> > > &lt;m:SELECT\_FIELD>String&lt;/m:SELECT\_FIELD>
+> > > &lt;m:SELECT_FIELD>String&lt;/m:SELECT_FIELD>
 > >
-> > > &lt;/m:SELECT\_FIELDS\_ARRAY>
+> > > &lt;/m:SELECT_FIELDS_ARRAY>
 > >
-> > &lt;/m:CONTENT\_SUBSET>
+> > &lt;/m:CONTENT_SUBSET>
 > >
-> > &lt;/m:XFER\_CAT\_SELECT>
+> > &lt;/m:XFER_CAT_SELECT>
 >
 > &lt;/SOAP-ENV:Body>
 
@@ -73,55 +70,55 @@ Executing the this request when Copilot is running but {{< TransferCFT/axwayvari
 
 &lt;soap:Body>
 
-> &lt;XFER\_CAT\_SELECTResponse xmlns="http://www.axway.com">
+> &lt;XFER_CAT_SELECTResponse xmlns="http://www.axway.com">
 >
-> &lt;CAT\_MAXRECORDS>10000&lt;/CAT\_MAXRECORDS>
+> &lt;CAT_MAXRECORDS>10000&lt;/CAT_MAXRECORDS>
 >
-> &lt;CAT\_CURRENTRECORDS>12&lt;/CAT\_CURRENTRECORDS>
+> &lt;CAT_CURRENTRECORDS>12&lt;/CAT_CURRENTRECORDS>
 >
-> &lt;LISTCAT\_ARRAY>
+> &lt;LISTCAT_ARRAY>
 >
-> &lt;LISTCAT\_SUBSET>
+> &lt;LISTCAT_SUBSET>
 >
-> &lt;CAT\_FREC>14&lt;/CAT\_FREC>
+> &lt;CAT_FREC>14&lt;/CAT_FREC>
 >
-> &lt;CAT\_DIAGI>0&lt;/CAT\_DIAGI>
+> &lt;CAT_DIAGI>0&lt;/CAT_DIAGI>
 >
-> &lt;CAT\_NREC>14&lt;/CAT\_NREC>
+> &lt;CAT_NREC>14&lt;/CAT_NREC>
 >
-> &lt;CAT\_TYPE>FILE&lt;/CAT\_TYPE>
+> &lt;CAT_TYPE>FILE&lt;/CAT_TYPE>
 >
-> &lt;CAT\_IDA>30080&lt;/CAT\_IDA>
+> &lt;CAT_IDA>30080&lt;/CAT_IDA>
 >
-> &lt;CAT\_DIAGC/>
+> &lt;CAT_DIAGC/>
 >
-> &lt;CAT\_IDT>E0314250&lt;/CAT\_IDT>
+> &lt;CAT_IDT>E0314250&lt;/CAT_IDT>
 >
-> &lt;CAT\_IDF>TEST&lt;/CAT\_IDF>
+> &lt;CAT_IDF>TEST&lt;/CAT_IDF>
 >
-> &lt;CAT\_DIAGP>CP NONE&lt;/CAT\_DIAGP>
+> &lt;CAT_DIAGP>CP NONE&lt;/CAT_DIAGP>
 >
-> &lt;CAT\_PART>LOOP&lt;/CAT\_PART>
+> &lt;CAT_PART>LOOP&lt;/CAT_PART>
 >
-> &lt;CAT\_STATE>CAT\_STATE\_CONSUMED&lt;/CAT\_STATE>
+> &lt;CAT_STATE>CAT_STATE_CONSUMED&lt;/CAT_STATE>
 >
-> &lt;CAT\_ACK>false&lt;/CAT\_ACK>
+> &lt;CAT_ACK>false&lt;/CAT_ACK>
 >
-> &lt;CAT\_NACK>false&lt;/CAT\_NACK>
+> &lt;CAT_NACK>false&lt;/CAT_NACK>
 >
-> &lt;CAT\_CFTSTATE>X&lt;/CAT\_CFTSTATE>
+> &lt;CAT_CFTSTATE>X&lt;/CAT_CFTSTATE>
 >
-> &lt;CAT\_DIRECT>SEND&lt;/CAT\_DIRECT>
+> &lt;CAT_DIRECT>SEND&lt;/CAT_DIRECT>
 >
-> &lt;/LISTCAT\_SUBSET>
+> &lt;/LISTCAT_SUBSET>
 >
-> &lt;/LISTCAT\_ARRAY>
+> &lt;/LISTCAT_ARRAY>
 >
-> &lt;RETURN\_CODE>3&lt;/RETURN\_CODE>
+> &lt;RETURN_CODE>3&lt;/RETURN_CODE>
 >
-> &lt;RETURN\_MESSAGE/>
+> &lt;RETURN_MESSAGE/>
 >
-> &lt;/XFER\_CAT\_SELECTResponse>
+> &lt;/XFER_CAT_SELECTResponse>
 
 > &lt;/soap:Body>
 
@@ -129,35 +126,35 @@ Executing the this request when Copilot is running but {{< TransferCFT/axwayvari
 
 > **Note**
 >
-> To retrieve the Phase, Phasestep and  Appstate statuses you can set the CAT\_CONTENT value to FULL. However, setting the catalog to FULL returns a large number of lines in the catalog.
+> To retrieve the Phase, Phasestep and  Appstate statuses you can set the CAT_CONTENT value to FULL. However, setting the catalog to FULL returns a large number of lines in the catalog.
 
-> &lt;CAT\_PHASE>X&lt;/CAT\_PHASE>
+> &lt;CAT_PHASE>X&lt;/CAT_PHASE>
 >
-> &lt;CAT\_PHASESTEP>X&lt;/CAT\_PHASESTEP>
+> &lt;CAT_PHASESTEP>X&lt;/CAT_PHASESTEP>
 >
-> &lt;CAT\_APPSTATE/>
+> &lt;CAT_APPSTATE/>
 
 ## Response when there is no IDTU
 
-In the following response the return code is 3, successful, but the LISCAT\_ARRAY is empty.
+In the following response the return code is 3, successful, but the LISCAT_ARRAY is empty.
 
 &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 > &lt;soap:Body>
 >
-> > &lt;XFER\_CAT\_SELECTResponse xmlns="http://www.axway.com">
+> > &lt;XFER_CAT_SELECTResponse xmlns="http://www.axway.com">
 > >
-> > > &lt;CAT\_MAXRECORDS>10000&lt;/CAT\_MAXRECORDS>
+> > > &lt;CAT_MAXRECORDS>10000&lt;/CAT_MAXRECORDS>
 > > >
-> > > &lt;CAT\_CURRENTRECORDS>12&lt;/CAT\_CURRENTRECORDS>
+> > > &lt;CAT_CURRENTRECORDS>12&lt;/CAT_CURRENTRECORDS>
 > > >
-> > > &lt;LISTCAT\_ARRAY/>
+> > > &lt;LISTCAT_ARRAY/>
 > > >
-> > > &lt;RETURN\_CODE>3&lt;/RETURN\_CODE>
+> > > &lt;RETURN_CODE>3&lt;/RETURN_CODE>
 > > >
-> > > &lt;RETURN\_MESSAGE/>
+> > > &lt;RETURN_MESSAGE/>
 > >
-> > &lt;/XFER\_CAT\_SELECTResponse>
+> > &lt;/XFER_CAT_SELECTResponse>
 >
 > &lt;/soap:Body>
 

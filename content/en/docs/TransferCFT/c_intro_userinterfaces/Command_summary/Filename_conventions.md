@@ -1,12 +1,14 @@
 ---
-
-    title: Filename  conventions
-    linkTitle: Filename conventions
-    weight: 180
-
----
-This topic
+    title: "Filename  conventions"
+    linkTitle: "Filename conventions"
+    weight: 170
+---This topic
 provides examples of filenames, and file naming conventions.
+
+> **Note**
+>
+> Tip  
+> You can find a comprehensive list of file naming examples in the Send command page.
 
 ## Unauthorized characters
 
@@ -17,7 +19,7 @@ The following characters are system-restricted characters:
 
 > **Note**
 >
-> You can use the $ character on UNIX systems as an environment variable. To have a file created when the name includes one or more $ characters (without resolving the environment variable), see the UCONF cft.unix.throw\_error\_on\_envvar\_not\_found variable.
+> You can use the $ character on UNIX systems as an environment variable. To have a file created when the name includes one or more $ characters (without resolving the environment variable), see the UCONF cft.unix.throw_error_on_envvar_not_found variable.
 
 ## Naming the local file to be sent FNAME=filename
 
@@ -55,7 +57,7 @@ the transfer. As the substitutions in the FNAME string are performed at
 the time the request is saved in the catalog, these variables cannot be
 used in FNAME except in the case of an implicit SEND command.
 
-The ‘&’ character used here replaces the char\_symb character specific
+The ‘&’ character used here replaces the char_symb character specific
 to each operating system .
 
 Refer to the {{< TransferCFT/axwayvariablesComponentShortName  >}} *Installation and Operations Guide* that
@@ -63,7 +65,7 @@ corresponds to your OS.
 
 ### Reconstitute a filename
 
-A filename can be composed of different elements, such as the unit, path, root, and suffix. When transferring a file between disparate systems, you can use symbolic variables to reconstruct the original filename at the receiving end. See <a href="../symbolic_variables" class="MCXref xref">Symbolic variables</a> for details.
+A filename can be composed of different elements, such as the unit, path, root, and suffix. When transferring a file between disparate systems, you can use symbolic variables to reconstruct the original filename at the receiving end. See [Symbolic variables](../symbolic_variables) for details.
 
 ### Specific case of the &NFNAME symbolic variable (PeSIT CFT/CFT)
 
@@ -78,7 +80,7 @@ can be taken into account at each transfer.
 > requested (FNAME= &NFNAME), this corresponds to the open operating
 > mode.
 
-### Sending of a file with versions (z/OS)
+### Sending of a file with versions (z/OS, OpenVMS)
 
 This name includes a root and a version number. According to the case,
 the relative name is converted into an absolute name in different stages
@@ -108,6 +110,19 @@ the same as the last notation used in the JCL.
 //ST4 EXEC PGM=CFTUTIL
    SEND     FNAME=FIL(-1)
 ```
+
+****OpenVMS****
+
+The previous example of files with versions is also applicable if the
+value of DSN and FNAME is FIL;1.
+
+> **Note**
+>
+> For the &NFVER symbolic
+> variable: the use of &NFVER is only valid if the Transfer CFT is the sender server
+> and the send transfer is implicit (CFTSEND IMPL=YES). In this case, it
+> is possible to send the file version requested by the partner. Use the following parameter format: FNAME=GDGNAME(-&NFVER)
+
 <span id="Filename__listing_a_directory"></span>
 
 ### Listing a directory: filename
@@ -115,10 +130,10 @@ the same as the last notation used in the JCL.
 This section
 provides an example of how to list a directory.
 
-<span class="autonumber"></span>Example of listing a directory
+Example of listing a directory
 
 ```
-FNAME={dirname | mask}
+FNAME={dirname &#124; mask}
 ```
 
 The name specified can be a generic file name or a directory name. It
@@ -140,7 +155,7 @@ the name of a selected file.
 This section
 provides an example of sending a group of files based on a selection.
 
-Where, <span class="code">`FNAME={#mask | #dirname}`</span>
+Where, `FNAME={#mask &#124; #dirname}`
 
 The name specified can be a generic file name or a directory name.
 

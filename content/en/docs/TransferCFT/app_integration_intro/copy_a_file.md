@@ -1,15 +1,12 @@
 ---
-
-    title: Tracking a copied file 
-    linkTitle: Tracking a copied file
+    title: "Tracking a copied file "
+    linkTitle: "Tracking a copied file"
     weight: 210
-
----
-This topic describes how you can copy a file to a different location without actually sending the file, yet still have the standard Transfer CFT tracking. This option allows you to copy a file, with visibility in either Transfer CFT or Central Governance, without using network resources.
+---This topic describes how you can copy a file to a different location without actually sending the file, yet still have the standard Transfer CFT tracking. This option allows you to copy a file, with visibility in either Transfer CFT or Central Governance, without using network resources.
 
 ## Enable the copy file functionality
 
-This functionality is comprised of a delivered configuration and sample script files. To enable the copy file functionality, interpret the <span class="code">`cft-copyfile.conf`</span> configuration file.
+This functionality is comprised of a delivered configuration and sample script files. To enable the copy file functionality, interpret the `cft-copyfile.conf` configuration file.
 
 **Unix**
 
@@ -21,6 +18,12 @@ CFTUTIL @conf/cft-copyfile.conf
 
 ```
 CFTUTIL #conf\\cft-copyfile.conf
+```
+
+**OpenVMS**
+
+```
+CFTUTIL @CFT_SCEN:CFT-COPYFILE.CONF
 ```
 
 **z/OS**
@@ -35,11 +38,11 @@ JCL ..INSTALL(CFTCOPYF)
 CFTUTIL PARAM('#CFTPROD/CPYFILE(CPYFCONF)')
 ```
 
-The configuration file contains two defined partners, COPY\_SRC and COPY\_DST, and a flow called COPYFILE. In the delivered sample configuration file both partners are local, but you can modify the HOST and SAP parameters, in the CFTTCP and CFTPART definitions respectively, to use two different {{< TransferCFT/axwayvariablesComponentLongName  >}} instances.
+The configuration file contains two defined partners, COPY_SRC and COPY_DST, and a flow called COPYFILE. In the delivered sample configuration file both partners are local, but you can modify the HOST and SAP parameters, in the CFTTCP and CFTPART definitions respectively, to use two different {{< TransferCFT/axwayvariablesComponentLongName  >}} instances.
 
 ## Define a request to copy a file
 
-Enter the following command to set up a send request to the COPY\_DST partner:
+Enter the following command to set up a send request to the COPY_DST partner:
 
 ```
 CFTUTIL send part=COPY_DST, nfname='destination_file_name', parm='source_file_name'
@@ -50,7 +53,7 @@ Where:
 - parm: The name of the file to be copied
 - nfname: The name of the destination file
 
-This creates an empty file that is transferred from COPY\_SRC to COPY\_DST. The empty file is then used to create the catalog record.
+This creates an empty file that is transferred from COPY_SRC to COPY_DST. The empty file is then used to create the catalog record.
 
 > **Note**
 >
@@ -71,6 +74,11 @@ On the sender side, an end-of-transfer script (exec/copyfile-snd.cmd) executes t
 On the receiver side, an end-of-transfer script (exec/copyfile-rcv.cmd) executes to copy the file, write a log message, and update the catalog entries based on the copy results.
 
 The same concepts apply for all OS, but there is a different syntax depending on the platform.
+
+**OpenVMS**
+
+- exec/copyfile-snd.pro
+- exec/copyfile-rcv.pro
 
 **z/OS**
 
@@ -95,5 +103,5 @@ When you view the transfer record for a copied file, either in the catalog or in
 The copy command used in the sample script is a system copy command that you can modify to better accommodate your needs. The commands are operating system dependent, as listed here:
 
 - Unix: `cp`
-- Windows: `copy `
+- Windows and OpenVMS: `copy `
 - IBM i and z/OS : `CFTUTIL/COPYFILE` command (valid for sequential or HFS files on z/OS systems)

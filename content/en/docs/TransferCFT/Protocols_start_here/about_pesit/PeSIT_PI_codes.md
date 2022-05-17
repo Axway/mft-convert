@@ -1,11 +1,8 @@
 ---
-
-    title: PeSIT PI code descriptions 
-    linkTitle: PeSIT PI codes
-    weight: 160
-
----
-This topic provides a description for each of the PeSIT parameter identifiers, PI,
+    title: "PeSIT PI code descriptions "
+    linkTitle: "PeSIT PI codes"
+    weight: 150
+---This topic provides a description for each of the PeSIT parameter identifiers, PI,
 codes used with {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
 ## About PeSIT PI codes
@@ -25,7 +22,7 @@ Furthermore, each parameter group unit is identified by a numeric code named PGI
 (Parameters Group
 Identifier).
 
-********<span class="autonumber"></span>Parameter identifiers (PI) in the message body negotiate the session********
+********Parameter identifiers (PI) in the message body negotiate the session********
 
 ![](/Images/TransferCFT/temp_PI_format.png)
 
@@ -46,7 +43,7 @@ This field indicates the implementation of transmission error detection.
 ### PI 02 PeSIT diagnostic code
 
 Refer to *[Protocol
-diagnostic codes.](../../../troubleshoot_intro/messages_and_error_codes_start_here/general_protocol_diagnostics)*
+diagnostic codes.](../../../troubleshoot_intro/about_error_codes/about_diagnostic_codes/general_protocol_diagnostics)*
 
 <span id="PI_03__Requester_identification_PeSIT_E"></span>
 
@@ -450,9 +447,7 @@ tolerates sessions in accordance with the value of the SRIN parameter.
 ### PI 23 Resynchronization
 
 This parameter indicates the use of the resynchronization functional
-unit as required.
-
-It is defined using the RESYNC parameter of the
+unit as required. It is defined using the RESYNC parameter of the
 CFTPROT command and is negotiated by both partners at the time
 the protocol connection is established.
 
@@ -667,6 +662,8 @@ In message reception mode, Transfer
 CFT recovers the PI 91 in order to define the &MSG symbolic
 variable.
 
+See the [xlate](../../../c_intro_userinterfaces/command_summary/parameter_intro/xlate) parameter for transcoding details.
+
 <span id="PI_99_Free_message"></span>
 
 ### PI 99 Free message
@@ -682,3 +679,5 @@ the coding, structure or semantics of its contents is imposed by the protocol.
 
 During file sending, PI 99 contains the value in the PARM field of the
 SEND command. Character type coding with a maximum length of 254/512 bytes is permitted depending on the partner type.
+
+See the [xlate](../../../c_intro_userinterfaces/command_summary/parameter_intro/xlate) parameter for transcoding details.

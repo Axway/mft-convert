@@ -1,17 +1,14 @@
 ---
-
-    title: prot
-    linkTitle: prot
-    weight: 2740
-
----
-<span id="prot"></span>
+    title: "prot"
+    linkTitle: "prot"
+    weight: 2760
+---<span id="prot"></span>
 
 ### prot
 
 #### CFTPART
 
-**PROT = (*identifier* | *mask,* *identifier* | *mask*,..)**
+**PROT = (*identifier* &#124; *mask,* *identifier* &#124; *mask*,..)**
 
 List of communication protocols (CFTPROT ID identifiers) authorized
 to communicate with this partner.
@@ -33,7 +30,7 @@ PROT = (prot1 , \*)
 
 PROT = (prot1 , prot?)
 
-The ‘?’ character designates the char\_mask character defined in the
+The ‘?’ character designates the char_mask character defined in the
 {{< TransferCFT/axwayvariablesComponentShortName  >}} Operations Guide corresponding to your operating system.
 
 *In requester mode*: only the prot1

@@ -1,17 +1,14 @@
 ---
-
-    title: fparm
-    linkTitle: fparm
-    weight: 1300
-
----
-<span id="fparm"></span>
+    title: "fparm"
+    linkTitle: "fparm"
+    weight: 1290
+---<span id="fparm"></span>
 
 ### fparm
 
 #### CFTEXT
 
-****\[ FPARM = filename \]****
+****[ FPARM = filename ]****
 
 Name of the Parameter input file.
 

@@ -1,14 +1,11 @@
 ---
-
-    title: Symbolic variables
-    linkTitle: Symbolic variables
+    title: "Symbolic variables"
+    linkTitle: "Symbolic variables"
     weight: 150
-
----
-<span id="About_symbolic_variables"></span>A symbolic variable represents
-a transfer data item whose value is not known at the time {{< TransferCFT/axwayvariablesComponentShortName  >}}
-parameters are set, but only at the time the transfer is executed. Additionally, the symbolic variable is prefaced by a special character, which is the ‘&’ character in this document. However, you should refer to the {{< TransferCFT/axwayvariablesComponentShortName  >}} *Installation Guide* that corresponds to
-your OS, in order to determine the special character &lt;char\_symb>
+---<span id="About_symbolic_variables"></span>A symbolic variable represents
+a data item whose value is not known at the time {{< TransferCFT/axwayvariablesComponentShortName  >}}
+parameters are set, but only at the time of execution. Additionally, the symbolic variable is prefaced by a special character, which is the ‘&’ character in this document. However, you should refer to the {{< TransferCFT/axwayvariablesComponentShortName  >}} *Installation Guide* that corresponds to
+your OS, in order to determine the special character &lt;char_symb>
 used on your system.
 
 For example, prior to a transfer the transfer identifier IDT
@@ -24,6 +21,11 @@ it possible to only have to describe one transfer-related procedure applicable
 to several transfers. The real value of the parameter is substituted for
 the symbolic variable, at the time the {{< TransferCFT/axwayvariablesComponentShortName  >}} command or the procedure
 is executed.
+
+> **Note**
+>
+> Tip  
+> You can find a comprehensive list of file naming examples in the Send command page.
 
 <span id="Symbolic_variable_syntax"></span>
 
@@ -44,14 +46,14 @@ The symbolic variable syntax is as follows:
 | :  | That the right padding of the variable is suppressed  |
 | &lt;  | The left justification of the variable (default value)  |
 | &gt;  | The right justification of the variable  |
-| %  | Indicates use of the <a href="#Separate">separator syntax</a>  |
-|   | These characters can be used in combination, such as <span >****+:****</span> or <span >****&gt;+:****</span>. <br/> See the <a href="#Examples" >Example using optional characters</a> |
+| %  | Indicates use of the [separator syntax](#Separate)  |
+|   | These characters can be used in combination, such as ****+:**** or ****&gt;+:****. <br/> See the [Example using optional characters](#Examples) |
 
 
 - Optionally followed
-    by a character string to be used as a prefix (-string\_prefix)
-    and/or a character string to be used as a suffix (+string\_suffix)
-    and/or a character string to be used as a substitute/alternate value (=string\_alternate)
+    by a character string to be used as a prefix (-string_prefix)
+    and/or a character string to be used as a suffix (+string_suffix)
+    and/or a character string to be used as a substitute/alternate value (=string_alternate)
 - Optionally followed
     by a numeric formula with a syntax ‘n’ or ‘p.’ or ‘p.n’
 - And then a character
@@ -121,21 +123,21 @@ According to the syntax used:
         length of the effective value of VAR is less than p+n characters, the
         characters completing the substring are blank characters
 
-&(-string\_prefix)
-(+string\_suffix) (=string\_alternate)p.nVAR syntax:
+&(-string_prefix)
+(+string_suffix) (=string_alternate)p.nVAR syntax:
 
 After the &p.nVAR symbolic variable has been substituted:
 
-- The &lt;str\_prefix>character
+- The &lt;str_prefix>character
     string is added before the variable, if the substituted variable is not
     empty
-- The &lt;str\_suffix>
+- The &lt;str_suffix>
     character string is added after the variable, if the substituted variable
     is not empty
-- The &lt;str\_alternate>
+- The &lt;str_alternate>
     character string is used if the substituted variable is empty
 - The character
-    strings &lt;str\_prefix>, &lt;str\_suffix> and &lt;str\_alternate>
+    strings &lt;str_prefix>, &lt;str_suffix> and &lt;str_alternate>
     can contain a symbolic variable
 
 <span id="Separate"></span>
@@ -146,8 +148,8 @@ You can use the field extraction syntax as follows:
 
 `&%<separator>[<start_field>[.[<end_field>]]VARIABLE`
 
-1. If<span class="code">` start_field`</span> is omitted, the default value is 1.
-1. If <span class="code">`end_field`</span> is omitted, the default value is the last field in the variable.
+1. If` start_field` is omitted, the default value is 1.
+1. If `end_field` is omitted, the default value is the last field in the variable.
 1. If there are 2 consecutive separators, the extracted field between the 2 separators is empty.
 1. If there is only one number after the separator indicating the value placement, this returns just that token value.
 
@@ -155,14 +157,14 @@ For the following example, see the corresponding syntax:
 
 `&<VARIABLE>=S052368_Z123_HZUI34_92___TYU`
 
-1. <span class="code">`&%_.2<VARIABLE>`</span>: separator=\_, start\_field=1 , end\_field=2 (this returns the value <span class="code">`S052368_Z123`</span>)
-1. <span class="code">`&%_3.<VARIABLE>`</span>: separator=\_ , start\_field=3, end\_field=last\_field (this returns the value <span class="code">`HZUI34_92___TYU`</span>)
-1. <span class="code">`&%_5<VARIABLE>`</span>: separator=\_, start\_field=5, end\_field=5 (this returns ' ')
-1. <span class="code">`&%_4<VARIABLE>`</span>: separator=\_, start\_field=4, end\_field=4 (this returns <span class="code">`92`</span>)
+1. `&%_.2<VARIABLE>`: separator=_, start_field=1 , end_field=2 (this returns the value `S052368_Z123`)
+1. `&%_3.<VARIABLE>`: separator=_ , start_field=3, end_field=last_field (this returns the value `HZUI34_92___TYU`)
+1. `&%_5<VARIABLE>`: separator=_, start_field=5, end_field=5 (this returns ' ')
+1. `&%_4<VARIABLE>`: separator=_, start_field=4, end_field=4 (this returns `92`)
 
 You can combine field extraction with the other filtering methods. The full syntax is:
 
-`&[<|>][+|-][:][(-string_prefix)(+string_suffix)(=string_alternate)][<position>.][<length>][%<separator>][<start_field>][.[<end_field>]]<VARIABLE>`
+`&[<&#124;>][+&#124;-][:][(-string_prefix)(+string_suffix)(=string_alternate)][<position>.][<length>][%<separator>][<start_field>][.[<end_field>]]<VARIABLE>`
 
 #### Example symbolic variable usage
 
@@ -184,8 +186,8 @@ This allows identifiers of length less than p to be selected, for example.
 
 > **Note**
 >
-> &.VAR is substituted as &VAR. The &lt;char\_symb> concatenated
-> with a point is substituted as &lt;char\_symb>. The rule applies even
+> &.VAR is substituted as &VAR. The &lt;char_symb> concatenated
+> with a point is substituted as &lt;char_symb>. The rule applies even
 > if VAR is not an identifier known to Transfer CFT. For example, for the
 > formats &.VAR (&0.VAR, &0.0VAR or &.0VAR), the value substituted
 > is not the effective value of the identifier ‘VAR’ but the literal string
@@ -256,7 +258,7 @@ Given the syntax FNAME=&(-PREF)(+SUF)(=DUMMY)PARM,
 
 > **Note**
 >
-> To add a closing parenthesis within the str\_prefix, str\_suffix and str\_alternate, it must be preceded by the character ‘&’:
+> To add a closing parenthesis within the str_prefix, str_suffix and str_alternate, it must be preceded by the character ‘&’:
 
 - Given the syntax FNAME=&(+(1234&))PARM
     -   If &PARM is not empty, FNAME gets the value &PARM(1234)
@@ -283,24 +285,67 @@ right), is also indicated.
 > The other syntax shown above may also be used, for each of the identifiers
 > listed.
 
-<span class="autonumber"></span>List of symbolic variables
-
-QQQ\_QQQ\_QQQ
+QQQ_QQQ Table CHECK CHECK big split!!!
 
 #### PARTNERS domain
 
-
-| Symbolic variable  | Maximum length  | Corresponding substituted value  |
-| --- | --- | --- |
-| &amp;PART  | 32  | Partner name (ID of CFTPART)  |
-| &amp;GROUP  | 32  | Group to which the partner belongs  |
-| &amp;SPART  | 32  | Sending partner name  |
-| &amp;RPART  | 32  | Receiving partner name  |
-| &amp;IPART  | 32  | Intermediate partner name  |
-| &amp;NPART  | 32  | Network name of partner sending data (NSPART or NRPART according to the transfer direction)  |
-| &amp;NSPART  | 24  | Network identifier by which the local {{< TransferCFT/axwayvariablesComponentShortName  >}} identifies itself to its partner  |
-| &amp;NRPART  | 24  | Network identifier by which the remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComponentLongName  >}} |
-
+<table>
+   <thead>
+      <tr>
+<th >Domain         </th>
+<th >Symbolic variable         </th>
+<th  >Maximum length         </th>
+<th >Corresponding substituted
+value         </th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td rowspan="8"  data-valign="top" width="21%">PARTNERS          </td>
+         <td  data-valign="top" width="26%"><p>&amp;PART </p>         </td>
+         <td  >32         </td>
+         <td  data-valign="top"><p>Partner name (ID of CFTPART) </p>         </td>
+      </tr>
+      <tr>
+         <td  data-valign="top" width="26%"><p>&amp;GROUP </p>         </td>
+         <td  >32         </td>
+         <td  data-valign="top"><p>Group to which the partner belongs </p>         </td>
+      </tr>
+      <tr>
+         <td  data-valign="top" width="26%"><p>&amp;SPART </p>         </td>
+         <td  >32         </td>
+         <td  data-valign="top"><p>Sending partner name </p>         </td>
+      </tr>
+      <tr>
+         <td  data-valign="top" width="26%"><p>&amp;RPART </p>         </td>
+         <td  >32         </td>
+         <td  data-valign="top"><p>Receiving partner name </p>         </td>
+      </tr>
+      <tr>
+         <td  data-valign="top" width="26%"><p>&amp;IPART </p>         </td>
+         <td  >32         </td>
+         <td  data-valign="top"><p>Intermediate partner name </p>         </td>
+      </tr>
+      <tr>
+         <td  data-valign="top" width="26%"><p>&amp;NPART </p>         </td>
+         <td  >32         </td>
+         <td  data-valign="top"><p>Network name of partner sending data (NSPART or NRPART
+according to the transfer direction) </p>         </td>
+      </tr>
+      <tr>
+         <td  data-valign="top" width="26%">&amp;NSPART         </td>
+         <td  >24         </td>
+         <td  data-valign="top">Network identifier by which the
+local {{< TransferCFT/axwayvariablesComponentShortName  >}} identifies itself to its partner         </td>
+      </tr>
+      <tr>
+         <td  data-valign="top" width="26%">&amp;NRPART         </td>
+         <td  >24         </td>
+         <td  data-valign="top"><p>Network identifier by which the
+remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComponentLongName  >}}</p>         </td>
+      </tr>
+   </tbody>
+</table>
 
 #### USER domain
 
@@ -328,7 +373,7 @@ QQQ\_QQQ\_QQQ
 | &amp;PI99  | 512  | PI99 contents (PeSIT E)  |
 
 
-#### TRANSFER domain
+#### TRANSFER domain
 
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
@@ -376,13 +421,7 @@ QQQ\_QQQ\_QQQ
 | &amp;NCHARSET  | 32  | Destination file encoding for network data  |
 | &amp;WORKINGDIR  | 512  | Specify a directory other than the default directory  |
 | &amp;HOME  | 512  | Keyword that allows different users to work with files placed in their home directory  |
-
-
-#### FILE domain - Receiving
-
-
-| Symbolic variable  | Maximum length  | Corresponding substituted value  |
-| --- | --- | --- |
+| Receiving  |   |   |
 | &amp;NFNAME  | 512  | Physical file network name  |
 | &amp;FROOT  | 512  | Root (file name) <br/> Based on the SFNAME (remote sending file) |
 | &amp;FSUF  | 512  | File name suffix -<br/> Based on the SFNAME (remote sending file) |
@@ -394,13 +433,7 @@ QQQ\_QQQ\_QQQ
 | &amp;PATH | 512  | Local file path of the received file |
 | &amp;ROOT | 512  | Local file root for the received file |
 | &amp;SUF | 512  | Local file suffix for the received file |
-
-
-#### FILE domain - Sending
-
-
-| Symbolic variable  | Maximum length  | Corresponding substituted value  |
-| --- | --- | --- |
+| Sending  |   |   |
 | &amp;SFNAME  | 512  | Name of file to send  |
 | &amp;FUNIT<br/>  | 512  | Physical file volume name for sending file |
 | &amp;FUNITC  | 512  | Physical file unit for sending file (z/OS)  |
@@ -419,6 +452,17 @@ QQQ\_QQQ\_QQQ
 
 
 #### DATE and TIME associated with a FILE 
+
+> **Note**
+>
+> Note: The symbolic variable formats concerning dates and times are:
+
+- Time: HHMMSSCC
+     
+- Complete date: YYYYMMDD
+- Year: YY
+- Month: MM
+- Day: DD
 
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
@@ -460,7 +504,7 @@ QQQ\_QQQ\_QQQ
 | &amp;TT  | 10  | Transmission duration in seconds (TIMES attribute in the {{< TransferCFT/axwayvariablesComponentShortName  >}} catalog) |
 
 
-#### CONTROL OUTPUT domain
+#### CONTROL OUTPUT  domain
 
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
@@ -479,186 +523,147 @@ QQQ\_QQQ\_QQQ
 | &amp;XFROBJID  | 32  | Tracked object name  |
 
 
-#### SSL domain
+#### SSL domain
 
-> **Note**
->
-> These variables are linked to SSL use. For additional information,
-> refer to Managing Transport Security.&lt;/blockquote>
->
-> 
-> > > > > > > >  | Symbolic variable >  | Maximum length >  | Corresponding substituted > value >  |
- --- | --- | --- | --- |
-> > > >  | &amp;SSL<br/> >  | 1 >  | Indicates if the session the transfer was carried out on > was secured (‘1’) or not (‘0’) <br/> >  |
-> >  | &amp;SSLMODE <br/> >  | 1 >  | SSL session mode on which the transfer was carried out. > (C: Client / S: Server) <br/> >  |
-> >  | &amp;SSLAUTH <br/> >  | 1 >  | Authentication rule<br /> > (A: Anonymous /S: Server / B: Both) <br/> >  |
-> >  | &amp;SSLCIPH <br/> >  | 2 >  | SSL cipher suite <br/> >  |
-> >  | &amp;SSLPROF <br/> >  | 32 >  | SSL profile identifier <br/> >  |
-> >  | &amp;SSLPARM <br/> >  | 64 >  | SSL user parameter Parm parameter of the CFTSSL command <br/> >  |
-> >  | &amp;SSLRMCA <br/> >  | 256 >  | Certificate identifier of the authority that signed the > certificate presented by the remote partner <br/> >  |
-> >  | &amp;SSLUSER <br/> >  | 256 >  | Identifier of the user certificate used locally for authentication > by the remote partner <br/> >  |
-> >  | &amp;SSLCFNAM <br/> >  | 64 >  | Physical name of the file in which the certificate chain > presented by the remote partner was recorded <br/> > This is the same as the CFTSSL CERFNAME parameter value<br/> >  |
-> > 
->
-> #### SYSTEM domain
->
-> 
-> > >  | Symbolic variable >  | Maximum length >  | Corresponding substituted > value >  |
- --- | --- | --- | --- |
-> > > >  | &amp;SYSDATE <br/> >  | 8 >  | System date <br/> >  |
-> >  | &amp;SYSTIME <br/> >  | 8 >  | System time <br/> >  |
-> >  | &amp;SYSQQ <br/> >  | 3 >  | Number of the day in the year associated with the system > date <br/> >  |
-> >  | &amp;SYSDAY<br/> >  | 1 >  | Day of the week (Sunday = 0, 6 = Saturday)<br/> >  |
-> > 
->
-> #### CAT/ ACCOUNT ENVIRONMENT
->
-> 
-> > >  | Symbolic variable >  | Max length >  | Corresponding substituted > value >  |
- --- | --- | --- | --- |
-> > > >  | &amp;CFTNAME<br/> >  | 32 >  | Name of the {{< TransferCFT/axwayvariablesComponentShortName  >}} (CFTPARM PART parameter)<br/> >  |
-> >  | &amp;CFTEVENT<br/> >  | 16 >  | The type of job submitted by {{< TransferCFT/axwayvariablesComponentShortName  >}}, see (1) below<br/> >  |
-> >  | &amp;SJOBNAME >  | 15 >  | The {{< TransferCFT/axwayvariablesComponentShortName  >}} jobname, which is the name of the job submitting the cronjob or exec procedure (z/OS) >  |
-> >  | &amp;CFTVERSION >  | 16 >  | The Transfer CFT version >  |
-> >  | &amp;CFTSP >  | 16 >  | The latest SP applied to the Transfer CFT >  |
-> >  | &amp;CFTPATCH >  | 16 >  | The latest patch applied to the Transfer CFT >  |
-> >  | &amp;CFTTARGET >  | 16 >  | The Transfer CFT platform with additional details required for a support ticket, for example >  |
-> >  | &amp;CFTHOSTOS >  | 64 >  | The Transfer CFT hostname >  |
-> >  | &amp;CFTHOSTMACHINE >  | 64 >  | The machine processor name where Transfer CFT is running >  |
-> > 
->
-> (1): EXEC in SEND, EXECSF, EXECSM, EXEC in RECV, EXECRF, EXECRM, EXECE, EXECSE, EXECRE, EXECA, EXECSFA, EXECSMA, PREEXEC, EXITEOT, EXECSUB, EXECSUBA, EXECSUBPRE
->
-> > **Note**
-> >
-> > The symbolic variable formats concerning dates and times are:
->
-> -   Time: HHMMSSCC
->      
-> -   Complete date: YYYYMMDD
-> -   Year: YY
-> -   Month: MM
-> -   Day: DD
->
-> ****Sender****
->
-> The symbolic variables are
-> substituted by the values of the local parameters of the commands.
->
-> ****Receiver****
->
-> The symbolic
-> variables are substituted:
->
-> -   By the sender parameter
->     values when these values are conveyed by the protocol
-> -   By default, by
->     the corresponding local parameter values
->
-> <span id="Using_symbolic_variables"></span>
->
-> ## Using symbolic variables
->
-> Symbolic variables can be used:
->
-> -   To assign a value
->     to certain parameters of the parameter setting or transfer commands
-> -   In the processing
->     operations defined by the user in the procedures associated with the transfers
->
-> 
-> > > > > > >  | Parameter >  | Symbolic variables >  |
- --- | --- | --- |
-> > > >  | WFNAME, NFNAME, FNAME for the CFTSEND/SEND and CFTRECV/RECV commands >  |  > • &amp;FDATE, &amp;FTIME, &amp;FYEAR, &amp;FMONTH, &amp;FDAY<br /> > <br/> > • &amp;BDATE, &amp;BTIME, &amp;BYEAR, &amp;BMONTH, &amp;BDAY<br /> > <br/> > • &amp;SPART, &amp;RPART, &amp;PART, &amp;NPART, &amp;GROUP<br /> > <br/> > • &amp;SUSER, &amp;RUSER<br /> > <br/> > • &amp;SAPPL, &amp;RAPPL<br /> > <br/> > • &amp;IDF, &amp;PARM, &amp;IDA<br /> > <br/> > • &amp;NIDF<br /> > <br/> > • &amp;NFNAME (only for FNAME and WFNAME)<br /> > <br/> > • &amp;IDT (only the FNAME and WFNAME parameters when you receive a file)<br /> > <br/> > • &amp;SYSQQ<br/> > • &amp;WORKINGDIR<br/> > >  |
-> >  | EXEC, EXECE, PREEXEC for the CFTSEND/SEND and CFTRECV/RECV commands<br/> > EXECRE, > EXECSE, EXECRF, EXECSF, EXECSFA, EXECSM, EXECRM, EXECSMA for CFTPARM command<br/> >  |  > • &amp;SPART, &amp;RPART, &amp;PART, &amp;GROUP, &amp;NRPART, &amp;NSPART, &amp;USERID,&amp;GROUPID<br/> > • &amp;BDATE, &amp;BTIME, &amp;BYEAR, &amp;BMONTH, &amp;BDAY<br/> > • &amp;CDATE, &amp;CTIME, &amp;CYEAR, &amp;CMONTH, &amp;CDAY<br/> > • &amp;FDATE, &amp;FTIME, &amp;FYEAR, &amp;FMONTH, &amp;FDAY<br/> > • &amp;EDATE, &amp;ETIME, &amp;EYEAR, &amp;EMONTH, &amp;EDAY<br/> > • &amp;COMMENT<br/> > • &amp;SUSER, &amp;RUSER<br /> > <br/> > • &amp;SAPPL, &amp;RAPPL<br /> > <br/> > • &amp;PARM, &amp;MSG, &amp;PI99<br /> > <br/> > • &amp;DIAGI, &amp;DIAGP, &amp;DIAGC<br /> > <br/> > • &amp;FNAME*, &amp;UNIT*, &amp;UNITC*, &amp;NFNAME*, &amp;NFVER*, &amp;FDB*, &amp;SELFNAME*, &amp;FUNITC*, &amp;FUNIT*, &amp;FPATH*, &amp;FROOT*, &amp;SFNAME*, &amp;WORKINGDIR*, &amp;HOME*<br /> > <br/> > • &amp;IDF*, &amp;PIDTU, &amp;IDTU, &amp;IDT, &amp;NIDT, &amp;NIDF*, &amp;IDA, &amp;IDM, &amp;NSUB, &amp;PATH*, &amp;ROOT*, &amp;SUF*<br /> > <br/> > • &amp;FCODE, &amp;NCODE, &amp;fcharset, &amp;ncharset<br /> > <br/> > • &amp;BLKNUM<br /> > <br/> > • &amp;CFTEVENT, &amp;CFTNAME<br/> > • &amp;FMCL, &amp;MODE, &amp;TRTYPE<br/> > • &amp;FBLKSIZE*, &amp;FKEYLEN*, &amp;FKEYPOS*, &amp;NKEYLEN*, &amp;NKEYPOS*, &amp;FLRECL*, &amp;FORG*, &amp;FRECFM*, &amp;FSPACE*, &amp;FTYPE*<br/> > • &amp;NBR*, &amp;NBC*, &amp;NBT*, &amp;TT, &amp;QQ, &amp;COMP, &amp;NOTIFY, &amp;SYSQQ<br/> > • &amp;SSLAUTH, &amp;SSLCIPH, &amp;SSLMODE, &amp;SSLPROF, &amp;SSLPARM, &amp;SSLRMCN, &amp;SSLRMCA, &amp;SSLUSER, &amp;SSLCFNA, &amp;SSL (See <a href="#Transport_security_symbolic_variables">Transport > security symbolic variables</a>)<br/> > • &amp;XLATE<br/> > • &amp;SYSDATE, &amp;SYSTIME, &amp;SYSDAY<br/> > • &amp;PRI<br/> > • &amp;XFRCYCID, &amp;XFROBJID<br/> > • &amp;EXITFREE<br/> > • &amp;JOBNAME, &amp;NCHARSET<br/> > • &amp;APPSTATE, &amp;PHASESTEP, &amp;PHASE<br/> > • &amp;<a href="../parameter_intro/sourceappl">SOURCEAPPL</a>, &amp;<a href="../parameter_intro/targetappl">TARGETAPPL</a><br/> > > <blockquote> > **Note**<br/> > You cannot use the variables designated by asterisk (*) in procedures > associated with the EXEC* parameters relative to message transfers.<br/> > </blockquote> >  |
-> >  | EXEC for CFTACCNT or CFTLOG >  | &amp;FACCNT, &amp;FLOG >  |
-> >  | TLVCEXEC, TLVWEXEC for CFTCAT >  | &amp;FCAT >  |
-> >  | USERID > parameter of the CFTSEND and CFTRECV commands >  | &amp;RUSER, > &amp;SUSER, &amp;PART >  |
-> >  | EXIT > of the {{< TransferCFT/axwayvariablesComponentShortName  >}} CFTSEND/SEND and CFTRECV/RECV commands >  | &amp;IDF >  |
-> >  | FNAME parameter > of CFTDEST >  |  > • &amp;FDATE, &amp;FTIME, &amp;FYEAR, &amp;FMONTH, &amp;FDAY<br /> > <br/> > • &amp;PART, &amp;RPART, &amp;SPART, &amp;NPART, &amp;GROUP<br /> > <br/> > • &amp;SUSER, &amp;RUSER<br /> > <br/> > • &amp;SAPPL, &amp;RAPPL<br /> > <br/> > • &amp;IDF, &amp;PARM, &amp;IDA<br /> > <br/> > • &amp;NIDF<br /> > <br/> > • &amp;NFNAME, &amp;NFVER<br/> > >  |
-> >  | The name of the > identifier of the IDF parameter of the CFTPROT command >  |  > • &amp;NIDF<br/> > >  |
-> >  | The IDA parameter of SEND and CFTSEND >  |  > • &amp;FNAME, &amp;FUNITC, &amp;FUNIT, &amp;FPATH, &amp;FROOT, &amp;FSUF, &amp;NFNAME, &amp;PART, &amp;IDF, &amp;IDTU, &amp;IDT, &amp;IDM, &amp;COMMENT, &amp;SYSDATE, &amp;SYSTIME<br/> > >  |
-> >  | SUSER and RUSER parameters of SEND and CFTSEND >  |  > • &amp;USERID, &amp;FNAME, &amp;FUNITC, &amp;FUNIT, &amp;FPATH, &amp;FROOT, &amp;FSUF, &amp;NFNAME, &amp;PART, &amp;IDA, &amp;IDF, &amp;IDTU, &amp;IDT, &amp;IDM, &amp;COMMENT, &amp;SYSDATE, &amp;SYSTIME, &amp;FCHARSET, &amp;NCHARSET<br/> > >  |
-> >  | PARM, SAPPL, RAPPL parameters of SEND and CFTSEND >  |  > • &amp;FNAME, &amp;FUNITC, &amp;FUNIT, &amp;FPATH, &amp;FROOT, &amp;FSUF, &amp;NFNAME, &amp;PART, &amp;IDA, &amp;IDF, &amp;IDTU, &amp;IDT, &amp;IDM, &amp;COMMENT, &amp;SYSDATE, &amp;SYSTIME, &amp;FCHARSET, &amp;NCHARSET<br/> > >  |
-> > 
->
-> ******Example******
->
-> A file name can consist of the day’s date and the partner’s name:  the
-> description command for the PAY file in reception.
->
-> ```
-> RECV IDF = PAY, FNAME = PAY&4PART.&FDAY
-> ```
->
-> When a file of this type is received from the ALPHSITE partner on July
-> 14 13:
->
-> ```
-> RECV PART = ALPHSITE, IDF = PAY
-> ```
->
-> {{< TransferCFT/axwayvariablesComponentShortName  >}} creates and writes to a file: PAYALPH.14
->
-> See the end-of-transfer examples in [Transfer-related
-> procedure examples](../../../concepts/about_transfer_processing/procedure_examples).
->
-> ## Defining symbolic variable blacklists for processing scripts
->
-> **UNIX and Windows only**
->
-> You can use blacklist characters as a POSIX Regular Extended expression to define forbidden characters in a processing script. To prevent unauthorized actions, do not use these characters in symbolic variables.
->
-> ****Defining the blacklist****
->
-> Use the uconf <span class="code">`cft.server.processing_scripts_variables_blacklist`</span> parameter to define the character sequence to forbid. We recommend setting this parameter to **`|\\$\\(|;|&|\\|** for UNIX, and **"&"** for Windows.
->
-> <span class="bold_in_para">****UNIX****</span>
->
-> ```
-> uconfset id=cft.server.processing_scripts_variables_blacklist , value= "`|\\$\\(|;|&|\\|"
-> ```
->
-> When setting the blacklist values shown above, the forbidden characters are: **`** and **$(** and **;** and **&** and **|**  
-> For example, if <span class="code">`&PARM="$(ls)"`</span>or if `` &PARM="`ls`" ``, then the EXEC is not executed because of the **$(** or the **`** characters, respectively.
->
-> ****Windows****
->
-> ```
-> uconfset id=cft.server.processing_scripts_variables_blacklist , value="&"
-> ```
->
-> ****DIAGI 158****
->
-> This DIAGI indicates that there was an error while replacing the {{< TransferCFT/axwayvariablesComponentLongName  >}} variables.
->
-> ****Log messages****
->
-> -   CFTS67E: Error replacing variable &lt;var> &lt;error message>
-> -   CFTS68E: PART=&part \[IDF=&idf | IDM=&idm\]IDT=&idt \_ &fname not executed
->
-> <span id="Transport_security_symbolic_variables"></span>
->
-> ## Transport security symbolic variables
->
-> This section describes additional
-> symbolic variables relating to transport security. These symbolic variables
-> can be used in end-of-transfer procedures EXECRF, EXECSF, EXECRM, and
-> so on. These variables indicate whether transport security is used, and if
-> so, the session parameters such as the authentication mode, suite negotiated
-> and certificates used.
->
-> 
-> > >  | Symbolic variable >  | Description >  |
- --- | --- | --- |
-> > > >  | &amp;SSL <br/> >  | Indicates whether security was implemented (1 = > yes, 0 = no) for the session in which the transfer was performed. <br/> >  |
-> >  | &amp;SSLMODE <br/> >  | Direction of the SSL session in which the transfer was > performed.<br/> > C signifies client and > S signifies server. <br/> >  |
-> >  | &amp;SSLAUTH <br/> >  | Authentication mode of the SSL session in which the transfer > was performed.<br/> > > • S > signifies that only the server was authenticated.<br/> > • B > signifies that the client and server were authenticated.<br/> > • A > signifies that the anonymous mode has > been implemented. <br/> > >  |
-> >  | &amp;SSLCIPH <br/> >  | Suite negotiated for the SSL session.<br/> > This suite is set to one of the values from the suites > supported by Transfer CFT (1, 2, 4, 5, 9, 10 or 47). <br/> >  |
-> >  | &amp;SSLPROF <br/> >  | Identifier of the CFTSSL command used to negotiate the > session parameters. <br/> >  |
-> >  | &amp;SSLPARM <br/> >  | Value of the PARM parameter in the CFTSSL command used > to negotiate the session parameters. <br/> >  |
-> >  | &amp;SSLRMCA <br/> >  | Certificate identifier of the authority that signed the > certificate presented by the remote partner. <br/> >  |
-> >  | &amp;SSLRMCN <br/> >  | Remote user certificate CN field. <br/> >  |
-> >  | &amp;SSLUSER <br/> >  | Identifier of the user certificate used locally for authentication > by the remote partner. <br/> >  |
-> >  | &amp;SSLCFNAM <br/> >  | Physical name of the file in which the certificate chain > presented by the remote partner was recorded. This is the same as the CFTSSL CERFNAME parameter value.<br/> >  |
-> > 
+These variables are linked to SSL use.
+
+
+| Symbolic variable  | Maximum length  | Corresponding substituted value  |
+| --- | --- | --- |
+| &amp;SSL | 1  | Indicates if the session the transfer was carried out on was secured (‘1’) or not (‘0’)  |
+| &amp;SSLMODE  | 1  | SSL session mode on which the transfer was carried out. (C: Client / S: Server)  |
+| &amp;SSLAUTH  | 1  | Authentication rule<br /> (A: Anonymous /S: Server / B: Both)  |
+| &amp;SSLCIPH  | 2  | SSL cipher suite  |
+| &amp;SSLPROF  | 32  | SSL profile identifier  |
+| &amp;SSLPARM  | 64  | SSL user parameter Parm parameter of the CFTSSL command  |
+| &amp;SSLRMCA  | 256  | Certificate identifier of the authority that signed the certificate presented by the remote partner  |
+| &amp;SSLUSER  | 256  | Identifier of the user certificate used locally for authentication by the remote partner  |
+| &amp;SSLCFNAM  | 64  | Physical name of the file in which the certificate chain presented by the remote partner was recorded <br/> This is the same as the CFTSSL CERFNAME parameter value |
+
+
+#### SYSTEM  domain
+
+
+| Symbolic variable  | Maximum length  | Corresponding substituted value  |
+| --- | --- | --- |
+| &amp;SYSDATE  | 8  | System date  |
+| &amp;SYSTIME  | 8  | System time  |
+| &amp;SYSQQ  | 3  | Number of the day in the year associated with the system date  |
+| &amp;SYSDAY | 1  | Day of the week (Sunday = 0, 6 = Saturday) |
+
+
+#### CAT/ ACCOUNT ENVIRONMENT domain
+
+
+| Symbolic variable  | Maximum length  | Corresponding substituted value  |
+| --- | --- | --- |
+| &amp;CFTNAME | 32  | Name of the {{< TransferCFT/axwayvariablesComponentShortName  >}} (CFTPARM PART parameter) |
+| &amp;CFTEVENT | 16  | The type of job submitted by {{< TransferCFT/axwayvariablesComponentShortName  >}}, see (2) below |
+| &amp;SJOBNAME  | 15  | The {{< TransferCFT/axwayvariablesComponentShortName  >}} jobname, which is the name of the job submitting the cronjob or exec procedure (z/OS)  |
+| &amp;CFTVERSION  | 16  | The Transfer CFT version  |
+| &amp;CFTSP  | 16  | The latest SP applied to the Transfer CFT  |
+| &amp;CFTPATCH  | 16  | The latest patch applied to the Transfer CFT  |
+| &amp;CFTTARGET  | 16  | The Transfer CFT platform with additional details required for a support ticket, for example  |
+| &amp;CFTHOSTOS  | 64  | The Transfer CFT hostname  |
+| &amp;CFTHOSTMACHINE  | 64  | The machine processor name where Transfer CFT is running  |
+
+
+(2): EXEC in SEND, EXECSF, EXECSM, EXEC in RECV, EXECRF, EXECRM, EXECE, EXECSE, EXECRE, EXECA, EXECSFA, EXECSMA, PREEXEC, EXITEOT, EXECSUB, EXECSUBA, EXECSUBPRE
+
+****Sender****
+
+The symbolic variables are
+substituted by the values of the local parameters of the commands.
+
+****Receiver****
+
+The symbolic
+variables are substituted:
+
+- By the sender parameter
+    values when these values are conveyed by the protocol
+- By default, by
+    the corresponding local parameter values
+
+<span id="Using_symbolic_variables"></span>
+
+## Using symbolic variables
+
+Symbolic variables can be used:
+
+- To assign a value
+    to certain parameters of the parameter setting or transfer commands
+- In the processing
+    operations defined by the user in the procedures associated with the transfers
+
+
+| Parameter  | Symbolic variables  |
+| --- | --- |
+| WFNAME, NFNAME, FNAME for the CFTSEND/SEND and CFTRECV/RECV commands  |  • &amp;FDATE, &amp;FTIME, &amp;FYEAR, &amp;FMONTH, &amp;FDAY<br /> <br/> • &amp;BDATE, &amp;BTIME, &amp;BYEAR, &amp;BMONTH, &amp;BDAY<br /> <br/> • &amp;SPART, &amp;RPART, &amp;PART, &amp;NPART, &amp;GROUP<br /> <br/> • &amp;SUSER, &amp;RUSER<br /> <br/> • &amp;SAPPL, &amp;RAPPL<br /> <br/> • &amp;IDF, &amp;PARM, &amp;IDA<br /> <br/> • &amp;NIDF<br /> <br/> • &amp;NFNAME (only for FNAME and WFNAME)<br /> <br/> • &amp;IDT (only the FNAME and WFNAME parameters when you receive a file)<br /> <br/> • &amp;SYSQQ<br/> • &amp;WORKINGDIR |
+| EXEC, EXECE, PREEXEC for the CFTSEND/SEND and CFTRECV/RECV commands<br/> EXECRE, EXECSE, EXECRF, EXECSF, EXECSFA, EXECSM, EXECRM, EXECSMA for CFTPARM command |  • &amp;SPART, &amp;RPART, &amp;PART, &amp;GROUP, &amp;NRPART, &amp;NSPART, &amp;USERID,&amp;GROUPID<br/> • &amp;BDATE, &amp;BTIME, &amp;BYEAR, &amp;BMONTH, &amp;BDAY<br/> • &amp;CDATE, &amp;CTIME, &amp;CYEAR, &amp;CMONTH, &amp;CDAY<br/> • &amp;FDATE, &amp;FTIME, &amp;FYEAR, &amp;FMONTH, &amp;FDAY<br/> • &amp;EDATE, &amp;ETIME, &amp;EYEAR, &amp;EMONTH, &amp;EDAY<br/> • &amp;COMMENT<br/> • &amp;SUSER, &amp;RUSER<br /> <br/> • &amp;SAPPL, &amp;RAPPL<br /> <br/> • &amp;PARM, &amp;MSG, &amp;PI99<br /> <br/> • &amp;DIAGI, &amp;DIAGP, &amp;DIAGC<br /> <br/> • &amp;FNAME*, &amp;UNIT*, &amp;UNITC*, &amp;NFNAME*, &amp;NFVER*, &amp;FDB*, &amp;SELFNAME*, &amp;FUNITC*, &amp;FUNIT*, &amp;FPATH*, &amp;FROOT*, &amp;SFNAME*, &amp;WORKINGDIR*, &amp;HOME*<br /> <br/> • &amp;IDF*, &amp;PIDTU, &amp;IDTU, &amp;IDT, &amp;NIDT, &amp;NIDF*, &amp;IDA, &amp;IDM, &amp;NSUB, &amp;PATH*, &amp;ROOT*, &amp;SUF*<br /> <br/> • &amp;FCODE, &amp;NCODE, &amp;fcharset, &amp;ncharset<br /> <br/> • &amp;BLKNUM<br /> <br/> • &amp;CFTEVENT, &amp;CFTNAME<br/> • &amp;FMCL, &amp;MODE, &amp;TRTYPE<br/> • &amp;FBLKSIZE*, &amp;FKEYLEN*, &amp;FKEYPOS*, &amp;NKEYLEN*, &amp;NKEYPOS*, &amp;FLRECL*, &amp;FORG*, &amp;FRECFM*, &amp;FSPACE*, &amp;FTYPE*<br/> • &amp;NBR*, &amp;NBC*, &amp;NBT*, &amp;TT, &amp;QQ, &amp;COMP, &amp;NOTIFY, &amp;SYSQQ<br/> • &amp;SSLAUTH, &amp;SSLCIPH, &amp;SSLMODE, &amp;SSLPROF, &amp;SSLPARM, &amp;SSLRMCN, &amp;SSLRMCA, &amp;SSLUSER, &amp;SSLCFNA, &amp;SSL<br/> • &amp;XLATE<br/> • &amp;SYSDATE, &amp;SYSTIME, &amp;SYSDAY<br/> • &amp;PRI<br/> • &amp;XFRCYCID, &amp;XFROBJID<br/> • &amp;EXITFREE<br/> • &amp;JOBNAME, &amp;NCHARSET<br/> • &amp;APPSTATE, &amp;PHASESTEP, &amp;PHASE<br/> • &amp;[TARGETAPPL](../parameter_intro/sourceappl)<br/> <blockquote> **Note**<br/> You cannot use the variables designated by asterisk (*) in procedures associated with the EXEC* parameters relative to message transfers.<br/> </blockquote>  |
+| EXEC for CFTACCNT or CFTLOG  | &amp;FACCNT, &amp;FLOG  |
+| TLVCEXEC, TLVWEXEC for CFTCAT  | &amp;FCAT, &amp;SYSDATE, &amp;SYSTIME, &amp;CFTEVENT, &amp;SYSDAY, &amp;CFTNAME, &amp;RUNTIMEDIR  |
+| TLVCEXEC, TLVWEXEC for CFTCOM  | &amp;SYSDATE, &amp;SYSTIME, &amp;CFTEVENT, &amp;SYSDAY, &amp;CFTNAME, &amp;RUNTIMEDIR  |
+| USERID parameter of the CFTSEND and CFTRECV commands  | &amp;RUSER, &amp;SUSER, &amp;RAPPL, &amp;SAPPL, &amp;RPART, &amp;SPART, &amp;PART  |
+| EXIT of the {{< TransferCFT/axwayvariablesComponentShortName  >}} CFTSEND/SEND and CFTRECV/RECV commands  | &amp;IDF  |
+| FNAME parameter of CFTDEST  | &amp;FDATE, &amp;FTIME, &amp;FYEAR, &amp;FMONTH, &amp;FDAY<br /> <br/> &amp;PART, &amp;RPART, &amp;SPART, &amp;NPART, &amp;GROUP<br /> <br/> &amp;SUSER, &amp;RUSER<br /> <br/> &amp;SAPPL, &amp;RAPPL<br /> <br/> &amp;IDF, &amp;PARM, &amp;IDA<br /> <br/> &amp;NIDF<br /> <br/> &amp;NFNAME, &amp;NFVER |
+| The name of the identifier of the IDF parameter of the CFTPROT command  | &amp;NIDF |
+| The IDA parameter of SEND and CFTSEND  | &amp;FNAME, &amp;FUNITC, &amp;FUNIT, &amp;FPATH, &amp;FROOT, &amp;FSUF, &amp;NFNAME, &amp;PART,<br/> &amp;IDF, &amp;IDTU, &amp;IDT, &amp;IDM, &amp;COMMENT, &amp;SYSDATE, &amp;SYSTIME |
+| SUSER and RUSER parameters of SEND and CFTSEND  | &amp;USERID, &amp;FNAME, &amp;FUNITC, &amp;FUNIT, &amp;FPATH, &amp;FROOT, &amp;FSUF, &amp;NFNAME, &amp;PART, &amp;IDA, &amp;IDF, &amp;IDTU, &amp;IDT, &amp;IDM, &amp;COMMENT, &amp;SYSDATE, &amp;SYSTIME, &amp;FCHARSET, &amp;NCHARSET |
+| PARM, SAPPL, RAPPL parameters of SEND and CFTSEND  | &amp;FNAME, &amp;FUNITC, &amp;FUNIT, &amp;FPATH, &amp;FROOT, &amp;FSUF, &amp;NFNAME, &amp;PART, &amp;IDA, &amp;IDF, &amp;IDTU, &amp;IDT, &amp;IDM, &amp;COMMENT, &amp;SYSDATE, &amp;SYSTIME, &amp;FCHARSET, &amp;NCHARSET |
+| UCONF sentinel.xfb.cyclelink.metadata  | &amp;IDA, &amp;IDF, &amp;IDTU, &amp;IDT, &amp;NPART, &amp;NIDF, &amp;PART, &amp;PARM, &amp;COMMENT, &amp;RAPPL, &amp;RPART, &amp;RUSER, &amp;SAPPL, &amp;SPART, &amp;SUSER, &amp;SOURCEAPPL, &amp;TARGETAPPL |
+
+
+******Example******
+
+A file name can consist of the day’s date and the partner’s name:  the
+description command for the PAY file in reception.
+
+```
+RECV IDF = PAY, FNAME = PAY&4PART.&FDAY
+```
+
+When a file of this type is received from the ALPHSITE partner on July
+14 13:
+
+```
+RECV PART = ALPHSITE, IDF = PAY
+```
+
+{{< TransferCFT/axwayvariablesComponentShortName  >}} creates and writes to a file: PAYALPH.14
+
+See the end-of-transfer examples in [Transfer-related
+procedure examples](../../../concepts/about_transfer_processing/procedure_examples).
+
+## Defining symbolic variable blacklists for processing scripts
+
+**UNIX and Windows only**
+
+You can use blacklist characters as a POSIX Regular Extended expression to define forbidden characters in a processing script. To prevent unauthorized actions, do not use these characters in symbolic variables.
+
+****Defining the blacklist****
+
+Use the uconf `cft.server.processing_scripts_variables_blacklist` parameter to define the character sequence to forbid. We recommend setting this parameter to **`&#124;\\$\\(&#124;;&#124;&&#124;\\&#124;** for UNIX, and **"&"** for Windows.
+
+****UNIX****
+
+```
+uconfset id=cft.server.processing_scripts_variables_blacklist , value= "`&#124;\\$\\(&#124;;&#124;&&#124;\\&#124;"
+```
+
+When setting the blacklist values shown above, the forbidden characters are: **`&lt;&gt;`ls`&lt;&gt;`** characters, respectively.
+
+****Windows****
+
+```
+uconfset id=cft.server.processing_scripts_variables_blacklist , value="&"
+```
+
+****DIAGI 158****
+
+This DIAGI indicates that there was an error while replacing the {{< TransferCFT/axwayvariablesComponentLongName  >}} variables.
+
+****Log messages****
+
+- CFTS67E: Error replacing variable &lt;var> &lt;error message>
+- CFTS68E: PART=&part [IDF=&idf &#124; IDM=&idm]IDT=&idt _ &fname not executed

@@ -1,11 +1,8 @@
 ---
-
-    title: Installing Transfer CFT
-    linkTitle: Install Transfer CFT
+    title: "Installing Transfer CFT"
+    linkTitle: "Install Transfer CFT"
     weight: 120
-
----
-## Before you start
+---## Before you start
 
 If you are installing {{< TransferCFT/axwayvariablesComponentLongName  >}} as part of a managed file transfer solution, you may want to check the installation order and ensure that you have reviewed the prerequisites.
 
@@ -13,21 +10,25 @@ If you want to enable {{< TransferCFT/suitevariablesCentralGovernanceName  >}} d
 
 > **Note**
 >
-> In this section, replace &lt;OS> with your operating system and &lt;BN> with the build number, for example, Transfer\_CFT\_3.7\_Install\_win-x86-64\_BN12548232.exe.
+> In this section, replace &lt;OS> with your operating system and &lt;BN> with the build number, for example, Transfer_CFT_3.7_Install_win-x86-64_BN12548232.exe.
 
-### Installation overview
+## Installation overview
 
-This table presents a high-level overview of the installation process. By default, the {{< TransferCFT/axwayvariablesComponentLongName  >}} installation uses a delivered configuration file called <span class="code">`initialize.properties`</span> that provides a series of default values to simplify installation. It is important that you understand the difference between customizing this file before or after running the installer prior to starting the process.
+This table presents a high-level overview of the installation process. By default, the {{< TransferCFT/axwayvariablesComponentLongName  >}} installation uses a delivered configuration file called `initialize.properties` that provides a series of default values to simplify installation. It is important that you understand the difference between customizing this file before or after running the installer prior to starting the process.
 
 
 |   | Step  | Details  | More info  |
 | --- | --- | --- | --- |
-| 1  | Complete prerequisites  | Check and fulfill prerequisites such as obtaining a key or system-specific prerequisites.  | <a href="prereqs_overview">![](/Images/TransferCFT/severityInformation_alt.gif)</a>  |
-| 2  | Download and unzip  | Download the installation package from the support site and unzip.  | <a href="#Download">![](/Images/TransferCFT/severityInformation_alt.gif)</a>  |
-| 3  | Customize the properties file  | Some installation parameters are mandatory to run Transfer CFT.<br/> You can customize the <span ><code>initialize.properties</code></span> file before the install, use your own file, or use the unmodified default file, but you cannot start Transfer CFT until the mandatory values are set. | <a href="properties_file_win">![](/Images/TransferCFT/severityInformation_alt.gif)</a>  |
-| 4  | Start the installation  | Select the installation mode and run using either the default configuration file or your customized file.  | <a href="install_transfer_cft_1">![](/Images/TransferCFT/severityInformation_alt.gif)</a>  |
+| 1  | Complete prerequisites  | Check and fulfill prerequisites such as obtaining a key or system-specific prerequisites.  | [![](/Images/TransferCFT/severityInformation_alt.gif)](prereqs_overview)  |
+| 2  | Download and unzip  | Download the installation package from the support site and unzip.  |   |
+| 3  | Customize the properties file  | Some installation parameters are mandatory to run Transfer CFT.<br/> You can customize the <code>initialize.properties</code> file before the install, use your own file, or use the unmodified default file, but you cannot start Transfer CFT until the mandatory values are set. |   |
+| 4  | Start the installation  | Select the installation mode and run using either the default configuration file or your customized file.  | [![](/Images/TransferCFT/severityInformation_alt.gif)](install_transfer_cft_1)  |
 | *  | Optional customization  | If you used the default configuration file, you must customize the Transfer CFT settings before starting the product.  |   |
 
+
+### Installation restrictions
+
+Transfer CFT supports the use of UNC paths for a `runtime `directory, but you cannot create the Transfer CFT `installdir `in a UNC folder.
 
 ### Installation restrictions for multi-node
 
@@ -53,7 +54,7 @@ You can perform the following installation functions:
 
 ### Installation configuration file
 
-The {{< TransferCFT/axwayvariablesComponentLongName  >}} installation is based on a delivered configuration file called <span class="code">`initialize.properties`</span> that provides a series of default values to simplify installation. You can make a copy of this file and customize it prior to running the installation procedure as described in [Customize the initialize.properties file](properties_file_win).
+The {{< TransferCFT/axwayvariablesComponentLongName  >}} installation is based on a delivered configuration file called `initialize.properties` that provides a series of default values to simplify installation. You can make a copy of this file and customize it prior to running the installation procedure as described in [Customize the initialize.properties file](properties_file_win).
 
 ### Installation modes
 
@@ -67,26 +68,51 @@ The following installation modes use the delivered initialize.properties file as
 
 ` start /W Transfer_CFT_3.6_Install_win-x86-64_BNXXXXXXXX.exe --mode unattended --conf-file configuration.template`
 
+> **Note**
+>
+> For all installation types, including silent installations, you must accept the installation General Terms and Conditions.
+
 ### Create or modify the runtime
 
-You can use the following command to repair the runtime if there was an issue during the installation, or to update values that you have modified in the <span class="code">`initialize.properties`</span> file. From the &lt;installation\_directory>, run the following:
+You can use the following command to repair the runtime if there was an issue during the installation, or to update values that you have modified in the `initialize.properties` file. From the &lt;installation_directory>, run the following:
 
 `<installation directory> initialize filename`
 
 You cannot configure the Windows services using the initialize.exe command. Please see [Install services in command line](../install_services_command_line) to manually configure the Windows services.
 
-### Using symbolic links
+### How to use symbolic links with a Transfer CFT installation
 
-If you want to use symbolic links, the link path must use a slash delimiter as shown in the following example:
+To install Transfer CFT using symbolic links, you must use the `option '--mode unattended'` silent mode and the `initialize.properties` configuration file to assign parameters. Do not declare parameters in the command line.
 
-- Correct:` S:\>mklink /j F:\CFT36m5 F:\CFT36_BN12786077_5`
-- Incorrect:` S:\>mklink /j F:CFT36m5 F:CFT36_BN12786077_5`
+#### Install using symbolic link example
 
-To install Transfer CFT using symbolic links, you must use the silent mode, <span class="code">`option '--mode unattended'`</span>, and assign all parameters using only the configuration file (do not use parameters in the command line except the conf-file).
+This example is based on an extraction from the initialize.properties file.
+
+- runtimedir: `F:\share1\CFT39_GPFS` (refers to the shared disk for a multi-node/multi-host installation)
+- installdir: `F:\CFT39_GPFS_LINK` (refers to the symbolic link)
+
+Before installing with symbolic links, perform the following steps on each host:
+
+1. Configure `initialize.properties` file.
+
+1. Create the actual directory, called `REAL `in this example:
+
+    `S:\>mkdir F:\CFT39_GPFS_REAL`
+
+1. Create the symbolic link, called `LINK `in this example:
+
+    `S:\>mklink /j F:\CFT39_GPFS_REAL F:\CFT39_GPFS_LINK `
 
 > **Note**
 >
-> If an installation that uses symbolic links fails, once you have corrected the silent files, you must delete the Transfer CFT home installation directory, to which the symbolic link points, prior to retrying the installation.
+> If an installation that uses symbolic links fails: correct the silent file, delete the Transfer CFT home installation directory to which the symbolic link points, and retry the installation.
+
+#### Using symbolic links on Windows platforms
+
+If you use symbolic links during installation, the link path must use a slash delimiter as shown in the following example:
+
+- Correct:`  S:\>mklink /j F:\CFT36m5 F:\CFT36_BN12786077_5`
+- Incorrect:` S:\>mklink /j F:CFT36m5 F:CFT36_BN12786077_5`
 
 ### Run as administrator
 

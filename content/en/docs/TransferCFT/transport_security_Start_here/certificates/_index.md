@@ -1,11 +1,8 @@
 ---
-
-    title: Managing  certificates
-    linkTitle: Managing certificates
-    weight: 170
-
----
-<span id="What_you_will_find_in_this_book"></span>This topic
+    title: "Managing  certificates"
+    linkTitle: "Managing certificates"
+    weight: 160
+---<span id="What_you_will_find_in_this_book"></span>This topic
 describes security certificates, and the following security concepts:
 
 - [Overview
@@ -134,7 +131,7 @@ Signature Algorithm: PKCS #1 MD5 With RSA Encryption
 Issuer: OU=Axway Certificate Authority, O=Axway, C=US
 Validity:
 Not Before: Fri Oct 17 18:36:25 2018
-Not After: Sun Oct 17 18:36:25 {{< TransferCFT/Primarycodecopyright >}}
+Not After: Sun Oct 17 18:36:25 2022
 Subject: CN=Albert Dupont, OU=Marketing, O=Axway, C=US
 Subject Public Key Info:
 Algorithm: PKCS #1 RSA Encryption
@@ -193,4 +190,4 @@ an argument in the PKICER command.
 
 In {{< TransferCFT/suitevariablesTransferCFTName  >}} 3.1.3 and lower, you can perform a SSL transfer even if the certificate chain is not complete (not signed by a ROOT CA). However, for {{< TransferCFT/suitevariablesTransferCFTName  >}} 3.2.0 and higher, the certificate chain must be complete for a transfer to succeed.
 
-For more information, see <a href="../../troubleshoot_intro/admin_troubleshooting_server/troubleshoot_security#Unknown" class="MCXref xref">Unknown CA leads to a failed certificate verification</a>
+For more information, see [Unknown CA leads to a failed certificate verification](../../troubleshoot_intro/admin_troubleshooting_server/troubleshoot_security#Unknown)

@@ -1,11 +1,8 @@
 ---
-
-    title: Install services in command line
-    linkTitle: Install services in command line
-    weight: 140
-
----
-After adding a Windows service in command line, the default system user is the user that started the service. To define a specific user, you must edit the service properties in the Services page.
+    title: "Install services in command line"
+    linkTitle: "Install services in command line"
+    weight: 130
+---After adding a Windows service in command line, the default system user is the user that started the service. To define a specific user, you must edit the service properties in the Services page.
 
 > **Note**
 >
@@ -25,7 +22,7 @@ After adding a Windows service in command line, the default system user is the u
 
     `cscript /nologo home\bin\cftsrvin.vbs n=CFT36`
 
-    Where <span class="italic_in_para">n</span>= &lt;CFT plus the current version of {{< TransferCFT/axwayvariablesComponentShortName >}}>
+    Where n= &lt;CFT plus the current version of {{< TransferCFT/axwayvariablesComponentShortName >}}>
 
 ### Copilot services
 
@@ -41,9 +38,9 @@ For {{< TransferCFT/axwayvariablesComponentShortName  >}} version {{< TransferCF
 
 ### Activate services
 
-Using CFTUTIL activate the services for both Transfer CFT and Copilot with the uconf <span class="code">`service `</span>configuration parameters.
+Using CFTUTIL activate the services for both Transfer CFT and Copilot with the uconf `service `configuration parameters.
 
-<span class="bold_in_para">****Example****</span>
+****Example****
 
 ```
 uconfset id=cft.nt.service_name, value=CFT36

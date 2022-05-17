@@ -1,11 +1,8 @@
 ---
-
-    title: Post-migration procedure
-    linkTitle: Post-migration procedure
-    weight: 240
-
----
-## Post manual migration or auto import
+    title: "Post-migration procedure"
+    linkTitle: "Post-migration procedure"
+    weight: 230
+---## Post manual migration or auto import
 
 If you performed an install and auto import or a manual migration, you must manually import compiled objects and exec scripts from the old configuration. There are no {{< TransferCFT/axwayvariablesComponentShortName  >}} commands to import these compiled objects and exec scripts, and they are not included in the auto import process.
 
@@ -17,15 +14,15 @@ If you performed an install and auto import or a manual migration, you must manu
 
 To manually migrate your API and exit binary files after migrating, copy your program's source code to the new Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion  >}} runtime directory and compile them.
 
-1. Copy the API source code to &lt;new\_Transfer CFT\_{{< TransferCFT/axwayvariablesComponentVersion >}}\_installation\_dir>/runtime/src/capi and compile.
+1. Copy the API source code to &lt;new_Transfer CFT_{{< TransferCFT/axwayvariablesComponentVersion >}}_installation_dir>/runtime/src/capi and compile.
 
 <!-- -->
 
-1. Copy the Exit source code to &lt;new\_Transfer CFT\_{{< TransferCFT/axwayvariablesComponentVersion >}}\_installation\_dir>/runtime/src/exit and compile.
+1. Copy the Exit source code to &lt;new_Transfer CFT_{{< TransferCFT/axwayvariablesComponentVersion >}}_installation_dir>/runtime/src/exit and compile.
 
 ### Exec scripts
 
-Copy the exec scripts to &lt;new\_Transfer CFT\_{{< TransferCFT/axwayvariablesComponentVersion  >}}\_installation\_dir>/runtime/exe. It is important that you update any paths that you were using in the exec scripts to reflect the new installation directory.
+Copy the exec scripts to &lt;new_Transfer CFT_{{< TransferCFT/axwayvariablesComponentVersion  >}}_installation_dir>/runtime/exe. It is important that you update any paths that you were using in the exec scripts to reflect the new installation directory.
 
 ## Post-manual migration only
 
@@ -41,8 +38,8 @@ replaces the following configuration files:
     sentinel.TRKTNAME.
 - Copilot ini file
     (copconf.ini)  
-    This file no longer exists. All former Copilot parameters are named <span class="code">`copilot.SECTION.PARAMETER-NAME`</span> in the UCONF interface. For example, the parameter ServerPort, located in the general section, is now <span class="code">`copilot.general.serverport`</span>.
-- The profile file, formerly ENV\_CFT or cft.ini, now
+    This file no longer exists. All former Copilot parameters are named `copilot.SECTION.PARAMETER-NAME` in the UCONF interface. For example, the parameter ServerPort, located in the general section, is now `copilot.general.serverport`.
+- The profile file, formerly ENV_CFT or cft.ini, now
     uses UCONF to set the environment variables.
 
 ## Post upgrade

@@ -1,11 +1,8 @@
 ---
-
-    title: About the PassPort CSD
-    linkTitle: PassPort AM CSD
-    weight: 190
-
----
-This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
+    title: "About the PassPort CSD"
+    linkTitle: "PassPort AM CSD"
+    weight: 180
+---This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
 
 The PassPort CSD file provides resources and available actions for Transfer CFT. This CSD file must be accessible on your file system.
 

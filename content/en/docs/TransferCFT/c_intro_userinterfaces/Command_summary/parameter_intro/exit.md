@@ -1,15 +1,12 @@
 ---
-
-    title: exit
-    linkTitle: exit
-    weight: 990
-
----
-<span id="exit_CFTPROT"></span><span id="exit"></span>
+    title: "exit"
+    linkTitle: "exit"
+    weight: 980
+---<span id="exit_CFTPROT"></span><span id="exit"></span>
 
 ### exit
 
-****\[EXIT = identifier \]****
+****[EXIT = identifier ]****
 
 <span id="exit_CFTSEND"></span>
 

@@ -1,11 +1,8 @@
 ---
-
-    title: fcode
-    linkTitle: fcode
-    weight: 1100
-
----
-<span id="fcode"></span>
+    title: "fcode"
+    linkTitle: "fcode"
+    weight: 1090
+---<span id="fcode"></span>
 
 ### **<span id="fcode_CFTAUTH"></span>**fcode
 
@@ -28,8 +25,8 @@ default value supported.
 
 #### CFTRECV, RECV
 
-**\[FCODE = {<span style="text-decoration: underline;">depending
-on FTYPE</span> | ASCII | BINARY | EBCDIC}\]   **
+**[FCODE = {depending
+on FTYPE &#124; ASCII &#124; BINARY &#124; EBCDIC}]   **
 
 **C**ode of the receiver file data (local file encoding).
 
@@ -88,7 +85,7 @@ This code is:
 
 #### CFTSEND, SEND
 
-****\[FCODE = {ASCII | BINARY | EBCDIC}\]****
+****[FCODE = {ASCII &#124; BINARY &#124; EBCDIC}]****
 
 Code of the data to be sent.
 

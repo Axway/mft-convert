@@ -1,11 +1,8 @@
 ---
-
-    title: Appendix B: Menu mapping
-    linkTitle: Appendix B: Menu mapping
+    title: "Appendix B: Menu mapping"
+    linkTitle: "Appendix B: Menu mapping"
     weight: 230
-
 ---
-
 | <span id="_Toc429559254"></span> <h2 id="transfercftaxwayvariablescomponentlongname-2.7.1">{{< TransferCFT/axwayvariablesComponentLongName  >}} 2.7.1</h2>  |
 | --- |
 | 1. Customization <br/> 1. CFT parameters <br/> 1. Source member modifications <br/> 2. Interpret selected member <br/> 3. Work with examples <br/> 2. Set up CFTUCONF configuration file <br/> 3. SSL security parameters <br/> 1. Modify SSL configuration file <br/> 2. Interpret SSL configuration file<br/> 3. Start PKIUTIL session <br/> 4. Authorization rights parameters <br/> 1. Modify Authorization rights configuration file <br/> 2. Interpret Authorization rights configuration file <br/> 3. Start SECUTIL session <br/> 2. Operation "CFTUTIL" <br/> 1. Display catalogue - LISTCAT TYPE=ALL <br/> 2. Display partners - LISTPART TYPE=ALL <br/> 3. Display parameters - LISTPARM TYPE=ALL <br/> 4. All CFT Commands <br/> 5. Interpret selected member <br/> 6. Start CFT monitor <br/> 7. Stop CFT monitor - SHUT <br/> 3. COPILOT Server commands<br/> 1. Start COPILOT Server<br/> 2. Stop COPILOT Server |

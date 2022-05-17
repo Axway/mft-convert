@@ -1,11 +1,8 @@
 ---
-
-    title: Broadcasting concepts
-    linkTitle: Broadcasting processes 
+    title: "Broadcasting concepts"
+    linkTitle: "Broadcasting processes "
     weight: 330
-
----
-<span id="Broadcasting_through_a_store_and_forward_site"></span>
+---<span id="Broadcasting_through_a_store_and_forward_site"></span>
 
 ### Broadcasting using a store and forward site
 
@@ -52,17 +49,17 @@ are then required and sufficient:
     command managed on the store and forward site. The values of the OMINTIME
     and OMAXTIME parameters of the CFTPART command are set to zero to force
     the routing of transfers to the store and forward site (intermediate partner
-    IPART : ID\_B). A file to be broadcast from the store and forward site
-    is sent by the command SEND PART=ID\_CD ...
+    IPART : ID_B). A file to be broadcast from the store and forward site
+    is sent by the command SEND PART=ID_CD ...
 - the store and forward
-    node must have a CFTDEST command, the identifier of which (ID=ID\_CD) is
+    node must have a CFTDEST command, the identifier of which (ID=ID_CD) is
     the network name of the broadcasting list indicated by the initial partner
-    (SEND PART=ID\_CD)
+    (SEND PART=ID_CD)
 - the CFTDEST object
     must comply with the syntax imposed by {{< TransferCFT/axwayvariablesComponentShortName >}} ([FOR](../../../../c_intro_userinterfaces/command_summary/parameter_intro/for)=COMMUT
     parameter).
 - the final receivers
-    C and D know the initial sender of the file (CFTPART ID=ID\_A,...) and
+    C and D know the initial sender of the file (CFTPART ID=ID_A,...) and
     the store and forward partner B
 - the connections
     established between partners must be complied with at each of the network

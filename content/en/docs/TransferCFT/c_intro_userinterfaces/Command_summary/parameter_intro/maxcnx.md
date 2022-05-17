@@ -1,18 +1,15 @@
 ---
-
-    title: maxcnx
-    linkTitle: maxcnx
+    title: "maxcnx"
+    linkTitle: "maxcnx"
     weight: 1890
-
----
-<span id="maxcnx"></span>
+---<span id="maxcnx"></span>
 
 ### maxcnx
 
 #### CFTNET
 
-****\[MAXCNX     = { <u>384</u>
-| n} \]      {0...MAXTRANS value up to 2000}****
+****[MAXCNX     = { <u>384</u>
+&#124; n} ]      {0...MAXTRANS value up to 2000}****
 
 The maximum number of simultaneous connections that {{< TransferCFT/axwayvariablesComponentShortName  >}} accepts
 to establish on a given network resource.

@@ -1,11 +1,8 @@
 ---
-
-    title: Query internal Transfer CFT components
-    linkTitle: MQUERY - Querying a component 
-    weight: 300
-
----
-This page describes how to use the <span id="MQUERY_command"></span>MQUERY
+    title: "Query internal Transfer CFT components"
+    linkTitle: "MQUERY - Querying a component "
+    weight: 290
+---This page describes how to use the <span id="MQUERY_command"></span>MQUERY
 command to query the various {{< TransferCFT/axwayvariablesComponentShortName  >}} components.
 
 You can use this command to check transfers that should have started but are blocked, check a scheduled job that has not started, or to provide information when troubleshooting performance issues as shown in the examples below.
@@ -29,43 +26,43 @@ Global information:
 
 Partner information is the same as global information but detailed for each partner.
 
-#### Syntax
+## Syntax
 
 OBJECT = <u>CACHE</u>
 
-`[ CONTENT  = { BRIEF | FULL | STAT } ]`
+`[ CONTENT  = { BRIEF &#124; FULL &#124; STAT } ]`
 
-`[ NAME = { CAT | COMMAND | CRON | DMZ | STAT } ]`
+`[ NAME = { CAT &#124; COMMAND &#124; CRON &#124; DMZ &#124; STAT } ]`
 
 ` `
 
 OBJECT = SYSTEM
 
-`[ CONTENT  = { BRIEF | FULL | STAT } ]`
+`[ CONTENT  = { BRIEF &#124; FULL &#124; STAT } ]`
 
-`[ NAME = { CFTMAIN | CFTTRK | CFTTFIL | CFTCOM | CFTTPRO | CFTEXIT | CFTPRX | CFTDSCAN } ]`
+`[ NAME = { CFTMAIN &#124; CFTTRK &#124; CFTTFIL &#124; CFTCOM &#124; CFTTPRO &#124; CFTEXIT &#124; CFTPRX &#124; CFTDSCAN } ]`
 
 ` `
 
 OBJECT = STATS or PROBE
 
-`[  CONTENT = { XMLBRIEF   | XMLFULL | RAW } ]`
+`[  CONTENT = { XMLBRIEF   &#124; XMLFULL &#124; RAW } ]`
 
-`[ NAME = { CAT   | COMMAND | CRON | DMZ| STAT } ]`
+`[ NAME = { CAT   &#124; COMMAND &#124; CRON &#124; DMZ&#124; STAT } ]`
 
 
 | Parameter  |  Description  |
 | --- | --- |
-| OBJECT  | Options: <u>CACHE</u> | SYSTEM | STATS | PROBE | TRACE (obsolete)  |
+| OBJECT  | Options: <u>CACHE</u> &#124; SYSTEM &#124; STATS &#124; PROBE &#124; TRACE (obsolete)  |
 | NAME  | The options available for the NAME depend on the type of OBJECT to be queried.<br/> If the object = cache (default) then the name can be set to:<br/> • CAT: Query of the catalog cache<br/> • COMMAND: Query of the command cache<br/> • CRON: Query the {{< TransferCFT/axwayvariablesComponentShortName  >}} CRON cache<br/> • DMZ: Query of the DMZ cache<br/> • STAT |
-| CONTENT  | If OBJECT=CACHE then you can select from the following values:<br/> BRIEF| FULL | STAT - or - XMLBRIEF| XMLFULL | RAW |
+| CONTENT  | If OBJECT=CACHE then you can select from the following values:<br/> BRIEF&#124; FULL &#124; STAT - or - XMLBRIEF&#124; XMLFULL &#124; RAW |
 
 
 ### Examples
 
 #### Querying the catalog cache
 
-Use this command to check that transfers are not blocked by, for example, a time\_locked or partner\_locked issues.
+Use this command to check that transfers are not blocked by, for example, a time_locked or partner_locked issues.
 
 ```
 MQUERY NAME=CAT,CONTENT=FULL

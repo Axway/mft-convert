@@ -1,17 +1,14 @@
 ---
-
-    title: CIPHLIST
-    linkTitle: ciphlist
-    weight: 400
-
----
-<span id="ciphlist"></span>
+    title: "CIPHLIST"
+    linkTitle: "ciphlist"
+    weight: 390
+---<span id="ciphlist"></span>
 
 ### CIPHLIST
 
 #### CFTSSL
 
-****\[CIPHLIST = {(num, num, ..)}\]****
+****[CIPHLIST = {(num, num, ..)}]****
 
 List of the algorithms supported.
 

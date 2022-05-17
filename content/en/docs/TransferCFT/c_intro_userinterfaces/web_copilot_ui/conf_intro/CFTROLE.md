@@ -1,11 +1,8 @@
 ---
-
-    title: CFTROLE
-    linkTitle: Roles - CFTROLE
-    weight: 270
-
----
-Set the roles, which define a type of user and application permission. See also <a href="../../../../internal_a_m_start_here/fm_access_management" class="MCXref xref">Access Management using Flow Manager</a>
+    title: "CFTROLE"
+    linkTitle: "Roles - CFTROLE"
+    weight: 250
+---Set the roles, which define a type of user and application permission. See also [Access Management using Flow Manager](../../../../internal_a_m_start_here/fm_access_management)
 
 ### Using CFTROLE
 
@@ -21,9 +18,12 @@ Examples of roles can be ADMINISTRATOR, PARTNER MANAGER, IT MANAGER, and so on.
 | id | String32 | Role identifier |
 | comment | String80 | Comment |
 | privs[] | List of String32 | List of privileges associated to this role (1 to 128) |
+| aliases  | List of String64  | List of aliases associated with this role  |
 
 
-Example of CFTROLE in a configuration file:
+**Example 1**
+
+CFTROLE in a configuration file:
 
 ```
 CFTROLE      ID          = 'Application',
@@ -42,4 +42,30 @@ CFTROLE      ID          = 'Application',
                              'FILE_VIEW'),
              ORIGIN      = 'CFTUTIL',
              MODE        = 'REPLACE'
+```
+
+**Example 2**
+
+Alias definitions that have a correspondence between roles created in an existing IDP (Identity Provider) and roles created with CFTROLE object.
+
+```
+CFTROLE ID = 'TRANSFER CFT APPLICATION',
+  COMMENT = 'Enables applications to send transfers.',
+  ALIASES = ( 'cft_appli' , 'group_appli') ,
+  PRIVS = ( 'FILE VIEW' ,... ),...
+```
+
+**Example 3**
+
+The 'TRANSFER CFT APPLICATION' role can be also referenced as either cft_appli or group_appli. However, you cannot specify the same ALIAS in different roles.
+
+```
+CFTROLE ID = 'TRANSFER CFT APPLICATION',
+  COMMENT = 'Enables applications to send transfers.',
+  ALIASES = ( 'cft_appli' , ' group_appli
+') ,...
+CFTROLE ID = 'TRANSFER CFT ADMINISTRATOR',
+  COMMENT = 'Enables full management of Transfer CFT.',
+  ALIASES = ( ' group_appli
+' , 'cft_admin' ),...
 ```

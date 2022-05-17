@@ -1,17 +1,14 @@
 ---
-
-    title: delete
-    linkTitle: delete
-    weight: 670
-
----
-<span id="Delete"></span>
+    title: "delete"
+    linkTitle: "delete"
+    weight: 660
+---<span id="Delete"></span>
 
 #### delete
 
 #### CFTRECV, CFTSEND
 
-**\[DELETE = {<u>NO</u> | YES}\]**
+**[DELETE = {<u>NO</u> &#124; YES}]**
 
 Automatically deletes the catalog entries in the "X" phase
 (done) for the corresponding IDF.

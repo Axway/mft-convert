@@ -1,11 +1,8 @@
 ---
-
-    title: Using a shared file system
-    linkTitle: Using a shared file system
+    title: "Using a shared file system"
+    linkTitle: "Using a shared file system"
     weight: 230
-
----
-## Active/passive mode shared file systems
+---## Active/passive mode shared file systems
 
 Active/passive mode requires a shared file system. Two typical shared file system implementations are NAS (network attached storage) and SAN (storage area network). This section describes GPFS, NFSv4, AWS EFS, and SMB/CIFS.
 
@@ -35,24 +32,24 @@ The recommendations in this section apply to a Transfer CFT an active/passive a
 
 #### Define the NFS version
 
-If version 4 is not your NFS subsystem's default, you should specify version 4 when defining the mount options. Depending on your OS, use either the <span class="code">`vers `</span>or <span class="code">`nfsvers`</span> option.
+If version 4 is not your NFS subsystem's default, you should specify version 4 when defining the mount options. Depending on your OS, use either the `vers `or `nfsvers` option.
 
 #### Set the hard and nointr options
 
-Mount NFS using the <span class="code">`hard `</span>and <span class="code">`nointr`</span> options. The <span class="code">`intr`</span> mount option should not be available for NFSv4, but if you are in doubt, you should explicitly specify the <span class="code">`nointr `</span>option.
+Mount NFS using the `hard `and `nointr` options. The `intr` mount option should not be available for NFSv4, but if you are in doubt, you should explicitly specify the `nointr `option.
 
 #### Define file locking
 
-Because Transfer CFT uses POSIX file locking services to synchronize shared files, make sure that the NFS clients report these locks to the NFS server. Depending on the NFS client, the corresponding option to tune may be called  <span class="code">`local_lock`</span>,<span class="code">` llock`</span>, or <span class="code">`nolock`</span>.
+Because Transfer CFT uses POSIX file locking services to synchronize shared files, make sure that the NFS clients report these locks to the NFS server. Depending on the NFS client, the corresponding option to tune may be called  `local_lock`,` llock`, or `nolock`.
 
-- If<span class="code">` local_lock = all`</span>, the NFS client assumes locks are local, and allows Transfer CFT to simultaneously start on both the active and passive hosts. As a result, Transfer CFT does not function properly.
+- If` local_lock = all`, the NFS client assumes locks are local, and allows Transfer CFT to simultaneously start on both the active and passive hosts. As a result, Transfer CFT does not function properly.
 - If `local_lock = none`, or if this option is not specified, the NFS client assumes that the locks are not local. This prevents Transfer CFT from starting on the second host when it is running on the first host.
 
 Do not enable the local locking option.
 
 #### Set the cto option
 
-NFS implements a weak data consistency called "Close To Open consistency" or <span class="code">`cto`</span>. This means that when a file is closed on a client, all modified data associated with the file is flushed from the server. If your NFS clients allow this behavior, be certain that the <span class="code">`cto `</span>option is set.
+NFS implements a weak data consistency called "Close To Open consistency" or `cto`. This means that when a file is closed on a client, all modified data associated with the file is flushed from the server. If your NFS clients allow this behavior, be certain that the `cto `option is set.
 
 <span id="Mount"></span>
 
@@ -74,15 +71,15 @@ The following table summarizes the recommended NFS mount options. Note that depe
 
 ### Synchronous versus asynchronous option
 
-To improve performance, NFS clients and NFS servers can delay file write operations in order to combine small file IOs into larger file IOs. You can enable this behavior on the NFS clients, NFS servers, or on both, using the <span class="code">`async `</span>option. The <span class="code">`sync `</span>option disables this behavior.
+To improve performance, NFS clients and NFS servers can delay file write operations in order to combine small file IOs into larger file IOs. You can enable this behavior on the NFS clients, NFS servers, or on both, using the `async `option. The `sync `option disables this behavior.
 
 #### **Client**
 
-On the client side, use the <span class="code">`mount `</span>command to specify the <span class="code">`async/sync`</span> option.
+On the client side, use the `mount `command to specify the `async/sync` option.
 
 ##### Async
 
-The NFS client treats the <span class="code">`sync `</span>mount option differently than some other file systems. If neither <span class="code">`sync `</span>nor <span class="code">`async `</span>is specified (or if <span class="code">`async `</span>is specified), the NFS client delays sending application writes to the server until any of the following events occur:
+The NFS client treats the `sync `mount option differently than some other file systems. If neither `sync `nor `async `is specified (or if `async `is specified), the NFS client delays sending application writes to the server until any of the following events occur:
 
 - Memory limitations force reclaiming of system memory resources.
 - Transfer CFT explicitly flushes file data (PeSIT synchronization points, for example).
@@ -92,15 +89,15 @@ This means that under normal circumstances, data written by Transfer CFT may not
 
 ##### Sync
 
-If the <span class="code">`sync `</span>option is specified on a mount point, any system call that writes data to files on that mount point causes that data to be flushed to the server before the system call returns control to Transfer CFT. This provides greater data cache coherence among clients, but at a significant cost to performance.
+If the `sync `option is specified on a mount point, any system call that writes data to files on that mount point causes that data to be flushed to the server before the system call returns control to Transfer CFT. This provides greater data cache coherence among clients, but at a significant cost to performance.
 
 #### Server
 
-On the server side, use the <span class="code">`exports `</span>command to specify the <span class="code">`async/sync`</span> option (NFS server export table).
+On the server side, use the `exports `command to specify the `async/sync` option (NFS server export table).
 
 ##### Async
 
-The <span class="code">`async `</span>option allows the NFS server to violate the NFS protocol and reply to requests before any changes made by that request have been committed to stable storage (the disk drive, for example), even if the client is set to <span class="code">`sync`</span>. This option usually improves performance, however data may be lost or corrupted in the case of an unclean server restart, such as an NFS server crash.
+The `async `option allows the NFS server to violate the NFS protocol and reply to requests before any changes made by that request have been committed to stable storage (the disk drive, for example), even if the client is set to `sync`. This option usually improves performance, however data may be lost or corrupted in the case of an unclean server restart, such as an NFS server crash.
 
 This possible data corruption is not detectable at the time of occurrence, because the async option instructs the server to lie to the client, telling the client that all data was written to stable storage (regardless of the protocol used).
 
@@ -145,7 +142,7 @@ When transferring files that are located in a **N**etwork **F**ile **S**ystem, a
 
 ****Symptom****
 
-- Flow transfers hang in the phase <span class="code">`T`</span> and phasestep <span class="code">`C`</span>, with a timeout but no error message.
+- Flow transfers hang in the phase `T` and phasestep `C`, with a timeout but no error message.
 
 ****Remedy****
 
@@ -163,7 +160,7 @@ The recommendations in this section apply to a Transfer CFT multi-node, multi-h
 
 When using AWS EFS, you cannot set the server options; only the client is configurable.
 
-This system is based on NFSv4. For more information on NFSv4, please see <a href="#Using" class="MCXref xref">Using NFS</a> .
+This system is based on NFSv4. For more information on NFSv4, please see [Using NFS](#Using) .
 
 This shared file system has features that impact performance, as compared to a traditional NFS:
 
@@ -176,10 +173,12 @@ This shared file system has features that impact performance, as compared to a t
 
 SMB, Server Message Block, is a protocol used to share files across corporate intranets and the Internet, and is available as a shared file system when running Transfer CFT in a Windows environment.
 
-It is recommended that you use SMB version 2 or higher with Transfer CFT.
+****SMB recommendations for Transfer CFT****
 
-CIFS, Common Internet File System, is an out-dated SMB protocol variant.
+- We recommend SMB 2 or higher.
+- The minimum supported Samba version is 4.15.3 if Samba (smbd) is your SMB provider.
+- If your SMB provider supports opportunistic locks (oplocks), we recommend that you disable this feature.
 
 > **Note**
 >
-> Samba suite usage is not recommended with Transfer CFT.
+> CIFS, Common Internet File System, is an out-dated SMB protocol variant.

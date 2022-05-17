@@ -1,18 +1,15 @@
 ---
-
-    title: disctd
-    linkTitle: disctd
-    weight: 730
-
----
-<span id="disctd"></span>
+    title: "disctd"
+    linkTitle: "disctd"
+    weight: 720
+---<span id="disctd"></span>
 
 ### disctd
 
 #### **CFTPROT**
 
-****\[DISCTD = { <u>see table below</u> | n} {0..3600}
-\]****
+****[DISCTD = { <u>see table below</u> &#124; n} {0..3600}
+]****
 
 Wait timeout in seconds before disconnection, in the absence of a new
 transfer request to the partner, in requester mode.

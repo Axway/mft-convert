@@ -1,21 +1,18 @@
 ---
-
-    title: schkw
-    linkTitle: schkw
-    weight: 3070
-
----
-<span id="schkw"></span>
+    title: "schkw"
+    linkTitle: "schkw"
+    weight: 3090
+---<span id="schkw"></span>
 
 ### schkw
 
 #### CFTPROT
 
-****\[SCHKW =  {
-<span style="text-decoration: underline;">3</span>
-| n }\]   <span style="font-weight: normal;">{0...12}</span>****
+****[SCHKW =  {
+3
+&#124; n }]   {0...12}****
 
-A value between <span style="font-weight: bold;">****0****</span> and <span style="font-weight: bold;">****12****</span> that represents the maximum for the
+A value between ****0**** and ****12**** that represents the maximum for the
 synchronization points that are not acknowledged (default = 3). This value is negotiated
 with the receiver partner.
 

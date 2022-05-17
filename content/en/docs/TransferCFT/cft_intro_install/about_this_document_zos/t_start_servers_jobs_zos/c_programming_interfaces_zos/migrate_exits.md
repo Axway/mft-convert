@@ -1,11 +1,8 @@
 ---
-
-    title: How to migrate DLL exits
-    linkTitle: How to migrate DLL exits
+    title: "How to migrate DLL exits"
+    linkTitle: "How to migrate DLL exits"
     weight: 280
-
----
-This section describes how to migrate DLL exits for Transfer CFT in a z/OS environment.
+---This section describes how to migrate DLL exits for Transfer CFT in a z/OS environment.
 
 **Considerations prior to migrating**
 

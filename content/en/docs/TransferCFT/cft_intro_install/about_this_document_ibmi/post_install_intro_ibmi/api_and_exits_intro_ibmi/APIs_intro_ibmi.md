@@ -1,15 +1,12 @@
 ---
-
-    title: Using Application programming interfaces (API)
-    linkTitle: Using APIs
+    title: "Using Application programming interfaces (API)"
+    linkTitle: "Using APIs"
     weight: 280
-
----
-> **Note**
+---> **Note**
 >
 > Only ILE (Integrated Language Environment) is supported.
 
-You perform Transfer CFT service calls differently depending on the programming language that you use (C, COBOL, or RPG). For more information, refer to the programming topics in <a href="../../../../about_this_document_zos/using_apis" class="MCXref xref">About APIs</a>
+You perform Transfer CFT service calls differently depending on the programming language that you use (C, COBOL, or RPG). For more information, refer to the programming topics in [About APIs](../../../../about_this_document_zos/using_apis)
 
 The Transfer CFT service called (CFTI, CFTU or CFTC) executes the request, either with or without analyzing command syntax, and then initializes the response zone.
 
@@ -50,37 +47,37 @@ All COBOL sample files are available in CFTPGM/CFTSRC. However, you should not d
 
 Refer to the programming examples, RPG COPY clauses, and procedures, which are supplied in the Transfer CFT library CFTPGM/CFTSRC (CPYRPGCILE, CPYRPGIILE, CPYRPGCIL4, CPYRPGIIL4):
 
-- TCFTI2\_RPG (API structure V24)
-- TCFTU\_RP1 (API asynchronous)
-- TCFTU\_RP2 (API synchronous)
-- I\_TCFTI\_RP (executes CFTI or CFTIX functions)
-- I\_TCFTU\_RP (executes CFTU function), etc.
+- TCFTI2_RPG (API structure V24)
+- TCFTU_RP1 (API asynchronous)
+- TCFTU_RP2 (API synchronous)
+- I_TCFTI_RP (executes CFTI or CFTIX functions)
+- I_TCFTU_RP (executes CFTU function), etc.
 
 ## Creating an API application
 
-The <span class="code">`TCPPARAM`</span> configuration sample is located in <span class="code">`CFTPROD/UTIN`</span>.
+The `TCPPARAM` configuration sample is located in `CFTPROD/UTIN`.
 
 ## Application components
 
-The <span class="code">`<installdir>/runtime/src/capi `</span>subdirectory contains the:
+The `<installdir>/runtime/src/capi `subdirectory contains the:
 
 - Sample source module,
-    called <span class="code">`apixmp1.c,`</span> which interacts with {{< TransferCFT/axwayvariablesComponentShortName >}}. This program
+    called `apixmp1.c,` which interacts with {{< TransferCFT/axwayvariablesComponentShortName >}}. This program
     reads the {{< TransferCFT/axwayvariablesComponentShortName >}} catalog and displays its contents in part or in
     full, depending on the restrictions set in the command line.
-- <span class="code">`makefile`</span>
-    compilation procedure, which uses the<span class="code">` apixmp1.c `</span>sample source module
+- `makefile`
+    compilation procedure, which uses the` apixmp1.c `sample source module
     to generate the APIXMPI executable file.
 
-The <span class="code">`CFTPGM `</span>library subdirectory contains the <span class="code">`libapisrv1.srvpgm`</span>
+The `CFTPGM `library subdirectory contains the `libapisrv1.srvpgm`
 module required to use {{< TransferCFT/axwayvariablesComponentShortName  >}} APIs.
 
 ## Generating the application
 
 To generate the *`APIXMP1`* sample program:
 
-1. Access the <span class="code">`<installdir>/runtime/src/capi `</span>directory.
-1. Enter the command:  <span class="code">`gmake`</span>
+1. Access the `<installdir>/runtime/src/capi `directory.
+1. Enter the command:  `gmake`
 
 ## Testing the configuration
 
@@ -88,12 +85,12 @@ To test the configuration:
 
 1. Connect to the IBM session with your Transfer CFT user.
 1. Generate the {{< TransferCFT/axwayvariablesComponentShortName >}} internal datafiles
-    using <span class="code">`cftinit`</span> with the configuration file:  
+    using `cftinit` with the configuration file:  
     CALL PGM(CFTINIT) PARM('CFTPROD/UTIN(TCPPARAM)')
-1. When the<span class="code">` cftinit complete`</span>
+1. When the` cftinit complete`
     message is displayed, run {{< TransferCFT/axwayvariablesComponentShortName >}} using the command:  
     cftstart
-1. When the <span class="code">`CFTMAIN process   ID is xxxxx `</span>message is displayed, perform a transfer:  
+1. When the `CFTMAIN process   ID is xxxxx `message is displayed, perform a transfer:  
     CALL PGM(CFTUTIL) PARM(SEND 'part=boston,idf=txt')
 1. Check that the transfer is
     complete:  
@@ -103,7 +100,7 @@ To test the configuration:
 1. Run the sample program on NATIF environment:  
     CALL PGM(APIXMP1)
 
-<span class="bold_in_para">****Results****</span>
+****Results****
 
 The result should correspond to the catalog contents:
 

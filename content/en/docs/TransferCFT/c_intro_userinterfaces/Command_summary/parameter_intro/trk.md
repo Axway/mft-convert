@@ -1,11 +1,8 @@
 ---
-
-    title: trk
-    linkTitle: trk
-    weight: 3590
-
----
-<span id="trk"></span>
+    title: "trk"
+    linkTitle: "trk"
+    weight: 3610
+---<span id="trk"></span>
 
 ### trk
 
@@ -13,8 +10,8 @@
 
 #### CFTRECV, CFTSEND, RECV, SEND
 
-****\[TRK = {<u>"value of TRKSEND/TRKRECV from CFTPARM</u>"
-| ALL | NO | SUMMARY | UNDEFINED}\]****
+****[TRK = {<u>"value of TRKSEND/TRKRECV from CFTPARM</u>"
+&#124; ALL &#124; NO &#124; SUMMARY &#124; UNDEFINED}]****
 
 Specifies how much detail {{< TransferCFT/axwayvariablesComponentShortName  >}} provides
 Sentinel about transfers. {{< TransferCFT/axwayvariablesComponentShortName  >}} sends detail about the
@@ -37,8 +34,8 @@ The possible values of this parameter include:
 
 #### CFTPART
 
-**\[TRK = { ALL
-| NO | SUMMARY | <u>UNDEFINED</u>}\]**
+**[TRK = { ALL
+&#124; NO &#124; SUMMARY &#124; <u>UNDEFINED</u>}]**
 
 Specification of how much detail {{< TransferCFT/axwayvariablesComponentShortName  >}} provides Sentinel about transfers
 with a partner. {{< TransferCFT/axwayvariablesComponentShortName  >}} sends detail about the transfers in the form of tracked

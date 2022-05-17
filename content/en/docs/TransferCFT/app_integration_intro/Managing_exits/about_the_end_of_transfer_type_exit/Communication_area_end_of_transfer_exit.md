@@ -1,11 +1,8 @@
 ---
-
-    title: About  the communication area
-    linkTitle: About the communication area
+    title: "About  the communication area"
+    linkTitle: "About the communication area"
     weight: 350
-
----
-This topic describes the end-of-transfer exit communication area. The
+---This topic describes the end-of-transfer exit communication area. The
 communication area contains the fields which are described in the tables
 below:
 
@@ -89,55 +86,207 @@ The following tables list all the fields of the communication structure.
 
 ### Transfer information
 
+Field
 
-| Field | Explanation |
-| --- | --- |
-| diagc | Additional diagnostics code |
-| diagx | rfu ( complementary to diagp) |
-| msg | Message text sent |
-| parm | user-defined network parameter |
-| profil | PeSIT only<br/> Profile:<br/> • D: PESIT E (DMZ)<br/> • C: PESIT D CFT<br/> • S: PESIT D SIT<br/> • A: PESIT E |
-| prottyp | Protocol type:<br/> • P: PeSIT<br/> • O: ODETTE |
-| rappl | Receiving application |
-| rpart | Receiving partner |
-| ruser | Receiving user |
-| sappl | Sending application |
-| spart | Sending partner |
-| suser | Sending user |
-| ipart | Intermediate partner |
-| ctime | Catalog deposit time (HHMMSSCC) |
-| cdate | Catalog deposit date (YYYYMMDD) |
-| cday | Catalog deposit day |
-| cmonth | Catalog deposit month |
-| cyear | Catalog deposit year |
-| btime | Transfer start time (HHMMSSCC) |
-| bdate | Transfer start date (YYYYMMDD) |
-| bday | Transfer start day |
-| bmonth | Transfer start month |
-| byear | Transfer star year |
-| etime | Transfer end time (HHMMSSCC) |
-| edate | Transfer end date (YYYYMMDD) |
-| eday | Transfer end day |
-| emonth | Transfer end month |
-| eyear | Transfer end year |
-| xlate | Translation table identifier |
-| group | Group |
-| userid | User identifier |
-| cMode | SSL mode Client/Server |
-| cAuthPolicy | SSL auth Anonymous/Simple/Double |
-| bCipher | SSL cipher suite |
-| sParm | SSL command free parameters |
-| sRemoteUserDn | Remote User certificate Dn |
-| sRemoteIssuerDn | Remote Issuer Dn |
-| sRemoteCaId | Remote CA Alias |
-| sUserCId | User Certificate Alias |
-| sCertFname | File including Remote certificate |
-| sProf | SSL profile Id. |
-| sRemoteSerial | Serial Number |
-| ExitFree | Free Area between all EXITs |
-| XferCycleId | CycleId for tracking occurrences |
-| XferObjectcId | Name of the transfer tracking class |
+Explanation
 
+diagc
+
+Additional diagnostics code
+
+diagx
+
+rfu ( complementary to diagp)
+
+msg
+
+Message text sent
+
+parm
+
+user-defined network parameter
+
+profil
+
+PeSIT only
+
+Profile:
+
+- D: PESIT
+    E (DMZ)
+- C: PESIT
+    D CFT
+- S: PESIT
+    D SIT
+- A: PESIT
+    E
+
+prottyp
+
+Protocol type:
+
+- P: PeSIT
+- O: ODETTE
+
+rappl
+
+Receiving application
+
+rpart
+
+Receiving partner
+
+ruser
+
+Receiving user
+
+sappl
+
+Sending application
+
+spart
+
+Sending partner
+
+suser
+
+Sending user
+
+ipart
+
+Intermediate partner
+
+ctime
+
+Catalog deposit time (HHMMSSCC)
+
+cdate
+
+Catalog deposit date (YYYYMMDD)
+
+cday
+
+Catalog deposit day
+
+cmonth
+
+Catalog deposit month
+
+cyear
+
+Catalog deposit year
+
+btime
+
+Transfer start time (HHMMSSCC)
+
+bdate
+
+Transfer start date (YYYYMMDD)
+
+bday
+
+Transfer start day
+
+bmonth
+
+Transfer start month
+
+byear
+
+Transfer star year
+
+etime
+
+Transfer end time (HHMMSSCC)
+
+edate
+
+Transfer end date (YYYYMMDD)
+
+eday
+
+Transfer end day
+
+emonth
+
+Transfer end month
+
+eyear
+
+Transfer end year
+
+xlate
+
+Translation table identifier
+
+group
+
+Group
+
+userid
+
+User
+identifier
+
+cMode
+
+SSL mode Client/Server
+
+cAuthPolicy
+
+SSL auth Anonymous/Simple/Double
+
+bCipher
+
+SSL cipher suite
+
+sParm
+
+SSL command free parameters
+
+sRemoteUserDn
+
+Remote User certificate Dn
+
+sRemoteIssuerDn
+
+Remote Issuer Dn
+
+sRemoteCaId
+
+Remote CA Alias
+
+sUserCId
+
+User Certificate Alias
+
+sCertFname
+
+File including Remote certificate
+
+sProf
+
+SSL profile Id.
+
+sRemoteSerial
+
+Serial Number
+
+ExitFree
+
+Free Area between all EXITs
+
+XferCycleId
+
+CycleId for tracking occurrences
+
+XferObjectcId
+
+Name of the transfer tracking class
+
+Please refer to the CFTPARM page for additional parameters and details
+&lt;/tbody>
 
 <span id="Information_input_returned_by_the_user"></span>
 
@@ -148,7 +297,7 @@ The following tables list all the fields of the communication structure.
 | --- | --- |
 | version | Exit version<br/> The value of this parameter is used to identify the version of the EXIT task supplied. |
 | comment | Local comment<br/> This field can be modified by the user program. Any modifications are taken into account when the catalog is updated (if usraction = UPDATE with or without change of state). |
-| state | State requested on UPDATE (D, H, K, X). See <a href="../#Transfer_state">Transfer states.</a> |
+| state | State requested on UPDATE (D, H, K, X). See [Transfer states.](../#Transfer_state) |
 
 
 <span id="Information_returned_by_the_user"></span>

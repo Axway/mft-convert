@@ -1,11 +1,8 @@
 ---
-
-    title: CFTEXT  - Extract file data 
-    linkTitle: CFTEXT - Extracting data
-    weight: 340
-
----
-You can use the <span id="About_the_CFTEXT_Command"></span><span style="font-weight: bold;">****CFTEXT****</span>
+    title: "CFTEXT  - Extract file data "
+    linkTitle: "CFTEXT - Extracting data"
+    weight: 330
+---You can use the <span id="About_the_CFTEXT_Command"></span>****CFTEXT****
 object to extract Parameter and Partner file data. CFTEXT generates, as output, a configuration command text used to reconstitute
 the data of these files.
 
@@ -26,86 +23,21 @@ output or else redefine the output medium via the command CONFIG TYPE
 
 All parameter values are in UPPER CASE letters.
 
-Command syntax: <span style="font-weight: bold;">****[CFTEXT](../../../command_summary#CFTEXT)****</span>
+Command syntax: ****[CFTEXT](../../../command_summary#CFTEXT)****
 
-QQQ\_QQQ\_CHECK command description
-
-QQQ\_QQQ\_QQQ
-
-Parameters
-
-Description
-
-<span style="font-weight: bold;">****[CFTEXT](../../../command_summary#CFTEXT)****</span> command
-
-Use this command to extract all or part of the data from
+**Description**: Use this command to extract all or part of the data from
 the parameter and partner files.
 
-[ID](../../../command_summary/parameter_intro/id) 
 
-Identifier of the parameter to be extracted.
+| Parameters  | Description  |
+| --- | --- |
+| [ID](../../../command_summary/parameter_intro/id)  | Identifier of the parameter to be extracted.<br/> The value of this identifier is the value of the ID of the command CFTxxxx corresponding to the TYPE parameter; this allows the extraction to be limited:<br/> • To an explicitly indicated value (identifier)<br/> • Or to a group of values designated through the use of a mask using "wildcard" characters<br/> When this parameter is not defined, all the occurrences of the parameter type (defined by TYPE) are extracted. |
+| [CONTENT](../../../command_summary/parameter_intro/content)  | Level of content included in output:<br/> • BRIEF = Empty or default value parameters are omitted<br/> • FULL = All parameters are included |
+| [FOUT](../../../command_summary/parameter_intro/fout)  | Name of the file to which the command’s standard output will be redirected.<br/> This generated file can then be interpreted directly by CFTUTIL.<br/> When this parameter is not filled, all occurrences of the type parameter (defined in the TYPE parameter) are extracted. |
+| [FPARM](../../../command_summary/parameter_intro/fparm)<br/> {see the comment &#124; filename} <br/> Except for TYPE = PART | Name of the Parameter input file.<br/> Default value: default name of the Parameter file defined for CFTUTIL for the system concerned. Refer to the Transfer CFT *Operations Guide* that corresponds with your OS. |
+| [FPART](../../../command_summary/parameter_intro/fpart) <br/> {see the comment &#124; filename}]<br/> For TYPE = {ALL &#124; PART} | Name of the Partner input file.<br/> Default value: default name of the Partner file defined for CFTUTIL for the system concerned. Refer to the Transfer CFT Operations Guide that corresponds with your OS. |
+| [TYPE](../../../command_summary/parameter_intro/type)  | This parameter defines the parameter type to be extracted. |
 
-The value of this identifier is the value of the ID of
-the command CFTxxxx corresponding to the TYPE parameter; this allows the
-extraction to be limited:
-
-- To an
-    explicitly indicated value (identifier)
-- Or to
-    a group of values designated through the use of a mask using "wildcard"
-    characters
-
-When this parameter is not defined, all the occurrences
-of the parameter type (defined by TYPE) are extracted.
-
-[CONTENT](../../../command_summary/parameter_intro/content)
-
-Level of content included in output:
-
-- BRIEF = Empty or default value parameters are omitted
-- FULL = All parameters are included
-
-[FOUT](../../../command_summary/parameter_intro/fout) 
-
-Name of the file to which the command’s standard output
-will be redirected.
-
-This generated file can then be interpreted directly by
-CFTUTIL.
-
-When this parameter is not filled, all occurrences of the
-type parameter (defined in the TYPE parameter) are extracted.
-
-[FPARM](../../../command_summary/parameter_intro/fparm)
-
-{see the comment |
-filename} 
-
-Except for TYPE = PART
-
-Name of the Parameter input file.
-
-Default value: default name of the Parameter file defined
-for CFTUTIL for the system concerned. Refer to the Transfer CFT *Operations
-Guide* that corresponds with your OS.
-
-[FPART](../../../command_summary/parameter_intro/fpart) 
-
-{see the
-comment | filename}\]
-
-For TYPE = {ALL | PART}
-
-Name of the Partner input file.
-
-Default value: default
-name of the Partner file defined for CFTUTIL for the system concerned.
-Refer to the Transfer CFT <span class="italic_in_para">Operations Guide</span> that corresponds with
-your OS.
-
-[TYPE](../../../command_summary/parameter_intro/type) 
-
-This parameter defines the parameter type to be extracted.
 
 ****Example 1****
 

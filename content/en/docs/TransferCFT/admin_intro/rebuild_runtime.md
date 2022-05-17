@@ -1,11 +1,8 @@
 ---
-
-    title: Rebuild the runtime
-    linkTitle: Rebuild the runtime
-    weight: 180
-
----
-This section describes how to rebuild the unified configuration environment. You may need to use this process after accidentally erasing critical files, to deal with corrupted files, or after a disk failure.
+    title: "Rebuild the runtime"
+    linkTitle: "Rebuild the runtime"
+    weight: 170
+---This section describes how to rebuild the unified configuration environment. You may need to use this process after accidentally erasing critical files, to deal with corrupted files, or after a disk failure.
 
 <span id="Create_regenerate_runtime_uconf"></span>
 
@@ -15,7 +12,7 @@ This section describes how to rebuild the unified configuration environment. You
 
 ******UNIX syntax******
 
-`cftruntime [-h|--help|-p|--profile|-n <name>|--uconf|--inst] <cft-install-dir> <cft-runtime-dir> [--mac=yes|no]`
+`cftruntime [-h&#124;--help&#124;-p&#124;--profile&#124;-n <name>&#124;--uconf&#124;--inst] <cft-install-dir> <cft-runtime-dir> [--mac=yes&#124;no]`
 
 Where:
 
@@ -36,7 +33,7 @@ cftruntime --uconf /home/Transfer_CFT/home /home/Transfer_CFT/runtime
 
 ******Windows syntax******
 
-`cftruntime <cft-install-dir> <cft-runtime-dir> [-profile|-n <name>|-uconf|-inst]`
+`cftruntime <cft-install-dir> <cft-runtime-dir> [-profile&#124;-n <name>&#124;-uconf&#124;-inst]`
 
 Where:
 
@@ -56,7 +53,7 @@ Usage:
 
 ******Example 1******
 
-In a Windows environment, create a new runtime called <span class="code">`runtime2`</span>:
+In a Windows environment, create a new runtime called `runtime2`:
 
 ```
 cftruntime c:\\AxwayCFT38\\Transfer_CFT\\home c:\\AxwayCFT36\\Transfer_CFT\\runtime2
@@ -64,8 +61,22 @@ cftruntime c:\\AxwayCFT38\\Transfer_CFT\\home c:\\AxwayCFT36\\Transfer_CFT\\runt
 
 ******Example 2******
 
-In a Windows environment, regenerate the <span class="code">`cftuconf.dat`</span> uconf settings as follows:
+In a Windows environment, regenerate the `cftuconf.dat` uconf settings as follows:
 
 ```
 cftruntime c:\\AxwayCFT38\\Transfer_CFT\\home c:\\AxwayCFT36\\Transfer_CFT\\runtime –uconf
 ```
+
+## How to disable UCONF integrity control
+
+To disable integrity control for the UCONF dictionary, add the `-mac=no` parameter to the `cftruntime `command either when creating the runtime environment or regenerating the uconf file:
+
+Unix syntax:
+
+- `cftruntime <cft-install-dir> <cft-runtime-dir> [-profile&#124;-n <name> --uconf --mac=no`
+- `cftruntime <cft-install-dir> <cft-runtime-dir> [-profile&#124;-n <name> --inst --mac=no`
+
+Windows syntax:
+
+- `cftruntime <cft-install-dir> <cft-runtime-dir> [-profile&#124;-n <name> -uconf -mac=no`
+- `cftruntime <cft-install-dir> <cft-runtime-dir> [-profile&#124;-n <name> -inst -mac=no`

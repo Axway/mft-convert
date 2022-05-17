@@ -1,48 +1,41 @@
 ---
-
-    title: Advanced installation
-    linkTitle: Advanced installation 
+    title: "Advanced installation"
+    linkTitle: "Advanced installation "
     weight: 220
-
----
-## Manually install or modify installation
+---## Manually install or modify installation
 
 The following JCLs are contained in the INSTALL library. Execute the JCLs in the order listed in the following table.
 
-QQQ\_QQQ\_CHECK Target customization steps (continued)
-
-### Target customization steps
+### Target customization
 
 
 | Step  | JCL  | Description  |
 | --- | --- | --- |
-| 1  | <a href="../t_customize_instance_zos#Modifying_A03PARM">A03PARM</a> | Customize file parameters |
-| 2  | <a href="../installation_parameters_to_customize">A00CUSTO</a> | Customize JOBs installation |
+| 1  | [A03PARM](../t_customize_instance_zos#Modifying_A03PARM) | Customize file parameters |
+| 2  | [A00CUSTO](../installation_parameters_to_customize) | Customize JOBs installation |
 | 3  | A06FILES  | Create and initialize instance files  |
-| 4 *Optional step*  | A12OPTS | Select options for Transfer CFT operations |
+| 4  | A12OPTS | Select options for Transfer CFT operations<br/> *Optional step* |
 
 
 After performing Steps 1 -4, you can either continue with the following step-by-step instructions, or start the JOB A05ALL, which uses the customized settings in the A03PARM file to run.
-
-### Target customization steps (continued)
 
 
 | Step  | JCL  | Description  |
 | --- | --- | --- |
 | 5  | B20LINK | General LINK-EDIT of Transfer CFT modules. Submit for non-SMP/E installations. |
-| 6  | CFTGNKEY  | Generate an encryption key. See also <a href="../t_customize_instance_zos#Password">Password encryption</a>.  |
+| 6  | CFTGNKEY  | Generate an encryption key. See also [Password encryption](../t_customize_instance_zos#Password).  |
 | 7  | COPA010 |   |
 
 
-### Transfer CFT installation customization steps
+### Transfer CFT installation customization
 
 
 | Step  | JCL  | Description  |
 | --- | --- | --- |
-| 8  | <a href="../zos_auto_install_a05all/t_customize_install_zos#JOB%C2%A0H80EXEC">CFT$SET</a><br/> CFT$SETC  | Select one of the two options available for this step to set the UCONF variables and create Transfer CFT parameters from a template.<br/> • CFT$SET: When not using Central Governance.<br/> • CFT$SETC: When using Central Governance.<br/>  |
-| 9  | <a href="../zos_auto_install_a05all/t_customize_install_zos#D40INIT">D40INIT</a> | Format the Transfer CFT work files |
-| 10  | <a href="../t_customize_instance_zos">E50PARM</a>  | CFTPARM configuration example  |
-| 11  | <a href="t_configure_navigator_server_zos">COPA020</a> | <a href="t_configure_navigator_server_zos">Configure Transfer CFT Copilot server</a> |
+| 8  | [CFT$SET](../zos_auto_install_a05all/t_customize_install_zos#JOB%C2%A0H80EXEC)<br/> CFT$SETC  | Select one of the two options available for this step to set the UCONF variables and create Transfer CFT parameters from a template.<br/> • CFT$SET: When not using Central Governance.<br/> • CFT$SETC: When using Central Governance. |
+| 9  | [D40INIT](../zos_auto_install_a05all/t_customize_install_zos#D40INIT) | Format the Transfer CFT work files |
+| 10  | [E50PARM](../t_customize_instance_zos)  | CFTPARM configuration example  |
+| 11  | [Configure Transfer CFT Copilot server](t_configure_navigator_server_zos) |
 
 
 ### Optional steps
@@ -51,8 +44,8 @@ After performing Steps 1 -4, you can either continue with the following step-by-
 | Step  | JCL  | Description  |
 | --- | --- | --- |
 | 12  | C32XMEM | Communication server |
-| 13  | <a href="t_configure_optional_features_zos#Create%20a%20Transfer%20CFT%20PKI%20file%C2%A0D43PKI">D43PKI</a><br/> <a href="t_configure_optional_features_zos#Connect%20with%20PassPort%C2%A0D44PASS">D44PASS</a><br/> <a href="t_configure_optional_features_zos">D47SYST</a> | Select one of the options listed for Step 12:<br/> • D43PKI: Create internal datafile for PKI data<br/> • D44PASS: Declare link to PassPort server<br/> • D47SYST: Enable use of system PKI |
-| 14  | <a href="t_install_sentinel_zos">SN05CONF</a> | <a href="t_install_sentinel_zos">Customize Sentinel</a> configuration file |
+| 13  | [D47SYST](t_configure_optional_features_zos#Create%20a%20Transfer%20CFT%20PKI%20file%C2%A0D43PKI) | Select one of the options listed for Step 12:<br/> • D43PKI: Create internal datafile for PKI data<br/> • D44PASS: Declare link to PassPort server<br/> • D47SYST: Enable use of system PKI |
+| 14  | [Customize Sentinel](t_install_sentinel_zos) configuration file |
 | 15  | CFTHEART  | Activate Transfer CFT Heartbeats for Sentinel Dashboards  |
 | 16  | CFTCGREG  | Register {{< TransferCFT/suitevariablesTransferCFTName  >}} with {{< TransferCFT/PrimaryCGorUM  >}}  |
 | 17  | CFTCGPKI  | Used to register {{< TransferCFT/suitevariablesTransferCFTName  >}} with {{< TransferCFT/PrimaryCGorUM  >}}  |
@@ -114,17 +107,17 @@ The CFTMAIN/CFTMA31 programs are copied in an authorized APF library for the cas
 
 ## Set up Copilot server files in USS using COPA010
 
-The files that are used by the Transfer CFT Copilot server are located in the USS environment. The implementation directory for these files is partially customizable. This directory is composed of two parameter setting sections. The first section is defined by cftroot in the customization file (A03PARM in the INSTALL library, e.g. /home/AXWAY/CFT&lt;version>). The second section is a set, non-modifiable parameter /wwwroot, which corresponds to the Transfer CFT Copilot component.
+The files that are used by the Transfer CFT Copilot server are located in the USS environment. The implementation directory is defined by the coppath parameter (cf A03PARM member in INSTALL library).
 
-Prerequisites
+### Prerequisites
 
-- Authorization to create the directory: cftroot/wwwroot
+- Authorization to create the directory: coppath
 
 <!-- -->
 
 - Available disk space: 25,000 K
 
-**Procedure**
+### **Procedure**
 
 You can use the JCL COPA010 to set up the Transfer CFT Copilot files in USS.
 
@@ -139,8 +132,7 @@ You can use the JCL COPA010 to set up the Transfer CFT Copilot files in USS.
 **Example**
 
 ```
-/home/AXWAY/CFT<version>/wwwroot/applets: #df .
-Mounted on Filesystem Avail/Total Files Status
+/home/AXWAY/CFT/copilot> df .Mounted on Filesystem Avail/Total Files Status
 /home/AXWAY (xxxxxx.yyyyy.HFSAXWAY) 235680/1872000 4294927912 Available
 ```
 

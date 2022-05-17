@@ -1,25 +1,22 @@
 ---
-
-    title: nrecfm
-    linkTitle: nrecfm
-    weight: 2310
-
----
-<span id="nrecfm"></span>
+    title: "nrecfm"
+    linkTitle: "nrecfm"
+    weight: 2330
+---<span id="nrecfm"></span>
 
 ### nrecfm
 
 #### CFTSEND, SEND
 
-**\[NRECFM = {<u>FRECFM value</u> | F | U
-| V}\]     ODETTE,
+**[NRECFM = {<u>FRECFM value</u> &#124; F &#124; U
+&#124; V}]     ODETTE,
 PeSIT, OS**
 
 File record format defined in protocol terms:
 
-- <span style="font-weight: bold;">****F****</span>: fixed
-- <span style="font-weight: bold;">****V****</span>: variable
-- <span style="font-weight: bold;">****U****</span>: undefined
+- ****F****: fixed
+- ****V****: variable
+- ****U****: undefined
 
 
 | PeSIT D EXTERN profile<br /> PeSIT ANY profile<br /> PeSIT E | In PeSIT protocol with the EXTERN profile, the value NFRECFM = U is not known in protocol terms and is changed by the {{< TransferCFT/axwayvariablesComponentShortName  >}} to NFRECFM = V. This value (U) is sent with no modification in PeSIT D CFT profile or in PeSIT E from {{< TransferCFT/axwayvariablesComponentShortName  >}} to {{< TransferCFT/axwayvariablesComponentShortName  >}}. |

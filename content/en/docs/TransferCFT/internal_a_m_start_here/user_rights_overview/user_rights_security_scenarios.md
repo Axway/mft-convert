@@ -1,11 +1,8 @@
 ---
-
-    title: User rights and privileges use cases
-    linkTitle: User rights and privileges use cases
-    weight: 250
-
----
-This topic describes how you can add mounting levels of security to your Transfer CFT environment, and features 4 typical user types. In all but the first example, no added security, the user types are defined by Central Governance roles. By adding file and user controls you can add increasing security controls.
+    title: "User rights and privileges use cases"
+    linkTitle: "User rights and privileges use cases"
+    weight: 240
+---This topic describes how you can add mounting levels of security to your Transfer CFT environment, and features 4 typical user types. In all but the first example, no added security, the user types are defined by Central Governance roles. By adding file and user controls you can add increasing security controls.
 
 For more information on roles and privileges in Central Governance, refer to the *Central Governance User Guide*.
 
@@ -22,7 +19,7 @@ In this section:
 
 ## Use case with no security applied
 
-In this use case, there is no security enabled either in Transfer CFT or Central Governance (<span class="code">`am.type=none`</span>). However, normally when using Central Governance with Transfer CFT the default value is set to <span class="code">`am.type=passport`</span>. This results in no control over the transfer owner.
+In this use case, there is no security enabled either in Transfer CFT or Central Governance (`am.type=none`). However, normally when using Central Governance with Transfer CFT the default value is set to `am.type=passport`. This results in no control over the transfer owner.
 
 <span id="User"></span>
 
@@ -186,7 +183,7 @@ Help desk alone cannot monitor Transfer CFT through Central Governance if they 
 
 - Monitor: YES, through either Central Governance or Copilot
 - Transfer: NO
-- Connect to Transfer CFT UI: <span style="color: #000000;">NO</span>
+- Connect to Transfer CFT UI: NO
 - Modify configuration: YES
 - Start/stop Transfer CFT: YES
 
@@ -222,8 +219,8 @@ Using CFTUTIL this user can perform configuration actions and transfers, but can
 
 This example describes how to add an additional user rights security restriction. The user in this case is not known on Central Governance, but has all rights on all files on the Transfer CFT system, runtime as well as working directories.
 
-- When am.passport.userctrl.check\_permissions\_on\_transfer\_execution=no, the default value, this user, who defined on the Machine1, can use CFTUTIL to perform a transfer even though not known on {{< TransferCFT/suitevariablesCentralGovernanceName >}}.
-- When am.passport.userctrl.check\_permissions\_on\_transfer\_execution=yes, this same user cannot perform transfers as he is not defined in {{< TransferCFT/suitevariablesCentralGovernanceName >}}.
+- When am.passport.userctrl.check_permissions_on_transfer_execution=no, the default value, this user, who defined on the Machine1, can use CFTUTIL to perform a transfer even though not known on {{< TransferCFT/suitevariablesCentralGovernanceName >}}.
+- When am.passport.userctrl.check_permissions_on_transfer_execution=yes, this same user cannot perform transfers as he is not defined in {{< TransferCFT/suitevariablesCentralGovernanceName >}}.
 
 ****Related topics****
 

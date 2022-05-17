@@ -1,11 +1,8 @@
 ---
-
-    title: Define internal access management
-    linkTitle: Define internal access management
+    title: "Define internal access management"
+    linkTitle: "Define internal access management"
     weight: 280
-
----
-This section describes the OS specific settings required to enable internal access management. As a prerequisite, you must read and be familiar with the [Internal access management](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/internal_access_mgt/internal_a_m_start_here.htm) information in the *Transfer CFT User Guide*.
+---This section describes the OS specific settings required to enable internal access management. As a prerequisite, you must read and be familiar with the [Internal access management](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/internal_access_mgt/internal_a_m_start_here.htm) information in the *Transfer CFT User Guide*.
 
 ## About internal AM
 
@@ -45,7 +42,7 @@ PERMIT IRR.RADMIN.RLIST -CLASS(FACILITY) ACCESS(READ) ID(user)
 PERMIT IRR.RADMIN.SETROPTS.LIST -CLASS(FACILITY) ACCESS(READ) ID(user)
 ```
 
-In Transfer CFT, set the <span class="code">`group_database`</span> to <span class="code">`system`</span>.
+In Transfer CFT, set the `group_database` to `system`.
 
 ```
 UCONFSET ID=am.internal.group_database,value=system
@@ -68,8 +65,9 @@ When the access management method is **SAF class**, each user role is associated
 
 
 ```
-UCONFSET ID=am.internal.group_database,value=**safclass**
-UCONFSET ID=am.internal.safclass,value='**Class**' (the class resource must be available)
+UCONFSET ID=am.internal.group_database,value=safclass
+UCONFSET ID=am.internal.safclass,value='Class
+' (the class resource must be available)
  
 For each ROLE (the following are examples, replace with your own values):
 
@@ -86,7 +84,8 @@ Authorize users or groups: (RACF sample)
 > PERMIT CFT.ROLE.TRANSFER CLASS(Class) ACCESS(READ) ID(USER002)
 
  
-NOTE: ACCESS must be set to **READ**.
+NOTE: ACCESS must be set to READ
+.
 ```
 
 > **Note**
@@ -97,11 +96,11 @@ NOTE: ACCESS must be set to **READ**.
 
 With **file** type access management, you define the mapping between predefined roles and groups in UCONF, and assign the user groups in an external file.
 
-When using this type of access management, the file format must be VB, where the maximum number of <span class="code">`lrecl `</span>is 1024. Enter the character \* in column 1 to allow comments.
+When using this type of access management, the file format must be VB, where the maximum number of `lrecl `is 1024. Enter the character \* in column 1 to allow comments.
 
 #### User/Group record description
 
-Start with the <span class="code">`UserID `</span>in column 1 using blanks as separators. For example, to assign users rights, use the format:
+Start with the `UserID `in column 1 using blanks as separators. For example, to assign users rights, use the format:
 
 ****Format****
 
@@ -110,7 +109,7 @@ USER001 OPERATOR PARTNER .....
 USER002 ADMIN ..... 
 ```
 
-In Transfer CFT, set the <span class="code">`group_database`</span> to file and specify the path to the file defined above.
+In Transfer CFT, set the `group_database` to file and specify the path to the file defined above.
 
 ```
 UCONFSET ID=am.internal.group_database,value=file

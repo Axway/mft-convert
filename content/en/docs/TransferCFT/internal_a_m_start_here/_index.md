@@ -1,11 +1,8 @@
 ---
-
-    title: Access management 
-    linkTitle: Access management
-    weight: 130
-
----
-This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
+    title: "Access management "
+    linkTitle: "Access management"
+    weight: 120
+---This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
 
 Access management for {{< TransferCFT/axwayvariablesComponentShortName  >}} refers to the policy that allow users to perform actions on the product.
 

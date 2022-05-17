@@ -1,11 +1,8 @@
 ---
-
-    title: Configure simultaneous transfers
-    linkTitle: Configure simultaneous transfers
-    weight: 220
-
----
-The maximum number of simultaneous transfers in Transfer CFT is managed by a combination of global parameters, partner settings, and the license key.
+    title: "Configure simultaneous transfers"
+    linkTitle: "Configure simultaneous transfers"
+    weight: 210
+---The maximum number of simultaneous transfers in Transfer CFT is managed by a combination of global parameters, partner settings, and the license key.
 
 The objective of this section is to help you understand the global and partner parameters, and provide configuration recommendations in order to assist you in optimizing your file transfer volume.
 
@@ -56,7 +53,7 @@ You can also set the maximum number of simultaneous sessions using the UCONF par
 
 > **Note**
 >
-> We recommend using the default value for cft.server.max\_session.
+> We recommend using the default value for cft.server.max_session.
 
 #### DISCTD/DISCTS
 
@@ -67,13 +64,14 @@ In Transfer CFT, the timeout (session persistence) is defined by DISCTS in serv
 **Client configuration**
 
 ```
-CFTPROT id=PESIT, DISCTS=8, DISCTD=<span style="color: #ff0000;">8</span>
+CFTPROT id=PESIT, DISCTS=8, DISCTD= 8
 ```
 
 **Server configuration**
 
 ```
-CFTPROT id=PESIT, DISCTS=<span style="color: #ff0000;">10</span>, DISCTD=7
+CFTPROT id=PESIT, DISCTS= 10
+, DISCTD=7
 ```
 
 > **Note**
@@ -120,7 +118,7 @@ Key information :
 \* type = DATE
 \* expire = 2015/11/14
 \* sysname = linux-x86-64
-\* Nb Transfers = <span style="color: #ff0000;">64</span>
+\* Nb Transfers = 64
 \* Nb CPU = 4
 \* Nb Partners = Max
 ```

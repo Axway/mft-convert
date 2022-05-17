@@ -1,18 +1,11 @@
 ---
+    title: "Register with Central Governance "
+    linkTitle: "Register with Central Governance"
+    weight: 180
+---{{< TransferCFT/axwayvariablesComponentLongName  >}}s 3.1.3 or higher can register with {{< TransferCFT/PrimaryCGorUM  >}} in one of two ways:
 
-    title: Register with Central Governance 
-    linkTitle: Register with Central Governance
-    weight: 190
-
----
-{{< TransferCFT/axwayvariablesComponentLongName  >}}s 3.1.3 or higher can register with {{< TransferCFT/PrimaryCGorUM  >}} in one of two ways:
-
-- <a href="#Automati" class="MCXref xref">Automatically activate connectivity</a>
-- <a href="#manually_activate_cg" class="MCXref xref">Manually activate connectivity</a>
-
-Additional tasks:
-
-- <a href="#Connect" class="MCXref xref">Register with Central Governance</a>
+- [Automatically activate connectivity](#Automati)
+- [Manually activate connectivity](#manually_activate_cg)
 
 <span id="Automati"></span>
 
@@ -45,15 +38,15 @@ When setting the Central Governance "shared secret" during a Transfer CFT z/OS i
 
 ****Verify the UCONF setting****
 
-Prior to the registration, you must ensure that the JCL CFTMON (<span class="code">`copilot.misc.cftstart.enable`</span> = <span class="code">`Yes`</span>) is configured to match the jobname or the STC name used to launch Transfer CFT.
+Prior to the registration, you must ensure that the JCL CFTMON (`copilot.misc.cftstart.enable` = `Yes`) is configured to match the jobname or the STC name used to launch Transfer CFT.
 
 ### Procedure
 
-All commands in this section are performed using CFTUTIL unless stated otherwise. For details on the UCONF parameters referenced in this section, please see <a href="" class="MCXref xref">UCONF: Central Governance options</a>.
+All commands in this section are performed using CFTUTIL unless stated otherwise. For details on the UCONF parameters referenced in this section, please see [UCONF: Central Governance options]().
 
 #### Disable previously used connectors
 
-Enabling Central Governance connectivity if you have performed an upgrade replaces any standalone connectors. Therefore, prior to connecting to Central Governance you must deactivate all previously activated connectors, for example PassPort AM, PassPort PS, and Sentinel.
+Enabling Central Governance connectivity if you have performed an upgrade replaces any standalone connectors. Therefore, prior to connecting to Central Governance you must deactivate all previously activated connectors, for example PassPort AM and Sentinel.
 
 Unset the UCONF parameters:
 
@@ -72,7 +65,7 @@ uconfset id=pki.type, value=cft
 Set the parameters used to identify a Transfer CFT instance. Follow these guidelines, otherwise the registration will fail:
 
 - The length of the `cft.instance_id` value is limited to 24 characters.
-- The address set in <span class="code">`cft.full_hostname`</span> must be reachable from {{< TransferCFT/PrimaryCGorUM >}}.
+- The address set in `cft.full_hostname` must be reachable from {{< TransferCFT/PrimaryCGorUM >}}.
 
 ```
 uconfset id=cft.instance_id, value=<cft_id>
@@ -80,11 +73,11 @@ uconfset id=cft.instance_group, value=<cft_instance_group>
 uconfset id=cft.full_hostname, value=<cft_address>
 ```
 
-Additionally, if running in a multi-host/multi-node environment, you must set the load balancer address(FQDN or IP address) and port that {{< TransferCFT/PrimaryCGorUM  >}} uses to reach the Transfer CFT (<span class="code">`copilot.general.ssl_serverport`</span>):
+Additionally, if running in a multi-host/multi-node environment, you must set the load balancer address(FQDN or IP address) and port that {{< TransferCFT/PrimaryCGorUM  >}} uses to reach the Transfer CFT (`copilot.general.ssl_serverport`):
 
 ```
 uconfset id=cft.multi_node.load_balancer.host, value=<load_balancer_address>
-uconfset id=<span class="code">`cft.multi_node.load_balancer.port,value=<load_balancer_port>`</span>
+uconfset id= cft.multi_node.load_balancer.port,value=<load_balancer_port>
 ```
 
 #### Optionally define a proxy server for {{< TransferCFT/PrimaryCGorUM  >}} to {{< TransferCFT/axwayvariablesComponentLongName  >}} communication
@@ -93,9 +86,9 @@ If you opt to use a proxy server for {{< TransferCFT/PrimaryCGorUM  >}} to conne
 
 ```
 uconfset id=cg.proxy.in.host, value= <proxy_address>
-uconfset id=cg.proxy.in.port<span class="code">`,value= <proxy_port>`</span>
+uconfset id=cg.proxy.in.port ,value= <proxy_port>
 uconfset id=cg.proxy.in.login, value= <proxy_login>
-uconfset id=<span class="code">`cg.proxy.in.password, value= <proxy_login_password>`</span>
+uconfset id= cg.proxy.in.password, value= <proxy_login_password>
 ```
 
 #### Optionally define a proxy server for {{< TransferCFT/axwayvariablesComponentLongName  >}} to {{< TransferCFT/PrimaryCGorUM  >}} communication
@@ -141,7 +134,7 @@ uconfset id=cg.configuration_policy, value=<name_of_policy>
 
 #### Optionally customize the business certificate Distinguished Name (DN)
 
-To override the business certificate's Distinguished Name (DN), which is generated during the {{< TransferCFT/suitevariablesCentralGovernanceName  >}} registration or certificate renewal, set the UCONF parameter cg.certificate.business.csr\_dn to th e custom value. The default is O=Axway,OU=MFT,CN=%uconf:cft.full\_hostname%. Remember to separate tokens by a comma.
+To override the business certificate's Distinguished Name (DN), which is generated during the {{< TransferCFT/suitevariablesCentralGovernanceName  >}} registration or certificate renewal, set the UCONF parameter cg.certificate.business.csr_dn to th e custom value. The default is O=Axway,OU=MFT,CN=%uconf:cft.full_hostname%. Remember to separate tokens by a comma.
 
 ```
 uconfset id=cg.certificate.business.csr_dn, value='O=MyCompany,OU=MFT,CN=%uconf:cft.full_hostname%'
@@ -151,7 +144,7 @@ A best practice is to customize the certificate DN prior to registration. Howeve
 
 #### Optionally customize the governance certificate Distinguished Name (DN)
 
-To override the governance certificate's Distinguished Name (DN), which is generated during the {{< TransferCFT/suitevariablesCentralGovernanceName  >}} registration or certificate renewal, set the UCONF parameter cg.certificate.governance.csr\_dn to the custom value. The default is O=Axway,OU=MFT,CN=&lt;Transfer CFT $(cft.instance\_id)>. Remember to separate tokens by a comma.
+To override the governance certificate's Distinguished Name (DN), which is generated during the {{< TransferCFT/suitevariablesCentralGovernanceName  >}} registration or certificate renewal, set the UCONF parameter cg.certificate.governance.csr_dn to the custom value. The default is O=Axway,OU=MFT,CN=&lt;Transfer CFT $(cft.instance_id)>. Remember to separate tokens by a comma.
 
 ```
 uconfset id=cg.certificate.governance.csr_dn, value='O=MyCompany,OU=MFT,CN=%uconf:cft.full_hostname%'
@@ -183,14 +176,14 @@ uconfset id=cg.enable, value=yes
 Use the CFTUTIL CHECK command to validate the coherence of parameters, partners, and the Transfer CFT PKI database.
 
 ```
-CHECK CONTENT=BRIEF|FULL, FOUT=FileName
+CHECK CONTENT=BRIEF&#124;FULL, FOUT=FileName
 ```
 
-Check the list in the output for errors and correct all errors before attempting registration. See also, <a href="../../c_intro_userinterfaces/about_cftutil/check_command" class="MCXref xref">Use the check command</a>.
+Check the list in the output for errors and correct all errors before attempting registration. See also, [Use the check command](../../c_intro_userinterfaces/about_cftutil/check_command).
 
 ## Register or re-register
 
-Ensure that `cft_registration_id `is reset to <span class="code">`-1`</span>. Otherwise, reset it as follows:  
+Ensure that `cft_registration_id `is reset to `-1`. Otherwise, reset it as follows:  
 
 ```
 CFTUTIL uconfunset id=cg.registration_id

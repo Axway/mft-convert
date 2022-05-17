@@ -1,17 +1,14 @@
 ---
-
-    title: sap
-    linkTitle: sap
-    weight: 3040
-
----
-<span id="sap"></span>
+    title: "sap"
+    linkTitle: "sap"
+    weight: 3060
+---<span id="sap"></span>
 
 ### sap
 
 #### CFTPROT
 
-****\[SAP = string32 \]****
+****[SAP = string32 ]****
 
 Name of the local SAP, Service Access Point, associated with this protocol.
 It is used to identify the access point at which incoming connection requests
@@ -27,8 +24,6 @@ protocol is only available in requester mode.
 
 #### CFTPROT SAP - Parameter values
 
-QQQ\_QQQ\_QQQ
-
 
 | Access method  | Size in characters  | Details  |
 | --- | --- | --- |
@@ -41,8 +36,8 @@ Numbers Authority).
 
 **<span id="CFTPART_SAP___Parameter_values"></span>CFTPART**
 
-****\[SAP
-= (string, string, string, ...) \]****
+****[SAP
+= (string, string, string, ...) ]****
 
 Values of the remote SAPs (service
 access points) associated with each of the protocols defined by the PROT

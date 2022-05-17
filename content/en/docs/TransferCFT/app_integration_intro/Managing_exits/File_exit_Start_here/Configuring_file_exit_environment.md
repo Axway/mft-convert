@@ -1,12 +1,9 @@
 ---
-
-    title: Configure  the environment
-    linkTitle: Configuring the environment
+    title: "Configure  the environment"
+    linkTitle: "Configuring the environment"
     weight: 330
-
----
-This topic describes how to configure the environment for a <span style="font-style: italic;">**file
-type exit**</span>. Before you submit an exit, you must customize the following
+---This topic describes how to configure the environment for a **file
+type exit**. Before you submit an exit, you must customize the following
 {{< TransferCFT/axwayvariablesComponentShortName  >}} objects:
 
 - CFTSEND: to define
@@ -54,17 +51,17 @@ CFTEXIT 
 ID = identifier,
 TYPE = FILE,
 [FORMAT = { V23
-| V24 }]
-[LANGUAGE = {COBOL | C},]
-[MODE = {REPLACE | CREATE | DELETE},]
+&#124; V24 }]
+[LANGUAGE = {COBOL &#124; C},]
+[MODE = {REPLACE &#124; CREATE &#124; DELETE},]
 [PARM = string,]
-[PROG = {CFTEXIT | string},]
-[RESERV = {8192 | n},]
-[WAITTASK = {1441 | n}]
+[PROG = {CFTEXIT &#124; string},]
+[RESERV = {8192 &#124; n},]
+[WAITTASK = {1441 &#124; n}]
 ```
 
 ****Related topics****
 
 - [CFTSEND](../../../../concepts/cft_configuration_concepts_start_here/default_send_template_concepts)
 - [CFTRECV](../../../../concepts/cft_configuration_concepts_start_here/default_receive_template_concepts)
-- [CFTEXIT](../../../../c_intro_userinterfaces/web_copilot_ui/conf_intro/cftexit)
+- [CFTEXIT](../../../../c_intro_userinterfaces/web_copilot_ui/flow_def_intro/cftexit)

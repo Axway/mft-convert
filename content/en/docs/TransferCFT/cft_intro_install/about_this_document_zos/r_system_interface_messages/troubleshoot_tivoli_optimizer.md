@@ -1,11 +1,8 @@
 ---
-
-    title: Troubleshoot the UCONFRUN dataset
-    linkTitle: Troubleshoot the UCONFRUN dataset
+    title: "Troubleshoot the UCONFRUN dataset"
+    linkTitle: "Troubleshoot the UCONFRUN dataset"
     weight: 220
-
----
-****CFTMAIN hangs while it waits for the UCONFRUN dataset to be freed****
+---****CFTMAIN hangs while it waits for the UCONFRUN dataset to be freed****
 
 ****Messages****
 
@@ -27,7 +24,7 @@ If Copilot is started, the UCONFRUN dataset is held exclusively by Copilot.
 
 This issue is related to the use of at least one of the z/OS storage management tools, such as the IBM Tivoli Allocation Optimizer. The easiest way to disable Tivoli Allocation Optimizer is to add the bypass DDNAME in the JCL (COPRUN and CFTMAIN). Doing so bypasses the Tivoli Allocation Optimizer for all of the datasets accessed by this step.
 
-The ddname is AOBYPASS and the format of the DD card is: <span class="code">`//AOBYPASS DD DUMMY`</span>
+The ddname is AOBYPASS and the format of the DD card is: `//AOBYPASS DD DUMMY`
 
 ****Example****
 

@@ -1,20 +1,17 @@
 ---
-
-    title: About  the communication area
-    linkTitle: About the communication area
+    title: "About  the communication area"
+    linkTitle: "About the communication area"
     weight: 320
-
----
-This section describes the file exit communication area structure and describes the fields of the communication structure.
+---This section describes the file exit communication area structure and describes the fields of the communication structure.
 
 
 | Field | Explanation |
 | --- | --- |
 | ****mtype**** | Transfer stage<br /> The possible values are:<br/> • 0 (ALLOC_TYP) before the file is allocated<br/> • 1 (OPEN_TYP) before the file is opened<br/> • 2 (TRANS_TYP) before the start of the transfer<br/> • 3 (DATA_TYP) before a record is sent or after it is received<br/> • 4 (CHECK_TYP) after a synchronization point<br/> • 5 (RESTART_TYP) before repositioning<br/> • 6 (DTEND_TYP) before the end of the file<br/> • 7 (CLOSE_TYP) before the file is closed<br/> • 8 (ENDTR_TYP) before the end of the transfer<br/> • 9 (ABORT_TYP) after a transfer interruption  |
-| <span >****masc****</span>  | Mask for selecting stages<br /> This field comprises 16 bytes; each byte can take the value 0 or 1 and is associated with a stage:<br/> • Byte 0 =&gt; ALLOC_TYP<br/> • Byte 1 =&gt; OPEN_TYP<br/> • Byte 2 =&gt; TRANS_TYP<br/> • Byte 3 =&gt; DATA_TYP<br/> • Byte 4 =&gt; CHECK_TYP<br/> • Byte 5 =&gt; RESTART_TYP<br/> • Byte 6 =&gt; DTEND_TYP<br/> • Byte 7 =&gt; CLOSE_TYP<br/> • Byte 8 =&gt; ENDTR_TYP<br/> • Byte 9 =&gt; ABORT_TYP<br/> • Bytes 10 to 15 =&gt; Reserved<br/> Byte 0 always equals 1.<br/> If you set a byte to 1, it means that you want to take control during the associated stage<br /> The value of the field mtype indicates the rank of the byte associated with the stage |
+| ****masc****  | Mask for selecting stages<br /> This field comprises 16 bytes; each byte can take the value 0 or 1 and is associated with a stage:<br/> • Byte 0 =&gt; ALLOC_TYP<br/> • Byte 1 =&gt; OPEN_TYP<br/> • Byte 2 =&gt; TRANS_TYP<br/> • Byte 3 =&gt; DATA_TYP<br/> • Byte 4 =&gt; CHECK_TYP<br/> • Byte 5 =&gt; RESTART_TYP<br/> • Byte 6 =&gt; DTEND_TYP<br/> • Byte 7 =&gt; CLOSE_TYP<br/> • Byte 8 =&gt; ENDTR_TYP<br/> • Byte 9 =&gt; ABORT_TYP<br/> • Bytes 10 to 15 =&gt; Reserved<br/> Byte 0 always equals 1.<br/> If you set a byte to 1, it means that you want to take control during the associated stage<br /> The value of the field mtype indicates the rank of the byte associated with the stage |
 | ****access **** | File access managements under the control of:<br/> • Transfer CFT if set to 0<br /> {{< TransferCFT/axwayvariablesComponentShortName  >}} takes charge of all operations; you can, however, change certain features of the file (name, size, format, etc.) at the allocation and opening stages<br/> • The user if set to 1<br /> You are responsible for all operations performed on the file: allocation, opening, read/write, closing, de-allocation |
 | ****retsync**** | The return is:<br/> • 0 : synchronous<br /> The user function processes the stage and returns control to the interface.<br/> • 1: asynchronous<br /> The user function returns control to the interface before processing the stage (deferred processing). The transfer is suspended and the interface waits for an end of processing message from the user.<br/> As the user does not yet have the information or tools required to use the possibility of an asynchronous return, the return will always be synchronous  |
-| ****ret1**** | Return code:<br/> • 0 = processing ok<br/> • 9 = refusal and end of transfer<br/> Other values are defined depending on the transfer stage. For more information, refer to the <a href="../using_file_exit_comm_area">Using the Communication Structure</a>. |
+| ****ret1**** | Return code:<br/> • 0 = processing ok<br/> • 9 = refusal and end of transfer<br/> Other values are defined depending on the transfer stage. For more information, refer to the [Using the Communication Structure](../using_file_exit_comm_area). |
 | ****ret2**** | Error message.<br /> This message appears in the {{< TransferCFT/axwayvariablesComponentShortName  >}} catalog in the DIAGP field (protocol diagnosis). |
 | ****us_sem**** | Reserved |
 | ****us_ctx**** | Reserved |
@@ -109,8 +106,8 @@ This section describes the file exit communication area structure and describes 
 ### C Language structure
 
 If you want to keep an exit that was created in a version of Transfer
-CFT <span style="font-weight: bold;">****prior****</span> to V2.4, you can continue
-to use the format displayed below. The <span style="font-weight: bold;">****exitdT****</span>
+CFT ****prior**** to V2.4, you can continue
+to use the format displayed below. The ****exitdT****
 communication structure between the interface and the user program is
 defined as follows:
 
@@ -129,7 +126,7 @@ struct {
 } exitdT, \*exitdTp;
 ```
 
-If you want to create an exit using the V2.4 format <span style="font-weight: bold;">****exitdnT****</span>
+If you want to create an exit using the V2.4 format ****exitdnT****
 communication structure between the interface and the user program is
 defined below:
 
@@ -148,7 +145,7 @@ struct {
 } exitdnT, \*exitdnTp;
 ```
 
-The structures for the C and COBOL languages are described in <span style="font-family: 'Courier New', monospace;font-weight: bold;">****exfus.h****</span>
+The structures for the C and COBOL languages are described in ****exfus.h****
 that is delivered with {{< TransferCFT/axwayvariablesComponentShortName  >}} .
 
 ### COBOL language structure
@@ -157,5 +154,5 @@ If the user program is written in COBOL, you must comply with C-COBOL
 interfacing rules.
 
 The communication structure between the interface and the user program
-is defined in the <span style="font-weight: bold;font-family: 'Courier New', monospace;">****exfus.cop****</span>
+is defined in the ****exfus.cop****
 file that is delivered with the {{< TransferCFT/axwayvariablesComponentShortName  >}} product.

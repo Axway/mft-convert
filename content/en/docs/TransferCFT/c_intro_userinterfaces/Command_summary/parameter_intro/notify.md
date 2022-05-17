@@ -1,11 +1,8 @@
 ---
-
-    title: notify
-    linkTitle: notify
-    weight: 2240
-
----
-<span id="notify"></span>
+    title: "notify"
+    linkTitle: "notify"
+    weight: 2260
+---<span id="notify"></span>
 
 ### notify
 

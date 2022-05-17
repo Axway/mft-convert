@@ -1,11 +1,8 @@
 ---
-
-    title: TCP port availability 
-    linkTitle: TCP port availability
-    weight: 300
-
----
-This page lists the various {{< TransferCFT/axwayvariablesComponentLongName  >}} ports used for communication between processes, for both single and multi-node installations, which can be used for health checks or transfer-related operations.
+    title: "TCP port availability "
+    linkTitle: "TCP port availability"
+    weight: 290
+---This page lists the various {{< TransferCFT/axwayvariablesComponentLongName  >}} ports used for communication between processes, for both single and multi-node installations, which can be used for health checks or transfer-related operations.
 
 ## Single node deployment
 

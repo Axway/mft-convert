@@ -1,15 +1,12 @@
 ---
-
-    title: Start A00CUSTO to customize installation files
-    linkTitle:  Customize installation files (A00CUSTO)
+    title: "Start A00CUSTO to customize installation files"
+    linkTitle: " Customize installation files (A00CUSTO)"
     weight: 200
-
----
-<span id="Customizing JCL A00CUSTO parameters"></span><span id="kanchor77"></span>
+---<span id="Customizing JCL A00CUSTO parameters"></span><span id="kanchor76"></span>
 
 ## Customize JCL A00CUSTO parameters
 
-The A00CUSTO JOB customizes the installation files. The customization is done directly in the installation library instance environment. You must quit the file editing program and library before you execute the SUBMIT. If you do not first quit these programs before executing the SUBMIT, the message <span class="code">`Waiting for data set `</span>is returned. If you performed an Installer installation, these parameters are already customized.
+The A00CUSTO JOB customizes the installation files. The customization is done directly in the installation library instance environment. You must quit the file editing program and library before you execute the SUBMIT. If you do not first quit these programs before executing the SUBMIT, the message `Waiting for data set `is returned. If you performed an Installer installation, these parameters are already customized.
 
 ### Installed directories
 

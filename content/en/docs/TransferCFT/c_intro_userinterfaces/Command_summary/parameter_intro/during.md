@@ -1,15 +1,12 @@
 ---
-
-    title: during
-    linkTitle: during
-    weight: 790
-
----
-<span id="during"></span>
+    title: "during"
+    linkTitle: "during"
+    weight: 780
+---<span id="during"></span>
 
 ### during
 
-**\[DURING = {<u>0</u> | n}\]**
+**[DURING = {<u>0</u> &#124; n}]**
 
 {0..65535}
 

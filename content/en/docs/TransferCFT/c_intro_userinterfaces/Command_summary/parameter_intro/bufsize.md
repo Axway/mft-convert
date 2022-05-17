@@ -1,17 +1,14 @@
 ---
-
-    title: bufsize
-    linkTitle: bufsize
-    weight: 340
-
----
-<span id="bufsize"></span>
+    title: "bufsize"
+    linkTitle: "bufsize"
+    weight: 330
+---<span id="bufsize"></span>
 
 ### bufsize
 
 #### CFTPARM
 
-**\[BUFSIZE = n\]    **{512..see
+**[BUFSIZE = n]    **{512..see
 below}
 
 The size of the {{< TransferCFT/axwayvariablesComponentShortName  >}} internal buffer used to exchange data between Transfer CFT

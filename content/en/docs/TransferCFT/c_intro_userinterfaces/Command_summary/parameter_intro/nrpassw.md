@@ -1,17 +1,14 @@
 ---
-
-    title: nrpassw
-    linkTitle: nrpassw
-    weight: 2300
-
----
-<span id="nrpassw"></span>
+    title: "nrpassw"
+    linkTitle: "nrpassw"
+    weight: 2320
+---<span id="nrpassw"></span>
 
 ### nrpassw
 
 #### CFTPART
 
-**\[NRPASSW = string\]**
+**[NRPASSW = string]**
 
 *string32*     SFTP
 

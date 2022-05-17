@@ -1,17 +1,14 @@
 ---
-
-    title: trantask
-    linkTitle: trantask
-    weight: 3580
-
----
-<span id="trantask"></span>
+    title: "trantask"
+    linkTitle: "trantask"
+    weight: 3600
+---<span id="trantask"></span>
 
 ### trantask
 
 #### CFTPARM
 
-****\[TRANTASK = <u>3</u> | n \]****
+****[TRANTASK = <u>3</u> &#124; n ]****
 
 The maximum number of parallel transfers that a task can handle before starting another task (file access task). The value used may differ from the set value when the TRANTASK is greater than the MAXTRANS/MAXTASK value.
 
@@ -28,6 +25,7 @@ The following table indicates the maximum value supported for each system, where
 | UNIX/HP Nonstop | 64 |
 | z/OS (MVS) | 64 |
 | IBM i (OS400) | 64 |
+| OpenVMS  | 64 |
 
 
 ******Example******

@@ -1,13 +1,10 @@
 ---
+    title: "ict"
+    linkTitle: "ict"
+    weight: 1500
+---#### COPYFILE
 
-    title: ict
-    linkTitle: ict
-    weight: 1510
-
----
-#### COPYFILE
-
-****\[ICT = {H | C},\]****
+****[ICT = {H &#124; C},]****
 
 Type of input file data compression:
 
@@ -17,7 +14,7 @@ Type of input file data compression:
     compression
 
 This parameter is only meaningful if the value of ICOMP is not 0. The
-value of ICOMP must be compatible with the compression type (<span style="font-weight: bold;">****[icomp](../icomp)****</span>
+value of ICOMP must be compatible with the compression type (****[icomp](../icomp)****
 compresses the input file data).
 
 [Return to Command index](../../)

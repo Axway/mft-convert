@@ -1,11 +1,8 @@
 ---
-
-    title: Broadcasting on a store and forward site
-    linkTitle: Store and forward broadcasts
-    weight: 280
-
----
-This section describes how to use a partner broadcasting list with store and forward.
+    title: "Broadcasting on a store and forward site"
+    linkTitle: "Store and forward broadcasts"
+    weight: 270
+---This section describes how to use a partner broadcasting list with store and forward.
 
 To broadcast a file from a store and forward site:
 

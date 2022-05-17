@@ -1,15 +1,12 @@
 ---
-
-    title: ctlr
-    linkTitle: ctlr
-    weight: 550
-
----
-<span id="ctlr"></span>
+    title: "ctlr"
+    linkTitle: "ctlr"
+    weight: 540
+---<span id="ctlr"></span>
 
 ### ctlr
 
-**\[CTLR = *string8*\] OS**
+**[CTLR = *string8*] OS**
 
 Name of the communication controller.
 

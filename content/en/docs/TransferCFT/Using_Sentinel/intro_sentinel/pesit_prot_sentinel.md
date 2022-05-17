@@ -1,16 +1,13 @@
 ---
+    title: "XFBTransfer system attributes"
+    linkTitle: "XFBTransfer system attributes"
+    weight: 220
+---This section provides information on the following attributes:
 
-    title: XFBTransfer system attributes
-    linkTitle: XFBTransfer system attributes
-    weight: 230
-
----
-This section provides information on the following attributes:
-
-- <a href="#Monitori" class="MCXref xref">Monitoring errors</a>
-- <a href="#Monitori2" class="MCXref xref">Monitoring tracked-event messages</a>
-- <a href="#Monitori3" class="MCXref xref">Monitoring processing cycles</a>
-- <a href="#List" class="MCXref xref">List of Sentinel states</a>
+- [Monitoring errors](#Monitori)
+- [Monitoring tracked-event messages](#Monitori2)
+- [Monitoring processing cycles](#Monitori3)
+- [List of Sentinel states](#List)
 
 <span id="Monitori"></span>
 
@@ -36,7 +33,7 @@ This section provides information on the following attributes:
 | ProductName | String | 50 | Name of the product that generated the relevant Tracked-Event. For customer applications this name is defined via the Universal Agent. | uconf: sentinel.trkproductname |
 | ProductIPAddr | String | 20 | Domain Name Server (DNS) of the product/application that generated the relevant Tracked Event. | uconf: sentinel.trkproductipaddr |
 | ProductOS | String. | 20 | Operating system of the application that generated the relevant Tracked Event. | {{< TransferCFT/axwayvariablesComponentShortName  >}} target |
-| State | String | 29 | Status of the relevant Tracked Event. The possible values of this attribute depend on the tracked application/product and file transfer protocol used. See <a href="#List" >List of Sentinel states</a> . | PHASE/PHASESTEP combination |
+| State | String | 29 | Status of the relevant Tracked Event. The possible values of this attribute depend on the tracked application/product and file transfer protocol used. See [List of Sentinel states](#List) . | PHASE/PHASESTEP combination |
 
 
 <span id="Monitori3"></span>
@@ -80,7 +77,7 @@ In the XFBTransfer Tracked Object, the Attributes ‘Direction” and “IsServe
 | RECEIVED | RECEIVED | 0 | 0 | 0 | File data transmission ended |
 | TO_ROUTE | TO_ROUTE | 0 | 0 | 0 | Received file to be routed (only on the relay site in store and forward mode) |
 | POST_PROC | RECEIVED | 0 | 0 | 0 | Post processing in progress |
-| POST_PROC_ABORT | RECEIVED | 0 | 1 | 1 | <span >Post processing aborted by the application (KEEP command)</span> |
+| POST_PROC_ABORT | RECEIVED | 0 | 1 | 1 | Post processing aborted by the application (KEEP command) |
 | ACK_EXPECTED | RECEIVED | 0 | 0 | 0 | Waiting for a local acknowledgement |
 | ACKED | ACKED | 1 | 0 | 0 | Transfer locally acknowledged by the application |
 | POST_PROC_ACK_ABORT | RECEIVED/ACKED/NACKED | 0 | 1 | 1 | Post processing of the Acknowledgement phase aborted by the application (KEEP command) |
@@ -96,7 +93,7 @@ In the XFBTransfer Tracked Object, the Attributes ‘Direction” and “IsServe
 | AVAILABLE | AVAILABLE | 0 | 0 | 0 | Transfer available |
 | SENDING | SENDING | 0 | 0 | 0 | File data transmission in progress |
 | CANCELED | CANCELED | 0 | 1 | 1 | File data transmission locally canceled (KEEP command) |
-| SUSPENDED | SUSPENDED | 0 | 0 | 1 | <span >File data transmission locally suspended (HALT command)</span> |
+| SUSPENDED | SUSPENDED | 0 | 0 | 1 | File data transmission locally suspended (HALT command) |
 | INTERRUPTED | INTERRUPTED | 0 | 1 | 1 | File data transmission remotely suspended |
 | SENT | SENT | 0 | 0 | 0 | File data transmission ended |
 | POST_PROC | SENT | 0 | 0 | 0 | Post processing in progress |
@@ -140,7 +137,7 @@ In the XFBTransfer Tracked Object, the Attributes ‘Direction” and “IsServe
 | INTERRUPTED | INTERRUPTED | 0 | 1 | 1 | File data transmission remotely suspended |
 | SENT | SENT | 0 | 0 | 0 | File data transmission ended |
 | POST_PROC | SENT | 0 | 0 | 0 | Post-processing in progress |
-| POST_PROC_ABORT | SENT | 0 | 1 | 1 | <span >Post-processing aborted by the application (KEEP command)</span> |
+| POST_PROC_ABORT | SENT | 0 | 1 | 1 | Post-processing aborted by the application (KEEP command) |
 | ACK_EXPECTED | SENT | 0 | 0 | 0 | Waiting for a remote acknowledgement |
 | ENDED_TO_ACK | ENDED_TO_ACK | 0 (ack expected)/1 | 0 | 0 | Transfer remotely acknowledged |
 | POST_PROC_ACK_ABORT | SENT/ENDED_TO_ACK/ENDED_TO_NACK | 0 | 1 | 1 | Post-processing of the Acknowledgement phase aborted by the application (KEEP command) |

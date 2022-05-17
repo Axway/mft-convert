@@ -1,20 +1,17 @@
 ---
-
-    title: Folder monitoring IBM i native files
-    linkTitle: Folder monitoring IBM i native files
+    title: "Folder monitoring IBM i native files"
+    linkTitle: "Folder monitoring IBM i native files"
     weight: 200
-
----
-This section describes the IBM i native file folder monitoring specificities. The IBM i native files folder monitoring mechanism is the same as [Scheduled folder monitoring](../#scheduled_folder): Transfer CFT periodically checks the status of native files (\*FILE objects) in a defined library to see if there are transfer candidates.
+---This section describes the IBM i native file folder monitoring specificities. The IBM i native files folder monitoring mechanism is the same as [Scheduled folder monitoring](../#scheduled_folder): Transfer CFT periodically checks the status of native files (\*FILE objects) in a defined library to see if there are transfer candidates.
 
 ## Support
 
 Native file monitoring supports:
 
 - All filtering methods are supported - STRJCMP, WILDMAT, REGEXP.
-- The file method with a file having the same name as the scanned file, which is created in the Working library. This file has a unique member called <span class="bold_in_para">****met**** </span>that hosts metadata.
+- The file method with a file having the same name as the scanned file, which is created in the Working library. This file has a unique member called ****met**** that hosts metadata.
 - The move method with or without timestamps.
-- The RENAMEMETHOD parameter's TIMESTAMP option (MOVE method). However, due to file name limitation the timestamp is shorter than as described in [CFTFOLDER](../../../c_intro_userinterfaces/web_copilot_ui/flow_def_intro/cftfolder#CFTFOLDE).
+- The RENAMEMETHOD parameter's TIMESTAMP option (MOVE method). However, due to file name limitation the timestamp is shorter than as described in [CFTFOLDER](../../../c_intro_userinterfaces/web_copilot_ui/flow_def_intro/cftfolder).
 
 ## Limitations
 
@@ -26,8 +23,8 @@ Native file monitoring supports:
 
 To monitor the creation of native files in a library:
 
-1. Define the scanned library using the scanning directory parameter (<span class="code">`SCANDIR`</span>).
-1. Create a working library to take the place of the working directory, and define (<span class="code">`WORKDIR`</span>).
+1. Define the scanned library using the scanning directory parameter (`SCANDIR`).
+1. Create a working library to take the place of the working directory, and define (`WORKDIR`).
 
 > **Note**
 >
@@ -35,7 +32,7 @@ To monitor the creation of native files in a library:
 
 ****Example****
 
-Below the CFTFOLDER object uses <span class="code">`CFTFOLD1 `</span>as the scanning directory, and <span class="code">`CFTWRK1 `</span>as the working directory (library).
+Below the CFTFOLDER object uses `CFTFOLD1 `as the scanning directory, and `CFTWRK1 `as the working directory (library).
 
 ```
 CFTFOLDER MODE=REPLACE,
@@ -46,8 +43,10 @@ RESUBMITCHANGES=YES,
 FILEIDLEDELAY=5,
 IDF=BIN,
 PART=PARIS,
-SCANDIR=<span class="bold_in_para">****CFTFOLD1****</span>,
-WORKDIR=<span class="bold_in_para">****CFTWRK1****</span>,
+SCANDIR= CFTFOLD1
+,
+WORKDIR= CFTWRK1
+,
 RENAMEMETHOD=TIMESTAMP
 ```
 

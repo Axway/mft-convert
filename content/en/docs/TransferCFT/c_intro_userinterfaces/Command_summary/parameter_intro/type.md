@@ -1,19 +1,16 @@
 ---
-
-    title: type
-    linkTitle: type
-    weight: 3640
-
----
-<span id="type"></span>
+    title: "type"
+    linkTitle: "type"
+    weight: 3660
+---<span id="type"></span>
 
 ### type
 
 #### ABOUT
 
-\[ TYPE
-= { <span style="text-decoration: underline;">ALL</span>
-| HOST | CFT } \]
+[ TYPE
+= { ALL
+&#124; HOST &#124; CFT } ]
 
 Displays
 the Transfer CFT product, host, and key information.
@@ -22,8 +19,8 @@ the Transfer CFT product, host, and key information.
 
 #### ACT
 
-\[TYPE = PART | TRK | CRON | FOLDER 
-\]
+[TYPE = PART &#124; TRK &#124; CRON &#124; FOLDER 
+]
 
 Type of object to be deactivated.
 
@@ -36,8 +33,8 @@ Type of object to be deactivated.
 
 #### INACT
 
-\[TYPE = PART | TRK | CRON | FOLDER
-\]
+[TYPE = PART &#124; TRK &#124; CRON &#124; FOLDER
+]
 
 Type of object to be deactivated.
 
@@ -54,7 +51,7 @@ Type of object to be deactivated.
 #### CFTCOM
 
 TYPE = { FILE
-| TCPIP}
+&#124; TCPIP}
 
 Type of {{< TransferCFT/axwayvariablesComponentShortName  >}} communication medium.
 
@@ -69,7 +66,7 @@ This parameter can take the following values:
 
 #### CFTNET
 
-\[TYPE = { TCP } \] 
+[TYPE = { TCP } ] 
 
 Defines the type of network resource. This parameter can take the following
 values, according to the system:
@@ -79,7 +76,7 @@ values, according to the system:
 
 #### CFTIDF
 
-TYPE = { RECV | SEND}
+TYPE = { RECV &#124; SEND}
 
 The transfer direction for which this correspondence is valid. Select
 either:
@@ -93,8 +90,8 @@ either:
 
 #### CFTEXIT
 
-\[TYPE = {FILE
-| ACCESS | EXEC | BOT }\] 
+[TYPE = {FILE
+&#124; ACCESS &#124; EXEC &#124; BOT }] 
 
 The type of exit program, as follows:
 
@@ -108,8 +105,8 @@ The type of exit program, as follows:
 
 #### CFTACCNT
 
-\[TYPE = {FILE
-| SYST }\] 
+[TYPE = {FILE
+&#124; SYST }] 
 
 This defines the accounting type. CFTACCNT TYPE parameters are:
 
@@ -124,7 +121,7 @@ This defines the accounting type. CFTACCNT TYPE parameters are:
 
 #### CFTPROT
 
-\[TYPE = {PeSIT | ODETTE  }\]
+[TYPE = {PeSIT &#124; ODETTE  }]
 
 Type
 of transfer protocol.
@@ -137,7 +134,7 @@ of transfer protocol.
 
 #### LISTPART
 
-TYPE ={ALL | DEST | PART | TCP}
+TYPE ={ALL &#124; DEST &#124; PART &#124; TCP}
 
 <span id="Type_table1"></span>
 
@@ -156,8 +153,8 @@ TYPE ={ALL | DEST | PART | TCP}
 
 #### CONFIG
 
-TYPE = {CAT | COM | INPUT | OUTPUT
-| PARM | PART}
+TYPE = {CAT &#124; COM &#124; INPUT &#124; OUTPUT
+&#124; PARM &#124; PART}
 
 Defines the medium concerned.
 
@@ -176,7 +173,7 @@ Defines the medium concerned.
 
 #### SWITCH
 
-\[TYPE = {LOG | ACCNT}\]
+[TYPE = {LOG &#124; ACCNT}]
 
 Defines the switch action for CFTLOG or CFTACCNT. File types are:
 
@@ -196,8 +193,8 @@ Defines the switch action for CFTLOG or CFTACCNT. File types are:
 
 #### CFTEXT
 
-\[TYPE = {[see Type
-table below](#Type_table) }\]
+[TYPE = {[see Type
+table below](#Type_table) }]
 
 Defines the parameters to extract.
 
@@ -230,9 +227,9 @@ Defines the parameters to extract.
 
 #### LISTPARM
 
-TYPE = {ACCNT |
-ALL | AUTH | CAT | COM | ETB | IDF | LOG | NET |PARM | PROT | RECV | SEND
-| XLATE }
+TYPE = {ACCNT &#124;
+ALL &#124; AUTH &#124; CAT &#124; COM &#124; ETB &#124; IDF &#124; LOG &#124; NET &#124;PARM &#124; PROT &#124; RECV &#124; SEND
+&#124; XLATE }
 
 Defines the type of parameters to
 list from the {{< TransferCFT/axwayvariablesComponentShortName  >}} parameter file.
@@ -265,7 +262,7 @@ TYPE can take the predefined values indicated in the Type table below.
 
 #### RECONFIG
 
-TYPE = { CRON | UCONF | CAT | FOLDER | PARMCACHE | AM}
+TYPE = { CRON &#124; UCONF &#124; CAT &#124; FOLDER &#124; PARMCACHE &#124; AM}
 
 - CAT: Resize the catalog while the Transfer CFT is running (hot catalog resizing)
 - CRON: Reload the CFTCRON objects

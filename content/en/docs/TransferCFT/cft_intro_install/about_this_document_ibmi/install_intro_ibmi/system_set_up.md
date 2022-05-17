@@ -1,11 +1,8 @@
 ---
-
-    title: About the installed environment
-    linkTitle: About the installed environment
+    title: "About the installed environment"
+    linkTitle: "About the installed environment"
     weight: 170
-
----
-## Transfer CFT libraries
+---## Transfer CFT libraries
 
 After complete installation of the Transfer CFT product, the procedure will create the following libraries:
 

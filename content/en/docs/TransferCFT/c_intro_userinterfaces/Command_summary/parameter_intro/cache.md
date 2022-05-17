@@ -1,18 +1,15 @@
 ---
-
-    title: cache
-    linkTitle: cache
-    weight: 350
-
----
-<span id="cache"></span>
+    title: "cache"
+    linkTitle: "cache"
+    weight: 340
+---<span id="cache"></span>
 
 ### cache
 
 #### CFTCAT
 
-**\[CACHE =  n
-\]    **{1..32000}
+**[CACHE =  n
+]    **{1..32000}
 
 Size parameter for the cache memory buffer size, containing
 the transfers waiting for resources.
@@ -27,8 +24,8 @@ initial value.
 
 #### CFTSSL
 
-**\[CACHE =  <span style="text-decoration: underline;">NO</span>
-| YES \]   **
+**[CACHE =  NO
+&#124; YES ]   **
 
 Activate the SSL cache.
 

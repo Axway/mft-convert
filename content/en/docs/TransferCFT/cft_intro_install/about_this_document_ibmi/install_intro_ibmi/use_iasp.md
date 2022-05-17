@@ -1,11 +1,8 @@
 ---
-
-    title: Use an independent ASP (optionally)
-    linkTitle: Use an IASP (optionally)
+    title: "Use an independent ASP (optionally)"
+    linkTitle: "Use an IASP (optionally)"
     weight: 210
-
----
-## About independent ASPs (IASP)
+---## About independent ASPs (IASP)
 
 An independent ASP (or independent disk pool) is a collection of disk units that can be brought online or taken offline independent of other system storage, including the system ASP, user ASPs, and other independent ASPs. Independent ASPs are useful both in single and multiple system environments.
 
@@ -34,9 +31,9 @@ For Transfer CFT to be able to access the files located on an Independent ASP (w
 
 1. Connect to your system.
 1. Start the IASP.
-1. Before starting Transfer CFT, use the <span class="code">`EDTLIB `</span>command to add the following three libraries:
+1. Before starting Transfer CFT, use the `EDTLIB `command to add the following three libraries:
     -   CFTPGM: Contains the Transfer CFT programs
     -   CFTPROD: Contains the Transfer CFT configuration
     -   CFTSBSLIB: An additional library in the ASP that contains your SBS
-1. Use the <span class="code">`SETASPGRP `</span>command to enable your IASP.
-1. Use the <span class="code">`CFTSTART `</span>command to start Transfer CFT.
+1. Use the `SETASPGRP `command to enable your IASP.
+1. Use the `CFTSTART `command to start Transfer CFT.

@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer  procedure 
-    linkTitle: Transfer procedure
-    weight: 220
-
----
-This topic describes the following PeSIT transfer procedure processes and concepts:
+    title: "Transfer  procedure "
+    linkTitle: "Transfer procedure"
+    weight: 210
+---This topic describes the following PeSIT transfer procedure processes and concepts:
 
 - [Establishing a connection](#Establishing_a_connection)
 - [Transfer concatenation](#Transfer_Concatenation)

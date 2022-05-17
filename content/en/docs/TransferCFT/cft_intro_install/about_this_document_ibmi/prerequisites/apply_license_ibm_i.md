@@ -1,11 +1,8 @@
 ---
-
-    title: Apply a license key
-    linkTitle: Apply a license key
+    title: "Apply a license key"
+    linkTitle: "Apply a license key"
     weight: 170
-
----
-You need to apply a valid license key to Transfer CFT in the following situations:
+---You need to apply a valid license key to Transfer CFT in the following situations:
 
 - You perform an initial Transfer CFT installation.
 - A hardware upgrade changes the CPU ID (CPU serial number).
@@ -40,10 +37,11 @@ Use the CFTUTIL utility to execute the ABOUT command to find the CPU ID.
 CFTUTIL PARAM(ABOUT)
 Host information :
 \* model = 525 \*
-<span class="PageNumber">cpuid</span> = 10A16B2
+cpuid
+= 10A16B2
 ```
 
-In this example, you would provide the CPU ID <span class="spanboldinpara">10A16B2</span>.
+In this example, you would provide the CPU ID 10A16B2.
 
 Use the display system value command to get the serial number, known as QSRLNBR:
 
@@ -51,10 +49,11 @@ Use the display system value command to get the serial number, known as QSRLNBR:
 DSPSYSVAL SYSVAL(QSRLNBR)
 System value . . . . . : QSRLNBR
 Description . . . . . : System serial number
-<span class="PageNumber">Serial number . . . . </span>: 06890AP
+Serial number . . . .
+: 06890AP
 ```
 
-In this example, you would provide the CPU ID<span class="code">` 06890AP`</span>.
+In this example, you would provide the CPU ID` 06890AP`.
 
 > **Note**
 >

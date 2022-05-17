@@ -1,11 +1,8 @@
 ---
-
-    title: Partner naming conventions 
-    linkTitle: Partner naming conventions
-    weight: 250
-
----
-The parameter setting relative to partners makes a distinction between
+    title: "Partner naming conventions "
+    linkTitle: "Partner naming conventions"
+    weight: 240
+---The parameter setting relative to partners makes a distinction between
 the *network* names and *local* names. This
 section describes the naming conventions to use in Transfer CFT.
 

@@ -1,11 +1,16 @@
 ---
-
-    title: Governance services
-    linkTitle: Governance services
+    title: "Governance services"
+    linkTitle: "Governance services"
     weight: 130
+---{{< TransferCFT/axwayvariablesCompanyName  >}} Flow Manager and {{< TransferCFT/PrimaryCGorUM  >}} are two {{< TransferCFT/axwayvariablesPlatformorSuiteLongName  >}} management applications that provide a set of services for administering Transfer CFTs. From the Flow Manager UI, for example, you can configure, access logs, and perform operational tasks for your {{< TransferCFT/axwayvariablesComponentShortName  >}}. Flow Manager also simplifies the task of creating flows, and supports mass deployment of configuration changes to groups of {{< TransferCFT/axwayvariablesComponentShortName  >}}s.
 
----
-{{< TransferCFT/axwayvariablesCompanyName  >}} {{< TransferCFT/PrimaryCGorUM  >}} and Flow Manager are two {{< TransferCFT/axwayvariablesPlatformorSuiteLongName  >}} management applications that provide a set of services for administering Transfer CFTs. From the {{< TransferCFT/PrimaryCGorUM  >}} UI, for example, you can configure, access logs, and perform operational tasks for your {{< TransferCFT/axwayvariablesComponentShortName  >}}. Central Governance also simplifies the task of creating file transfers definitions, and supports mass deployment of configuration changes to groups of {{< TransferCFT/axwayvariablesComponentShortName  >}}s.
+## {{< TransferCFT/suitevariablesFlowManager  >}}
+
+Flow Manager is an enterprise-scale MFT solution that provides a set of services and templates to configure and deploy file transfer patterns. Flow Manager also provides API services to extend the MFT functionality. Using Flow Manager you can deploy anywhere, control centrally, and empower IT and business users with self-service MFT capabilities. Flow Manager helps you to increase the efficiency of your data exchange ecosystem, reduce time to revenue, and streamline your business file transfer needs.
+
+ 
+
+## {{< TransferCFT/PrimaryCGorUM  >}}
 
 {{< TransferCFT/PrimaryCGorUM  >}} offers the following key features:
 

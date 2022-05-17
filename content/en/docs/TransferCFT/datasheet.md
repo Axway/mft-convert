@@ -1,11 +1,8 @@
 ---
-
-    title: System support
-    linkTitle: System support
+    title: "System support"
+    linkTitle: "System support"
     weight: 50
-
----
-This page provides basic operating system, supported feature, and file system information. Always check the [Supported Platform Guide](https://docs.axway.com/bundle/Axway_Products_SupportedPlatforms_allOS_en/resource/Axway_Products_SupportedPlatforms_allOS_en.pdf) for the latest updates.
+---This page provides basic operating system, supported feature, and file system information. Always check the [Supported Platform Guide](https://docs.axway.com/bundle/Axway_Products_SupportedPlatforms_allOS_en/resource/Axway_Products_SupportedPlatforms_allOS_en.pdf) for the latest updates.
 
 ## Platforms
 
@@ -25,7 +22,7 @@ This page provides basic operating system, supported feature, and file system in
 
 ### Operating systems for Z
 
-- Red Hat Enterprise Linux 5, 6, 7
+- Red Hat Enterprise Linux 5, 6, 7, 8
 - SUSE Linux Enterprise Server 11
 - z/OS 2.1, 2.2, 2.3, 2.4
 
@@ -44,6 +41,7 @@ This page provides basic operating system, supported feature, and file system in
 - HP NonStop H and J series for ia64
 - HP NonStop L series for x86-32
 - IBM i 7.2, 7.3, 7.4
+- OpenVMS 8.3, 8.4 for Alpha and ia64
 
 <span id="Virtuali"></span>
 
@@ -55,11 +53,20 @@ This page provides basic operating system, supported feature, and file system in
 - VMware EXSi Virtual Machine
 - Other: Axway provides support for Axway products running in a virtual environment in a manner identical to Axway products running on any other major x86-based system. If, however, Axway suspects that the virtualization layer is the root cause of an incident, then the customer is required to contact the appropriate virtualization support provider to resolve the virtualization issue.
 
+## Container support
+
+- Docker Compose
+- Kubernetes 1.14 and higher
+- OpenShift 3 and 4
+- Helm 2.16 and higher, Helm 3 and higher
+
 ## Web browsers
 
-- Microsoft Edge – latest version
-- Mozilla Firefox – latest version
-- Google Chrome – latest version
+Your browser-based experience is best when using the latest version of one of the following browsers:
+
+- Chrome
+- Microsoft Edge
+- Firefox (keyboard shortcuts are not enabled)
 
 ## File systems for multi-node
 
@@ -69,6 +76,7 @@ This page provides basic operating system, supported feature, and file system in
 | AIX  | GPFS, NFSv4*  | NFSv3, CXFS, VeritasSF  |
 | HP-UX  | NFSv4*  | NFSv3, CXFS, VeritasSF  |
 | Linux-x86  | GPFS, NFSv4*  | NFSv3, CXFS, ACFS, OCFSv1, OCFSv2, QFS, VeritasSF  |
+| OpenVMS  | RMS  |   |
 | Solaris  | NFSv4*  | NFSv3, CXFS, QFS, VeritasSF  |
 | Windows-x86  | SMB/CIFS, GPFS  | CXFS, NFS  |
 | z/OS  | Sharing DASD across Sysplex  |   |
@@ -78,14 +86,15 @@ This page provides basic operating system, supported feature, and file system in
 
 ## Cloud storage
 
-**Available on Linux-x64 and Windows x64**
+**Available on Unix and Windows**
 
-- Amazon Web Services S3 (Amazon Simple Storage Service).
-- Ceph Storage Cluster using the Ceph Object Gateway and its S3 compatible API.
+- Amazon Web Services S3 (Amazon Simple Storage Service)
+- Ceph Storage Cluster using the Ceph Object Gateway and its S3 compatible API
+- Google Cloud Storage
 
 ## Java
 
-If you are implementing either {{< TransferCFT/suitevariablesTrustedFileName  >}} or {{< TransferCFT/suitevariablesSecureRelayName  >}} with {{< TransferCFT/suitevariablesTransferCFTName  >}}, ensure that you have Java JRE 8 installed.
+If you are implementing either {{< TransferCFT/suitevariablesTrustedFileName  >}} or {{< TransferCFT/suitevariablesSecureRelayName  >}} with {{< TransferCFT/suitevariablesTransferCFTName  >}}, ensure that you have Java JRE 8 (1.8.0 u272 or higher) installed. When using {{< TransferCFT/suitevariablesSecureClientName  >}}, additionally please check that the Master Agent and Router Agent are using the same version of Java.
 
 ## Standard defaults
 
@@ -101,15 +110,17 @@ The Internet Assigned Numbers Authority (IANA) reserves the TCP ports 1761-1768 
 | Copilot  | 1766  |
 | Transfer CFT UI (Copilot) server for {{< TransferCFT/suitevariablesCentralGovernanceName  >}}  | 1767  |
 | REST API  | 1768  |
-| {{< TransferCFT/PrimaryCGorUM  >}}  | 12553  |
-| {{< TransferCFT/suitevariablesCentralGovernanceName  >}} SSL  | 12554  |
+| Flow Manager or {{< TransferCFT/PrimaryCGorUM  >}}  | 12553  |
+| Flow Manager or {{< TransferCFT/suitevariablesCentralGovernanceName  >}} SSL  | 12554  |
 | {{< TransferCFT/suitevariablesSecureRelayName  >}} MA<br/> ma.comm_port |  <br/> 6801 |
 | {{< TransferCFT/suitevariablesSecureRelayName  >}} RA<br/> • ra.comm_port<br/> • ra.admin_port |  <br/> • 6811<br/> • 6810 |
 
 
+\*not supported
+
 > **Note**
 >
-> In this document, the terms Transfer CFT OS/400 and Transfer CFT IBM i may be used interchangeably.
+> In this document, the terms Transfer CFT OS/400 and Transfer CFT IBM i may be used interchangeably, as well as VMS with OpenVMS, and MVS with z/OS.
 
 ## Third party licenses
 

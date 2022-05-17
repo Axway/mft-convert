@@ -1,17 +1,14 @@
 ---
-
-    title: ocomp
-    linkTitle: ocomp
-    weight: 2400
-
----
-<span id="ocomp"></span>
+    title: "ocomp"
+    linkTitle: "ocomp"
+    weight: 2420
+---<span id="ocomp"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
 #### COPYFILE
 
-**\[OCOMP = {<u>0</u> | 15}\]**
+**[OCOMP = {<u>0</u> &#124; 15}]**
 
 Compresses the output file data.
 

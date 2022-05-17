@@ -1,11 +1,8 @@
 ---
-
-    title:  Transfer CFT messages: CFTW
-    linkTitle: CFTW messages
-    weight: 390
-
----
-This topic lists the CFTWxx and CFTXxx messages and provides the type, a description, consequence, and corrective actions when applicable.
+    title: " Transfer CFT messages: CFTW"
+    linkTitle: "CFTW messages"
+    weight: 380
+---This topic lists the CFTWxx and CFTXxx messages and provides the type, a description, consequence, and corrective actions when applicable.
 
 **Message format**
 
@@ -15,9 +12,9 @@ Earlier versions of Transfer CFT used a different message format than version 3.
 
 **Example**
 
-CFTLOG FORMAT=\[V23,V24\]
+CFTLOG FORMAT=[V23,V24]
 
-For V23: <span class="code">`CFTT57I PART=&part IDF=&idf IDT=&idt &str transfer started`</span>
+For V23: `CFTT57I PART=&part IDF=&idf IDT=&idt &str transfer started`
 
 For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&idt>`
 
@@ -83,7 +80,7 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
  
 
 
-| V23 format<br/> <br/> V24 format<br/> <br/> Information | <span id="CFTW09I"></span>CFTW09I PART=&amp;part IDF=&amp;idf IDT=&amp;idt CFTSEND &amp;idf NIDF=&amp;nidf XLATE=&amp;xlate<br/> CFTW09I PART=&amp;part IDF=&amp;idf IDT=&amp;idt CFTRECV &amp;idf NIDF=&amp;nidf XLATE=&amp;xlate<br/> CFTW09I CFTSEND &amp;idf &lt;IDTU=&amp;idtu PART=&amp;part IDF=&amp;idf IDT=&amp;idt NIDF=&amp;nidf XLATE=&amp;xlate&gt;<br/> CFTW09I CFTRECV &amp;idf &lt;IDTU=&amp;idtu PART=&amp;part IDF=&amp;idf IDT=&amp;idt NIDF=&amp;nidf XLATE=&amp;xlate&gt; |
+| V23 format<br/> <br/> V24 format<br/> <br/> Information | <span id="CFTW09I"></span>CFTW09I PART=&amp;part IDF=&amp;idf1 &amp;str IDT=&amp;idt CFTSEND &amp;idf2 NIDF=&amp;nidf XLATE=&amp;xlate<br/> CFTW09I PART=&amp;part IDF=&amp;idf1 &amp;str IDT=&amp;idt CFTRECV &amp;idf2 NIDF=&amp;nidf XLATE=&amp;xlate<br/> CFTW09I CFTSEND &amp;idf1 &amp;str&lt;IDTU=&amp;idtu PART=&amp;part IDF=&amp;idf2 IDT=&amp;idt NIDF=&amp;nidf XLATE=&amp;xlate<br/> CFTW09I CFTRECV &amp;idf1 &amp;str &lt;IDTU=&amp;idtu PART=&amp;part IDF=&amp;idf2 IDT=&amp;idt NIDF=&amp;nidf XLATE=&amp;xlate |
 | --- | --- |
-| Explanation | Indicates the ID of the CFTSEND or CFTRECV that was actually used.<br/> <span >****Example****</span><br/> CFTW09I CFTSEND TRTR &lt;IDTU=A0000024 PART=SERVER IDF=TRTR IDT=I0714504 NIDF=TRTR XLATE=CONV1&gt; |
+| Explanation | Indicates the ID that was used.<br/> • &amp;idf1 indicates the CFTSEND or CFTRECV ID to use<br/> • &amp;idf2 indicates the SEND or RECV ID (in requester mode), or CFTSEND or CFTRECV ID (in server mode) provided to Transfer CFT<br/> • If &amp;idf1 differs from &amp;idf2, then &amp;str = "default" indicates that {{< TransferCFT/axwayvariablesComponentLongName  >}} is using the default template<br/> ****Example 1****<br/> The IDF is not defined in a CFTSEND command, for example: SEND PART=SERVER,IDF=UNKN but no CFTSEND ID=UNKN<br/> Defined: CFTW09I CFTSEND BIN default &lt;IDTU=A0000024 PART=SERVER IDF=UNKN IDT=I0714504 NIDF=TRTR XLATE=TAB&gt;<br/> **Example 2**<br/> IDF is defined in a CFTSEND command, for example: SEND PART=SERVER,IDF=TRTR and CFTSEND ID=TRTR<br/> Defined: CFTW09I CFTSEND TRTR &lt;IDTU=A0000024 PART=SERVER IDF=TRTR IDT=I0714504 NIDF=TRTR XLATE=TAB&gt; |
 

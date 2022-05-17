@@ -1,17 +1,14 @@
 ---
-
-    title: scope
-    linkTitle: scope
-    weight: 3090
-
----
-<span id="scope"></span>
+    title: "scope"
+    linkTitle: "scope"
+    weight: 3110
+---<span id="scope"></span>
 
 ### scope
 
 #### KEEP, HALT, DELETE, END, START, RESUME
 
-****\[SCOPE = { <u>PARENT</u> | CHILDREN | ALL } \]****
+****[SCOPE = { <u>PARENT</u> &#124; CHILDREN &#124; ALL } ]****
 
 - PARENT: Applies the command to the selected transfers.
 - CHILDREN: Applies the command to the children of the selected transfers if the selected transfers are generic. Otherwise:
@@ -21,8 +18,8 @@
 
 #### LISTUCONF, UCONFSET, UCONFGET
 
-****\[ SCOPE= {
-USER | DEFAULT | ALL | \* } \]****
+****[ SCOPE= {
+USER &#124; DEFAULT &#124; ALL &#124; \* } ]****
 
 Filters according to the UCONF setting. For example, use USER to filter for values set by the user.
 

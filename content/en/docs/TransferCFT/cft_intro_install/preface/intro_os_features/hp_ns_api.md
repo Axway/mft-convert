@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer CFT APIs
-    linkTitle: Transfer CFT APIs
+    title: "Transfer CFT APIs"
+    linkTitle: "Transfer CFT APIs"
     weight: 240
-
----
-You can use Transfer CFT APIs either on HP NonStop, or via the native system. To use APIs with HP NonStop, refer to the services described in the Transfer CFT User Guide for Unix platforms.
+---You can use Transfer CFT APIs either on HP NonStop, or via the native system. To use APIs with HP NonStop, refer to the services described in the Transfer CFT User Guide for Unix platforms.
 
 On a Guardian platform, {{< TransferCFT/axwayvariablesComponentLongName  >}} APIs are available through a server. However, only one server can access the {{< TransferCFT/axwayvariablesComponentLongName  >}} catalog file at a time. This means that if an application is working with the catalog, the other applications are notified via a report and are set to pending. We therefore recommend using more than one server to avoid this limitation.
 

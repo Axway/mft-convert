@@ -1,11 +1,8 @@
 ---
-
-    title: Upgrade  Transfer CFT 
-    linkTitle: Upgrade Transfer CFT
-    weight: 170
-
----
-This section explains how to upgrade an existing Transfer CFT from 3.1.3 or higher to{{< TransferCFT/axwayvariablesComponentShortName  >}} {{< TransferCFT/PrimaryTransferCFTversionlong  >}}. It begins by detailing the prerequisites for a standalone (non multi-node) upgrade. For details on upgrading a multi-node installation, see <a href="../upgrade_multinode_ux#Upgrade" class="MCXref xref">Upgrade a Transfer CFT multi-node installation</a>.
+    title: "Upgrade  Transfer CFT "
+    linkTitle: "Upgrade Transfer CFT"
+    weight: 160
+---This section explains how to upgrade an existing Transfer CFT from 3.1.3 or higher to{{< TransferCFT/axwayvariablesComponentShortName  >}} {{< TransferCFT/PrimaryTransferCFTversionlong  >}}. It begins by detailing the prerequisites for a standalone (non multi-node) upgrade. For details on upgrading a multi-node installation, see [Upgrade a Transfer CFT multi-node installation](../upgrade_multinode_ux#top).
 
 ## About upgrades
 
@@ -35,7 +32,7 @@ Before beginning the upgrade procedure, you should:
 
 During an upgrade, if the CFTCOM file path is greater than 64 characters the COM file is not migrated, and you must migrate it manually.
 
-When upgrading from {{< TransferCFT/suitevariablesTransferCFTName  >}} 3.1.3 to 3.3.2 or higher, check that the PKIPASSW length value in the CFT 3.1.3 version (source) is not greater than 8 characters. If it is, truncate the password as described in <a href="../../../mig_impact_considerations" class="MCXref xref">Migration or upgrade impact and considerations</a>
+When upgrading from {{< TransferCFT/suitevariablesTransferCFTName  >}} 3.1.3 to 3.3.2 or higher, check that the PKIPASSW length value in the CFT 3.1.3 version (source) is not greater than 8 characters. If it is, truncate the password as described in [Migration or upgrade impact and considerations](../../../mig_impact_considerations)
 
 ## Use {{< TransferCFT/PrimaryCGorUM  >}} to upgrade {{< TransferCFT/suitevariablesTransferCFTName  >}}
 
@@ -52,22 +49,22 @@ You can use the following installer options for {{< TransferCFT/suitevariablesTr
 **--architecture &lt;architecture>**: Installation architecture (single or cluster mode).
 
 - Default: single
-- Allowed: single first\_host additional\_host
+- Allowed: single first_host additional_host
 
-**--runtimedir &lt;runtimedir>**: Shared Runtime Directory. On LEGACY upgrades, this is the shared data directory where the Axway Installer was installed.
+**--runtimedir &lt;runtimedir>**: Shared Runtime Directory. On LEGACY upgrades, you must specify the installation’s shared directory instead of the runtime. For example:` /mnt/Axway_Shared `or` Z:\Axway_Shared`
 
-- Only used when architecture=additional\_host
+- Only used when architecture=additional_host
 
 **--installdir &lt;installdir>**: Directory where the Transfer CFT is installed/upgraded. On LEGACY upgrades, this is the directory where the Axway Installer was installed.
 
-- Not used when architecture=additional\_host
+- Not used when architecture=additional_host
 - Default:&lt;Current Drive>:\\axway\\cft
 
 **--conf-file &lt;conf-file>**: File used to personalize installation of Transfer CFT
 
 - In this type of installation only 2 parameters are used:
-    -   \- architecture and installdir (if architecture = single/first\_host), or
-    -   \- architecture and runtimedir (if architecture = additional\_host)
+    -   \- architecture and installdir (if architecture = single/first_host), or
+    -   \- architecture and runtimedir (if architecture = additional_host)
 
 You can set these using command line or the configuration file. The values passed in command line take precedence over the values in the configuration file.
 
@@ -83,11 +80,11 @@ Run the Axway Installer in update mode.
 
 1. Launch the Axway Installer
 
-1. Apply the Transfer\_CFT\_3.x.y\_SP\*\*\*\*\*.zip
+1. Apply the Transfer_CFT_3.x.y_SP\*\*\*\*\*.zip
 
     Where \*\*\*\*\* represents the SP level and the platform
 
-    Example: Transfer\_CFT\_3.1.3\_SP3\_aix-power-64\_BN8712000.zip
+    Example: Transfer_CFT_3.1.3_SP3_aix-power-64_BN8712000.zip
 
 > **Note**
 >
@@ -103,7 +100,8 @@ Run the Axway Installer in update mode.
 1. Uncompress the Transfer CFT installation kit.
 1. From the Transfer CFT installation kit, enter:  
     ```
-    ./Transfer_CFT_{{< TransferCFT/axwayvariablesReleaseNumber >}}_Install_<OS>_<BN>.run [<options>]
+    ./Transfer_CFT_ 3.10
+    _Install_<OS>_<BN>.run [<options>]
     ```
 1. Accept the license and the appropriate installation mode (for example, single installation).
 1. When prompted for the installation directory, enter the path to the existing Transfer CFT installation directory.
@@ -113,7 +111,7 @@ Run the Axway Installer in update mode.
 The following available options are described in detail in [Upgrade options](#Upgrade):
 
 - --architecture &lt;architecture>
-- --runtimedir &lt;runtimedir> (only available when architecture = additional\_hosts)
+- --runtimedir &lt;runtimedir> (only available when architecture = additional_hosts)
 - --installdir &lt;installdir>
 - --conf-file &lt;conf-file>
 - --help
@@ -137,5 +135,5 @@ Once you complete an upgrade from 3.7 or lower, you must execute the profile bef
 To check the {{< TransferCFT/axwayvariablesComponentShortName  >}} version, as well as the license key and system information, enter the command:
 
 ```
-<span class="code">`CFTUTIL ABOUT`</span>
+CFTUTIL ABOUT
 ```

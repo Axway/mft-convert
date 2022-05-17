@@ -1,11 +1,8 @@
 ---
-
-    title: Read commands
-    linkTitle: Read commands
-    weight: 310
-
----
-The QUERY, TEST, and WAITCAT commands can locate the first transfer that meets a certain set of criteria. But, if there are other transfers that meet this same criteria, they are overlooked. To overcome this limitation and find these additional transfers, you can use the read commands.
+    title: "Read commands"
+    linkTitle: "Read commands"
+    weight: 300
+---The QUERY, TEST, and WAITCAT commands can locate the first transfer that meets a certain set of criteria. But, if there are other transfers that meet this same criteria, they are overlooked. To overcome this limitation and find these additional transfers, you can use the read commands.
 
 Three read commands are available and described in this section:
 
@@ -121,7 +118,7 @@ FTEMOIN = STR
 
 No parameters are supplied for this command. The GETCAT function searches the catalog record corresponding to the selection criteria indicated by the BEGSELCA command parameters. If a record matches the criteria, predefined variables are initialized and can be exploited.
 
-The predefined variable \_CMDRET is always 0 for OK, and cannot be tested to see if the read was successful or not. In cases where there are additional transfers that meets the criteria, the variables \_CAT\_PART, and \_CAT\_IDT \_CAT\_IDTU have the keyword value of NIL.
+The predefined variable _CMDRET is always 0 for OK, and cannot be tested to see if the read was successful or not. In cases where there are additional transfers that meets the criteria, the variables _CAT_PART, and _CAT_IDT _CAT_IDTU have the keyword value of NIL.
 
 This enables you to compare the value of the partner string NIL to see if the read action is complete. See the ENDSELCA example in the following section.
 

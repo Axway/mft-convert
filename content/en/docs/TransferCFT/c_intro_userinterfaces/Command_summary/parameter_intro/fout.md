@@ -1,17 +1,14 @@
 ---
-
-    title: fout
-    linkTitle: fout
-    weight: 1280
-
----
-<span id="fout"></span>
+    title: "fout"
+    linkTitle: "fout"
+    weight: 1270
+---<span id="fout"></span>
 
 ### fout
 
 #### DISPLAY
 
-****\[ FOUT = file\_name \]****
+****[ FOUT = file_name ]****
 
 Defines the file that the
 command output is sent to. The file name represent the file where the
@@ -23,11 +20,11 @@ You can extract {{< TransferCFT/axwayvariablesComponentShortName  >}} messages f
 
 The message length for PeSIT ANY profile, when forwarding a message from one{{< TransferCFT/axwayvariablesComponentLongName  >}} to another, is 4096 bytes. The S/RRUSIZE must be greater than the maximum message length and message information combined (for example, 4127).
 
-LISTUCONF CONTENT=EXTRACT, <a href="#" class="selected">FOUT</a>=out extracts the UCONF (unified configuration).
+LISTUCONF CONTENT=EXTRACT, [FOUT](#)=out extracts the UCONF (unified configuration).
 
 #### EXTAMCACHE
 
-**\[ FOUT = file\_name \]
+**[ FOUT = file_name ]
   **
 
 Defines the file where the

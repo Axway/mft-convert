@@ -1,11 +1,8 @@
 ---
-
-    title: Exit task concepts
-    linkTitle: Managing exits
+    title: "Exit task concepts"
+    linkTitle: "Managing exits"
     weight: 270
-
----
-This section begins with this topic
+---This section begins with this topic
 which provides the information about:
 
 - [Exit
@@ -18,7 +15,7 @@ the environment and activation of an exit
 task. Each CFTEXIT object has an associated exit task. You can activate an exit task using:
 
 - [Command
-    line operations](../../c_intro_userinterfaces/web_copilot_ui/conf_intro/cftexit) for the CFTEXIT object
+    line operations](../../c_intro_userinterfaces/web_copilot_ui/flow_def_intro/cftexit) for the CFTEXIT object
 
 <span id="About_the_CFTEXIT_object"></span>
 
@@ -130,7 +127,6 @@ to call.
 The following diagram shows an example
 of a user program with two functions.
 
-********<span class="autonumber"></span>Communication structure********
+********Communication structure********
 
-********<span class="autonumber"></span>
-![Simplified view of a user program communicating with functions](/Images/TransferCFT/cft_exits_2.png)********
+********![Simplified view of a user program communicating with functions](/Images/TransferCFT/cft_exits_2.png)********

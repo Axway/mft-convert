@@ -1,17 +1,14 @@
 ---
-
-    title: rcomp
-    linkTitle: rcomp
-    weight: 2800
-
----
-<span id="rcomp"></span>
+    title: "rcomp"
+    linkTitle: "rcomp"
+    weight: 2820
+---<span id="rcomp"></span>
 
 ### rcomp
 
 #### CFTPROT
 
-****\[RCOMP = { <u>see the table</u> | 15 } \]****
+****[RCOMP = { <u>see the table</u> &#124; 15 } ]****
 
 Maximum authorized compression for receiving a file.
 This compression is negotiated between the sender and the receiver.
@@ -27,7 +24,7 @@ Default values are:
 | ODETTE  | 1  |
 
 
-See also <span style="font-weight: bold;">****[scomp](../scomp)****</span>.
+See also ****[scomp](../scomp)****.
 
 For more information (usable values etc.), refer to the *Compression*
 topic.

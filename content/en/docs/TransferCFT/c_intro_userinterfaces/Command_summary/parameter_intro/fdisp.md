@@ -1,11 +1,8 @@
 ---
-
-    title: fdisp
-    linkTitle: fdisp
-    weight: 1140
-
----
-<span id="fdisp"></span>
+    title: "fdisp"
+    linkTitle: "fdisp"
+    weight: 1130
+---<span id="fdisp"></span>
 
 ### fdisp
 
@@ -13,8 +10,8 @@
 
 #### CFTSEND, SEND
 
-****\[FDISP = { SHR
-| CHECK }\]****
+****[FDISP = { SHR
+&#124; CHECK }]****
 
 File sharing option:
 
@@ -38,8 +35,8 @@ File sharing option:
 
 #### CFTRECV, RECV
 
-****\[FDISP = { NEW | OLD | <u>BOTH</u>
-}\]****
+****[FDISP = { NEW &#124; OLD &#124; <u>BOTH</u>
+}]****
 
 Presence check indicator of the receiver file used to determine the
 action of the {{< TransferCFT/axwayvariablesComponentShortName  >}}:

@@ -1,23 +1,20 @@
 ---
-
-    title: mode
-    linkTitle: mode
+    title: "mode"
+    linkTitle: "mode"
     weight: 2010
-
----
-<span id="mode"></span>
+---<span id="mode"></span>
 
 ### mode
 
-#### All {{< TransferCFT/axwayvariablesComponentShortName  >}} commands <span style="font-weight: normal;"> </span>
+#### All {{< TransferCFT/axwayvariablesComponentShortName  >}} commands  
 
-****\[MODE = { <u>REPLACE</u> | CREATE | DELETE }\]****
+****[MODE = { <u>REPLACE</u> &#124; CREATE &#124; DELETE }]****
 
 Action to do in the parameter or partner database. This parameter applies
 to all commands that affect {{< TransferCFT/axwayvariablesComponentShortName  >}} databases. Possible values:
 
 - REPLACE
-    <span style="font-weight: normal;">(Default value)</span>
+    (Default value)
 - CREATE
 - DELETE
 
@@ -29,7 +26,7 @@ to all commands that affect {{< TransferCFT/axwayvariablesComponentShortName  >}
 
 #### DISPLAY
 
-****\[MODE = { ANY | COLUMN | LINE } \]****
+****[MODE = { ANY &#124; COLUMN &#124; LINE } ]****
 
 - ANY / COLUMN: Displays in a column format
 - Line: Displays in a more horizontal and spaced format
@@ -38,8 +35,8 @@ to all commands that affect {{< TransferCFT/axwayvariablesComponentShortName  >}
 
 #### TURN
 
-****\[MODE = { START | CREATE | ACT | INACT }
-\]****
+****[MODE = { START &#124; CREATE &#124; ACT &#124; INACT }
+]****
 
 - INACT: temporarily stops automated calls to a given site
 - ACT: reactivates automated calls after the INACT command
@@ -48,8 +45,8 @@ to all commands that affect {{< TransferCFT/axwayvariablesComponentShortName  >}
 
 #### INACT, ACT
 
-******\[MODE =
-{<u>BOTH</u> | REQUESTER | SERVER} \]******
+******[MODE =
+{<u>BOTH</u> &#124; REQUESTER &#124; SERVER} ]******
 
 Mode to be reactivated:
 
@@ -76,12 +73,12 @@ The CFTPART command’s STATE parameter is set to:
 
 #### PKIENTITY
 
-****\[MODE = { <u>REPLACE</u> | CREATE | DELETE }\]****
+****[MODE = { <u>REPLACE</u> &#124; CREATE &#124; DELETE }]****
 
 Action to do in the PKI database. Possible values:
 
 - REPLACE
-    <span style="font-weight: normal;">(Default)</span>
+    (Default)
 - CREATE
 - DELETE
 

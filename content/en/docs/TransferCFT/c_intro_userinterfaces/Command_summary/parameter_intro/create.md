@@ -1,17 +1,14 @@
 ---
-
-    title: create
-    linkTitle: create
-    weight: 560
-
----
-<span id="create"></span>
+    title: "create"
+    linkTitle: "create"
+    weight: 550
+---<span id="create"></span>
 
 ### create
 
 #### COPYFILE
 
-\[CREATE = {<u>‘ ’</u> | YES | NO},\]
+[CREATE = {<u>‘ ’</u> &#124; YES &#124; NO},]
 
 Options when creating an output file:
 

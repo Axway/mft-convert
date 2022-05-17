@@ -1,43 +1,40 @@
 ---
-
-    title: direct
-    linkTitle: direct
-    weight: 700
-
----
-<span id="direct_CFTCAT"></span><span id="direct"></span>
+    title: "direct"
+    linkTitle: "direct"
+    weight: 690
+---<span id="direct_CFTCAT"></span><span id="direct"></span>
 
 ### direct
 
 #### SUBMIT, DELETE, END, HALT, KEEP, START, CFTXLATE, CFTETB, LISTCAT
 
-****\[DIRECT = {<span style="text-decoration: underline;">BOTH</span>
-| SEND | RECV} \]****
+****[DIRECT = {BOTH
+&#124; SEND &#124; RECV} ]****
 
 Transfer direction that applies to the table.
 
 The possible values are:
 
-- <span style="font-weight: bold;">****BOTH****</span> - Both send and receive transfers
+- ****BOTH**** - Both send and receive transfers
     are taken into account (default, except for CFTETB)
-- <span style="font-weight: bold;">****RECV****</span> - Limits the action to receive
+- ****RECV**** - Limits the action to receive
     transfers
-- <span style="font-weight: bold;">****SEND****</span> - Limits the action to send transfers
+- ****SEND**** - Limits the action to send transfers
 
 #### DISPLAY, CFTAPPL, RESUME
 
-<span style="font-weight: bold;">****\[DIRECT = {****</span><span style="font-weight: bold;text-decoration: underline;">****CLIENT****</span><span style="font-weight: bold;">****| SERVER} \]****</span>
+****[DIRECT = {****CLIENT****&#124; SERVER} ]****
 
 #### CFTSSL
 
-****\[DIRECT = {<span style="text-decoration: underline;">CLIENT</span>|
-SERVER} \]****
+****[DIRECT = {CLIENT&#124;
+SERVER} ]****
 
 Security profile for the client mode.
 
 #### CFTETB
 
-****\[DIRECT = {SEND| RECV} \]****
+****[DIRECT = {SEND&#124; RECV} ]****
 
 Transfer direction.
 

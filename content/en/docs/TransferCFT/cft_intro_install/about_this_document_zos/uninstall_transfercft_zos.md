@@ -1,11 +1,8 @@
 ---
-
-    title: Uninstall Transfer CFT 
-    linkTitle: Uninstall
+    title: "Uninstall Transfer CFT "
+    linkTitle: "Uninstall"
     weight: 190
-
----
-This section describes how to uninstall Transfer CFT in a z/OS environment.
+---This section describes how to uninstall Transfer CFT in a z/OS environment.
 
 If you uninstall a Transfer CFT, you will lose the entire Transfer CFT
 configuration. To avoid this, you must save your environment prior removing the Transfer CFT.
@@ -24,7 +21,7 @@ Run the UNINSTAL JCL, which:
 >
 > You must manually modify the JCL, by default the distribution environment is not removed (see lines 000018, 000081, and 000082 in the example).
 
-<span class="autonumber"></span>Example
+Example
 
 ```
 000014 //\* 2 phases in this JCL:

@@ -1,11 +1,8 @@
 ---
-
-    title: Directory  exit examples
-    linkTitle: Directory exit examples
+    title: "Directory  exit examples"
+    linkTitle: "Directory exit examples"
     weight: 380
-
----
-<span id="Parameter_Settings"></span>
+---<span id="Parameter_Settings"></span>
 
 ## Parameter settings
 

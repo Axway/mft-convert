@@ -1,17 +1,14 @@
 ---
-
-    title: serial
-    linkTitle: serial
-    weight: 3150
-
----
-### serial
+    title: "serial"
+    linkTitle: "serial"
+    weight: 3170
+---### serial
 
 #### SEND/RECV CFTSEND/CFTRECV
 
-****\[SERIAL ={ <u>' '</u> | Y | X } \]****
+****[SERIAL ={ <u>' '</u> &#124; Y &#124; X } ]****
 
-When sending files sequentially, this value is the processing phase that a serialized transfer must reach before Transfer CFT begins executing the next transfer. For details on processing phases, see <a href="../../../../concepts/phase_and_phasestep" class="MCXref xref">About phase and phasestep</a>.
+When sending files sequentially, this value is the processing phase that a serialized transfer must reach before Transfer CFT begins executing the next transfer. For details on processing phases, see [About phase and phasestep](../../../../concepts/phase_and_phasestep).
 
 Use this parameter to define file transfer serialization in flows, where:
 

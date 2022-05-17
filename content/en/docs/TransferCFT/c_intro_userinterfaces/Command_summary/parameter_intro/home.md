@@ -1,11 +1,8 @@
 ---
-
-    title: &HOME
-    linkTitle: _HOME_
-    weight: 1460
-
----
-### &HOME
+    title: "&HOME"
+    linkTitle: "_HOME_"
+    weight: 1450
+---### &HOME
 
 A keyword to use with the [WORKINGDIR](../workingdir) parameter.
 

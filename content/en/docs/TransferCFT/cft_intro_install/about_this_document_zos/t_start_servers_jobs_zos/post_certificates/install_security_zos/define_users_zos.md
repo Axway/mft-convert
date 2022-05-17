@@ -1,11 +1,8 @@
 ---
-
-    title: Defining Transfer CFT user descriptions
-    linkTitle: Define Transfer CFT users
+    title: "Defining Transfer CFT user descriptions"
+    linkTitle: "Define Transfer CFT users"
     weight: 310
-
----
-This section describes how to define the Transfer CFT user description in z/OS. The user groups are:
+---This section describes how to define the Transfer CFT user description in z/OS. The user groups are:
 
 - Administrator group (GRPCFT)
 

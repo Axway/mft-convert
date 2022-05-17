@@ -1,18 +1,15 @@
 ---
-
-    title: Non-SMP/E: Create the distribution environment 
-    linkTitle: Non-SMP/E: create distribution environment
+    title: "Non-SMP/E: Create the distribution environment "
+    linkTitle: "Non-SMP/E: create distribution environment"
     weight: 170
-
----
-This section describes how to install the **<span id="kanchor57"></span>distribution** **environment**. After installing the distribution environment, you should not need to modify it. Later you will use the installed distribution environment to create a Transfer CFT <span id="kanchor58"></span>[*instance* *environment*](t_install_instance_envr_zos) (runtime). The term instance replaces the former notion of a *target* environment in Transfer CFT.
+---This section describes how to install the **<span id="kanchor56"></span>distribution** **environment**. After installing the distribution environment, you should not need to modify it. Later you will use the installed distribution environment to create a Transfer CFT <span id="kanchor57"></span>[*instance* *environment*](t_install_instance_envr_zos) (runtime). The term instance replaces the former notion of a *target* environment in Transfer CFT.
 
 When you install the Transfer CFT you can create the following environments in a single step:
 
 - Distribution environment
 - Transfer CFT run-time instance environment
 
-<span id="kanchor59"></span>
+<span id="kanchor58"></span>
 
 ## Define a Transfer CFT alias
 
@@ -22,9 +19,10 @@ To define an alias, adapt the parameters in bold to suit your environment. Enter
 
 ```
 //DEFALIAS EXEC PGM=IDCAMS  
-//SYSPRINT DD SYSOUT=**sysout**
+//SYSPRINT DD SYSOUT=sysout
 //SYSIN    DD \*     
-   DEFINE ALIAS(NAME(**CFTV2**) RELATE(USER.CATALOG))   ...................
+   DEFINE ALIAS(NAME(CFTV2
+) RELATE(USER.CATALOG))   ...................
 /\*     
 ```
 
@@ -33,7 +31,7 @@ To define an alias, adapt the parameters in bold to suit your environment. Enter
 ### Required configuration
 
 - An FTP client that permits the transfer of files to the z/OS host
-- Download the ESD file from {{< TransferCFT/axwayvariablesCompanyName >}} Support at <a href="https://support.axway.com/" class="hyperlink">https://support.axway.com</a>
+- Download the ESD file from {{< TransferCFT/axwayvariablesCompanyName >}} Support at [https://support.axway.com](https://support.axway.com/)
 
 > **Note**
 >
@@ -47,7 +45,7 @@ To install the Transfer CFT z/OS product, you need approximately:
 
 - 450 additional cylinders of disk space to unpack the installation files
 
-<span id="Installa"></span><span id="kanchor60"></span>
+<span id="Installa"></span><span id="kanchor59"></span>
 
 ## Installation files 
 
@@ -138,7 +136,7 @@ jobname : TSOUSERI
 
 Silent mode enables you to perform an installation or configuration in a non-interactive mode. You do not have to enter any parameters in the console. To use this mode, you must install the product or run the installer program and perform the configuration until just before you execute setup.sh or setup.bat.
 
-Before you start the silent installation you must update the silent\_install.conf installation file located in the install directory.
+Before you start the silent installation you must update the silent_install.conf installation file located in the install directory.
 
 
 | Value  | Default value  | Description  |
@@ -172,7 +170,7 @@ Use one of the following methods to unpack the installation files:
 - Decompress using the ADRDSSU format, *or*
 - Decompress using double Xmit format
 
-<span id="kanchor61"></span>
+<span id="kanchor60"></span>
 
 ### Decompress using the ADRDSSU format
 
@@ -210,7 +208,7 @@ To customize the JCL, apply a `change all` command on the following parameters:
 >
 > The distribution files are restored with 5 qualifiers (ADRDSSU). You can modify 4 of these qualifiers, for example AXWAY.XFB.CFT332.CF030000, using the ADRDSSU parameter, step ADRD020 in J1IDISTA, but the fifth qualifier is hard coded.
 
-<span id="kanchor62"></span>
+<span id="kanchor61"></span>
 
 ### Decompress using double Xmit
 

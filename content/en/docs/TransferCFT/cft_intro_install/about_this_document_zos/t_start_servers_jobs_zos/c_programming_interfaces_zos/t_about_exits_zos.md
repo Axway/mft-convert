@@ -1,11 +1,8 @@
 ---
-
-    title: Exits in Transfer CFT z/OS
-    linkTitle: Exits in Transfer CFT z/OS
+    title: "Exits in Transfer CFT z/OS"
+    linkTitle: "Exits in Transfer CFT z/OS"
     weight: 270
-
----
-When running under {{< TransferCFT/PrimaryCGorUM  >}}, you can use but not manage your {{< TransferCFT/suitevariablesTransferCFTName  >}} exits. To manage exits, use the information to manually configure as described in this section.
+---When running under {{< TransferCFT/PrimaryCGorUM  >}}, you can use but not manage your {{< TransferCFT/suitevariablesTransferCFTName  >}} exits. To manage exits, use the information to manually configure as described in this section.
 
 ##  Using the DLL mode for Transfer CFT exits 
 
@@ -68,8 +65,8 @@ To create exits with C, access the following files:
     Samples for the ACCESS (CEXADLL), Beginning-of-Transfer(CEXBDLL), CATALOG (CEXEDLL), or FILE (CEXFDLL) are provided, and contain the steps required for a Transfer CFT EXIT:
 
     -   The main entry point, ‘`callexig*`’, is exported and is called by the Transfer CFT EXIT loader.
-    -   The <span class="code">`init `</span>function, where the name is free, and samples use the EXAINI, EXEINI, EXFINI and EXBINI names. The `init `function returns the Transfer CFT EXIT run function address.
-    -   The <span class="code">`run `</span>function, where the name is free, and samples use the EXAXMP1, EXEXMP1, EXFXMP1, and EXBXMP1 names.
+    -   The `init `function, where the name is free, and samples use the EXAINI, EXEINI, EXFINI and EXBINI names. The `init `function returns the Transfer CFT EXIT run function address.
+    -   The `run `function, where the name is free, and samples use the EXAXMP1, EXEXMP1, EXFXMP1, and EXBXMP1 names.
     -   Exits must be compiled with the options: LANG(EXTENDED), RENT, DLL, LONGNAME.
     -   An example of a call to Transfer CFT APIs within an exit is provided in the CEXEDLL sample.
 

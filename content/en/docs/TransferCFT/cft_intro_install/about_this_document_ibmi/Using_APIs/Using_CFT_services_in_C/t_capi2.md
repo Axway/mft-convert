@@ -1,17 +1,14 @@
 ---
-
-    title: About cftapi2
-    linkTitle: About cftapi2
+    title: "About cftapi2"
+    linkTitle: "About cftapi2"
     weight: 310
-
----
-The catalog functions enable you to query and modify the catalog. These functions also include a method to recover information about the {{< TransferCFT/axwayvariablesComponentShortName  >}} that is using the catalog.
+---The catalog functions enable you to query and modify the catalog. These functions also include a method to recover information about the {{< TransferCFT/axwayvariablesComponentShortName  >}} that is using the catalog.
 
 Additionally, the API catalog supports 32 character identifiers and 512 character file names.
 
 ## Return code values
 
-The return code values are available in the <span class="code">`cftapi2.h`</span> header file, located in the <span class="code">`Transfer_CFT/home/inc`</span> directory (for UNIX/Windows), in the section *Error code fields*.
+The return code values are available in the `cftapi2.h` header file, located in the `Transfer_CFT/home/inc` directory (for UNIX/Windows), in the section *Error code fields*.
 
 ## Data structure
 

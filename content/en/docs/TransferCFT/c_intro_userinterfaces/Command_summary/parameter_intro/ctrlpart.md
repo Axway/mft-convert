@@ -1,18 +1,15 @@
 ---
-
-    title: ctrlpart
-    linkTitle: ctrlpart
-    weight: 530
-
----
-<span id="ctrlpart"></span>
+    title: "ctrlpart"
+    linkTitle: "ctrlpart"
+    weight: 520
+---<span id="ctrlpart"></span>
 
 ### ctrlpart
 
 #### CFTPART
 
-****\[ CTRLPART = { <span style="text-decoration: underline;">IGNORE</span>
-| ALL | RPART | SPART } \]****
+****[ CTRLPART = { IGNORE
+&#124; ALL &#124; RPART &#124; SPART } ]****
 
 Optional parameter that is relevant only in server mode. When a transfer is initiated by a remote partner, {{< TransferCFT/axwayvariablesComponentShortName  >}} always controls its identity. If the remote sender is not the initial sender, store and forward mode, the {{< TransferCFT/axwayvariablesComponentShortName  >}} can choose to control the initial sender identity according to CTRLPART parameter.
 
@@ -21,7 +18,7 @@ Optional parameter that is relevant only in server mode. When a transfer is init
 - RPART
 - SPART
 
-CFTT15E NPART=&part \_ Not found
+CFTT15E NPART=&part _ Not found
 
  
 

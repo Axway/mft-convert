@@ -1,18 +1,15 @@
 ---
-
-    title: habfname
-    linkTitle: habfname
-    weight: 1420
-
----
-<span id="habfname"></span>
+    title: "habfname"
+    linkTitle: "habfname"
+    weight: 1410
+---<span id="habfname"></span>
 
 ### habfname
 
 #### CFTFILE (TYPE = PARM, PART, COM, CAT)
 
-****\[HABFNAME =
-fname\]    {STRING
+****[HABFNAME =
+fname]    {STRING
 64}****
 
 Name of the security system initialization

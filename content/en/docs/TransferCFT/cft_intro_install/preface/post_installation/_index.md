@@ -1,11 +1,8 @@
 ---
-
-    title: Post installation
-    linkTitle: Post installation
+    title: "Post installation"
+    linkTitle: "Post-installation"
     weight: 180
-
----
-This chapter describes a series of checks that you should perform to verify your Transfer CFT installation. For more information on performing commands and using CFTUTIL, refer to the *Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}} [{{< TransferCFT/suitevariablesDocTypeUser  >}}](https://docs.axway.com/u/documentation/transfer_cft/index.htm?version=3.2.4)*.
+---This chapter describes a series of checks that you should perform to verify your Transfer CFT installation. For more information on performing commands and using CFTUTIL, refer to the *Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}} [{{< TransferCFT/suitevariablesDocTypeUser  >}}](https://docs.axway.com/u/documentation/transfer_cft/index.htm?version=3.2.4)*.
 
 > **Note**
 >
@@ -19,7 +16,7 @@ This chapter describes a series of checks that you should perform to verify your
 1. Verify the Transfer CFT version:
 1. *Optionally*, change the Transfer CFT Guardian process names *if you are performing multiple installations*. Because each Transfer CFT process is assigned a Guardian process name, these names should be globally unique.
 
-- Use the  [cft.guardian.process\_name\_prefix](../intro_os_features/hp_ns_batch#cft.guardian.process_name_prefix) UCONF parameter as described in the UCONF parameters section.
+- Use the  [cft.guardian.process_name_prefix](../intro_os_features/hp_ns_batch#cft.guardian.process_name_prefix) UCONF parameter as described in the UCONF parameters section.
 - Be certain to change this parameter's default value if you are running several Transfer CFT installations at the same time.
 
 ```
@@ -32,7 +29,7 @@ Start the Transfer CFT server:
 cft start
 ```
 
-Verify that the default ports used in <span class="code">`$CFTDIRRUNTIME/conf/cft-tcp.conf`</span> are available:
+Verify that the default ports used in `$CFTDIRRUNTIME/conf/cft-tcp.conf` are available:
 
 - 1761 (PeSIT Any protocol)
 - 1762 (PeSIT Any protocol with SSL authentication)
@@ -90,6 +87,6 @@ copstart
 http://MyHostName:1766
 ```
 
-If you have activated the Central Governance connectivity, you can [Verify the Transfer CFT registration with Central Governance](../../unix_install_start_here/shared_verify_install#Verify).
+If you have activated the Central Governance connectivity, you can [Verify the Transfer CFT registration with Central Governance](../../unix_install_start_here/run_first_time_ux/shared_verify_install#Verify).
 
-Transfer CFT HP NonStop provides a start-process supervisor (CFTSUP) that can restart the Transfer CFT server or UI server in the case of an unexpected product stop. For more information, see <a href="hp_ns_sup" class="MCXref xref">Use the NonStop mode</a> .
+Transfer CFT HP NonStop provides a start-process supervisor (CFTSUP) that can restart the Transfer CFT server or UI server in the case of an unexpected product stop. For more information, see [Use the NonStop mode](hp_ns_sup) .

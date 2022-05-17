@@ -1,11 +1,8 @@
 ---
-
-    title: Configuring PassPort AM 
-    linkTitle: Configuring PassPort AM
-    weight: 200
-
----
-This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
+    title: "Configuring PassPort AM "
+    linkTitle: "Configuring PassPort AM"
+    weight: 190
+---This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
 
 <span id="Procedure PassPort parameters"></span>
 
@@ -13,9 +10,9 @@ This section describes how to configure access management when not using {{< Tra
 
 To configure the PassPort AM connection, set the UCONF parameters described
 in this section. From
-the <span style="font-weight: bold;">****Administration****</span> screen in the
-graphical user interface, access the *Unified Configuration* window. Double-click in the <span style="font-weight: normal; font-style: italic;">**Unified
-Configuration**</span> window to begin editing parameters.
+the ****Administration**** screen in the
+graphical user interface, access the *Unified Configuration* window. Double-click in the **Unified
+Configuration** window to begin editing parameters.
 
 1. Define the connection to the PassPort AM server using the UCONF parameters in the following tables. You must define the parameters in the order listed.
 
@@ -36,7 +33,7 @@ Configuration**</span> window to begin editing parameters.
 | am.passport.csd_file  | Transfer CFT Component Security descriptor file for PassPort AM. The default value is $(cft.install_dir)/extras/PassPort/csd_Transfer_CFT.xml.  |
 
 
-1. Set the access management type parameter to PassPort: <span style="font-family: 'Courier New'; font-size: 11pt;">am.type = passport</span>
+1. Set the access management type parameter to PassPort: am.type = passport
 
 > **Note**
 >
@@ -50,7 +47,7 @@ Configuration**</span> window to begin editing parameters.
 
 `CFTUTIL UCONFSET ID=am.type, VALUE=none`
 
-1. Configure the connection using your CFTPARM PART name as the instance\_id value.
+1. Configure the connection using your CFTPARM PART name as the instance_id value.
 
 `CFTUTIL UCONFSET ID=am.passport.hostname, VALUE=pam.company.com`
 
@@ -71,7 +68,7 @@ Configuration**</span> window to begin editing parameters.
 
 | Parameter  | Definition  |
 | --- | --- |
-| am.passport.userctrl.check_permissions_on_transfer_execution  | <span id="Check"></span>Check the permissions for the execute action on the transfer resource when the {{< TransferCFT/axwayvariablesComponentShortName  >}} user control is enabled (<a href="../../../c_intro_userinterfaces/command_summary/parameter_intro/userctrl">USERCTRL</a>=YES). To disable the permission check, set the following parameter to No. The default is Yes. |
+| am.passport.userctrl.check_permissions_on_transfer_execution  | <span id="Check"></span>Check the permissions for the execute action on the transfer resource when the {{< TransferCFT/axwayvariablesComponentShortName  >}} user control is enabled ([USERCTRL](../../../c_intro_userinterfaces/command_summary/parameter_intro/userctrl)=YES). To disable the permission check, set the following parameter to No. The default is Yes. |
 | am.passport.domain  | PassPort AM domain.  |
 | am.passport.max_connections  | Maximum number of connections with PassPort.  |
 | am.passport.pipe_priority  | Pipelining priority mode.  |
@@ -93,4 +90,4 @@ For more information about starting the Transfer CFT UI (Copilot), refer to Sta
 
 [Defining user rights Windows](../../../cft_intro_install/windows_install_start_here/windows_install_start_here/running_cft_for_the_first_time_windows/user_rights_and_interface_win)
 
-[Defining user rights Unix]()
+[Defining user rights Unix](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/user_rights_and_interface_unix)

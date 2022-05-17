@@ -1,18 +1,15 @@
 ---
-
-    title: hide99
-    linkTitle: hide99
-    weight: 1440
-
----
-<span id="hide99"></span>
+    title: "hide99"
+    linkTitle: "hide99"
+    weight: 1430
+---<span id="hide99"></span>
 
 ### hide99
 
 #### CFTPROT
 
-****\[HIDE99 = {YES | <span style="text-decoration: underline;">NO
-</span>} \]****
+****[HIDE99 = {YES &#124; NO
+} ]****
 
 Optional parameter available only to PeSIT protocol definition (TYPE=PESIT)
 using the ANY profile (PROFIL=ANY/CFT).

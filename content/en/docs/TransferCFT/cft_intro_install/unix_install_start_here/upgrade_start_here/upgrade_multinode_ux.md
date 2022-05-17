@@ -1,11 +1,8 @@
 ---
-
-    title: Upgrade a Transfer CFT multi-node installation
-    linkTitle: Upgrade a multi-node installation
-    weight: 180
-
----
-This section describes how to upgrade from a Transfer CFT 3.1.3, 3.2.x, 3.3.2, or 3.4 multi-node, multihost installation to Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}}.
+    title: "Upgrade a Transfer CFT multi-node installation"
+    linkTitle: "Upgrade a multi-node installation"
+    weight: 170
+---This section describes how to upgrade from a Transfer CFT 3.1.3, 3.2.x, 3.3.2, or 3.4 multi-node, multihost installation to Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}}.
 
 As of {{< TransferCFT/axwayvariablesComponentLongName  >}} 3.4 there is no separate upgrade package, you use the installation package to perform an upgrade procedure as described in the sections below.
 
@@ -37,23 +34,26 @@ For details on shared disks, node commands, and other multi-node considerations,
 1. Connect to the first machine and execute the following command:
 
 1. ```
-    ./Transfer_CFT_{{< TransferCFT/axwayvariablesReleaseNumber >}}_Install_<OS>_<BN>.run --architecture first_host --installdir <installdir>
+    ./Transfer_CFT_ 3.10
+    _Install_<OS>_<BN>.run --architecture first_host --installdir <installdir>
     ```
 
      
 
 1. For each additional host, connect to the machine and execute the following command:  
     ```
-    ./Transfer_CFT_{{< TransferCFT/axwayvariablesReleaseNumber >}}_Install_<OS>_<BN>.run --architecture additional_host --runtimedir <runtimedir>
+    ./Transfer_CFT_ 3.10
+    _Install_<OS>_<BN>.run --architecture additional_host --runtimedir <runtimedir>
     ```
 
 - Use the two following parameters, depending on if this is the first host or an additional host:
-    -   <span class="code">`architecture `</span>and <span class="code">`installdir `</span>(first\_host), *or*
-    -   <span class="code">`architecture `</span>and <span class="code">`runtimedir `</span>(additional\_host)
+    -   `architecture `and `installdir `(first_host), *or*
+    -   `architecture `and `runtimedir `(additional_host)
 - Where:
-    -   --architecture &lt;architecture>: Installation architecture (first\_host or additional\_host).
-    -   --installdir &lt;installdir>: For a legacy upgrade, this is the directory where the Axway Installer was installed. When this parameter is assigned, it overwrites any reference in the configuration file (first\_host).
-    -   --runtimedir &lt;runtimedir>: For a legacy upgrade, this is the shared data directory where the Axway Installer was installed. When this parameter is assigned, it overwrites any reference in the configuration file (additional\_host).
+    -   --architecture &lt;architecture>: Installation architecture (first_host or additional_host).
+    -   --installdir &lt;installdir>: For a legacy upgrade, this is the directory where the Axway Installer was installed. When this parameter is assigned, it overwrites any reference in the configuration file (first_host).
+    -   --runtimedir &lt;runtimedir>: For a legacy upgrade, you must specify the installation’s shared directory instead of the runtime. For example:` /mnt/Axway_Shared `or` Z:\Axway_Shared`  
+        When this parameter is assigned, it overwrites any reference in the configuration file (additional_host).
 
 ### Restart the upgraded Transfer CFT multihost multi-node environment
 
@@ -101,7 +101,7 @@ After performing an upgrade, all passwords are cyphered using a hard-coded key. 
 To check the {{< TransferCFT/axwayvariablesComponentShortName  >}} version, as well as the license key and system information, enter the command:
 
 ```
-<span class="code">`CFTUTIL ABOUT`</span>
+CFTUTIL ABOUT
 ```
 
 ## Uninstall an upgrade pack

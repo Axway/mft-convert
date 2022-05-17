@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer log file
-    linkTitle: CFTLOG - Transfer log file
-    weight: 260
-
----
-Use this command to defines the log file declarations. Transfer CFT
+    title: "Transfer log file"
+    linkTitle: "CFTLOG - Transfer log file"
+    weight: 250
+---Use this command to defines the log file declarations. Transfer CFT
 records any significant events that occur during a transfer.
 
 Log parameters are defined in detail in the Parameter index. Click on
@@ -22,20 +19,20 @@ topics
 
 | Parameter  | Description  |
 | --- | --- |
-| <a href="../../../c_intro_userinterfaces/command_summary/parameter_intro/afname">AFNAME</a>  | Name of the alternate log file. |
-| <a href="../../../c_intro_userinterfaces/command_summary/parameter_intro/content">CONTENT</a> | The messages written in the active LOG file are filtered. The possible values are:<br/> • FULL: all the messages are printed out<br/> • BRIEF: the following messages no longer appear in the LOG |
-| <a href="../../../c_intro_userinterfaces/command_summary/parameter_intro/exec">EXEC</a> | Name of the procedure to be executed when switching to the other log file. By default this is rotate.cmd/bat. |
-| <a href="../../../c_intro_userinterfaces/command_summary/parameter_intro/fname">FNAME</a> | Name of the log file. |
-| <a href="../../../c_intro_userinterfaces/command_summary/parameter_intro/id">ID</a> | Identifier of the CFTLOG command. |
-| <a href="../../../c_intro_userinterfaces/command_summary/parameter_intro/length">LENGTH</a> | Size of log file records. |
-| <a href="../../../c_intro_userinterfaces/command_summary/parameter_intro/maxrec">MAXREC</a> | Number of records written in the log file, from which automatic switching will be performed. |
-| <a href="../../../c_intro_userinterfaces/command_summary/parameter_intro/mode">MODE</a> | Action to do in the parameter or partner base. This parameter applies to all commands that affect Transfer CFT bases. |
-| <a href="../../../c_intro_userinterfaces/command_summary/parameter_intro/notify">NOTIFY</a> | Defines the destination of the operator messages selected according to the value of the OPERMSG parameter |
-| <a href="../../../c_intro_userinterfaces/command_summary/parameter_intro/opermsg">OPERMSG</a> | Defines the transfer information message categories intended for the operator (all the messages also being written in the log file). |
-| <a href="../../../c_intro_userinterfaces/command_summary/parameter_intro/switch">SWITCH</a> | Time at which the Transfer CFT performs an automatic switch. When this parameter is not defined, log files are switched daily at midnight. |
+| [AFNAME](../../../c_intro_userinterfaces/command_summary/parameter_intro/afname)  | Name of the alternate log file. |
+| [CONTENT](../../../c_intro_userinterfaces/command_summary/parameter_intro/content) | The messages written in the active LOG file are filtered. The possible values are:<br/> • FULL: all the messages are printed out<br/> • BRIEF: the following messages no longer appear in the LOG |
+| [EXEC](../../../c_intro_userinterfaces/command_summary/parameter_intro/exec) | Name of the procedure to be executed when switching to the other log file. By default this is rotate.cmd/bat. |
+| [FNAME](../../../c_intro_userinterfaces/command_summary/parameter_intro/fname) | Name of the log file. |
+| [ID](../../../c_intro_userinterfaces/command_summary/parameter_intro/id) | Identifier of the CFTLOG command. |
+| [LENGTH](../../../c_intro_userinterfaces/command_summary/parameter_intro/length) | Size of log file records. |
+| [MAXREC](../../../c_intro_userinterfaces/command_summary/parameter_intro/maxrec) | Number of records written in the log file, from which automatic switching will be performed. |
+| [MODE](../../../c_intro_userinterfaces/command_summary/parameter_intro/mode) | Action to do in the parameter or partner base. This parameter applies to all commands that affect Transfer CFT bases. |
+| [NOTIFY](../../../c_intro_userinterfaces/command_summary/parameter_intro/notify) | Defines the destination of the operator messages selected according to the value of the OPERMSG parameter |
+| [OPERMSG](../../../c_intro_userinterfaces/command_summary/parameter_intro/opermsg) | Defines the transfer information message categories intended for the operator (all the messages also being written in the log file). |
+| [SWITCH](../../../c_intro_userinterfaces/command_summary/parameter_intro/switch) | Time at which the Transfer CFT performs an automatic switch. When this parameter is not defined, log files are switched daily at midnight. |
 
 
-<span class="bold_in_para">****Example**** </span>
+****Example****
 
 This command defines the log file names:
 

@@ -1,18 +1,15 @@
 ---
-
-    title: olrecl
-    linkTitle: olrecl
-    weight: 2430
-
----
-<span id="olrecl"></span>
+    title: "olrecl"
+    linkTitle: "olrecl"
+    weight: 2450
+---<span id="olrecl"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
 #### COPYFILE
 
-**\[OLRECL = {<u>see the comment</u>
-| n}\]  **{0..32768}
+**[OLRECL = {<u>see the comment</u>
+&#124; n}]  **{0..32768}
 
 Output file record length.
 
@@ -52,7 +49,7 @@ If the output file:
         
 | **Windows**  | 512. |
 | --- | --- |
-| **UNIX** | 512 for text files (OTYPE=T, X or O).<br /> 4096 for binary or variable files (OTYPE={B | V}). |
+| **UNIX** | 512 for text files (OTYPE=T, X or O).<br /> 4096 for binary or variable files (OTYPE={B &#124; V}). |
 
 
  

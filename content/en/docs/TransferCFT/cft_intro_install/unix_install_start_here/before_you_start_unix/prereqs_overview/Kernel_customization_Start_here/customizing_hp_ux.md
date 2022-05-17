@@ -1,11 +1,8 @@
 ---
-
-    title: HP-UX: Customize the kernel
-    linkTitle: HP-UX: Customize the kernel
+    title: "HP-UX: Customize the kernel"
+    linkTitle: "HP-UX: Customize the kernel"
     weight: 200
-
----
-This topic provides information on customizing the HP-UX kernel, and how to:
+---This topic provides information on customizing the HP-UX kernel, and how to:
 
 - Modify
     the message queue depth
@@ -23,7 +20,7 @@ of the *msgtql* kernel parameter to 8192.
 To customize the message queue:
 
 1. Log in as the root and enter
-    the <span style="font-family: 'Courier New', monospace;">sam</span> command.
+    the sam command.
 1. Select the following sub-menus,
     respectively:
     -   Kernel
@@ -54,11 +51,11 @@ To customize the message queue:
 ## Modify the number of files used by a process
 
 By default, HP-UX allows a process to open only 64 files. To customize
-this information, increase the value of the <span style="font-family: 'Courier New', monospace;">maxfiles</span>
+this information, increase the value of the maxfiles
 kernel parameter to 1024. To do so:
 
 1. Log in as the *root* and
-    enter the <span style="font-family: 'Courier New', monospace;">sam</span>
+    enter the sam
     command.
 1. Select the following sub-menus:
     -   Kernel
@@ -68,7 +65,7 @@ kernel parameter to 1024. To do so:
 1. Set the pointer to the *maxfiles*
     parameter.
 1. Select the *Modify
-    Configurable Parameter* option in the <span style="font-weight: bold;">****Actions****</span>
+    Configurable Parameter* option in the ****Actions****
     menu.
 1. Enter the new value for this
     parameter.

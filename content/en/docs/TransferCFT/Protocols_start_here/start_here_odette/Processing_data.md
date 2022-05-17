@@ -1,11 +1,8 @@
 ---
-
-    title: Processing  data
-    linkTitle: Processing data
-    weight: 180
-
----
-This topic describes compression functions in Transfer CFT when using
+    title: "Processing  data"
+    linkTitle: "Processing data"
+    weight: 170
+---This topic describes compression functions in Transfer CFT when using
 the OFTP (ODETTE) protocol.
 
 - [Negotiating
@@ -35,7 +32,7 @@ have the possibility of COMPRESSING files, it is not a MANDATORY REQUIREMENT.
 
 This Compression Option is negotiated as indicated in the figure below.
 
-********<span class="autonumber"></span>Compression option negotiation********
+********Compression option negotiation********
 
 ![Compression Option is negotiated between the initiator (Requester) ad the acceptor (Server)](/Images/TransferCFT/Image1692.gif)
 
@@ -67,13 +64,13 @@ If it does, Transfer CFT deletes these characters.
 
 #### Structure of the Data Exchanged
 
-********<span class="autonumber"></span>Structure of the data exchange buffer********
+********Structure of the data exchange buffer********
 
 ![View of structure including the initial Byte, header, and sub-record](/Images/TransferCFT/Image1693.gif)
 
  
 
-********<span class="autonumber"></span>HEADER structure********
+********HEADER structure********
 
 ![Header structure defining bits 0 through 7, which is the last bit of the record](/Images/TransferCFT/Image1694.gif)
 
@@ -89,7 +86,7 @@ longer indicate the sub-record size, as shown in the above diagram, but
 the number of times a single byte is repeated; the byte in question immediately
 follows the HEADER.
 
-********<span class="autonumber"></span>SUBRECORD example********
+********SUBRECORD example********
 
 ![](/Images/TransferCFT/Image1755.gif)
 
@@ -143,7 +140,7 @@ The Change Direction is sent in THREE specific CASES:
     -   The sender sends the CD to its partner
     -   The transfer direction does not permit this  
     -   The session is interrupted
-    -   All transfer requests are ignored until the next F\_CONNECT\_RQ
+    -   All transfer requests are ignored until the next F_CONNECT_RQ
 
 <!-- -->
 
@@ -205,7 +202,7 @@ of the SENS transfer parameter (SRIN/SROUT).
 The sending of the EERP is activated by passing a Transfer CFT MESSAGE
 send command. However, the message passed is of a particular type in that
 it is a REPLY type message. See also [Sending
-replies.](../../../concepts/using_the_send_command/sending_replies)
+replies.](../../../concepts/send_command/send_replies)
 
 EERP TRANSMISSION example:
 

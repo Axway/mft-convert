@@ -1,15 +1,12 @@
 ---
+    title: "execsubpre"
+    linkTitle: "execsubpre"
+    weight: 970
+---### execsubpre
 
-    title: execsubpre
-    linkTitle: execsubpre
-    weight: 980
+#### CFTSEND, SEND
 
----
-### execsubpre
-
-#### CFTSEND
-
-`[ EXECSUBPRE = { LIST | FILE | SUBF } ]`
+`[ EXECSUBPRE = { LIST &#124; FILE &#124; SUBF } ]`
 
 This parameter defines the execution policy for the PREEXEC script. It determines how the transfer requests are treated, and the order in which this occurs.
 

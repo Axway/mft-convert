@@ -1,20 +1,17 @@
 ---
-
-    title: Code Transfer CFT filenames
-    linkTitle: Code filenames
+    title: "Code Transfer CFT filenames"
+    linkTitle: "Code filenames"
     weight: 280
-
----
-Working with files and coding
+---Working with files and coding
 
 This section describes file properties and how to code Transfer CFT filenames.
 
-- <a href="#File%20access%20overview" class="MCXref xref">File access overview</a>
-- <a href="#Coding%20file%20names%20zOS" class="MCXref xref">About coding filenames</a>
-- <a href="#Filename" class="MCXref xref">Filename forms</a>
-- <a href="#Coding%20filenames%20with%20DDNAME" class="MCXref xref">Code filenames with DDNAME </a>
-- <a href="#Coding%20PDS%20filenames" class="MCXref xref">Coding PDS filenames</a>
-- <a href="#Coding%20GDG%20filenames" class="MCXref xref">Code GDG filenames</a>
+- [File access overview](#File%20access%20overview)
+- [About coding filenames](#Coding%20file%20names%20zOS)
+- [Filename forms](#Filename)
+- [Code filenames with DDNAME ](#Coding%20filenames%20with%20DDNAME)
+- [Coding PDS filenames](#Coding%20PDS%20filenames)
+- [Code GDG filenames](#Coding%20GDG%20filenames)
 
 <span id="File access overview"></span>
 
@@ -88,7 +85,7 @@ Where:
 >
 > <!-- -->
 >
-> -   The initial character in HFS filenames is the slash: ( <span class="span_2">/</span> )
+> -   The initial character in HFS filenames is the slash: ( / )
 
 **Example**
 
@@ -111,7 +108,7 @@ FILENAME
 A filename can have different forms:
 
 - A DSNAME or a string coded in form ‘VOLUME%UNIT%DSNAME’ (VOLUME and UNIT are often optional).
-- A logical name, associated with a DD card \[ JCL \] or with an ALLOC \[ CLIST \].
+- A logical name, associated with a DD card [ JCL ] or with an ALLOC [ CLIST ].
 - PDS member name, which is also by completing with the member name between brackets.
 
 ****Example ****
@@ -144,17 +141,17 @@ Look for the file on the disk CFTRES:
 
 Using parameters ‘VOLUME’ and/or ‘UNIT’ may conflict with DF/SMS file management.
 
-****<span class="span_2">Example</span>****
+****Example****
 
-<span class="span_2">PDS member name</span> t<span class="b2Car_2">o request sending of a member with the file searched for in the catalog</span>:
+PDS member name to request sending of a member with the file searched for in the catalog:
 
 ```
 SEND FNAME=‘CFT.SEND.FILE(MEMBER)’
 ```
 
-****<span class="span_2">Example</span>****
+****Example****
 
-<span class="span_2">A logical name</span> t<span class="b2Car_2">o select a PARTNERS file</span>:
+A logical name to select a PARTNERS file:
 
 ```
 CFTPARM PARTFNAM=$CFTPART
@@ -234,7 +231,7 @@ FNAME=NAME1.NAMEX(MEMBER)
 
 Delivered template:
 
-- <span class="code">`..SAMPLE(CFTPDS)`</span>
+- `..SAMPLE(CFTPDS)`
 
 <span id="Coding GDG filenames"></span>
 

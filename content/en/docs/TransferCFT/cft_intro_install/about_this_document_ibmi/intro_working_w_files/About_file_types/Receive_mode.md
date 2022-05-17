@@ -1,19 +1,14 @@
 ---
-
-    title:  Configure receive mode (native)
-    linkTitle: Configure receive mode (native)
+    title: " Configure receive mode (native)"
+    linkTitle: "Configure receive mode (native)"
     weight: 220
+---## File type
 
----
-## File type
-
-The behavior of the values ‘’ and ‘ ’, for FTYPE and FRECFM respectively, are not detailed in the following tables. These values correspond to <span style="font-family: 'Courier New';">undefined</span>, which means that the transfer in reception takes the value sent through the network. 
+The behavior of the values ‘’ and ‘ ’, for FTYPE and FRECFM respectively, are not detailed in the following tables. These values correspond to undefined, which means that the transfer in reception takes the value sent through the network. 
 
 ****File type when the file does not exist****
 
 The following table lists the different types of files that can be created on an IBM i system if the file to receive does not already exist:
-
-QQQ\_QQQ\_QQQ
 
 
 | FTYPE  | FRECFM  | Created file<br /> Type  | Created file<br /> Max record length  |
@@ -35,17 +30,17 @@ The following table describes the {{< TransferCFT/headerfootervariableshflongpro
 >
 > Bold  values indicate a recommended combination. For example, when FTYPE=D and FRECFM=V then FLRECL+5 / 5 is the recommended PF-SRC.
 
-QQQ\_QQQ\_CHECK Does **Existing file** apply to col 5?
+QQQ_QQQ_CHECK Does **Existing file** apply to col 5?
 
 
-| FTYPE  | FRECFM  | Existing file: PF-DTA<br/> Record length / member header | Existing file: PF-SRC<br/> Record length / member header | Overwriting on a SAVF<br/> with FACTION=ERASE |
+|  FTYPE  |  FRECFM  | Existing file<br /> PF-DTA<br/> Record length / member header | Existing file<br /> PF-SRC<br/> Record length / member header | Overwriting on a SAVF<br/> with FACTION=ERASE |
 | --- | --- | --- | --- | --- |
 | ‘D’ | ‘F’ | **FLRECL / No** | FLRECL / No | Yes <sup>3</sup> |
 | ‘D’  | ‘V’ | FLRECL+5 / 5 | **FLRECL+5 / 5** | Yes <sup>3</sup> |
 | ‘S’ | ‘F’ | FLRECL / 0 OK | **FLRECL / 12** | Error<br/> DIAGI: 102<br/> DIAGP: 1140850696 |
 | ‘S’  | ‘V’ | FLRECL+17 / 17 | FLRECL+17 / 17 | Error<br/> DIAGI: 102<br/> DIAGP: 1140850696 |
 | ‘E’ | ‘F’ | FLRECL +12 / 0 | **FLRECL +12 / 12** | Error<br/> DIAGI: 102<br/> DIAGP: 1140850696 |
-| ‘E’  | ‘V’ | FLRECL+17 /17<br/>  | FLRECL+17 / 5 | Error<br/> DIAGI: 102<br/> DIAGP: 1140850696 |
+| ‘E’ | ‘V’ | FLRECL+17 /17<br/>  | FLRECL+17 / 5 | Error<br/> DIAGI: 102<br/> DIAGP: 1140850696 |
 | ‘Z’ | - | Error<br/> DIAGI: 102<br/> DIAGP: 1140850696 | Error<br/> DIAGI: 101<br/> DIAGP: 11409169 | Yes <sup>3</sup> |
 
 

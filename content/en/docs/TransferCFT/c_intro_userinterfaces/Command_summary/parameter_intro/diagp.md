@@ -1,11 +1,8 @@
 ---
-
-    title: diagp
-    linkTitle: diagp
-    weight: 690
-
----
-<span id="diagp"></span>
+    title: "diagp"
+    linkTitle: "diagp"
+    weight: 680
+---<span id="diagp"></span>
 
 ### diagp
 

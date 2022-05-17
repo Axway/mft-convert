@@ -1,17 +1,14 @@
 ---
-
-    title: cycle
-    linkTitle: cycle
-    weight: 590
-
----
-<span id="cycle"></span>
+    title: "cycle"
+    linkTitle: "cycle"
+    weight: 580
+---<span id="cycle"></span>
 
 ### cycle
 
 #### CFTSEND, SEND, CFTRECV, RECV
 
-****CYCLE = {0 | n}    {0..32767}****
+****CYCLE = {0 &#124; n}    {0..32767}****
 
 Number of units (per [tcycle](../tcycle)) for the transfer cycle period.
 
@@ -28,7 +25,7 @@ Enter one of the following values:
 
 #### CFTPROT
 
-****\[CYCLE = {10 | n}\]   {1..32767}****
+****[CYCLE = {10 &#124; n}]   {1..32767}****
 
 The cycle parameter forms part of the {{< TransferCFT/axwayvariablesComponentShortName  >}} definition. This
 parameter is only available for PeSIT DMZ. Use this parameter to set the
@@ -36,6 +33,6 @@ periodicity for creating a protocol session.
 
 #### TURN
 
-****\[CYCLE = {10 | n}\]   {1..32767}****
+****[CYCLE = {10 &#124; n}]   {1..32767}****
 
 [Return to Command index](../../)

@@ -1,11 +1,8 @@
 ---
-
-    title: Defining CFTSEND in PeSIT 
-    linkTitle: Defining CFTSEND in PeSIT
-    weight: 200
-
----
-The CFTSEND object contains the parameters controlling the access to
+    title: "Defining CFTSEND in PeSIT "
+    linkTitle: "Defining CFTSEND in PeSIT"
+    weight: 190
+---The CFTSEND object contains the parameters controlling the access to
 the data to be sent and the execution of the send process.
 
 When the transfer is initiated by a local SEND object explicitly containing

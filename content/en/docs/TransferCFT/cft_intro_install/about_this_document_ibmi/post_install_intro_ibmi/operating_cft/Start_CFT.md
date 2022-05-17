@@ -1,11 +1,8 @@
 ---
-
-    title: Starting Transfer CFT
-    linkTitle: Starting Transfer CFT
+    title: "Starting Transfer CFT"
+    linkTitle: "Starting Transfer CFT"
     weight: 290
-
----
-Select <span class="bold_in_para">****Option **1.******</span> **Common Transfer CFT commands**, then **3. Start Transfer CFT** in the Operations screen. Once Transfer CFT starts, the product is operational. You can perform transfer operations after the startup messages are displayed.
+---Select ****Option **1.****** **Common Transfer CFT commands**, then **3. Start Transfer CFT** in the Operations screen. Once Transfer CFT starts, the product is operational. You can perform transfer operations after the startup messages are displayed.
 
 ```
 From . . . : CFT 04/02/15 17:04:56
@@ -111,13 +108,13 @@ CFTI28I+Init complete _
 From . . . : CFT 04/02/13 17:05:05
 CFTI18I+ FNAME : CFTCAT
 From . . . : CFT 04/02/15 17:05:05
-CFTI11I+Init complete _ Logger process ¬ID=IDLOG0|
+CFTI11I+Init complete _ Logger process ¬ID=IDLOG0&#124;
 From . . . : CFT 04/02/15 17:05:05
 CFTI18I+ FNAME : CFTPROD/LOG1
 From . . . : CFT 04/02/13 17:05:05
 CFTI18I+ AFNAME : CFTPROD/ALOG1
 From . . . : CFT 04/02/15 17:05:05
-CFTI13I+Init complete _ Communication process ¬ID=IDCOM0|
+CFTI13I+Init complete _ Communication process ¬ID=IDCOM0&#124;
 From . . . : CFT 04/02/15 17:05:05
 CFTI18I+ TYPE : File FNAME : +CFTCOM
 From . . . : CFT 04/02/15 17:05:05

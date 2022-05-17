@@ -1,11 +1,8 @@
 ---
-
-    title: About Transfer CFT services in COBOL
-    linkTitle: Using services in COBOL
+    title: "About Transfer CFT services in COBOL"
+    linkTitle: "Using services in COBOL"
     weight: 320
-
----
-This book begins with <span style="font-weight: bold;">****this topic****</span>
+---This book begins with ****this topic****
 which provides information about using the {{< TransferCFT/axwayvariablesComponentShortName  >}} services in COBOL.
 
 The programming interface is implemented by the calling application
@@ -24,7 +21,8 @@ interfaces.
 ## Call syntax
 
 ```
-CALL <span style="font-weight: bold;">****CFTx****</span> USING <verb>
+CALL CFTx
+USING <verb>
 <blk>
 <param> <rc>
 ```
@@ -50,7 +48,7 @@ Where:
     variable length that contains the function parameters>param
 - &lt;rc> is the return code
 
-The variables described in this documentation are defined in the <span style="font-weight: bold;">****cftapi.cop****</span> file supplied in the library
+The variables described in this documentation are defined in the ****cftapi.cop**** file supplied in the library
 of delivered modules. The programming example and the corresponding COPY
 files are shipped with the product.
 
@@ -65,5 +63,5 @@ of mnemonics.
 > provided by the Transfer CFT programming interfaces through mnemonics,
 > the corresponding values being able to change without notice.
 
-The return codes are listed in the <span style="font-family: 'Courier New', monospace;font-weight: bold;">****cftapi.cop****</span>
+The return codes are listed in the ****cftapi.cop****
 source file.

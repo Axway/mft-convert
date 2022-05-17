@@ -1,15 +1,12 @@
 ---
-
-    title: flrecl
-    linkTitle: flrecl
-    weight: 1200
-
----
-<span id="flrecl"></span>
+    title: "flrecl"
+    linkTitle: "flrecl"
+    weight: 1190
+---<span id="flrecl"></span>
 
 ### flrecl
 
-****\[FLRECL =  0  | {0...32767} \]   ****
+****[FLRECL =  0  &#124; {0...32767} ]   ****
 
 The file attribute check option rejects an incoming
 transfer if local file attributes do not match the virtual file attributes
@@ -40,8 +37,8 @@ records are truncated or padded.
 
 #### CFTRECV, RECV
 
-****\[FLRECL = { <span style="text-decoration: underline;">0</span>
-| n} \]    {0...32767}****
+****[FLRECL = { 0
+&#124; n} ]    {0...32767}****
 
 For records in:
 
@@ -84,7 +81,7 @@ not supplied either by the file sender or by the local parameters:
 
 #### CFTSEND, SEND
 
-****\[FLRECL =  {0...32767} | n} \]   ****
+****[FLRECL =  {0...32767} &#124; n} ]   ****
 
 For records in:
 

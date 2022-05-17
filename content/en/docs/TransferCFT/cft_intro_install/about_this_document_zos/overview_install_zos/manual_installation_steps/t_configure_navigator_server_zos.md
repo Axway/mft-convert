@@ -1,11 +1,8 @@
 ---
-
-    title: Configure the Transfer CFT Copilot server 
-    linkTitle: Configure the Transfer CFT Copilot server
+    title: "Configure the Transfer CFT Copilot server "
+    linkTitle: "Configure the Transfer CFT Copilot server"
     weight: 240
-
----
-<span id="kanchor43"></span>
+---<span id="kanchor42"></span>
 
 ## Using COPA020
 

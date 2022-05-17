@@ -1,18 +1,15 @@
 ---
-
-    title: cycdate
-    linkTitle: cycdate
-    weight: 580
-
----
-<span id="cycdate"></span>
+    title: "cycdate"
+    linkTitle: "cycdate"
+    weight: 570
+---<span id="cycdate"></span>
 
 ### cycdate
 
 #### CFTRECV, RECV, CFTSEND, SEND
 
-****\[CYCDATE =
-{see comment | date}\]****
+****[CYCDATE =
+{see comment &#124; date}]****
 
 Upper final date for activating
 the first transfer in a cycle.

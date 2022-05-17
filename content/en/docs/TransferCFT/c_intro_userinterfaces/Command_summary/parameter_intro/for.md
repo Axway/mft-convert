@@ -1,20 +1,17 @@
 ---
-
-    title: FOR
-    linkTitle: for
-    weight: 1250
-
----
-<span id="for"></span>
+    title: "FOR"
+    linkTitle: "for"
+    weight: 1240
+---<span id="for"></span>
 
 ### FOR
 
 #### CFTDEST
 
-****\[ FOR
-= { <span style="text-decoration: underline;">BOTH</span>
-| COMMUT |
-LOCAL } \]****
+****[ FOR
+= { BOTH
+&#124; COMMUT &#124;
+LOCAL } ]****
 
 Option include:
 

@@ -1,38 +1,35 @@
 ---
-
-    title: How to generate a certificate for Trusted File
-    linkTitle: Generate a certificate
-    weight: 240
-
----
-## How to generate a certificate with XCA
+    title: "How to generate a certificate for Trusted File"
+    linkTitle: "Generate a certificate"
+    weight: 230
+---## How to generate a certificate with XCA
 
 To generate certificates, for example using the XCA utility (X Certificate and Key management), perform the following steps.
 
-1. Create a <span class="bold_in_para">****New database****</span>.
+1. Create a ****New database****.
 
     -   Enter a password to protect the database that contains your certificate.
 
     ![Certificate and key management screen shot](/Images/TransferCFT/XCA_db_tab.png)
 
-1. Select the <span class="bold_in_para">****Certificates**** </span>tab.
-    -   Select: <span class="bold_in_para">****New Certificate****</span>
+1. Select the ****Certificates**** tab.
+    -   Select: ****New Certificate****
 
-1. Select the <span class="bold_in_para">****Source**** </span>tab.
-    -   In the <span class="bold_in_para">****Signature algorithm****</span> field, select <span class="bold_in_para">****MD5****</span>.
+1. Select the ****Source**** tab.
+    -   In the ****Signature algorithm**** field, select ****MD5****.
 
-1. Select the <span class="bold_in_para">****Subject**** </span>tab.
+1. Select the ****Subject**** tab.
     -   Complete the fields for your certificate.
 
     <!-- -->
 
-    -   Click <span class="bold_in_para">****Generate a new key****</span>.
+    -   Click ****Generate a new key****.
         -   Enter a key name
         -   Select 1024 bit as the key size
         -   Select Keytype
-        -   Click <span class="bold_in_para">****Create****</span>
+        -   Click ****Create****
 
-1. In the <span class="bold_in_para">****Extensions**** </span>tab:
+1. In the ****Extensions**** tab:
 
     -   In "Type": select End Entity
 
@@ -50,7 +47,7 @@ To generate certificates, for example using the XCA utility (X Certificate and K
 
     ![Create certificate screen with selected Extension tab](/Images/TransferCFT/XCA_tab.png)
 
-1. In the <span class="bold_in_para">****Key Usage****</span> tab:
+1. In the ****Key Usage**** tab:
     -   In "Key Usage", select :
         -   Digital Signature
 
@@ -71,24 +68,24 @@ To generate certificates, for example using the XCA utility (X Certificate and K
     -   In "Extended Key usage", select:
         -   E-mail Protection
 
-1. Click  <span class="bold_in_para">****OK**** </span>to generate the certificate.
+1. Click  ****OK**** to generate the certificate.
 
 ## Export the certificate that has been created.
 
-1. In <span class="bold_in_para">****Certificates**** </span>tab, select the certificate you want to export.
+1. In ****Certificates**** tab, select the certificate you want to export.
 1. Select Export.
     -   In Export Format: choose "PEM" for export PUBLIC CERTIFICATE.
 
     <!-- -->
 
-    -   Click <span class="bold_in_para">****OK**** </span>.
+    -   Click ****OK**** .
 
     <!-- -->
 
     -   Select Export.
 1. Select the certificate you want to export (filename).
     -   In Export Format: choose "PKCS #12" for export PRIVATE CERTIFICATE
-    -   Click <span class="bold_in_para">****OK**** </span>.
+    -   Click ****OK**** .
 1. Enter a password to protect your private certificates.
 
 ## How to generate a certificate with OpenSSL
@@ -109,7 +106,7 @@ openssl pkcs12 -export -out XPP_Sample_User1.p12 -inkey MyKey.key -in XPP_Sample
 
 Use the CFTTF utility, to perform the following task.
 
-Enter: <span class="code">`CFTTF –pw [XXXX]`</span>
+Enter: `CFTTF –pw [XXXX]`
 
 Where: XXXX --> is the same password as your private "PKCS #12" certificates (see above steps).
 
@@ -121,7 +118,7 @@ Where: XXXX --> is the same password as your private "PKCS #12" certificates (se
 
 ## Update the entity.xml file
 
-In  the delivered entity.xml file, update the location in the user1\_pub entity. For example, if <span class="code">`XPP_Sample_User1.pem`</span> is in the <span class="code">`/home/cft/runtime/conf/tf/certs/pub`</span> folder, then:
+In  the delivered entity.xml file, update the location in the user1_pub entity. For example, if `XPP_Sample_User1.pem` is in the `/home/cft/runtime/conf/tf/certs/pub` folder, then:
 
 ```
 <pkiEntity id="user1_pub">
@@ -132,7 +129,7 @@ In  the delivered entity.xml file, update the location in the user1\_pub entity
 </pkiEntity>
 ```
 
-In  the delivered entity.xml file, update the location in the user1\_pub entity. For example, if <span class="code">`XPP_Sample_User1.p12`</span> is in the <span class="code">`/home/cft/runtime/conf/tf/certs/priv`</span> folder and the password=Axway, then:
+In  the delivered entity.xml file, update the location in the user1_pub entity. For example, if `XPP_Sample_User1.p12` is in the `/home/cft/runtime/conf/tf/certs/priv` folder and the password=Axway, then:
 
 ```
 <pkiEntity id="user1_priv">
@@ -146,11 +143,11 @@ In  the delivered entity.xml file, update the location in the user1\_pub entity
 
 ## Update your Trusted File encoding/decoding procedures
 
-You must change the passphrase that corresponds to the private key passphrase generated by CFTTF command ( CFTTF -pw xxxx) in either the <span class="code">`conf/tf/decfile_cms.xml`</span> or <span class="code">`conf/tf/encfile_cms.xml`</span> file.
+You must change the passphrase that corresponds to the private key passphrase generated by CFTTF command ( CFTTF -pw xxxx) in either the `conf/tf/decfile_cms.xml` or `conf/tf/encfile_cms.xml` file.
 
-In the examples on this page, we changed the public and private keys for the <span class="code">`user1_pub`</span> and `user1_priv_entity` (the PKCS12 certificate and key, using the password Axway), where the corresponding example passphrase is `m8ZWaOMdkj70UzJZD+wv8gSsi1ycSTEJ5c0H6SH6dLE=.`
+In the examples on this page, we changed the public and private keys for the `user1_pub` and `user1_priv_entity` (the PKCS12 certificate and key, using the password Axway), where the corresponding example passphrase is `m8ZWaOMdkj70UzJZD+wv8gSsi1ycSTEJ5c0H6SH6dLE=.`
 
-As the private key `user1_priv` is referenced in` enfile_cms.xms` file , you must change the passphrase in the <span class="code">`<signature>`</span> section as follows:
+As the private key `user1_priv` is referenced in` enfile_cms.xms` file , you must change the passphrase in the `<signature>` section as follows:
 
 ```
 <signature requested="yes">

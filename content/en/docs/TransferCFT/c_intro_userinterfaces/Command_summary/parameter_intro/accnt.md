@@ -1,17 +1,14 @@
 ---
-
-    title: accnt
-    linkTitle: accnt
-    weight: 240
-
----
-<span id="accnt"></span>
+    title: "accnt"
+    linkTitle: "accnt"
+    weight: 230
+---<span id="accnt"></span>
 
 ### accnt
 
 #### CFTPARM
 
-**\[ACCNT = *identifier*\]**
+**[ACCNT = *identifier*]**
 
 Identifier of the description command of the statistical data record
 of the transfers (CFTACCNT).

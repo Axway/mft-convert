@@ -1,11 +1,8 @@
 ---
-
-    title: Implement SSL with Sentinel 
-    linkTitle: Implement SSL with Sentinel
-    weight: 260
-
----
-This topic describes how to enable SSL connections between a Transfer CFT client and a Sentinel server when Central Governance is not implemented. To do this, you insert in the internal PKI base the CA certificate that is used to authenticate the Sentinel server.
+    title: "Implement SSL with Sentinel "
+    linkTitle: "Implement SSL with Sentinel"
+    weight: 250
+---This topic describes how to enable SSL connections between a Transfer CFT client and a Sentinel server when Central Governance is not implemented. To do this, you insert in the internal PKI base the CA certificate that is used to authenticate the Sentinel server.
 
 ## Prerequisites
 
@@ -14,8 +11,8 @@ You require the root certificate of the Sentinel sever. See the *Axway Sentinel 
 To manage the SSL session, ensure that the values in the following Transfer CFT UCONF parameters match those defined for the Sentinel server or Event Router:
 
 - ssl.ciphersuites
-- ssl.version\_min
-- ssl.extension.enable\_sni
+- ssl.version_min
+- ssl.extension.enable_sni
 
 ## Procedure
 

@@ -1,18 +1,15 @@
 ---
-
-    title: orecfm
-    linkTitle: orecfm
-    weight: 2480
-
----
-<span id="orecfm"></span>
+    title: "orecfm"
+    linkTitle: "orecfm"
+    weight: 2500
+---<span id="orecfm"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
 #### COPYILE
 
-****\[ORECFM = {<u>IRECFM value</u> | F |
-V | U}\]****
+****[ORECFM = {<u>IRECFM value</u> &#124; F &#124;
+V &#124; U}]****
 
 Output record format:
 

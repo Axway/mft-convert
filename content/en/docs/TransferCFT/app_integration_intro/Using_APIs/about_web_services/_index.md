@@ -1,11 +1,8 @@
 ---
-
-    title: About Web services
-    linkTitle: Using Web services
+    title: "About Web services"
+    linkTitle: "Using Web services"
     weight: 290
-
----
-This documentation describes the Transfer CFT Web services interface option, and provides instructions for getting started with Web services, executing a SEND file transfer request, and retrieving the request details from the catalog.
+---This documentation describes the Transfer CFT Web services interface option, and provides instructions for getting started with Web services, executing a SEND file transfer request, and retrieving the request details from the catalog.
 
 Web services provide a way for applications to use software services over networks such as the Internet. Client applications use the Web Services Description Language (WSDL) to do this and exchange data using XML.
 Since you can use URLs, HTTP, and XML to access Web services, applications running on a variety of platforms and using various languages can access XML Web services.
@@ -28,11 +25,12 @@ contact your Axway sales representative.
 
 ## About the WSDL file
 
-To use Web services with Transfer CFT, you need a <a href="" class="MCTextPopup popup popupHead">WSDL<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody" aria-hidden="true"><span class="MCTextPopupArrow"> </span>Web Services Description Language</span></a> file. Your installed Transfer CFT product comes with a WSDL file that describes the operations, operation attributes, requests and response structure. You can access the WSDL file from your local installation at:
+To use Web services with Transfer CFT, you need a [WSDL Web Services Description Language]() file. Your installed Transfer CFT product comes with a WSDL file that describes the operations, operation attributes, requests and response structure. You can access the WSDL file from your local installation at:
 
-- On UNIX/Windows: &lt;cft\_installation\_directory>/distrib/copilot/wsdl/copilotcft.wsdl
+- On UNIX/Windows: &lt;cft_installation_directory>/distrib/copilot/wsdl/copilotcft.wsdl
 - On z/OS: &lt;copilot. http.httprootdir>/wsdl/copilotcft.wsdl
-- On IBM i: &lt;install\_directory>/distrib/copilot/wsdl/copilotcft.wsdl
+- On IBM i: &lt;install_directory>/distrib/copilot/wsdl/copilotcft.wsdl
+- On OpenVMS: CFTINSTALLDIR :[distrib.copilot.wsdl]copilotcft.wsdl
 
 Using the WSDL file, you can automatically generate a Web services client. You can use an open source Web service Java toolkit, for example Axis from The Apache Software Foundation, to create this Web services client.
 
@@ -48,8 +46,8 @@ For more information on the following subjects, go to:
 
 You can find SOAP samples and documentation at:
 
-- Transfer CFT Web services documentation: &lt;cft\_installation\_directory>/distrib/copilot/wsdl/doc/index.html
-- SOAP request samples:&lt;cft\_installation\_directory>/distrib/copilot/wsdl/sample
+- Transfer CFT Web services documentation: &lt;cft_installation_directory>/distrib/copilot/wsdl/doc/index.html
+- SOAP request samples:&lt;cft_installation_directory>/distrib/copilot/wsdl/sample
 
 > **Note**
 >
@@ -73,7 +71,7 @@ The following restrictions apply to Transfer CFT Web services:
 ## WS-I recommendations
 
 Verify that the correct option is set if your client requests have to
-be checked to conform to WS-I recommendations. To do this, set the UCONF \[copilot.webservices.wsicomplience\] identifier
+be checked to conform to WS-I recommendations. To do this, set the UCONF [copilot.webservices.wsicomplience] identifier
 to yes.
 
 The following WS-I constraints are checked by the UI server for the
@@ -109,7 +107,7 @@ You can use the following UCONF parameters to manage this option:
 
 > **Note**
 >
-> In a multi-host environment, an attacker may have up to the copilot.general.max\_login\_failures \* &lt;number of host> tries before the user is locked if the file is not in a directory shared by all hosts.
+> In a multi-host environment, an attacker may have up to the copilot.general.max_login_failures \* &lt;number of host> tries before the user is locked if the file is not in a directory shared by all hosts.
 
 When the maximum number of login failures is reached, the user account is locked for 30 seconds.
 
@@ -117,6 +115,7 @@ When the maximum number of login failures is reached, the user account is locked
 
 - On IBM i systems, there is no action if the password is incorrect as the system offers methods that you can rely on to avoid brute force attacks (the system value is [QMAXSIGN](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/rzarl/rzarlmaxsgn.htm)).
 - On z/OS systems, only the inherent system protection is available (refer to the RACF suboperand [REVOKE](https://www.ibm.com/support/knowledgecenter/SSLTBW_2.3.0/com.ibm.zos.v2r3.icha700/setrpw.htm) for the PASSWORD option).
+- On OpenVMS systems, only existing system protection is available.
 
 ****Related topics****
 

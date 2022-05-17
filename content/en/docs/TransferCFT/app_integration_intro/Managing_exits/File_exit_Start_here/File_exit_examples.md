@@ -1,11 +1,8 @@
 ---
-
-    title: File  exit examples
-    linkTitle: File exit examples
+    title: "File  exit examples"
+    linkTitle: "File exit examples"
     weight: 350
-
----
-This topic provides examples of file exits and the parameter values
+---This topic provides examples of file exits and the parameter values
 for these exits.
 
 ### File type exit parameter settings
@@ -141,5 +138,5 @@ The EXFxmp2 user function:
     byte of each non empty record with the ‘?’ character
 
 This sample is delivered with the {{< TransferCFT/axwayvariablesComponentShortName  >}} product.
-Refer to the <span style="font-weight: bold;font-family: 'Courier New', monospace;">****exfxmp2.c****</span> header
+Refer to the ****exfxmp2.c**** header
 in the delivered samples.

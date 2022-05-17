@@ -1,11 +1,8 @@
 ---
-
-    title: About the XFBTransfer Tracked Object
-    linkTitle: XFBTransfer Tracked Object
-    weight: 210
-
----
-The XFBTransfer Tracked Object (TO) is the Sentinel structure used to store transfer related events coming from the following Axway products: Transfer CFT, Gateway, Gateway Interchange, SecureTransport, and InterPel.
+    title: "About the XFBTransfer Tracked Object"
+    linkTitle: "XFBTransfer Tracked Object"
+    weight: 200
+---The XFBTransfer Tracked Object (TO) is the Sentinel structure used to store transfer related events coming from the following Axway products: Transfer CFT, Gateway, Gateway Interchange, SecureTransport, and InterPel.
 
 For each step of each {{< TransferCFT/axwayvariablesComponentShortName  >}} file transfer process, {{< TransferCFT/axwayvariablesComponentShortName  >}}generates a Tracked Object instance and sends this to {{< TransferCFT/PrimarySentinel  >}}. In each TO instance, the State attribute identifies the relevant step of the transfer process.
 

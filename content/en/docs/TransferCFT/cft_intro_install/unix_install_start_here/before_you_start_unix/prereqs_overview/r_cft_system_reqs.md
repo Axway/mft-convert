@@ -1,11 +1,8 @@
 ---
-
-    title: System requirements
-    linkTitle: System requirements
+    title: "System requirements"
+    linkTitle: "System requirements"
     weight: 150
-
----
-The following are the system requirements for {{< TransferCFT/axwayvariablesComponentShortName  >}}.
+---The following are the system requirements for {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
 ## About the {{< TransferCFT/axwayvariablesComponentShortName  >}} environment
 
@@ -18,7 +15,7 @@ Transfer CFT requires that you install the appropriate library for your operatin
 
 ### Supported operating systems and browsers
 
-Refer to the {{< TransferCFT/axwayvariablesPlatformorSuiteLongName  >}} Supported Platforms guide available on {{< TransferCFT/axwayvariablesCompanyName  >}} Support at <a href="https://support.axway.com/" class="hyperlink">https://support.axway.com</a>.
+Refer to the {{< TransferCFT/axwayvariablesPlatformorSuiteLongName  >}} Supported Platforms guide available on {{< TransferCFT/axwayvariablesCompanyName  >}} Support at [https://support.axway.com](https://support.axway.com/).
 
 ## Disk space and RAM requirements
 

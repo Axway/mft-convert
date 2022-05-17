@@ -1,11 +1,8 @@
 ---
-
-    title: System requirements
-    linkTitle: System requirements
+    title: "System requirements"
+    linkTitle: "System requirements"
     weight: 160
-
----
-The following are the system requirements for {{< TransferCFT/axwayvariablesComponentShortName  >}}.
+---The following are the system requirements for {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
 ## Supported operating systems and browsers
 

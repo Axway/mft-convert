@@ -1,11 +1,8 @@
 ---
-
-    title: Managing  PKI exits
-    linkTitle: Managing PKI exits
-    weight: 220
-
----
-This topic describes the steps involved in a PKI exit, as well as how
+    title: "Managing  PKI exits"
+    linkTitle: "Managing PKI exits"
+    weight: 210
+---This topic describes the steps involved in a PKI exit, as well as how
 PKI exits work in Transfer CFT transport security. PKI processes and concepts
 include:
 
@@ -108,7 +105,7 @@ DNs. The remote (client) entity must provide a certificate signed by one
 of these authorities. The following figure indicates the format that the
 cftpkie function must respect when building the list.
 
-********<span class="autonumber"></span>CA list format********
+********CA list format********
 
 ![Format of the certificate showing the corresponding byte for each element](/Images/TransferCFT/Image1876.gif)
 
@@ -131,7 +128,7 @@ the same as the one described in the GetCAList phase.
 The following figure indicates the format that the cftpkie function
 must respect when building the certificate.
 
-********<span class="autonumber"></span>Format of a certificate chain to be sent********
+********Format of a certificate chain to be sent********
 
 ![View of bytes for DER encoding](/Images/TransferCFT/Image1877.gif)
 
@@ -145,7 +142,7 @@ The format of the certificate chain passed to the cftpkie function
 is the same as the one for the GetCertificate phase.
 
 The TLS specification (RFC 2246) defines standard certificate check
-error codes. If a certificate is refused, you must set the iAlertReason\_w
+error codes. If a certificate is refused, you must set the iAlertReason_w
 field to a recognized value. This value is sent to the remote entity prior
 to disconnection.
 
@@ -233,7 +230,7 @@ It also contains:
 
 The following figure reviews the PKI exit phases for the server mode.
 
-********<span class="autonumber"></span>PKI Exit Phases in Server Mode********
+********PKI Exit Phases in Server Mode********
 
 ![SSL task execution beginning with a handshake](/Images/TransferCFT/Image1878.gif)
 
@@ -245,7 +242,7 @@ choice is dictated by the security profile (CFTSSL command).
 
 The following figure reviews the PKI exit phases for the client mode.
 
-********<span class="autonumber"></span>PKI exit phases in client mode********
+********PKI exit phases in client mode********
 
 ![SSL Task execution from handshake to the end of the SSL task](/Images/TransferCFT/Image1879.gif)
 

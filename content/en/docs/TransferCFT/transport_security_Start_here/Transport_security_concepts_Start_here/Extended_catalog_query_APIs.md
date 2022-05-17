@@ -1,11 +1,8 @@
 ---
-
-    title: Extended  catalog query APIs
-    linkTitle: Extended catalog query APIs
-    weight: 170
-
----
-This topic describes the additional
+    title: "Extended  catalog query APIs"
+    linkTitle: "Extended catalog query APIs"
+    weight: 160
+---This topic describes the additional
 fields relating to transport security that can be accessed via the catalog
 query APIs (cftaix). These fields are used to determine whether transport
 security was implemented for a terminated transfer, and if so, the session
@@ -35,7 +32,7 @@ char sProf[8+1] ;        /\* SSL profile ID \*/
 The following table describes the new fields declared in the structure
 returned by the extended catalog query API, cftaix.
 
-All string-type fields, char name\[n+1\], are expressed in text format,
+All string-type fields, char name[n+1], are expressed in text format,
 either ASCII or EBCDIC depending on the system, are left justified, and
 terminated by a null byte.
 

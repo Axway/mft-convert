@@ -1,17 +1,14 @@
 ---
-
-    title: cnxout
-    linkTitle: cnxout
-    weight: 440
-
----
-<span id="cnxout"></span>
+    title: "cnxout"
+    linkTitle: "cnxout"
+    weight: 430
+---<span id="cnxout"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
 #### CFTTCP
 
-****\[cnxout = {2 | n }\]****
+****[cnxout = {2 &#124; n }]****
 
 Maximum number of sessions for outgoing connections.
 

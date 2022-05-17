@@ -1,11 +1,8 @@
 ---
-
-    title: idf
-    linkTitle: idf
-    weight: 1540
-
----
-<span id="idf"></span>
+    title: "idf"
+    linkTitle: "idf"
+    weight: 1530
+---<span id="idf"></span>
 
 ### idf
 
@@ -13,7 +10,7 @@
 
 #### END, START, KEEP, HALT, SUBMIT, DELETE, LISTCAT, DISPLAY, RESUME, KSTATE
 
-****\[IDF = identifier\]****
+****[IDF = identifier]****
 
 File type identifier.
 
@@ -27,14 +24,14 @@ of 20 every 5 seconds.
 
 #### CFTAUTH
 
-****\[IDF = {identifier | mask, identifier | mask
-} <span style="font-weight: bold;">****\]****</span>****
+****[IDF = {identifier &#124; mask, identifier &#124; mask
+} ****]********
 
 List of authorized or prohibited IDF.
 
 Specify a list of up to 200 model file identifiers.
 
-The value associated with each of these <span style="font-weight: bold;">****idfs****</span>
+The value associated with each of these ****idfs****
 can be:
 
 - an explicit file
@@ -45,7 +42,7 @@ can be:
 
 #### CFTETB
 
-****\[IDF = identifier\]****
+****[IDF = identifier]****
 
 Local identifier of the model file associated with this card format
 (ID of CFTSEND/ CFTRECV).
@@ -81,7 +78,7 @@ ALL,     IDF     =    
 
 #### CFTPART
 
-****\[IDF = identifier \]****
+****[IDF = identifier ]****
 
 Default 32-character identifier of the file for the partner.
 
@@ -95,7 +92,7 @@ object.
 
 #### CFTPROT
 
-**\[IDF = *string64*\]**
+**[IDF = *string64*]**
 
 Use  to assign an IDF (file idendifier) to a file
 on receiving an NIDF that is more than 8 characters long.
@@ -132,28 +129,28 @@ In the above example, the length of the IDF value is:
 
 #### SEND
 
-****\[ IDF = identifier \]****
+****[ IDF = identifier ]****
 
 File identifier.
 
 If an identifier is not specified, the CFTPART IDF is used.
 
-If the idf is specified, but does not exist, the idf is forced to IDFDEF, you can disable this functionality. See [cft.default\_idf.enable](../../../../admin_intro/uconf/uconf_parameters).
+If the idf is specified, but does not exist, the idf is forced to IDFDEF, you can disable this functionality. See [cft.default_idf.enable](../../../../admin_intro/uconf/uconf_parameters).
 
 <span id="IDF_send_recv"></span>
 
 #### RECV
 
-****\[ IDF = { identifier | mask } \]****
+****[ IDF = { identifier &#124; mask } ]****
 
 File identifier.
 
 If an identifier is not specified, the CFTPART IDF is used.
 
-If the idf is specified, but does not exist, the idf is forced to IDFDEF, you can disable this functionality. See [cft.default\_idf.enable](../../../../admin_intro/uconf/uconf_parameters).
+If the idf is specified, but does not exist, the idf is forced to IDFDEF, you can disable this functionality. See [cft.default_idf.enable](../../../../admin_intro/uconf/uconf_parameters).
 
 #### CFTNET
 
-**\[IDF = *string32*\]**
+**[IDF = *string32*]**
 
 [Return to Command index](../../)

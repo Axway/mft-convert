@@ -1,17 +1,14 @@
 ---
-
-    title: About the INSTALL command
-    linkTitle: About the INSTALL command
+    title: "About the INSTALL command"
+    linkTitle: "About the INSTALL command"
     weight: 190
-
----
-The INSTALL command enables you to install:
+---The INSTALL command enables you to install:
 
 - Transfer CFT binary objects, such as programs, to the Transfer CFT program library
 - Transfer CFT files to production library
 - Transfer CFT IFS files to IFS directory
 
-After uploading the Transfer CFT IBM i CFT33XL file to the target location, in the Transfer CFT profile you must add the CFTTMP library to the library list. In command line execute:
+After uploading the Transfer CFT IBM i CFT33XL file to the target location, in the Transfer CFT profile you must add the CFTTMP library to the library list. In command line, execute:
 
 `ADDLIBLE LIB(CFTTMP) POSITION(*FIRST)      `
 
@@ -44,7 +41,7 @@ You can also enable:
 - Sentinel
 - SSL
 
-And lastly, you can configure:
+Lastly, you can configure:
 
 - AM type
 - PKI type
@@ -55,7 +52,7 @@ And lastly, you can configure:
 
 ## Executing the INSTALL command 
 
-Enter the INSTALL command and press <span class="span_16">PF4</span> to display the Transfer CFT IBM i installation screen.
+Enter the INSTALL command and press PF4 to display the Transfer CFT IBM i installation screen.
 
 > **Note**
 >
@@ -69,7 +66,7 @@ Install on an independent ASP. . . . . . . '2' 1:Yes / 2:No
 
 > **Note**
 >
-> To perform a silent installation, use the CFT Update menu as shown in Perform\_auto\_installation.htm.
+> To perform a silent installation, use the CFT Update menu as shown in Perform_auto_installation.htm.
 
 > **Note**
 >

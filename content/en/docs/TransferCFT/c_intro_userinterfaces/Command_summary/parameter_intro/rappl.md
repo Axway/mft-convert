@@ -1,17 +1,14 @@
 ---
-
-    title: rappl
-    linkTitle: rappl
-    weight: 2770
-
----
-<span id="rappl"></span>
+    title: "rappl"
+    linkTitle: "rappl"
+    weight: 2790
+---<span id="rappl"></span>
 
 ### rappl
 
 #### CFTSEND, CFTRECV, SEND, RECV
 
-**\[RAPPL = *string*\]**
+**[RAPPL = *string*]**
 
 - string48      PeSIT
     E CFT/CFT
@@ -38,7 +35,7 @@ partner can send and control this field.
 
 In standard PeSIT E, this value is transported in the PI 04. Its maximum
 length is limited by the eight-character standard. The PI 04 contains
-this value concatenated with the value of the <span style="font-weight: bold;">****ruser****</span>
+this value concatenated with the value of the ****ruser****
 field.
 
 In PeSIT E between two {{< TransferCFT/axwayvariablesComponentShortName  >}}s, the value of the SUSER parameter is transported in the PI 99, while the value defined in the PI 03 is truncated to 8 characters.

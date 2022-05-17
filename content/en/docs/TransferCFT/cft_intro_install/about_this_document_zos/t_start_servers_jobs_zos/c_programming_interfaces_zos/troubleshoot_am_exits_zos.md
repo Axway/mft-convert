@@ -1,11 +1,8 @@
 ---
-
-    title: Troubleshoot and example definitions
-    linkTitle: Troubleshoot AM exits
+    title: "Troubleshoot and example definitions"
+    linkTitle: "Troubleshoot AM exits"
     weight: 310
-
----
-## Common mistakes
+---## Common mistakes
 
 `    > ICH409I 282-014 ABEND DURING RACHECK PROCESSING`
 
@@ -81,25 +78,25 @@ This file must be managed by Transfer CFT Administrator:
 
 `  Part definition`
 
-`PP CONFIGURATION:CFTPART,*          =%I ALL_PART,* || %I %S,*`
+`PP CONFIGURATION:CFTPART,*          =%I ALL_PART,* ùùù_insert_pipe_here_ùù_insert_pipe_here_ùùù %I %S,*`
 
-`PP CONFIGURATION:CFTDEST,*          =%I ALL_PART,* || %I %S,*`
+`PP CONFIGURATION:CFTDEST,*          =%I ALL_PART,* ùùù_insert_pipe_here_ùù_insert_pipe_here_ùùù %I %S,*`
 
-`PP CONFIGURATION:CFTX25,*           =%I ALL_PART,* || %I %S,*`
+`PP CONFIGURATION:CFTX25,*           =%I ALL_PART,* ùùù_insert_pipe_here_ùù_insert_pipe_here_ùùù %I %S,*`
 
-`PP CONFIGURATION:CFTTCP,*           =%I ALL_PART,* || %I %S,*`
+`PP CONFIGURATION:CFTTCP,*           =%I ALL_PART,* ùùù_insert_pipe_here_ùù_insert_pipe_here_ùùù %I %S,*`
 
-`PP CONFIGURATION:CFTSNA,*           =%I ALL_PART,* || %I %S,*`
+`PP CONFIGURATION:CFTSNA,*           =%I ALL_PART,* ùùù_insert_pipe_here_ùù_insert_pipe_here_ùùù %I %S,*`
 
-`PP CONFIGURATION:CFTLU62,*          =%I ALL_PART,* || %I %S,*`
+`PP CONFIGURATION:CFTLU62,*          =%I ALL_PART,* ùùù_insert_pipe_here_ùù_insert_pipe_here_ùùù %I %S,*`
 
 `PP CONFIGURATION:CFTUCONF,VIEW      =(allow)`
 
-`PP CONFIGURATION:CFTUCONF,*         =%I ALL_PARM,* || %I %S,*`
+`PP CONFIGURATION:CFTUCONF,*         =%I ALL_PARM,* ùùù_insert_pipe_here_ùù_insert_pipe_here_ùùù %I %S,*`
 
 `  By default: PARM`
 
-`PP CONFIGURATION:*,*                =%I ALL_PARM,* || %I %S,*`
+`PP CONFIGURATION:*,*                =%I ALL_PARM,* ùùù_insert_pipe_here_ùù_insert_pipe_here_ùùù %I %S,*`
 
 `PP SERVICE:COM,VIEW                 =%I ALL_COM,*`
 
@@ -139,23 +136,23 @@ This file must be managed by Transfer CFT Administrator:
 
 `PC SERVICE:COM,*                    =%I ALL_COM,*`
 
-`PC CONFIGURATION:CFTPART,TURN       =%I ALL_PART,* || %I TURN.&ID,*`
+`PC CONFIGURATION:CFTPART,TURN       =%I ALL_PART,* ùùù_insert_pipe_here_ùù_insert_pipe_here_ùùù %I TURN.&ID,*`
 
-`PC CONFIGURATION:CFTPART,*          =%I ALL_PART,* || %I %S.&ID,*`
+`PC CONFIGURATION:CFTPART,*          =%I ALL_PART,* ùùù_insert_pipe_here_ùù_insert_pipe_here_ùùù %I %S.&ID,*`
 
-`PC CONFIGURATION:CFTDEST,*          =%I ALL_PART,* || %I %S.&ID,*`
+`PC CONFIGURATION:CFTDEST,*          =%I ALL_PART,* ùùù_insert_pipe_here_ùù_insert_pipe_here_ùùù %I %S.&ID,*`
 
-`PC CONFIGURATION:CFTX25,*           =%I ALL_PART,* || %I %S.&ID,*`
+`PC CONFIGURATION:CFTX25,*           =%I ALL_PART,* ùùù_insert_pipe_here_ùù_insert_pipe_here_ùùù %I %S.&ID,*`
 
-`PC CONFIGURATION:CFTTCP,*           =%I ALL_PART,* || %I %S.&ID,*`
+`PC CONFIGURATION:CFTTCP,*           =%I ALL_PART,* ùùù_insert_pipe_here_ùù_insert_pipe_here_ùùù %I %S.&ID,*`
 
-`PC CONFIGURATION:CFTSNA,*           =%I ALL_PART,* || %I %S.&ID,*`
+`PC CONFIGURATION:CFTSNA,*           =%I ALL_PART,* ùùù_insert_pipe_here_ùù_insert_pipe_here_ùùù %I %S.&ID,*`
 
-`PC CONFIGURATION:CFTLU62,*          =%I ALL_PART,* || %I %S.&ID,*`
+`PC CONFIGURATION:CFTLU62,*          =%I ALL_PART,* ùùù_insert_pipe_here_ùù_insert_pipe_here_ùùù %I %S.&ID,*`
 
-`PC CONFIGURATION:CFTUCONF,VIEW      =(allow)%I ALL_PARM,* || %I %S.&ID,*`
+`PC CONFIGURATION:CFTUCONF,VIEW      =(allow)%I ALL_PARM,* ùùù_insert_pipe_here_ùù_insert_pipe_here_ùùù %I %S.&ID,*`
 
-`PC CONFIGURATION:*,*                =%I ALL_PARM,* || %I %S.&ID,*`
+`PC CONFIGURATION:*,*                =%I ALL_PARM,* ùùù_insert_pipe_here_ùù_insert_pipe_here_ùùù %I %S.&ID,*`
 
 `PC CONFIGURATION:CFTUCONF,*         =%I %S.&ID,*`
 

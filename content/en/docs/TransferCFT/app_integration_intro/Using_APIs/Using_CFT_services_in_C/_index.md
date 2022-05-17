@@ -1,11 +1,8 @@
 ---
-
-    title: About Transfer CFT services in C
-    linkTitle: Using services in C
+    title: "About Transfer CFT services in C"
+    linkTitle: "Using services in C"
     weight: 310
-
----
-This section begins with this topic which provides information about using
+---This section begins with this topic which provides information about using
 the {{< TransferCFT/axwayvariablesComponentShortName  >}} services in C language. It also contains topics
 that describe how to use the following services in
 C language.
@@ -27,8 +24,8 @@ to be included in the application using the {{< TransferCFT/axwayvariablesCompon
 | ****Syntax**** | rc = cftxx (verb,&amp;ptr,param) |
 | --- | --- |
 | Element | Definition |
-| cftxx | <span >****cftai****</span>: simple Transfer CFT catalog querying services<br/> <span >****cftaix****</span>: extended {{< TransferCFT/axwayvariablesComponentShortName  >}} catalog querying services<br/> <span >****cftau****</span>: transfer services with syntax analysis<br/> <span >****cftac****</span>: transfer services without syntax analysis |
-| **<span >verb</span>** | Service requested |
+| cftxx | ****cftai****: simple Transfer CFT catalog querying services<br/> ****cftaix****: extended {{< TransferCFT/axwayvariablesComponentShortName  >}} catalog querying services<br/> ****cftau****: transfer services with syntax analysis<br/> ****cftac****: transfer services without syntax analysis |
+| **verb** | Service requested |
 | ptr | Address of the internal control block |
 | param | Parameters specific to the requested service |
 | rc | Return code |

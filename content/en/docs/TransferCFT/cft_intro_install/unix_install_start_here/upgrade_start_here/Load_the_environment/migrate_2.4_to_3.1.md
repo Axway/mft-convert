@@ -1,11 +1,8 @@
 ---
-
-    title: Migrating from Transfer CFT 2.4 to 3.9
-    linkTitle: Migrating from Transfer CFT 2.4.x
-    weight: 220
-
----
-This topic describes how to migrate from Transfer CFT 2.4 to version {{< TransferCFT/axwayvariablesComponentVersion  >}}. Before starting this migration procedure, review the prerequisites and information on [loading the environment](../). Additionally, you must have installed your new {{< TransferCFT/axwayvariablesComponentShortName  >}} {{< TransferCFT/axwayvariablesReleaseNumber  >}} and applied the most recent service pack.
+    title: "Migrating from Transfer CFT 2.4 to 3.10"
+    linkTitle: "Migrating from Transfer CFT 2.4.x"
+    weight: 210
+---This topic describes how to migrate from Transfer CFT 2.4 to version {{< TransferCFT/axwayvariablesComponentVersion  >}}. Before starting this migration procedure, review the prerequisites and information on [loading the environment](../). Additionally, you must have installed your new {{< TransferCFT/axwayvariablesComponentShortName  >}} {{< TransferCFT/axwayvariablesReleaseNumber  >}} and applied the most recent service pack.
 
 ## Migrating the configuration
 
@@ -13,12 +10,12 @@ This topic describes how to migrate from Transfer CFT 2.4 to version {{< Transfe
 
 Migrate PARM, PART, IDF and other static configuration objects.
 
-1. Load the Transfer CFT 2.4 environment. See the <a href="../" class="MCXref xref">Migration prerequisites</a> for details.
+1. Load the Transfer CFT 2.4 environment. See the [Migration prerequisites](../) for details.
 
 <!-- -->
 
 1. Export your static configuration objects using the command CFTUTIL CFTEXT.  
-    Enter: <span class="code">`CFTUTIL CFTEXT type=all, fout=cft-extract.conf`</span>
+    Enter: `CFTUTIL CFTEXT type=all, fout=cft-extract.conf`
 
 <!-- -->
 
@@ -47,8 +44,8 @@ Migrate the parameters from the Transfer CFT 2.4 trkapi.cfg file.
 
 1. Create a script file, for example:
 
-- UNIX:<span class="code">` trkapi-import.sh`</span>
-- Windows:<span class="code">` trkapi-import.bat`</span>
+- UNIX:` trkapi-import.sh`
+- Windows:` trkapi-import.bat`
 
 1. For each parameter you select, add a UCONF command line to your new script file using the format:
 
@@ -58,7 +55,7 @@ UCONFSET id=<parameter_id>, value=<value>
 
 Use the parameter mapping between trkapi and UCONF, as listed in the following table, to specify the correct parameter id.
 
-<span class="autonumber"></span>Parameter mapping between the trkapi.cfg file and UCONF
+Parameter mapping between the trkapi.cfg file and UCONF
 
 
 | Parameter in trkapi.cfg | Parameter names in UCONF |
@@ -82,7 +79,7 @@ Use the parameter mapping between trkapi and UCONF, as listed in the following t
 
 <!-- -->
 
-1. Import the selected UCONF parameters using the command CFTUTIL. Replace &lt;script\_filename> with the new script file path.
+1. Import the selected UCONF parameters using the command CFTUTIL. Replace &lt;script_filename> with the new script file path.
 
 ```
 CFTUTIL <prefix_character><script_filename>
@@ -112,7 +109,7 @@ Migrate parameters from the Transfer CFT 2.4 copconf.ini file.
 
 Use the parameters mapping between copconf and UCONF as listed in the following table to specify the correct parameter id.
 
-<span class="autonumber"></span>Parameter mapping between copconf file and UCONF
+Parameter mapping between copconf file and UCONF
 
 
 | Parameter in copconf.ini | Parameter name in UCONF |
@@ -144,7 +141,7 @@ Use the parameters mapping between copconf and UCONF as listed in the following 
 
 <!-- -->
 
-1. Import the selected UCONF parameters using the command CFTUTIL. Replace the &lt;script\_filename> with the new script file path.
+1. Import the selected UCONF parameters using the command CFTUTIL. Replace the &lt;script_filename> with the new script file path.
 
 ```
 CFTUTIL <prefix_character><script_filename>
@@ -176,7 +173,7 @@ PKIUTIL PKIEXT fout=pki-extract.conf
 
 <!-- -->
 
-1. Create a new PKI internal datafile using the command PKIUTIL PKIFILE. Replace &lt;pki\_database\_filename> with the appropriate variable:
+1. Create a new PKI internal datafile using the command PKIUTIL PKIFILE. Replace &lt;pki_database_filename> with the appropriate variable:
 
 - UNIX: $CFTPKU
 
@@ -188,7 +185,7 @@ PKIUTIL PKIEXT fout=pki-extract.conf
 PKIUTIL PKIFILE fname=<pki_database_filename>, mode='CREATE’
 ```
 
-1. Import your PKI certificates into Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion >}} using the command PKIUTIL. Replace the &lt;script\_filename> with the new script file path.
+1. Import your PKI certificates into Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion >}} using the command PKIUTIL. Replace the &lt;script_filename> with the new script file path.
 
 ```
 PKIUTIL <prefix_character><script_filename>
@@ -220,9 +217,9 @@ CFTMI240 MIGR type=CAT, direct=FROMCAT, ifname=<catalog_2.4_filename>, ofname=ca
 
 <!-- -->
 
-1. Import the catalog using the command CFTMI. Replace the &lt;catalog\_filename\_new\_installation> with the corresponding environment variable:
+1. Import the catalog using the command CFTMI. Replace the &lt;catalog_filename_new_installation> with the corresponding environment variable:
 
-- UNIX: \_CFTCATA
+- UNIX: _CFTCATA
 
 <!-- -->
 
@@ -248,9 +245,9 @@ CFTMI240 MIGR type=COM, direct=FROMCOM, ifname=<com_2.4_filename>, ofname=com_ou
 
 <!-- -->
 
-1. Import the communication media file using command CFTMI. Replace &lt;com\_filename\_new\_installation> with the corresponding environment variable:
+1. Import the communication media file using command CFTMI. Replace &lt;com_filename_new_installation> with the corresponding environment variable:
 
-- UNIX: \_CFTCOM
+- UNIX: _CFTCOM
 
 <!-- -->
 

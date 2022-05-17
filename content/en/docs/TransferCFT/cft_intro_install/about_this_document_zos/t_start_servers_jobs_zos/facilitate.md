@@ -1,18 +1,15 @@
 ---
-
-    title: Facilitate deployment
-    linkTitle: Facilitate deployment
+    title: "Facilitate deployment"
+    linkTitle: "Facilitate deployment"
     weight: 210
-
----
-Transfer CFT delivers procedures that can help you deploy instances to other LPARs as well as deploy patches and service packs.
+---Transfer CFT delivers procedures that can help you deploy instances to other LPARs as well as deploy patches and service packs.
 
 You require the following environments in order to install and deploy Transfer CFT:
 
 - Distribution environment
 - Transfer CFT run-time instance environment
 
-For a detailed description of these environments, see <a href="../../overview_install_zos/distribution_environment_installation" class="MCXref xref">Non-SMP/E: Create the distribution environment</a> .
+For a detailed description of these environments, see [Non-SMP/E: Create the distribution environment](../../overview_install_zos/distribution_environment_installation) .
 
 ****Deployment overview****
 

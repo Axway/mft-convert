@@ -1,11 +1,8 @@
 ---
-
-    title: Update upgrade, or migrate,
-    linkTitle: Update, upgrade or migrate 
-    weight: 150
-
----
-This section is designed to assist administrators or users who are tasked with updating {{< TransferCFT/suitevariablesTransferCFTName  >}}, or upgrading or migrating from an existing {{< TransferCFT/axwayvariablesComponentShortName  >}} version to {{< TransferCFT/axwayvariablesComponentShortName  >}} {{< TransferCFT/axwayvariablesComponentVersion  >}}.
+    title: "Update, upgrade, or migrate"
+    linkTitle: "Update, upgrade or migrate "
+    weight: 140
+---This section is designed to assist administrators or users who are tasked with updating {{< TransferCFT/suitevariablesTransferCFTName  >}}, or upgrading or migrating from an existing {{< TransferCFT/axwayvariablesComponentShortName  >}} version to {{< TransferCFT/axwayvariablesComponentShortName  >}} {{< TransferCFT/axwayvariablesComponentVersion  >}}.
 
 ## Updates versus upgrade or migrate
 
@@ -31,7 +28,7 @@ Upgrading, as compared to migration, has the following advantages:
 
 ****Transfer CFT 3.8 and higher****
 
-After performing a Transfer CFT upgrade, you must execute the <span class="code">`profile `</span>before performing commands with the upgraded Transfer CFT.
+After performing a Transfer CFT upgrade, you must execute the `profile `before performing commands with the upgraded Transfer CFT.
 
 ### About manual migrations
 
@@ -73,4 +70,4 @@ Important information before performing an upgrade or install auto-import proced
 
 ### More information
 
-If you encounter issues when migrating Transfer CFT, contact Axway Support at [<span class="Hyperlink">https://support.axway.com</span>](https://support.axway.com/).
+If you encounter issues when migrating Transfer CFT, contact Axway Support at [https://support.axway.com](https://support.axway.com/).

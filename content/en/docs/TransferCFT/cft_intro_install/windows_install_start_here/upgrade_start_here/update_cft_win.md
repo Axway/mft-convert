@@ -1,11 +1,8 @@
 ---
-
-    title: Update Transfer CFT
-    linkTitle: Update Transfer CFT
-    weight: 180
-
----
-This section describes how to update Transfer CFT with a patch or service pack. You can manually perform the operation or use {{< TransferCFT/suitevariablesCentralGovernanceName  >}}.
+    title: "Update Transfer CFT"
+    linkTitle: "Update Transfer CFT"
+    weight: 170
+---This section describes how to update Transfer CFT with a patch or service pack. You can manually perform the operation or use {{< TransferCFT/suitevariablesCentralGovernanceName  >}}.
 
 ## Download the update file
 
@@ -36,7 +33,7 @@ If the domain field is not shown in the products service configuration dialog, t
 
 ` <domain>\<username>`
 
-If it is a local user (a user that was created on the local machine) then the <span class="code_1">&lt;domain></span> field can be <span class="spanboldinpara">.</span> or the <span class="code_1">&lt;hostname></span>.
+If it is a local user (a user that was created on the local machine) then the &lt;domain> field can be . or the &lt;hostname>.
 
 ****Example****
 
@@ -47,6 +44,7 @@ Local user: user1
 Network user: user2
 <domain_name>\\user2
 ```
+<span id="Install"></span>
 
 ## Install a standard update
 
@@ -57,22 +55,24 @@ Stop {{< TransferCFT/axwayvariablesComponentShortName  >}} prior to installing a
 Use the following command to update Transfer CFT in silent mode:
 
 ```
-C:\\axway\\Transfer_CFT_{{< TransferCFT/axwayvariablesReleaseNumber >}}_<Install\\SP\\Patch>_<OS>_<BN>.exe --mode unattended --installdir <installation_directory>
+C:\\axway\\Transfer_CFT_ 3.10
+_<Install\\SP\\Patch>_<OS>_<BN>.exe --mode unattended --installdir <installation_directory>
 ```
 
 ## Uninstall an update
 
 This section describes uninstalling a patch or service pack.
 
-To uninstall install the previous patch or service pack. For example, to remove Transfer CFT 3.4 SP2, from the Transfer CFT 3.4 SP1 kit, run the installation pointing to the Transfer CFT 3.4 SP2 installation directory. The installer detects and replaces the SP2 content, impacting only the <span class="code">`home `</span>directory.
+To uninstall install the previous patch or service pack. For example, to remove Transfer CFT 3.4 SP2, from the Transfer CFT 3.4 SP1 kit, run the installation pointing to the Transfer CFT 3.4 SP2 installation directory. The installer detects and replaces the SP2 content, impacting only the `home `directory.
 
 **Example**
 
 ```
-C:\\axway\\Transfer_CFT_{{< TransferCFT/axwayvariablesReleaseNumber >}}_SP1_<OS>_<BN>.exe --mode unattended
+C:\\axway\\Transfer_CFT_ 3.10
+_SP1_<OS>_<BN>.exe --mode unattended
 ```
 
-To verify, from the Transfer CFT &lt;runtime\_dir> run the <span class="code">`about `</span>command.
+To verify, from the Transfer CFT &lt;runtime_dir> run the `about `command.
 
 ## Install patches and service packs in a multi-node, multi-host environment
 
@@ -83,9 +83,9 @@ This section describes the procedure to apply a patch or service pack on a multi
 > Transfer CFT clusters can still run while performing an update.
 
 1. Connect to the first host.
-1. Stop all nodes running on this host by running the command: <span class="code">`copstop`</span>  
+1. Stop all nodes running on this host by running the command: `copstop`  
     Copilot services are stopped, and local nodes are automatically re-started on the other hosts.
-1. Check that the nodes are re-started by using the command: <span class="code">`CFTUTIL listnode`</span>
+1. Check that the nodes are re-started by using the command: `CFTUTIL listnode`
 1. Install the patch or the service pack as usual using {{< TransferCFT/suitevariablesTransferCFTName >}} installer as described in [Install a standard update](#Install).
 1. Start Copilot services.
-1. Connect to the next host and repeat the procedure starting as of <span class="bold_in_para">****Step 2****</span> (above).
+1. Connect to the next host and repeat the procedure starting as of ****Step 2**** (above).

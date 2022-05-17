@@ -1,11 +1,8 @@
 ---
-
-    title:  Transfer CFT REST API concepts
-    linkTitle: REST API
+    title: " Transfer CFT REST API concepts"
+    linkTitle: "REST API"
     weight: 280
-
----
-This section describes how to use REST API to automate access to {{< TransferCFT/axwayvariablesComponentLongName  >}} resources. Available resources include administration, configuring, transferring files, and viewing the log and catalog (create, modify, view and delete transfers).
+---This section describes how to use REST API to automate access to {{< TransferCFT/axwayvariablesComponentLongName  >}} resources. Available resources include administration, configuring, transferring files, and viewing the log and catalog (create, modify, view and delete transfers).
 
 > **Note**
 >
@@ -25,9 +22,9 @@ The [Transfer CFT API documentation](http://apidocs.axway.com/swagger-ui/index.h
 
 ## Resources
 
-- <span class="bold_in_para">****API description****</span>: Is a technical description, in JSON, that specifies the API verbs, URL, encoding, input and output parameters, errors, etc.: `https://<copilot_host>:<uconf:copilot.restapi.serverport>/cft/api/v1/api-docs/service.json`  
-    <span class="bold_in_para">****Example****</span>  
+- ****API description****: Is a technical description, in JSON, that specifies the API verbs, URL, encoding, input and output parameters, errors, etc.: `https://<copilot_host>:<uconf:copilot.restapi.serverport>/cft/api/v1/api-docs/service.json`  
+    ****Example****  
     https://localhost:1768/cft/api/v1/api-docs/service.json
-- <span class="bold_in_para">****API documentation****</span>: You can access the {{< TransferCFT/axwayvariablesComponentLongName >}} Swagger UI documentation at: <span class="code">`https://<copilot_host>:<uconf:copilot.restapi.serverport>/cft/api/v1/ui/`</span>  
-    <span class="bold_in_para">****Example****</span>  
+- ****API documentation****: You can access the {{< TransferCFT/axwayvariablesComponentLongName >}} Swagger UI documentation at: `https://<copilot_host>:<uconf:copilot.restapi.serverport>/cft/api/v1/ui/`  
+    ****Example****  
     https://localhost:1768/cft/api/v1/ui/

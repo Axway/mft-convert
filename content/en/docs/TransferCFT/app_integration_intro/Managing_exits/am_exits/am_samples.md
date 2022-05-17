@@ -1,13 +1,10 @@
 ---
-
-    title: Delivered Access Management exit samples
-    linkTitle: Delivered exit samples
+    title: "Delivered Access Management exit samples"
+    linkTitle: "Delivered exit samples"
     weight: 370
+---This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
 
----
-This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
-
-Axway delivers an Access Management exit sample, examsmp1.c, in the <span class="code">`<CFTDIRRUNTIME>/src/exit`</span> directory.
+Axway delivers an Access Management exit sample, examsmp1.c, in the `<CFTDIRRUNTIME>/src/exit` directory.
 
 ### Services provided by delivered sample
 
@@ -16,7 +13,7 @@ The delivered sample provides two services, authentication and permissions check
 
 | Sample  | Authentication  | Permissions checking  |
 | --- | --- | --- |
-| examsmp1.c  | System authentication (<span >Windows only</span>)  | Flat file based on flat <a href="" >RBAC<span  aria-hidden="true"><span > </span>Role Based Access Control</span></a> model  |
+| examsmp1.c  | System authentication (Windows only)  | Flat file based on flat [RBAC Role Based Access Control]() model  |
 
 
 ### Building the dynamic library associated with the sample
@@ -26,21 +23,21 @@ To build the exit:
 1. Change the directory to: &lt;CFTDIRRUNTIME>/src/exit
 1. Run the following command:
 
-- UNIX: <span class="code">`make`</span>
-- Windows: <span class="code">`nmake -f exit.mak`</span>
+- UNIX: `make`
+- Windows: `nmake -f exit.mak`
 
-The output is a library located at <span class="code">`<CFTDIRRUNTIME>/lib/libcftexam.(so/dll)`</span>.
+The output is a library located at `<CFTDIRRUNTIME>/lib/libcftexam.(so/dll)`.
 
 ## Flat file based on flat RBAC 
 
-To check users rights, Axway delivers a sample flat file based on flat <a href="" class="MCTextPopup popup popupHead">RBAC<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody" aria-hidden="true"><span class="MCTextPopupArrow"> </span>Role Based Access Control</span></a> (Role Based Access Control) located in: <span class="code">`<CFTDIRRUNTME>/conf/exam.csv`</span>. This file contains a set of permission and user assignments.
+To check users rights, Axway delivers a sample flat file based on flat [RBAC Role Based Access Control]() (Role Based Access Control) located in: `<CFTDIRRUNTME>/conf/exam.csv`. This file contains a set of permission and user assignments.
 
 ![Simplied diagram of relationship between users, roles and permissions](/Images/TransferCFT/am_exits_rbac.GIF)
 
 ## Assigning permission
 
 The following line shows how to add a permission to a role:  
-<span class="code">`<cmd_type> <role> <resource> <actions> <policy>`</span>
+`<cmd_type> <role> <resource> <actions> <policy>`
 
 Where:
 
@@ -90,7 +87,7 @@ PA ADMIN \* \* ACCEPT
 ## Assigning users
 
 The following line shows how to add a user to a role:  
-<span class="code">`<cmd_type> <role> <users>`</span>
+`<cmd_type> <role> <users>`
 
 
 | Field  | Description  |

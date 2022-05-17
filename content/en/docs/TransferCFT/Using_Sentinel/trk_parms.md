@@ -1,11 +1,8 @@
 ---
-
-    title: TRK configuration parameters
-    linkTitle: TRK configuration parameters
-    weight: 220
-
----
-To limit the number of messages related to monitoring the XFB.Transfer class, due to a large number of transfers, you can set the monitoring parameters as described in this section.
+    title: "TRK configuration parameters"
+    linkTitle: "TRK configuration parameters"
+    weight: 210
+---To limit the number of messages related to monitoring the XFB.Transfer class, due to a large number of transfers, you can set the monitoring parameters as described in this section.
 
 Parameters to regulate monitoring can have one of the following values:
 
@@ -13,9 +10,9 @@ Parameters to regulate monitoring can have one of the following values:
 - ALL: full monitoring (for each transfer status change)
 - SUMMARY: summary monitoring (created at end of the transfer)
 - UNDEFINED: undefined value
-- ERROR: all unsuccessful transfers (where the state can be Canceled, Suspended, or Interrupted - as described in <a href="../intro_sentinel/pesit_prot_sentinel" class="MCXref xref">XFBTransfer system attributes</a>)
+- ERROR: all unsuccessful transfers (where the state can be Canceled, Suspended, or Interrupted - as described in [XFBTransfer system attributes](../intro_sentinel/pesit_prot_sentinel))
 
-For a transfer command, if Sentinel monitoring is implemented, these parameters are analyzed in the following order: transfer command, transfer definition, partner definition, general parameter (CFTPARM), and lastly the UCONF parameter definition(sentinel.xfb.transfer). If the uconf is not defined, you can set it using the command <span class="code">`CFTUTIL uconfset id=sentinel.xfb.transfer`</span>.
+For a transfer command, if Sentinel monitoring is implemented, these parameters are analyzed in the following order: transfer command, transfer definition, partner definition, general parameter (CFTPARM), and lastly the UCONF parameter definition(sentinel.xfb.transfer). If the uconf is not defined, you can set it using the command `CFTUTIL uconfset id=sentinel.xfb.transfer`.
 
 ****Parameters to regulate level of monitoring messages****
 
@@ -65,31 +62,31 @@ CFTI24I CFTTRK Sentinel state = disconnected
 
 ****CFTPARM****
 
-TRKPART = { \*UNDEFINED \*| ALL | SUMMARY | NO | ERROR }
+TRKPART = { \*UNDEFINED \*&#124; ALL &#124; SUMMARY &#124; NO &#124; ERROR }
 
-TRKSEND = { \*UNDEFINED \*| ALL | SUMMARY | NO | ERROR }
+TRKSEND = { \*UNDEFINED \*&#124; ALL &#124; SUMMARY &#124; NO &#124; ERROR }
 
 TRKRECV =
-{ \*UNDEFINED \*| ALL | SUMMARY | NO | ERROR }
+{ \*UNDEFINED \*&#124; ALL &#124; SUMMARY &#124; NO &#124; ERROR }
 
 These parameters define the TRK default settings for the CFTPART, CFTSEND, and CFTRECV commands respectively.
 
 ****SEND/RECV****
 
 TRK =
-{ \*UNDEFINED\* | ALL | SUMMARY | NO | ERROR }
+{ \*UNDEFINED\* &#124; ALL &#124; SUMMARY &#124; NO &#124; ERROR }
 
 An optional parameter with a default value of UNDEFINED. Enables tracking for a query.
 
 ****CFTSEND/CFTRECV****
 
 TRK =
-{ UNDEFINED | ALL | SUMMARY | NO | ERROR }
+{ UNDEFINED &#124; ALL &#124; SUMMARY &#124; NO &#124; ERROR }
 
 An optional parameter having TRKSEND/TRKRECV as the default values. Enables tracking for the file model (IDF).
 
 ****CFTPART****
 
-TRK = { UNDEFINED | ALL | SUMMARY | NO | ERROR }
+TRK = { UNDEFINED &#124; ALL &#124; SUMMARY &#124; NO &#124; ERROR }
 
 An optional parameter having TRKPART as the default value. Enables tracking for a partner.

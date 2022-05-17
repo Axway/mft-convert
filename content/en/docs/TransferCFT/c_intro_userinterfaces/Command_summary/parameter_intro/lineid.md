@@ -1,17 +1,14 @@
 ---
-
-    title: lineid
-    linkTitle: lineid
-    weight: 1800
-
----
-<span id="lineid"></span>
+    title: "lineid"
+    linkTitle: "lineid"
+    weight: 1790
+---<span id="lineid"></span>
 
 ### lineid
 
 #### CFTNET
 
-<span style="font-weight: bold;">****\[LINEID  = string 33\]****</span>   
+****[LINEID  = string 33]****   
 
 Describes the local physical resource. Use this field to specify the
 identifier of the asynchronous resource characterizing the communication

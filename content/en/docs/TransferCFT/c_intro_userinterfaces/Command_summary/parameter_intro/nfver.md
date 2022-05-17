@@ -1,18 +1,15 @@
 ---
-
-    title: nfver
-    linkTitle: nfver
-    weight: 2190
-
----
-<span id="nfver"></span>
+    title: "nfver"
+    linkTitle: "nfver"
+    weight: 2210
+---<span id="nfver"></span>
 
 ### nfver
 
 #### RECV
 
-****NFVER = { <span style="text-decoration: underline;">0</span>
-| n }****
+****NFVER = { 0
+&#124; n }****
 
 Version of the transferred file.
 
@@ -25,7 +22,7 @@ The values represent the following:
 - n: version -n of
     the file
 
-<span style="font-weight: bold;">****Case 2****</span>: NFVER is used alone
+****Case 2****: NFVER is used alone
 (closed mode with implicit sending from the sender server end).
 
 FNAME = &PART.&IDF (-&NFVER).
@@ -35,12 +32,12 @@ indicated in the NFVER
 
 parameter.
 
-<span style="font-weight: bold;">****GDG****</span>
+****GDG****
 
-<span style="font-weight: bold;">****Case 1****</span>: NFVER is used with NFNAME
+****Case 1****: NFVER is used with NFNAME
 (open mode with implicit sending from the sender server end).
 
-<span style="font-weight: bold;">****Example****</span>:
+****Example****:
 
 ****MVS****
 
@@ -49,10 +46,10 @@ FNAME = &FNAME (-&NFVER).
 The partner sends the GDG file with the root and the version number
 indicated.
 
-<span style="font-weight: bold;">****Case 2****</span>: NFVER is used alone
+****Case 2****: NFVER is used alone
 (closed mode with implicit sending from the sender server end)
 
-<span style="font-weight: bold;">****Example****</span>:
+****Example****:
 
 ****MVS****
 
@@ -61,7 +58,7 @@ FNAME = &TEST.GDG (-&NFVER).
 The partner sends version of the ‘&PART.&IDF’ file indicated
 in the NFVER parameter.
 
-<span style="font-weight: bold;">****Note****</span>: if NFVER is not defined,
+****Note****: if NFVER is not defined,
 the default value is 0.
 
 It is consequently recommended to define one send command (CFTSEND)

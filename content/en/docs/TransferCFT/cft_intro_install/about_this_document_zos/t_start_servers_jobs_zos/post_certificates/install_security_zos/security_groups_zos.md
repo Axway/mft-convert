@@ -1,11 +1,8 @@
 ---
-
-    title: Administrator group (GRPCFT)
-    linkTitle: User groups
+    title: "Administrator group (GRPCFT)"
+    linkTitle: "User groups"
     weight: 320
-
----
-### Administrator group (GRPCFT)
+---### Administrator group (GRPCFT)
 
 #### ALTER access rights for all Transfer CFT files
 

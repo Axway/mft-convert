@@ -1,11 +1,8 @@
 ---
-
-    title: format
-    linkTitle: format
-    weight: 1270
-
----
-<span id="format"></span>
+    title: "format"
+    linkTitle: "format"
+    weight: 1260
+---<span id="format"></span>
 
 ### format
 
@@ -13,14 +10,14 @@
 
 #### CFTLOG
 
-****\[FORMAT = <span style="text-decoration: underline;">V23</span>
-| V24 \]****
+****[FORMAT = V23
+&#124; V24 ]****
 
 Optional parameter. Indicates the format for log messages.
 
-- <span style="font-weight: bold;">****V23**** </span>(Default value): The Identifier’s
+- ****V23**** (Default value): The Identifier’s
     length is truncated to 8 characters.
-- <span style="font-weight: bold;">****V24****</span>: The complete Identifier is displayed.
+- ****V24****: The complete Identifier is displayed.
     The length of the Identifier can be up to 32 characters. Some messages
     related to a transfer includes the IDTU (Local transfer counter identifier)
     value.
@@ -29,23 +26,23 @@ Optional parameter. Indicates the format for log messages.
 
 #### CFTACCNT
 
-****\[FORMAT = <span style="text-decoration: underline;">V23</span>
-| V24 \]****
+****[FORMAT = V23
+&#124; V24 ]****
 
 Optional parameter. The FORMAT parameter indicates whether the former
 record structure should be used (V23 values for compatibility reasons)
 or if the new structure is to be applied (V24 values).
 
-- <span style="font-weight: bold;">****V23**** </span>(Default value)
+- ****V23**** (Default value)
 - V24
 
 <span id="format_CFTEXIT"></span>
 
 #### CFTEXIT
 
-****\[ FORMAT = { string } \]****
+****[ FORMAT = { string } ]****
 
-Indicates the file format of the communication area for an exit list. The possible values are 1, 2 C, T, J or X, where <span class="code">`1 `</span>is the default.
+Indicates the file format of the communication area for an exit list. The possible values are 1, 2 C, T, J or X, where `1 `is the default.
 
 ****Example****
 
@@ -90,7 +87,7 @@ Displays using the same format as in {{< TransferCFT/headerfootervariableshflong
 
 Each field is separated by a comma.
 
-For example: <span class="code">`S,X,X,X,MARTIN,PARIS,BIN,L1111482,2,,128,20191211,11481147,,,,,0,CP NONE`</span>
+For example: `S,X,X,X,MARTIN,PARIS,BIN,L1111482,2,,128,20191211,11481147,,,,,0,CP NONE`
 
 ##### Format T: TSV - Tab Separated Value
 

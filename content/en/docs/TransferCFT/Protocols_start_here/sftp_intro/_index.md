@@ -1,51 +1,23 @@
 ---
+    title: "Using SFTP with Transfer CFT"
+    linkTitle: "SFTP protocol"
+    weight: 110
+---The SSH File Transfer Protocol (SFTP) is a protocol that transfers files over an encrypted SSH channel. The SSH protocol is an encrypted protocol that uses a client-server model to authenticate two parties and encrypt the data between them.
 
-    title: Using SFTP 
-    linkTitle: SFTP protocol
-    weight: 120
+- The server listens on a designated port for connections, and is responsible for negotiating the secure connection, authenticating the connecting party, and spawning the correct environment if the credentials are accepted.
 
----
-The supported operating systems are listed in the [Platform features](../../datasheet) table.
+- The client begins the TCP handshake with the server, negotiates the secured connection, checks that the server's identity matches previously recorded information, and provides credentials to authenticate.
 
-The SSH File Transfer Protocol (SFTP) is a protocol that transfers files over an encrypted SSH channel. {{< TransferCFT/suitevariablesTransferCFTName  >}} supports the SFTP versions 3, 4, 5 and 6 for both client and server functionality.
-
-The following sections describe the Transfer CFT SFTP feature:
-
-- [Supported operations](#Supporte)
-- [Supported {{< TransferCFT/suitevariablesTransferCFTName >}} features](#Supporte2)
-- [Use cases](#Use)
-- [Configuration template](#Configur)
-- [Limitations](#Limitati)
-- Transcoding
-- Protocol, partner, and flow definition
-- [PKI formats and use]()
-- [SFTP examples](cftssh_example)
-- [Troubleshoot SFTP](sftp_troubleshoot)
-
-<span id="Supporte"></span>
-
-## Supported operations
-
-The Transfer CFT in server mode supports the following SFTP commands:
-
-- Upload (<span class="code">`put`</span>) and download (<span class="code">`get`</span>)
-- Get directory listings
-- Create, remove, change directory
-- Rename, remove file
-- Change file mode
-
-The Transfer CFT in client mode supports the following SFTP commands:
-
-- Upload (<span class="code">`put`</span>) and download (<span class="code">`get`</span>)
+Please see [SSH session concepts](sftp_keys_concepts) for session concepts and SSH object details.
 
 <span id="Supporte2"></span>
 
 ## Supported features    
 
-The Transfer CFT SFTP implementation supports these features:
+The Transfer CFT supports the following SFTP features:
 
 - Text/binary file transfer
-- Group of files in heterogeneous mode (<span class="code">`mput, mget`</span>)
+- Group of files in heterogeneous mode (`mput, mget`)
 - Folder monitoring
 - Multi-node
 - SSH compression
@@ -53,50 +25,66 @@ The Transfer CFT SFTP implementation supports these features:
 - Authentication with the user password
 - Authentication with an SSH key
 - Dual authentication with user password and SSH key
-- Amazon S3
+- Amazon S3 and Ceph Storage
+- Google Cloud Storage
+
+<span id="Supporte"></span>
+
+## Supported operations
+
+The Transfer CFT in server mode supports the following SFTP commands:
+
+- Upload (`put`) and download (`get`)
+- Get directory listings
+- Create, remove, change directory
+- Rename, remove file
+- Change file mode
+- Action on remote source (delete or archive)
+
+The Transfer CFT in client mode supports the following SFTP commands:
+
+- Upload (`put`) and download (`get`)
+
+## Supported SFTP versions
+
+{{< TransferCFT/suitevariablesTransferCFTName  >}} supports the SFTP versions 3, 4, 5, and 6. Drafts 06–13 of the IETF Internet Draft define the successive revisions of SFTP version 6.
+
+The {{< TransferCFT/axwayvariablesComponentLongName  >}} implementation is based on [Draft 13 of the RFC](https://datatracker.ietf.org/doc/html/draft-ietf-secsh-filexfer-13)  and supports the following [extensions](https://datatracker.ietf.org/doc/html/draft-ietf-secsh-filexfer-extensions-00): Vendor Id, File Hashing, Querying Available Space, Querying User Home Directory. However, {{< TransferCFT/axwayvariablesComponentLongName  >}} does not support the SFTP version 6 extended attributes and byte-range locks.
 
 <span id="Use"></span>
 
 ## Use cases
 
-You can use SFTP with {{< TransferCFT/suitevariablesTransferCFTName  >}}, other Axway products, and third-party products, to connect file transfer networks.
+You can use SFTP with parks of {{< TransferCFT/suitevariablesTransferCFTName  >}}, other Axway products, and third-party products, to connect file transfer networks.
 
-****Use case 1: Connecting networks****
+### Use case 1: Simple integration
 
-Transfer CFT can integrate with non-PeSIT based file transfer networks, as a server as well as a client.
+> **Note**
+>
+> Transfer CFT delivers a basic SFTP configuration template with the product that you can use to easily perform a first SFTP transfer. See the SFTP quick start!page for details on how to use this template to implement the following use case.
 
-> ![](/Images/TransferCFT/sftp_arch1.jpg)
+![](/Images/TransferCFT/sftp_UC1.png)
 
-****Use case 2: Application to application file transfers****
+ 
 
-Alternatively, you can implement Transfer CFT with SFTP in application to application flow scenarios. Transfer CFT can transfer files between applications using PeSIT or SFTP, as either a client or a server.
+add use case in the cft client and sftp server put an application on the server use green for external blue for CFT, green for external, remove versions...add another instance cft that uses native files - add application group openvms goes directly to ST using PeSIT SSL
 
-> ![](/Images/TransferCFT/sftp_arch2.jpg)
+### Use case 2: Simple integration
 
-<span id="Configur"></span>
+ 
 
-## Configuration template
+### Use case 3: Connecting networks
 
-{{< TransferCFT/suitevariablesTransferCFTName  >}} provides a basic SFTP configuration template. Click [here]() to view the template.
+Transfer CFT can transfer files between applications using PeSIT SSL or SFTP, as either a client or a server.
 
-## Restart a transfer
+ 
 
-Transfers are activated by the client, so a restart only works from the client side.
+arrows in both directions.
 
-- Between two {{< TransferCFT/suitevariablesTransferCFTName >}}s, interrupted transfers are restarted as on other protocols. There is only one entry in the catalog for the transfer. Use the file name to identify the transfer identifier during the restart.
-- When a send is restarted by the client, it checks that the file is still available on the server. This is possible only when the transfer is configured in Open Mode, because otherwise the server file name is provided by the server and the client does not know what it is.
+![](/Images/TransferCFT/temp_111.png)
 
-<span id="Using"></span>
+> ![](/Images/TransferCFT/sftp_UC2.png)
 
-## Using Amazon S3
-
-Transfer CFT supports the use of Amazon S3 for SFTP file transfers. Configure as you would for PeSIT, and additionally define the UCONF <span class="code">`aws.credentials.*`</span>, <span class="code">`workingdir`</span>, and <span class="code">`storageaccount `</span>parameters. Optionally, you can add a sub-folder to the <span class="code">`workingdir `</span>to restrict access to S3 objects in a specified bucket.
-
-To add a <span class="code">`workingdir `</span>sub-folder, use the format:
-
-```
-WORKINGDIR = 's3://cft-test-ci.eu-west-3/pub/share',
-```
 <span id="Limitati"></span>
 
 ## Limitations
@@ -108,26 +96,13 @@ WORKINGDIR = 's3://cft-test-ci.eu-west-3/pub/share',
 - Transfer CFT supports the RSA digital signature algorithm; however, ECDSA and DSA are not supported.
 - 512-bit RSA keys are not supported. Use at least a 1024-bit key for RSA.
 - *Windows* - You cannot modify the files rights (chmod) from the SFTP client when using Transfer CFT Windows as the SFTP server.
-- *z/OS* - Only z/OS UNIX files are processed.
+- *z/OS* - Only z/OS UNIX files are processed, not native files.
+- *IBM i* - Only IBM i UNIX files are processed, not native files.
 - *HP NonStop* - Only UNIX files are processed, not native files.
+- Not supported on OpenVMS systems.
 
-Limitations when using Amazon S3 with SFTP:
+Limitations when using Amazon S3, Ceph, or Google Cloud Storage with SFTP (*available on Unix and Windows systems*):
 
 - You cannot restart a transfer in server receive mode.
 - When listing files, only the size and modification time display.
-- You cannot see how much free space is available in the Amazon S3 folder.
-
-<span id="Transcod"></span>
-
-## Transcoding concepts
-
-The character conversion in text mode can be done at the requester or server level, either in a send or receive (as with PeSIT).
-
-****SFTP version variations****
-
-- SFTP 3 and lower: There is no flag to open a file in text mode, so the text mode is selected through the IDF's FTYPE parameter. The newline conversion can be specified on the client side.
-- SFTP 4 and higher: The client indicates if the transfer is done in binary or text mode. This overrides the IDF's FTYPE parameter. The newline conversion is done on the client side to accommodate the server requirement.
-
-See also, [Configure the SFTP server &gt; Transcoding parameters](sftp_server#Transcod) and [Configure the SFTP client &gt; Transcoding parameters](sftp_client#Transcod).
-
- 
+- You cannot see how much free space is available in the Cloud folder.

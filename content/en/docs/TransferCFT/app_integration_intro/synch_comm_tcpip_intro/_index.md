@@ -1,11 +1,8 @@
 ---
-
-    title: About synchronous communication
-    linkTitle: Using synchronous communication
+    title: "Using synchronous communication commands"
+    linkTitle: "Using synchronous communication commands"
     weight: 250
-
----
-## Use synchronous communication (TCP/IP)
+---## About synchronous communication (TCP/IP)
 
 Synchronous communication provides a real-time response when sending data from a client to the Transfer CFT server. This response indicates that the client command was acknowledged by Transfer CFT and is listed in the catalog. For a transfer request, for example, the response would indicate the date/time stamp and unique identifier associated with the transfer.
 
@@ -93,7 +90,7 @@ CFTUTIL uconfset id=copilot.cft.com, value=’C=<path><config_file>’
 
 #### Web services
 
-When using web services the default media identifier used is the first once declared in the general CFTPARM object. Additionally, you can override this in the web services XML file by adding the desired COM using the format <span class="code">`<axw:CFTCOM_ID>COM0</axw:CFTCOM_ID>`</span> in the SOAP request.
+When using web services the default media identifier used is the first once declared in the general CFTPARM object. Additionally, you can override this in the web services XML file by adding the desired COM using the format `<axw:CFTCOM_ID>COM0</axw:CFTCOM_ID>` in the SOAP request.
 
 #### Transfer CFT UI
 
@@ -103,14 +100,14 @@ CFTUTIL uconfset id=copilot.cft.com, value=’C=<path><config_file>’
 
 When using the Transfer CFT UI the first media identifier listed in the server's parameter file (CFTPARM) is used. So for example, if CFTPARM ID = IDPARM0, where COM = (COM0, COM1), the COM0 media is used.
 
-## Using SWAITCAT
+## Commands to use with synchronous communication
 
-For information on the wait period for a catalog value to reach a certain, predefined state (such as T terminated), see [SWAITCAT](define_transfer_wait_period) and the [Request examples](../../c_intro_userinterfaces/about_cftutil/managing_transfer_states/sync_transfer_request_tasks) topics.
+You can user either the [SWAITCAT](../../c_intro_userinterfaces/about_cftutil/managing_transfer_states/swaitcat_concepts) command or the SEND/RECV command with the [WSTATES, WPHASES, and WPHASESTEPS](sync_transfer_request_tasks) parameters to manage Transfer CFT transfer wait states.
 
-## Using password management
+## Securing synchronous communication
 
-For information on controlling remote users that can perform CFTUTIL commands using synchronous communication media, see [Password authentication](../../c_intro_userinterfaces/about_cftutil/control_remote_users_synch_com).
+You can use password management to control remote users that can perform CFTUTIL commands using synchronous communication media, see [Password authentication](../../c_intro_userinterfaces/about_cftutil/control_remote_users_synch_com).
 
 ## Troubleshooting
 
-For more information on errors and corrective actions, see [Synchronous communication return codes](../../troubleshoot_intro/messages_and_error_codes_start_here/synch_comm_return_codes).
+For more information on errors and corrective actions, see [Synchronous communication return codes](../../troubleshoot_intro/about_error_codes/synch_comm_return_codes).

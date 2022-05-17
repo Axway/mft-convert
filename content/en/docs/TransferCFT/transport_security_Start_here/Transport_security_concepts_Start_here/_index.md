@@ -1,11 +1,8 @@
 ---
-
-    title: Transport security concepts:  Start here
-    linkTitle: Transport security concepts
-    weight: 150
-
----
-This sub-book presents and defines transfer security concepts that are referred
+    title: "Transport security concepts:  Start here"
+    linkTitle: "Transport security concepts"
+    weight: 140
+---This sub-book presents and defines transfer security concepts that are referred
 to further in this document, as well as how these security items work. It is comprised of the following topics:
 
 - [Extended
@@ -29,7 +26,7 @@ Additionally, the following two security related subjects are described:
 
 <span id="Privacy"></span>
 
-### Privacy
+## Privacy
 
 Privacy, also referred to as confidentiality, consists in protecting
 data from being revealed to parties it was not meant for. As a rule, this
@@ -37,7 +34,7 @@ is accomplished by ciphering transferred data.
 
 Two different cryptographic techniques are often used and combined:
 
-#### Symmetrical encryption
+### Symmetrical encryption
 
 Symmetrical
 encryption consists in using a unique key to encrypt and decrypt a
@@ -46,11 +43,11 @@ and decrypt data. The task of privately choosing the key before ciphering
 data is more problematic as the connected parties share a single key that
 cannot be clearly transmitted to others.
 
-********<span class="autonumber"></span>Symmetrical encryption********
+********Symmetrical encryption********
 
 ![View of symetrical key ](/Images/TransferCFT/encrypt_key.gif)
 
-#### Asymmetrical encryption
+### Asymmetrical encryption
 
 Asymmetrical
 encryption consists in having a pair of keys where each key
@@ -66,13 +63,13 @@ and exchanged during the handshake phase. They are transmitted using an
 asymmetrical encryption mechanism, which is slower but more secure (RSA)
 than a symmetric encryption mechanism.
 
-********<span class="autonumber"></span>Asymmetrical encryption********
+********Asymmetrical encryption********
 
 ![View of public and private key encryption](/Images/TransferCFT/image004.gif)
 
 <span id="Integrity"></span>
 
-### Integrity
+## Integrity
 
 Integrity consists in assuring that the received data has not been altered
 or modified. Generally, integrity checking is done by adding to the sent
@@ -90,13 +87,13 @@ Authentication Code),
 is added to each message sent. The standard hash functions used are SHA-1
 or MD5.
 
-********<span class="autonumber"></span>Hash function********
+********Hash function********
 
 ![](/Images/TransferCFT/image005.gif)
 
 <span id="Authentication"></span>
 
-### Authentication
+## Authentication
 
 Authentication is the process of verifying a claimed identity. The most
 widely used authentication mechanisms are:
@@ -113,7 +110,7 @@ to get the public key, such as a certificate, you are sent a random encrypted
 message. If you can decrypt the message, your identity is verified because
 you own the unique private key associated with the public key.
 
-********<span class="autonumber"></span>Proof request![](/Images/TransferCFT/image006.gif)********
+********Proof request![](/Images/TransferCFT/image006.gif)********
 
 When you use TLS and SSL protocols, the client encrypts the symmetrical
 key with the server’s public key. If the server can decrypt the key, the
@@ -123,7 +120,7 @@ a signature process.
 
 <span id="Signature"></span>
 
-### Signature
+## Signature
 
 Signing messages is a technique that mixes both integrity and authentication.
 It consists in sending a ciphered hash code with the message.
@@ -134,13 +131,13 @@ the calculated hash code. If the hash code is correct, data integrity
 is accepted, and the sender is as claimed because he had the correct key
 to encrypt the digest.
 
-********<span class="autonumber"></span>Integrity and authentication********
+********Integrity and authentication********
 
 ![](/Images/TransferCFT/temp_integrity_and_auth.png)
 
 <span id="Log"></span>
 
-### Log
+## Log
 
 Log messages enable you to monitor secure transfer sessions.
 

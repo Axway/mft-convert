@@ -1,11 +1,8 @@
 ---
-
-    title: Using FIPS
-    linkTitle: Using FIPS
-    weight: 180
-
----
-## Concepts
+    title: "Using FIPS"
+    linkTitle: "Using FIPS"
+    weight: 170
+---## Concepts
 
 Transfer CFT supports the use of a FIPS-compliant library. FIPS, Federal Information Processing Standard 140-2, is a standard that describes US Federal government requirements for certain IT products.
 
@@ -23,7 +20,7 @@ Before beginning:
 To enable Transfer CFT to use FIPS-compliant algorithms:
 
 1. Activate the FIPS compliance option in Transfer CFT key.
-1. Set the uconf parameter **cft.fips.enable\_compliance** to **YES**.
+1. Set the uconf parameter **cft.fips.enable_compliance** to **YES**.
 
 ### Option details
 
@@ -33,18 +30,18 @@ To enable Transfer CFT to use FIPS-compliant algorithms:
 <!-- -->
 
 - FIPS supports the following ciphers for SSL:
-    -   61: TLS\_RSA\_WITH\_AES\_256\_CBC\_SHA256
-    -   60: TLS\_RSA\_WITH\_AES\_128\_CBC\_SHA256
-    -   59: TLS\_RSA\_WITH\_NULL\_SHA256
-    -   53: TLS\_RSA\_WITH\_AES\_256\_CBC\_SHA
-    -   47: TLS\_RSA\_WITH\_AES\_128\_CBC\_SHA
-    -   10: TLS\_RSA\_WITH\_3DES\_EDE\_CBC\_SHA
-    -   2: TLS\_RSA\_WITH\_NULL\_SHA
+    -   61: TLS_RSA_WITH_AES_256_CBC_SHA256
+    -   60: TLS_RSA_WITH_AES_128_CBC_SHA256
+    -   59: TLS_RSA_WITH_NULL_SHA256
+    -   53: TLS_RSA_WITH_AES_256_CBC_SHA
+    -   47: TLS_RSA_WITH_AES_128_CBC_SHA
+    -   10: TLS_RSA_WITH_3DES_EDE_CBC_SHA
+    -   2: TLS_RSA_WITH_NULL_SHA
 - The following non-FIPS-compliant algorithms are not supported:
     -   9: RSA DES SHA1
-    -   5: TLS\_RSA\_WITH\_RC4\_128\_SHA RSA RC4 SHA1
-    -   4: TLS\_RSA\_WITH\_RC4\_128\_MD5
-    -   1: TLS\_RSA\_WITH\_NULL\_MD5
+    -   5: TLS_RSA_WITH_RC4_128_SHA RSA RC4 SHA1
+    -   4: TLS_RSA_WITH_RC4_128_MD5
+    -   1: TLS_RSA_WITH_NULL_MD5
 - Certificates using MD5 hashing are not accepted when FIPS is enabled.
 
 ## Troubleshooting
@@ -53,7 +50,7 @@ To enable Transfer CFT to use FIPS-compliant algorithms:
 
 This issue occurs because the private key is encrypted using triple DES (by default). However, the certificate is encrypted using 40-bit RC2, which is not an approved FIPS algorithm. To remedy:
 
-> In OpenSSL use the <span class="code">`pkcs12 -descert`</span> option to encrypt the PKCS12 certificate to triple DES (RC2-40). For example:
+> In OpenSSL use the `pkcs12 -descert` option to encrypt the PKCS12 certificate to triple DES (RC2-40). For example:
 >
 > ```
 > pkcs12-export -in <your server cert>.pem -inkey <your server key>.pem -out mycert.p12 -descert

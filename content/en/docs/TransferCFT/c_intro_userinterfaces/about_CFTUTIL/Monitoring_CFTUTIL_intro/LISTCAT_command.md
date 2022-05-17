@@ -1,11 +1,8 @@
 ---
-
-    title: sLISTCAT - List catalog  contents
-    linkTitle: LISTCAT - List catalog contents
-    weight: 300
-
----
-This page describes how to list the catalog contents using command
+    title: "LISTCAT - List catalog  contents"
+    linkTitle: "LISTCAT - List catalog contents"
+    weight: 290
+---This page describes how to list the catalog contents using command
 line operations. The LISTCAT command is used to query the information
 associated with the selected transfers, recorded in the Transfer CFT catalog.
 
@@ -39,7 +36,7 @@ This command is used to display output for:
 - Compression
     factor, etc.
 
-The command parameters are selection criteria. See also, [LISTCAT/DISPLAY - Statistical variables](../listcat_filter_variables).
+The command parameters are selection criteria. See also, LISTCAT/DISPLAY - Statistical variables.
 
 ## Parameter descriptions
 
@@ -48,29 +45,25 @@ Command syntax: LISTCAT
 For the definition of the states of a transfer,
 refer to [Transfer control commands](../../../../concepts/transfer_command_overview/transfer_control_commands).
 
-QQQ\_QQQ\_QQQ
 
-Use this command to query the information associated with
-the selected transfers, recorded in the Transfer CFT catalog.
-
-
-| Parameter  | Description |
+| Command or Parameter  | Description |
 | --- | --- |
-| <a href="../../../command_summary/parameter_intro/content">CONTENT</a>  | Used to obtain part or all of the information of a catalog entry. |
-| <a href="../../../command_summary/parameter_intro/datetimemax">DATETIMEMAX</a>  | Use to display catalog transfers that happened on or before this end date and time according to the transfer record creation (DATEK, TIMEK).  |
-| <a href="../../../command_summary/parameter_intro/datetimemin">DATETIMEMIN</a>  | Use to display catalog transfers that happened on or after this start date and time according to the transfer record creation (DATEK, TIMEK).  |
-| <a href="../../../command_summary/parameter_intro/diagi">DIAGI</a>  | Define the diagi catalog transfer field display.  |
-| <a href="../../../command_summary/parameter_intro/direct">DIRECT</a>  | Transfer direction.<br/> The possible values are:<br/> • BOTH *or* *<br/> • SEND<br/> • RECV |
-| FILE = see the comment | Complete name or logical name of the catalog file.<br/> The default value for this parameter is fixed. <br/> To designate the current catalog of the monitor, this parameter should be defined with the filename set in the FNAME parameter of the CFTCAT command. |
-| <a href="../../../command_summary/parameter_intro/ida#ida">IDA</a>  | Local identifier of the transfer assigned by the user or the user application.<br/> Several catalog entries may be associated with a given IDA. |
-| <a href="../../../command_summary/parameter_intro/idf#idf_CFTCAT">IDF</a>  | Model file identifier.<br/> Several catalog entries may be associated with a given IDF. |
-| <a href="../../../command_summary/parameter_intro/idu#idt">IDT</a>  | Transfer identifier.<br/> Identifies a transfer for a given partner and transfer direction. |
-| <a href="../../../command_summary/parameter_intro/idtu">IDTU</a>  | Unique local transfer reference identifier. |
-| <a href="../../../command_summary/parameter_intro/npart">NPART</a>  | Network identifier of the partner(s) for the selected transfers.<br/> The information displayed for LISTCAT CONTENT = BRIEF is different, according to whether the NPART parameter is defined or not (see the paragraphs below). |
-| <a href="../../../command_summary/parameter_intro/part">PART</a>  | Partner identifier for the selected transfers.<br/> The value of this parameter may be:<br/> • An identifier<br/> • A mask<br/> • Omitted*<br/> If the NPART parameter is defined, the PART parameter is ignored. |
-| <a href="../../../command_summary/parameter_intro/sortby">SORTBY</a>  | Sorts the LISTCAT command information in an alphabetical/alphanumberic order.  |
-| <a href="../../../command_summary/parameter_intro/state">STATE</a> | Possible states of a catalog entry.<br/> The catalog entries in the state indicated by this parameter are selected. Any combination of the various states (D,C,H,K,T,X) is authorized. |
-| <a href="../../../command_summary/parameter_intro/type">TYPE</a>  | Type of catalog entry.<br/> If TYPE = * *or* ALL, no selection is made: all transfers present in the catalog (files, messages, reply messages) are displayed if they fulfill the selection criteria which may be defined by other parameters. |
+| LISTCAT command | Use this command to query the information associated with the selected transfers, recorded in the Transfer CFT catalog.  |
+|  [CONTENT](../../../command_summary/parameter_intro/content)  | Used to obtain part or all of the information of a catalog entry. |
+|  [DATETIMEMAX](../../../command_summary/parameter_intro/datetimemax)  | Use to display catalog transfers that happened on or before this end date and time according to the transfer record creation (DATEK, TIMEK).  |
+|  [DATETIMEMIN](../../../command_summary/parameter_intro/datetimemin)  | Use to display catalog transfers that happened on or after this start date and time according to the transfer record creation (DATEK, TIMEK).  |
+|  [DIAGI](../../../command_summary/parameter_intro/diagi)  | Define the diagi catalog transfer field display.  |
+|  [DIRECT](../../../command_summary/parameter_intro/direct)  | Transfer direction.<br/> The possible values are:<br/> • BOTH *or* *<br/> • SEND<br/> • RECV |
+|  FILE <br /> see the comment | Complete name or logical name of the catalog file.<br/> The default value for this parameter is fixed. <br/> To designate the current catalog of the monitor, this parameter should be defined with the filename set in the FNAME parameter of the CFTCAT command. |
+|  [IDA](../../../command_summary/parameter_intro/ida#ida)  | Local identifier of the transfer assigned by the user or the user application.<br/> Several catalog entries may be associated with a given IDA. |
+|  [IDF](../../../command_summary/parameter_intro/idf#idf_CFTCAT)  | Model file identifier.<br/> Several catalog entries may be associated with a given IDF. |
+|  [IDT](../../../command_summary/parameter_intro/idu#idt)  | Transfer identifier.<br/> Identifies a transfer for a given partner and transfer direction. |
+|  [IDTU](../../../command_summary/parameter_intro/idtu)  | Unique local transfer reference identifier. |
+|  [NPART](../../../command_summary/parameter_intro/npart)  | Network identifier of the partner(s) for the selected transfers.<br/> The information displayed for LISTCAT CONTENT = BRIEF is different, according to whether the NPART parameter is defined or not (see the paragraphs below). |
+|  [PART](../../../command_summary/parameter_intro/part)  | Partner identifier for the selected transfers.<br/> The value of this parameter may be:<br/> • An identifier<br/> • A mask<br/> • Omitted*<br/> If the NPART parameter is defined, the PART parameter is ignored. |
+|  [SORTBY](../../../command_summary/parameter_intro/sortby)  | Sorts the LISTCAT command information in an alphabetical/alphanumberic order.  |
+|  [STATE](../../../command_summary/parameter_intro/state) | Possible states of a catalog entry.<br/> The catalog entries in the state indicated by this parameter are selected. Any combination of the various states (D,C,H,K,T,X) is authorized. |
+|  [TYPE](../../../command_summary/parameter_intro/type)  | Type of catalog entry.<br/> If TYPE = * *or* ALL, no selection is made: all transfers present in the catalog (files, messages, reply messages) are displayed if they fulfill the selection criteria which may be defined by other parameters. |
 
 
 ### Examples

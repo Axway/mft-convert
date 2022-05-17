@@ -1,18 +1,15 @@
 ---
-
-    title: help
-    linkTitle: help
-    weight: 1430
-
----
-<span id="help"></span>
+    title: "help"
+    linkTitle: "help"
+    weight: 1420
+---<span id="help"></span>
 
 ### help
 
 #### DISPLAY
 
-****\[ HELP = { <span style="text-decoration: underline;">NONE</span>
-| FIELDS | MODELS | COMMAND } \]****
+****[ HELP = { NONE
+&#124; FIELDS &#124; MODELS &#124; COMMAND } ]****
 
 Displays help information:
 

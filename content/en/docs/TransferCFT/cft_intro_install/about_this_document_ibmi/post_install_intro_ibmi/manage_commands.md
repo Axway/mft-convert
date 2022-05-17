@@ -1,11 +1,8 @@
 ---
-
-    title: Manage commands
-    linkTitle: Manage commands
+    title: "Manage commands"
+    linkTitle: "Manage commands"
     weight: 180
-
----
-This section describes all of the command available to manage your Transfer CFT product.
+---This section describes all of the command available to manage your Transfer CFT product.
 
 ## Standard commands
 
@@ -31,11 +28,21 @@ This section describes all of the command available to manage your Transfer CFT 
 | COPSTOPM | COPSTOP |
 | STOPCOPL | COPSTOP |
 | BACKGROUND_C | BACKGROUND |
-| SNDCFTF  | CFTUTIL (See **Example 1**)  |
-| SNDCFTSPLF  | CFTUTIL (See **Example 2**)  |
+| SNDCFTF  | CFTUTIL (See Example 1)  |
+| SNDCFTSPLF  | CFTUTIL (See Example 2)  |
 | MAJSECINI  | No replacement  |
 | MAJSECENVG  | No replacement  |
 | GENEDICT  | No replacement  |
+| CPYFDBVAR  | No replacement  |
+| FORMATCONF  | No replacement  |
+| XFBOVRDBF  | No replacement  |
+| CFTMG_ALC  | No replacement  |
+| OVRDBF_ALL  | No replacement  |
+| CFTTCOM_@  | No replacement  |
+| FFT10412P, FFT1043P, UFT10412P and UFT1043P  | No replacement  |
+| CFTINS301  | No replacement  |
+| SI_PGM_BT2  | No replacement  |
+| T_QXXCHGDT  | No replacement  |
 
 
 **Example 1**

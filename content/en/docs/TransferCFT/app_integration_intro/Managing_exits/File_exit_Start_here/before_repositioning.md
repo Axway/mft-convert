@@ -1,11 +1,8 @@
 ---
-
-    title: Before repositioning
-    linkTitle: Stage Before repositioning
+    title: "Before repositioning"
+    linkTitle: "Stage Before repositioning"
     weight: 410
-
----
-At the receiver end (DIRECT = R)
+---At the receiver end (DIRECT = R)
 with file accessing managed by the user, the user function has to reposition
 using the information (rpos, frecs and fcars) the {{< TransferCFT/axwayvariablesComponentShortName  >}} provides.
 
@@ -29,7 +26,7 @@ the beginning of the file by setting the ret1 field to 1.
 ### Field values
 
 
-| Field  | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
+| Field | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
 | --- | --- | --- | --- | --- |
 | mtype | 5 | 5 | 5 | 5 |
 | masc | = | * | = | * |

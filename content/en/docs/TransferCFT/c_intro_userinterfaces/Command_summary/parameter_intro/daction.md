@@ -1,15 +1,12 @@
 ---
+    title: "daction"
+    linkTitle: "daction"
+    weight: 600
+---### daction
 
-    title: daction
-    linkTitle: daction
-    weight: 610
+#### SEND, RECV
 
----
-### daction
-
-****SEND or RECV****
-
-****\[daction= { <u>ERROR</u> | RESUME} \]****
+****[ daction= { <u>ERROR</u> &#124; RESUME} ]****
 
 Use this option to manage erroneous duplicate file transfers.
 

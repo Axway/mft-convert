@@ -1,11 +1,8 @@
 ---
-
-    title: Types of data flows
-    linkTitle: Types of data flows
+    title: "Types of data flows"
+    linkTitle: "Types of data flows"
     weight: 100
-
----
-This topic describes the various types of flows that you can create in your enterprise environment. You may use one or more of the following data flow types in your A2A or B2B use case.
+---This topic describes the various types of flows that you can create in your enterprise environment. You may use one or more of the following data flow types in your A2A or B2B use case.
 
 ## Application integration
 

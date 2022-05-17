@@ -1,11 +1,8 @@
 ---
-
-    title: Control commands
-    linkTitle: Control commands
-    weight: 260
-
----
-This section describes the control commands.
+    title: "Control commands"
+    linkTitle: "Control commands"
+    weight: 250
+---This section describes the control commands.
 
 - IF
 

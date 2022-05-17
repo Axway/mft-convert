@@ -1,13 +1,10 @@
 ---
-
-    title: Uninstall a service pack or patch
-    linkTitle: Uninstall a service pack or patch
+    title: "Uninstall a service pack or patch"
+    linkTitle: "Uninstall a service pack or patch"
     weight: 220
+---## Uninstall a service pack
 
----
-## Uninstall a service pack
-
-When you apply a service pack, a backup of your previous version is saved in a SAVF object (named, for example, SPXSAV). This SAVF is located in your production library. You can use the UNINSTALL command, delivered in the program library, to uninstall a service pack and roll back to the previous version.
+When you apply a service pack, a backup of your previous version is saved in a SAVF object (named, for example, SPXSAV), which is in your production library. You can use the UNINSTALL command, delivered in the program library, to uninstall a service pack and roll back to the previous version.
 
 Follow these steps to uninstall a service pack:
 
@@ -18,7 +15,8 @@ Follow these steps to uninstall a service pack:
 CFT Uninstall (UNINSTALL)
  
 Type choices, press Enter.
-Silent installation . . . . . . '**2**'         1:Yes/2:No
+Silent installation . . . . . . '2
+'         1:Yes/2:No
 CFT Program library . . . . . . CFTPGM Name
 CFT Production library . . . . . CFTPROD Name
 SAVF name of previous version . SPXSAV Name
@@ -37,9 +35,9 @@ SAVF name of previous version . SPXSAV Name
 
 ## Uninstall a patch
 
-When you apply a patch, a backup of your previous version is saved in a <span class="code">`SAVF `</span>object (for example, <span class="code">`PATCHSAV`</span>). This SAVF file is located in your program library.
+When you apply a patch, a backup of your previous version is saved in a `SAVF `object (for example, `PATCHSAV`). This SAVF file is located in your program library.
 
-If you need to uninstall a patch, please restore the previous SAVF to your <span class="bold_in_para">****CFT program library****</span> (<span class="code">`PATCHSAV`</span> by default).
+If you need to uninstall a patch, please restore the previous SAVF to your ****CFT program library**** (`PATCHSAV` by default).
 
 ****Example****
 

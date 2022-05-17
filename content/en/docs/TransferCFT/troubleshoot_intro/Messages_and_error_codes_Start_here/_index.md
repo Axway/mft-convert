@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer CFT messages  and error codes
-    linkTitle: Messages and error codes
-    weight: 260
-
----
-This section lists the different types of messages that {{< TransferCFT/axwayvariablesComponentLongName  >}} generates, and corrective actions when applicable. It begins with this section, which describes message formats, severity, and additional conventions used in this documentation.
+    title: "Transfer CFT messages  and error codes"
+    linkTitle: "Messages "
+    weight: 250
+---This section lists the different types of messages that {{< TransferCFT/axwayvariablesComponentLongName  >}} generates, and corrective actions when applicable. It begins with this section, which describes message formats, severity, and additional conventions used in this documentation.
 
 ## Message format
 
@@ -36,7 +33,7 @@ CFTXXX: fixed text message <variables>
 
 **Example**
 
-****CFTLOG FORMAT=\[V23,V24\]****
+****CFTLOG FORMAT=[V23,V24]****
 
 - For V23: CFTT57I
     PART=&part IDF=&idf IDT=&idt &str transfer started
@@ -65,7 +62,7 @@ Where:
 ### Message source
 
 
-| Code  | Description  |
+| Code  | Meaning  |
 | --- | --- |
 | C  | Catalog: Access to the catalog  |
 | E  | End: {{< TransferCFT/axwayvariablesComponentShortName  >}} shutdown phase  |
@@ -78,6 +75,7 @@ Where:
 | S  | System: System interface operations by the {{< TransferCFT/axwayvariablesComponentShortName  >}}  |
 | T  | Transfers: Actions relating to transfers  |
 | U  | CFTUTIL: Messages from the CFTUTIL utility  |
+| W  | Miscellaneous: Various messages related to transfers  |
 | X  | Security: Security system (only in the log)  |
 | Y  | SSL: SSL protocol  |
 
@@ -99,6 +97,15 @@ The severity code is described in the following table.
 | F  | A serious system error requiring the intervention of Product Support  |
 
 
+### Categories
+
+Transfer CFT messages belong to either a system or operating category:
+
+- Operating: Includes all messages related to transfers and CRON jobs.
+- System: Includes all internal messages, such as Transfer CFT start, stop, catalog, tasks, multi-node, and so on.
+
+This applies to messages sent to the user defined in the notify parameter in CFTLOG object.
+
 ### Symbolic variables used in message text
 
 The table below lists the symbolic variables used in message text.
@@ -112,8 +119,8 @@ The table below lists the symbolic variables used in message text.
 | cpu_id | Host computer's CPU number |
 | ctx | Internal context |
 | diagn | Diagnostic code of a network error<br /> Specific to the access method and, in some cases, to the system<br /> Expressed in hexadecimal form |
-| diagi | Internal CFT diagnostic code (DIAGI) of the catalog |
-| diagp | CFT protocol diagnostic code (DIAGP) of the catalog |
+| diagi | Internal Transfer CFT diagnostic code (DIAGI) of the catalog |
+| diagp | Transfer CFT protocol diagnostic code (DIAGP) of the catalog |
 | dest | Partner list identifier (CFTDEST command) |
 | direct | Transmission direction |
 | fname | File name |

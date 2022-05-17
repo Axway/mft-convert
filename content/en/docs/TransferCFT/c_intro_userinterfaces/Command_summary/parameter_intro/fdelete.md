@@ -1,15 +1,12 @@
 ---
-
-    title: fdelete
-    linkTitle: fdelete
-    weight: 1130
-
----
-### fdelete
+    title: "fdelete"
+    linkTitle: "fdelete"
+    weight: 1120
+---### fdelete
 
 #### CFTSEND/CFTRECV
 
-****\[FDELETE = “ “ | “\*” | C | D | K | H | T | X \]****
+****[FDELETE = “ “ &#124; “\*” &#124; C &#124; D &#124; K &#124; H &#124; T &#124; X ]****
 
 Use FDELETE to enable file deletion based on the transfer state when deleting the catalog record transfer (using the DELETE command or the PURGE procedure).
 

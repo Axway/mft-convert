@@ -1,11 +1,8 @@
 ---
-
-    title: OFTP  (ODETTE): Start here
-    linkTitle: OFTP protocol
-    weight: 140
-
----
-This section describes how to configure the OFTP (ODETTE) protocol for
+    title: "OFTP  (ODETTE): Start here"
+    linkTitle: "OFTP protocol"
+    weight: 130
+---This section describes how to configure the OFTP (ODETTE) protocol for
 Transfer CFT. This topic begins
 with an overview of the OFTP file transfer protocol describing:
 
@@ -27,16 +24,16 @@ to configure them:
 
 | Topic  | Describes...  |
 | --- | --- |
-| <a href="configuring_odette">Configuring OFTP</a> | The Transfer CFT objects that you must configure to use the OFTP (ODETTE) protocol. |
-| <a href="cftpart_parameters">Configuring partners</a> | The Transfer CFT parameters that you must define for a partner when using the OFTP protocol. |
-| <a href="processing_data">Processing data</a> | The compression functions in Transfer CFT when using the OFTP (ODETTE) protocol. |
-| <a href="submitting_a_transfer_request">Submitting a transfer request</a> | The steps that enable you to submit a transfer request. |
-| <a href="receiving_transfers">Receiving transfers</a> | How to configure the OFTP (ODETTE) environment you must define the transfer environment in the RECV object to receive a request. |
+| [Configuring OFTP](configuring_odette) | The Transfer CFT objects that you must configure to use the OFTP (ODETTE) protocol. |
+| [Configuring partners](cftpart_parameters) | The Transfer CFT parameters that you must define for a partner when using the OFTP protocol. |
+| [Processing data](processing_data) | The compression functions in Transfer CFT when using the OFTP (ODETTE) protocol. |
+| [Submitting a transfer request](submitting_a_transfer_request) | The steps that enable you to submit a transfer request. |
+| [Receiving transfers](receiving_transfers) | How to configure the OFTP (ODETTE) environment you must define the transfer environment in the RECV object to receive a request. |
 
 
 <span id="About_OFTP"></span><span id="OFTP__ODETTE__features"></span>
 
-### OFTP (ODETTE) features
+## OFTP (ODETTE) features
 
 OFTP (ODETTE) protocol standards were defined to facilitate the transmission
 of information between partners, or centers, and the motor vehicle industry.
@@ -51,7 +48,7 @@ sector.
 The data can be checked by an application initiated by the end-of-transfer
 procedures.
 
-#### General features
+### General features
 
 The general characteristics of the OFTP (ODETTE) protocol are as follows:
 
@@ -66,7 +63,7 @@ The general characteristics of the OFTP (ODETTE) protocol are as follows:
 - File reception
     acknowledgement possibility
 
-#### Specific features
+### Specific features
 
 The particular characteristics of the OFTP (ODETTE) protocol are as
 follows:
@@ -102,7 +99,7 @@ to:
 
 <span id="Network_message_structure"></span>
 
-### Network message structure
+## Network message structure
 
 A protocol message is called a FPDU, a File
 Protocol Data

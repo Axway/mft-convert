@@ -1,17 +1,14 @@
 ---
-
-    title: BLKNUM
-    linkTitle: blknum
-    weight: 330
-
----
-<span id="blknum"></span>
+    title: "BLKNUM"
+    linkTitle: "blknum"
+    weight: 320
+---<span id="blknum"></span>
 
 ### BLKNUM
 
 #### DELETE, HALT, START, RESUME, SUBMIT, KEEP, END
 
-**\[BLKNUM = {<u>0</u> | n}\]    {0
+**[BLKNUM = {<u>0</u> &#124; n}]    {0
 ... 192000}**
 
 Block number. If the values '\*' or ' ' are used then all transfers are

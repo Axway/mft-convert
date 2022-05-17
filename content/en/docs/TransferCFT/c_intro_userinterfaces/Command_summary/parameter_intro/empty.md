@@ -1,11 +1,8 @@
 ---
-
-    title: EMPTY
-    linkTitle: empty
-    weight: 820
-
----
-<span id="empty"></span>
+    title: "EMPTY"
+    linkTitle: "empty"
+    weight: 810
+---<span id="empty"></span>
 
 ### EMPTY
 

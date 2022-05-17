@@ -1,23 +1,20 @@
 ---
-
-    title: netpgm
-    linkTitle: netpgm
-    weight: 2170
-
----
-<span id="netpgm"></span>
+    title: "netpgm"
+    linkTitle: "netpgm"
+    weight: 2190
+---<span id="netpgm"></span>
 
 ### netpgm
 
 #### CFTNET
 
-**\[NETPGM = *string32*\] UNIX**
+**[NETPGM = *string32*] UNIX**
 
 Name of the executable file initializing the resource. Used by some
 UNIX systems.
 
-- Value = <span style="font-weight: bold;">****string
-    32****</span>
+- Value = ****string
+    32****
 
  
 

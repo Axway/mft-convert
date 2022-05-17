@@ -1,15 +1,12 @@
 ---
-
-    title: workingdir
-    linkTitle: workingdir
-    weight: 3770
-
----
-### workingdir
+    title: "workingdir"
+    linkTitle: "workingdir"
+    weight: 3790
+---### workingdir
 
 #### CFTSEND, CFTRECV, SEND, RECV
 
-****\[WORKINGDIR = directory name \] string 512****
+****[WORKINGDIR = directory name ] string 512****
 
 Enter the name of a working directory for a given flow. The directory name is a path that can be:
 

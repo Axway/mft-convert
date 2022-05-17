@@ -1,11 +1,8 @@
 ---
-
-    title: Customize MNINIT
-    linkTitle: Customize MNINIT
+    title: "Customize MNINIT"
+    linkTitle: "Customize MNINIT"
     weight: 200
-
----
-The following section is based on implementing an Active/Active High Availability multi-host configuration use case. You should modify accordingly to implement either:
+---The following section is based on implementing an Active/Active High Availability multi-host configuration use case. You should modify accordingly to implement either:
 
 - Mono host, multi-node architecture
 - Multi host, multi-node architecture
@@ -52,8 +49,8 @@ Edit the MNINIT JCL located in the INSTALL Library as described in the following
 ### Additional steps and notes
 
 - Operator commands are 'local' to a node.
-- The UCONF <span class="code">`sentinel.trktname`</span> parameter defines the Sentinel overflow file. Configure as follows:
-    -   Set the <span class="code">`sentinel.trksharedfile`</span> parameter to YES.
+- The UCONF `sentinel.trktname` parameter defines the Sentinel overflow file. Configure as follows:
+    -   Set the `sentinel.trksharedfile` parameter to YES.
     -   You must use an Event Router to process the overflow file.
     -   For a multi-hosts, multi-node implementation, define the logger file using a CF-Structure.
     -   For a mono-host, multi-node implementation, define the logger file using the DASDONLY parameter.

@@ -1,17 +1,14 @@
 ---
-
-    title: Troubleshoot 240 or 740 RTO
-    linkTitle: Troubleshoot RTO 240 or 740
+    title: "Troubleshoot 240 or 740 RTO"
+    linkTitle: "Troubleshoot RTO 240 or 740"
     weight: 480
-
----
-****Issue: An error occurs with a 240 or 740 RTO****
+---****Issue: An error occurs with a 240 or 740 RTO****
 
 This error may occur when a transfer CFT timeout occurs between the select and deselect file steps during the transfer phase.
 
 A timer, which is set in the CFTPROT command RTO parameter, is triggered for each step of the transfer phase. If the timer limit is reached, the transfer is interrupted and the resulting status of the transfer is D. You can still execute the transfer, though, using the RETRY mechanism.
 
-<span class="bold_in_para">****Cause****</span>
+****Cause****
 
 240 RTO can have one of two causes:
 
@@ -43,7 +40,7 @@ Reducing the RUSIZE can avoid this root cause. However this should be fixed by s
 
 To confirm if it is a network congestion issue, you can use the ping command or a tool such as MTR (My traceroute), which is a combination of traceroute and the ping command. Sometimes, the timer can expire locally whereas the session is still active on the remote side.
 
-Therefore, if the transfer in 240 RTO status is restarted on a new session, the  remote side may get a <span class="code">`Transfer is already in progress`</span> message and the transfer fails.
+Therefore, if the transfer in 240 RTO status is restarted on a new session, the  remote side may get a `Transfer is already in progress` message and the transfer fails.
 
 The solution:
 
@@ -54,7 +51,7 @@ The solution:
 
 ****{{< TransferCFT/axwayvariablesComponentLongName  >}} task has an abnormal termination****
 
-This can cause the timer to expire and induces the 240 RTO diagnostic. Check that no core dump is detected and execute a cft\_support collect before stopping Transfer CFT, or before killing the {{< TransferCFT/axwayvariablesComponentLongName  >}} processes if that's necessary.
+This can cause the timer to expire and induces the 240 RTO diagnostic. Check that no core dump is detected and execute a cft_support collect before stopping Transfer CFT, or before killing the {{< TransferCFT/axwayvariablesComponentLongName  >}} processes if that's necessary.
 
 Restart Transfer CFT. The transfer in 240 RTO status is normally restarted, but if the problem still persists cancel the transfer causing the problem and restart Transfer CFT.
 
@@ -62,7 +59,7 @@ Restart Transfer CFT. The transfer in 240 RTO status is normally restarted, but 
 
 These issues can also cause the timer to expire and induce the 240 RTO. You can check with various commands or system tools for frozen {{< TransferCFT/axwayvariablesComponentLongName  >}} tasks, or if there is a high CPU consumption.
 
-Execute cft\_support collect, and if necessary force a dump on a specific task in order to collect information. For example, on Unix:
+Execute cft_support collect, and if necessary force a dump on a specific task in order to collect information. For example, on Unix:
 
 ```
 kill -3 <process id>

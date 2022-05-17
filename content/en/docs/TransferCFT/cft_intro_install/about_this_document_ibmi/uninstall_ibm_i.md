@@ -1,11 +1,8 @@
 ---
-
-    title: Uninstall Transfer CFT
-    linkTitle: Uninstall Transfer CFT
+    title: "Uninstall Transfer CFT"
+    linkTitle: "Uninstall Transfer CFT"
     weight: 200
-
----
-To uninstall {{< TransferCFT/axwayvariablesComponentLongName  >}} in an IBM i environment, delete the following libraries:
+---To uninstall {{< TransferCFT/axwayvariablesComponentLongName  >}} in an IBM i environment, delete the following libraries:
 
 - CFTPROD
 - CFTPGM

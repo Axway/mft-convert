@@ -1,11 +1,8 @@
 ---
-
-    title: Register Transfer CFT with Flow Manager
-    linkTitle: Register with Flow Manager
-    weight: 180
-
----
-This section describes how to register a Transfer CFT instance with either an on premise or SaaS {{< TransferCFT/suitevariablesFlowManager  >}}. You can refer to the [Flow Manager User Guide](https://docs.axway.com/bundle/FlowManager_20_allOS_en_HTML5/page/user_guide.html) for Flow Manager details.
+    title: "Register Transfer CFT with Flow Manager"
+    linkTitle: "Register with Flow Manager"
+    weight: 170
+---This section describes how to register a Transfer CFT instance with either an on premise or SaaS {{< TransferCFT/suitevariablesFlowManager  >}}. You can refer to the [Flow Manager User Guide](https://docs.axway.com/bundle/FlowManager_20_allOS_en_HTML5/page/user_guide.html) for Flow Manager details.
 
 ## Prerequisites
 
@@ -31,14 +28,14 @@ The automatic activation is only available on UNIX and Windows platforms and can
 
 This section describes the steps to register your {{< TransferCFT/axwayvariablesComponentLongName  >}} with {{< TransferCFT/suitevariablesFlowManager  >}}. The procedure is the same for either an on-premise or SaaS {{< TransferCFT/suitevariablesFlowManager  >}}, with the exception of the two steps described in [Define the {{< TransferCFT/suitevariablesFlowManager  >}} Agent](#Define).
 
-All commands in this section are performed using CFTUTIL unless stated otherwise. For details on the UCONF parameters referenced in this section, please see <a href="" class="MCXref xref">UCONF: Central Governance options</a>.
+All commands in this section are performed using CFTUTIL unless stated otherwise. For details on the UCONF parameters referenced in this section, please see [UCONF: Central Governance options]().
 
 #### Define UCONF parameters used for {{< TransferCFT/axwayvariablesComponentLongName  >}} instance identification
 
 Set the parameters used to identify a Transfer CFT instance. Follow these guidelines, otherwise the registration will fail:
 
 - The length of the `cft.instance_id` value is limited to 24 characters.
-- The address set in <span class="code">`cft.full_hostname`</span> must be reachable from {{< TransferCFT/suitevariablesFlowManager >}} or a Flow Manager Agent (for a SaaS deployment).
+- The address set in `cft.full_hostname` must be reachable from {{< TransferCFT/suitevariablesFlowManager >}} or a Flow Manager Agent (for a SaaS deployment).
 
 ```
 uconfset id=cft.instance_id, value=<cft_id>
@@ -46,11 +43,11 @@ uconfset id=cft.instance_group, value=<cft_instance_group>
 uconfset id=cft.full_hostname, value=<cft_address>
 ```
 
-Additionally, if running in a multi-host/multi-node environment, you must set the load balancer address(FQDN or IP address) and port that {{< TransferCFT/suitevariablesFlowManager  >}} uses to reach the Transfer CFT (<span class="code">`copilot.general.ssl_serverport`</span>):
+Additionally, if running in a multi-host/multi-node environment, you must set the load balancer address(FQDN or IP address) and port that {{< TransferCFT/suitevariablesFlowManager  >}} uses to reach the Transfer CFT (`copilot.general.ssl_serverport`):
 
 ```
 uconfset id=cft.multi_node.load_balancer.host, value=<load_balancer_address>
-uconfset id=<span class="code">`cft.multi_node.load_balancer.port,value=<load_balancer_port>`</span>
+uconfset id= cft.multi_node.load_balancer.port,value=<load_balancer_port>
 ```
 
 #### Define the Flow Manager Agent for SaaS
@@ -69,9 +66,9 @@ To use a proxy server for your on-premise {{< TransferCFT/suitevariablesFlowMana
 
 ```
 uconfset id=cg.proxy.in.host, value= <proxy_address>
-uconfset id=cg.proxy.in.port<span class="code">`,value= <proxy_port>`</span>
+uconfset id=cg.proxy.in.port ,value= <proxy_port>
 uconfset id=cg.proxy.in.login, value= <proxy_login>
-uconfset id=<span class="code">`cg.proxy.in.password, value= <proxy_login_password>`</span>
+uconfset id= cg.proxy.in.password, value= <proxy_login_password>
 ```
 
 #### Optionally define a proxy server for {{< TransferCFT/axwayvariablesComponentLongName  >}} to {{< TransferCFT/suitevariablesFlowManager  >}} communication
@@ -127,7 +124,7 @@ uconfset id=cg.configuration_policy, value=<name_of_policy>
 
 #### Optionally customize the business certificate Distinguished Name (DN)
 
-You may want to customize the business certificate's Distinguished Name (DN), which is generated during the {{< TransferCFT/suitevariablesFlowManager  >}} registration or certificate renewal. Set the UCONF parameter cg.certificate.business.csr\_dn to the custom value. The default is O=Axway,OU=MFT,CN=%uconf:cft.full\_hostname%. Remember to separate tokens by a comma.
+You may want to customize the business certificate's Distinguished Name (DN), which is generated during the {{< TransferCFT/suitevariablesFlowManager  >}} registration or certificate renewal. Set the UCONF parameter cg.certificate.business.csr_dn to the custom value. The default is O=Axway,OU=MFT,CN=%uconf:cft.full_hostname%. Remember to separate tokens by a comma.
 
 ```
 uconfset id=cg.certificate.business.csr_dn, value='O=MyCompany,OU=MFT,CN=%uconf:cft.full_hostname%'
@@ -137,7 +134,7 @@ A best practice is to customize the certificate DN prior to registration. Howeve
 
 #### Optionally customize the governance certificate Distinguished Name (DN)
 
-To override the governance certificate's Distinguished Name (DN), which is generated during the {{< TransferCFT/suitevariablesFlowManager  >}} registration or certificate renewal, set the UCONF parameter cg.certificate.governance.csr\_dn to the custom value. The default is O=Axway,OU=MFT,CN=&lt;Transfer CFT $(cft.instance\_id)>. Remember to separate tokens by a comma.
+To override the governance certificate's Distinguished Name (DN), which is generated during the {{< TransferCFT/suitevariablesFlowManager  >}} registration or certificate renewal, set the UCONF parameter cg.certificate.governance.csr_dn to the custom value. The default is O=Axway,OU=MFT,CN=&lt;Transfer CFT $(cft.instance_id)>. Remember to separate tokens by a comma.
 
 ```
 uconfset id=cg.certificate.governance.csr_dn, value='O=MyCompany,OU=MFT,CN=%uconf:cft.full_hostname%'
@@ -169,21 +166,17 @@ uconfset id=cg.enable, value=yes
 Use the CFTUTIL CHECK command to validate the coherence of parameters, partners, and the Transfer CFT PKI database.
 
 ```
-CHECK CONTENT=BRIEF|FULL, FOUT=FileName
+CHECK CONTENT=BRIEF&#124;FULL, FOUT=FileName
 ```
 
-Check the list in the output for errors and correct all errors before attempting registration. See also, <a href="../../c_intro_userinterfaces/about_cftutil/check_command" class="MCXref xref">Use the check command</a>.
+Check the list in the output for errors and correct all errors before attempting registration. See also, [Use the check command](../../c_intro_userinterfaces/about_cftutil/check_command).
 
 ## Register or re-register
 
-Ensure that `cft_registration_id `is reset to <span class="code">`-1`</span>. Otherwise, reset it as follows:  
+Ensure that `cft_registration_id `is reset to `-1`. Otherwise, reset it as follows:  
 
 ```
 CFTUTIL uconfunset id=cg.registration_id
 ```
 
 Start the {{< TransferCFT/suitevariablesTransferCFTName  >}} Copilot to automatically trigger registration. From the Flow Manager UI, check the **Product List** to confirm that the registration was successful.
-
-<span id="Define"></span>
-
-### 

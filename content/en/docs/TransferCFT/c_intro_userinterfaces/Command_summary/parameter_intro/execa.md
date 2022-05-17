@@ -1,15 +1,12 @@
 ---
-
-    title: execa
-    linkTitle: execa
-    weight: 840
-
----
-### execa
+    title: "execa"
+    linkTitle: "execa"
+    weight: 830
+---### execa
 
 #### CFTDEST
 
-****\[ EXECA = { <u>DEST</u> | PART | CHILDREN \] \]****
+****[ EXECA = { <u>DEST</u> &#124; PART &#124; CHILDREN ] ]****
 
 Acknowledgement procedure submit mode type.
 

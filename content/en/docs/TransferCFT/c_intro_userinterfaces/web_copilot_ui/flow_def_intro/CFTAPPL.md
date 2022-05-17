@@ -1,11 +1,8 @@
 ---
-
-    title: Assigning  a transfer owner
-    linkTitle: Transfer owner assignment - CFTAPPL
-    weight: 240
-
----
-This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
+    title: "Assigning  a transfer owner - CFTAPPL"
+    linkTitle: "Transfer owner assignment - CFTAPPL"
+    weight: 230
+---This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
 
 For a specified transfer and file or message identifier, Transfer CFT
 assigns the USERID identifier defined in the corresponding CFTAPPL command.
@@ -14,7 +11,7 @@ request sender.
 
 If the security system is active, at least one default CFTAPPL command
 must exist for each transfer direction. The identifier used by this command
-is the default value defined in the general parameters. [\[CFTPARM\]](../../../../admin_intro/admin_config_commands/cftparm_general_parameters)
+is the default value defined in the general parameters. [[CFTPARM]](../../../../admin_intro/admin_config_commands/cftparm_general_parameters)
 
 Identifiers with the same prefixes can be grouped together in a single
 CFTAPPL command.
@@ -28,7 +25,7 @@ in this section).
 If neither the corresponding CFTAPPL command nor the default command
 can be found, the transfer is refused.
 
-For more details, refer to<span class="italic_in_para"> Pre-Transfer Controls</span>
+For more details, refer to Pre-Transfer Controls
 and the Requester/Sender and Server/Sender examples in
 the previous topic.
 
@@ -42,7 +39,7 @@ must exist, irrespective of the LENAPPL value defined in CFTPARM.
 ```
 CFTAPPL    
      [MODE       =    
-{CREATE | DELETE | REPLACE},]
+{CREATE &#124; DELETE &#124; REPLACE},]
      ID          =    
 identifier,
      USERID      =    
@@ -50,13 +47,13 @@ identifier,
      [GROUPID    =    
 identifier,]
      [DIRECT     =    
-{BOTH | RECV | SEND}]
+{BOTH &#124; RECV &#124; SEND}]
 ```
 
 ### Parameters
 
-****\[DIRECT     = {BOTH
-| RECV | SEND}\]****
+****[DIRECT     = {BOTH
+&#124; RECV &#124; SEND}]****
 
 Transmission direction.
 
@@ -69,8 +66,8 @@ Possible values are:
 - SEND:
     associates an owner with send transfers (CFTSEND/SEND)
 
-****\[GROUPID     = {identifier
-| &GROUPID}\]****
+****[GROUPID     = {identifier
+&#124; &GROUPID}]****
 
 Identifier of the group that owns the transfer.
 
@@ -81,24 +78,26 @@ the variable is replaced by the GROUPID that created the transfer.
 
 Command identifier (eight characters).
 
-If a specific CFTAPPL command is used, the identifier corresponds to
-the value of the CFTSEND/CFTRECV ID parameters, or to the SEND/RECV IDF
-(IDM) parameters.
+- If you use a specific CFTAPPL command, the identifier corresponds to
+    the value of the CFTSEND/CFTRECV ID parameters, or to the SEND/RECV IDF
+    (IDM) parameters.
 
-If the default CFTAPPL command is used, the identifier is set to the
-default value defined in the general parameters (DEFAULT parameter of
-the CFTPARM command).
+- If you use the default CFTAPPL command, the identifier is set to the
+    default value defined in the general parameters (DEFAULT parameter of
+    the CFTPARM command).
 
-If a generic CFTAPPL command is used, identifiers with the same prefixes
-are grouped together in a single command. The length of the identifier
-is defined in the general parameters (LENAPPL parameter of the CFTPARM
-command).
+- If you use a generic CFTAPPL command, identifiers with the same prefixes are grouped together in a single command. The maximum length of the CFTAPPL identifier is defined in the general parameters (LENAPPL parameter of the CFTPARM command).
 
-The ? and/or \* wildcard characters may be used to represent any single
-character and any substring respectively.
+You can use the ? to represent any single character and/or use the \* wildcard character to represent any sub-string.
+
+> **Note**
+>
+> If LENAPPL = 4 and CFTAPPL ID=A?B?C ,userid=USER1, then send part=&lt;part>,IDF=A1B2 does not change transfer owner to USER1. However,
+
+if `LENAPPL = 4` and `CFTAPPL ID=A?B*,userid=USER1`, then `send  part=<part>,IDF=A1B2C ` changes the transfer owner to USER1.
 
 ****MODE     = {REPLACE
-| CREATE | DELETE}****
+&#124; CREATE &#124; DELETE}****
 
 Operation to be executed.
 
@@ -112,14 +111,16 @@ Possible values are:
     deletes one or more records
 
 ****USERID     = {identifier
-| &USERID}****
+&#124; &USERID}****
 
 Identifier (8 characters) of the transfer owner.
 
 When privileges are checked, if the value specified is &USERID,
 the variable is replaced with the USERID that created the transfer.
 
- 
+<span id="Local_Applications"></span>
+
+## Local applications
 
 This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
 
@@ -135,7 +136,7 @@ server sides.
 
 <span id="Implementation"></span>
 
-## Implementing
+### Implementing
 
 The CFTAPPL command is used to create the local application.
 
@@ -198,7 +199,7 @@ contains the USER3 userid:
 - the user who submitted
     the RECV command becomes the owner of the command
 
-#### Requester/Sender with CFTAPPL
+#### Requester/sender with CFTAPPL
 
 ![](/Images/TransferCFT/requester_sender_CFTAPPL.gif)
 
@@ -209,20 +210,38 @@ a CFTAPPL command. There is a default CFTAPPL command:
 
 - USER1 becomes the
     owner of the SEND command
-- USER2 becomes the
-    owner of the transfer
+- USER2 becomes the transfer owner
 
 On the server side, a CFTAPPL command corresponding to the same IDF
 contains the USER3 userid:
 
-- USER3 becomes the
-    owner of the transfer
+- USER3 becomes the transfer owner
 - The user who submitted
     the RECV command becomes the owner of the command
 
-Requester/Sender with the Default CFTAPPL
+****Requester/Sender with the default CFTAPPL****
 
 ![](/Images/TransferCFT/sender_rec_CFTAPPL_default.gif)
+
+#### Using a generic CFTAPPL command
+
+USER1 creates a SEND request for multiple IDFs corresponding to a generic CFTAPPL command with the USER2 userid:
+
+- USER1 becomes the owner of the SEND command
+
+- USER2 becomes the transfer owner
+
+On the server side, a CFTAPPL command corresponding to the same IDF contains the USER3 userid:
+
+- USER3 becomes the transfer owner
+
+<!-- -->
+
+- The user who submitted the RECV command becomes the owner of the command
+
+****Requester/Sender with CFTAPPL****
+
+****![](/Images/TransferCFT/generic_cftappl.gif)****
 
 <span id="Server_sender_configuration"></span>
 

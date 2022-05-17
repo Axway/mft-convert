@@ -1,24 +1,21 @@
 ---
-
-    title: scredit
-    linkTitle: scredit
-    weight: 3100
-
----
-<span id="scredit"></span>
+    title: "scredit"
+    linkTitle: "scredit"
+    weight: 3120
+---<span id="scredit"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
 #### CFTPROT
 
-**\[RCREDIT     = {4
-| n}\] <span style="font-weight: normal;">    {1...999}</span>**
+**[RCREDIT     = {4
+&#124; n}]     {1...999}**
 
 Odette protocol
 
 Value of the "credit" (expressed as a number of "DATA"
 messages) proposed by {{< TransferCFT/axwayvariablesComponentShortName  >}} when it is the requester. Enter a value
-between 1 and 999. The Default value is <span style="font-weight: bold;">****4****</span>.
+between 1 and 999. The Default value is ****4****.
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} is authorized to send a number of "DATA" protocol
 messages equal to the result of the negotiation (performed when the protocol

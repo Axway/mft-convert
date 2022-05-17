@@ -1,11 +1,8 @@
 ---
-
-    title: Specific  network functions
-    linkTitle: Specific network functions
+    title: "Specific  network functions"
+    linkTitle: "Specific network functions"
     weight: 250
-
----
-This topic presents the TCP network supported by {{< TransferCFT/axwayvariablesComponentShortName  >}} Windows,
+---This topic presents the TCP network supported by {{< TransferCFT/axwayvariablesComponentShortName  >}} Windows,
 and how to define the network parameters.
 
 <span id="Supported_networks"></span>
@@ -28,7 +25,7 @@ Additionally, the logical key can limit the maximum number of transfers.
 ## Defining network parameters
 
 You implement network functions by entering parameters into
-a single file, <span class="code">`cftnet.conf`</span>, located in the {{< TransferCFT/axwayvariablesComponentShortName  >}} `runtime\conf`
+a single file, `cftnet.conf`, located in the {{< TransferCFT/axwayvariablesComponentShortName  >}} `runtime\conf`
 folder.
 
 This file is made up of lines using the same syntax, each
@@ -40,14 +37,14 @@ where:
     -   TCP:
         A TCP/IP network process parameter
     -   &lt;parameter>: An element containing the value of one of the specific parameters indicated
-        in this documentation. For more information see [Environment
-        Variables](../../specific_system_functions/env_variables_and_specific_parms)
+        in this documentation. For more information see Environment
+        Variables
     -   value: An element that takes on a value belonging to the parameter stated
         in field and according to the documentation
 
 ****Comments****
 
-To edit a line of comments in the file <span class="code">`CFTNET.CONF`</span>, you can
+To edit a line of comments in the file `CFTNET.CONF`, you can
 place the ‘#’ character in the first column of this line.
 
 ****Example****

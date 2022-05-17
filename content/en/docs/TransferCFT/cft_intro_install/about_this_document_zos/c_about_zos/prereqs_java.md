@@ -1,11 +1,8 @@
 ---
-
-    title: Java
-    linkTitle: Java  
+    title: "Java"
+    linkTitle: "Java  "
     weight: 170
-
----
-## {{< TransferCFT/suitevariablesSecureRelayName  >}} prerequisites
+---## {{< TransferCFT/suitevariablesSecureRelayName  >}} prerequisites
 
 When using Secure Relay, Java 8 must be installed in the same environment as the Transfer CFT installation. The Master Agent is managed, but the Router Agent can be in another environment.
 

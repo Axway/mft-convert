@@ -1,15 +1,12 @@
 ---
-
-    title: Glossary
-    linkTitle: Glossary
-    weight: 210
-
----
-##### A
+    title: "Glossary"
+    linkTitle: "Glossary"
+    weight: 200
+---##### A
 
 <span id="Acceptance_by_CFT_"></span>
 
-#### Acceptance by Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}}:
+#### Acceptance by {{< TransferCFT/axwayvariablesComponentShortName  >}}:
 
 Process whereby a transfer request is taken into account by Transfer
 CFT when it is recorded in the catalog.
@@ -46,7 +43,7 @@ authorizations or denials (user-defined in the CFTAUTH command).
 
 <span id="Availability_for_the_monitor_"></span>
 
-#### Availability for Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}}:
+#### Availability for {{< TransferCFT/axwayvariablesComponentShortName  >}}:
 
 Process whereby a request is made available to the monitor when it is
 processed in the communication medium.
@@ -109,7 +106,7 @@ See [IDTU](#IDTU__catalog_identifier__) (catalog identifier).
 #### Catalog sharing:
 
 Option available in some environments, whereby the user can monitor
-several instances of Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}} via a single catalog file.
+several instances of {{< TransferCFT/axwayvariablesComponentShortName  >}} via a single catalog file.
 
 <span id="CD__Change_Direction__"></span>
 
@@ -122,7 +119,7 @@ Only the partner in possession of the token can send a file.
 
 #### CFT API:
 
-Programming interface used to integrate Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}} into applications
+Programming interface used to integrate {{< TransferCFT/axwayvariablesComponentShortName  >}} into applications
 developed in either C or COBOL.
 
 <span id="CFTACCNT"></span>
@@ -159,7 +156,7 @@ Command used to set transfer catalog management parameters.
 #### CFTCOM:
 
 Command used to set parameters controlling communications between user
-programs and the Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}}. See also [Communication
+programs and the {{< TransferCFT/axwayvariablesComponentShortName  >}}. See also [Communication
 medium](#Communication_medium_).
 
 <span id="CFTDEST"></span>
@@ -174,7 +171,7 @@ in the command.
 
 #### CFTFILE:
 
-Command used to create or delete Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}} files (parameter, partner,
+Command used to create or delete {{< TransferCFT/axwayvariablesComponentShortName  >}} files (parameter, partner,
 catalog, accounting, log and communication files).
 
 <span id="CFTLOG"></span>
@@ -187,7 +184,7 @@ Command used to set the log file management parameters for the monitor.
 
 #### CFTMAIN:
 
-Main Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}} task used to schedule transfers. It controls
+Main {{< TransferCFT/axwayvariablesComponentShortName  >}} task used to schedule transfers. It controls
 transfer execution and authorizations.
 
 <span id="CFTNET"></span>
@@ -236,7 +233,7 @@ and the application-level protocols declared in CFTPROT commands.
 
 #### CFTUTIL:
 
-Batch or line mode tool giving access to all Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}} functions
+Batch or line mode tool giving access to all {{< TransferCFT/axwayvariablesComponentShortName  >}} functions
 and parameters.
 
 <span id="CFTXLATE"></span>
@@ -280,7 +277,7 @@ Command used to declare a monitor and set up the working environment.
 
 #### Commands:
 
-Instructions used in Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}} to configure the monitor and working
+Instructions used in {{< TransferCFT/axwayvariablesComponentShortName  >}} to configure the monitor and working
 environment and to control the monitor and associated transfers.
 
 <span id="Compression"></span>
@@ -328,14 +325,14 @@ defined in the CFTXLATE, SEND/RECV, CFTSEND/CFTRECV and CFTPART commands).
 
 Table defining the correspondence between two coding systems and used
 during conversion. The conversion table, defined for each transfer direction
-and conversion mode, can be internal to Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}} or created by the
+and conversion mode, can be internal to {{< TransferCFT/axwayvariablesComponentShortName  >}} or created by the
 user (CFTXLATE command).
 
 <span id="Copilot"></span>
 
 #### Copilot:
 
-Graphic user interface for Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}}.
+Graphic user interface for {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
 <span id="Credit"></span>
 
@@ -345,7 +342,7 @@ For the Odette protocol, maximum number of data packets that the sender
 can transmit before the server must acknowledge reception by assigning
 a new "credit".  
 
-Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}} simulates a synchronization point for each credit message
+{{< TransferCFT/axwayvariablesComponentShortName  >}} simulates a synchronization point for each credit message
 sent or received.
 
 <span id="Cryptogram"></span>
@@ -440,7 +437,7 @@ partner (defined in CFTPART).
 #### EERP (End to End Response) acknowledgement:
 
 Odette protocol service used to generate an end-to-end acknowledgement
-for the transfer at application level. In Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}}, this acknowledgement
+for the transfer at application level. In {{< TransferCFT/axwayvariablesComponentShortName  >}}, this acknowledgement
 takes the form of a reply-type message (see [Reply
 message](#Reply_message_)).
 
@@ -499,7 +496,7 @@ See [IDF](#IDF).
 #### File transfer protocol or application protocol:
 
 Set of rules governing dialog and exchange management between two standard
-Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}}s. These standards are based on a network access mode defined in CFTPROT. See
+{{< TransferCFT/axwayvariablesComponentShortName  >}}s. These standards are based on a network access mode defined in CFTPROT. See
 [PeSIT](#PeSIT__Protocole_d_Echanges_pour_un_Syst_me_Interbancaire_de_T_l___compensation__).
 
 <span id="FPDU__File_Protocol_Data_Unit__"></span><span id="FPDU"></span>
@@ -548,7 +545,7 @@ partner and in a given direction.
 
 #### IDTU (catalog identifier):
 
-Unique identifier assigned to a transfer by Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}}. It is used
+Unique identifier assigned to a transfer by {{< TransferCFT/axwayvariablesComponentShortName  >}}. It is used
 in local transfer monitoring and catalog list commands.
 
 <span id="Implicit_send_"></span>
@@ -571,7 +568,7 @@ by an unauthorized third party on the network.
 
 #### List exit:
 
-File exit used by remote partners to query the Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}} catalog
+File exit used by remote partners to query the {{< TransferCFT/axwayvariablesComponentShortName  >}} catalog
 on a host.
 
 <span id="List_of_model_file_identifiers_"></span>
@@ -598,14 +595,14 @@ File containing all messages recording monitor activity related events
 #### Message:
 
 Character string specified via a send command and sent by the monitor
-in a specific transfer. In Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}} and for given protocols, two type
+in a specific transfer. In {{< TransferCFT/axwayvariablesComponentShortName  >}} and for given protocols, two type
 of messages can be sent: simple messages or reply messages.
 
 <span id="Model_file_"></span>
 
 #### Model file:
 
-Each file transfer is processed by Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}} in line with a model
+Each file transfer is processed by {{< TransferCFT/axwayvariablesComponentShortName  >}} in line with a model
 file or file identifier (IDF) associated with the data (or physical file)
 to be sent. The processing and data file definition parameters are specified
 in the CFTSEND configuration command for send operations and in the CFTRECV
@@ -613,7 +610,7 @@ command for receive operations.
 
 <span id="Monitor__transfer_or_CFT_monitor__"></span>
 
-#### Monitor ( Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}}):
+#### Monitor ( {{< TransferCFT/axwayvariablesComponentShortName  >}}):
 
 Control programs scheduling transfer requests, file access operations
 and transfers using network communication facilities.
@@ -622,7 +619,7 @@ and transfers using network communication facilities.
 
 #### Monitoring:
 
-Process whereby Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}} activities are controlled by querying the catalog
+Process whereby {{< TransferCFT/axwayvariablesComponentShortName  >}} activities are controlled by querying the catalog
 (transfer properties and state) and the log file (chronological history
 of all events in information or error message form).
 
@@ -676,7 +673,7 @@ mode, the physical name of the file to be received.
 
 #### Partner:
 
-Logical entity, to which Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}} can send data and from which it
+Logical entity, to which {{< TransferCFT/axwayvariablesComponentShortName  >}} can send data and from which it
 can receive data. A partner generally corresponds to a remote file transfer
 monitor or a subset of a remote monitor (defined in CFTPART, file created
 in CFTFILE TYPE=PART).
@@ -803,12 +800,6 @@ algorithms. See [Ciphering](#Ciphering), [DES](#DES__IBM_Data_Encryption_Standar
 (IBM Data Entrcyption Standard) and [RSA](#RSA__Rivest_Shamir_Adelman__)
 (Rivest Shamir Adelman).
 
-<span id="SECUTIL"></span>
-
-#### SECUTIL:
-
-Batch or interactive mode utility processing all security system commands.
-
 <span id="Segmentation"></span>
 
 #### Segmentation:
@@ -884,14 +875,14 @@ to exchange small volumes of freeform information between partners.
 #### Software protection:
 
 Key associated with the contractual conditions in which the software
-is used and provided when the product is installed. To use Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}},
+is used and provided when the product is installed. To use {{< TransferCFT/axwayvariablesComponentShortName  >}},
 the key must be specified in the CFTPARM command.
 
 <span id="Store_and_forward_mechanism_"></span>
 
 #### Store and forward mechanism:
 
-Routing technique used by Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}}, whereby a file or message is
+Routing technique used by {{< TransferCFT/axwayvariablesComponentShortName  >}}, whereby a file or message is
 received on a store and forward site and immediately forwarded to the
 next adjacent partner.
 
@@ -899,8 +890,8 @@ next adjacent partner.
 
 #### Store and forward mode:
 
-Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}} feature whereby files can be routed via one or more intermediary
-Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}} sites, called store and forward sites. This feature is only
+{{< TransferCFT/axwayvariablesComponentShortName  >}} feature whereby files can be routed via one or more intermediary
+{{< TransferCFT/axwayvariablesComponentShortName  >}} sites, called store and forward sites. This feature is only
 available from a requester/sender (write-mode transfer). See [Store
 and forward mechanism](#Store_and_forward_mechanism_).
 
@@ -922,7 +913,7 @@ that two versions are used alternately (operator SWITCH command).
 
 #### Symbolic variable:
 
-Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName  >}} variable representing a data item associated with the transfer
+{{< TransferCFT/axwayvariablesComponentShortName  >}} variable representing a data item associated with the transfer
 and for which the value will only be known when the transfer is executed
 and not when the parameters are set.
 
@@ -1009,7 +1000,7 @@ Transfers can be set to one of six states.
 
 - ****D****:
     The transfer is available (at ****D****isposal)
-    and will be triggered automatically as soon as the Transfer CFT{{< TransferCFT/axwayvariablesComponentShortName >}} resources
+    and will be triggered automatically as soon as the {{< TransferCFT/axwayvariablesComponentShortName >}} resources
     and partner access authorizations allow it.
 - ****H****:
     The transfer is pending (on ****H****old)

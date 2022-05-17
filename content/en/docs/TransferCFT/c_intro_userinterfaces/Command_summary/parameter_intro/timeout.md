@@ -1,17 +1,14 @@
 ---
-
-    title: timeout
-    linkTitle: timeout
-    weight: 3500
-
----
-<span id="timeout"></span>
+    title: "timeout"
+    linkTitle: "timeout"
+    weight: 3520
+---<span id="timeout"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
 #### SWAITCAT
 
-****\[ timeout = integer \]****
+****[ timeout = integer ]****
 
 Define the timeout to reach. This is the maximum time in seconds to wait.
 

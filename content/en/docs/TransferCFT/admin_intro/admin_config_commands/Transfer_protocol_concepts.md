@@ -1,19 +1,16 @@
 ---
-
-    title: Transfer  protocol 
-    linkTitle: CFTPROT - Transfer protocol 
-    weight: 290
-
----
-For computers to transfer files, a set of transfer rules must
+    title: "Transfer  protocol "
+    linkTitle: "CFTPROT - Transfer protocol "
+    weight: 280
+---For computers to transfer files, a set of transfer rules must
 be established. The CFTPROT object sets up these transfer rules, or file
 transfer protocols. Transfer protocols include:
 
 - PeSIT
 - Odette
 
-<span style="color: #800000; text-decoration: none; font-weight: normal;">Related
-topics</span>
+Related
+topics
 
 - Command syntax
     [CFTPROT](../../../c_intro_userinterfaces/command_summary#CFTPROT)

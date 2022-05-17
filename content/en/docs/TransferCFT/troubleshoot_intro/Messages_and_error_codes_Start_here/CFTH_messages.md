@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer CFT messages: CFTH
-    linkTitle: CFTH messages
-    weight: 320
-
----
-This topic lists the CFTHxx (CFT xnnx) messages and provides the type, a description, consequence, and corrective actions when applicable.
+    title: "Transfer CFT messages: CFTH"
+    linkTitle: "CFTH messages"
+    weight: 310
+---This topic lists the CFTHxx (CFT xnnx) messages and provides the type, a description, consequence, and corrective actions when applicable.
 
 **Message format**
 
@@ -15,9 +12,9 @@ Earlier versions of Transfer CFT used a different message format than version 3.
 
 **Example**
 
-CFTLOG FORMAT=\[V23,V24\]
+CFTLOG FORMAT=[V23,V24]
 
-For V23: <span class="code">`CFTT57I PART=&part IDF=&idf IDT=&idt &str transfer started`</span>
+For V23: `CFTT57I PART=&part IDF=&idf IDT=&idt &str transfer started`
 
 For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&idt>`
 
@@ -515,7 +512,7 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
 
 | V23 format<br/> V24 format<br/> Information | <span id="CFTH56I"></span>CFTH56I PART=&amp;part IDS=&amp;ids &amp;prot &amp;str session opened pi7=&amp;n:&amp;n HOST=&amp;pstate &amp;prot<br/> CFTH56I &amp;prot &amp;str session opened &lt;PART=&amp;part IDS=&amp;ids pi7=&amp;n:&amp;n HOST=&amp;pstate&gt; &amp;prot |
 | --- | --- |
-| Explanation | An &amp; prot session in either Requester or Server mode was opened, where &amp;prot = PeSIT, ODETTE, or SFTP. And where:<br/> • PART: partner<br/> • PROT: local protocol definition (CFTPROT)<br/> • IDS: reference for this session<br/> • pi7: the window and the interval of the negotiated synchronization<br/> • pi2 and pi24: the window and the interval of the negotiated synchronization<br/> • HOST:<br/> QQQ_QQQ_QQQ_LIST<br/> • Requester: The host address configured through CFTTCP for the related partner (either an IP or a logical hostname).<br/><br/> • Server: The IP address of the incoming connection.<br/><br/>  |
+| Explanation | An &amp; prot session in either Requester or Server mode was opened, where &amp;prot = PeSIT, ODETTE, or SFTP. And where:<br/> • PART: partner<br/> • PROT: local protocol definition (CFTPROT)<br/> • IDS: reference for this session<br/> • pi7: the window and the interval of the negotiated synchronization<br/> • pi2 and pi24: the window and the interval of the negotiated synchronization<br/> • HOST: • Requester: The host address configured through CFTTCP for the related partner (either an IP or a logical hostname).<br/><br/> • Server: The IP address of the incoming connection.<br/><br/>  |
 
 
  
@@ -531,7 +528,7 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
 
 | V23 format<br/> V24 format<br/> Information | <span id="CFTH58I"></span>CFTH58I PART=&amp;part IDS=&amp;ids IDF=&amp;idf NIDT=&amp;idt transfer deselected T=&amp;n<br/> CFTH58I transfer deselected &lt;PART=&amp;part IDS=&amp;ids IDF=&amp;idf NIDT=&amp;idt T=&amp;n&gt; |
 | --- | --- |
-| Explanation | A transfer passed the deselection phase in the PeSIT session referred to by the IDS. The IDS is the reference for this particular session context.<br/> The T field indicates the armed time-out for the CFTPROT parameter:<br/> • disctd – requester mode, <span >or</span><br/> • discts – server mode |
+| Explanation | A transfer passed the deselection phase in the PeSIT session referred to by the IDS. The IDS is the reference for this particular session context.<br/> The T field indicates the armed time-out for the CFTPROT parameter:<br/> • disctd – requester mode, or<br/> • discts – server mode |
 
 
  
@@ -545,16 +542,16 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
  
 
 
-| V23 format<br/> V24 format<br/> Information | <span id="CFTH60I"></span>CFTH60I PART=&amp;part IDS=&amp;ids IDM=&amp;idm NIDT=&amp;idt [Reply | Nack] transferred<br/> CFTH60I [Reply | Nack] transferred PART=&amp;part IDS=&amp;ids IDM=&amp;idm NIDT=&amp;idt |
-| --- | --- | --- | --- |
+| V23 format<br/> V24 format<br/> Information | <span id="CFTH60I"></span>CFTH60I PART=&amp;part IDS=&amp;ids IDM=&amp;idm NIDT=&amp;idt [Reply &#124; Nack] transferred<br/> CFTH60I [Reply &#124; Nack] transferred PART=&amp;part IDS=&amp;ids IDM=&amp;idm NIDT=&amp;idt |
+| --- | --- |
 | Explanation | An acknowledgement type transfer message was carried out in the PeSIT session, where the IDS references the session context.<br/> The reference in the second message is the public transfer reference. |
 
 
  
 
 
-| V23 format<br/> V24 format<br/> Information | <span id="CFTH61I"></span>CFTH61I PART=&amp;part IDS=&amp;ids ["Requester"|"Server"] &amp;ref session closed &amp;prot<br/> CFTH61I &amp;prot ["Requester"|"Server"] session closed &lt;PART=&amp;part IDS=&amp;ids&gt; &amp;prot |
-| --- | --- | --- | --- |
+| V23 format<br/> V24 format<br/> Information | <span id="CFTH61I"></span>CFTH61I PART=&amp;part IDS=&amp;ids ["Requester"&#124;"Server"] &amp;ref session closed &amp;prot<br/> CFTH61I &amp;prot ["Requester"&#124;"Server"] session closed &lt;PART=&amp;part IDS=&amp;ids&gt; &amp;prot |
+| --- | --- |
 | Explanation | An &amp; prot session in either Requester or Server mode was closed, where &amp;prot = PeSIT, ODETTE, or SFTP.<br/> And:<br/> • &amp;part: the partner identifier involved in the session<br/> • &amp;ids: the reference for this session context |
 
 
@@ -593,7 +590,13 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
  
 
 
-| V23 format<br/> V24 format<br/> Error | <span id="CFTH66E"></span>CFTH66E Incoming calls (&amp;count) rejected, ERROR=&amp;error (&amp;info1|&amp;info2), PROTOCOL=&amp;protocol<br/> CFTH66E Incoming calls (&amp;count) rejected, ERROR=&amp;error (&amp;info1|&amp;info2), PROTOCOL=&amp;protocol |
-| --- | --- | --- | --- |
+| V23 format<br/> V24 format<br/> Error | <span id="CFTH66E"></span>CFTH66E Incoming calls (&amp;count) rejected, ERROR=&amp;error (&amp;info1&#124;&amp;info2), PROTOCOL=&amp;protocol<br/> CFTH66E Incoming calls (&amp;count) rejected, ERROR=&amp;error (&amp;info1&#124;&amp;info2), PROTOCOL=&amp;protocol |
+| --- | --- |
 | Explanation | Incoming calls are rejected:<br/> • &amp;count = Number of rejected calls<br/> • &amp;error = Error message<br/> • &amp;info1 = Additional information<br/> • &amp;info2 = Additional information<br/> • &amp;protocol = Protocol type when available |
+
+
+
+| V23 format<br/> V24 format<br/> Information | <span id="CFTH67I"></span>PeSIT Server Application Transparent TLS SSL mode &lt;PART=xxxxxx IDS=00005 CIPHER=49199&gt;<br/> PeSIT Server Application Transparent TLS SSL mode &lt;PART=xxxxxx IDS=00005 CIPHER=49199&gt; |
+| --- | --- |
+| Explanation | *z/OS environments*<br/> When using PeSIT mode server with AT-TLS, a message displays in the log indicating a secure connection if the socket is secure. Details include the partner, session ID, and cipher used in the exchange. |
 

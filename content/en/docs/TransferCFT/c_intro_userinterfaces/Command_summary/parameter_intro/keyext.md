@@ -1,17 +1,14 @@
 ---
-
-    title: keyext
-    linkTitle: keyext
-    weight: 1760
-
----
-<span id="keyext"></span>
+    title: "keyext"
+    linkTitle: "keyext"
+    weight: 1750
+---<span id="keyext"></span>
 
 ### keyext
 
 #### CFTSSL
 
-CFTSSL = VERIFY | NONE
+CFTSSL = VERIFY &#124; NONE
 
 This parameter indicates if the key extensions
 for the remote certificate must be checked or not.

@@ -1,11 +1,8 @@
 ---
-
-    title: Roll back a service pack or patch
-    linkTitle: Rollback a service pack or patch (non-SMP/E)
-    weight: 260
-
----
-The following procedure enables you to rollback after applying a SP or patch to its previous state. This is useful in the case of an incident during the application of a PTF, or when testing the patch validation.
+    title: "Roll back a service pack or patch"
+    linkTitle: "Rollback a service pack or patch (non-SMP/E)"
+    weight: 270
+---The following procedure enables you to rollback after applying a SP or patch to its previous state. This is useful in the case of an incident during the application of a PTF, or when testing the patch validation.
 
 ## Use the A13RBACK
 

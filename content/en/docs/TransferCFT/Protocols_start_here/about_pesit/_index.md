@@ -1,11 +1,8 @@
 ---
-
-    title: About the PeSIT protocol
-    linkTitle: PeSIT protocol
-    weight: 130
-
----
-## What is PeSIT?
+    title: "About the PeSIT protocol"
+    linkTitle: "PeSIT protocol"
+    weight: 120
+---## What is PeSIT?
 
 PeSIT is an end-to-end public protocol designed to provide a reliable
 and normalized interface for user applications to exchange files and messages

@@ -1,17 +1,14 @@
 ---
-
-    title: Recommendations and troubleshooting
-    linkTitle: Recommendations and troubleshooting
-    weight: 260
-
----
-This topic provides information on common mistakes when setting up user rights, fixes, and how to get more information when an error occurs.
+    title: "Recommendations and troubleshooting"
+    linkTitle: "Recommendations and troubleshooting"
+    weight: 250
+---This topic provides information on common mistakes when setting up user rights, fixes, and how to get more information when an error occurs.
 
 ## User rights recommendations
 
 The following best practices may help you avoid or correct user rights issues. Deviating from these recommendation may lead to unexpected user rights, or errors in the log.
 
-- Respect the appropriate case (upper/lower) for user names and passwords.
+- Respect the appropriate case (upper/lower) for user names and passwords, and use all upper case for OpenVMS.
 - The am.type is set by default to enable {{< TransferCFT/PrimaryCGorUM >}}. Modifying this value effects user rights and access from {{< TransferCFT/suitevariablesCentralGovernanceName >}}.
 - Changing the domain may affect your ability to log in on the Transfer CFT client.
 - If you modify the createprocessasuser parameter setting, you must restart Copilot for the parameter change to be taken into account.
@@ -29,7 +26,7 @@ In the {{< TransferCFT/PrimaryCGorUM  >}} interface, select **Products**. Select
 If there is no information available in the {{< TransferCFT/suitevariablesCentralGovernanceName  >}} logs for the Transfer CFT, next check the following:
 
 - {{< TransferCFT/axwayvariablesComponentLongName >}} logs
-- {{< TransferCFT/axwayvariablesComponentLongName >}} trace files located in the <span class="code">`<installation directory>Transfer_CFT\runtime\run`</span>
+- {{< TransferCFT/axwayvariablesComponentLongName >}} trace files located in the `<installation directory>Transfer_CFT\runtime\run`
 
 ### Check user definitions in {{< TransferCFT/suitevariablesCentralGovernanceName  >}}
 
@@ -39,7 +36,7 @@ In {{< TransferCFT/suitevariablesCentralGovernanceName  >}} roles and privileges
 
 **From** **{{< TransferCFT/suitevariablesCentralGovernanceName  >}} I cannot perform {{< TransferCFT/axwayvariablesComponentLongName  >}} actions that I previously could perform**
 
-Check that the local {{< TransferCFT/axwayvariablesComponentLongName  >}} superuser is correctly defined. This is a requirement for {{< TransferCFT/suitevariablesCentralGovernanceName  >}} to correctly manage your {{< TransferCFT/axwayvariablesComponentLongName  >}}. The value displayed in {{< TransferCFT/suitevariablesCentralGovernanceName  >}} should match the value that displays for <span class="code">`CFTUTIL listuconf value=am.passport.superuser`</span>.
+Check that the local {{< TransferCFT/axwayvariablesComponentLongName  >}} superuser is correctly defined. This is a requirement for {{< TransferCFT/suitevariablesCentralGovernanceName  >}} to correctly manage your {{< TransferCFT/axwayvariablesComponentLongName  >}}. The value displayed in {{< TransferCFT/suitevariablesCentralGovernanceName  >}} should match the value that displays for `CFTUTIL listuconf value=am.passport.superuser`.
 
 **I am a user with **{{< TransferCFT/suitevariablesCentralGovernanceName  >}}** rights to create flows, but** **I cannot create a flow**
 
@@ -64,9 +61,9 @@ To fix the issue, delete the persistent cache files (CFTAM and CFTAM.idx) and re
 For more information, see the following platform specific guides for the appropriate OS:
 
 - UNIX - [Running Transfer CFT for the first time UNIX]()
-    -   [Defining user rights]()
-    -   [Declaring additional users]()
-    -   [UNIX system users]()
+    -   [Defining user rights](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/user_rights_and_interface_unix)
+    -   [Declaring additional users](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/declaring_additional_users)
+    -   [UNIX system users](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/t_adding_system_user_unix)
     -   [License keys and authorizations](../../../cft_intro_install/unix_install_start_here/before_you_start_unix/prereqs_overview)
 - {{< TransferCFT/PrimaryforWindows >}} - [Running Transfer CFT for the first time Windows](../../../cft_intro_install/windows_install_start_here/windows_install_start_here/running_cft_for_the_first_time_windows)
     -   [Windows user rights](../../../cft_intro_install/windows_install_start_here/windows_install_start_here/running_cft_for_the_first_time_windows/user_rights_and_interface_win)
@@ -74,6 +71,7 @@ For more information, see the following platform specific guides for the appropr
     -   [License keys and authorizations](../../../cft_intro_install/windows_install_start_here/before_you_start_win/prereqs_overview)
 - z/OS - [Installation and Operation Guide](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_mvs_en_PDF/resource/TransferCFT_InstallationGuide_mvs_en.pdf)
 - IBM i - [Installation and Operation Guide](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_os400_en_PDF/resource/TransferCFT_InstallationGuide_os400_en.pdf)
+- OpenVMS - [Installation and Operation Guide](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_vms_en_PDF/resource/TransferCFT_InstallationGuide_vms_en.pdf)
 
 ****Related topics****
 

@@ -1,18 +1,15 @@
 ---
-
-    title: idt
-    linkTitle: idt
-    weight: 1570
-
----
-<span id="idt"></span>
+    title: "idt"
+    linkTitle: "idt"
+    weight: 1560
+---<span id="idt"></span>
 
 ### idt
 
 #### HALT, END, KEEP, SUBMIT, START, DELETE, LISTCAT, DISPLAY, RESUME
 
-******\[IDT =
-{ <u>\*</u> | *transid*}\]******
+******[IDT =
+{ <u>\*</u> &#124; *transid*}]******
 
 Transfer identifier. Identifies a transfer for a given partner and transfer
 direction. The value '\*' means that no selection is required on the IDT
@@ -20,8 +17,8 @@ parameter (default value).
 
 #### SEND TYPE = REPLY
 
-******\[IDT =
-*transid* \]******
+******[IDT =
+*transid* ]******
 
 When sending replies, this corresponds to the original transfer IDT,
 and hence to the corresponding catalog entry (in the RT or RX state, in

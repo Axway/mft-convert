@@ -1,17 +1,14 @@
 ---
-
-    title: ipart
-    linkTitle: ipart
-    weight: 1720
-
----
-<span id="ipart"></span>
+    title: "ipart"
+    linkTitle: "ipart"
+    weight: 1710
+---<span id="ipart"></span>
 
 ### ipart
 
 #### CFTPART
 
-****\[IPART = identifier\]****
+****[IPART = identifier]****
 
 Local identifier of an intermediate
 partner.
@@ -24,7 +21,7 @@ and forward](../../../../concepts/transfer_command_overview/store_and_forward_mo
 
 #### SEND
 
-****\[IPART = identifier\]****
+****[IPART = identifier]****
 
 Intermediate partner local identifier.
 

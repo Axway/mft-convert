@@ -1,17 +1,14 @@
 ---
-
-    title:  fmodel
-    linkTitle: fmodel
-    weight: 1220
-
----
-<span id="fmodel"></span>
+    title: " fmodel"
+    linkTitle: "fmodel"
+    weight: 1210
+---<span id="fmodel"></span>
 
 ###  fmodel
 
 #### DISPLAY, LISTPKI
 
-****\[FMODEL= { string }\]     ****
+****[FMODEL= { string }]     ****
 
 ****{
 0...512 characters}****

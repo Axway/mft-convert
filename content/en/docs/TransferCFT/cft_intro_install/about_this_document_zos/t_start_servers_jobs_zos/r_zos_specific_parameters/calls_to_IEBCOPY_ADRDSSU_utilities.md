@@ -1,11 +1,8 @@
 ---
-
-    title: Calls to z/OS utilities from Transfer CFT
-    linkTitle: Calls to z/OS utilities IEBCOPY and ADRDSSU
+    title: "Calls to z/OS utilities from Transfer CFT"
+    linkTitle: "Calls to z/OS utilities IEBCOPY and ADRDSSU"
     weight: 320
-
----
-The Z/OS utility call function enables you to transfer files that are not directly readable by Transfer CFT. The IEBCOPY and ADRDSSU utilities are supported. The following sections describe this operating mode.
+---The Z/OS utility call function enables you to transfer files that are not directly readable by Transfer CFT. The IEBCOPY and ADRDSSU utilities are supported. The following sections describe this operating mode.
 
 ## Common rules for utility calls
 
@@ -61,7 +58,7 @@ The following parameters are required:
 <!-- -->
 
 - MACTION=REPLACE controls the replacement of members or files
-- FTYPE=’\_’ creates a PDSE (hexadecimal X’6D’)
+- FTYPE=’_’ creates a PDSE (hexadecimal X’6D’)
 
 ## Use IEBCOPY
 
@@ -100,7 +97,7 @@ Restrictions:
 
 ## Using ADRDSSU
 
-ADRDSSU enables the transfer of one or more files, or you can transfer all files using the joker character ‘\_’. It is recommended that you use this utility for all files except the sequential files:
+ADRDSSU enables the transfer of one or more files, or you can transfer all files using the joker character ‘_’. It is recommended that you use this utility for all files except the sequential files:
 
 - VSAM
 
@@ -130,7 +127,7 @@ Where:
 
 <!-- -->
 
-- If present it must terminate with ‘\_’
+- If present it must terminate with ‘_’
 
 <!-- -->
 
@@ -138,11 +135,11 @@ Where:
 
 <!-- -->
 
-- DSNGEN is a file name ending with ‘\_’; this is the only file (catalog or not) that is not transferred
+- DSNGEN is a file name ending with ‘_’; this is the only file (catalog or not) that is not transferred
 
 <!-- -->
 
-- DSNGEN contains several ‘\_’;  in this case it is a model that is interpreted according to the following rules:
+- DSNGEN contains several ‘_’;  in this case it is a model that is interpreted according to the following rules:
 
 #### Rules for interpreting DSNGEN
 

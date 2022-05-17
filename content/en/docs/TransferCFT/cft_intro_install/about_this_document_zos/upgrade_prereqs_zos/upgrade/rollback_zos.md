@@ -1,11 +1,8 @@
 ---
-
-    title: Rollback upgrade and restore the catalog
-    linkTitle: Rollback upgrade and restore catalog
-    weight: 250
-
----
-## Prerequisites
+    title: "Rollback upgrade and restore the catalog"
+    linkTitle: "Rollback upgrade and restore catalog"
+    weight: 260
+---## Prerequisites
 
 - You must have made a backup of the environment prior to the upgrade you are rolling back.
 - Upgraded from {{< TransferCFT/headerfootervariableshflongproductname >}} 3.4 or higher to {{< TransferCFT/headerfootervariableshflongproductname >}} {{< TransferCFT/axwayvariablesReleaseNumber >}}

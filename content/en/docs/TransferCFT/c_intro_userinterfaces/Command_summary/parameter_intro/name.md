@@ -1,24 +1,21 @@
 ---
-
-    title: name
-    linkTitle: name
-    weight: 2080
-
----
-<span id="name"></span>
+    title: "name"
+    linkTitle: "name"
+    weight: 2090
+---<span id="name"></span>
 
 ### name
 
 #### MQUERY, Object = cache
 
 ****NAME = {<u>CAT</u>
-| COMMAND | CRON | DMZ | STAT}****
+&#124; COMMAND &#124; CRON &#124; DMZ &#124; STAT}****
 
 Name of the component to be queried.
 This parameter can be set to:
 
-- <span class="bold_in_para">****CAT****</span>: query of the catalog cache
-- <span class="bold_in_para">****COMMAND****</span>: query of the command cache
+- ****CAT****: query of the catalog cache
+- ****COMMAND****: query of the command cache
 - CRON
 - DMZ
 - STAT
@@ -27,7 +24,7 @@ This parameter can be set to:
 
 #### MQUERY, Object = system
 
-****NAME = { CFTMAIN | CFTTRK | CFTTFIL | CFTCOM | CFTTPRO | CFTEXIT | CFTPRX | CFTDSCAN }****
+****NAME = { CFTMAIN &#124; CFTTRK &#124; CFTTFIL &#124; CFTCOM &#124; CFTTPRO &#124; CFTEXIT &#124; CFTPRX &#124; CFTDSCAN }****
 
 The name of the process on which the MQUERY command is applied. If NAME is not set, the MQUERY command is sent to all processes.
 

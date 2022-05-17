@@ -1,11 +1,8 @@
 ---
-
-    title: Store  and forward concepts
-    linkTitle: Store and forward modes
-    weight: 270
-
----
-The store and forward mode enables you to route files from one computer
+    title: "Store  and forward concepts"
+    linkTitle: "Store and forward modes"
+    weight: 260
+---The store and forward mode enables you to route files from one computer
 to another via one or more intermediate relays (computers or communication sites). For example, when sending a file from computer A to computer C, where A and C are either not directly connected or have a connection problem, the file is routed via computer B.
 
 In the same way, a file to be sent to clients that are dependent on
@@ -22,9 +19,9 @@ another.
 
 The following illustration features 3 Transfer CFTs, where the protocol may be the same or different between relay points:
 
-- Source \[Initial Sender A\]
-- Relay \[Store and Forward B\]
-- Target \[Final Receiver C\]
+- Source [Initial Sender A]
+- Relay [Store and Forward B]
+- Target [Final Receiver C]
 
 **Routing a transfer via a relay**
 
@@ -52,9 +49,9 @@ For these protocols, the objects transferred can be files or messages,
 in write mode only, for sender requester mode.
 
 These protocols manage the acknowledgement messages following
-the reception of a file. See the SEND TYPE = [REPLY](../../using_the_send_command/sending_replies) command. The PeSIT
+the reception of a file. See the SEND TYPE = [REPLY](../../send_command/send_replies) command. The PeSIT
 profile protocol also manages the sending of messages.
-See the SEND TYPE = [MESSAGE](../../using_the_send_command/send_messages_cl) command.
+See the SEND TYPE = [MESSAGE](../../send_command/send_messages_cl) command.
 
 ## Using store and forward with Flow Manager
 
@@ -79,7 +76,7 @@ the {{< TransferCFT/axwayvariablesComponentShortName  >}} on the store and forwa
 | --- | --- | --- |
 | YES  | Yes, immediately  | The a file is immediately sent to the intended partner. Default value.  |
 | NO  | No, no file forwarding  | The file transfer is refused because the partner is not able to perform the store and forward.  |
-| SERVER  | Yes, after processing  | Sending the file occurs at the initiative of the store and forward site. This mode is also known as <a href="#VAN_server_Store_and_forward_processing">Store and forward with a VAN server</a>.  |
+| SERVER  | Yes, after processing  | Sending the file occurs at the initiative of the store and forward site. This mode is also known as [Store and forward with a VAN server](#VAN_server_Store_and_forward_processing).  |
 | PART  | Yes, immediately  | This forced store and forward occurs in server mode. If the recipient that is defined in the IPART parameter is not the final recipient, the received file is immediately sent on to the target partner.  |
 
 
@@ -97,7 +94,7 @@ There are two ways for the sender to initiate a store and forward transfer:
 
 <!-- -->
 
-- <span class="code">`send part=<FINAL PARTNER>, ipart=<RELAY>,...`</span>
+- `send part=<FINAL PARTNER>, ipart=<RELAY>,...`
 
 <span id="Store_and_forward_sites"></span>
 
@@ -155,7 +152,7 @@ procedures. You can use the typical [symbolic variables](../../../c_intro_userin
 
 ### Forced store and forward processing with COMMUT=PART
 
-<span class="bold_in_para">****PeSIT protocol only****</span>
+****PeSIT protocol only****
 
 You can use the use this option to force a store and forward on an intermediate site without knowing the final partner.
 

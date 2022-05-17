@@ -1,17 +1,14 @@
 ---
-
-    title: cnxinout
-    linkTitle: cnxinout
-    weight: 430
-
----
-<span id="cnxinout"></span>
+    title: "cnxinout"
+    linkTitle: "cnxinout"
+    weight: 420
+---<span id="cnxinout"></span>
 
 ### cnxinout
 
 #### CFTTCP
 
-****\[cnxinout = { <u>4</u> | n } \]****
+****[cnxinout = { <u>4</u> &#124; n } ]****
 
 Maximum number of communication sessions.
 

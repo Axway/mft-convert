@@ -1,17 +1,14 @@
 ---
-
-    title: key
-    linkTitle: key
-    weight: 1750
-
----
-<span id="key"></span>
+    title: "key"
+    linkTitle: "key"
+    weight: 1740
+---<span id="key"></span>
 
 ### key
 
 #### ABOUT
 
-****\[ KEY = { <u>FIRST</u> | ALL } \]****
+****[ KEY = { <u>FIRST</u> &#124; ALL } ]****
 
 Defines the number of keys that display.
 
@@ -20,7 +17,7 @@ Defines the number of keys that display.
 
 #### CFTPARM
 
-****\[ KEY = { string 80 } \]****
+****[ KEY = { string 80 } ]****
 
 The {{< TransferCFT/axwayvariablesComponentShortName  >}} user key. You can enter a string of up to 80 characters, which is comprised of the indirection character and file name (file containing the key).
 

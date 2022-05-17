@@ -1,11 +1,8 @@
 ---
-
-    title: Axway AMPLIFY architecture
-    linkTitle: Axway AMPLIFY architecture
+    title: "Axway Amplify architecture"
+    linkTitle: "Axway Amplify architecture"
     weight: 120
-
----
-Axway {{< TransferCFT/axwayvariablesPlatformorSuiteLongName  >}} Managed File Transfer provides a product platform aimed at increasing the
+---Axway {{< TransferCFT/axwayvariablesPlatformorSuiteLongName  >}} Managed File Transfer provides a product platform aimed at increasing the
 efficiency of business processes. This platform enables you to integrate
 the applications in your corporate information system and implement exchanges
 between these applications and external partners. {{< TransferCFT/axwayvariablesComponentShortName  >}} in combination with other {{< TransferCFT/axwayvariablesCompanyName  >}} products can provide a complete business solution for creating secured, guaranteed
@@ -19,12 +16,13 @@ you to better supervise, track, and analyze your transfer operations.
 Additional products include, but are not limited to, the following:
 
 - [API portal](#APIportal), [API Gateway](#APIgtw), [API Manager](#APImanager)
+- Flow Manager
 - [Central Governance](#Central_Governance)
 - Communication gateways: [Gateway, Secure Transport](#Gateway)
 - [SecureRelay](#SecureRelay)
 - [TrustedFile](#TrustedFile)
 
-********<span class="autonumber"></span>Example Axway {{< TransferCFT/axwayvariablesPlatformorSuiteLongName  >}} MFT implementation********
+********Example Axway {{< TransferCFT/axwayvariablesPlatformorSuiteLongName  >}} MFT implementation********
 
 ****![](/Images/TransferCFT/tbus_products.png)****
 
@@ -45,6 +43,10 @@ API Manager provides web-based API administration and partner management capabil
 #### API Portal
 
 API Portal is a self-service portal that enables client application developers to browse and consume APIs for use in their applications, whether they be mobile, social media, web, or traditional applications. API Portal enables engagement with both internal and external application developers to promote APIs for consumption. It enables new go to market channels in the digital economy.
+
+#### {{< TransferCFT/suitevariablesFlowManager  >}}
+
+Axway Flow Manager gives you the ability to deploy globally while controlling flows centrally, and to empower business users with self-service MFT capabilities. Out-of-the-box templates can increase the operational efficiency of your data exchange ecosystem, reduce time to revenue, and streamline and standardize your file transfer needs.
 
 #### {{< TransferCFT/suitevariablesCentralGovernanceName  >}}
 

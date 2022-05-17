@@ -1,11 +1,8 @@
 ---
-
-    title: Partner  access mechanisms 
-    linkTitle: Partner access mechanisms
-    weight: 230
-
----
-A SEND/RECV transfer command can perform one or more transfers with:
+    title: "Partner  access mechanisms "
+    linkTitle: "Partner access mechanisms"
+    weight: 220
+---A SEND/RECV transfer command can perform one or more transfers with:
 
 A single partner
 via a direct connection

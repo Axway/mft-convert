@@ -1,22 +1,19 @@
 ---
-
-    title: Upgrade 
-    linkTitle: Upgrade
-    weight: 220
-
----
-This section describes how to upgrade to {{< TransferCFT/axwayvariablesReleaseNumber  >}} and higher (from versions 3.1.3, 3.2.x, 3.3.x, 3.4, 3.5).
+    title: "Upgrade "
+    linkTitle: "Upgrade"
+    weight: 230
+---This section describes how to upgrade to {{< TransferCFT/axwayvariablesReleaseNumber  >}} and higher (from versions 3.1.3, 3.2.x, 3.3.x, 3.4, 3.5).
 
 Transfer CFT delivers procedures that can help you upgrade instances. The following sections describe how to:
 
-1. <a href="#Create" class="MCXref xref">Create a master copy</a>
-1. <a href="#Distribu" class="MCXref xref">Distribute the master copy</a>
-1. <a href="#Restore" class="MCXref xref">Restore the master copy</a>
-1. <a href="#Copy" class="MCXref xref">Copy the JCLs to upgrade</a>
-1. <a href="#Upgrade" class="MCXref xref">Upgrade the target instance (product environment)</a>
-1. <a href="#Migrate" class="MCXref xref">Upgrade</a>
+1. [Create a master copy](#Create)
+1. [Distribute the master copy](#Distribu)
+1. [Restore the master copy](#Restore)
+1. [Copy the JCLs to upgrade](#Copy)
+1. [Upgrade the target instance (product environment)](#Upgrade)
+1. [Customize the step PMIGR2 JCL MIGRCAT](#Customiz)
 
-********<span class="autonumber"></span>Upgrade schema********
+********Upgrade schema********
 
 ![](/Images/TransferCFT/temp_zos_upgrade.png)
 
@@ -160,7 +157,7 @@ Copy the following JCLs from the new instance to the target instance to upgrade:
 
 ****Results****
 
-Now the CFTLOAD variable defined in the CFTENV member refers to the new LOAD. If the upgrade process fails, use the UPRS0010 JCL to restore the instance files. Simply set the job card, and submit the JCL.
+The CFTLOAD variable defined in the CFTENV member refers to the new LOAD. If the upgrade process fails, use the UPRS0010 JCL to restore the instance files. Set the job card, and submit the JCL.
 
 ## Upgrade the target instance (DATA)
 
@@ -186,14 +183,13 @@ Customize MIGR$SET:
 >
 > The JCL MIGRUCNF was fixed in 3.6 SP3.
 
+<span id="Customiz"></span>
+
 ### Customize the step PMIGR2 JCL MIGRCAT
 
-If the migration process fails, use the UPRS0010 JCL to restore the instance files. Simply set the job card, and submit the JCL.
+If the migration process fails, use the UPRS0010 JCL to restore the instance files. Set the job card, and submit the JCL.
 
-If the option UPCOPIL is set to 'NO', do not forget to set the UCONF variables:
-
-- UCONFSET ID=cft.install\_dir,VALUE='coppath/home'
-- UCONFSET ID=copilot.HTTP.HttpRootDir,VALUE='coppath/runtime/wwwroot'
+If the option UPCOPIL is set to 'NO', you must set the UCONFSET ID=cft.install_dir,VALUE='coppath/home'
 
 Upgrade the STC CFT and Copilot if needed.
 

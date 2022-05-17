@@ -1,9 +1,8 @@
 ---
-    title: Application integration
-    linkTitle: Application integration,
+    title: "Application integration"
+    linkTitle: "Application integration"
     weight: 140
----
-This section provides information on using the following services and features in {{< TransferCFT/axwayvariablesComponentShortName  >}}:
+---This section provides information on using the following services and features in {{< TransferCFT/axwayvariablesComponentShortName  >}}:
 
 [About the CFTUTIL interface](../c_intro_userinterfaces/about_cftutil) - Describes the CFTUTIL command line utility used in Transfer CFT.
 

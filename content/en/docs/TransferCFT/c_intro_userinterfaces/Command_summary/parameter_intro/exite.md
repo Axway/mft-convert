@@ -1,17 +1,14 @@
 ---
-
-    title: exite
-    linkTitle: exite
-    weight: 1010
-
----
-<span id="exite"></span>
+    title: "exite"
+    linkTitle: "exite"
+    weight: 1000
+---<span id="exite"></span>
 
 ### exite
 
 #### CFTPROT
 
-**\[EXITE = identifier\]**
+**[EXITE = identifier]**
 
 The value of this
 identifier corresponds to the value of the CFTEXIT ID parameter.

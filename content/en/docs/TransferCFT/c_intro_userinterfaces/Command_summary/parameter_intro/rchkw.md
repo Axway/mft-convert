@@ -1,18 +1,15 @@
 ---
-
-    title: rchkw
-    linkTitle: rchkw
-    weight: 2790
-
----
-<span id="rchkw"></span>
+    title: "rchkw"
+    linkTitle: "rchkw"
+    weight: 2810
+---<span id="rchkw"></span>
 
 ### rchkw
 
 #### CFTPROT
 
-****\[RCHKW = { <span style="text-decoration: underline;">3</span>
-| n }\]****
+****[RCHKW = { 3
+&#124; n }]****
 
 The maximum number of synchronization points, not acquitted, that are
 authorized by the receiver and negotiated during connection phase.

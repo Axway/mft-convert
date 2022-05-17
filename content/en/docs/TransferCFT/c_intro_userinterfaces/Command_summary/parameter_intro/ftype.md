@@ -1,11 +1,8 @@
 ---
-
-    title: ftype
-    linkTitle: ftype
-    weight: 1390
-
----
-<span id="ftype"></span>
+    title: "ftype"
+    linkTitle: "ftype"
+    weight: 1380
+---<span id="ftype"></span>
 
 ### ftype
 
@@ -13,7 +10,7 @@
 
 #### CFTRECV, CFTSEND
 
-****\[ FTYPE = { c } \]  OS-specific****
+****[ FTYPE = { c } ]  OS-specific****
 
 The file type. Some FTYPE parameter values are OS specific. Refer to the Transfer CFT OS-specific documentation for more information.
 
@@ -35,7 +32,7 @@ The file type. Some FTYPE parameter values are OS specific. Refer to the Transfe
 | J  | ASCII  | Stream text<br/> Using stream text (J) allows a text type file to be sent that contains records that exceed 32 KB. As opposed to text type (FTYPE=T), stream text does not add an EOL sequence (LF or CRLF) to the received file.<br/> When using stream text (FTYPE=J), the sender and the receiver must both have the FTYPE set to J. Setting only the sender or receiver to FTYPE=J results in unexpected content for the transferred file. |
 
 
-See also, [UNIX &gt; Transferable files](../../../../cft_intro_install/unix_install_start_here/run_first_time_ux/aix_with_ibm_hacmp_intro/specific_configurations_intro/transferable_files_unix).
+See also, [UNIX &gt; Transferable files](../../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/transferable_files_unix).
 
 ****Windows****
 
@@ -73,7 +70,7 @@ Implicit indicates that the FTYPE is automatically detected by the OS.
 | S | BINARY  | Spanned variable format file (z/OS to z/OS) |
 
 
-<span class="autonumber"></span>HFS file characteristics
+HFS file characteristics
 
 
 | FTYPE  | FCODE  | Type of sent file  |
@@ -97,8 +94,6 @@ The following table lists the different types of files that can be used accordin
 >
 > Bold values indicate a recommended combination. For example, FTYPE=D and FRECFM=V, are the recommended settings for PF-DTA files with variable data.
 
-QQQ\_QQQ\_QQQ
-
 
 | FTYPE | FRECFM | Supported files and data organizations (if applicable). |
 | --- | --- | --- |
@@ -113,7 +108,7 @@ QQQ\_QQQ\_QQQ
 
 ****Default FTYPE or FRECFM value****
 
-The behavior of the values ‘’ and ‘ ’, for FTYPE and FRECFM respectively, are not detailed in the following table. These values correspond to <span class="code">`undefined`</span>, meaning that the transfer in emission takes the value of both the file type and the member content..
+The behavior of the values ‘’ and ‘ ’, for FTYPE and FRECFM respectively, are not detailed in the following table. These values correspond to `undefined`, meaning that the transfer in emission takes the value of both the file type and the member content..
 
 
 |   | Default FTYPE | Default FRECFM |
@@ -159,5 +154,25 @@ For Unix files, use the values in the Unix [table](#UNIX_ftype) above. For nativ
 | E  | ASCII  | Edit native files.  |
 | N  | BINARY  | Non-edit native file (force the detection of native files rather than OSS ones).  |
 
+
+****OpenVMS (VMS)****
+
+The FTYPE is automatically detected when sending a file.
+
+
+| FTYPE / FRECFM  | FCODE  | Type of sent file  |
+| --- | --- | --- |
+| ' ' / 'F'  | ASCII  | FAB$C_FIX  |
+| ' ' / 'U'  | ASCII  | FAB$C_UDF  |
+| 'P' / 'V'  | ASCII  | FAB$C_VAR  |
+| 'C' / 'V'  | ASCII  | FAB$C_VFC  |
+| 'F' / 'V'  | ASCII  | FAB$C_STM  |
+| 'L' / 'V'  | ASCII  | FAB$C_STMLF  |
+| 'R'/ 'V'  | ASCII  | FAB$C_STMCR  |
+
+
+> **Note**
+>
+> FTYPE values are OS specific. Refer to the Transfer CFT OpenVMS Installation and Operation Guide for more information.
 
 [Return to Command index](../../)

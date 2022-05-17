@@ -1,11 +1,8 @@
 ---
-
-    title: Introduction
-    linkTitle: Introduction
+    title: "Introduction"
+    linkTitle: "Introduction"
     weight: 150
-
----
-This document describes how to install Transfer CFT {{< TransferCFT/headerfootervariableshfversion  >}} in a HP NonStop environment. HP NonStop exists on several hardware architectures, such as Itanium and Intel x86. On each of these runs a version of the HP NonStop OS, which is platform dependent. Therefore, there are two different versions of Transfer CFT for HP NonStop:
+---This document describes how to install Transfer CFT {{< TransferCFT/headerfootervariableshfversion  >}} in a HP NonStop environment. HP NonStop exists on several hardware architectures, such as Itanium and Intel x86. On each of these runs a version of the HP NonStop OS, which is platform dependent. Therefore, there are two different versions of Transfer CFT for HP NonStop:
 
 - Transfer CFT for HP NonStop Itanium, which runs specifically on HP NonStop for Itanium processors.
 - Transfer CFT for HP NonStop x86, which runs specifically on HP NonStop for Intel x86 processors.
@@ -18,7 +15,7 @@ The NonStop OS basically consists of a Guardian layer, which is a lower level of
 
 > **Note**
 >
-> To accommodate changing product versions, the convention &lt;version> is used in place of the actual product version in examples and lists. You should replace this with the actual value. Using the same logic, you can replace &lt;os>, &lt;arch>, and &lt;xx> with your target platform details. For example, Transfer\_CFT\_&lt;version>\_&lt;os>-&lt;arch>-&lt;xx> becomes Transfer\_CFT\_3.2.x\_hp\_nonstop\_oss-ia64-32 when referring to Transfer CFT V3.2.x for HP NonStop OSS-IA64-32bits.
+> To accommodate changing product versions, the convention &lt;version> is used in place of the actual product version in examples and lists. You should replace this with the actual value. Using the same logic, you can replace &lt;os>, &lt;arch>, and &lt;xx> with your target platform details. For example, Transfer_CFT_&lt;version>_&lt;os>-&lt;arch>-&lt;xx> becomes Transfer_CFT_3.2.x_hp_nonstop_oss-ia64-32 when referring to Transfer CFT V3.2.x for HP NonStop OSS-IA64-32bits.
 
 ## Delivered components
 

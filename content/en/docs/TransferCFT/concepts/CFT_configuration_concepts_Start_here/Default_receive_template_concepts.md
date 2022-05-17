@@ -1,11 +1,8 @@
 ---
-
-    title: Receive template 
-    linkTitle: Default receive template CFTRECV
-    weight: 170
-
----
-This topic describes general file reception concepts and the
+    title: "Receive template "
+    linkTitle: "Default receive template CFTRECV"
+    weight: 160
+---This topic describes general file reception concepts and the
 CFTRECV template.
 
 [Receive
@@ -17,8 +14,8 @@ a file](#Receiving_a_File)
 [About
 the default CFTRECV object](#About_the_default_CFTRECV_object)
 
-****<span style="color: #800000; font-weight: normal; text-decoration: none;">Related
-topics</span>****
+****Related
+topics****
 
 - Command syntax
     [CFTRECV](../../../c_intro_userinterfaces/command_summary#CFTRECV)

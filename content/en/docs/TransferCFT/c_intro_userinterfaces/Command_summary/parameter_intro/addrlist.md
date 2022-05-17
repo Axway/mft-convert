@@ -1,17 +1,14 @@
 ---
-
-    title: addrlist
-    linkTitle: addrlist
-    weight: 270
-
----
-<span id="addrlist"></span>
+    title: "addrlist"
+    linkTitle: "addrlist"
+    weight: 260
+---<span id="addrlist"></span>
 
 ### addrlist
 
 #### CFTCOM
 
-****\[addrlist = {string 1...64, string 1...64}\]****
+****[addrlist = {string 1...64, string 1...64}]****
 
 Use this field to define a list of authorized addresses that you can
 use to connect to the communication media.

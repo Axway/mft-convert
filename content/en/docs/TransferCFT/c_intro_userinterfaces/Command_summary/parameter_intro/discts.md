@@ -1,18 +1,15 @@
 ---
-
-    title: discts
-    linkTitle: discts
-    weight: 750
-
----
-<span id="discts"></span>
+    title: "discts"
+    linkTitle: "discts"
+    weight: 740
+---<span id="discts"></span>
 
 ### discts
 
 #### CFTPROT
 
-****\[DISCTS =
-{ <u>see the table</u> | n} \] {0..3600}  ****
+****[DISCTS =
+{ <u>see the table</u> &#124; n} ] {0..3600}  ****
 
 The synchronous connection time as managed by {{< TransferCFT/axwayvariablesComponentShortName  >}}. If {{< TransferCFT/axwayvariablesComponentShortName  >}} does not receive requests to communicate in discts (the number of seconds), {{< TransferCFT/axwayvariablesComponentShortName  >}} closes the session.
 

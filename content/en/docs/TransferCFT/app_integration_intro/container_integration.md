@@ -1,13 +1,10 @@
 ---
-
-    title: Integrate a containerized application
-    linkTitle: Containerized application integration
+    title: "Integrate a containerized application"
+    linkTitle: "Containerized application integration"
     weight: 200
+---This page is intended to help you understand the various ways to use Transfer CFT and associated applications in a container environment, providing a high level overview of the possible integration architectures.
 
----
-This page is intended to help you understand the various ways to use Transfer CFT and associated applications in a container environment, providing a high level overview of the possible integration architectures.
-
-You may want to review the two methods  for installing and operating a containerized {{< TransferCFT/suitevariablesTransferCFTName  >}}, using either [Docker Compose or Kubernetes with Helm](../../cft_intro_install/install_container).
+You may want to review the two methods  for installing and operating a containerized {{< TransferCFT/suitevariablesTransferCFTName  >}}, using either [Docker Compose or Kubernetes with Helm](../../cft_intro_install/contanier_intro/install_container).
 
 ## Kubernetes concepts
 
@@ -41,15 +38,15 @@ There are 3 possible file storage implementations when you have Transfer CFT as 
 
 The application and {{< TransferCFT/suitevariablesTransferCFTName  >}} run in the same pod but in different containers. Both the data produced/consumed by the application and {{< TransferCFT/suitevariablesTransferCFTName  >}} reside on a persistent volume attached to a node where the pod is running. The persistent volume supports ReadWriteOnce access mode and is a local volume (AWS ESB, GCEPersistentDisk, AzureDisk).
 
-********<span class="autonumber"></span>Sidecar architecture                     ![](/Images/TransferCFT/pod1.png)********
+********Sidecar architecture                     ![](/Images/TransferCFT/pod1.png)********
 
 #### {{< TransferCFT/suitevariablesTransferCFTName  >}} and the application run on different pods but on the same node
 
 The application and {{< TransferCFT/suitevariablesTransferCFTName  >}} run on different pods on the same node. If using a local volume, both pods must run on the same node. Both the data produced and consumed by the application and {{< TransferCFT/suitevariablesTransferCFTName  >}} reside on a persistent volume attached to the node where the pods are running. The persistent volume supports ReadWriteOnce access mode, and is a local volume (AWS ESB, GCEPersistentDisk, AzureDisk).
 
-********<span class="autonumber"></span>Two pods one node architecture            ![](/Images/TransferCFT/pod2.png)********
+********Two pods one node architecture            ![](/Images/TransferCFT/pod2.png)********
 
-********<span class="autonumber"></span> ********
+******** ********
 
 <span id="__RefHeading___Toc2647_2515630742"></span>
 
@@ -60,7 +57,7 @@ The application and {{< TransferCFT/suitevariablesTransferCFTName  >}} run on di
 - The Transfer CFT data resides on a persistent volume that can be a shared volume (Ceph, GlusterFS, NFS, ...).
 - The data produced and consumed by the application resides on a persistent volume that can be a shared volume (Ceph, GlusterFS, NFS, ...) or cloud storage (AWS S3, GCS). In this implementation, you configure the cloud storage at the flow deployment level, not in the product deployment.
 
-********<span class="autonumber"></span>Two pods two nodes architecture                    ![](/Images/TransferCFT/pod3.png)********
+********Two pods two nodes architecture                    ![](/Images/TransferCFT/pod3.png)********
 
 <span id="__RefHeading___Toc2649_2515630742"></span>
 

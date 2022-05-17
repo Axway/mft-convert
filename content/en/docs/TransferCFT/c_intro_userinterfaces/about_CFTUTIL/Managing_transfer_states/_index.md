@@ -1,11 +1,8 @@
 ---
-
-    title: Manage  transfers
-    linkTitle: Transfer states
-    weight: 280
-
----
-This section describes transfers, and how to create and
+    title: "Manage  transfers"
+    linkTitle: "Transfer states"
+    weight: 270
+---This section describes transfers, and how to create and
 manage your transfer operations using {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} can execute both file and message transfers. A transfer
@@ -26,21 +23,21 @@ To view the transfers log:
 Available actions to include in the Transfers page include:
 
 
-| UI  | Parameter details  | Description  |
+| UI  | More information  | Description  |
 | --- | --- | --- |
-| New  | <a href="../../../concepts" >Managing transfers and partners</a>  | Create a new transfer request  |
+| New  | Create a transfer request | Create a new transfer request  |
 | Clone  | No equivalent parameter  | Copy an existing transfer request  |
-| Restart  | <a href="start_command">Restarting transfers</a> | Restart transfers in the H or K state in the catalog |
-| Delete  | <a href="../../../admin_intro/admin_commands_intro/delete_command">Deleting catalog entries</a> | Delete one or more catalog entries |
-|   | <a href="keep_command">Suspending transfers</a> | Suspend one or all of the send and/or receive transfers with selected partners |
-|   | <a href="submit_command">Submitting an end-of-tranfser</a> | Submit an end-of-transfer procedure for each selected transfer |
-| Halt  | <a href="halt_command">Halting a transfer</a> | Suspend one or all the send and/or receive transfers, with the partners selected |
-| End  | <a href="end_command">Declaring executed transfers</a> | Declare that all the operations related to the end-of-transfer, send and receive, have been executed correctly |
-|   | <a href="resume_command">Retrieving a blocked request</a> | Retrieves, in server mode, a blocked send request that has the *hold* status, if the diagnostic codes are not null |
-|   | <a href="kstate_command">Suspending a catalog request</a> | Suspend a transfer in the catalog |
-|   | <a href="clearcmd_command">Deleting a transfer request</a> | Delete a transfer request from the communication file |
-| Ack  | <a href="../../../concepts/using_the_send_command/sending_replies" >Use the SEND acknowledgement commands</a>  | Send a transfer acknowledgement  |
-| Nack  | <a href="../../../concepts/using_the_send_command/transfers_neg_ack_pesit" >Sending a negative acknowledgement</a>  | Send a notification indicating an error occurred  |
+| Restart  | [Restarting transfers](start_command) | Restart transfers in the H or K state in the catalog |
+| Delete  | [Deleting catalog entries](../../../admin_intro/admin_commands_intro/delete_command) | Delete one or more catalog entries |
+|   | [Suspending transfers](keep_command) | Suspend one or all of the send and/or receive transfers with selected partners |
+|   | [Submitting an end-of-tranfser](submit_command) | Submit an end-of-transfer procedure for each selected transfer |
+| Halt  | [Halting a transfer](halt_command) | Suspend one or all the send and/or receive transfers, with the partners selected |
+| End  | [Declaring executed transfers](end_command) | Declare that all the operations related to the end-of-transfer, send and receive, have been executed correctly |
+|   | [Retrieving a blocked request](resume_command) | Retrieves, in server mode, a blocked send request that has the *hold* status, if the diagnostic codes are not null |
+|   | [Suspending a catalog request](kstate_command) | Suspend a transfer in the catalog |
+|   | [Deleting a transfer request](clearcmd_command) | Delete a transfer request from the communication file |
+| Ack  | [Use the SEND acknowledgement commands](../../../concepts/send_command/send_replies)  | Send a transfer acknowledgement  |
+| Nack  | [Sending a negative acknowledgement](../../../concepts/send_command/transfers_neg_ack_pesit)  | Send a notification indicating an error occurred  |
 
 
 ## Create transfer requests filters
@@ -74,8 +71,12 @@ Optionally you can select a **Layout** in the drop-down menu to use a customized
 >
 > These page customizations are defined in the CFTUIPREF object.
 
+## Customize a CSV export file
+
+The {{< TransferCFT/suitevariablesTransferCFTName  >}} UI allows you to export transfer details in a CSV file. If you have modified the default column names in the user interface as describe above in *Create or modify the page layout*, these custom names are used in the CSV file export.
+
 ## Troubleshooting transfer filters
 
-<span class="bold_in_para">****Issue****</span>: I cannot create filters
+****Issue****: I cannot create filters
 
-<span class="bold_in_para">****Solution****</span>: Check that you have the MANAGE CFTUIPREF or VIEW CFTUIPREF privilege. This issue may have occurred due to an upgrade.
+****Solution****: Check that you have the MANAGE CFTUIPREF or VIEW CFTUIPREF privilege. This issue may have occurred due to an upgrade.

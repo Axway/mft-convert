@@ -1,11 +1,8 @@
 ---
-
-    title: RECV - Receive files
-    linkTitle: Using the RECV command
-    weight: 180
-
----
-This command is used to request the reception of files from a designated partner.
+    title: "RECV - Receive files"
+    linkTitle: "Using the RECV command"
+    weight: 170
+---This command is used to request the reception of files from a designated partner.
 
 > **Note**
 >

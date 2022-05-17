@@ -1,11 +1,8 @@
 ---
-
-    title: System environment for z/OS
-    linkTitle: About the system configuration 
+    title: "System environment for z/OS"
+    linkTitle: "About the system configuration "
     weight: 230
-
----
-This section presents system environment functions that are specific to Transfer CFT z/OS and provides information about:
+---This section presents system environment functions that are specific to Transfer CFT z/OS and provides information about:
 
 - Creating files in z/OS
 - File-sharing options in z/OS

@@ -1,11 +1,8 @@
 ---
-
-    title: About transport security and PKIUTIL commands
-    linkTitle: Transport security and PKIUTIL commands
+    title: "About transport security and PKIUTIL commands"
+    linkTitle: "Transport security and PKIUTIL commands"
     weight: 260
-
----
-This section describes SSL security parameters. For more information on transport security concepts, refer to the <span class="span_2" style="font-style: italic;">**Security** </span>sub-book in the *Transfer* <span class="span_2" style="font-style: italic;">**CFT**</span> documentation.
+---This section describes SSL security parameters. For more information on transport security concepts, refer to the **Security** sub-book in the *Transfer* **CFT** documentation.
 
 ## Certificates
 
@@ -17,14 +14,14 @@ You must define certain elements in the product configuration if you want to use
 
 To use the PKIUTIL utility:
 
-1. Access the Transfer CFT &lt;span class="italic\_in\_para">Main Menu&lt;/span> screen. In the Main Menu enter the command &lt;span class="code">&lt;code>cft&lt;/code>&lt;/span> and press &lt;span class="bold\_in\_para">&lt;b>Enter&lt;/b>&lt;/span> to open the &lt;span class="italic\_in\_para">Manager Menu&lt;/span>.
+1. Access the Transfer CFT &lt;span class="italic_in_para">Main Menu&lt;/span> screen. In the Main Menu enter the command &lt;span class="code">&lt;code>cft&lt;/code>&lt;/span> and press &lt;span class="bold_in_para">&lt;b>Enter&lt;/b>&lt;/span> to open the &lt;span class="italic_in_para">Manager Menu&lt;/span>.
     &lt;/li>
-1. Select <span class="bold_in_para">****option**** </span>**2. Security commands**. Then select option **2. Interpret Security configuration** and enter the member you want to interpret. By default this is the PKIBASE member in the UTIN file in CFTPROD library.
+1. Select ****option**** **2. Security commands**. Then select option **2. Interpret Security configuration** and enter the member you want to interpret. By default this is the PKIBASE member in the UTIN file in CFTPROD library.
 1. To edit the security configuration file selection option 2. Security commands then option 1. Edit Security configuration file and enter the member you want to edit. By default it is the PKIBASE member in the UTIN file in CFTPROD library.
 
 ## Submitting PKIUTIL commands
 
-<span class="bold_in_para">****Select option**** </span>**<span class="bold_in_para">****2. Security commands****</span>**, and then**<span class="bold_in_para"> ****3. PKIUTIL operation****</span>** in the Operations screen to start the <span class="bold_in_para">****PKUTIL session****</span>.
+****Select option**** ******2. Security commands******, and then ******3. PKIUTIL operation****** in the Operations screen to start the ****PKUTIL session****.
 
 This option allows you to use the keyboard to enter and execute PKIUTIL commands.
 
@@ -63,14 +60,14 @@ IKPASSW=user, STATE=ACT, ROOTCID=NEWCA, IKFORM=DER
 
 ### List PKI Internal datafiles contents
 
-1. To list the PKI internal datafiles  contents, enter the command: <span class="code">` LISTPKI`</span>
+1. To list the PKI internal datafiles  contents, enter the command: ` LISTPKI`
 1. Press ENTER to execute the command.
 
 A correct execution displays the following messages:
 
 ```
 > LISTPKI
-1:¬PKU|
+1:¬PKU&#124;
 Date = 03/03/2017 Time = 16:24:43
 PKI Fname =
  

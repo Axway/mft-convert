@@ -1,11 +1,8 @@
 ---
-
-    title: TCP/IP requirements
-    linkTitle: TCP/IP requirements
+    title: "TCP/IP requirements"
+    linkTitle: "TCP/IP requirements"
     weight: 190
-
----
-This section describes the specific requirements for TCP/IP in a Transfer CFT {{< TransferCFT/PrimaryForOS400  >}} environment.
+---This section describes the specific requirements for TCP/IP in a Transfer CFT {{< TransferCFT/PrimaryForOS400  >}} environment.
 
 ## Interface level used
 
@@ -20,13 +17,13 @@ A TCP/IP network must be installed and configured before the Transfer CFT {{< Tr
 ### Local domain and host name
 
 1. To configure the domain and host names, enter **GO CFGTCP**.
-1. In the *CFGTCP menu*, select the <span class="span_2" style="font-weight: bold;">****Changes local domain and host names****</span> option and modify the local domain and host names for your IBM i. The host name is used in the CFTNET command HOST parameter when the Transfer CFT/400 monitor is configured.
+1. In the *CFGTCP menu*, select the ****Changes local domain and host names**** option and modify the local domain and host names for your IBM i. The host name is used in the CFTNET command HOST parameter when the Transfer CFT/400 monitor is configured.
 
 ### Host table
 
 Each host with which you wish to transfer files must be declared in this table.
 
-To do so, select the <span class="span_2" style="font-weight: bold;">****WORK WITH TCP/IP HOST TABLE ENTRIES****</span> option in the *CFGTCP menu*.
+To do so, select the ****WORK WITH TCP/IP HOST TABLE ENTRIES**** option in the *CFGTCP menu*.
 
 ### TCP/IP interface
 

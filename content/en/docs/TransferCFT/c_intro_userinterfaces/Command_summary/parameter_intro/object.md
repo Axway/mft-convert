@@ -1,17 +1,14 @@
 ---
-
-    title: object 
-    linkTitle: object
-    weight: 2370
-
----
-<span id="object"></span>
+    title: "object "
+    linkTitle: "object"
+    weight: 2390
+---<span id="object"></span>
 
 ### object
 
 #### MQUERY
 
-****\[ OBJECT = { <u>CACHE</u> | SYSTEM | STATS | PROBE } \]****
+****[ OBJECT = { <u>CACHE</u> &#124; SYSTEM &#124; STATS &#124; PROBE } ]****
 
 **** ****
 

@@ -1,11 +1,8 @@
 ---
-
-    title: Transfer CFT z/OS performance
-    linkTitle: Optimize performance
+    title: "Transfer CFT z/OS performance"
+    linkTitle: "Optimize performance"
     weight: 270
-
----
-This section introduces performance issues to consider when using Transfer CFT in a z/OS environment.
+---This section introduces performance issues to consider when using Transfer CFT in a z/OS environment.
 
 <span id="Memory usage"></span>
 
@@ -199,9 +196,9 @@ A source CFTNET as below:
 
 ### TCP/IP stack affinity
 
-If you want to ensure that Transfer CFT has an affinity to a particular TCP/IP stack, use the \_BPXK\_SETIBMOPT\_TRANSPORT environment variable.
+If you want to ensure that Transfer CFT has an affinity to a particular TCP/IP stack, use the _BPXK_SETIBMOPT_TRANSPORT environment variable.
 
-The environment variable \_BPXK\_SETIBMOPT\_TRANSPORT located in UPARM(CNFENV) can be uncommented and set with the TCP/IP stack to be used by CFT.
+The environment variable _BPXK_SETIBMOPT_TRANSPORT located in UPARM(CNFENV) can be uncommented and set with the TCP/IP stack to be used by CFT.
 
 ### Modify record format to improve performance
 

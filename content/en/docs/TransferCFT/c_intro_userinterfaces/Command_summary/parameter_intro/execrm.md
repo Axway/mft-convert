@@ -1,11 +1,8 @@
 ---
-
-    title: execrm
-    linkTitle: execrm
-    weight: 880
-
----
-<span id="execrm"></span>
+    title: "execrm"
+    linkTitle: "execrm"
+    weight: 870
+---<span id="execrm"></span>
 
 ### execrm
 
@@ -13,7 +10,7 @@
 
 #### CFTPARM
 
-****\[EXECRM = filename\]
+****[EXECRM = filename]
     {string 64}****
 
 Generic name of the file describing
@@ -28,7 +25,7 @@ This name may include the following symbolic variables:
     &USERID
 - &RAPPL, &SAPPL
 
-The character ‘&’ designates the char\_symb character defined in
+The character ‘&’ designates the char_symb character defined in
 the {{< TransferCFT/axwayvariablesComponentShortName  >}} *Operations Guide* corresponding to your OS
 
 > **Note**

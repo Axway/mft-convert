@@ -1,25 +1,22 @@
 ---
-
-    title: nidf
-    linkTitle: nidf
-    weight: 2200
-
----
-<span id="nidf"></span>
+    title: "nidf"
+    linkTitle: "nidf"
+    weight: 2220
+---<span id="nidf"></span>
 
 ### nidf
 
 #### CFTIDF
 
-**\[NIDF = string \]**
+**[NIDF = string ]**
 
-**<span style="font-weight: normal;">IDF
-network identifier.</span><span style="font-weight: bold;"> **** </span><span style="font-weight: normal;">This value is transferred in the network.
- </span> **
+**IDF
+network identifier. **** This value is transferred in the network.
+  **
 
 #### SEND, RECV
 
-**\[NIDF = string \]**
+**[NIDF = string ]**
 
 The network identifier.
 

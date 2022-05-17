@@ -1,24 +1,21 @@
 ---
-
-    title: rkerror
-    linkTitle: rkerror
-    weight: 2930
-
----
-<span id="rkerror"></span>
+    title: "rkerror"
+    linkTitle: "rkerror"
+    weight: 2950
+---<span id="rkerror"></span>
 
 ### rkerror
 
 #### CFTCAT, CFTRECV
 
-**\[RKERROR = {<u>KEEP</u>** | **DELETE}\]**
+**[RKERROR = {<u>KEEP</u>** &#124; **DELETE}]**
 
 **A**ction to be taken if a transfer
 aborts due to the receiving file creation error (server mode):
 
-- <span style="font-weight: bold;">****KEEP****</span>:
+- ****KEEP****:
     the transfer remains in the catalog
-- <span style="font-weight: bold;">****DELETE****</span>:
+- ****DELETE****:
     the transfer is removed from the catalog
 
 If the RKERROR parameter is also set in the CFTRECV command, the CFTRECV

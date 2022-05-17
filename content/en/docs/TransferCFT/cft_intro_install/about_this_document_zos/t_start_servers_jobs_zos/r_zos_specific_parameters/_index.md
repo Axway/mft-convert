@@ -1,11 +1,8 @@
 ---
-
-    title: Working with files and coding
-    linkTitle: About files and coding
+    title: "Working with files and coding"
+    linkTitle: "About files and coding"
     weight: 260
-
----
-## Specific parameters for z/OS
+---## Specific parameters for z/OS
 
 This section describes the parameters and values that are specific to Transfer CFT z/OS and information about:
 
@@ -50,8 +47,6 @@ File characteristics that are found automatically for sending are listed in the 
 The PDS files copied by IEBCOPY are also received in the ‘U’ format, which is compatible with IEBCOPY.
 
 **Receiving values for FORG, FTYPE and FRECFM**
-
-QQQ\_QQQ\_QQQ weird colspans in original
 
 
 | FORG  | FTYPE  | FRECFM  |  Type of receive file  |

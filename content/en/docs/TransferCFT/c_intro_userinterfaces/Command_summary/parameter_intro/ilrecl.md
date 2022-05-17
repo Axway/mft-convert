@@ -1,18 +1,15 @@
 ---
-
-    title: ilrecl
-    linkTitle: ilrecl
-    weight: 1640
-
----
-<span id="ilrecl"></span>
+    title: "ilrecl"
+    linkTitle: "ilrecl"
+    weight: 1630
+---<span id="ilrecl"></span>
 
 ### ilrecl
 
 #### COPYFILE
 
-****\[ILRECL = {see the comment
-| n} \]   ****
+****[ILRECL = {see the comment
+&#124; n} ]   ****
 
 ****{0..32768}****
 
@@ -48,8 +45,8 @@ the file record concept: actual size of the input file records.
 For the systems below not handling this concept:
 
 
-| **UNIX, Windows** | 512 for text files (ITYPE = T, X or O).<br /> 4096 for binary or variables files (ITYPE = {B | V}). |
-| --- | --- | --- |
+| **UNIX, Windows** | 512 for text files (ITYPE = T, X or O).<br /> 4096 for binary or variables files (ITYPE = {B &#124; V}). |
+| --- | --- |
 
 
  

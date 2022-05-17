@@ -1,11 +1,8 @@
 ---
-
-    title: CFTRECV  - Receive templates
-    linkTitle: Receive templates - CFTRECV 
-    weight: 220
-
----
-This topic describes the {{< TransferCFT/suitevariablesTransferCFTName  >}}
+    title: "CFTRECV  - Receive templates"
+    linkTitle: "Receive templates - CFTRECV "
+    weight: 210
+---This topic describes the {{< TransferCFT/suitevariablesTransferCFTName  >}}
 receive template. You can use the CFTRECV object to:
 
 - Give the default
@@ -25,51 +22,51 @@ topics****
 
 | Parameter  | Description  |
 | --- | --- |
-| <a href="../../../command_summary/parameter_intro/comment">COMMENT</a> | Local alphanumeric comment associated with receive transfers. |
-| <a href="../../../command_summary/parameter_intro/cycdate">CYCDATE</a> | Upper final date for activating the first transfer of a cycle. |
-| <a href="../../../command_summary/parameter_intro/cyctime">CYCTIME</a> | Upper limit time for activating the first transfer of a cycle. |
-| <a href="../../../command_summary/parameter_intro/delete">DELETE</a>  | Automatic deletion of the catalog entries in the "X" phase (done) for the corresponding IDF. |
-| <a href="../../../command_summary/parameter_intro/exit">EXIT</a> | Identifier of the CFTEXIT command associated with this transfer. |
-| <a href="../../../command_summary/parameter_intro/faction">FACTION</a> | Action on the file for a receive transfer. |
-| <a href="../../../command_summary/parameter_intro/fblksize">FBLKSIZE</a> | This parameter (in bytes) controls the "blocking factor" of the receiver file records: according to the system, it defines the disk block size and/or the file input/output buffer size. |
-| <a href="../../../command_summary/parameter_intro/fcharset">FCHARSET</a>  | Defines the local file encoding.  |
-| <a href="../../../command_summary/parameter_intro/fcheck">FCHECK</a> | Checks record length attributes. |
-| <a href="../../../command_summary/parameter_intro/fcode#fcode_CFTSEND">FCODE</a> | Code of the receiver file data (local data code). |
-| <a href="../../../command_summary/parameter_intro/fdisp#fdisp_CFTRECV">FDISP</a> | Presence check indicator of the receiver file used to determine the action of the Transfer CFT monitor. |
-| <a href="../../../command_summary/parameter_intro/fkeylen">FKEYLEN</a>  | Key length of an indexed file. |
-| <a href="../../../command_summary/parameter_intro/fkeypos#fkeypos">FKEYPOS</a> | Key position relative to 0 in the record of an indexed file. |
-| <a href="../../../command_summary/parameter_intro/flowname">FLOWNAME</a>  | The local flow descriptor.  |
-| <a href="../../../command_summary/parameter_intro/flrec#flrecl">FLRECL</a>  | File record length in bytes. |
-| <a href="../../../command_summary/parameter_intro/fname#fname%20CFTSEND__CFTRECV__CFTISEND">FNAME</a> | Name of the physical receiver file (filename or complete pathname) of the directory. |
-| <a href="../../../command_summary/parameter_intro/force">FORCE</a>  | Determines the priority with which the parameters set in CFTRECV are taken into account relative to the parameters set in an associated RECV command. |
-| <a href="../../../command_summary/parameter_intro/forg">FORG</a>  | Organization of the file to be sent. |
-| <a href="../../../command_summary/parameter_intro/frecfm">FRECFM</a>  | Record format of the receiver file. |
-| <a href="../../../command_summary/parameter_intro/fspace">FSPACE</a>  | Size of the receiver file, in K-bytes (1 K-byte = 1024 bytes). |
-| <a href="../../../command_summary/parameter_intro/ftype#ftype">FTYPE</a> | Type of the receiver file. |
-| <a href="../../../command_summary/parameter_intro/groupid">GROUPID</a> | Information completing the USERID of the CFTRECV command. |
-| <a href="../../../command_summary/parameter_intro/id#id_CFTSEND">ID</a>  | Local model file identifier (IDF). |
-| <a href="../../../command_summary/parameter_intro/maction">MACTION</a>  | Action on the files transferred by COPY at the time of creation. |
-| <a href="../../../command_summary/parameter_intro/maxdate">MAXDATE</a> | Transfer validity final date. |
-| <a href="../../../command_summary/parameter_intro/maxtime">MAXTIME</a> | Transfer validity limit time for the final date (MAXDATE). |
-| <a href="../../../command_summary/parameter_intro/mindate">MINDATE</a> | Minimum transfer validity date. |
-| <a href="../../../command_summary/parameter_intro/mintime">MINTIME</a> | Transfer initial validity time, from the first day (MINDATE). |
-| <a href="../../../command_summary/parameter_intro/ncharset">NCHARSET</a>  | Defines the destination file encoding that is used on a file to encode or decode network data.  |
-| <a href="../../../command_summary/parameter_intro/ncode">NCODE</a>  | The network data code when receiving transfers. *Available only when using SFTP.*  |
-| <a href="../../../command_summary/parameter_intro/ncomp">NCOMP</a> | Compression of on-line data requested by the receiver. |
-| <a href="../../../command_summary/parameter_intro/netband">NETBAND</a> | Select the outgoing port range. |
-| <a href="../../../command_summary/parameter_intro/notify">NOTIFY</a> | Defines the destination of the messages associated with the send transfer selected from the log file messages, by the value of the OPERMSG parameter. |
-| <a href="../../../command_summary/parameter_intro/opermsg">OPERMSG</a>  | Defines the categories of transfer information messages intended for the operator (all the messages also being written in the log file). |
-| <a href="../../../command_summary/parameter_intro/pri">PRI</a> | Receive request selection priority. |
-| <a href="../../../command_summary/parameter_intro/ruser">RUSER</a> | Identifier of the file receiver user. |
-| <a href="../../../command_summary/parameter_intro/sourceappl">SOURCEAPPL</a>  | The identifier of the local file sender application.  |
-| <a href="../../../command_summary/parameter_intro/state">STATE</a>  | Defines the transfer request state. |
-| <a href="../../../command_summary/parameter_intro/suser">SUSER</a>  | Identifier of the file sender user. |
-| <a href="../../../command_summary/parameter_intro/targetappl">TARGETAPPL</a>  | Identifier of the local file receiver application.  |
-| <a href="../../../command_summary/parameter_intro/tcycle">TCYCLE</a>  | Transfer cycle period unit. |
-| <a href="../../../command_summary/parameter_intro/trk">TRK</a>  | Specification of how much detail Transfer CFT provides Sentinel about transfers. Transfer CFT sends detail about the transfers in the form of tracked instances. |
-| <a href="../../../command_summary/parameter_intro/userid#userid_CFTRECV">USERID</a> | Identifier of the transfer owner. |
-| <a href="../../../command_summary/parameter_intro/wfname">WFNAME</a>  | Name of the temporary file used during the transfer. |
-| <a href="../../../command_summary/parameter_intro/xlate">XLATE</a>  | Identifier of the translation table used for the receive transfers. |
+| [COMMENT](../../../command_summary/parameter_intro/comment) | Local alphanumeric comment associated with receive transfers. |
+| [CYCDATE](../../../command_summary/parameter_intro/cycdate) | Upper final date for activating the first transfer of a cycle. |
+| [CYCTIME](../../../command_summary/parameter_intro/cyctime) | Upper limit time for activating the first transfer of a cycle. |
+| [DELETE](../../../command_summary/parameter_intro/delete)  | Automatic deletion of the catalog entries in the "X" phase (done) for the corresponding IDF. |
+| [EXIT](../../../command_summary/parameter_intro/exit) | Identifier of the CFTEXIT command associated with this transfer. |
+| [FACTION](../../../command_summary/parameter_intro/faction) | Action on the file for a receive transfer. |
+| [FBLKSIZE](../../../command_summary/parameter_intro/fblksize) | This parameter (in bytes) controls the "blocking factor" of the receiver file records: according to the system, it defines the disk block size and/or the file input/output buffer size. |
+| [FCHARSET](../../../command_summary/parameter_intro/fcharset)  | Defines the local file encoding.  |
+| [FCHECK](../../../command_summary/parameter_intro/fcheck) | Checks record length attributes. |
+| [FCODE](../../../command_summary/parameter_intro/fcode#fcode_CFTSEND) | Code of the receiver file data (local data code). |
+| [FDISP](../../../command_summary/parameter_intro/fdisp#fdisp_CFTRECV) | Presence check indicator of the receiver file used to determine the action of the Transfer CFT monitor. |
+| [FKEYLEN](../../../command_summary/parameter_intro/fkeylen)  | Key length of an indexed file. |
+| [FKEYPOS](../../../command_summary/parameter_intro/fkeypos#fkeypos) | Key position relative to 0 in the record of an indexed file. |
+| [FLOWNAME](../../../command_summary/parameter_intro/flowname)  | The local flow descriptor.  |
+| [FLRECL](../../../command_summary/parameter_intro/flrec#flrecl)  | File record length in bytes. |
+| [FNAME](../../../command_summary/parameter_intro/fname#fname%20CFTSEND__CFTRECV__CFTISEND) | Name of the physical receiver file (filename or complete pathname) of the directory. |
+| [FORCE](../../../command_summary/parameter_intro/force)  | Determines the priority with which the parameters set in CFTRECV are taken into account relative to the parameters set in an associated RECV command. |
+| [FORG](../../../command_summary/parameter_intro/forg)  | Organization of the file to be sent. |
+| [FRECFM](../../../command_summary/parameter_intro/frecfm)  | Record format of the receiver file. |
+| [FSPACE](../../../command_summary/parameter_intro/fspace)  | Size of the receiver file, in K-bytes (1 K-byte = 1024 bytes). |
+| [FTYPE](../../../command_summary/parameter_intro/ftype#ftype) | Type of the receiver file. |
+| [GROUPID](../../../command_summary/parameter_intro/groupid) | Information completing the USERID of the CFTRECV command. |
+| [ID](../../../command_summary/parameter_intro/id#id_CFTSEND)  | Local model file identifier (IDF). |
+| [MACTION](../../../command_summary/parameter_intro/maction)  | Action on the files transferred by COPY at the time of creation. |
+| [MAXDATE](../../../command_summary/parameter_intro/maxdate) | Transfer validity final date. |
+| [MAXTIME](../../../command_summary/parameter_intro/maxtime) | Transfer validity limit time for the final date (MAXDATE). |
+| [MINDATE](../../../command_summary/parameter_intro/mindate) | Minimum transfer validity date. |
+| [MINTIME](../../../command_summary/parameter_intro/mintime) | Transfer initial validity time, from the first day (MINDATE). |
+| [NCHARSET](../../../command_summary/parameter_intro/ncharset)  | Defines the destination file encoding that is used on a file to encode or decode network data.  |
+| [NCODE](../../../command_summary/parameter_intro/ncode)  | The network data code when receiving transfers. *Available only when using SFTP.*  |
+| [NCOMP](../../../command_summary/parameter_intro/ncomp) | Compression of on-line data requested by the receiver. |
+| [NETBAND](../../../command_summary/parameter_intro/netband) | Select the outgoing port range. |
+| [NOTIFY](../../../command_summary/parameter_intro/notify) | Defines the destination of the messages associated with the send transfer selected from the log file messages, by the value of the OPERMSG parameter. |
+| [OPERMSG](../../../command_summary/parameter_intro/opermsg)  | Defines the categories of transfer information messages intended for the operator (all the messages also being written in the log file). |
+| [PRI](../../../command_summary/parameter_intro/pri) | Receive request selection priority. |
+| [RUSER](../../../command_summary/parameter_intro/ruser) | Identifier of the file receiver user. |
+| [SOURCEAPPL](../../../command_summary/parameter_intro/sourceappl)  | The identifier of the local file sender application.  |
+| [STATE](../../../command_summary/parameter_intro/state)  | Defines the transfer request state. |
+| [SUSER](../../../command_summary/parameter_intro/suser)  | Identifier of the file sender user. |
+| [TARGETAPPL](../../../command_summary/parameter_intro/targetappl)  | Identifier of the local file receiver application.  |
+| [TCYCLE](../../../command_summary/parameter_intro/tcycle)  | Transfer cycle period unit. |
+| [TRK](../../../command_summary/parameter_intro/trk)  | Specification of how much detail Transfer CFT provides Sentinel about transfers. Transfer CFT sends detail about the transfers in the form of tracked instances. |
+| [USERID](../../../command_summary/parameter_intro/userid#userid_CFTRECV) | Identifier of the transfer owner. |
+| [WFNAME](../../../command_summary/parameter_intro/wfname)  | Name of the temporary file used during the transfer. |
+| [XLATE](../../../command_summary/parameter_intro/xlate)  | Identifier of the translation table used for the receive transfers. |
 
 
 #### Examples

@@ -1,11 +1,8 @@
 ---
-
-    title: xlate
-    linkTitle: xlate
-    weight: 3790
-
----
-<span id="xlate"></span>
+    title: "xlate"
+    linkTitle: "xlate"
+    weight: 3810
+---<span id="xlate"></span>
 
 ### xlate
 
@@ -13,11 +10,15 @@
 
 #### CFTRECV, RECV, CFTPART, SEND, CFTSEND, COPYFILE
 
-**\[XLATE = *identifier*\]**
+**[XLATE = *identifier*]**
 
-CFTXLATE object identifier that defines the translation table used
-for the transfers or the copyfile.
+The CFTXLATE object identifier that defines the translation table used
+for transfers, copyfile, PI91 (messages or replies), and PI99 (parameters).
 
-See also: :*[Translation](../../../../concepts/cft_configuration_concepts_start_here/translation_table_concepts)\]*
+> **Note**
+>
+> The PI91 and PI99 are only transcoded for EBCDIC on IBM i or z/OS systems.
+
+See also, *[Define translation tables.](../../../../concepts/transfer_command_overview/using_transcoding/translation_table_concepts)*
 
 [Return to Command index](../../)

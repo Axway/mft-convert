@@ -1,11 +1,8 @@
 ---
-
-    title: LISTCAT - Brief/Full catalog listings
-    linkTitle: LISTCAT - Brief catalog listing
-    weight: 310
-
----
-<span id="Displayed_catalog_information"></span>
+    title: "LISTCAT - Brief/Full catalog listings"
+    linkTitle: "LISTCAT - Brief list of catalog contents"
+    weight: 300
+---<span id="Displayed_catalog_information"></span>
 
 ## Displayed catalog information
 
@@ -73,10 +70,10 @@ CFTU20I Ending Session on 20/03/2015 Time is 11:30:26
 CFTU20I Session active for 0:00:00
 ```
 
-### LISTCAT CONTENT = BRIEF, NPART = {identifier | mask}
+### LISTCAT CONTENT = BRIEF, NPART = {identifier &#124; mask}
 
 **LISTCAT CONTENT = BRIEF, NPART = {*identifier*
-| *mask*}**
+&#124; *mask*}**
 
 ```
 1          2
@@ -127,12 +124,12 @@ comments**
 *[Codes
 Diagnostics and Messages](../../../../troubleshoot_intro/messages_and_error_codes_start_here)*.
 
-### For LISTCAT CONTENT = BRIEF, PART = {identifier | mask}
+### For LISTCAT CONTENT = BRIEF, PART = {identifier &#124; mask}
 
 The NPART parameter is not defined.
 
 **LISTCAT CONTENT = BRIEF, PART = {*identifier*
-| *mask*}**
+&#124; *mask*}**
 
 ```
 1            2

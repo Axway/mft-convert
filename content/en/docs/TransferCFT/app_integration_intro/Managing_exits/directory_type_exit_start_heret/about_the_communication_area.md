@@ -1,11 +1,8 @@
 ---
-
-    title: About  the communication area
-    linkTitle: About the communication area
+    title: "About  the communication area"
+    linkTitle: "About the communication area"
     weight: 330
-
----
-This topic describes the communication area structure. The communication
+---This topic describes the communication area structure. The communication
 area contains:
 
 - [General

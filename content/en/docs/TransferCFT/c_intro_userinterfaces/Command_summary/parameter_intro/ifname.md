@@ -1,17 +1,14 @@
 ---
-
-    title: ifname
-    linkTitle: ifname
-    weight: 1590
-
----
-<span id="ifname"></span>
+    title: "ifname"
+    linkTitle: "ifname"
+    weight: 1580
+---<span id="ifname"></span>
 
 ### ifname
 
 #### COPYFILE
 
-****\[IFNAME = filename \]    {STRING 512}****
+****[IFNAME = filename ]    {STRING 512}****
 
 Name of the input file to be copied.
 

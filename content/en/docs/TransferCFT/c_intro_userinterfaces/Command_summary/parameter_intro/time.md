@@ -1,17 +1,14 @@
 ---
-
-    title: time
-    linkTitle: time
-    weight: 3490
-
----
-<span id="time"></span>
+    title: "time"
+    linkTitle: "time"
+    weight: 3510
+---<span id="time"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
 #### CFTCRON
 
-`TIME =   { string | @shutdown | @startup   }`
+`TIME =   { string &#124; @shutdown &#124; @startup   }`
 
 Starts batch
 commands.
