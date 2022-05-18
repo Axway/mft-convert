@@ -7,11 +7,11 @@ weight: 240
 - sentinel.trkxxxxx: These parameters correspond to the trkxxxxx parameter described in the Sentinel Universal Agent User Guide .
 - sentinel.xfb.xxxx: These parameters indicate how the Sentinel monitoring agent is used in Transfer CFT.
 - Additional uconf values are related to the communication between the Sentinel monitoring agent and Sentinel
-    - ssl.ciphersuites
-    - ssl.version_min
-    - ssl.extension.enable_sni
-    - cft.ipv6.disable_connect
-    - See [UCONF parameters](../../admin_intro/uconf/uconf_directory) for parameter details.
+  - ssl.ciphersuites
+  - ssl.version_min
+  - ssl.extension.enable_sni
+  - cft.ipv6.disable_connect
+  - See [UCONF parameters](../../admin_intro/uconf/uconf_directory) for parameter details.
 - sentinel.trktname: The path to the overflow file, where the maximum number of messages that the overflow file can store is equal to sentinel.xfb.buffer_size (not sentinel.trktmaxmsg).
 - `sentinel.trktmaxmsg`: *Obsolete*. The maximum number of messages in the `sentinel.trktname` overflow file is defined by the sentinel.xfb.buffer_size.
 
@@ -23,8 +23,8 @@ Use the following uconf parameters to configure the name and size of the overflo
 
 - sentinel.trktname: The path to the overflow file.
 - sentinel.xfb.buffer_size: The maximum number of messages that the overflow file can store. Once the maximum value is reached, messages are no longer sent to Sentinel and:
-    - If `sentinel.xfb.shut` is set to any value other than 0, Transfer CFT stops.
-    - If `sentinel.xfb.shut` is set to 0, Transfer CFT continues to run.
+  - If `sentinel.xfb.shut` is set to any value other than 0, Transfer CFT stops.
+  - If `sentinel.xfb.shut` is set to 0, Transfer CFT continues to run.
 
 > **Note**
 >
