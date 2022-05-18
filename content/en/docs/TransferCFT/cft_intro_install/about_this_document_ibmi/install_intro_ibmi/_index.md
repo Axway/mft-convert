@@ -1,8 +1,8 @@
 ---
-    title: "Installation"
-    linkTitle: "Installation "
-    weight: 150
----## Before you start
+title: "Installation"
+linkTitle: "Installation "
+weight: 150
+--- ## Before you start
 
 You require the following before you begin the Transfer CFT installation:
 
@@ -21,6 +21,6 @@ To install Transfer CFT IBM i:
 
 - Upload and restore the installation files as described in [Upload and restore the installation files](upload_ibm_i).
 
-<!-- -->
+<!- - - - >
 
 - Install Transfer CFT using either the automatic or a customize procedure.

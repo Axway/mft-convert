@@ -1,13 +1,13 @@
 ---
-    title: "Internal commands"
-    linkTitle: "Internal commands"
-    weight: 200
----The following sections describe the available internal commands. These internal commands are divided into four categories:
+title: "Internal commands"
+linkTitle: "Internal commands"
+weight: 200
+--- The following sections describe the available internal commands. These internal commands are divided into four categories:
 
 - Data processing: These commands are used to define and manipulate data (Assignments, Operations).
 - Control interpretation: When inserted in the source text, these commands control its progress.
 - Functions: Functions are commands that apply directly to the operating system, such as allocating a file. The syntax of a function expression, while respecting the general rules, is based on a single model. See [Functions](../ch1_functions).
-- Utilities: The utility commands are high-level commands that use an internal sequence of functions, for example, displaying the contents of a file.
+- Utilities: The utility commands are high- level commands that use an internal sequence of functions, for example, displaying the contents of a file.
 
 When describing a command in the following sections, the mandatory parameters appear in bold, and parameters in normal font are optional.
 

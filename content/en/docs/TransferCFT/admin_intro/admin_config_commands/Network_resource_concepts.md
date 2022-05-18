@@ -1,8 +1,8 @@
 ---
-    title: " Network  resources "
-    linkTitle: "CFTNET - Network resources "
-    weight: 260
----The
+title: " Network  resources "
+linkTitle: "CFTNET - Network resources "
+weight: 260
+--- The
 **Network resources** object corresponds to the CFTNET object in the command line operations.
 
 ****Related
@@ -37,10 +37,10 @@ This object includes:
     system
 - Parameters used
     to establish connections between:
-    -   System
+    - System
         parameters which can make reference to one or more system software components
         (drivers used at card level, and so on)
-    -   Transfer
+    - Transfer
         CFT
 
 When, for a given system or for a given type of network, the environment
@@ -50,8 +50,7 @@ program) which is then referenced by the CFTNET object.
 
 Some of the parameters described below are for general use, while others
 are only used by a specific system and/or network access method. The parameters
-whose meaning is common to all networks are described in the CFTNET -
-Generic command paragraph. The specific parameters, grouped by network
+whose meaning is common to all networks are described in the CFTNET - Generic command paragraph. The specific parameters, grouped by network
 type, are then described in the *CFTNET TYPE = xxx topic*.
 
 The TYPE parameter takes the value TCP/IP.

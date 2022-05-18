@@ -1,8 +1,8 @@
 ---
-    title: "ofname"
-    linkTitle: "ofname"
-    weight: 2440
----<span id="ofname"></span>
+title: "ofname"
+linkTitle: "ofname"
+weight: 2440
+--- <span id="ofname"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
@@ -12,4 +12,3 @@ Filename.
 
 [Return to Command index](../../)
 
- 

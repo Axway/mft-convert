@@ -1,8 +1,8 @@
 ---
-    title: "Creating  a SEND template"
-    linkTitle: "Default send templates CFTSEND"
-    weight: 170
----This topic describes the
+title: "Creating  a SEND template"
+linkTitle: "Default send templates CFTSEND"
+weight: 170
+--- This topic describes the
 CFTSEND template object, used to specify the default values for:
 
 - The name and local
@@ -11,7 +11,7 @@ CFTSEND template object, used to specify the default values for:
     of the file to send to the partner
 - The actions to
     perform locally during and after a transfer (translation, compression,
-    call to a user EXIT, an end-of-transfer procedure...)
+    call to a user EXIT, an end- of- transfer procedure...)
 - An authorized time
     slot and default user associated with the transfers
 
@@ -89,7 +89,7 @@ The CFTSEND command is used to specify, for each model file (IDF):
     with the model file (IDF), it is logical to specify this name by indicating
     an FNAME parameter in the CFTSEND command
 
-<!-- -->
+<!- - - - >
 
 - As default
     values for the file "network" characteristics, if such values
@@ -97,18 +97,18 @@ The CFTSEND command is used to specify, for each model file (IDF):
 - The file network
     characteristics: values to be sent to the partner, in protocol parameters,
     to describe the file (a physical filename can even be sent - see open mode).  
-      
+
     The physical characteristics that {{< TransferCFT/axwayvariablesComponentShortName >}} is able to locate automatically
     for the local file, can be considered as default values for the corresponding
     CFT SEND parameters (example: local record length: FLRECL), parameters
     which themselves consist of default values for the network characteristics
     (example: record length sent to the partner: NLRECL).  
-      
+
     When the transfer is initiated by a local SEND command explicitly including
     one or more parameters which are also included in the CFTSEND command,
     according to the value of the FORCE parameter:
 
-<!-- -->
+<!- - - - >
 
 - If FORCE =
     NO, the parameters of the SEND command take precedence over the parameters
@@ -119,20 +119,20 @@ The CFTSEND command is used to specify, for each model file (IDF):
     of the SEND command
 - The actions to
     be performed locally:
-    -   Call when transferring
-        to a user-written "file EXIT" task
-    -   Action to be
+    - Call when transferring
+        to a user- written "file EXIT" task
+    - Action to be
         taken on the data handled by the monitor during the transfer: translation,
         compression
-    -   Action performed
+    - Action performed
         by the monitor on the file sent, after the transfer
-    -   Call to a procedure
+    - Call to a procedure
         to be executed on completion of the transfer, etc
 - Miscellaneous parameters
     controlling the execution of transfers, including:
-    -   Authorized
+    - Authorized
         time slot
-    -   Default user
+    - Default user
         id associated with transfers
 
 <span id="About_default_SEND_parameters"></span>

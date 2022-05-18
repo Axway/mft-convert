@@ -1,8 +1,8 @@
 ---
-    title: "Update Transfer CFT"
-    linkTitle: "Update"
-    weight: 220
----This section describes how to perform the following Transfer CFT tasks in an OpenVMS environment:
+title: "Update Transfer CFT"
+linkTitle: "Update"
+weight: 220
+--- This section describes how to perform the following Transfer CFT tasks in an OpenVMS environment:
 
 - [Apply a service pack](#Apply)
 - [Remove a service pack](#Remove)
@@ -19,15 +19,15 @@
 1. Extract the zip file using the following command, where you replace the SP number with the most recent SP:  
     ```
     unzip Transfer_CFT_ 3.10
-    _SP1_vms-ia64.zip
+    _SP1_vms- ia64.zip
     ```
 1. Load the Transfer CFT profile.
 1. Run the system command @SYS$UPDATE:VMSINSTAL:  
     ```
     SET DEF [.Transfer_CFT_V 3.10
-    _vms-ia64.install]
+    _vms- ia64.install]
     @SYS$UPDATE:VMSINSTAL CFT032
-     
+
     ###############################################
     ### Upgrading of an existing CFT account... ###
     ###############################################
@@ -73,10 +73,10 @@ This section describes how to uninstall a service pack, which you can do using t
 1. Download the product update from Axway support at [support.axway.com](https://support.axway.com/) to the machine you want to update.
 1. Stop the servers that you want to update.
 1. Transfer the patch to the host in binary mode.
-1. Extract the zip file using the following command, where you replace the SP and Patch number with the most recent SP and patch numbers. Notice that the `-a` option converts the text file to a VMS format.  
+1. Extract the zip file using the following command, where you replace the SP and Patch number with the most recent SP and patch numbers. Notice that the `- a` option converts the text file to a VMS format.  
     ```
-    unzip -a Transfer_CFT_ 3.10
-    -SP1_Patch1_vms-ia64.zip
+    unzip - a Transfer_CFT_ 3.10
+    - SP1_Patch1_vms- ia64.zip
     ```
 1. Load the Transfer CFT profile.
 1. Execute the `KITUPDATE.COM` script to apply the patch:  

@@ -1,8 +1,8 @@
 ---
-    title: "END - Confirm the end of processing"
-    linkTitle: "END - Change transfer state"
-    weight: 300
----You can use the END command to declare
+title: "END - Confirm the end of processing"
+linkTitle: "END - Change transfer state"
+weight: 300
+--- You can use the END command to declare
 that the processing script
 (pre, post, or acknowledgement) was executed correctly. More specifically, if there is an associated processing procedure, the PREEXEC, EXEC, ACKEXEC parameters of the CFTPARM,CFTSEND/SEND and CFTRECV/RECV commands are executed.
 
@@ -13,9 +13,8 @@ catalog entry changes to the next phase. See [About phase and phasestep](../../.
 
 There are two categories of parameters that you can use with the END command, those that you can use to select transfers, and those that you use to modify the catalog entry. Parameters that have an affect on the transfer entry in the catalog are listed in the **Modify in catalog** column. All others are parameters are related to the transfers as described in **Select for transfers** only.
 
-
 | Parameters  | Select for transfers  | Modify in catalog  |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | [APPCYCID](../../../command_summary/parameter_intro/appcycid)  | Modify the processing cycle identifier  |   |
 | [APPOBJID](../../../command_summary/parameter_intro/appobjid)  | Modify the tracked object name  |   |
 | [APPSTATE]()  |   | State of the end phase for the processing script to restart<br/> Specify an application state for the processing script that will help the script to restart at the right step if the script is relaunched. |
@@ -45,7 +44,6 @@ There are two categories of parameters that you can use with the END command, t
 | [SAPPL](../../../command_summary/parameter_intro/sappl)  |   | Modify the SAPPL, the identifier of the file sender application.  |
 | [SUSER](../../../command_summary/parameter_intro/suser)  |   | Modify the SUSER, the identifier for the user who is sending the file.  |
 | [SPASSWD](../../../command_summary/parameter_intro/spasswd)  |   | Modify the SPASSWD, the password for the user who is sending the file.  |
-
 
 ## Using the END command
 

@@ -1,8 +1,8 @@
 ---
-    title: "Before you start"
-    linkTitle: "Install "
-    weight: 170
----If you are installing {{< TransferCFT/axwayvariablesComponentLongName  >}} as part of an {{< TransferCFT/axwayvariablesCompanyName  >}} {{< TransferCFT/axwayvariablesSolutionShortName  >}} solution, you may want to check the installation order and prerequisites. For more information, please refer to the {{< TransferCFT/suitevariablesCentralGovernanceName  >}} documentation.
+title: "Before you start"
+linkTitle: "Install "
+weight: 170
+--- If you are installing {{< TransferCFT/axwayvariablesComponentLongName  >}} as part of an {{< TransferCFT/axwayvariablesCompanyName  >}} {{< TransferCFT/axwayvariablesSolutionShortName  >}} solution, you may want to check the installation order and prerequisites. For more information, please refer to the {{< TransferCFT/suitevariablesCentralGovernanceName  >}} documentation.
 
 Before you start the installation, you should:
 
@@ -28,7 +28,7 @@ Use the standard `SYS$UPDATE:VMSINSTAL` procedure to install the product.
 
 ## Installed directories
 
-Once you install a product, the following sub-directories are installed.
+Once you install a product, the following sub- directories are installed.
 
 - [.CFT.HOME] contents files of the product.
 - [.CFT.RUNTIME] contents mainly configuration files and executables.

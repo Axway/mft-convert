@@ -1,8 +1,8 @@
 ---
-    title: "nbr"
-    linkTitle: "nbr"
-    weight: 2120
----<span id="nbr"></span>
+title: "nbr"
+linkTitle: "nbr"
+weight: 2120
+--- <span id="nbr"></span>
 
 ### nbr
 

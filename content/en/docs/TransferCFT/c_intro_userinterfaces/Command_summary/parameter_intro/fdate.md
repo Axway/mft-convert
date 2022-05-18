@@ -1,8 +1,8 @@
 ---
-    title: "fdate"
-    linkTitle: "fdate"
-    weight: 1110
----<span id="fdate"></span>
+title: "fdate"
+linkTitle: "fdate"
+weight: 1110
+--- <span id="fdate"></span>
 
 ### fdate
 
@@ -16,4 +16,3 @@ File creation date.
 
 [Return to Command index](../../)
 
- 

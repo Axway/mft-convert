@@ -1,8 +1,8 @@
 ---
-    title: "Multi-node commands"
-    linkTitle: "Multi-node commands"
-    weight: 230
----This topic describes how to manage Transfer CFT nodes, and related actions such as restarting a stopped node, or rebalancing after a fail over.
+title: "Multi- node commands"
+linkTitle: "Multi- node commands"
+weight: 230
+--- This topic describes how to manage Transfer CFT nodes, and related actions such as restarting a stopped node, or rebalancing after a fail over.
 
 ## cftinit
 
@@ -10,9 +10,9 @@ The `cftinit` command initializes Transfer CFT internal datafiles. If nothing is
 
 #### Options
 
--c&#124;-common only common internal datafiles are initialized (PARM, PART, main COM)
+- c&#124;- common only common internal datafiles are initialized (PARM, PART, main COM)
 
--n&#124;-node only node specific internal datafiles are initialized (CATALOG, COM, LOG)
+- n&#124;- node only node specific internal datafiles are initialized (CATALOG, COM, LOG)
 
 **Usage**
 
@@ -48,7 +48,7 @@ The files such as COM, CATALOG, or LOG are not assigned in the JCL.
 
 ## copstop
 
-The executable `COPSTOP` stops the Copilot (Node Manager and UI server). When stopping a Copilot on a host, all nodes running on this host are stopped and re-started on the other hosts in the cluster.
+The executable `COPSTOP` stops the Copilot (Node Manager and UI server). When stopping a Copilot on a host, all nodes running on this host are stopped and re- started on the other hosts in the cluster.
 
 **Syntax**
 
@@ -76,7 +76,7 @@ The `start `command starts one or all nodes. If no node is specified, all nodes 
 
 #### Options
 
-The -n&#124;-node &lt;node_id> starts the node &lt;node_id>.
+The - n&#124;- node &lt;node_id> starts the node &lt;node_id>.
 
 **Usage**
 
@@ -102,7 +102,7 @@ The `stop` command stops one or all nodes. If no node is specified, all nodes ar
 
 #### Options
 
-The -n&#124;-node &lt;node_id> stops the node &lt;node_id>.
+The - n&#124;- node &lt;node_id> stops the node &lt;node_id>.
 
 **Usage**
 
@@ -132,23 +132,23 @@ The` restart` command restarts one or all nodes. If no node is specified all nod
 
 **Options**
 
-The `-n&#124;-node <node_id>` re-starts the node &lt;node_id>.
+The `- n&#124;- node <node_id>` re- starts the node &lt;node_id>.
 
-The `-ln&#124;-local_node` re-starts all nodes hosted locally that are running on the host from where the command is performed.
+The `- ln&#124;- local_node` re- starts all nodes hosted locally that are running on the host from where the command is performed.
 
 **Usage**
 
 `EXEC PCFTUTL,PG=CFT,PARM=’restart’`
 
-All nodes are re-started by the node managers.
+All nodes are re- started by the node managers.
 
 `EXEC PCFTUTL,PG=CFT,PARM=’restart –n 0’`
 
-Node 0 is re-started by a node manager.
+Node 0 is re- started by a node manager.
 
 `EXEC PCFTUTL,PG=CFT,PARM=’restart –ln’`
 
-All nodes hosted locally are re-started by the node manager.
+All nodes hosted locally are re- started by the node manager.
 
 **JCL**
 
@@ -213,11 +213,11 @@ The `enable_node` command enables the specified node. The node state is set from
 
 **Syntax**
 
-`enable_node -n -<node_id>`
+`enable_node - n - <node_id>`
 
 **Usage**
 
-`EXEC PCFTUTIL,PG=CFT,PARM=’enable_node -n -<node_id>’`
+`EXEC PCFTUTIL,PG=CFT,PARM=’enable_node - n - <node_id>’`
 
 **JCL**
 
@@ -233,11 +233,11 @@ The `disable_node` command disables the specified node. The parameter uconf:cft.
 
 **Syntax**
 
-`disable_node -n -<node_id>`
+`disable_node - n - <node_id>`
 
 **Usage**
 
-`EXEC PCFTUTIL,PG=CFT,PARM=’disable_node -n -<node_id>’`
+`EXEC PCFTUTIL,PG=CFT,PARM=’disable_node - n - <node_id>’`
 
 **JCL**
 
@@ -259,13 +259,13 @@ Return values:
 
 **Options**
 
--n&#124;-node &lt;node_id> checks the status of the node &lt;node_id>
+- n&#124;- node &lt;node_id> checks the status of the node &lt;node_id>
 
--v verbose mode
+- v verbose mode
 
--p shows PID (Process IDs) of all CFTMAIN processes
+- p shows PID (Process IDs) of all CFTMAIN processes
 
--h shows the help
+- h shows the help
 
 **JCL**
 
@@ -277,7 +277,7 @@ Use the CFTUTIL `listlog `command to display the log content, which can be defi
 
 ## display/listcat
 
-Use the CFTUTIL `display `or CFTUTIL `listcat `to show catalog transfer records. In multi-node, these commands aggregate all catalog internal datafiles to show catalog transfer records as a unique catalog.
+Use the CFTUTIL `display `or CFTUTIL `listcat `to show catalog transfer records. In multi- node, these commands aggregate all catalog internal datafiles to show catalog transfer records as a unique catalog.
 
 > **Note**
 >
@@ -285,7 +285,7 @@ Use the CFTUTIL `display `or CFTUTIL `listcat `to show catalog transfer records.
 
 ## listnode
 
-The CFTUTIL **`listnode `**displays the status of the Transfer CFT cluster, including information about hosts and nodes that are part of the Transfer CFT multi-node architecture.
+The CFTUTIL **`listnode `**displays the status of the Transfer CFT cluster, including information about hosts and nodes that are part of the Transfer CFT multi- node architecture.
 
 **JCL**
 
@@ -296,18 +296,12 @@ The CFTUTIL **`listnode `**displays the status of the Transfer CFT cluster, incl
 In this example four nodes are running on four different hosts.
 
 ```
---------------------------------------------------------------
-Host z-zos111b 10.128.60.15 Copilot RUNNING (SOP700ZN J07928)
---------------------------------------------------------------
-   Node id  Node state     CFT state CFT      JOB   Disabling
-   ------- --------------- ------------ --------------- -----
-   Node 01 ENABLED_STARTED  RUNNING  SOP700T3 J07936 No
+--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Host z- zos111b 10.128.60.15 Copilot RUNNING (SOP700ZN J07928)
+--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Node id  Node state     CFT state CFT      JOB   Disabling
+   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Node 01 ENABLED_STARTED  RUNNING  SOP700T3 J07936 No
    Node 02 ENABLED_STARTED   RUNNING SOP700T4 J07938 No
---------------------------------------------------------------
-Host z-zos19 10.128.60.12 Copilot RUNNING (SOP700ZN J09205)
----------------------------------------------------------------
-   Node id   Node state    CFT state CFT     JOB   Disabling
-   ------- --------------- ------------ --------------- -------
-   Node 00 ENABLED_STARTED  RUNNING SOP700T3 J09211 No
+--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Host z- zos19 10.128.60.12 Copilot RUNNING (SOP700ZN J09205)
+--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Node id   Node state    CFT state CFT     JOB   Disabling
+   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Node 00 ENABLED_STARTED  RUNNING SOP700T3 J09211 No
    Node 03 ENABLED_STARTED RUNNING SOP700T4 J09214 No
 ```

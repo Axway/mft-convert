@@ -1,8 +1,8 @@
 ---
-    title: "mindate"
-    linkTitle: "mindate"
-    weight: 1980
----<span id="mindate"></span>
+title: "mindate"
+linkTitle: "mindate"
+weight: 1980
+--- <span id="mindate"></span>
 
 ### mindate
 

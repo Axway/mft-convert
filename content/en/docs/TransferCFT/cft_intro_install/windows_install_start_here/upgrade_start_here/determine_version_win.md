@@ -1,15 +1,15 @@
 ---
-    title: "Determine the installer and product version"
-    linkTitle: "Determine the installer and product version"
-    weight: 160
----You should determine the product and Installer version and service pack level prior to upgrading or updating for Transfer CFTs having a version lower than 3.4. You can use the following procedure on any version of the Axway Installer.
+title: "Determine the installer and product version"
+linkTitle: "Determine the installer and product version"
+weight: 160
+--- You should determine the product and Installer version and service pack level prior to upgrading or updating for Transfer CFTs having a version lower than 3.4. You can use the following procedure on any version of the Axway Installer.
 
 Start the Axway Installer. The command depends on the Installer version and your OS, as follows:
 
 - Versions lower than 4.5.x:
-    -   setupwin32.exe update
+    - setupwin32.exe update
 - Version 4.5.x or higher:
-    -   update32/64.exe
+    - update32/64.exe
 
 Accept the license and click **Next** to continue. In the **Product list**, check the:
 
@@ -43,9 +43,9 @@ Before beginning the upgrade or update procedure:
 Stop the Transfer CFT server and the Transfer CFT UI server, by entering:
 
 - `cft stop `
-- `copstop -f `
+- `copstop - f `
 
-<!-- -->
+<!- - - - >
 
 - Determine your Axway installer and product versions. The version dictates which of the following Transfer CFT upgrade procedures is correct for you.
 

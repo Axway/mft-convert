@@ -1,8 +1,8 @@
 ---
-    title: "groupid"
-    linkTitle: "groupid"
-    weight: 1400
----<span id="groupid"></span>
+title: "groupid"
+linkTitle: "groupid"
+weight: 1400
+--- <span id="groupid"></span>
 
 ### groupid
 

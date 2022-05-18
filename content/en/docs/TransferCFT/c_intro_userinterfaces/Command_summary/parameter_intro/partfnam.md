@@ -1,8 +1,8 @@
 ---
-    title: "partfnam"
-    linkTitle: "partfnam"
-    weight: 2570
----<span id="partfnam"></span>
+title: "partfnam"
+linkTitle: "partfnam"
+weight: 2570
+--- <span id="partfnam"></span>
 
 ### partfnam
 

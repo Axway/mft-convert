@@ -1,18 +1,17 @@
 ---
-    title: "DIAGP: Event  codes"
-    linkTitle: "Event codes"
-    weight: 340
----This code is common to all protocols. When a value is specific to a
+title: "DIAGP: Event  codes"
+linkTitle: "Event codes"
+weight: 340
+--- This code is common to all protocols. When a value is specific to a
 protocol, the indication appears in brackets.
 
-For the PeSIT protocol, this code forms part of the "eNNsNN"-type
+For the PeSIT protocol, this code forms part of the "eNNsNN"- type
 PeSIT DIAGP.
 
 Event Codes for all protocols
 
-
 | Code | Meaning  |
-| --- | --- |
+| - - - | - - - |
 | 00 | VFABORTD - Transfer abort request by {{< TransferCFT/axwayvariablesComponentShortName  >}} |
 | 01 | VFCAND - Transfer interrupt request by {{< TransferCFT/axwayvariablesComponentShortName  >}} |
 | 02 | VFCANR - Response to a transfer interrupt indication |
@@ -49,7 +48,7 @@ Event Codes for all protocols
 | 33 | VFRELD - Network close request |
 | 34 | VFRELR - Response to network close request |
 | 35 | Not used |
-| 36 | VFRSTAR - Response to a re-synchronization request |
+| 36 | VFRSTAR - Response to a re- synchronization request |
 | 37 | VFSELD - Request to select a file |
 | 38 | VFSELRN - Negative response to a select request |
 | 39 | VFSELRP - Positive response to a select request |
@@ -61,16 +60,16 @@ Event Codes for all protocols
 | 45 | VFWRITD - Request to write a file |
 | 46 | VFWRITRN - Negative response to a write request |
 | 47 | VFWRITRP - Positive response to a write request |
-| 48 | VLOGD - Request to send a pre-logon message |
-| 49 | VLOGRN - Negative response to a pre-logon message |
-| 50 | VLOGRP - Positive response to a pre-logon message |
+| 48 | VLOGD - Request to send a pre- logon message |
+| 49 | VLOGRN - Negative response to a pre- logon message |
+| 50 | VLOGRP - Positive response to a pre- logon message |
 | 51 | Not used |
 | 52 | VNCONRP (NETWORK) - Positive response to an incoming call |
 | 53 | Not used |
 | 54 | VNRELC (NETWORK) - Confirmation of network outage |
 | 55 | VNRELI (NETWORK) - Network outage indication |
 | 56 | VRABORT (PESIT) - Reception of an ABORT FPDU |
-| 57 | VRACK (PESIT) - Reception of a pre-logon acknowledgment |
+| 57 | VRACK (PESIT) - Reception of a pre- logon acknowledgment |
 | 58 | VRACON (PESIT) - Reception of an AckCONNECT FPDU |
 | 59 | VRACREAN (PESIT) Reception of a negative AckCREATE FPDU |
 | 60 | VRACREAP (PESIT) Reception of a positive AckCREATE FPDU |
@@ -103,24 +102,24 @@ Event Codes for all protocols
 | 87 | VRDTFMA (PESIT) - Reception of an end of DATA (Middle) FPDU |
 | 88 | VRDTND (PESIT) - Reception of an end of DATA FPDU |
 | 89 | VRIDT (PESIT) - Reception of a CANCEL FPDU |
-| 90 | VRLOG (PESIT) - Reception of a pre-logon message |
+| 90 | VRLOG (PESIT) - Reception of a pre- logon message |
 | 91 | VRNACCN (NETWORK) - Outgoing call refused |
 | 92 | VRNACCP (NETWORK) - Outgoing call accepted |
 | 93 | VRNCON (NETWORK) - Incoming call indication |
 | 94 | VROMSG (PESIT) - Reception of a MESSAGE FPDU |
 | 95 | VRORF (PESIT) - Received an ORF (Open Remote File) FPDU |
 | 96 | VRRCON (PESIT) - Received a Release CONNECT FPDU |
-| 97 | VRRDY (NETWORK) - Network ready-to-send indication |
+| 97 | VRRDY (NETWORK) - Network ready- to- send indication |
 | 98 | Not used |
 | 99 | VRREAD (PESIT) - Reception of a READ FPDU |
 | 100 | VRREL (PESIT) - Reception of a RELEASE FPDU |
 | 101 | VRRELCF (PESIT) - Reception of a RELEASE Confirm FPDU |
-| 102 | VRRESY (PESIT) - Reception of a RE-SYNCHRONIZATION FPDU |
+| 102 | VRRESY (PESIT) - Reception of a RE- SYNCHRONIZATION FPDU |
 | 103 | VRSEL (PESIT) - Reception of a SELECT FPDU |
 | 104 | VRSY (PESIT) - Reception of a SYNCHRONIZATION FPDU |
 | 105 | VRTRND (PESIT) - Reception of a TRANSFER.END FPDU |
 | 106 | VRWRIT (PESIT) - Reception of a WRITE FPDU |
-| 107 | VVTIMO - Time-out |
+| 107 | VVTIMO - Time- out |
 | 108 | VFDATA1 - Internal induction for the automaton table |
 | 109 | VRDTF1 - Internal induction for the automaton table |
 | 110 | VVERCRC - Detection of a CRC error |

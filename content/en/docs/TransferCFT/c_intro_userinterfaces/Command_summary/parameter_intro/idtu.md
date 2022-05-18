@@ -1,8 +1,8 @@
 ---
-    title: "idtu"
-    linkTitle: "idtu"
-    weight: 1570
----<span id="idtu"></span>
+title: "idtu"
+linkTitle: "idtu"
+weight: 1570
+--- <span id="idtu"></span>
 
 ### idtu
 
@@ -16,4 +16,3 @@ string8 as a mask.
 
 [Return to Command index](../../)
 
- 

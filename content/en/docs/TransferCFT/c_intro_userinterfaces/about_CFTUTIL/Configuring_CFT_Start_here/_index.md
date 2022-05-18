@@ -1,8 +1,8 @@
 ---
-    title: "About CFTUTIL configuration operations"
-    linkTitle: "Object configuration"
-    weight: 250
----This topic
+title: "About CFTUTIL configuration operations"
+linkTitle: "Object configuration"
+weight: 250
+--- This topic
 gives an overview of the Transfer CFT configuration and object conventions.
 
 ## About the Transfer CFT configuration
@@ -51,4 +51,3 @@ Start here.
 > system dependent. For more information, refer to the Operations Manual
 > that corresponds to your operating system.
 
- 

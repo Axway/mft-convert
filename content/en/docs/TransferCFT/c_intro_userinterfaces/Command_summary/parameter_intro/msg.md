@@ -1,8 +1,8 @@
 ---
-    title: "msg"
-    linkTitle: "msg"
-    weight: 2040
----<span id="msg"></span>
+title: "msg"
+linkTitle: "msg"
+weight: 2040
+--- <span id="msg"></span>
 
 ### msg
 

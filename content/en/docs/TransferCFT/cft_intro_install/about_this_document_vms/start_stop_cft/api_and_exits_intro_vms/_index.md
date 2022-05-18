@@ -1,8 +1,8 @@
 ---
-    title: "About  APIs and exits - OpenVMS"
-    linkTitle: "Build APIs and exits"
-    weight: 220
----This section introduces the two application families that can be developed using
+title: "About  APIs and exits - OpenVMS"
+linkTitle: "Build APIs and exits"
+weight: 220
+--- This section introduces the two application families that can be developed using
 two interfaces and the development kit contents for building APIs.
 
 - Applications communicating

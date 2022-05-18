@@ -1,12 +1,12 @@
 ---
-    title: "Transfer CFT communications"
-    linkTitle: "Transfer CFT communications"
-    weight: 250
----You can communicate with {{< TransferCFT/axwayvariablesComponentShortName  >}} using a file  or a TCP/IP connection.
+title: "Transfer CFT communications"
+linkTitle: "Transfer CFT communications"
+weight: 250
+--- You can communicate with {{< TransferCFT/axwayvariablesComponentShortName  >}} using a file  or a TCP/IP connection.
 
 > **Note**
 >
-> When using a multi-node architecture, the TCP/IP communication option is not available.
+> When using a multi- node architecture, the TCP/IP communication option is not available.
 
 ### Communication file
 

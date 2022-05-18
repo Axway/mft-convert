@@ -1,15 +1,15 @@
 ---
-    title: " UCONF commands"
-    linkTitle: "UCONF commands"
-    weight: 230
----You can use the following commands to modify configuration values, check for defaults, or get more information about a parameter. For additional information on the unified configuration, see the section using the [unified configuration utility](../).
+title: " UCONF commands"
+linkTitle: "UCONF commands"
+weight: 230
+--- You can use the following commands to modify configuration values, check for defaults, or get more information about a parameter. For additional information on the unified configuration, see the section using the [unified configuration utility](../).
 
 **UCONFSET**
 
 Use to modify a technical parameter value.
 
 ```
-UCONFSET id=PARAMETER-KEY,value=STRING
+UCONFSET id=PARAMETER- KEY,value=STRING
 ```
 
 After modifying a uconf value, you typically must restart {{< TransferCFT/axwayvariablesComponentShortName  >}}. When the parameter flag is set to reconfig (=reconfig), you can use the reconfig command instead of a restart. You can check the parameter flag to see if reconfig is an option for that particular parameter.
@@ -28,10 +28,10 @@ Use to
 retrieve a single technical parameter value.
 
 ```
-UCONFGET id=PARAMETER-KEY
+UCONFGET id=PARAMETER- KEY
 ```
 
-Results: `PARAMETER-KEY=PARAMETER-VALUE`
+Results: `PARAMETER- KEY=PARAMETER- VALUE`
 
 **UCONFUNSET**
 
@@ -39,7 +39,7 @@ Use to
 return a specified parameter to the default value.
 
 ```
-UCONFUNSET id=PARAMETER-KEY
+UCONFUNSET id=PARAMETER- KEY
 ```
 
 > **Note**
@@ -51,7 +51,7 @@ UCONFUNSET id=PARAMETER-KEY
 Use to display multiple technical parameter values.
 
 ```
-LISTUCONF id=PARAMETER-KEY-PATTERN,scope=ALL&#124;USER&#124;DEFAULT,content=BRIEF&#124;FULL&#124;DEBUG
+LISTUCONF id=PARAMETER- KEY- PATTERN,scope=ALL&#124;USER&#124;DEFAULT,content=BRIEF&#124;FULL&#124;DEBUG
 ```
 
 RECONFIG TYPE=UCONF

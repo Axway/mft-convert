@@ -1,8 +1,8 @@
 ---
-    title: "maxcnx"
-    linkTitle: "maxcnx"
-    weight: 1890
----<span id="maxcnx"></span>
+title: "maxcnx"
+linkTitle: "maxcnx"
+weight: 1890
+--- <span id="maxcnx"></span>
 
 ### maxcnx
 

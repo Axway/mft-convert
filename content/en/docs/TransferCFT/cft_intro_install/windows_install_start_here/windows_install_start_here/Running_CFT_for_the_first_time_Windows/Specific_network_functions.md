@@ -1,8 +1,8 @@
 ---
-    title: "Specific  network functions"
-    linkTitle: "Specific network functions"
-    weight: 250
----This topic presents the TCP network supported by {{< TransferCFT/axwayvariablesComponentShortName  >}} Windows,
+title: "Specific  network functions"
+linkTitle: "Specific network functions"
+weight: 250
+--- This topic presents the TCP network supported by {{< TransferCFT/axwayvariablesComponentShortName  >}} Windows,
 and how to define the network parameters.
 
 <span id="Supported_networks"></span>
@@ -34,12 +34,12 @@ where:
 
 - typenet:
     is an element taking on one of the following values:
-    -   TCP:
+    - TCP:
         A TCP/IP network process parameter
-    -   &lt;parameter>: An element containing the value of one of the specific parameters indicated
+    - &lt;parameter>: An element containing the value of one of the specific parameters indicated
         in this documentation. For more information see Environment
         Variables
-    -   value: An element that takes on a value belonging to the parameter stated
+    - value: An element that takes on a value belonging to the parameter stated
         in field and according to the documentation
 
 ****Comments****
@@ -58,7 +58,7 @@ file
 
 `CFTCFGPATH`
 
-Environment variable defining the sub-folder where the cftnet.conf
+Environment variable defining the sub- folder where the cftnet.conf
 file is located. By default, {{< TransferCFT/axwayvariablesComponentShortName  >}} searches for this file in the
 application default folder.
 

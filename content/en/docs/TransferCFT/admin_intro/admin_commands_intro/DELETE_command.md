@@ -1,8 +1,8 @@
 ---
-    title: "DELETE - Delete  catalog entries"
-    linkTitle: "DELETE - Deleting catalog entries"
-    weight: 280
----The DELETE command is used to <span id="delete_command"></span>delete one
+title: "DELETE - Delete  catalog entries"
+linkTitle: "DELETE - Deleting catalog entries"
+weight: 280
+--- The DELETE command is used to <span id="delete_command"></span>delete one
 or more catalog entries. A transfer in process is interrupted and its
 transfer request disappears from the catalog.
 
@@ -15,9 +15,8 @@ of 20 transfers every 5 seconds.
 
 **Description**: Use this command to delete one or more catalog entries.
 
-
 | Parameter  | Description  |
-| --- | --- |
+| - - - | - - - |
 | [BLKNUM](../../../c_intro_userinterfaces/command_summary/parameter_intro/blknum)  | Block number. If the values '*' or ' ' are used then all transfers are selected regardless of the block that they belong to. |
 | [DIRECT](../../../c_intro_userinterfaces/command_summary/parameter_intro/direct)  | Transfer direction for the requests in question.<br/> The possible values are:<br/> • BOTH: (default) takes both send transfers and receive transfers into account<br/> • RECV: limits the action to receive transfers<br/> • SEND: limits the action to send transfers |
 | [IDA](../../../c_intro_userinterfaces/command_summary/parameter_intro/ida)  | Local identifier of the transfer assigned by the user or user application. The maximum length is 64 characters.<br/> Several catalog entries may be associated with a given IDA. There is no default value. |
@@ -30,8 +29,7 @@ of 20 transfers every 5 seconds.
 | [PHASE]()  | Phase of a catalog entry  |
 | [PHASESTEP]()  | Phase step of a catalog entry  |
 | [SCOPE](../../../c_intro_userinterfaces/command_summary/parameter_intro/scope)  | Scope &lt;PARENT&gt; ('PARENT','ALL','CHILDREN')  |
-| [STATE](../../../c_intro_userinterfaces/command_summary/parameter_intro/state)  | Transfer state.<br/> The default value * means no selection is required to be made on the transfer state. (refer to the Transfer-related successive phases and actions). |
-
+| [STATE](../../../c_intro_userinterfaces/command_summary/parameter_intro/state)  | Transfer state.<br/> The default value * means no selection is required to be made on the transfer state. (refer to the Transfer- related successive phases and actions). |
 
 ****Example 1****
 
@@ -48,9 +46,9 @@ identifier begins with "SIE" and contains 5 characters in all.
 ```
 DELETE
 PART = HQ,
- 
+
 DIRECT = SEND,
- 
+
 IDF = ACCNT
 ```
 

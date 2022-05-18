@@ -1,8 +1,8 @@
 ---
-    title: "Partner  network and protocol connections"
-    linkTitle: "Partner network and protocol connections"
-    weight: 230
----A SEND or RECV command first results in opening a session with the partner
+title: "Partner  network and protocol connections"
+linkTitle: "Partner network and protocol connections"
+weight: 230
+--- A SEND or RECV command first results in opening a session with the partner
 server. Transfer CFT provides the possibility of defining several partner
 access paths: logical paths for protocols and physical paths for network
 access methods (network addresses, intermediate partners).
@@ -41,7 +41,7 @@ resources of a given class
 The CFTNET objects for this type of communication system, for the value
 of the CLASS parameter, defined by the first CFTNET object,
 
-<!-- -->
+<!- - - - >
 
 Iterations on the
 address  
@@ -49,20 +49,20 @@ The RETRYW, RETRYN and RETRYM parameters of the commands
 define the number of connection attempts, the interval between attempts
 on an address of the access method used,
 
-<!-- -->
+<!- - - - >
 
 Succession of addresses  
 If certain partner network definitions have several addresses, each address is used successively as long as the
 connection attempts fail,
 
-<!-- -->
+<!- - - - >
 
 Succession of Transfer
 CFT protocols  
 The successive use of the protocols assigned to the partner, the PROT
 parameter of the CFTPART object, as long as the connection fails,
 
-<!-- -->
+<!- - - - >
 
 File store and
 forward by the IPART intermediate partner if direct connection is unsuccessful  
@@ -95,21 +95,21 @@ More specifically:
 
 - At the requester
     end - remote SAP:
-    -   When the
+    - When the
         transfer is activated, the requester Transfer CFT chooses a protocol (PROT
         parameter of CFTPART), and consequently an application protocol and a
         network access method.
-    -   The SAP
+    - The SAP
         parameter of the CFTPART object determines the partner application access
         point.
 - At the server end - local SAP:
-    -   The SAP
+    - The SAP
         value allows Transfer CFT to define the associated protocol, by linking
         this value with those of the SAP parameters of the CFTPROT objects
-    -   The Transfer
+    - The Transfer
         CFT checks whether this protocol (application and network access
         method) is valid for the requester partner, the CFTPART PROT parameter
-    -   The network
+    - The network
         interface informs Transfer CFT of the calls presenting one of the SAP
         parameters that the server Transfer CFT previously defined for it, during
         the initialization phase

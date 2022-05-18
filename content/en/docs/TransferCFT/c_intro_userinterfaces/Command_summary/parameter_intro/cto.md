@@ -1,8 +1,8 @@
 ---
-    title: "cto"
-    linkTitle: "cto"
-    weight: 560
----<span id="cto"></span>
+title: "cto"
+linkTitle: "cto"
+weight: 560
+--- <span id="cto"></span>
 
 ### cto
 
@@ -27,7 +27,5 @@ partner during the indicated duration.
 ****PeSIT E****
 
 `CTO  =  {1&#124;n}                                    {1….32767}`
-
- 
 
 [Return to Command index](../../)

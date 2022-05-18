@@ -1,8 +1,8 @@
 ---
-    title: "Partner naming conventions "
-    linkTitle: "Partner naming conventions"
-    weight: 240
----The parameter setting relative to partners makes a distinction between
+title: "Partner naming conventions "
+linkTitle: "Partner naming conventions"
+weight: 240
+--- The parameter setting relative to partners makes a distinction between
 the *network* names and *local* names. This
 section describes the naming conventions to use in Transfer CFT.
 
@@ -17,13 +17,11 @@ by the protocols used. The parameters describing these names are described in th
 
 ****Partner network names****
 
-
 | Parameter  | Object  | Network name  |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | NSPART  | CFTPART  | Name of the local Transfer CFT with regard to the remote partner described by this command  |
 | NRPART  | CFTPART  | Name of the remote partner Transfer CFT  |
 | NPART  | CFTPARM  | Default name of the local Transfer CFT with regard to the partners (default value of the NSPART parameter)  |
-
 
 <span id="Local_names"></span>
 
@@ -36,9 +34,8 @@ the table below:
 
 ****Partner local names****
 
-
 | Parameter  | Location  | Local name  |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | ID  | CFTPART  | Uniquely identifies the partner and supplies the default value of the NRPART parameter  |
 | IPART<br /> parameter setting at requester end  | CFTPART  | The local name identifying an intermediate partner (if using store and forward)  |
 | IPART<br /> during transfer  | CFT CATALOG  |  • If there is no store and forward: remote partner identifier<br /> <br/> • If there is store and forward: store and forward site identifier (immediate party)  |
@@ -46,7 +43,6 @@ the table below:
 | PART  | CFT CATALOG  |  • If there is no store and forward: remote partner identifier<br /> <br/> • If there is store and forward (see the paragraphs below): store and forward site identifier (immediate party).  |
 | SPART  | CFT CATALOG  | Designates the initial sending partner  |
 | RPART  | CFT CATALOG  | Designates the final receiving partner  |
-
 
 <span id="Using_reciprocal_recognition"></span>
 

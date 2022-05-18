@@ -1,8 +1,8 @@
 ---
-    title: "Running  CFTUTIL"
-    linkTitle: "Running CFTUTIL"
-    weight: 220
----CFTUTIL is a command line mode user interface used to create the Transfer CFT
+title: "Running  CFTUTIL"
+linkTitle: "Running CFTUTIL"
+weight: 220
+--- CFTUTIL is a command line mode user interface used to create the Transfer CFT
 working environment manually and configure the product. It allows you
 to create or delete a parameter, partner, catalog, log and accounting files.
 
@@ -47,7 +47,7 @@ CFT> /end
 %
 ```
 
-### Run-time parameters
+### Run- time parameters
 
 CFTUTIL can also accept commands passed either individually as parameters
 or in a command file:

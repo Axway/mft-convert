@@ -1,8 +1,8 @@
 ---
-    title: "Defining TCP/IP parameters  "
-    linkTitle: "Defining TCP/IP parameters"
-    weight: 240
----This topic describes the parameter settings for {{< TransferCFT/axwayvariablesComponentShortName  >}} when using
+title: "Defining TCP/IP parameters  "
+linkTitle: "Defining TCP/IP parameters"
+weight: 240
+--- This topic describes the parameter settings for {{< TransferCFT/axwayvariablesComponentShortName  >}} when using
 TCP/IP.
 
 <span id="Specific_parameter_settings_for_TCP_IP"></span>

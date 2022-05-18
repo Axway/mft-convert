@@ -1,8 +1,8 @@
 ---
-    title: "Transfer diagnostic codes"
-    linkTitle: "Transfer error codes"
-    weight: 280
----This section describes the types of diagnostic codes that may display as the result of an error relative to a transfer.
+title: "Transfer diagnostic codes"
+linkTitle: "Transfer error codes"
+weight: 280
+--- This section describes the types of diagnostic codes that may display as the result of an error relative to a transfer.
 
 ## Diagnostic codes categories
 

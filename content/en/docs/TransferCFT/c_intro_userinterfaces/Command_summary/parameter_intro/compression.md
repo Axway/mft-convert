@@ -1,8 +1,8 @@
 ---
-    title: "compression"
-    linkTitle: "compression"
-    weight: 470
----<span id="compression"></span>
+title: "compression"
+linkTitle: "compression"
+weight: 470
+--- <span id="compression"></span>
 
 ### compression
 

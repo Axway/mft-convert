@@ -1,8 +1,8 @@
 ---
-    title: "Folder monitoring CFTFOLDER"
-    linkTitle: "Folder monitoring CFTFOLDER"
-    weight: 180
----This section provides a description of how to use Transfer CFT objects to manage folder monitoring.
+title: "Folder monitoring CFTFOLDER"
+linkTitle: "Folder monitoring CFTFOLDER"
+weight: 180
+--- This section provides a description of how to use Transfer CFT objects to manage folder monitoring.
 
 > **Note**
 >
@@ -11,32 +11,32 @@
 ## Folder monitoring set up
 
 1. Activate the folder monitoring option.
-    -   Set uconf parameter folder_monitoring.enable to ****Yes****.
+    - Set uconf parameter folder_monitoring.enable to ****Yes****.
 1. Declare your logical directories to monitor.
-    -   Add CFTFOLDER objects.
+    - Add CFTFOLDER objects.
 1. For each logical directory defined, configure the specific options you want to use for each:
-    -   File management method
+    - File management method
 
-    <!-- -->
+    <!- - - - >
 
-    -   Used sub-directories
+    - Used sub- directories
 
-    <!-- -->
+    <!- - - - >
 
-    -   Set the IDF
+    - Set the IDF
 
-    <!-- -->
+    <!- - - - >
 
-    -   Set the partner name
+    - Set the partner name
 
-    <!-- -->
+    <!- - - - >
 
-    -   Define the delay to take into account the file
+    - Define the delay to take into account the file
 
-    <!-- -->
+    <!- - - - >
 
-    -   Define other Folder Monitoring parameters
-1. Optionally, to specify file-system event monitoring you additionally must set this in [CFTFOLDER object.](#Enable)
+    - Define other Folder Monitoring parameters
+1. Optionally, to specify file- system event monitoring you additionally must set this in [CFTFOLDER object.](#Enable)
 
 <span id="CFTFOLDE"></span>
 
@@ -52,21 +52,20 @@ Use the following CFTFOLDER parameters to configure folder monitoring for each 
 
 ****Parameter descriptions****
 
-
 | <span id="Paramete"></span>Parameter  | Type  | Default  | Description  |
-| --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - |
 | same as in UCONF<br/> &lt;folder_monitoring.enable&gt; | Boolean  | No  |  • No: No folder monitoring occurs.<br/> • Yes: Enable {{< TransferCFT/axwayvariablesComponentShortName  >}} folder monitoring. |
 | ID<br/> **Mandatory** | node  | None  | Add the logical folders to monitor (list of logical identifiers).<br/> You should provide a unique name to identify the set of configuration parameters corresponding to this directory. If you have more than one Folder to monitor, use a space between each logical value. |
 | STATE  | Boolean  | Active  | Enables a scan of the folder.<br/> <blockquote> **Note**<br/> NO = NOACTIVE.<br/> </blockquote>  |
 | SCANDIR<br/> *Mandatory*  | string  | None  | Absolute path name of the top level directory to scan. You can use an environmental variable with the syntax <code>%env:&lt;variable&gt;%</code> however note that this variable is replaced with the actual value at the time you define the object.<br/> This directory must exist before restarting Transfer CFT.<br/> *See [NOTE](#*char_note). |
 | WORKDIR<br/> *Mandatory*  | string  | None  | Absolute path name of the top level directory available for file state information. You can use an environmental variable with the syntax <code>%env:&lt;variable&gt;%</code> however note that this variable is replaced with the actual value at the time you define the object.<br/> • If you are using the MOVE method, files that are ready to be submitted are available in the work_dir.<br/> • If you are using the FILE method, the .met files are stored in the work_dir.<br/> <blockquote> **Note**<br/> Caution Never delete any .met files.<br/> </blockquote> *See [NOTE](#*char_note). |
-| ENABLESUBDIR  | Boolean  | Yes  | Values:<br/> • Yes: The entire scan_dir sub-directory tree is monitored.<br/> • No: No scan is performed. |
-| <span id="METHOD"></span>METHOD  | enum  | MOVE  | Values:<br/> • MOVE: Files are moved to the work_dir prior to being submitted.<br/> • FILE: Files are left in the scan_dir, and a state file with the same name is created in work_dir prior to submitting the file.<br/> <blockquote> **Note**<br/> Before changing the method from FILE to MOVE, you should remove all files (metadata .met files) located in the associated working directory.<br/> </blockquote> <blockquote> **Note**<br/> Changing the method from MOVE to FILE, deletes all files located in the associated working directory. Therefore, we recommend removing all files from the scan and working directory before changing the METHOD type.<br/> </blockquote> Please see the [Limitations](../#Limitati) for multi-host system recommendations. |
+| ENABLESUBDIR  | Boolean  | Yes  | Values:<br/> • Yes: The entire scan_dir sub- directory tree is monitored.<br/> • No: No scan is performed. |
+| <span id="METHOD"></span>METHOD  | enum  | MOVE  | Values:<br/> • MOVE: Files are moved to the work_dir prior to being submitted.<br/> • FILE: Files are left in the scan_dir, and a state file with the same name is created in work_dir prior to submitting the file.<br/> <blockquote> **Note**<br/> Before changing the method from FILE to MOVE, you should remove all files (metadata .met files) located in the associated working directory.<br/> </blockquote> <blockquote> **Note**<br/> Changing the method from MOVE to FILE, deletes all files located in the associated working directory. Therefore, we recommend removing all files from the scan and working directory before changing the METHOD type.<br/> </blockquote> Please see the [Limitations](../#Limitati) for multi- host system recommendations. |
 | ARCHIVEDIR  | String  |   | Archive directory where a source file is moved to after a successful transfer. This means the source file is moved from the WORKDIR for METHOD=MOVE or SCANDIR for METHOD=FILE to the ARCHIVEDIR.  |
 | FILEIDLEDELAY  | integer  | 5  | If the state of a file has not changed within this delay in seconds, the file becomes a candidate for submission.  |
 | GROUPID  | String  |   | Complementary information for the USERID. Maximum length 32 characters.  |
-| IDF<br/> *Mandatory* | string  | ""  | The IDF name to use in the SEND command. Use one of the following:<br/> • A fixed name.<br/> • "(0)": The name of the first directory sub-level is used.<br/> • "(1)": The name of the second directory sub-level is used.<br/> <blockquote> **Note**<br/> In the Directory C example/home/CFT/fr/dir_c/scan/newyork/idf1, the (0) represents newyork, and (1) represents idf1.<br/> </blockquote>  |
-| PART<br/> *Mandatory*  | string  | ""  | The PART name to use in the SEND command. Use one of the following:<br/> • A fixed name.<br/> • "(0)": The name of the first directory sub-level is used.<br/> • "(1)": The name of the second directory sub-level is used.<br/> <blockquote> **Note**<br/> In the Directory C example/home/CFT/fr/dir_c/scan/newyork/idf1, the (0) represents newyork, and (1) represents idf1.<br/> </blockquote>  |
+| IDF<br/> *Mandatory* | string  | ""  | The IDF name to use in the SEND command. Use one of the following:<br/> • A fixed name.<br/> • "(0)": The name of the first directory sub- level is used.<br/> • "(1)": The name of the second directory sub- level is used.<br/> <blockquote> **Note**<br/> In the Directory C example/home/CFT/fr/dir_c/scan/newyork/idf1, the (0) represents newyork, and (1) represents idf1.<br/> </blockquote>  |
+| PART<br/> *Mandatory*  | string  | ""  | The PART name to use in the SEND command. Use one of the following:<br/> • A fixed name.<br/> • "(0)": The name of the first directory sub- level is used.<br/> • "(1)": The name of the second directory sub- level is used.<br/> <blockquote> **Note**<br/> In the Directory C example/home/CFT/fr/dir_c/scan/newyork/idf1, the (0) represents newyork, and (1) represents idf1.<br/> </blockquote>  |
 | INTERVAL  | int  | 60  | The interval between two scans of the directory files in seconds.  |
 | FILECOUNT  | int  | 0  | Maximum number of file submissions for each scan. Using the default value indicates that there is no maximum. |
 | FILESIZEMIN  | int  | 0  | Files shorter than this value, in bytes, are not candidates for submission. Using the default value indicates that there is no lower limit on the file size. |
@@ -76,11 +75,10 @@ Use the following CFTFOLDER parameters to configure folder monitoring for each 
 | RESUBMITCHANGED  | Boolean  | Yes  | This parameter has no effect when the configured method is MOVE.<br/> When the method parameter value is set to FILE:<br/> • Yes: When the state of a previously submitted file is seen as having changed, the file is submitted again.<br/> • No: Files are not resubmitted, regardless of changes.<br/> <blockquote> **Note**<br/> The file is resubmitted after any change regardless of if the modification is a small change, or purging and replacing the file with another file having the same name.<br/> </blockquote>  |
 | FILTERTYPE  | enum  | WILDMAT  | Defines the pattern matching algorithm to use for file name filtering.<br/> Values:<br/> • STRJCMP: The Transfer CFT pattern matching algorithm.<br/> • WILDMAT: A well known public domain algorithm, and is the default. **Unix/Windows only**<br/> • EREGEX: Extended regular expression syntax.<br/> See [Create inclusion and exclusion filters](../folder_customize#top) for details. |
 | RENAMEMETHOD  | Enum  | TIMESTAMP  | This parameter applies only to the MOVE method. When set to TIMESTAMP, a timestamp of the pattern YYYYMMDDHHMMSS is added at the end of the name of the renamed file but before the last '.'.<br/> For example, using timestamp_separators=".": • myfile is renamed myfile.20131025<br/> • myfile.txt is renamed myfile.20131025.txt<br/> <blockquote> **Note**<br/> Unset the default value and use " " to MOVE without adding a timestamp.<br/> </blockquote>  |
-| RENAMESEPARATOR  | string  | OpenVMS:<br/> " _ "<br/> All other OS:<br/> "." | This parameter only applies to the MOVE method.<br/> You can use no more than two characters from among the following:<br/> .[]()_-<br/> The first character defines the separator before the timestamp. The second one, when present, defines the separator after the timestamp.<br/> For example, using timestamp_separators "[]": - myfile is renamed myfile.[20131025] - myfile.txt is renamed myfile.[20131025].txt |
+| RENAMESEPARATOR  | string  | OpenVMS:<br/> " _ "<br/> All other OS:<br/> "." | This parameter only applies to the MOVE method.<br/> You can use no more than two characters from among the following:<br/> .[]()_- <br/> The first character defines the separator before the timestamp. The second one, when present, defines the separator after the timestamp.<br/> For example, using timestamp_separators "[]": - myfile is renamed myfile.[20131025] - myfile.txt is renamed myfile.[20131025].txt |
 | N/A in this version  | string  |   | Metadata used to control user changes.  |
 | USEFSEVENTS<br/> <br/> [More information](../../../c_intro_userinterfaces/web_copilot_ui/flow_def_intro/cftfolder) | Boolean  | No  | Set to YES to enable the file system events monitoring service to detect newly available files.  |
 | [Folder monitoring using USERCTRL](../../../c_intro_userinterfaces/command_summary/parameter_intro/userid). |
-
 
 > **Note**
 >
@@ -92,14 +90,14 @@ Use the following CFTFOLDER parameters to configure folder monitoring for each 
 ### Parameter settings and actions
 
 - The delay between scans of a given directory is defined by its interval parameter value.
-- By default the ENABLESUBDIR [enable_subdir] parameter is set to YES, and the directory and all its sub-directories are scanned.
+- By default the ENABLESUBDIR [enable_subdir] parameter is set to YES, and the directory and all its sub- directories are scanned.
 - For each file detected, the name is checked against the configured parameters values in the include and exclude file filters. Files that match the combined criteria are monitored, all others are ignored.
 
 For a file to become a candidate to be submitted, the following conditions must be met:
 
 - File size: If these values are configured, the following rules apply.
-    -   FILESIZEMIN [file_size_min]: The current size must not be less than this value.
-    -   FILESIZEMAX [file_size_max]: The current size must not be greater than this value.
+    - FILESIZEMIN [file_size_min]: The current size must not be less than this value.
+    - FILESIZEMAX [file_size_max]: The current size must not be greater than this value.
 - The last modification time and duration must not have changed within a number of seconds as defined in the FILEIDLEDELAY [file_idle_delay] parameter value.
 
 ## Create or modify a CFTFOLDER object
@@ -121,15 +119,15 @@ ACT ID=FM40, type=FOLDER
 ```
 <span id="Enable"></span>
 
-## Enable the file-system event monitoring
+## Enable the file- system event monitoring
 
-This feature enables you to use file-system events monitoring to detect newly available files for an immediate Transfer CFT action.
+This feature enables you to use file- system events monitoring to detect newly available files for an immediate Transfer CFT action.
 
 ****Available on Linux/Windows only****
 
-See [Supported OS for file-system event monitoring](../#Supporte).
+See [Supported OS for file- system event monitoring](../#Supporte).
 
-To enable file-system event monitoring modify as follows:
+To enable file- system event monitoring modify as follows:
 
 ```
 CFTFOLDER ID=<myfolderobject>, USEFSEVENTS=YES, ...
@@ -139,22 +137,22 @@ CFTFOLDER ID=<myfolderobject>, USEFSEVENTS=YES, ...
 
 This feature can be resource intensive for Transfer CFT and the system in general in the following situations:
 
-- You have a large number of directories and sub-directories monitored using file-system events.
+- You have a large number of directories and sub- directories monitored using file- system events.
 - The activity in terms of file additions, removals, changes of files in those directories is high.
 
-We recommended that you only use file-system event monitoring when immediate attention by Transfer CFT is a functional requirement.
+We recommended that you only use file- system event monitoring when immediate attention by Transfer CFT is a functional requirement.
 
 <span id="Activate"></span>
 
 ## Activate and deactivate folder monitoring
 
-To turn the file-system event monitoring off for a given folder object, use the command:
+To turn the file- system event monitoring off for a given folder object, use the command:
 
 ```
 INACT TYPE=FOLDER,ID=<myfolderobject>
 ```
 
-To turn on the file-system event monitoring for a given folder object, use the command:
+To turn on the file- system event monitoring for a given folder object, use the command:
 
 ```
 ACT TYPE=FOLDER,ID=<myfolderobject>
@@ -203,7 +201,7 @@ This section presents an example that consists of configuring 3 directories for 
 
 The first directory presents the simplest possible configuration, leaving most parameters set to their default values.
 
-- All of the files in the directory sub-tree are candidates for the SEND submission.
+- All of the files in the directory sub- tree are candidates for the SEND submission.
 - The files are sent to a given partner, `newyork`, using an IDF name of IDFA.
 
 The following commands create the configuration defined for directory A.
@@ -365,7 +363,7 @@ In the **Steps** below, we use the absolute paths, that is, the folders are loca
 1. Create a SEND model using `archivefname`. In this example the transfer's IDTU is appended on the filename:
 
     ```
-    CFTSEND id=MYFILE, archivefname=&FROOT&(-.)FSUF_&IDTU, faction=ARCHIVE
+    CFTSEND id=MYFILE, archivefname=&FROOT&(- .)FSUF_&IDTU, faction=ARCHIVE
     ```
 
 1. Activate the new CFTFOLDER object:  

@@ -1,18 +1,16 @@
 ---
-    title: "Use  the CFTTRACE utility for traces"
-    linkTitle: "Use an external trace (CFTTRC utility)"
-    weight: 310
----<span id="Using_the_start_trace_command"></span>The CFTTRACE utility parameter setting commands, grouped by function, are presented in the
+title: "Use  the CFTTRACE utility for traces"
+linkTitle: "Use an external trace (CFTTRC utility)"
+weight: 310
+--- <span id="Using_the_start_trace_command"></span>The CFTTRACE utility parameter setting commands, grouped by function, are presented in the
 following table.
 
-
 | Action &lt;/th&gt;  | Command &lt;/th&gt;  |
-| --- | --- |
+| - - - | - - - |
 | Define the trace file or files:<br/> • Before Transfer CFT starts <br/> • During Transfer CFT operations  |  <br/> • TRCFILE<br/> • SETTRC |
 | Start information collection:<br/> • Transfer CFT start<br/> • During Transfer CFT operations  | STARTTRC |
 | Stop information collection  | STOPTRC  |
 | Close files and shut down the process  | SETTRC  |
-
 
 <span id="Trace_command_overview"></span>
 
@@ -23,42 +21,36 @@ be used for the various trace processes.
 
 ### Define trace files
 
-
 | Trace file definition | Command &lt;/th&gt;  | Parameter &lt;/th&gt;  | Description &lt;/th&gt;  |
-| --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - |
 | Before starting<br /> Transfer CFT  | CFTPARM  | TRACE=identifier  | CFTTRACE command identifier  |
 |   | CFTTRACE  |   |   |
 |   | or TRCFILE (1)  | TYPE=TRACE  | The defined file is a trace file  |
 | During Transfer CFT operations  | SETTRC  | MODE=CREATE or MODIFY  |   |
-
 
 (1): TRCFILE is used in environments
 that do not allow dynamic file definition.
 
 ### Start collecting information
 
-
 | Starting information collection &lt;/th&gt;  | Command used to define the file &lt;/th&gt;  | Parameter &lt;/th&gt;  | Command to enter &lt;/th&gt;  |
-| --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - |
 | When starting up Transfer CFT  | CFTTRACE  | START=CFT |   |
 |   | TRCFILE (1)  | START=CFT  | CFTTRACE  |
 | During Transfer CFT<br /> operations  | CFTTRACE  | START=DELAYED  | STARTTRC  |
 |   | SETTRC  |   | STARTTRC  |
-
 
 (1): TRCFILE is used in environments
 that do not allow dynamic file definition.
 
 ### Stop collecting - close the file and shutdown the process
 
-
 | Action &lt;/th&gt;  | Define the file with &lt;/th&gt;  | Enter the command &lt;/th&gt;  |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | Stop information collection  | CFTTRACE  | STOPTRC |
 |   | SETTR  | STOPTRC  |
 | Stop collection, close the files and shutdown the process  | CFTTRACE  | STOPTRC<br /> and<br /> SETTRC MODE=DELETE |
 |   | SETTRC  | SETTRC MODE=DELETE  |
-
 
 <span id="About"></span>
 
@@ -169,7 +161,7 @@ CFTTRACE EXTRACT IFNAME=&lt;trc_collect_file_name>, OFNAME=&lt;trc_txt_file_name
 
 ## TRCFILE command details
 
-Trace files can be created and pre-formatted in their order of occurrence
+Trace files can be created and pre- formatted in their order of occurrence
 or externally with a utility, in particular for environments that cannot
 support such operations. The utility is integrated in CFTTRACE, with the
 command **TRCFILE** **TYPE = TRACE.**
@@ -293,8 +285,8 @@ Trace file type:
     file written in "extend".  
     The new records are written after the old ones
 - CIRCULAR: Direct
-    access file, with a set number of fixed-length records.  
-    This file is accessed through a circular up-date, the new records overwriting
+    access file, with a set number of fixed- length records.  
+    This file is accessed through a circular up- date, the new records overwriting
     the old ones
 
 `[TRCLREC = {0   &#124; n}]`
@@ -308,7 +300,7 @@ This parameter is:
     Concatenation and segmentation algorithms make it possible to manage
     the real - essentially variable - size of data to be written to this file
 - Optional if TRCFTYP
-    = STANDARD (sequential file, with fixed-size records)
+    = STANDARD (sequential file, with fixed- size records)
 
 `[TRCNREC = n]`
 

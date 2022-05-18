@@ -1,8 +1,8 @@
 ---
-    title: "cnxinout"
-    linkTitle: "cnxinout"
-    weight: 420
----<span id="cnxinout"></span>
+title: "cnxinout"
+linkTitle: "cnxinout"
+weight: 420
+--- <span id="cnxinout"></span>
 
 ### cnxinout
 

@@ -1,8 +1,8 @@
 ---
-    title: "updat"
-    linkTitle: "updat"
-    weight: 3670
----<span id="updat"></span>
+title: "updat"
+linkTitle: "updat"
+weight: 3670
+--- <span id="updat"></span>
 
 ### updat
 
@@ -27,7 +27,5 @@ For example:
 *Note: For* some systems, increasing
 this update number is likely to increase the CPU and I/O overhead and
 degrade transfer throughputs.
-
- 
 
 [Return to Command index](../../)

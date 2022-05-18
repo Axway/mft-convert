@@ -1,8 +1,8 @@
 ---
-    title: "help"
-    linkTitle: "help"
-    weight: 1420
----<span id="help"></span>
+title: "help"
+linkTitle: "help"
+weight: 1420
+--- <span id="help"></span>
 
 ### help
 

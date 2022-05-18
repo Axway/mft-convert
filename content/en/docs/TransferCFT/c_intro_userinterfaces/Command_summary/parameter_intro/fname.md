@@ -1,8 +1,8 @@
 ---
-    title: "fname"
-    linkTitle: "fname"
-    weight: 1220
----<span id="fname"></span>
+title: "fname"
+linkTitle: "fname"
+weight: 1220
+--- <span id="fname"></span>
 
 ### fname
 
@@ -150,7 +150,7 @@ The following symbolic variables can be used:
 Name of the physical receiver file,
 filename or complete path name, of the directory.
 
-When the parameter value is between quotes, it becomes case-sensitive; however on certain platforms, such as UNIX, the value is case-sentive without quotes.
+When the parameter value is between quotes, it becomes case- sensitive; however on certain platforms, such as UNIX, the value is case- sentive without quotes.
 
 In the receiver server configuration, the use of this parameter
 is mandatory.
@@ -164,13 +164,11 @@ You can define the filename either in the:
 - The CFTRECV
     object (recommended)
 
-
 | To receive... | Enter... |
-| --- | --- |
+| - - - | - - - |
 | a file | a complete physical file name |
 | a version of a file | a file name with a root and a version number |
 | a group of concatenated files | a directory name |
-
 
 *****When using the complete
 filename*****
@@ -179,7 +177,7 @@ The complete path name includes the names of directories, or any other
 organization specific to the environment concerned, used to group files:
 library, catalog, PDSE, etc.
 
-Normally, the folder referenced in `fname ` parameter should exist or the transfer fails. However, depending on your environment, you may use a special character that can be set with the cft.char_directory_protect to implicitly create part of a path structure. An OS specific character delimits the path to be created (intermediate directories), where the names of the sub-directories appearing to the right of the character are created. Please see the uconf [char_directory](../../../../cft_intro_install/about_this_document_vms/c_cft_introduction_vms/installation/platform_specific_characters_and_functions) for more information.
+Normally, the folder referenced in `fname ` parameter should exist or the transfer fails. However, depending on your environment, you may use a special character that can be set with the cft.char_directory_protect to implicitly create part of a path structure. An OS specific character delimits the path to be created (intermediate directories), where the names of the sub- directories appearing to the right of the character are created. Please see the uconf [char_directory](../../../../cft_intro_install/about_this_document_vms/c_cft_introduction_vms/installation/platform_specific_characters_and_functions) for more information.
 
 **Example**
 
@@ -270,18 +268,18 @@ directory specified by FNAME.
 #### CFTSEND, SEND
 
 ****[FNAME = {filename &#124; mask &#124; dirname &#124;
-&lt;file-symb>filename &#124; &lt;file-symb>mask &#124; &lt;file-symb>dirname}]    {string
+&lt;file- symb>filename &#124; &lt;file- symb>mask &#124; &lt;file- symb>dirname}]    {string
 512} ****
 
 > **Note**
 >
-> here the &lt;file-symb> character is specific to each system (for example # on Windows and @ on UNIX environments).
+> here the &lt;file- symb> character is specific to each system (for example # on Windows and @ on UNIX environments).
 
 Name of the local file, directory, indirection file, selection mask
-or selection directory to be sent. The maximum length of a filename value-type
+or selection directory to be sent. The maximum length of a filename value- type
 is 512 characters.
 
-When the parameter value is between quotes, it becomes case-sensitive; however on certain platforms, such as UNIX, the value is case-sentive without quotes.
+When the parameter value is between quotes, it becomes case- sensitive; however on certain platforms, such as UNIX, the value is case- sentive without quotes.
 
 ****Examples****
 
@@ -305,19 +303,19 @@ FNAME=dirname which transfers a file that contains the list of all files in the 
 FNAME= '/home/cft/runtime/pub' or FNAME= 'pub'
 ```
 
-FNAME=&lt;file-symb>filename which transfers all the files referenced in the list file:
+FNAME=&lt;file- symb>filename which transfers all the files referenced in the list file:
 
 ```
 FNAME= '@/home/cft/runtime/pub/list'
 ```
 
-FNAME=&lt;file-symb>mask  which transfers all the files that correspond to the mask criteria:
+FNAME=&lt;file- symb>mask  which transfers all the files that correspond to the mask criteria:
 
 ```
 FNAME= '@/home/cft/runtime/pub/F\*'
 ```
 
-FNAME=&lt;file-symb>dirname which transfers all the files in dirname folder:
+FNAME=&lt;file- symb>dirname which transfers all the files in dirname folder:
 
 ```
 FNAME= '@/home/cft/runtime/pub'

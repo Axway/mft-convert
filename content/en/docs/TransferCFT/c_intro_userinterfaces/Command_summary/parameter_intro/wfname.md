@@ -1,8 +1,8 @@
 ---
-    title: "wfname"
-    linkTitle: "wfname"
-    weight: 3780
----<span id="wfname"></span>
+title: "wfname"
+linkTitle: "wfname"
+weight: 3780
+--- <span id="wfname"></span>
 
 ### wfname
 
@@ -22,7 +22,7 @@ Name of the temporary file used during the transfer.
 The file is renamed on completion of the transfer using the name defined
 by the FNAME parameter.
 
-When the parameter value is between quotes, it becomes case-sensitive.
+When the parameter value is between quotes, it becomes case- sensitive.
 
 A temporary file is used to ensure the integrity of the file received:
 the file which can be used (by a user application for example) is only
@@ -55,10 +55,8 @@ there are no access conflict problems.
 This parameter can be used for "store and forward" purposes
 (CFTRECV ID = COMMUT command).
 
-
 | ****MVS, VMS**** | This parameter is mandatory if the receiver file is a version file (in particular for operation in the open mode and when the sender sends an NFNAME corresponding to a GDG name). |
-| --- | --- |
-
+| - - - | - - - |
 
 This parameter is mandatory when a copy/concatenation operation is performed
 during the send, transfer of a group of files in PeSIT CFT/CFT mode.
@@ -123,7 +121,5 @@ corresponding to your OS.
 
 To avoid access conflict problems, be sure that the assigned name is
 unique.
-
- 
 
 [Return to Command index](../../)

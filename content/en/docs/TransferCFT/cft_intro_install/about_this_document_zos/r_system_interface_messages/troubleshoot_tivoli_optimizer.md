@@ -1,8 +1,8 @@
 ---
-    title: "Troubleshoot the UCONFRUN dataset"
-    linkTitle: "Troubleshoot the UCONFRUN dataset"
-    weight: 220
----****CFTMAIN hangs while it waits for the UCONFRUN dataset to be freed****
+title: "Troubleshoot the UCONFRUN dataset"
+linkTitle: "Troubleshoot the UCONFRUN dataset"
+weight: 220
+--- ****CFTMAIN hangs while it waits for the UCONFRUN dataset to be freed****
 
 ****Messages****
 
@@ -16,9 +16,7 @@
 
 When CFTMAIN is started, the UCONFRUN dataset is exclusively held by CFTMAIN and Copilot waits for the dataset to be freed.
 
--or-
-
-If Copilot is started, the UCONFRUN dataset is held exclusively by Copilot.
+- or- If Copilot is started, the UCONFRUN dataset is held exclusively by Copilot.
 
 ****Resolution****
 
@@ -29,26 +27,22 @@ The ddname is AOBYPASS and the format of the DD card is: `//AOBYPASS DD DUMMY`
 ****Example****
 
 ```
-//\* ---------------------------------------------------
-//\* Turning off Fault Analyzer with a JCL switch (IDIOFF)
+//\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //\* Turning off Fault Analyzer with a JCL switch (IDIOFF)
 //\* and/or other debuging products.
 //\* uncomment the following statement(s).
-//\* ---------------------------------------------------
-//\*IDIOFF DD DUMMY IBM FAULT ANALYZER OFF
+//\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //\*IDIOFF DD DUMMY IBM FAULT ANALYZER OFF
 //\*
-//\*ABNLIGNR DD DUMMY ABEND-AID OFF
-//\*ESPYIBM DD DUMMY EYE-SPY OFF
-//\*CAOESTOP DD DUMMY CA-OPT II & CA-SYMDUMP OFF
+//\*ABNLIGNR DD DUMMY ABEND- AID OFF
+//\*ESPYIBM DD DUMMY EYE- SPY OFF
+//\*CAOESTOP DD DUMMY CA- OPT II & CA- SYMDUMP OFF
 //\*DMBENAN DD DUMMY TURN OFF DUMPMASTER
 //\*PSPOFF DD DUMMY TURN OFF SOFTWORKS PERFORMANCE ESSENTIAL
 //\*
-//\* ---------------------------------------------------
-//\* Turn off PDSMAN
+//\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //\* Turn off PDSMAN
 //\* uncomment the following statement.
-//\* ---------------------------------------------------
-//\*FCOPYOFF DD DUMMY
+//\* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //\*FCOPYOFF DD DUMMY
 //\*
-//\*PROIGN DD DUMMY To bypass Stop-X37
+//\*PROIGN DD DUMMY To bypass Stop- X37
 //\*AOBYPASS DD DUMMY To bypass Tivoli Allocation Optimizer
 //\*
 ```

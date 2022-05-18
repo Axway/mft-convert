@@ -1,8 +1,8 @@
 ---
-    title: "Management  utilities"
-    linkTitle: "Management utilities"
-    weight: 280
----This topic describes the following management utilities:
+title: "Management  utilities"
+linkTitle: "Management utilities"
+weight: 280
+--- This topic describes the following management utilities:
 
 - [cftinit](#cftinit)
 - [cft start](#cftstart)
@@ -88,7 +88,7 @@ CFT.
 
 **Syntax**
 
-`cft stop [-kill]`
+`cft stop [- kill]`
 
 **Standard use**
 
@@ -113,12 +113,12 @@ it displays the following message:
 
 `% cft stopInvalid state of  {{< TransferCFT/axwayvariablesComponentShortName >}}.`
 
-Use `Cft force-stop` to force {{< TransferCFT/axwayvariablesComponentShortName  >}} to shut down.
+Use `Cft force- stop` to force {{< TransferCFT/axwayvariablesComponentShortName  >}} to shut down.
 
 **Advanced use**
 
 In the event of a problem, the program recommends that you shut down
-{{< TransferCFT/axwayvariablesComponentShortName  >}} using the`Cft force-stop`command.
+{{< TransferCFT/axwayvariablesComponentShortName  >}} using the`Cft force- stop`command.
 
 This command then forces a {{< TransferCFT/axwayvariablesComponentShortName  >}} shutdown. It is normally successful,
 but depending on the state of the system, more serious malfunctions may
@@ -131,9 +131,9 @@ you about the possible consequences of the next command.
 ```
 % cft stop
 Invalid state of CFT.
-Use Cft force-stop
+Use Cft force- stop
 to force shutdown of Transfer CFT
-% cft stop -kill
+% cft stop - kill
 Stopping Transfer CFT...
 Transfer CFT stopped correctly.
 ```

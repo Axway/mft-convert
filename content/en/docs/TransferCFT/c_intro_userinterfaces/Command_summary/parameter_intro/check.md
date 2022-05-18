@@ -1,8 +1,8 @@
 ---
-    title: "check"
-    linkTitle: "check"
-    weight: 380
----<span id="check"></span>
+title: "check"
+linkTitle: "check"
+weight: 380
+--- <span id="check"></span>
 
 ### check
 

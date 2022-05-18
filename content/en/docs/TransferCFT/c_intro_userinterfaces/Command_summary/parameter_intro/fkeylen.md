@@ -1,8 +1,8 @@
 ---
-    title: "fkeylen"
-    linkTitle: "fkeylen"
-    weight: 1170
----<span id="fkeylen"></span>
+title: "fkeylen"
+linkTitle: "fkeylen"
+weight: 1170
+--- <span id="fkeylen"></span>
 
 ### fkeylen
 
@@ -23,7 +23,7 @@ is present if it has been defined by the requester. If this value is absent,
 the default value is then equal to 0.
 
 The monitor receives the file in the form of sequential records. The
-client can develop a file type EXIT or write an end-of-transfer procedure
+client can develop a file type EXIT or write an end- of- transfer procedure
 to use this information which can be recovered by the symbolic variable
 &FKEYLEN.
 

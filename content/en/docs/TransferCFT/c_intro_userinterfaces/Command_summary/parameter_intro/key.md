@@ -1,8 +1,8 @@
 ---
-    title: "key"
-    linkTitle: "key"
-    weight: 1740
----<span id="key"></span>
+title: "key"
+linkTitle: "key"
+weight: 1740
+--- <span id="key"></span>
 
 ### key
 
@@ -25,7 +25,7 @@ The {{< TransferCFT/axwayvariablesComponentShortName  >}} user key. You can ente
 >
 > You do not directly set the key with this parameter.
 
-Enter the name of the indirection file (preceded by the &lt;file-symb> character specific to each system) that contains the set of keys associated with the {{< TransferCFT/axwayvariablesComponentShortName  >}}. The post-installation default values are:
+Enter the name of the indirection file (preceded by the &lt;file- symb> character specific to each system) that contains the set of keys associated with the {{< TransferCFT/axwayvariablesComponentShortName  >}}. The post- installation default values are:
 
 - Unix and HP NonStop: @conf/cft.key
 - Windows: #conf/cft.key

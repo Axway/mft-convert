@@ -1,8 +1,8 @@
 ---
-    title: "Defining CFTRECV in PeSIT "
-    linkTitle: "Defining CFTRECV in PeSIT"
-    weight: 200
----The CFTRECV object contains the parameters controlling the reception
+title: "Defining CFTRECV in PeSIT "
+linkTitle: "Defining CFTRECV in PeSIT"
+weight: 200
+--- The CFTRECV object contains the parameters controlling the reception
 of data and the storage of the data received. This
 topic describes the CFTRECV object parameters needed when using
 the PeSIT xxternal protocol.
@@ -108,17 +108,15 @@ NFNAME parameter, is an extension specific to Transfer CFT.
 The table below summarizes the parameter values authorized as a function
 of the various functional levels negotiated for the protocol.
 
-
 | CFTRECV parameter for<br /> Functional negotiated v  | PeSIT E  | PeSIT E +<br /> Transfer CFT extensions  |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | Generic IDF  | X  | X  |
-| NFNAME, NFVER<br /> (reception in open mode)  | -  | X  |
+| NFNAME, NFVER<br /> (reception in open mode)  | - | X  |
 | NIDF  | string14  | string32 |
 | RAPPL  | string8  | string48  |
 | RUSER  | string8  | string28  |
 | SAPPL  | string8  | string48  |
 | SUSER  | string8  | string28  |
 
-
--  X:  supported
-- "-":  not supported
+- X:  supported
+- "- ":  not supported

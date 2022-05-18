@@ -1,8 +1,8 @@
 ---
-    title: "Synchronous communication return codes"
-    linkTitle: "Synchronous communication return codes"
-    weight: 310
----This section describes diagnosing the return code when using synchronous communication with {{< TransferCFT/axwayvariablesComponentShortName  >}}.
+title: "Synchronous communication return codes"
+linkTitle: "Synchronous communication return codes"
+weight: 310
+--- This section describes diagnosing the return code when using synchronous communication with {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
 ## How to find the return code
 
@@ -62,9 +62,8 @@ CFTU20I Session active for 0:01:42
 
 For the return codes 70 through 79, the error occurred in the SEND or RECV transfer command, and the transfer was not executed.
 
-
 | RC  | Error  | Description  | Action  |
-| --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - |
 | 70  | APIS_READ_CONF_FILE  | Media configuration file error.  |   |
 | 71  | APIS_PARAM_TIMEOUT  | TIMEOUT parameter error.  | See [TIMEOUT](../../../c_intro_userinterfaces/command_summary/parameter_intro/timeout).  |
 | 72  | APIS_PARAM_LOWPORT  | LOWPORT parameter error.  | See [LOWPORT](../../../c_intro_userinterfaces/command_summary/parameter_intro/lowport).  |
@@ -76,14 +75,12 @@ For the return codes 70 through 79, the error occurred in the SEND or RECV trans
 | 78  | APIS_SOCKET_READ  | Channel read error occurred  |   |
 | 79  | APIS_CLOSE_SOCKET  | Close channel failed occurred.  |   |
 
-
 ## SWAITCAT related errors
 
 For the return codes 80 through 87, the error is related to the SWAITCAT command. Refer to the SWAITCAT [Concepts](../../../c_intro_userinterfaces/about_cftutil/managing_transfer_states/swaitcat_concepts) or [Examples](../../../app_integration_intro/synch_comm_tcpip_intro/sync_transfer_request_tasks) sections for more information.
 
-
 | RC  | Error  | Description  | Action  |
-| --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - |
 | 80  | APIS_SWAITCAT_FAILED  | Transfer error.The transfer reached the K or H state.  | Check the diagnostic, correct problem if necessary, and restart.  |
 | 81  | APIS_SWAITCAT_TIMEOUT  | The transfer was not completed within the time specified by the timeout value. After this timeout error, the transfer can have the status C (current) or D (for example if the network went down), but note that it was not completed.  | Check the diagnostic, correct problem if necessary.<br/> Repeat SWAITCAT, you may need to repeat several times. |
 | 82  | APIS_SWAITCAT_NFOUND  | The idtu was not found. The selected criteria provided in the command SWAITCAT cannot find the transfer.  | Verify the selection parameters in the SWAITCAT command.  |

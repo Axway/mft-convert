@@ -1,8 +1,8 @@
 ---
-    title: "nspart"
-    linkTitle: "nspart"
-    weight: 2360
----<span id="nspart"></span>
+title: "nspart"
+linkTitle: "nspart"
+weight: 2360
+--- <span id="nspart"></span>
 
 ### nspart
 

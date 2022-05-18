@@ -1,8 +1,8 @@
 ---
-    title: "Send  a message"
-    linkTitle: "Sending a MESSAGE"
-    weight: 230
----You can use the SEND MESSAGE command to send a message to a designated partner, for example small amounts of content that are not considered sensitive content.
+title: "Send  a message"
+linkTitle: "Sending a MESSAGE"
+weight: 230
+--- You can use the SEND MESSAGE command to send a message to a designated partner, for example small amounts of content that are not considered sensitive content.
 
 - The message length in the PeSIT protocol has a maximum value of 4096 bytes
 - The message can be extracted from the Catalog file, and redirected to a specified file (fout parameter), using the DISPLAY command:
@@ -25,15 +25,13 @@ See the [xlate](../../../c_intro_userinterfaces/command_summary/parameter_intro/
 
 ### Sending messages
 
-
 | Parameters | Description |
-| --- | --- |
+| - - - | - - - |
 | [IDA](../../../c_intro_userinterfaces/command_summary/parameter_intro/ida)  | Local transfer identifier assigned by the user or user application. |
 | [IDM](../../../c_intro_userinterfaces/command_summary/parameter_intro/idm)  | Message identifier. |
 | [PART](../../../c_intro_userinterfaces/command_summary/parameter_intro/part)  | Transfer partner identifier. |
 | [TYPE](../../../c_intro_userinterfaces/command_summary/parameter_intro/type) = MESSAGE | Characterizes a message send request. |
 | OPTIONAL PARAMETERS for [SEND](../send_command_basics) | The optional common parameters form the SEND subset, used for sending a message (but not applicable to files). |
-
 
 #### Example
 

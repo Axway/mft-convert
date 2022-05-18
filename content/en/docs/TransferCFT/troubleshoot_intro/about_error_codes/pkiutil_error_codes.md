@@ -1,15 +1,14 @@
 ---
-    title: "PKIUTIL  error codes"
-    linkTitle: "PKIUTIL error codes"
-    weight: 290
----The following table lists the codes for the PKIU26E PKICER_Error ( msg
+title: "PKIUTIL  error codes"
+linkTitle: "PKIUTIL error codes"
+weight: 290
+--- The following table lists the codes for the PKIU26E PKICER_Error ( msg
 {150nn/0}) type error message.
 
 PKIUTIL error codes
 
-
 | Code  | Contains  | Meaning  |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | 15001  | Command not authorized  | The user is not authorized to use this command  |
 | 15003  | PKI file opening error  | Error opening the file  |
 | 15004  | PKI invalid file opening mode  | Error opening the file with the request mode  |
@@ -47,5 +46,3 @@ PKIUTIL error codes
 | 15039  | PKI record conflict: existing certificate  | Cannot insert/modify the entity, because there is already a certificate using the same ID in the PKI database  |
 | 15099  | Format not yet supported  | Certificate type not supported  |
 
-
- 

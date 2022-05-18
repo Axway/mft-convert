@@ -1,8 +1,8 @@
 ---
-    title: "LISTCAT - Brief/Full catalog listings"
-    linkTitle: "LISTCAT - Brief list of catalog contents"
-    weight: 300
----<span id="Displayed_catalog_information"></span>
+title: "LISTCAT - Brief/Full catalog listings"
+linkTitle: "LISTCAT - Brief list of catalog contents"
+weight: 300
+--- <span id="Displayed_catalog_information"></span>
 
 ## Displayed catalog information
 
@@ -54,7 +54,7 @@ Diagnostics and Messages](../../../../troubleshoot_intro/messages_and_error_code
 CFTU20I
 CFTU20I CFT Windows
 CFTU20I Version 3.1.2 20140428
-CFTU20I (C) Copyright AXWAY 1989-2014
+CFTU20I (C) Copyright AXWAY 1989- 2014
 CFTU20I ====> Starting Session on 20/03/2015 Time is 11:30:25
 CFTU20I Parameters file :C:\\Axway\\Transfer_CFT\\runtime\\data\\cftparm
 CFTU20I Partners file :C:\\Axway\\Transfer_CFT\\runtime\\data\\cftpart
@@ -82,7 +82,7 @@ CFTU20I Session active for 0:00:00
                5
                    6
                     7
-Date = DD-MM-YYYY, Time = hh:mm
+Date = DD- MM- YYYY, Time = hh:mm
 Partner DTSA File Transfer Diags Parm
 Network Name) Id. Id.                                   CFT
 Prot.
@@ -108,9 +108,8 @@ headings contained in this example.
 **LISTCAT CONTENT - BRIEF, NPART - Headings
 comments**
 
-
 | Heading  | Description  |
-| --- | --- |
+| - - - | - - - |
 | 1  | Partner network identifier.<br /> The partner network name corresponds to the NRPART parameter of the CFTPART command and has a length of 16 characters only.  |
 | 2  | Transfer state<br /> The characters DTSA mean:<br/> • Direction = S/R (Send/Receive)<br/> • Type = F/M/R (File/Message/Reply)<br/> • State = D/C/H/K/T/X (Disp/Current/Hold/Keep/Terminated/eXecuted)<br/> • Ack = A (Acknowledge) |
 | 3  | File identifier (IDF) for a file transfer or message identifier (IDM)  |
@@ -118,7 +117,6 @@ comments**
 | 5  | Transfer CFT internal diagnostic code<br /> For a transfer with an error, this field is defined with the Transfer CFT internal diagnostic code (DIAGI) relative to this error<br /> For a correctly terminated transfer, this field is set to zero (1)  |
 | 6  | Protocol diagnostic code<br /> If the entry concerned is not a generic entry:<br/> • for a transfer with an error, this field is defined with the protocol diagnostic code (DIAGP) relative to this error (2)<br/> • for a correctly terminated transfer, this field indicates the compression factor obtained which is documented as follows:<br/> • • CP NONE: transfer correctly terminated with no "on line" compression requested<br/> • CP xx%: transfer terminated correctly with a compression factor of xx%<br/> <br/> • for a delayed transfer, this field is defined with:<br/> • • hh:mm:ss: if sent the same day<br/> • dd/mm/yy: if sent the following days<br/> <br/> <br/> If the entry concerned is a generic entry, this field is defined with one of the following values:<br/> • RECV ALL: generic entry for a global reception request for all the files with a given IDF<br/> • RECV MSK: generic entry for a global reception request for IDFs with "wildcards"<br/> • MIN CYC: generic entry for cyclic transfers, period expressed in minutes<br/> • DAY CYC: generic entry for cyclic transfers, period expressed in days<br/> • MON CYC: generic entry for cyclic transfers, period expressed in months<br/> • DIFFUS: generic entry for a broadcasting<br/> • COLLECT: generic entry for a collection |
 | 7  | PARM field<br /> This field is 24 characters long and may be truncated as required  |
-
 
 **(1) (2)**: Refer to
 *[Codes
@@ -140,7 +138,7 @@ The NPART parameter is not defined.
                7
            8
                         9
-Date = DD-MM-YYYY, Time = hh:mm
+Date = DD- MM- YYYY, Time = hh:mm
 Partner DTSA     File
           Transfer
               Records
@@ -179,9 +177,8 @@ nnnnnnnn   nnn
 The following table contains the comments associated with the various
 headings contained in this figure.
 
-
 | Heading  | Description  |
-| --- | --- |
+| - - - | - - - |
 | ****1 **** | Identifier of the partner described in the commands CFTPART (corresponding to the ID parameter) or CFTDEST (one of the PART in the broadcasting list)  |
 | ****2 **** | Transfer state description<br /> The DTSA characters mean:<br/> • **D**irection = S/R (Send/Receive)<br/> • **T**ype = F/M/R (File/Message/Reply)<br/> • **S**tate = D/C/H/K/T/X Disp/Current/Hold/Keep/Terminated/eXecuted)<br/> • **A**ck = A (Acknowledge) |
 | ****3 **** | File identifier (IDF) for a file transfer or message identifier (IDM).  |
@@ -191,7 +188,6 @@ headings contained in this figure.
 | ****7 **** | Transfer CFT internal diagnostic code<br /> For a transfer with an error, this field is defined with the Transfer CFT internal diagnostic code (DIAGI) relative to this error<br /> For a correctly completed transfer, this field is set to zero **(1)**  |
 | ****8 **** | Protocol diagnostic code<br /> If the entry concerned is not a generic entry:<br/> • for a transfer with an error, this field is defined with the protocol diagnostic code (DIAGP) relevant to this error **(2)**<br/> • for a correctly completed transfer, this field indicates the obtained compression factor which is documented with the following format: • CP NONE: transfer terminated correctly with no "on line" compression requested<br/> • CP xx%: transfer terminated correctly with a compression factor of xx%<br/> <br/> • for a delayed transfer, this field is defined with:<br/> • • hh:mm:ss: if sent the same day<br/> • dd/mm/yy: if sent the following days<br/> <br/> If the entry concerned is a generic entry, this field is defined with one of the following values:<br/> • RECV ALL: generic entry for a global receive request for all the files with a given IDF<br/> • RECV MSK: generic entry for a global receive request for IDFs with "wildcards"<br/> • MIN CYC: generic entry for cyclic transfers, period expressed in minutes<br/> • DAY CYC: generic entry for cyclic transfers, period expressed in days<br/> • MON CYC: generic entry for cyclic transfers, period expressed in months<br/> • DIFFUS: generic entry for a broadcasting<br/> • COLLECT: generic entry for a collection |
 | ****9 **** | Identifier of the application (IDA) associated with this transfer  |
-
 
  **(1) (2)**: See *[Codes
 Diagnostics and Messages](../../../../troubleshoot_intro/messages_and_error_codes_start_here)*.

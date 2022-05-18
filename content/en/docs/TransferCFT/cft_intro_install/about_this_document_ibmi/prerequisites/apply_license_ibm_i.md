@@ -1,8 +1,8 @@
 ---
-    title: "Apply a license key"
-    linkTitle: "Apply a license key"
-    weight: 170
----You need to apply a valid license key to Transfer CFT in the following situations:
+title: "Apply a license key"
+linkTitle: "Apply a license key"
+weight: 170
+--- You need to apply a valid license key to Transfer CFT in the following situations:
 
 - You perform an initial Transfer CFT installation.
 - A hardware upgrade changes the CPU ID (CPU serial number).
@@ -17,8 +17,8 @@
 1. For a new installation, install {{< TransferCFT/axwayvariablesComponentShortName >}}.
 1. After completing the installation, or for an existing installation, use the command **`cftutil about`** to retrieve your system information. For details see the examples below.
 1. Contact the Axway Fulfillment team at the appropriate email address to obtain a valid key.
-    -   For a US key, contact: **`fulfillment@us.axway.com`**
-    -   For an EMEA or APAC key, contact: **`product.key@axway.com`**
+    - For a US key, contact: **`fulfillment@us.axway.com`**
+    - For an EMEA or APAC key, contact: **`product.key@axway.com`**
 1. Provide the hostname where Transfer CFT is to be installed or updated.
 1. Provide the list of characters in the CPU ID.
 

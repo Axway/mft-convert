@@ -1,8 +1,8 @@
 ---
-    title: "Defining CFTPROT in PeSIT"
-    linkTitle: "Defining CFTPROT in PeSIT"
-    weight: 180
----The CFTPROT object defines a file transfer protocol application. This topic describes the CFTPROT parameter
+title: "Defining CFTPROT in PeSIT"
+linkTitle: "Defining CFTPROT in PeSIT"
+weight: 180
+--- The CFTPROT object defines a file transfer protocol application. This topic describes the CFTPROT parameter
 setting object as it applies to the PeSIT protocol. It mainly defines
 the parameters negotiated with the remote partner at the time the protocol
 connection is established, the F.CONNECT service of the PeSIT protocol.
@@ -14,7 +14,7 @@ during the protocol exchange establishing the PeSIT connection, can be
 reduced or disabled according to the type of parameter, by the remote
 partner.  
 
-Alternatively, when a parameter is non-negotiable,
+Alternatively, when a parameter is non- negotiable,
 the server partner must either:
 
 - Submit to the decision
@@ -40,30 +40,30 @@ to PROF.
 
 <span id="Time_out_parameters"></span>
 
-### Time-out parameters
+### Time- out parameters
 
-Transfer CFT provides the possibility of configuring several time-out
+Transfer CFT provides the possibility of configuring several time- out
 parameters.
 
 PeSIT allows several successive transfers to be concatenated over the
 same protocol connection. Transfer CFT consequently defines the maximum
-wait time-out between transfers using the parameters DISCTD (wait
-time-out in requester mode) and DISCTS (server mode). The protocol
-connection is freed on expiration of this time-out.
+wait time- out between transfers using the parameters DISCTD (wait
+time- out in requester mode) and DISCTS (server mode). The protocol
+connection is freed on expiration of this time- out.
 
 When not in the protocol connection/disconnection/interrupt phase, the
-RTO (read time-out) parameter
+RTO (read time- out) parameter
 is used to monitor the activity of the corresponding PeSIT. For example,
 if the local Transfer CFT has not received an acknowledgement of an FPDU (File
-Protocol Data Unit) by the time this time-out has expired, it interrupts
-the connection with a diagnostic code indicating that the monitoring time-out
+Protocol Data Unit) by the time this time- out has expired, it interrupts
+the connection with a diagnostic code indicating that the monitoring time- out
 has been exceeded.
 
-The DISCTC parameter corresponds to the wait time-out for a response
+The DISCTC parameter corresponds to the wait time- out for a response
 to the protocol connection request (FPDU CONNECT).
 
 The DISCTR parameter corresponds to thenetwork disconnection wait
-time-out of the PeSIT standard. Once the local Transfer CFT has
+time- out of the PeSIT standard. Once the local Transfer CFT has
 sent an abrupt protocol interruption (ABORT FPDU), the partner has this
 time limit to break the network connection. Beyond this time, the local
 Transfer CFT itself sends the network disconnection request.
@@ -161,8 +161,8 @@ This means that the negotiated value of the interval between synchronization
 points must always be equal to or greater than the size of the largest
 of the articles of the file to be transferred. If compression is used,
 this then corresponds to the size of the largest article after compression.
-The default value (36 kilo-bytes) has been chosen such that articles of
-up to 32 kilo-bytes in size can be sent without problems, even though
+The default value (36 kilo- bytes) has been chosen such that articles of
+up to 32 kilo- bytes in size can be sent without problems, even though
 this would only be necessary under exceptional circumstances.
 
 A zero value of the interval between synchronization points indicates
@@ -199,12 +199,12 @@ basis of 1 byte every 32 bytes (for example: 32 bytes for a size of 1024,
 #### In server mode
 
 If the remote Transfer CFT
-opens a one-way write (or read) session, Transfer CFT negotiates, as synchronization
+opens a one- way write (or read) session, Transfer CFT negotiates, as synchronization
 interval, the smallest value between what the partner proposes and the
 value of the RPACING parameter of the CFTPROT command for reception
 (or the SPACING parameter for transmission).
 
-For a two-way session,
+For a two- way session,
 Transfer CFT then negotiates the smallest value between the one proposed
 by the partner and the values of the SPACING and RPACING
 parameters.  
@@ -232,7 +232,7 @@ the last synchronization points to be acknowledged.
 
 The RRUSIZE and SRUSIZE parameters are used to negotiate
 the maximum NSDU (Network Service Data Unit) size for reception and transmission
-respectively. To transfer an article longer than (SRUSIZE-6), a segmentation
+respectively. To transfer an article longer than (SRUSIZE- 6), a segmentation
 operation is mandatory.
 
 <span id="Concatenating__regrouping_and_segmenting"></span>
@@ -248,7 +248,7 @@ file data exchange phase:
     NSDU
 - MULTART
     parameter is option used to group several records of the file sent in
-    the same FPDU; this is then referred to as a multi-article FPDU
+    the same FPDU; this is then referred to as a multi- article FPDU
 - SEGMENT
     parameter is the option used to segment file articles into two or more
     FPDUs
@@ -264,7 +264,7 @@ consequently cannot be negotiated with the remote partner.
     the required options.
 - In
     receiver mode, Transfer CFT ignores the value of these parameters
-    and equally accepts concatenated, segmented or multi-article FPDUs.
+    and equally accepts concatenated, segmented or multi- article FPDUs.
 
 The concatenation option is incompatible with error checking (PAD =
 YES). If error checking is active, Transfer CFT then inhibits the sending
@@ -274,15 +274,15 @@ For additional information, refer to the topic Data unit structure.
 
 <span id="Pre_connection_phase"></span>
 
-### Pre-connection phase
+### Pre- connection phase
 
-The connection of the PeSIT protocol may be preceded by a pre-connection
+The connection of the PeSIT protocol may be preceded by a pre- connection
 phase, independent of the PeSIT protocol. Its role is to inform Transfer CFTs
 of the type of transfer protocol used, and the identifier of the caller,
 as soon as the connection of the lower communication layers is established.
 
 To meet this requirement, the PeSIT standard defines two messages in
-the pre-connection phase. The first message, sent by the requesting partner,
+the pre- connection phase. The first message, sent by the requesting partner,
 consists of 24 bytes, split into three blocks of 8 bytes:
 
 - bytes 1 to 8: protocol
@@ -306,7 +306,7 @@ The second message is sent by the server partner by way of an acknowledgement
 
 #### PeSIT E CFT/CFT
 
-- In requester mode, the pre-connection phase is
+- In requester mode, the pre- connection phase is
     mandatory. In
     PeSIT E CFT profile, the SSERV parameter is used to particularize
     this string.
@@ -339,15 +339,15 @@ Operations over a TCP/IP network are only controlled when Transfer CFT
 is the requester. When it is the server, it adapts automatically to the
 mode required by the requester.
 
-The GSIT value is never used as the pre-connection message initialization
+The GSIT value is never used as the pre- connection message initialization
 value. When Transfer CFT is the requester and SSERV is set to GSIT, the
-first eight bytes of the pre-connection message are set to the standardized
-"PESIT---" value.
+first eight bytes of the pre- connection message are set to the standardized
+"PESIT- - - " value.
 
 #### Other SSERV values
 
 The SSERV value is only used to initialize the first eight bytes of
-the preconnection message. As the PESIT default value is the only protocol-compliant
+the preconnection message. As the PESIT default value is the only protocol- compliant
 value, it is recommended that you only use a different value if so required
 by the partner.
 
@@ -372,19 +372,19 @@ concerned do not all use Transfer CFT.
     and the LOGON parameter is ignored.
 - When Transfer CFT
     is the requester and LOGON is set to NO, the SSERV parameter is applied
-    even if there is no pre-connection message for TCP/IP. The mode is different
+    even if there is no pre- connection message for TCP/IP. The mode is different
     if SSERV=GSIT, as explained in the previous paragraph.
 
 In requester mode and
 in PeSIT E, the LOGON=NO option (in the CFTPROT command) may be
 specified. In this case, the preconnection message is not sent.  
 The use of the SSERV parameter is not relevant since the string designating
-the protocol used is always PESIT (5 left-justified characters followed
+the protocol used is always PESIT (5 left- justified characters followed
 by 3 blanks).
 
 In server mode and in PeSIT E, Transfer
 CFT automatically adapts itself to the partner’s decision to execute a
-pre-connection phase or not. Any pre-connection message received is not,
+pre- connection phase or not. Any pre- connection message received is not,
 however, used and is always acknowledged positively. Indeed, the PeSIT
 connection acceptance or refusal is processed on receipt of the CONNECT
 FPDU which has to follow and which contains in particular the requester’s
@@ -412,7 +412,7 @@ the level of the CFTPROT command:
     mode, this option is used to initiate the use of a CRC and cannot
     be negotiated by the server partner.
 
-<!-- -->
+<!- - - - >
 
 - The implementation
     of the transmission error detection mechanism inhibits the FPDU concatenation
@@ -421,15 +421,15 @@ the level of the CFTPROT command:
     the checks. The CONCAT parameter of the CFTPROT command is set
     to the value NO by Transfer CFT.
 
-<!-- -->
+<!- - - - >
 
 - Performance capabilities
-    are not, however, penalized as multi-article FPDUs can be formed (MULTART
+    are not, however, penalized as multi- article FPDUs can be formed (MULTART
     = YES).  
     While the segmentation is certainly less efficient when concatenation
     is inhibited, it is all the same possible (see the SEGMENT parameter).
 
-<!-- -->
+<!- - - - >
 
 - The CRC length
     (2 bytes) must be taken into account in calculating the maximum size of
@@ -438,7 +438,7 @@ the level of the CFTPROT command:
     is greater than the maximum size of an NSDU reduced by 8 bytes, the article
     is segmented.
 
-<!-- -->
+<!- - - - >
 
 - The only dynamic
     resynchronization case possible between two Transfer CFTs is in
@@ -453,9 +453,8 @@ the level of the CFTPROT command:
 The table below summarizes the parameter values authorized according
 to the functional levels negotiated.
 
-
 | CFTPROT parameter <br /> for Negotiated functional levels  | PeSIT E  | PeSIT E +<br /> CFT extensions  |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | DISCTD  | 0..3600<br /> (dft: 120)  | 0..3600<br /> (dft: 120)  |
 | DISCTS  | 0..3600<br /> (dft: 165)  | 0..3600<br /> (dft: 65)  |
 | LOGON  | YES, NO  | YES, NO  |

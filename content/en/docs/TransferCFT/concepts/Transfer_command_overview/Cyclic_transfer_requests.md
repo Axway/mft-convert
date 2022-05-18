@@ -1,8 +1,8 @@
 ---
-    title: "Cyclic  transfer requests"
-    linkTitle: "Cyclic transfer requests"
-    weight: 250
----A cyclic transfer
+title: "Cyclic  transfer requests"
+linkTitle: "Cyclic transfer requests"
+weight: 250
+--- A cyclic transfer
 request is a periodic, repeated transfer request. The period, the time
 between 2 transfer activation cycles, is defined by the CYCLE and TCYCLE parameters.
 
@@ -41,8 +41,8 @@ SEND PART=PARIS, MINDATE=20150703, MINTIME=1000, MAXDATE=20151231, MAXTIME=1000,
 
 - The request start date and time is July 3, 2015 at 10:00 (MINDATE/MINTIME).
 - A period of inactivity begins on July 5, 2015 at 10:00 (CYCDATE/CYCTIME).
-    -   A child transfer of the cyclic request who's execution begins during the period of activity will complete, even if that time extends into time timeout.
-    -   Any child transfer of the generic request that is not executed before the timeout is lost.
+    - A child transfer of the cyclic request who's execution begins during the period of activity will complete, even if that time extends into time timeout.
+    - Any child transfer of the generic request that is not executed before the timeout is lost.
 - The cycle duration is 7 days (CYCLE/TCYCLE), so activity restarts on July 10, 2015.
 - This pattern repeats itself until the defined end date and time (MAXDATE/MAXTIME).
 
@@ -59,13 +59,11 @@ the time the catalog is queried (LISTCAT CONTENT=BRIEF).
 
 ******Generic entry values******
 
-
 | Diagp value  | Cycle  |
-| --- | --- |
+| - - - | - - - |
 | MIN CYC  | Cycle expressed in minutes  |
 | DAY CYC  | Cycle expressed in days  |
 | MON CYC  | Cycle expressed in months  |
-
 
 Use the CONTENT=FULL option to view all of the parameters for this cyclic
 request.

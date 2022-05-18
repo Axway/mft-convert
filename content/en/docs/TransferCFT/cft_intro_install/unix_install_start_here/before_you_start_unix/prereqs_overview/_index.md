@@ -1,8 +1,8 @@
 ---
-    title: "Prerequisites"
-    linkTitle: "1. Prerequisites "
-    weight: 130
----## Overview
+title: "Prerequisites"
+linkTitle: "1. Prerequisites "
+weight: 130
+--- ## Overview
 
 Axway products are delivered electronically from Sphere, the Axway support website. A welcome letter notifies you that your products are ready for download.
 
@@ -15,7 +15,7 @@ To install you will perform the following tasks:
 
 > **Note**
 >
-> If you have a 32-bit Transfer CFT installed, the Transfer CFT installer will update this to a 64-bit installation during a version 3.10 upgrade or migration.
+> If you have a 32- bit Transfer CFT installed, the Transfer CFT installer will update this to a 64- bit installation during a version 3.10 upgrade or migration.
 
 ## License keys
 
@@ -25,18 +25,18 @@ For information on applying a license key post installation, or if you have a pr
 
 - [UNIX: Applying a license key](../../troubleshoot_registration/t_license_key_unix)
 
-### Multi-node license keys
+### Multi- node license keys
 
-{{< TransferCFT/axwayvariablesComponentShortName  >}} in multi-node architecture requires a shared file system for use of a multi-node architecture on several hosts (active/active). Additionally, the system must be configured prior to the multi-node installation and the shared disk ready when starting the Copilot server.
+{{< TransferCFT/axwayvariablesComponentShortName  >}} in multi- node architecture requires a shared file system for use of a multi- node architecture on several hosts (active/active). Additionally, the system must be configured prior to the multi- node installation and the shared disk ready when starting the Copilot server.
 
 > **Note**
 >
 > See Shared file system prerequisites for details.
 
-You can use a single key for a multi-node installation, as either:
+You can use a single key for a multi- node installation, as either:
 
 - The hostname must not be defined for the key, or
-- The hostname defined for the key matches the hostname of one of the hosts that composes the multi-node instance
+- The hostname defined for the key matches the hostname of one of the hosts that composes the multi- node instance
 
 Additionally, the key must have the cluster option.
 

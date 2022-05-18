@@ -1,8 +1,8 @@
 ---
-    title: "waittask"
-    linkTitle: "waittask"
-    weight: 3770
----<span id="waittask"></span>
+title: "waittask"
+linkTitle: "waittask"
+weight: 3770
+--- <span id="waittask"></span>
 
 ### waittask
 
@@ -31,7 +31,5 @@ task is deactivated, meaning it is unloaded from the memory.
 
 - The task is permanent if this value is equal to 1441.
 - This parameter only applies to file EXIT tasks.
-
- 
 
 [Return to Command index](../../)

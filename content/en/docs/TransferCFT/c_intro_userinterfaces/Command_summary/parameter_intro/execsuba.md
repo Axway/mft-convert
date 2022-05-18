@@ -1,8 +1,8 @@
 ---
-    title: "execsuba"
-    linkTitle: "execsuba"
-    weight: 960
----### execsuba
+title: "execsuba"
+linkTitle: "execsuba"
+weight: 960
+--- ### execsuba
 
 CFTSEND, SEND
 

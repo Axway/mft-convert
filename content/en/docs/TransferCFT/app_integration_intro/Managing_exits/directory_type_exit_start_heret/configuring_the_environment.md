@@ -1,8 +1,8 @@
 ---
-    title: "Configuring  the environment"
-    linkTitle: "Configuring the environment"
-    weight: 350
----This topic describes how to configure the environment for a directory
+title: "Configuring  the environment"
+linkTitle: "Configuring the environment"
+weight: 350
+--- This topic describes how to configure the environment for a directory
 type exit. Before you submit a directory type EXIT, you must customize
 the following {{< TransferCFT/axwayvariablesComponentShortName  >}} objects:
 
@@ -16,7 +16,7 @@ tasks of all types simultaneously active is limited to a number depending
 on the operating system.
 
 EXIT type directory tasks are activated in memory when {{< TransferCFT/axwayvariablesComponentShortName  >}}
-is started and de-activated when the monitor is shut down.
+is started and de- activated when the monitor is shut down.
 
 <span id="Defining_the_CFTPROT_object"></span>
 
@@ -116,7 +116,7 @@ Size of the working area reserved for the user.
 
 This area is not used by the {{< TransferCFT/axwayvariablesComponentShortName  >}} interface. You can use it
 to save data required for the processing of the program that you have
-written. This area is de-allocated when the {{< TransferCFT/axwayvariablesComponentShortName  >}} interface de-selects
+written. This area is de- allocated when the {{< TransferCFT/axwayvariablesComponentShortName  >}} interface de- selects
 the file.
 
 ******[TYPE](../../../../c_intro_userinterfaces/command_summary/parameter_intro/type) =

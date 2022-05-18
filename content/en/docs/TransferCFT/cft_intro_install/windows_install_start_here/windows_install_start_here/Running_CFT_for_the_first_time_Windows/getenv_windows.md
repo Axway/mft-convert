@@ -1,8 +1,8 @@
 ---
-    title: "Define additional environment variables "
-    linkTitle: "Define additional environment variables"
-    weight: 260
----When loading the Transfer CFT profile, files that are stored in the `profile.d` directory are also executed, and all defined environment variables are then available in the current environment. This enables you to use these variables in the Transfer CFT configuration or processing scripts.
+title: "Define additional environment variables "
+linkTitle: "Define additional environment variables"
+weight: 260
+--- When loading the Transfer CFT profile, files that are stored in the `profile.d` directory are also executed, and all defined environment variables are then available in the current environment. This enables you to use these variables in the Transfer CFT configuration or processing scripts.
 
 When loading the profile, the files that are loaded depend on if you are using Batch or PowerShell:
 

@@ -1,8 +1,8 @@
 ---
-    title: "Transferred files physical properties"
-    linkTitle: "Work with files"
-    weight: 220
----Transferred files can be designated by physical or logical names. As the files are accessed by {{< TransferCFT/axwayvariablesComponentShortName  >}} sub-processes, the logical names used must be defined in a table of logical names at least at JOB level.
+title: "Transferred files physical properties"
+linkTitle: "Work with files"
+weight: 220
+--- Transferred files can be designated by physical or logical names. As the files are accessed by {{< TransferCFT/axwayvariablesComponentShortName  >}} sub- processes, the logical names used must be defined in a table of logical names at least at JOB level.
 
 The physical file name must include the name and name extension. If there is no extension, add the '.' character to the end of the file name. Otherwise, the transfer fails with an ERRLREC error.
 
@@ -18,9 +18,8 @@ These values are given explicitly in the CFTRECV command or received at protocol
 
 The following table describes the physical properties for transferred files.
 
-
 | Parameter  | Definition  |
-| --- | --- |
+| - - - | - - - |
 | FSPACE | Disk space occupied by the file in KB. |
 | FLRECL | Maximum size of a record in the file. |
 | FBLKSIZE | The first multiple of 512 greater than the length of the record in the file. |
@@ -31,12 +30,10 @@ The following table describes the physical properties for transferred files.
 | FKEYLEN | For an indexed file: key length. |
 | FKEYPOS | For an indexed file: key offset in the record. |
 
-
 The following table describes the FTYPE, FRECFM and FCODE assigned by {{< TransferCFT/axwayvariablesComponentShortName  >}} according to the file type.
 
-
 | FAB Record Format Field Value (FAB$B_RFM)  | FRECFM  | FTYPE  | FCODE  |
-| --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - |
 | FAB$C_FIX | 'F' | ' ' | ASCII |
 | FAB$C_UDF | 'U' | ' ' | ASCII |
 | FAB$C_VAR | 'V' | 'P' | ASCII |
@@ -45,12 +42,10 @@ The following table describes the FTYPE, FRECFM and FCODE assigned by {{< Transf
 | FAB$C_STMLF | 'V' | 'L' | ASCII |
 | FAB$C_STMCR | 'V' | 'R' | ASCII |
 
-
 The following table describes the file type according to the FRECFM and FTYPE parameters.
 
-
 | FRECFM  | FTYPE  | FAB Record Format Field Value (FAB$B_RFM)  |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | 'F' |   | FAB$C_FIX |
 | 'U' |   | FAB$C_UDF |
 | 'V' | 'C' | FAB$C_VFC |
@@ -59,7 +54,6 @@ The following table describes the file type according to the FRECFM and FTYPE pa
 | 'V' | 'R' | FAB$C_STMCR |
 | 'V' | 'P' | FAB$C_VAR |
 
-
 ## Received file versions
 
 During receive operations, {{< TransferCFT/axwayvariablesComponentShortName  >}} can generate successive file versions according to the file name syntax associated with the CFTRECV command.
@@ -67,12 +61,12 @@ During receive operations, {{< TransferCFT/axwayvariablesComponentShortName  >}}
 - &lt;filename>.&lt;ext> or &lt;filename>.&lt;ext>;  
     The transfer might be refused, depending on the CFTRECV command FACTION and FDISP parameters. The file envelope is reused if available or deleted and then recreated.
 
-<!-- -->
+<!- - - - >
 
 - &lt;filename>.&lt;ext>;n   
     The file is created with the requested version number. If it already exists in a later version, the transfer is refused. If it exists in the same version, the transfer might be refused, depending on the CFTRECV command FACTION and FDISP parameters. The file envelope is reused or deleted and then recreated.
 
-<!-- -->
+<!- - - - >
 
 - &lt;filename>.&lt;ext>;+1   
     If the file does not exist, it is created with version ;1. Otherwise, it is created with a version that is greater than the most recent file version available. The transfer may be refused, depending on the CFTRECV command FACTION and FDISP parameters. If the transfer is successful, a new version is systematically created.

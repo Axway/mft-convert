@@ -1,8 +1,8 @@
 ---
-    title: "exiteot"
-    linkTitle: "exiteot"
-    weight: 1010
----<span id="exiteot"></span>
+title: "exiteot"
+linkTitle: "exiteot"
+weight: 1010
+--- <span id="exiteot"></span>
 
 ### exiteot
 

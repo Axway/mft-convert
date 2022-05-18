@@ -1,8 +1,8 @@
 ---
-    title: "opermsg"
-    linkTitle: "opermsg"
-    weight: 2490
----<span id="opermsg"></span>
+title: "opermsg"
+linkTitle: "opermsg"
+weight: 2490
+--- <span id="opermsg"></span>
 
 ### opermsg
 
@@ -19,11 +19,10 @@ defined by the algebraic sum of the values indicated in the following
 table, where:
 
 - Operating: Includes all messages related to transfers and CRON jobs.
-- System: Includes all internal messages, such as Transfer CFT start, stop, catalog, tasks, multi-node, and so on.
-
+- System: Includes all internal messages, such as Transfer CFT start, stop, catalog, tasks, multi- node, and so on.
 
 | Value  | Message category  | Type  |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | 1  | Operating information messages  | I  |
 | 2  | System information messages  | I  |
 | 4  | Operating warning messages  | W  |
@@ -32,7 +31,6 @@ table, where:
 | 32  | System error messages  | E  |
 | 64  | Operating fatal error messages  | F  |
 | 128  | System fatal error messages  | F  |
-
 
 The I, W, E, F types correspond to the type of message in
 the log file. See {{< TransferCFT/axwayvariablesComponentShortName  >}} <a href="../../../../troubleshoot_intro/messages_and_error_codes_start_here" class="MCXref xref">Transfer CFT messages

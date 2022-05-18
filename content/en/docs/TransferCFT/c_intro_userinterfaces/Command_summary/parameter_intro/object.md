@@ -1,8 +1,8 @@
 ---
-    title: "object "
-    linkTitle: "object"
-    weight: 2390
----<span id="object"></span>
+title: "object "
+linkTitle: "object"
+weight: 2390
+--- <span id="object"></span>
 
 ### object
 
@@ -17,8 +17,5 @@
 - STATS: Display internal statistics (for advanced diagnostic purposes)
 - PROBE: Display probe transfer information
 
- 
-
 [Return to Command index](../../)
 
- 

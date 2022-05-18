@@ -1,8 +1,8 @@
 ---
-    title: "Create an additional user "
-    linkTitle: "Create additional user "
-    weight: 210
----## Manage user rights
+title: "Create an additional user "
+linkTitle: "Create additional user "
+weight: 210
+--- ## Manage user rights
 
 System managers can use one of several methods to block Transfer CFT usage, as a system administrator may need to prohibit the general use of Transfer CFT IBM i.
 
@@ -37,7 +37,7 @@ You can create an additional user that interacts with the Transfer CFT instance.
 
 ## Create an APP1 user
 
-It is up to the system administrator to make the decision to create a Transfer CFT-specific user profile. We recommend that if possible you use this type of profile to simplify security management, execution environment generation, and Transfer CFT operations.
+It is up to the system administrator to make the decision to create a Transfer CFT- specific user profile. We recommend that if possible you use this type of profile to simplify security management, execution environment generation, and Transfer CFT operations.
 
 Unless you wish to differentiate between several Transfer CFT IBM i instances running concurrently on the same system, you should use the Transfer CFT profile name (USRPRF = APP1). If you decide to use Transfer CFT as a profile, you must create this Transfer CFT profile prior to installing the product.
 
@@ -77,7 +77,7 @@ CHGOWNCFT applies a CHGOBJOWN command to give object ownership to the selected u
 
 You must give \*RX rights to all IFS files created in the `/home/cft/Transfer_CFT/install` (default) and `/home/cft/Transfer_CFT/runtime` (default) directories.
 
-The system environment of the user who performs the installation procedure is applied by default if there is no Transfer CFT-specific profile applied during installation. The user profile owns the objects created during installation, but not restored objects such as programs, commands, etc.
+The system environment of the user who performs the installation procedure is applied by default if there is no Transfer CFT- specific profile applied during installation. The user profile owns the objects created during installation, but not restored objects such as programs, commands, etc.
 
 ## Update the APP1 profile to use Transfer CFT instance
 

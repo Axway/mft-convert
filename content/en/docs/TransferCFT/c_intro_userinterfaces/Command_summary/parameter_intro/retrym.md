@@ -1,8 +1,8 @@
 ---
-    title: "retrym"
-    linkTitle: "retrym"
-    weight: 2900
----<span id="retrym"></span>
+title: "retrym"
+linkTitle: "retrym"
+weight: 2900
+--- <span id="retrym"></span>
 
 ### retrym
 
@@ -47,8 +47,5 @@ The retry order is as follows:
 - IP2 SAP2 PROT2 (second host, second protocol)
 - IP2 SAP2 PROT2 (retry)
 
- 
-
 [Return to Command index](../../)
 
- 

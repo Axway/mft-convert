@@ -1,7 +1,7 @@
 ---
     title: "Sentinel to Transfer CFT to InterPEL mapping"
-    linkTitle: "Sentinel to Transfer CFT to InterPEL mapping"
-    weight: 260
+linkTitle: "Sentinel to Transfer CFT to InterPEL mapping"
+weight: 260
 ---The following tables list parameter correspondence between Transfer CFT, Sentinel, and InterPEL. You find this mapping using in migrating from InterPEL to Transfer CFT.
 
 > **Note**
@@ -12,15 +12,12 @@
 
 ### Roles
 
-
 | Sentinel<br/> attribute | Data type  | Length  | Description  | Transfer CFT  | InterPEL Core  | InterPEL MVS  |
 | --- | --- | --- | --- | --- | --- | --- |
 | Direction  | Integer  | -  | S: The file is sent (Sender).<br/> R: The file is received (Receiver). | DIRECT  | From direction:<br/> "R" "E" "B" | TYPEREQ={S&#124;M or C}  |
 | IsServer  | Integer  | -  | 1: The Sender or the Receiver is a Server.<br/> 0: The Sender the Receiver is a Requester. | FLAG  | From mode:<br/> Initiator "R" Responder "S" | MLHMODR - Initiator “R” Responder “S” (depending on the STOSR parameter)  |
 
-
 ### Senders and receivers
-
 
 | Sentinel  | Data type  | Length  | Description  | Transfer CFT  | InterPEL Core  | InterPEL MVS  |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -34,11 +31,9 @@
 | FinalReceiverId  | String  | 80  | Name of the final Receiver when using Store and Forward, otherwise the same as the ReceiverId.  | NDEST  | destination  | MLHBP  |
 | OriginalSenderId  | String  | 80  | Name of the original Sender when using Store and Forward, otherwise the same as the SenderId.  | NORIG  | originator  | MLHORG1  |
 
-
 ### Product identification
 
 The product that sends the events is identified with the following:
-
 
 | Sentinel  | Data type  | Length  | Description  | Transfer CFT  | InterPEL Core  | InterPEL MVS  |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -48,9 +43,7 @@ The product that sends the events is identified with the following:
 | Machine  | String  | 25  | Name of the application and platform that run on a Transfer CFT  | PRODUCT_TYPE:<br/> "CFT-UNIX" "CFTL-NT" "CFT-MVS" "CFT-400" "CFT-NSK" "CFT-VMS" | PRODUCT_TYPE:<br/> "PEL-UNIX" "PEL-NT" "PEL-400" "PEL-NSK" | PELIMVS  |
 | ProductName  | String  | 50  | N/A  | uconf: sentinel.trkproductname  | local_site_alias  | N/A  |
 
-
 ### Transfer users
-
 
 | Sentinel  | Data type  | Length  | Description  | Transfer CFT  | InterPEL Core  | InterPEL MVS  |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -62,9 +55,7 @@ The product that sends the events is identified with the following:
 | RUser  | String  | 30  | Optional local identifier of the user who received the transfer.  | RUSER  | rcv_user  | MLHUSERN  |
 | SUser  | String  | 30  | Optional local identifier of the user who sent the transfer.  | SUSER  | snd_user  | N/A  |
 
-
 ### Transfer identification
-
 
 | Sentinel  | Data type  | Length  | Description  | Transfer CFT  | InterPEL Core  | InterPEL MVS  |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -83,9 +74,7 @@ The product that sends the events is identified with the following:
 | UserParameter2  | String  | 255  | Local transfer description.<br/> This description is recorded at the transfer request time in the local DB and remains local. | N/A  | param2  | N/A  |
 | VirtualDirName  | String  | 255  | Virtual directory name  | N/A  | dir_name (not stored, always empty)  | N/A  |
 
-
 ### Transfer validity periods
-
 
 | Sentinel  | Data type  | Length  | Description  | Transfer CFT  | InterPEL Core  | InterPEL MVS  |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -94,9 +83,7 @@ The product that sends the events is identified with the following:
 | LatestDate  | Date  | N/A  | Date on which the validity period ends.  | DATEMAX (Catalog)  | From date_to_end: date  | N/A  |
 | LatestTime  | Time  | N/A  | Time at which the validity period ends.  | TIMEMAX (Catalog)  | From date_to_end: time  | HSFIN  |
 
-
 ### Transfer dates and times
-
 
 | Sentinel  | Data type  | Length  | Description  | Name in  | InterPEL Core  | InterPEL MVS  |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -114,9 +101,7 @@ The product that sends the events is identified with the following:
 | RequestCreationTime  | Time  | N/A  | If the value of the State attribute is:<br/> • SENT: The value of this attribute is local time of the creation of the file on the Sender side.<br/> • RECEIVED: The value of this attribute is the time of the creation of the file on the Sender side.<br/> ITP: transfer request creation time. | From FTIME (Catalog)  | From date_create: time  |  MLHTIMR  |
 | TransmissionDuration  | Integer  | N/A  | Transfer duration, expressed in seconds.  | From TIMES (Catalog)  | date_end-date_begin  | MLHDATDT - MLHDATFT  |
 
-
 ### Transfer protocols
-
 
 | Sentinel  | Data type  | Length  | Description  | Transfer CFT  | InterPEL Core  | InterPEL MVS  |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -125,9 +110,7 @@ The product that sends the events is identified with the following:
 | SSLAuth  | String  | 1  |  • S: The Server sent X.509 certificates to the Requester.<br/> • B: Both the Server and the Requester sent X.509 certificates to each other.<br/> • N: Neither the Server nor the Requester sent X.509 certificates. | From SSLAUTH (Catalog)  | From client_auth , server_auth: same values  |  MLHSSLCA  |
 | SSLCypher  | String  | 2  | The cipher suite that the Server and the Requester used during the SSL/TLS session.  | From SSLCIPH (Catalog)  | cipher_suite  | MLHSSLCS  |
 
-
 ### Transfer options
-
 
 | Sentinel  | Data type  | Length  | Description  | Transfer CFT  | InterPEL Core  | InterPEL MVS  |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -140,18 +123,14 @@ The product that sends the events is identified with the following:
 | TransferType  | String  | 1  | One of the following:<br/> • S: The Sender sent a single transfer to a single Receiver.<br/> • F: The transfer belongs to a group of transfers that the Sender sent to a single Receiver. For each transfer in the group, the product generated one Processing Cycle.<br/> • D: The Receiver belongs to a group of Receivers to whom the Sender sent the transfer (diffusion). For each Receiver in the group, the product generated one Processing Cycle. | Same as box above  | N/A (Gateway value)  |  MLHLDFKL  |
 | IsPermanent  | Char  | N/A  | Permanent transfer  | N/A  | perm  | N/A  |
 
-
 ## Transfer size
-
 
 | Sentinel attribute  | Data type  | Length  | Description  | Transfer CFT | InterPEL Core  | InterPEL MVS  |
 | --- | --- | --- | --- | --- | --- | --- |
 | FileSize  | Integer  | N/A  | Size of the transferred file. This size is expressed in bytes. <br/> <blockquote> **Note**<br/> For PeSIT, an estimation of size is given at the beginning of the transfer. This value is updated upon completion of the transfer with the real value.<br/> </blockquote>  | FCARS  |  file_size  |  MLHNBYTE  |
 | TransmittedBytes  | Integer  | N/A  | Number of bytes transferred, after decompression, to transfer the file. This size is expressed in bytes. <br/> <blockquote> **Note**<br/> For PeSIT, this value sent is crosschecked by both the sender and receiver.<br/> </blockquote>  | NCARS  | x_bytes  | MLHABYTE  |
 
-
 ### Transfer structure and content
-
 
 | Sentinel attribute  | Data type  | Length  | Description  | Transfer CFT | InterPEL Core  | InterPEL MVS  |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -166,9 +145,7 @@ The product that sends the events is identified with the following:
 | TranslationTableId  | String  | 25  | Name of the local translation table use during the transfer (if any).  | XLATE  | N/A (data_code, not set)  | N/A  |
 | BlockSize  | Integer  | N/A  | File block size (used by some OS)  | From FBLKSIZE (Catalog)  | block_size  | N/A  |
 
-
 ### Other attributes
-
 
 | Sentinel attribute  | Data type  | Length  | Description  | Transfer CFT  | InterPEL Core  | InterPEL MVS  |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -181,9 +158,7 @@ The product that sends the events is identified with the following:
 | ReturnCode  | String  | 20  | Last transfer diagnostic.  | From DIAGI and DIAGP (Catalog)  | last_end_diag  | MLHPDTSE + MLHPDCSE  |
 | UserState  | String  | 20  | Transfer user state.  | From APPSTATE (Catalog)  | user_state  | N/A  |
 
-
 ## XFBLog tracked object
-
 
 | Sentinel attribute  | Data type  | Length  | Description  | Transfer CFT  | InterPEL Core  | InterPEL MVS  |
 | --- | --- | --- | --- | --- | --- | --- |

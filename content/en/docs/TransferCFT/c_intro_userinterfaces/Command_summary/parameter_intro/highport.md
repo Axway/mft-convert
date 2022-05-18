@@ -1,8 +1,8 @@
 ---
-    title: "highport"
-    linkTitle: "highport"
-    weight: 1440
----<span id="highport"></span>
+title: "highport"
+linkTitle: "highport"
+weight: 1440
+--- <span id="highport"></span>
 
 ### highport
 
@@ -22,7 +22,5 @@ Defines the upper limit for the range of outgoing ports (value included).
 #### CONFIG, TYPE=COM, MEDIACOM=TCPIP
 
 ****[HIGHPORT = {65535 &#124; n}]****
-
- 
 
 [Return to Command index](../../)

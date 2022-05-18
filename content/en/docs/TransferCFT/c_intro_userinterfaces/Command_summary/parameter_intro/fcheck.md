@@ -1,8 +1,8 @@
 ---
-    title: "fcheck"
-    linkTitle: "fcheck"
-    weight: 1080
----<span id="fcheck"></span>
+title: "fcheck"
+linkTitle: "fcheck"
+weight: 1080
+--- <span id="fcheck"></span>
 
 ### fcheck
 

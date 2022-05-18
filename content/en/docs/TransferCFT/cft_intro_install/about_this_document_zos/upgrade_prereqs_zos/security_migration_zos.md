@@ -1,8 +1,8 @@
 ---
-    title: "Security updates with migration "
-    linkTitle: "Updating security"
-    weight: 210
----If your {{< TransferCFT/axwayvariablesComponentLongName  >}} UCONF security setting was` am.type=cft`, you must migrate to am.type=exit in {{< TransferCFT/axwayvariablesComponentLongName  >}} {{< TransferCFT/axwayvariablesReleaseNumber  >}}. This migration process is delivered with Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}}.
+title: "Security updates with migration "
+linkTitle: "Updating security"
+weight: 210
+--- If your {{< TransferCFT/axwayvariablesComponentLongName  >}} UCONF security setting was` am.type=cft`, you must migrate to am.type=exit in {{< TransferCFT/axwayvariablesComponentLongName  >}} {{< TransferCFT/axwayvariablesReleaseNumber  >}}. This migration process is delivered with Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}}.
 
 ## Replace habilitation
 
@@ -26,7 +26,7 @@ There was no profile for the resource/action SERVICE: CFTSRV, STARTUP so to ensu
 
 - Issue when creating transfers via the user interface when using resource APPL.\* as the former habilitation.
 - **Show my privileges** does not accurately display privileges.
-- You can no longer use the FNAME as a criteria to characterize the TRANSFER resource. This can result in regressions on SEND-type transfers. You may need to revise the PERMIT (RACF) definitions for the TRANSFER profile.
+- You can no longer use the FNAME as a criteria to characterize the TRANSFER resource. This can result in regressions on SEND- type transfers. You may need to revise the PERMIT (RACF) definitions for the TRANSFER profile.
 - Some issues with MESSAGE resource being confused with the TRANSFER resource.
 - You must define a new GENERAL RESOURCE PROFILE UI to manage access to the Transfer CFT user interface, connecting authorized users or groups to this profile.
 - You must define a FILE GENERAL RESOURCE PROFILE used with the CREATE/DELETE parameter files with the CFTFILE command.

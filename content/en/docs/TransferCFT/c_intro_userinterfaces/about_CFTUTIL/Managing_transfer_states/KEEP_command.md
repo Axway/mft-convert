@@ -1,8 +1,8 @@
 ---
-    title: "KEEP - Suspend  transfers"
-    linkTitle: "KEEP - Suspending transfers"
-    weight: 320
----This topic describes the KEEP command, which is used to <span id="About_the_KEEP_Command"></span>suspend
+title: "KEEP - Suspend  transfers"
+linkTitle: "KEEP - Suspending transfers"
+weight: 320
+--- This topic describes the KEEP command, which is used to <span id="About_the_KEEP_Command"></span>suspend
 one or all of the send, or one or all of the receive, transfers with selected
 partners.
 
@@ -16,9 +16,8 @@ and, depending on the protocol used, authorizes the restarting of the
 transfer from the last synchronization point set before the interruption,
 or simply from the beginning of the file.
 
-
 | Parameters  | Description  |
-| --- | --- |
+| - - - | - - - |
 | [BLKNUM](../../../command_summary/parameter_intro/blknum)  | Catalog block number. If the values '*' or ' ' are used then all transfers are selected regardless of the block that they belong to. |
 | [DIAGC]()  | Protocol diagnostic code  |
 | [DIAGP](../../../command_summary/parameter_intro/diagp)  | Complimentary diagnostic information  |
@@ -34,7 +33,6 @@ or simply from the beginning of the file.
 | [PHASESTEP]()  | Phase step of a catalog entry.  |
 | [SCOPE](../../../command_summary/parameter_intro/scope)  | Scope &lt;PARENT&gt; ('PARENT','ALL','CHILDREN').  |
 | [STATE](../../../command_summary/parameter_intro/state)  | Transfer request state.  |
-
 
 #### Example 1
 
@@ -61,9 +59,8 @@ whose identifier begins with PARIS.
 
 The following tables describes the parameters used to modify a transfer entry in the catalog.
 
-
 | Command  | Parameter  | Value  | Description  |
-| --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - |
 | KEEP  | DIAGC  | string  | Specify a comment.  |
 | KEEP  | DIAGP  | string  | Specify a comment.  |
 

@@ -1,8 +1,8 @@
 ---
-    title: "ikform"
-    linkTitle: "ikform"
-    weight: 1600
----<span id="ikform"></span>
+title: "ikform"
+linkTitle: "ikform"
+weight: 1600
+--- <span id="ikform"></span>
 
 ### ikform
 

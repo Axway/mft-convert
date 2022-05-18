@@ -1,8 +1,8 @@
 ---
-    title: "Tracking configuration changes"
-    linkTitle: "Configuration change logging"
-    weight: 140
----The configuration auditing feature enables Transfer CFT to track configuration changes and send this information to the Sentinel
+title: "Tracking configuration changes"
+linkTitle: "Configuration change logging"
+weight: 140
+--- The configuration auditing feature enables Transfer CFT to track configuration changes and send this information to the Sentinel
 server. The configuration change can be:
 
 - Deleting, modifying, or creating a CFTxxx object (PART, or PART database)
@@ -49,9 +49,8 @@ containing:
 
 ### Ident attribute details
 
-
 | CFTA0nX  | Details  |
-| --- | --- |
+| - - - | - - - |
 | n=1 | CFTPARM file  |
 | n=2 | CFTPART file  |
 | n=3 | CFTCAT file  |
@@ -61,14 +60,12 @@ containing:
 | X=I  | Information  |
 | X=E  | Error  |
 
-
 <span id="Return message attribute"></span>
 
 ### Return message attribute details
 
-
 | Attribute  | Details  |
-| --- | --- |
+| - - - | - - - |
 | Action=&amp;act  |  &amp;act is the action on an object (“CREATE” , “MODIFY” , “DELETE”)  |
 | Object=&amp;obj  | &amp;obj is the object identifier (type of object for the CFTFILE command)  |
 | id=&amp;id  |   |
@@ -79,7 +76,6 @@ containing:
 | CrTime=&amp;ctime  | &amp;ctime is the Creation Time for the object  |
 | UpdDate=&amp;upddate  | &amp;upddate is the Update Date for the object  |
 | UpdTime=&amp;updtime  | &amp;updtime is the Update Time for the object  |
-
 
 ## Disable XFB.Log
 

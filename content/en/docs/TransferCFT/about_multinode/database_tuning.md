@@ -1,16 +1,16 @@
 ---
-    title: "Tuning the database cache"
-    linkTitle: "Tuning the database cache"
-    weight: 220
----This section describes how you can enhance performance using the database cache feature.
+title: "Tuning the database cache"
+linkTitle: "Tuning the database cache"
+weight: 220
+--- This section describes how you can enhance performance using the database cache feature.
 
 ## Overview
 
 For each new transfer, {{< TransferCFT/axwayvariablesComponentLongName  >}} retrieves information directly from the internal database for **dynamic objects** as described below. This type of accessing generates a lot of file I/O operations for the cftparm file.
 
-In an environment with high-performance file I/O, such as local SSD storage, frequently accessing these files is not an issue. However, on a multi-node Transfer CFT where the databases are located on a shared file system, such as NFS, this type of file accessing could have a significant impact on Transfer CFT's global performance.
+In an environment with high- performance file I/O, such as local SSD storage, frequently accessing these files is not an issue. However, on a multi- node Transfer CFT where the databases are located on a shared file system, such as NFS, this type of file accessing could have a significant impact on Transfer CFT's global performance.
 
-To reduce file I/O operations, thus improving performance on a non-performant disk, we recommend that you keep the database cache enabled. Doing so enables {{< TransferCFT/axwayvariablesComponentLongName  >}} to more quickly access the required objects.
+To reduce file I/O operations, thus improving performance on a non- performant disk, we recommend that you keep the database cache enabled. Doing so enables {{< TransferCFT/axwayvariablesComponentLongName  >}} to more quickly access the required objects.
 
 ## Dynamic object considerations
 

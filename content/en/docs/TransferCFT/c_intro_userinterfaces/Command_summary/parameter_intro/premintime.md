@@ -1,8 +1,8 @@
 ---
-    title: "premintime"
-    linkTitle: "premintime"
-    weight: 2690
----### premintime
+title: "premintime"
+linkTitle: "premintime"
+weight: 2690
+--- ### premintime
 
 #### SEND
 

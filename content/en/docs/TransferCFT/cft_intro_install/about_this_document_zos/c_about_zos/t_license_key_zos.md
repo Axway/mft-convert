@@ -1,8 +1,8 @@
 ---
-    title: "Apply a license key "
-    linkTitle: "Apply a license key "
-    weight: 200
----## Check your authorization
+title: "Apply a license key "
+linkTitle: "Apply a license key "
+weight: 200
+--- ## Check your authorization
 
 Verify that you can access Sphere by going to [support.axway.com](https://support.axway.com/) and logging in. If you do not have an account, follow the instructions in your welcome letter.
 
@@ -27,15 +27,15 @@ You need to apply a valid license key to Transfer CFT in the following situatio
 
 > **Note**
 >
-> You require as many keys as instances of Transfer CFT running at same time, including when running in multi-node. For example, two Transfer CFT instances cannot run at the same time, on the same server, using the same license key.
+> You require as many keys as instances of Transfer CFT running at same time, including when running in multi- node. For example, two Transfer CFT instances cannot run at the same time, on the same server, using the same license key.
 
 ## Obtain a license key
 
 1. For a new installation, install {{< TransferCFT/axwayvariablesComponentShortName >}}.
 1. After completing the installation, or for an existing installation, use the command **`cftutil about`** to retrieve your system information. For details see the examples below.
 1. Contact the Axway Fulfillment team at the appropriate email address to obtain a valid key.
-    -   For a US key, contact: **`fulfillment@us.axway.com`**
-    -   For an EMEA or APAC key, contact: **`product.key@axway.com`**
+    - For a US key, contact: **`fulfillment@us.axway.com`**
+    - For an EMEA or APAC key, contact: **`product.key@axway.com`**
 1. Provide the hostname where Transfer CFT is to be installed or updated.
 1. Provide the list of characters in the CPU ID.
 
@@ -48,10 +48,10 @@ To apply the license key from the Axway Fulfillment team, enter the key(s) in th
 - The file can contain one or multiple license keys, but there must be one key per line.
 - On start up the first valid key is used.
 
-Transfer CFT in multi-node architecture can use a single key for a multi-node installation; as either:
+Transfer CFT in multi- node architecture can use a single key for a multi- node installation; as either:
 
 - The hostname must not be defined for the key, or
-- The hostname defined for the key matches the hostname of one of the hosts that composes the multi-node instance
+- The hostname defined for the key matches the hostname of one of the hosts that composes the multi- node instance
 
 Additionally, the key must have the cluster option.
 

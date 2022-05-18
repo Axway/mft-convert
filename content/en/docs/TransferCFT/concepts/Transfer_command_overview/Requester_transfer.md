@@ -1,8 +1,8 @@
 ---
-    title: "Requester  transfer"
-    linkTitle: "Requester transfer"
-    weight: 180
----A requester transfer involves the following steps:
+title: "Requester  transfer"
+linkTitle: "Requester transfer"
+weight: 180
+--- A requester transfer involves the following steps:
 
 - [Registering
     the request](#Registering_the_request)
@@ -171,7 +171,7 @@ K state.
 
 The data in the file is transferred item by item, broken down into or
 concatenated with the data units conveyed over the network, as necessary.
-The exchange protocol may, depending on the type, include re-synchronization
+The exchange protocol may, depending on the type, include re- synchronization
 and compression functions.
 
 The file type EXIT allows the user to:
@@ -186,7 +186,7 @@ The file type EXIT allows the user to:
 ### Disconnecting
 
 On completion of data transfer, the files are closed, the network connection
-is cut after the expiration of the associated hold time-out. According
+is cut after the expiration of the associated hold time- out. According
 to the protocol, the monitor parameter setting allows a network session
 to be held open to permit several transfers to be made in sequence. Network
 disconnection is at the initiative of the requesting Transfer CFT or the server

@@ -1,15 +1,15 @@
 ---
-    title: "CFTRECV  - Receive templates"
-    linkTitle: "Receive templates - CFTRECV "
-    weight: 210
----This topic describes the {{< TransferCFT/suitevariablesTransferCFTName  >}}
+title: "CFTRECV  - Receive templates"
+linkTitle: "Receive templates - CFTRECV "
+weight: 210
+--- This topic describes the {{< TransferCFT/suitevariablesTransferCFTName  >}}
 receive template. You can use the CFTRECV object to:
 
 - Give the default
     name and local physical characteristics of the file to receive
 - Define the default
     actions to perform locally during and after the transfer (translation,
-    compression, call to a user EXIT, an end-of-transfer procedure...)
+    compression, call to a user EXIT, an end- of- transfer procedure...)
 - Authorize the default
     time slot and default user associated with the transfers
 
@@ -19,9 +19,8 @@ topics****
 - Command syntax
     [CFTRECV](../../../command_summary#CFTRECV)
 
-
 | Parameter  | Description  |
-| --- | --- |
+| - - - | - - - |
 | [COMMENT](../../../command_summary/parameter_intro/comment) | Local alphanumeric comment associated with receive transfers. |
 | [CYCDATE](../../../command_summary/parameter_intro/cycdate) | Upper final date for activating the first transfer of a cycle. |
 | [CYCTIME](../../../command_summary/parameter_intro/cyctime) | Upper limit time for activating the first transfer of a cycle. |
@@ -41,7 +40,7 @@ topics****
 | [FORCE](../../../command_summary/parameter_intro/force)  | Determines the priority with which the parameters set in CFTRECV are taken into account relative to the parameters set in an associated RECV command. |
 | [FORG](../../../command_summary/parameter_intro/forg)  | Organization of the file to be sent. |
 | [FRECFM](../../../command_summary/parameter_intro/frecfm)  | Record format of the receiver file. |
-| [FSPACE](../../../command_summary/parameter_intro/fspace)  | Size of the receiver file, in K-bytes (1 K-byte = 1024 bytes). |
+| [FSPACE](../../../command_summary/parameter_intro/fspace)  | Size of the receiver file, in K- bytes (1 K- byte = 1024 bytes). |
 | [FTYPE](../../../command_summary/parameter_intro/ftype#ftype) | Type of the receiver file. |
 | [GROUPID](../../../command_summary/parameter_intro/groupid) | Information completing the USERID of the CFTRECV command. |
 | [ID](../../../command_summary/parameter_intro/id#id_CFTSEND)  | Local model file identifier (IDF). |
@@ -52,7 +51,7 @@ topics****
 | [MINTIME](../../../command_summary/parameter_intro/mintime) | Transfer initial validity time, from the first day (MINDATE). |
 | [NCHARSET](../../../command_summary/parameter_intro/ncharset)  | Defines the destination file encoding that is used on a file to encode or decode network data.  |
 | [NCODE](../../../command_summary/parameter_intro/ncode)  | The network data code when receiving transfers. *Available only when using SFTP.*  |
-| [NCOMP](../../../command_summary/parameter_intro/ncomp) | Compression of on-line data requested by the receiver. |
+| [NCOMP](../../../command_summary/parameter_intro/ncomp) | Compression of on- line data requested by the receiver. |
 | [NETBAND](../../../command_summary/parameter_intro/netband) | Select the outgoing port range. |
 | [NOTIFY](../../../command_summary/parameter_intro/notify) | Defines the destination of the messages associated with the send transfer selected from the log file messages, by the value of the OPERMSG parameter. |
 | [OPERMSG](../../../command_summary/parameter_intro/opermsg)  | Defines the categories of transfer information messages intended for the operator (all the messages also being written in the log file). |
@@ -68,7 +67,6 @@ topics****
 | [WFNAME](../../../command_summary/parameter_intro/wfname)  | Name of the temporary file used during the transfer. |
 | [XLATE](../../../command_summary/parameter_intro/xlate)  | Identifier of the translation table used for the receive transfers. |
 
-
 #### Examples
 
 This section displays examples for a default receive template.
@@ -79,7 +77,7 @@ This section displays examples for a default receive template.
 
 ```
 MODE = REPLACE,
- 
+
 ID = SRCFILES,
 /\* IDF for source files \*/
 FDISP = BOTH

@@ -1,8 +1,8 @@
 ---
-    title: "Transfer  scheduling"
-    linkTitle: "Transfer scheduling"
-    weight: 240
----This topic describes transfer requests and transfer scheduling.
+title: "Transfer  scheduling"
+linkTitle: "Transfer scheduling"
+weight: 240
+--- This topic describes transfer requests and transfer scheduling.
 
 ## Transfer requests
 
@@ -27,9 +27,9 @@ Transfer phase:
 - If it is in the
     ****D**** DISP state, but Transfer CFT
     does not have the resources required to activate it.
-    -   Or if the transfer
+    - Or if the transfer
         cannot be activated at that time because there is a MINTIME or MINDATE requirement.
-    -   Or if Transfer CFT is already processing
+    - Or if Transfer CFT is already processing
         MAXTRANS active transfers.
 
 The sequencing of Transfer CFT transfers in REQUESTER mode, in which
@@ -66,35 +66,35 @@ is set to active. Active transfers are executed if resources are available, othe
 A partner can have one of the following three states:
 
 - Ready
-- State-locked
-- Time-locked
+- State- locked
+- Time- locked
 
 #### Ready partners
 
 A **ready** partner is one that
 is placed into a queue organized by priority of the first active transfer.
 Transfers are taken from this partner queue. As soon as a transfer completes,
-the partner is re-organized or removed. By default, a partner is set to
+the partner is re- organized or removed. By default, a partner is set to
 the ready state.
 
-#### Time-locked partners
+#### Time- locked partners
 
-A time-locked partner is put
+A time- locked partner is put
 into a queue that is organized by the mintime for that partner. When that
-mintime expires, the partner is removed from the time-locked
+mintime expires, the partner is removed from the time- locked
 queue and is put in the ready queue.
 
-When the scheduler schedules a transfer with a non-null diagnostic,
-it puts the related partner into time-locked state (except in the case
+When the scheduler schedules a transfer with a non- null diagnostic,
+it puts the related partner into time- locked state (except in the case
 of an INACT 430 diagnostic).
 
 Each partner updates its mintime to the transfer time to which is added
-the +/-50% of the waiting delay. The transfer mintime is set to its reqtime,
+the +/- 50% of the waiting delay. The transfer mintime is set to its reqtime,
 to keep the correct order.
 
-#### State-locked partners
+#### State- locked partners
 
-A state-locked partner is put aside to wait for an event to reactivate
+A state- locked partner is put aside to wait for an event to reactivate
 it. Currently, only the diagnostic INACT (430) causes this state. The
 partner is reactivated by the CFTUTIL ACT command.
 
@@ -106,9 +106,9 @@ Every time a transfer is requested, the scheduler moves all inactive
 transfers that are ready to go in to an active state, that is, into an
 ordered queue for this partner.
 
-#### Unlocking time-locked partners
+#### Unlocking time- locked partners
 
-The scheduler puts every partner that became ready from the time-locked
+The scheduler puts every partner that became ready from the time- locked
 queue into the ready queue only when no more partners remain in the ready
 queue.
 
@@ -136,13 +136,13 @@ resource until the timeout is reached.
 ### Session timers and holdover
 
 The expected network events are timed by the RTO and DISCT\* parameters
-of the CFTPROT objects. These parameters are used to set the wait time-out
+of the CFTPROT objects. These parameters are used to set the wait time- out
 before disconnection and during connection. Of particular note are DISCTS
 and DISCTD which are used to maintain a connection with a partner, on
 completion of a transfer, for the next transfer, if any, with the same
 partner.
 
-The **Disconnect timeout** parameter is used to set the wait time-out
+The **Disconnect timeout** parameter is used to set the wait time- out
 before disconnection and during connection. The **Keep alive** parameter is used to maintain a connection with a partner upon
 completion of a transfer, for the next transfer with the same
 partner.
@@ -175,13 +175,13 @@ The values of these parameters can be defined either:
 
 - Explicitly
 - Relatively
-    -   Relatively indicates that the calculation is performed at the time the request is entered in the
+    - Relatively indicates that the calculation is performed at the time the request is entered in the
         catalog.
-    -   A relative value for each of these parameters is defined using the following
+    - A relative value for each of these parameters is defined using the following
         syntax:  
                   parameter = + &lt;relative
         value>
-    -   The ****+**** sign indicates that the
+    - The ****+**** sign indicates that the
         value is a relative value. If the parameter is the "time"
         type, the value is expressed in minutes, and must not exceed 24 (hours)
         less one minute, in other words, the value 1439. If the parameter is
@@ -267,11 +267,11 @@ of:
 
 - MAXDATE:
 
-- -   If MAXTIME
+- - If MAXTIME
         is greater than MINTIME : MINDATE
-    -   If MAXTIME
+    - If MAXTIME
         is less than MINTIME : MINDATE + 1
-    -   If MAXTIME
+    - If MAXTIME
         is not defined: 99991231
 
 ### Example 5

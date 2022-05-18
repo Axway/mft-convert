@@ -1,8 +1,8 @@
 ---
-    title: "cycle"
-    linkTitle: "cycle"
-    weight: 580
----<span id="cycle"></span>
+title: "cycle"
+linkTitle: "cycle"
+weight: 580
+--- <span id="cycle"></span>
 
 ### cycle
 

@@ -1,8 +1,8 @@
 ---
-    title: "Transfer CFT logical names"
-    linkTitle: "Transfer CFT logical names"
-    weight: 300
----{{< TransferCFT/axwayvariablesComponentShortName  >}} uses a number of logical names to designate the resources or define an operating mode.
+title: "Transfer CFT logical names"
+linkTitle: "Transfer CFT logical names"
+weight: 300
+--- {{< TransferCFT/axwayvariablesComponentShortName  >}} uses a number of logical names to designate the resources or define an operating mode.
 
 ## Default Transfer CFT directory
 
@@ -17,9 +17,8 @@ The installation procedure creates a directory structure in which the supplied f
 
 The following table lists the logical names that are defined in the standard {{< TransferCFT/axwayvariablesComponentShortName  >}} product, located in the D$CFT_RUN:[profile]CFTLOGIN.COM procedure.
 
-
 | Logical Name  | Description  |
-| --- | --- |
+| - - - | - - - |
 | D$CFT | Logical name pointing to the {{< TransferCFT/axwayvariablesComponentShortName  >}} installation directory.<br />  |
 | D$CFT_INST  | Logical name pointing to the Transfer CFT HOME directory.  |
 | D$CFT_RUN  | Logical name pointing to the Transfer CFT RUNTIME directory.  |
@@ -36,16 +35,14 @@ The following table lists the logical names that are defined in the standard {{<
 | CFT_EXIT  | Directory containing exit samples.  |
 | CFT_ACCNT  | Directory containing account files.  |
 
-
 ### Standard {{< TransferCFT/axwayvariablesComponentShortName  >}} service files
 
 All {{< TransferCFT/axwayvariablesComponentShortName  >}} service files are designated by standard logical names known to {{< TransferCFT/axwayvariablesComponentShortName  >}}, or the associated utilities, and used by default.
 
 The following table describes the logical names for {{< TransferCFT/axwayvariablesComponentShortName  >}} standard service files.
 
-
 | Standard Logical Name  | Meaning  |
-| --- | --- |
+| - - - | - - - |
 | CFTUCONF  | Client configuration file.  |
 | CFTUCONFDEF  | Transfer CFT dictionary values. Do ****not**** modify these values.  |
 | CFTPARM | Transfer CFT configuration file. The CFTLOGIN.COM procedure supplied with the product defines it as CFT_DAT:CFTPARM.INX. |
@@ -53,21 +50,18 @@ The following table describes the logical names for {{< TransferCFT/axwayvariabl
 | CFTCATA | Transfer CFT catalog file. The CFTLOGIN.COM procedure supplied with the product defines it as CFT_DAT:CFTCATA.REL. |
 | CFTCOM | Transfer CFT communication file. The CFTLOGIN.COM procedure supplied with the product defines it as CFT_DAT:CFTCOM.REL. It must be defined with the /JOB attribute. |
 
-
 ### Additional {{< TransferCFT/axwayvariablesComponentShortName  >}} files
 
 By default, the following logical names are not known to {{< TransferCFT/axwayvariablesComponentShortName  >}} or utilities. They are declared explicitly in the configuration. However, they are used by the samples provided and the CFTLOGIN.COM procedure.
 
 The following table lists the logical names that are used in the supplied {{< TransferCFT/axwayvariablesComponentShortName  >}} files.
 
-
 | Logical Name  | Meaning  |
-| --- | --- |
+| - - - | - - - |
 | CFTLOG<br /> CFTLOGA | {{< TransferCFT/axwayvariablesComponentShortName  >}} log files.<br /> CFT_LOG:CFTLOG.LOG and CFT_LOG:CFTLOG.LOGA.<br /> These must be defined with the /JOB attribute. |
 | CFTACCNT<br /> CFTACCNTA | Transfer CFT accounting files.<br /> CFT_LOG:CFTACCNT.LOG and CFT_LOG:CFTACCNT.LOGA. |
 | CFTPKU  | PKI base file. The CFTLOGIN.COM procedure supplied with the product defines it as CFT_PKI:CFTPKI.INX.  |
 | CFTEXAM  | VMS Share User API samples. The CFTLOGIN.COM procedure supplied with the product defines it as CFT_EXE:CFTEXAM.EXE.  |
-
 
 ### Submitting {{< TransferCFT/axwayvariablesComponentShortName  >}} procedures
 
@@ -75,28 +69,24 @@ A number of logical names are used to configure the {{< TransferCFT/axwayvariabl
 
 The following table describes the logical names for the procedures that control {{< TransferCFT/axwayvariablesComponentShortName  >}} behavior.
 
-
 | Logical Name  | Description  |
-| --- | --- |
+| - - - | - - - |
 | CFT_QUEUE | This logical name designates the name of the batch queue, in which the monitor submits the various procedures that it controls. It must be defined with the /JOB attribute. |
 | CFT_SUBMIT | This logical name defines the behavior of the monitor when it submits an end of transfer procedure. If the logical name is set to USER, the procedures are submitted from the transfer owner account. |
 | CFT_PRINT | This logical name is used to define a print queue, via which the procedure execution reports are printed. It must be defined with the /JOB attribute. |
 | CFT_LOGDEL | When set to YES, this logical name is used to request VMS to delete the execution reports of the procedures that it submits. Any other value maintains the reports in the SYS$LOGIN directory. It must be defined with the /JOB attribute. |
 
-
 ### Control memory usage
 
 Logical names are used to control {{< TransferCFT/axwayvariablesComponentShortName  >}} memory bottlenecks, refer to the [Delivered components](../../security_elements) section. The following table describes the logical names that are used to control {{< TransferCFT/axwayvariablesComponentShortName  >}} memory.
 
-
 | Logical Name  | Meaning  |
-| --- | --- |
+| - - - | - - - |
 | CFT$MEMCSTE | This logical name is used to define the amount of memory used by the monitor images in the Transfer CFT JOB.<br /> Its default value is 1 100 000. |
 | CFT$CATA | This logical name is used to define the percentage of available memory, as from which the monitor implements the bottleneck control mechanism.<br /> Its default value is 80. |
 | CFT$COOL | This logical name is used to define the percentage of available memory, as from which the monitor is no longer in the alert status triggered by CFT$CATA.<br /> Its default value is 70. |
 | CFT$MEMDLAY | This logical name is used to define a period after the monitor is no longer in the alert status, during which the monitor refuses any new incoming or outgoing connections, so that it can process the data already received. |
 | CFT$MG_NB | This logical name is used to define the number of 32 KB buffers reserved by Transfer CFT in the global section. |
-
 
 ### Concurrent access to the communication file
 
@@ -108,7 +98,7 @@ If the CFT_LOCK logical name is set to SYSTEM, the concurrent access control mec
 
 ### Optimize receive file write operations
 
-When receiving files, {{< TransferCFT/axwayvariablesComponentShortName  >}} allows you to optimize the way in which they are written, by performing disk accesses in virtual block mode instead of requesting that RMS write each record. The CFT$BLOCKIO logical name is used to implement this mechanism. The increased performance levels are particularly noticeable when writing files containing small-sized records.
+When receiving files, {{< TransferCFT/axwayvariablesComponentShortName  >}} allows you to optimize the way in which they are written, by performing disk accesses in virtual block mode instead of requesting that RMS write each record. The CFT$BLOCKIO logical name is used to implement this mechanism. The increased performance levels are particularly noticeable when writing files containing small- sized records.
 
 ### CFT$BLOCKIO
 

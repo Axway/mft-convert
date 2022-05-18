@@ -1,8 +1,8 @@
 ---
-    title: "Why  customize the kernel?"
-    linkTitle: "Why customize the kernel?"
-    weight: 190
----This topic explains the advantages of customizing the kernel, and additionally
+title: "Why  customize the kernel?"
+linkTitle: "Why customize the kernel?"
+weight: 190
+--- This topic explains the advantages of customizing the kernel, and additionally
 presents the following related subjects:
 
 - [Global
@@ -32,7 +32,7 @@ though {{< TransferCFT/axwayvariablesComponentShortName  >}} automatically adapt
 by the system. The reason for this is that if the memory is insufficient,
 {{< TransferCFT/axwayvariablesComponentShortName  >}} slows down significantly.
 
-In some cases, when receiving transfers from high-speed systems via
+In some cases, when receiving transfers from high- speed systems via
 TCP, you may notice interlocks preventing {{< TransferCFT/axwayvariablesComponentShortName  >}} from running correctly.
 If the capacity of the system cannot support the resulting overload, you
 must reduce the number of concurrent transfers.

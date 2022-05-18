@@ -1,15 +1,15 @@
 ---
-    title: "About the unified configuration tool (UCONF)"
-    linkTitle: "Set UCONF parameters"
-    weight: 210
----Configurable {{< TransferCFT/suitevariablesTransferCFTName  >}} parameters fall into two basic categories, definable objects or UCONF values. For some Transfer CFT parameters, you can use either method to define parameter values.
+title: "About the unified configuration tool (UCONF)"
+linkTitle: "Set UCONF parameters"
+weight: 210
+--- Configurable {{< TransferCFT/suitevariablesTransferCFTName  >}} parameters fall into two basic categories, definable objects or UCONF values. For some Transfer CFT parameters, you can use either method to define parameter values.
 
 When using {{< TransferCFT/suitevariablesCentralGovernanceName  >}} to manage {{< TransferCFT/axwayvariablesComponentShortName  >}}, some parameter values are specific to UCONF and modifiable only through the {{< TransferCFT/suitevariablesCentralGovernanceName  >}} interface or using the UCONF utility as described in this section.
 
 ## What is the unified configuration tool?
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} features
-an easy-to-use configuration tool, UCONF, to standardize and merge functioning for all platforms. This interface enables you to
+an easy- to- use configuration tool, UCONF, to standardize and merge functioning for all platforms. This interface enables you to
 makes technical parameter value modifications using either CFTUTIL or
 the Copilot UI.
 

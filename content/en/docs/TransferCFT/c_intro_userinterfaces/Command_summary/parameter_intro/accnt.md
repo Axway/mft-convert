@@ -1,8 +1,8 @@
 ---
-    title: "accnt"
-    linkTitle: "accnt"
-    weight: 230
----<span id="accnt"></span>
+title: "accnt"
+linkTitle: "accnt"
+weight: 230
+--- <span id="accnt"></span>
 
 ### accnt
 

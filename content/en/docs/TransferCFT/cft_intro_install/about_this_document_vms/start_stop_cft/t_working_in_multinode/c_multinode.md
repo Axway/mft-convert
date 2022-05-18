@@ -1,13 +1,13 @@
 ---
-    title: "About multi-node architecture"
-    linkTitle: "About multi-node architecture"
-    weight: 260
----This topic describes the Transfer CFT multi-node feature, which provides you with horizontal scalability and high availability for fail overs. See also <a href="" class="MCTextPopup popup popupHead">Active/active You configure two or more Transfer CFTs, up to four nodes, each having an independent workload. These nodes will then run as individual nodes until a fail over occurs.
+title: "About multi- node architecture"
+linkTitle: "About multi- node architecture"
+weight: 260
+--- This topic describes the Transfer CFT multi- node feature, which provides you with horizontal scalability and high availability for fail overs. See also <a href="" class="MCTextPopup popup popupHead">Active/active You configure two or more Transfer CFTs, up to four nodes, each having an independent workload. These nodes will then run as individual nodes until a fail over occurs.
 When a fail over occurs, one of the other nodes takes over from the failed node. This secondary node offers services to new and existing transfer requests and tasks, until the original node resumes activity.
 When the failed node restarts, a manual intervention required in Transfer CFT, it resumes its connections from the secondary or replacement node.
 To summarize, when a fail over occurs the external Transfer CFT is oblivious to any change. The requests are directed to the load balancer, which resubmits any uncommitted transactions to the replacement node. During fail back, the connection returns to the original node.</a> for conceptual information.
 
-Multi-node benefits include:
+Multi- node benefits include:
 
 - Horizontal scalability: increased transfer flow capacity
 - High availability: active/active including patch management on an active cluster, and automatic node restart after fail over
@@ -15,18 +15,18 @@ Multi-node benefits include:
 
 > **Note**
 >
-> Transfer CFT supports the following OS for muti-node architecture: Windows-x86, Linux-x86, AIX-power, HPUX-parisc, HPUX-ia64, Sun-SPARC, Sun-x86.
+> Transfer CFT supports the following OS for muti- node architecture: Windows- x86, Linux- x86, AIX- power, HPUX- parisc, HPUX- ia64, Sun- SPARC, Sun- x86.
 
 ## Prerequisites
 
-Transfer CFT in multi-node architecture requires:
+Transfer CFT in multi- node architecture requires:
 
 - One key per node must have the cluster option, and if there is more than one host you require at least one valid key per host
-- A shared file system for use of a multi-node architecture on several hosts. Additionally, the system must be configured prior to the multi-node installation and the shared disk ready when starting the Transfer CFT Copilot server.
+- A shared file system for use of a multi- node architecture on several hosts. Additionally, the system must be configured prior to the multi- node installation and the shared disk ready when starting the Transfer CFT Copilot server.
 
 ## Architecture
 
-The Transfer CFT multi-node architecture is based on hosts, nodes, and a shared file system.
+The Transfer CFT multi- node architecture is based on hosts, nodes, and a shared file system.
 
 Regardless of the number of servers hosting the nodes from outside the cluster, the nodes are viewed as a single machine on an internal network.
 
@@ -57,7 +57,7 @@ Copilot operates three services: the node manager, the connection dispatcher, th
 
 #### Node manager
 
-The node manager monitors all nodes that are part of the Transfer CFT multi-node environment (independent of the host). The monitoring mechanism is based on locks provided by the file system lock manager.
+The node manager monitors all nodes that are part of the Transfer CFT multi- node environment (independent of the host). The monitoring mechanism is based on locks provided by the file system lock manager.
 
 When a node is not running correctly, the node manager tries to start it locally.
 
@@ -69,9 +69,9 @@ On startup, the Transfer CFT nodes connect to the connection dispatcher service 
 
 The connection dispatcher service allows running multiple nodes, which listen at the same access points (interface/port pairs) on the same host.
 
-You can set the dispatcher to use either a round-robin load balancing, or define a one-to-one relationship between a partner and a node. A one-to-one relationship ensures that for any given partner the transfers are kept in the correct chronological order.
+You can set the dispatcher to use either a round- robin load balancing, or define a one- to- one relationship between a partner and a node. A one- to- one relationship ensures that for any given partner the transfers are kept in the correct chronological order.
 
-### Run-time files
+### Run- time files
 
 All runtime data are stored on a shared file system.
 
@@ -118,10 +118,10 @@ In the case of node failure during the transfer recovery process, the catalog re
 
 ### Limitations and restrictions
 
-The synchronous communication media is not available in multi-node environment. If a synchronous communication media is enabled when the multi-node architecture is enabled, the Transfer CFT will not be able to start. Additionally note the following restrictions:
+The synchronous communication media is not available in multi- node environment. If a synchronous communication media is enabled when the multi- node architecture is enabled, the Transfer CFT will not be able to start. Additionally note the following restrictions:
 
 - Transfer acceleration is not available in server mode.
 - Bandwidth control is calculated by node.
 - Accounting statistics are generated by node.
-- Nodes are not automatically re-balanced when a host is recovered after a failure.
+- Nodes are not automatically re- balanced when a host is recovered after a failure.
 - Duplicate file detection is not supported.

@@ -1,8 +1,8 @@
 ---
-    title: "ruser"
-    linkTitle: "ruser"
-    weight: 3040
----<span id="ruser"></span>
+title: "ruser"
+linkTitle: "ruser"
+weight: 3040
+--- <span id="ruser"></span>
 
 ### ruser
 
@@ -21,11 +21,9 @@ This parameter value is case sensitive in CFTUTIL commands if you enclose the v
 The server/sender
 partner sends and controls this parameter, where:
 
-
-| PeSIT E standard | In standard PeSIT E, the RUSER parameter value is transported in the PI 04, but its length is limited to 8-characters. Therefore, the PI 04 contains the concatenated value along with the value of the RAPPL parameter. |
-| --- | --- |
+| PeSIT E standard | In standard PeSIT E, the RUSER parameter value is transported in the PI 04, but its length is limited to 8- characters. Therefore, the PI 04 contains the concatenated value along with the value of the RAPPL parameter. |
+| - - - | - - - |
 | **<br /> **PeSIT E CFT/CFT | In PeSIT E between 2 {{< TransferCFT/axwayvariablesComponentShortName  >}}s, the RUSER parameter value is transported in the PI 99 if this value exceeds 8 characters. |
-
 
 > **Note**
 >

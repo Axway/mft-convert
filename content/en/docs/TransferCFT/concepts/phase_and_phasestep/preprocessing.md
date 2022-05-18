@@ -1,8 +1,8 @@
 ---
-    title: "Preprocessing phase"
-    linkTitle: "Preprocessing phase"
-    weight: 160
----The preprocessing phase consists of running a script, which is specified using the parameter PREEXEC (of SEND and CFTSEND commands) prior to a file transfer. Once the preprocessing is complete, the transfer request moves on to the next, Transfer, phase.
+title: "Preprocessing phase"
+linkTitle: "Preprocessing phase"
+weight: 160
+--- The preprocessing phase consists of running a script, which is specified using the parameter PREEXEC (of SEND and CFTSEND commands) prior to a file transfer. Once the preprocessing is complete, the transfer request moves on to the next, Transfer, phase.
 
 To notify the end of the processing to Transfer CFT, the preprocessing script must perform an END command with istate=no.
 
@@ -25,20 +25,20 @@ During this phase, the phase step can be:
 The following preprocessing actions occur according to the status of the prestate and state. For each of the following cases, set ****PREEXEC**** to an existing script.
 
 - Immediate preprocessing then send
-    -   PRESTATE =  DISP 
-    -   STATE = DISP 
+    - PRESTATE =  DISP 
+    - STATE = DISP 
 - Hold... waits for a start or receive, then preprocesses, and sends
-    -   PRESTATE= HOLD
-    -   STATE = DISP
+    - PRESTATE= HOLD
+    - STATE = DISP
 - Immediate preprocessing then Hold...waits for a receive or start, and then sends
-    -   PRESTATE= DISP
-    -   STATE = HOLD
+    - PRESTATE= DISP
+    - STATE = HOLD
 - Hold ... waits for a receive command, preprocesses, and then sends or
 - Hold... waits for start command, preprocesses, repeats Hold ... waits for receive or start then sends
-    -   PRESTATE= HOLD
-    -   STATE = HOLD
+    - PRESTATE= HOLD
+    - STATE = HOLD
 - Preprocessing then send on receive
-    -   IMPL=YES
+    - IMPL=YES
 
 > **Note**
 >

@@ -1,12 +1,12 @@
 ---
-    title: "Post installation"
-    linkTitle: "Post-installation"
-    weight: 180
----This chapter describes a series of checks that you should perform to verify your Transfer CFT installation. For more information on performing commands and using CFTUTIL, refer to the *Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}} [{{< TransferCFT/suitevariablesDocTypeUser  >}}](https://docs.axway.com/u/documentation/transfer_cft/index.htm?version=3.2.4)*.
+title: "Post installation"
+linkTitle: "Post- installation"
+weight: 180
+--- This chapter describes a series of checks that you should perform to verify your Transfer CFT installation. For more information on performing commands and using CFTUTIL, refer to the *Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}} [{{< TransferCFT/suitevariablesDocTypeUser  >}}](https://docs.axway.com/u/documentation/transfer_cft/index.htm?version=3.2.4)*.
 
 > **Note**
 >
-> The information in the Unix Management utilities page applies equally to the Unix-like interface used in HP NonStop.
+> The information in the Unix Management utilities page applies equally to the Unix- like interface used in HP NonStop.
 
 ## Verify the installation
 
@@ -29,21 +29,21 @@ Start the Transfer CFT server:
 cft start
 ```
 
-Verify that the default ports used in `$CFTDIRRUNTIME/conf/cft-tcp.conf` are available:
+Verify that the default ports used in `$CFTDIRRUNTIME/conf/cft- tcp.conf` are available:
 
 - 1761 (PeSIT Any protocol)
 - 1762 (PeSIT Any protocol with SSL authentication)
 
-If the ports are not available, modify the port(s) and re-apply the configuration:
+If the ports are not available, modify the port(s) and re- apply the configuration:
 
 ```
-cftupdate $CFTDIRRUNTIME/conf/cft-tcp.conf
+cftupdate $CFTDIRRUNTIME/conf/cft- tcp.conf
 ```
 
 Check that Transfer CFT server is started:
 
 ```
-cftping -v
+cftping - v
 cftlog
 ```
 
@@ -89,4 +89,4 @@ http://MyHostName:1766
 
 If you have activated the Central Governance connectivity, you can [Verify the Transfer CFT registration with Central Governance](../../unix_install_start_here/run_first_time_ux/shared_verify_install#Verify).
 
-Transfer CFT HP NonStop provides a start-process supervisor (CFTSUP) that can restart the Transfer CFT server or UI server in the case of an unexpected product stop. For more information, see [Use the NonStop mode](hp_ns_sup) .
+Transfer CFT HP NonStop provides a start- process supervisor (CFTSUP) that can restart the Transfer CFT server or UI server in the case of an unexpected product stop. For more information, see [Use the NonStop mode](hp_ns_sup) .

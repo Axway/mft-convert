@@ -1,8 +1,8 @@
 ---
-    title: "Transfer CFT error codes"
-    linkTitle: "Error codes"
-    weight: 260
----When an error occurs, a message may display explaining the problem. Sometimes though, you may need to further investigate the issue using returned error codes. This section provides a brief introduction into the types of codes and where you may encounter them.
+title: "Transfer CFT error codes"
+linkTitle: "Error codes"
+weight: 260
+--- When an error occurs, a message may display explaining the problem. Sometimes though, you may need to further investigate the issue using returned error codes. This section provides a brief introduction into the types of codes and where you may encounter them.
 
 ## Error code categories
 

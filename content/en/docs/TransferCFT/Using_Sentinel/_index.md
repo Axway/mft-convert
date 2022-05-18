@@ -1,7 +1,7 @@
 ---
     title: "Monitoring"
-    linkTitle: "Monitoring"
-    weight: 170
+linkTitle: "Monitoring"
+weight: 170
 ---## Monitoring Transfer CFT with Sentinel
 
 You can use Sentinel to collect information about targeted Transfer CFT processing events. Sentinel enables you to generate graphic representations of these events (Dashboards) that you can then statistically and visually analyze, and respond to.

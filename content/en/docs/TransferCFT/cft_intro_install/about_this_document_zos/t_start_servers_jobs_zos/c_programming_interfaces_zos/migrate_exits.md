@@ -1,8 +1,8 @@
 ---
-    title: "How to migrate DLL exits"
-    linkTitle: "How to migrate DLL exits"
-    weight: 280
----This section describes how to migrate DLL exits for Transfer CFT in a z/OS environment.
+title: "How to migrate DLL exits"
+linkTitle: "How to migrate DLL exits"
+weight: 280
+--- This section describes how to migrate DLL exits for Transfer CFT in a z/OS environment.
 
 **Considerations prior to migrating**
 
@@ -11,11 +11,11 @@
 
 ## Preparation
 
-Use the examples supplied in distribution libraries as a basis for your migration. Each example provides recommendations for compilation and link-edits, as well as adequate settings for CFTEXIT. The body of the exit should not be affected; the updates concern the encapsulation of the entire exit's Prologue and Epilogue (especially in assembler).
+Use the examples supplied in distribution libraries as a basis for your migration. Each example provides recommendations for compilation and link- edits, as well as adequate settings for CFTEXIT. The body of the exit should not be affected; the updates concern the encapsulation of the entire exit's Prologue and Epilogue (especially in assembler).
 
 > **Note**
 >
-> For API/Batch C and COBOL recompilation, the correct link-edit options (DLL,…) may be sufficient to migrate APIs. For assembler, see the recommendations in the following section.
+> For API/Batch C and COBOL recompilation, the correct link- edit options (DLL,…) may be sufficient to migrate APIs. For assembler, see the recommendations in the following section.
 
 ## Migrate the Assembler API exit
 
@@ -33,12 +33,12 @@ Note the following:
 - There is an inconsistency between the format of the exit in the CFTEXIT and the macro version, the C structure, and COBOL copy chosen in the exit.
 - For assembler, an issue occurs when using register 12.
 
-## How to link-edit
+## How to link- edit
 
 ### Reentrancy / amode / rmode
 
-- The examples and link-edit plans are delivered with reentrant rmode=any, and amode (31), the recommended setting.
-- If the source code requires that you change other values, when you modify the link-edit options remember that the exit may have the AC link (1) option.
+- The examples and link- edit plans are delivered with reentrant rmode=any, and amode (31), the recommended setting.
+- If the source code requires that you change other values, when you modify the link- edit options remember that the exit may have the AC link (1) option.
 
 ### Post migration DLL maintenance
 

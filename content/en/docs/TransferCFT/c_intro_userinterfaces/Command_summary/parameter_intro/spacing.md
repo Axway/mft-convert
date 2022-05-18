@@ -1,8 +1,8 @@
 ---
-    title: "spacing"
-    linkTitle: "spacing"
-    weight: 3260
----<span id="spacing"></span>
+title: "spacing"
+linkTitle: "spacing"
+weight: 3260
+--- <span id="spacing"></span>
 
 ### spacing
 

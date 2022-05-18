@@ -1,8 +1,8 @@
 ---
-    title: "flrecl"
-    linkTitle: "flrecl"
-    weight: 1190
----<span id="flrecl"></span>
+title: "flrecl"
+linkTitle: "flrecl"
+weight: 1190
+--- <span id="flrecl"></span>
 
 ### flrecl
 
@@ -64,9 +64,9 @@ nominal value:
     (FCODE = BINARY),
 - By spaces when
     the local data is declared as alphanumeric, with:
-    -   FCODE =
+    - FCODE =
         EBCDIC : the space character is then equal to x‘40’ (hexadecimal)
-    -   FCODE =
+    - FCODE =
         ASCII : the space character is then equal to x‘20’
 
 Default record lengths implemented on some
@@ -102,8 +102,8 @@ The use of FLRECL is optional:
     for each system
 - Some
     systems generate implicit record lengths in place of this feature:
-    -   512 for text files (FTYPE= T, O, or X)
-    -   4096 for binary files (FTYPE=B)
-    -   4096 for stream text files (FTYPE=J)
+    - 512 for text files (FTYPE= T, O, or X)
+    - 4096 for binary files (FTYPE=B)
+    - 4096 for stream text files (FTYPE=J)
 
 [Return to Command index](../../)

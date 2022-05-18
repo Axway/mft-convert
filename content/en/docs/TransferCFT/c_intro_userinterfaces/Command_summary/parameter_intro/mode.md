@@ -1,8 +1,8 @@
 ---
-    title: "mode"
-    linkTitle: "mode"
-    weight: 2010
----<span id="mode"></span>
+title: "mode"
+linkTitle: "mode"
+weight: 2010
+--- <span id="mode"></span>
 
 ### mode
 

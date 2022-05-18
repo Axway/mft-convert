@@ -1,8 +1,8 @@
 ---
-    title: "Transfer CFT  parameter index"
-    linkTitle: "Parameter index"
-    weight: 190
----All {{< TransferCFT/axwayvariablesComponentShortName  >}} parameters are listed in alphabetical order. Some parameters have different possible values depending on the object. Parameter
+title: "Transfer CFT  parameter index"
+linkTitle: "Parameter index"
+weight: 190
+--- All {{< TransferCFT/axwayvariablesComponentShortName  >}} parameters are listed in alphabetical order. Some parameters have different possible values depending on the object. Parameter
 definitions and values are listed by object name when this applies to
 a parameter.
 
@@ -30,15 +30,15 @@ Respect the following conventions when completing values for Transfer
 CFT object fields:
 
 - ****Date****:
-    8-digit string in the YYYYMMDD format
+    8- digit string in the YYYYMMDD format
 - ****File
     name****: 512 characters comprised of the full path - meaning the drive, path, root, and suffix
-    -   The file system or operating system however imposes limitations such as unauthorized characters, length restrictions, and case sensitivity
+    - The file system or operating system however imposes limitations such as unauthorized characters, length restrictions, and case sensitivity
 - ****Identifier****:
     alphanumeric string of 1 to 32 characters
 - ****Mask****
     : string containing wildcard characters (\* and ?)
 - ****Time****:
-    2 to 8-digit string in the HHMMSSSS
+    2 to 8- digit string in the HHMMSSSS
 
 [Return to Command index](../)

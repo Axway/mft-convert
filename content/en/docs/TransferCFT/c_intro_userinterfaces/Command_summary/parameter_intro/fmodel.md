@@ -1,8 +1,8 @@
 ---
-    title: " fmodel"
-    linkTitle: "fmodel"
-    weight: 1210
----<span id="fmodel"></span>
+title: " fmodel"
+linkTitle: "fmodel"
+weight: 1210
+--- <span id="fmodel"></span>
 
 ###  fmodel
 
@@ -17,4 +17,3 @@ Complete name or logical name of the XML model file. The parameter default value
 
 [Return to Command index](../../)
 
- 

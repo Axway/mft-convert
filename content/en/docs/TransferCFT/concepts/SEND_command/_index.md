@@ -1,8 +1,8 @@
 ---
-    title: "Send a file"
-    linkTitle: "Using the SEND command"
-    weight: 160
----## How to use the SEND FILE command
+title: "Send a file"
+linkTitle: "Using the SEND command"
+weight: 160
+--- ## How to use the SEND FILE command
 
 This section describes how to use the SEND command to perform a file transfer. It begins with the simple examples and builds in complexity. However, there are many Transfer CFT parameters that can help you customize your flows, which are described in feature specific topics. Examples in this page are divided into the following umbrella categories:
 
@@ -168,12 +168,10 @@ send part=store1, idf=newmodel, nfname=remotefile
 
 You can use the send command with STATE parameters so that the send occurs once the transfer has a predefined status.
 
-
 | D = disp  | Transfers are carried out immediately. (default) |
-| --- | --- |
+| - - - | - - - |
 | H = hold | A practical application for this method is to make files available for a partner to download when the partner is ready. This can be started by the START command or a RECV command. |
 | K = keep | You can use this status to store several transfers, for example, until all are ready to go. A manual START command would trigger the transfers. |
-
 
 ```
 send part=store1, idf=newmodel, state=hold
@@ -332,6 +330,6 @@ send part=store1, idf=model, faction=archive, archivefname=&FNAME_&FDATE_&IDTU
 
 - The fname and archivefname must be on the same volume (all platforms)
 - Faction=archive is not supported for:
-    -   Implicit send (CFTSEND IMPL=YES)
-    -   Homogeneous group of files
-    -   Broadcasting
+    - Implicit send (CFTSEND IMPL=YES)
+    - Homogeneous group of files
+    - Broadcasting

@@ -1,8 +1,8 @@
 ---
-    title: "Update Transfer CFT"
-    linkTitle: "Update Transfer CFT"
-    weight: 150
----This section describes how to update Transfer CFT with a patch or service pack. You can manually perform the operation, or use {{< TransferCFT/suitevariablesCentralGovernanceName  >}}.
+title: "Update Transfer CFT"
+linkTitle: "Update Transfer CFT"
+weight: 150
+--- This section describes how to update Transfer CFT with a patch or service pack. You can manually perform the operation, or use {{< TransferCFT/suitevariablesCentralGovernanceName  >}}.
 
 ## Download the update file
 
@@ -19,7 +19,7 @@ You can easily perform {{< TransferCFT/suitevariablesTransferCFTName  >}} update
 Note that from the {{< TransferCFT/PrimaryCGorUM  >}} interface you cannot:
 
 - Remove service packs or patches.
-- Update {{< TransferCFT/axwayvariablesComponentLongName >}}s installed in multi-node/multi-hosts from {{< TransferCFT/PrimaryCGorUM >}}.
+- Update {{< TransferCFT/axwayvariablesComponentLongName >}}s installed in multi- node/multi- hosts from {{< TransferCFT/PrimaryCGorUM >}}.
 
 <span id="Install"></span>
 
@@ -32,7 +32,7 @@ Stop {{< TransferCFT/axwayvariablesComponentShortName  >}} prior to installing a
 Use the following command to update Transfer CFT in silent mode:
 
 ```
-./Transfer_CFT_3.6_<Install/SP/Patch><OS><BN>.run --mode unattended --installdir <installation_directory>
+./Transfer_CFT_3.6_<Install/SP/Patch><OS><BN>.run - - mode unattended - - installdir <installation_directory>
 ```
 
 ### Update in text mode
@@ -40,7 +40,7 @@ Use the following command to update Transfer CFT in silent mode:
 Use the following command to update Transfer CFT in text mode:
 
 ```
-./Transfer_CFT_3.6_<Install/SP/Patch>_<OS>_<BN>.run --mode text
+./Transfer_CFT_3.6_<Install/SP/Patch>_<OS>_<BN>.run - - mode text
 ```
 
 ## Uninstall an update
@@ -52,14 +52,14 @@ To uninstall install the previous patch or service pack. For example, to remove 
 **Example**
 
 ```
-./Transfer_CFT_3.6_SP1_<OS>_<BN>.run --mode text
+./Transfer_CFT_3.6_SP1_<OS>_<BN>.run - - mode text
 ```
 
 To verify, from the Transfer CFT &lt;runtime_dir> run the `about `command.
 
-## Install patches and service packs in a multi-node, multiple host environment
+## Install patches and service packs in a multi- node, multiple host environment
 
-This section describes the procedure to apply a patch or service pack on a multi-node architecture based on *N* hosts. You update a Transfer CFT multi-node architecture with multi-hosts using the same procedure as for a patch or service pack, one host at a time.
+This section describes the procedure to apply a patch or service pack on a multi- node architecture based on *N* hosts. You update a Transfer CFT multi- node architecture with multi- hosts using the same procedure as for a patch or service pack, one host at a time.
 
 > **Note**
 >
@@ -67,8 +67,8 @@ This section describes the procedure to apply a patch or service pack on a multi
 
 1. Connect to the first host.
 1. Stop all nodes running on this host by running the command: `copstop`  
-    Copilot services are stopped, and local nodes are automatically re-started on the other hosts.
-1. Check that the nodes are re-started by using the command: `CFTUTIL listnode`
+    Copilot services are stopped, and local nodes are automatically re- started on the other hosts.
+1. Check that the nodes are re- started by using the command: `CFTUTIL listnode`
 1. Install the patch or the service pack as usual using {{< TransferCFT/suitevariablesTransferCFTName >}} installer as described in [Install a standard update](#Install).
 1. Start Copilot services.
 1. Connect to the next host and repeat the procedure starting at of ****Step 2**** (above).

@@ -1,8 +1,8 @@
 ---
-    title: "About APIs "
-    linkTitle: "Appendix A: Delivered samples "
-    weight: 210
----Application Programming Interfaces, or APIs, are a set of functions
+title: "About APIs "
+linkTitle: "Appendix A: Delivered samples "
+weight: 210
+--- Application Programming Interfaces, or APIs, are a set of functions
 that use a service. The service is followed by an application program.
 
 Each of these services is described in one of the following sections, which provides an overview
@@ -30,7 +30,7 @@ You can query information related to correctly completed transfers.
 This information can be accessed in the communication structure.
 
 A description
-of this structure sub-assembly is provided in the cftapi.h
+of this structure sub- assembly is provided in the cftapi.h
 for the C language, and cftapi.cop
 for COBOL.
 

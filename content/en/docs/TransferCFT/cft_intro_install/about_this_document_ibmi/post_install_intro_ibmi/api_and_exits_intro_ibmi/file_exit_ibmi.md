@@ -1,8 +1,8 @@
 ---
-    title: "Creating  a file exit - IBM i"
-    linkTitle: "Creating a file exit"
-    weight: 290
----This page describes a delivered sample that is designed to create an example file exit. You can use the `TCPPARAM `configuration sample that is located in `CFTPROD/UTIN`.
+title: "Creating  a file exit - IBM i"
+linkTitle: "Creating a file exit"
+weight: 290
+--- This page describes a delivered sample that is designed to create an example file exit. You can use the `TCPPARAM `configuration sample that is located in `CFTPROD/UTIN`.
 
 ## Prerequisites
 
@@ -17,14 +17,14 @@ The `<installdir>/runtime/src/exit/` subdirectory contains:
 
 - The `exfxmp1.c` sample source module with its associated `exfus.h` include file. This program
     demonstrates the various user functions:
-    -   ALLOC_TYP:
+    - ALLOC_TYP:
         the EXIT allocates the file
-    -   OPEN_TYP: the
+    - OPEN_TYP: the
         EXIT opens the file
-    -   DATA_TYP: the
+    - DATA_TYP: the
         EXIT writes or reads the file, and so on
 
-<!-- -->
+<!- - - - >
 
 - The `makefile `
     compilation procedure, which uses `exfxmp2.c` to generate the CFTEXITF
@@ -69,6 +69,6 @@ To generate the sample CFTEXITF application:
     `cftstop`
 
 1. Examine the contents of the `CFTPROD/LOG. sav` file in the `CFTPROD `library and locate the messages inserted by the EXIT.  
-      
+
     The files created in the `CFTPROD `library are empty, as the sample EXIT is
     only a simulation.

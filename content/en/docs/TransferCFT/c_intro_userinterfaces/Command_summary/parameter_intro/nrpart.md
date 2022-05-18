@@ -1,8 +1,8 @@
 ---
-    title: "CFTPART"
-    linkTitle: "nrpart"
-    weight: 2310
----<span id="nrpart"></span>
+title: "CFTPART"
+linkTitle: "nrpart"
+weight: 2310
+--- <span id="nrpart"></span>
 
 ### CFTPART
 
@@ -25,10 +25,5 @@ The partner must use this name to identify itself to the {{< TransferCFT/suiteva
 may be several CFTPART objects with the same NRPART. For this purpose,
 IMINTIME = IMAXTIME should be specified.
 
- 
-
- 
-
 [Return to Command index](../../)
 
- 

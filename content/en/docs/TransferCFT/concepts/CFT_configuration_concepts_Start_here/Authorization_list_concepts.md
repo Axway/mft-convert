@@ -1,8 +1,8 @@
 ---
-    title: "Create  an authorized/unauthorized identifiers list"
-    linkTitle: "Creating authorizations lists CFTAUTH"
-    weight: 140
----The CFTAUTH object can represent either a list of authorized or a list of unauthorized file identifiers for a partner.
+title: "Create  an authorized/unauthorized identifiers list"
+linkTitle: "Creating authorizations lists CFTAUTH"
+weight: 140
+--- The CFTAUTH object can represent either a list of authorized or a list of unauthorized file identifiers for a partner.
 
 ## List of authorized identifiers
 

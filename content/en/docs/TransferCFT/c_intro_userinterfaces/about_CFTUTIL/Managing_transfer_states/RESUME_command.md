@@ -1,8 +1,8 @@
 ---
-    title: "RESUME  - Retrieve a blocked transfer"
-    linkTitle: "RESUME - Retrieving a blocked request"
-    weight: 340
----This topic describes the <span id="About_the_RESUME_Command"></span>RESUME
+title: "RESUME  - Retrieve a blocked transfer"
+linkTitle: "RESUME - Retrieving a blocked request"
+weight: 340
+--- This topic describes the <span id="About_the_RESUME_Command"></span>RESUME
 command. This command retrieves, in server mode, a blocked send request
 that has a *hold* phasestep, and has a diagnostic codes other than zero.
 
@@ -22,9 +22,8 @@ are not null.
 This command resets the diagnostic code to 0 and the diagnostic
 code to HOLD.
 
-
 | Parameter  | Description  |
-| --- | --- |
+| - - - | - - - |
 | [BLKNUM](../../../command_summary/parameter_intro/blknum)  | Catalog block number. If the values '*' or ' ' are used then all transfers are selected regardless of the block that they belong to. |
 | [DIRECT](../../../command_summary/parameter_intro/direct)  | Transfer direction for the requests in question. |
 | [IDA](../../../command_summary/parameter_intro/ida)  | Local identifier of the transfer assigned by the user or user application.<br/> Several catalog entries may be associated with a given IDA. There is no default value. |
@@ -38,7 +37,6 @@ code to HOLD.
 | [PHASESTEP]()  | Phase step of a catalog entry.  |
 | [SCOPE](../../../command_summary/parameter_intro/scope)  | Scope &lt;PARENT&gt; ('PARENT','ALL','CHILDREN').  |
 | [STATE](../../../command_summary/parameter_intro/state)  | Transfer request state.  |
-
 
 #### Example 1
 

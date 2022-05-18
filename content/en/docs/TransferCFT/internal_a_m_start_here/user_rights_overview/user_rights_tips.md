@@ -1,8 +1,8 @@
 ---
-    title: "Recommendations and troubleshooting"
-    linkTitle: "Recommendations and troubleshooting"
-    weight: 250
----This topic provides information on common mistakes when setting up user rights, fixes, and how to get more information when an error occurs.
+title: "Recommendations and troubleshooting"
+linkTitle: "Recommendations and troubleshooting"
+weight: 250
+--- This topic provides information on common mistakes when setting up user rights, fixes, and how to get more information when an error occurs.
 
 ## User rights recommendations
 
@@ -61,14 +61,14 @@ To fix the issue, delete the persistent cache files (CFTAM and CFTAM.idx) and re
 For more information, see the following platform specific guides for the appropriate OS:
 
 - UNIX - [Running Transfer CFT for the first time UNIX]()
-    -   [Defining user rights](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/user_rights_and_interface_unix)
-    -   [Declaring additional users](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/declaring_additional_users)
-    -   [UNIX system users](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/t_adding_system_user_unix)
-    -   [License keys and authorizations](../../../cft_intro_install/unix_install_start_here/before_you_start_unix/prereqs_overview)
+    - [Defining user rights](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/user_rights_and_interface_unix)
+    - [Declaring additional users](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/declaring_additional_users)
+    - [UNIX system users](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/t_adding_system_user_unix)
+    - [License keys and authorizations](../../../cft_intro_install/unix_install_start_here/before_you_start_unix/prereqs_overview)
 - {{< TransferCFT/PrimaryforWindows >}} - [Running Transfer CFT for the first time Windows](../../../cft_intro_install/windows_install_start_here/windows_install_start_here/running_cft_for_the_first_time_windows)
-    -   [Windows user rights](../../../cft_intro_install/windows_install_start_here/windows_install_start_here/running_cft_for_the_first_time_windows/user_rights_and_interface_win)
-    -   [Windows system users](../../../cft_intro_install/windows_install_start_here/windows_install_start_here/running_cft_for_the_first_time_windows/add_system_user_windows)
-    -   [License keys and authorizations](../../../cft_intro_install/windows_install_start_here/before_you_start_win/prereqs_overview)
+    - [Windows user rights](../../../cft_intro_install/windows_install_start_here/windows_install_start_here/running_cft_for_the_first_time_windows/user_rights_and_interface_win)
+    - [Windows system users](../../../cft_intro_install/windows_install_start_here/windows_install_start_here/running_cft_for_the_first_time_windows/add_system_user_windows)
+    - [License keys and authorizations](../../../cft_intro_install/windows_install_start_here/before_you_start_win/prereqs_overview)
 - z/OS - [Installation and Operation Guide](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_mvs_en_PDF/resource/TransferCFT_InstallationGuide_mvs_en.pdf)
 - IBM i - [Installation and Operation Guide](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_os400_en_PDF/resource/TransferCFT_InstallationGuide_os400_en.pdf)
 - OpenVMS - [Installation and Operation Guide](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_vms_en_PDF/resource/TransferCFT_InstallationGuide_vms_en.pdf)

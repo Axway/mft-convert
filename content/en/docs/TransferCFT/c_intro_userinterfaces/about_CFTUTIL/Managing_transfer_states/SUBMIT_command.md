@@ -1,8 +1,8 @@
 ---
-    title: "SUBMIT  - Submit a processing procedure"
-    linkTitle: "SUBMIT - Submitting an end-of-transfer"
-    weight: 360
----This topic describes the SUBMIT command, which is used to submit a processing procedure for a selected
+title: "SUBMIT  - Submit a processing procedure"
+linkTitle: "SUBMIT - Submitting an end- of- transfer"
+weight: 360
+--- This topic describes the SUBMIT command, which is used to submit a processing procedure for a selected
 transfer.
 
 The procedure inherits the transfer context symbolic variables.
@@ -15,9 +15,8 @@ list even if these transfers are in the T phasestep. Alternatively, it can
 be applied to a generic transfer, whose PART parameter equals the broadcasting
 list identifier, when it is in the T phasestep.
 
-
 | Parameters  | Description  |
-| --- | --- |
+| - - - | - - - |
 | [APPSTATE]()  | State of the [end] phase for the processing script to restart  |
 | [BLKNUM](../../../command_summary/parameter_intro/blknum)  | Catalog block number. If the values '*' or ' ' are used then all transfers are selected regardless of the block that they belong to. |
 | [DIRECT](../../../command_summary/parameter_intro/direct) | Transfer direction for the requests in question.<br/> Possible values are:<br/> • BOTH: (default) takes both send transfers and receive transfers into account<br/> • RECV: limits the action to receive transfers<br/> • SEND: limits the action to send transfers |
@@ -31,7 +30,6 @@ list identifier, when it is in the T phasestep.
 | [PHASTESTEP]()  | Phase step of a catalog entry.  |
 | [SCOPE](../../../command_summary/parameter_intro/scope)  | Scope &lt;PARENT&gt; ('PARENT','ALL','CHILDREN').  |
 | [STATE](../../../command_summary/parameter_intro/state)  | Transfer request state.  |
-
 
 #### Example 1 - Single Transfer
 
@@ -70,14 +68,10 @@ CFTPART
  ID = part2, ....
 ```
 
- 
-
 ```
 CFTPART
  ID = part3, ....
 ```
-
- 
 
 ```
 CFTSEND
@@ -89,19 +83,17 @@ CFTSEND
 The procedure myprog is executed ONCE when all the transfers
 are completed.
 
-Before the post-processing procedure is executed, the catalog
+Before the post- processing procedure is executed, the catalog
 looks like this.
 
-
 | STATE  | PART  | IDF  |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | SFT  | LIST  | MYFILE (generic transfer)  |
 | SFT  | PART1  | MYFILE  |
 | SFT  | PART2  | MYFILE  |
 | SFT  | PART3  | MYFILE  |
 
-
-The post-processing procedure can be submitted again as
+The post- processing procedure can be submitted again as
 follows:
 
 ```

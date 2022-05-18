@@ -1,8 +1,8 @@
 ---
-    title: "Managing  certificates"
-    linkTitle: "Managing certificates"
-    weight: 160
----<span id="What_you_will_find_in_this_book"></span>This topic
+title: "Managing  certificates"
+linkTitle: "Managing certificates"
+weight: 160
+--- <span id="What_you_will_find_in_this_book"></span>This topic
 describes security certificates, and the following security concepts:
 
 - [Overview
@@ -54,7 +54,7 @@ in this topic.
 ### Distinguished names
 
 An X.509 v3 certificate binds a Distinguished Name
-(DN) to a public key. A DN is a series of name-value pairs,
+(DN) to a public key. A DN is a series of name- value pairs,
 such as `uid=dupont`, that uniquely identify an entity. In
 this case, it is called the certificate
 subject.
@@ -92,20 +92,18 @@ signature section as described below.
 
 #### Certificate file description
 
-
 | Certificate field  | Description  |
-| --- | --- |
+| - - - | - - - |
 | Version  | The version of the encoded certificate value for X509v3 is 2.  |
 | Serial Number  | An integer assigned by the CA. The issuer name and serial number must identify a unique certificate.  |
-| Issuer Signature Algorithm  | The signature algorithm identifier used by the CA to sign the certificate (e.g., RSA with SHA-1).  |
+| Issuer Signature Algorithm  | The signature algorithm identifier used by the CA to sign the certificate (e.g., RSA with SHA- 1).  |
 | Issuer Distinguished Name | The DN of the entity who has signed and issued the certificate.  |
 | Validity Period  | The dates on which the certificate becomes valid and on which the certificate ceases to be valid.  |
 | Subject Distinguished Name  | The entity associated with the public key stored in the subject's public key field.  |
 | Subject Public Key Information  | The public key and identifier algorithm with which the key is used.  |
 | Issuer Unique Identifier (optional)  | To prevent the reuse of issuer name over time, a unique identifier is assigned to the CA.  |
 | Subject Unique Identifier (optional)  | To prevent the reuse of subject name over time, a unique identifier is assigned to the CA.  |
-| Extensions (optional)  | Extensions are additional information about the certificate. Extensions consist of three fields: type, criticality, and value. Type field is the ASN.1type of the data (for example, text string, numerical, date). The criticality flag is either critical or non-critical. If PKI client application cannot process a critical extension, the certificate will be rejected. The actual value is the value associated with the extension.  |
-
+| Extensions (optional)  | Extensions are additional information about the certificate. Extensions consist of three fields: type, criticality, and value. Type field is the ASN.1type of the data (for example, text string, numerical, date). The criticality flag is either critical or non- critical. If PKI client application cannot process a critical extension, the certificate will be rejected. The actual value is the value associated with the extension.  |
 
 #### Signature description
 
@@ -119,7 +117,7 @@ The signature provides the following information:
 
 ****Example****
 
-This displays the data and signature sections of a certificate in human-readable
+This displays the data and signature sections of a certificate in human- readable
 format:
 
 ```

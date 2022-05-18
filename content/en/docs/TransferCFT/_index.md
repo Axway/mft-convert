@@ -1,7 +1,7 @@
 ---
     title: "Transfer CFT 3.10 User Guide "
-    linkTitle: "Transfer CFT User Guide"
-    weight: 20
+linkTitle: "Transfer CFT User Guide"
+weight: 20
 ---Welcome to the Axway {{< TransferCFT/axwayvariablesPlatformorSuiteShortName  >}} Transfer CFT documentation. {{< TransferCFT/axwayvariablesComponentShortName  >}} is the file transfer component in the Axway Managed File Transfer platform, and provides a multi-platform, high-volume, file transfer service. This documentation explains how to install, configure, and manage {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
 You can configure {{< TransferCFT/suitevariablesTransferCFTName  >}} and manage flows using {{< TransferCFT/suitevariablesCentralGovernanceName  >}} or Flow Manager. These governance products simplify Transfer CFT usage, and provide services such as identity and access management, certificate management, monitoring, alerting, and a web dashboard. For more information, visit [www.axway.com](http://www.axway.com/).

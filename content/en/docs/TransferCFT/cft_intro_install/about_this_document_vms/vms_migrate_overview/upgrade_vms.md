@@ -1,8 +1,8 @@
 ---
-    title: "Manually upgrade Transfer CFT"
-    linkTitle: "Manually upgrade"
-    weight: 230
----This section explains how to upgrade an existing Transfer CFT from 2.7.1, 3.0.1, 3.1.3 to a Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}}.
+title: "Manually upgrade Transfer CFT"
+linkTitle: "Manually upgrade"
+weight: 230
+--- This section explains how to upgrade an existing Transfer CFT from 2.7.1, 3.0.1, 3.1.3 to a Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}}.
 
 ## Before you start
 
@@ -13,7 +13,7 @@ Before beginning the upgrade procedure, you should:
 
 ```
 cftstop
-copstop -f
+copstop - f
 ```
 
 ## Display product details
@@ -39,33 +39,33 @@ SET DEF DKB200:[CFT_EXPORT]
 
 1. Export your configuration.
 
-    -   Export your static configuration objects using the command CFTUTIL CFTEXT:
+    - Export your static configuration objects using the command CFTUTIL CFTEXT:
 
     ```
-    CFTUTIL CFTEXT type=all, fout=cft-extract.conf
+    CFTUTIL CFTEXT type=all, fout=cft- extract.conf
     ```
 
-    -   Export your PKI certificates using the PKIUTIL PKIEXT command. Enter:
+    - Export your PKI certificates using the PKIUTIL PKIEXT command. Enter:
 
     ```
-    PKIUTIL PKIEXT fout=pki-extract.conf
+    PKIUTIL PKIEXT fout=pki- extract.conf
     ```
 
-    -   Export the catalog using the CFTMI command. Enter:
+    - Export the catalog using the CFTMI command. Enter:
 
     ```
     CFTMI MIGR type=CAT, direct=FROMCAT, ifname=CFTCATA, ofname=catalog_output.xml
     ```
 
-    -   Export the communication media file using the CFTMI command:
+    - Export the communication media file using the CFTMI command:
 
     ```
     CFTMI MIGR type=COM, direct=FROMCOM, ifname=CFTCOM, ofname=com_output.xml
     ```
 
-    -   You must also export procedures that are specific to your production, sample APIs, exits, execs, etc.
-        -   Copy your API, and exit sources.
-        -   Copy your exec and specific scripts.
+    - You must also export procedures that are specific to your production, sample APIs, exits, execs, etc.
+        - Copy your API, and exit sources.
+        - Copy your exec and specific scripts.
 
     > **Note**
     >
@@ -78,7 +78,7 @@ SET DEF DKB200:[CFT_EXPORT]
     RENAME DKB200:[CFTREF.CFT322.CFT]HOME.DIR
     DKB200:[CFTREF.CFT322.CFT]HOME_SAVE.DIR
     ```
-    -   Rename the RUNTIME directory :
+    - Rename the RUNTIME directory :
 
     ```
     SH LOG CFTDIRRUNTIME
@@ -89,37 +89,37 @@ SET DEF DKB200:[CFT_EXPORT]
 1. You can now install the new Transfer CFT version. See [Installing Transfer CFT on a single host](../../c_cft_introduction_vms/installation/t_install_single_host).
 
 1. Import the configuration.
-    -   Import the configuration that you saved previously in the temporary directory created in [Step 3](#step3_single).
+    - Import the configuration that you saved previously in the temporary directory created in [Step 3](#step3_single).
 
     ```
     SET DEF DKB200:[CFT_EXPORT]
     ```
-    -   Import your static configuration objects using the command:
+    - Import your static configuration objects using the command:
 
     ```
-    cftinit cft-extract.conf
+    cftinit cft- extract.conf
     ```
-    -   Import your PKI certificates using the PKIUTIL command. Enter:
+    - Import your PKI certificates using the PKIUTIL command. Enter:
 
     ```
     PKIUTIL PKIFILE fname=CFTPKU, mode='CREATE’
-    PKIUTIL @pki-extract.conf
+    PKIUTIL @pki- extract.conf
     ```
-    -   Import the catalog using the CFTMI command. Enter:
+    - Import the catalog using the CFTMI command. Enter:
 
     ```
     CFTM MIGR type=CAT, direct=TOCAT, ifname=catalog_output.xml,
     ofname=CFTCATA
     ```
-    -   Import the communication media file using the CFTMI command:
+    - Import the communication media file using the CFTMI command:
 
     ```
     CFTMI MIGR type=COM, direct=TOCOM, ifname=com_ouput.xml,
     ofname=CFTCOM
     ```
-    -   Import specific procedures to your production, for example APIs, EXITs, execs, etc.:
-        -   Copy your API and EXIT sources.
-        -   Copy your exec and specific scripts.
+    - Import specific procedures to your production, for example APIs, EXITs, execs, etc.:
+        - Copy your API and EXIT sources.
+        - Copy your exec and specific scripts.
 
 ### Check the new version
 
@@ -130,9 +130,9 @@ CFTUTIL about
 ```
 <span id="Upgradin"></span>
 
-## Manually upgrade a Transfer CFT 3.0.1 or 3.1.3 multi-node installation
+## Manually upgrade a Transfer CFT 3.0.1 or 3.1.3 multi- node installation
 
-The multi-node procedure is similar to the non-multinode procedure. However, when exporting CAT and COM, you must export your configuration for each node. <span id="temp_dir_step3"></span>
+The multi- node procedure is similar to the non- multinode procedure. However, when exporting CAT and COM, you must export your configuration for each node. <span id="temp_dir_step3"></span>
 
 1. Load the former Transfer CFT 2.7.1, 3.0.1, or 3.1.3 environment.
 1. Stop Transfer CFT OpenVMS.
@@ -145,34 +145,34 @@ SET DEF DKB200:[CFT_EXPORT]
 
 1. Export your configuration.
 
-    -   Export your static configuration objects using the command CFTUTIL CFTEXT:
+    - Export your static configuration objects using the command CFTUTIL CFTEXT:
 
     ```
-    CFTUTIL CFTEXT type=all, fout=cft-extract.conf
+    CFTUTIL CFTEXT type=all, fout=cft- extract.conf
     ```
 
-    -   Export your PKI certificates using the PKIUTIL PKIEXT command. Enter:
+    - Export your PKI certificates using the PKIUTIL PKIEXT command. Enter:
 
     ```
-    PKIUTIL PKIEXT fout=pki-extract.conf
+    PKIUTIL PKIEXT fout=pki- extract.conf
     ```
 
-    -   Export the catalog using the CFTMI command. Enter:
+    - Export the catalog using the CFTMI command. Enter:
 
     ```
     CFTMI MIGR type=CAT, direct=FROMCAT, ifname=<catalog_filename_
     former_cft_for_node_<node>>, ofname=catalog_output_<node>.xml
     ```
 
-    -   Export the communication media file using the CFTMI command:
-        -   For each communication media file, enter:
-        -   For each node, enter:
+    - Export the communication media file using the CFTMI command:
+        - For each communication media file, enter:
+        - For each node, enter:
 
-    <!-- -->
+    <!- - - - >
 
-    -   You must also export procedures that are specific to your production, for example APIs, exits, execs, etc.
-        -   Copy your API and exit sources.
-        -   Copy your exec and specific scripts.
+    - You must also export procedures that are specific to your production, for example APIs, exits, execs, etc.
+        - Copy your API and exit sources.
+        - Copy your exec and specific scripts.
 
     > **Note**
     >
@@ -189,7 +189,7 @@ SET DEF DKB200:[CFT_EXPORT]
 1. Rename the RUNTIME directory:
 
 - For each additional hostname (n°*x*):
-    -   Rename the INSTALL directory:
+    - Rename the INSTALL directory:
 
 You can now install the new Transfer CFT version. See [Installing Transfer CFT on multiple hosts](../../c_cft_introduction_vms/t_install_multiple_host).
 
@@ -203,14 +203,14 @@ SET DEF DKB200:[CFT_EXPORT]
 
 ```
 PKIUTIL PKIFILE fname=CFTPKU, mode='CREATE’
-PKIUTIL @pki-extract.conf
+PKIUTIL @pki- extract.conf
 ```
 
 - Import the PKI certificates using the PKIUTIL command:
 
 ```
 PKIUTIL PKIFILE fname=CFTPKU, mode='CREATE’
-PKIUTIL @pki-extract.conf
+PKIUTIL @pki- extract.conf
 ```
 
 - Import the catalog using the CFTMI command:
@@ -221,10 +221,10 @@ CFTM MIGR type=CAT, direct=TOCAT, ifname=catalog_output_
 ```
 
 - Import the communication media file using the CFTMI command:
-    -   For each communication media file, enter:
-    -   For each node, enter:
+    - For each communication media file, enter:
+    - For each node, enter:
 - Import specific procedures to your production, for example APIs, EXITs, execs, etc.:
-    &lt;ul style="list-style-type: circle;">&lt;li>Copy your API and EXIT sources.&lt;/li>&lt;/ul>&lt;ul style="list-style-type: circle;">&lt;li>Copy your exec and specific scripts.&lt;/li>&lt;/ul>&lt;blockquote>&lt;html>&lt;body>&lt;p>&lt;b>Note&lt;/b> &lt;/p>&lt;/body>&lt;/html>You must recompile these after upgrading.&lt;/blockquote>&lt;/li>
+    &lt;ul style="list- style- type: circle;">&lt;li>Copy your API and EXIT sources.&lt;/li>&lt;/ul>&lt;ul style="list- style- type: circle;">&lt;li>Copy your exec and specific scripts.&lt;/li>&lt;/ul>&lt;blockquote>&lt;html>&lt;body>&lt;p>&lt;b>Note&lt;/b> &lt;/p>&lt;/body>&lt;/html>You must recompile these after upgrading.&lt;/blockquote>&lt;/li>
 
 ### Check the new version
 

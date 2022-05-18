@@ -1,8 +1,8 @@
 ---
-    title: "CIPHLIST"
-    linkTitle: "ciphlist"
-    weight: 390
----<span id="ciphlist"></span>
+title: "CIPHLIST"
+linkTitle: "ciphlist"
+weight: 390
+--- <span id="ciphlist"></span>
 
 ### CIPHLIST
 
@@ -28,4 +28,3 @@ This list is submitted to the server which then makes its selection, depending o
 
 [Return to Command index](../../)
 
- 

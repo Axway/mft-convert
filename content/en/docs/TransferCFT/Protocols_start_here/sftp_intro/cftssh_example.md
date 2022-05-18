@@ -1,8 +1,8 @@
 ---
-    title: "SFTP use case examples"
-    linkTitle: "SFTP examples"
-    weight: 180
----******The supported operating systems are listed in the [Platform features](../../../datasheet) table.******
+title: "SFTP use case examples"
+linkTitle: "SFTP examples"
+weight: 180
+--- ******The supported operating systems are listed in the [Platform features](../../../datasheet) table.******
 
 ## {{< TransferCFT/suitevariablesTransferCFTName  >}} acting as a SFTP client
 
@@ -31,7 +31,7 @@ put LocalFile01.txt /flow01/RemoteFile01.txt
 
 ```
 recv part=app1, idf=flow01, fname=localfiletowrite, nfname=remotefile
- 
+
 The equivalent command for SFTP:
 sftp> get remotefile localfiletowrite
 ```
@@ -40,7 +40,7 @@ sftp> get remotefile localfiletowrite
 
 ```
 send part=app1,idf=groupoffiles,fname=(@/#)file\*
- 
+
 The equivalent command for SFTP:
 sftp> mput file\*
 ```
@@ -51,7 +51,7 @@ The {{< TransferCFT/axwayvariablesComponentLongName  >}} server must be using op
 
 ```
 recv part=app1,idf=groupoffiles,nfname=(@/#)file\*,file=all
- 
+
 The equivalent command for SFTP:
 sftp> mget file\*
 ```
@@ -139,23 +139,23 @@ In this use case, the clients are using the key authentication method where the 
 
 ```
 For each user define a CFTPART (in this example there are two users USER1 and USER2) as follows:
- 
+
 CFTPART ID=USER1
 ,NRPART=USER1,SSH=USER1_SSH,PROT=SFTP,...
 CFTSSH ID=USER1_SSH,DIRECT=SERVER,CLIPUBKEY=USER1_PUB, ...
- 
+
 CFTPART ID=USER2
 ,NRPART=USER2,SSH=USER2_SSH,PROT=SFTP,...
 CFTSSH ID=USER2_SSH,DIRECT=SERVER,CLIPUBKEY=USER2_PUB,...
- 
+
 CFTPROT ID=SFTP,TYPE=SFTP,SSH=SSH_DEFAULT,SAP=1763,...
- 
+
 CFTSSH ID=SSH_DEFAULT,SRVPRIVKEY=CFT_SSH_PRIV,CLIPUBKEY='',... (where '' indicates that the key is not set allowing multiple users)
- 
+
 To import the USER1_PUB and USER2_PUB keys, use the PKIUTIL command. For example, import the SSH keys as follows, where 'CFT' is the password value you entered in the CFTPARM object:
 PKIUTIL PKIKEY ID=USER1_PUB, IKNAME=USER1_PUB.KEY, IKFORM=SSH
 PKIUTIL PKIKEY ID=USER2_PUB, IKNAME=USER2_PUB.KEY, IKFORM=SSH
- 
+
 ```
 
 ****For each of the various clients****
@@ -200,16 +200,16 @@ This example uses two {{< TransferCFT/axwayvariablesComponentLongName  >}} appli
 
 Define the UCONF `aws.credentials.*`, `workingdir`, and `storageaccount `parameters.
 
-For Amazon S3 you can optionally add a sub-folder to the `workingdir `to restrict access to S3 objects in a specified bucket. To add a `workingdir `sub-folder, use the format:
+For Amazon S3 you can optionally add a sub- folder to the `workingdir `to restrict access to S3 objects in a specified bucket. To add a `workingdir `sub- folder, use the format:
 
 ```
-WORKINGDIR = 's3://cft-test-ci.eu-west-3/pub/share',
+WORKINGDIR = 's3://cft- test- ci.eu- west- 3/pub/share',
 ```
 
-For GCS, see the [Google Cloud Storage](../../../app_integration_intro/google_cloud) page for configuration details, and note that the `workingdir `value must start with `gs://` followed by the bucket name, `gs://my-bucket`.
+For GCS, see the [Google Cloud Storage](../../../app_integration_intro/google_cloud) page for configuration details, and note that the `workingdir `value must start with `gs://` followed by the bucket name, `gs://my- bucket`.
 
 ```
-WORKINGDIR = 'gs://cft-test-ci.eu-west-3/pub/share',
+WORKINGDIR = 'gs://cft- test- ci.eu- west- 3/pub/share',
 ```
 
 ****Related topics****

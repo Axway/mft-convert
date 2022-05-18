@@ -1,8 +1,8 @@
 ---
-    title: "Display product information"
-    linkTitle: "Display product information"
-    weight: 340
----## Use the ABOUT command
+title: "Display product information"
+linkTitle: "Display product information"
+weight: 340
+--- ## Use the ABOUT command
 
 Use the ABOUT command to display
 the Transfer CFT product, host, and key information. This command displays the characteristics of the platform
@@ -18,13 +18,11 @@ on which Transfer CFT is installed.
 
 ****Parameters****
 
-
 | Parameter  | Description  |
-| --- | --- |
+| - - - | - - - |
 | [COMMENT](../../../../c_intro_userinterfaces/command_summary/parameter_intro/comment) | Free comment.<br/> This comment is displayed and can be used to indicate a specific item of information, such as the customer name.<br/> This information is then used to determine a software license key. |
 | [TYPE](../../../../c_intro_userinterfaces/command_summary/parameter_intro/type)  | Displays the Transfer CFT product, host, and key information.  |
 | [KEY](../../../../c_intro_userinterfaces/command_summary/parameter_intro/key)  | Defines the number of keys that display.  |
-
 
 ****Example****
 
@@ -34,7 +32,7 @@ This command displays the following type of information:
 CFTU20I
 CFTU20I CFT Windows
 CFTU20I Version 3.3.2 20140423
-CFTU20I (C) Copyright AXWAY 1989-2018
+CFTU20I (C) Copyright AXWAY 1989- 2018
 CFTU20I ====> Starting Session on 28/04/2014 Time is 18:54:31
 CFTU20I Parameters file :C:\\AxwayCFT332\\Transfer_CFT\\runtime\\data\\cftparm
 CFTU20I Partners file :C:\\AxwayCFT332\\Transfer_CFT\\runtime\\data\\cftpart
@@ -45,10 +43,10 @@ CFT information :
 \* version = 3.3.2
 \* level = SP1
 \* upgrade = 7595
-\* target = win-x86-64
+\* target = win- x86- 64
 Host information :
 \* model =
-\* hostname = MACH-A10229
+\* hostname = MACH- A10229
 \* sysname = Windows
 \* machine = AMT_X8664
 \* version = 6.1.7601
@@ -58,15 +56,15 @@ Axway information :
 \* product = Amplify
 Transfer CFT
 \* version = 3.3.2_SP1.0
-\* applied-patches =
-\* forbidden-patches =
+\* applied- patches =
+\* forbidden- patches =
 Key information :
 \* idparm = IDPARM0
 \* key = Lxxxxxxxxxxxxxxxxxxxxxxxxxx588S
 \* CI97S
 \* type = DATE
 \* expire = 2018/04/14
-\* sysname = win-x86-64
+\* sysname = win- x86- 64
 \* Nb Transfers = 999
 \* Nb CPU = 2
 \* Nb Partners = Max
@@ -90,9 +88,9 @@ This executable file retrieves system information, for example information neede
 
 Options:
 
-- -l, -L each bit of information is displayed on a new line, this is the default option
-- -s, -S values are listed on a single line, separated by spaces using the format key=value, this option is valid for target, version, and uid.
-- -h display this help
+- - l, - L each bit of information is displayed on a new line, this is the default option
+- - s, - S values are listed on a single line, separated by spaces using the format key=value, this option is valid for target, version, and uid.
+- - h display this help
 
 Keys:
 
@@ -106,27 +104,23 @@ Keys:
 
 ```
 C:\\projects> cfttell target
-win-x86-64
+win- x86- 64
 ```
-
- 
 
 ```
 C:\\projects> cfttell version
 3000
 ```
 
- 
-
 ```
 C:\\projects> cfttell hostinfo
 CFT version : 3010
-Target : win-x86-32
+Target : win- x86- 32
 Processor architecture : x64
 Processor type : Intel/AMD X8664
 Processor ID :
 Number of processors : 2
 OS release : Windows Seven Service Pack 1
 OS version : 6.1.7601
-Host name : ITEM-12345
+Host name : ITEM- 12345
 ```

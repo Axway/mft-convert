@@ -1,8 +1,8 @@
 ---
-    title: "Use the SEND acknowledgement commands  "
-    linkTitle: "Sending a REPLY"
-    weight: 210
----<span id="About_the_SEND_REPLY_Command"></span>
+title: "Use the SEND acknowledgement commands  "
+linkTitle: "Sending a REPLY"
+weight: 210
+--- <span id="About_the_SEND_REPLY_Command"></span>
 
 ## 
 
@@ -55,9 +55,8 @@ idt=&idt
 of a particular type. This message is a reply to a previous transfer from
 the partner.
 
-
 | Parameter  | Description  |
-| --- | --- |
+| - - - | - - - |
 | [EXEC](../../../c_intro_userinterfaces/command_summary/parameter_intro/exec) | Filename. |
 | [IDA](../../../c_intro_userinterfaces/command_summary/parameter_intro/ida)  | Local transfer identifier assigned by the user or user application. The maximum length is 64 characters. |
 | [IDM](../../../c_intro_userinterfaces/command_summary/parameter_intro/idm)  | Message identifier. The value of this identifier is unrestricted. |
@@ -68,5 +67,3 @@ the partner.
 | ******[TYPE](../../../c_intro_userinterfaces/command_summary/parameter_intro/type) = REPLY****** | Characterizes a reply send transfer. |
 | Others  | FOR OPTIONAL PARAMETERS COMMON TO SEND: see the [SEND](../../../c_intro_userinterfaces/command_summary#SEND) command.  |
 
-
- 

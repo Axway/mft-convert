@@ -1,8 +1,8 @@
 ---
-    title: "omintime"
-    linkTitle: "omintime"
-    weight: 2480
----<span id="omintime"></span>
+title: "omintime"
+linkTitle: "omintime"
+weight: 2480
+--- <span id="omintime"></span>
 
 ### omintime
 
@@ -27,7 +27,5 @@ make a call over this type of network.
 
 The minimum time of
 the authorized time slot for calls coming for a partner.
-
- 
 
 [Return to Command index](../../)

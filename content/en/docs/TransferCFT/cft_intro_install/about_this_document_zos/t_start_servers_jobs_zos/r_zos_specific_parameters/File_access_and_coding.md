@@ -1,8 +1,8 @@
 ---
-    title: "Code Transfer CFT filenames"
-    linkTitle: "Code filenames"
-    weight: 280
----Working with files and coding
+title: "Code Transfer CFT filenames"
+linkTitle: "Code filenames"
+weight: 280
+--- Working with files and coding
 
 This section describes file properties and how to code Transfer CFT filenames.
 
@@ -20,7 +20,7 @@ This section describes file properties and how to code Transfer CFT filenames.
 Transfer CFT z/OS has read or write access to the following files:
 
 - Disk sequential files
-- Multi-volume disk sequential files
+- Multi- volume disk sequential files
 - PDS files
 - Files in GENERATION DATA GROUP (GDG)
 - VSAM KSDS files
@@ -54,38 +54,38 @@ Where:
 
 - VOLUME has the following characteristics:
 
-    > -   Indicates the name of the disk volume where the file will be created or searched
-    > -   Is optional, but useful for requesting Transfer CFT to create a VSAM file or other file, except for SMS managed volumes
-    > -   Corresponds to the VOLUME parameter of the DEFINE CLUSTER VSAM or VOL=SER= of the JCL
-    > -   Should not be used with DF/SMS
+    > - Indicates the name of the disk volume where the file will be created or searched
+    > - Is optional, but useful for requesting Transfer CFT to create a VSAM file or other file, except for SMS managed volumes
+    > - Corresponds to the VOLUME parameter of the DEFINE CLUSTER VSAM or VOL=SER= of the JCL
+    > - Should not be used with DF/SMS
 
 - UNIT has the following characteristics:
 
-> -   Indicates the UNITNAME used
+> - Indicates the UNITNAME used
 >
-> <!-- -->
+> <!- - - - >
 >
-> -   Is optional but useful for a tape or disk SAM file
+> - Is optional but useful for a tape or disk SAM file
 >
-> <!-- -->
+> <!- - - - >
 >
-> -   Corresponds to the parameter UNIT= of the JCL
+> - Corresponds to the parameter UNIT= of the JCL
 >
-> <!-- -->
+> <!- - - - >
 >
-> -   By default, the value SYSALLDA or the value imposed by your DYNALLOC EXIT will be used
+> - By default, the value SYSALLDA or the value imposed by your DYNALLOC EXIT will be used
 
 - NAME1.NAME2.NAMEx have the following characteristics:
 
-> -   Defines the filename
+> - Defines the filename
 >
-> <!-- -->
+> <!- - - - >
 >
-> -   Mandatory
+> - Mandatory
 >
-> <!-- -->
+> <!- - - - >
 >
-> -   The initial character in HFS filenames is the slash: ( / )
+> - The initial character in HFS filenames is the slash: ( / )
 
 **Example**
 
@@ -177,14 +177,14 @@ Transfer CFT z/OS allows limited coding of certain SMS parameters in the UNIT pa
 
 The following values allow you to:
 
-- &gt;STORCLA: specify a value for STORAGE-CLASS
+- &gt;STORCLA: specify a value for STORAGE- CLASS
 
-<!-- -->
+<!- - - - >
 
 - &lt;DATACLA: specify a value for DATA CLASS
 - \*MGTCLAS: specify a value for MANAGEMENT CLASS
 
-An alternate way to specify full-length DF/SMS parameters is described in [DF/SMS large file support](../t_dynamically_create_files).
+An alternate way to specify full- length DF/SMS parameters is described in [DF/SMS large file support](../t_dynamically_create_files).
 
 <span id="Coding filenames with DDNAME"></span>
 
@@ -209,11 +209,11 @@ Transfer CFT z/OS handles PDS files one member at a time. Transfer CFT z/OS proc
 
 - Member by member in sequence
 
-<!-- -->
+<!- - - - >
 
 - By calling IEBCOPY UNLOAD
 
-<!-- -->
+<!- - - - >
 
 - For the entire PDS, by setting FNAME=#DSNAME or #DSNAME(\*)
 
@@ -241,7 +241,7 @@ A GDG filename is coded as:
 
 ```
 FNAME=NAME1.NAMEX(0)
-FNAME=NAME1.NAMEX(-n)
+FNAME=NAME1.NAMEX(- n)
 FNAME=NAME1.NAMEX(+n)
 ```
 

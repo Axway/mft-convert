@@ -1,8 +1,8 @@
 ---
-    title: "keyext"
-    linkTitle: "keyext"
-    weight: 1750
----<span id="keyext"></span>
+title: "keyext"
+linkTitle: "keyext"
+weight: 1750
+--- <span id="keyext"></span>
 
 ### keyext
 
@@ -18,7 +18,7 @@ for the remote certificate must be checked or not.
 - verify - the remote
     certificate is checked as follows:
 
-<!-- -->
+<!- - - - >
 
 - Certificate
     version is greater or equal to 3

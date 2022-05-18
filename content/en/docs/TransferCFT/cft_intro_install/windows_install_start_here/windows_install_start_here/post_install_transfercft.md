@@ -1,8 +1,8 @@
 ---
-    title: "Post installation"
-    linkTitle: "Post installation"
-    weight: 190
----After installing Transfer CFT, but before starting Transfer CFT and the Copilot server, you may need to perform the following tasks:
+title: "Post installation"
+linkTitle: "Post installation"
+weight: 190
+--- After installing Transfer CFT, but before starting Transfer CFT and the Copilot server, you may need to perform the following tasks:
 
 - [Perform an update](#updates)
 - [Create a basic configuration](#Creating_a_basic_configuration)
@@ -18,7 +18,7 @@ For information on user rights, refer to the topic [Defining user rights UNIX](.
 
 When you install Transfer CFT, the `home` directory is created and populated under the `Transfer_CFT` installation directory. This `home `directory contains installation libraries, binaries, and templates. Do not store any personal files in the `home `directory, as they are erased during updates.
 
-### Installer-generated files
+### Installer- generated files
 
 During the installation, the Transfer CFT installer creates two files in the installation directory that are working files for the installer. Do not modify these files unless instructed to do so by Axway. While they are not used for Transfer CFT operations, they are necessary for installer functions such as upgrades.
 
@@ -27,7 +27,7 @@ During the installation, the Transfer CFT installer creates two files in the ins
 
 ## Standalone installations
 
-If you are not using {{< TransferCFT/suitevariablesTransferCFTName  >}} with {{< TransferCFT/suitevariablesCentralGovernanceName  >}}, you must provide a certificate in order to be able to use the {{< TransferCFT/suitevariablesTransferCFTName  >}} UI. See [Using the web-based browser UI](../../../../c_intro_userinterfaces/web_copilot_ui#Connect2) page for details.
+If you are not using {{< TransferCFT/suitevariablesTransferCFTName  >}} with {{< TransferCFT/suitevariablesCentralGovernanceName  >}}, you must provide a certificate in order to be able to use the {{< TransferCFT/suitevariablesTransferCFTName  >}} UI. See [Using the web- based browser UI](../../../../c_intro_userinterfaces/web_copilot_ui#Connect2) page for details.
 
 <span id="updates"></span>
 
@@ -90,21 +90,21 @@ file, the variable `<$CFTKEY>` represents the `cft.key` file.
 Check the values, especially the key value, hostname, and port for TCP,
 in the following file:
 
-- Windows and UNIX: `<CFTRUNTIME>/conf/cft-tcp.conf  `
+- Windows and UNIX: `<CFTRUNTIME>/conf/cft- tcp.conf  `
 
 Start the Transfer CFT profile and, to create the Transfer CFT
 internal datafile and update the basic configuration, execute:
 
 ```
 cftinit
-cft-tcp.conf
+cft- tcp.conf
 ```
 
 To update the configuration at a later date, execute:
 
 ```
 cftupdate
-cft-tcp.conf
+cft- tcp.conf
 ```
 
 ### User interface configuration
@@ -143,7 +143,7 @@ If you have implemented {{< TransferCFT/PrimaryCGorUM  >}}, starting Copilot lau
 1. Change directory to the runtime.
 1. Execute profile.bat.
 1. To start the Copilot server, enter: copstart
-1. To check the Copilot status, enter: copstatus -v
+1. To check the Copilot status, enter: copstatus - v
 
 ******UNIX******
 
@@ -172,9 +172,9 @@ Since you can start or restart a registered {{< TransferCFT/axwayvariablesCompon
 
 - Add the account to the CFT server's **Local Administrator Group**, or
 - Provide the rights to start the Transfer CFT Service as a non Local Admin user:
-    -   Use a Sysinternals utility such as Process Explorer to change Windows service permissions. Run Process Explorer as administrator and locate the CFT service (CFTSRVLD.exe) process.
-    -   Open the process properties and click the **Services** tab. Click the **Permissions** button and add the user or group in the opened window. Then select the permissions that you want to assign (Full Control) and click **OK** to save.
-    -   ![](/Images/TransferCFT/services_rights.png)
+    - Use a Sysinternals utility such as Process Explorer to change Windows service permissions. Run Process Explorer as administrator and locate the CFT service (CFTSRVLD.exe) process.
+    - Open the process properties and click the **Services** tab. Click the **Permissions** button and add the user or group in the opened window. Then select the permissions that you want to assign (Full Control) and click **OK** to save.
+    - ![](/Images/TransferCFT/services_rights.png)
 
 ## Register with {{< TransferCFT/PrimaryCGorUM  >}}
 

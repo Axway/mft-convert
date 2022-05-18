@@ -1,8 +1,8 @@
 ---
-    title: "idt"
-    linkTitle: "idt"
-    weight: 1560
----<span id="idt"></span>
+title: "idt"
+linkTitle: "idt"
+weight: 1560
+--- <span id="idt"></span>
 
 ### idt
 
@@ -24,7 +24,7 @@ When sending replies, this corresponds to the original transfer IDT,
 and hence to the corresponding catalog entry (in the RT or RX state, in
 the catalog).
 
-Its value is an 8-character string, defined as follows:
+Its value is an 8- character string, defined as follows:
 
 - one letter indicating
     the MONTH (A to L, A for January, etc.),
@@ -37,15 +37,10 @@ Its value is an 8-character string, defined as follows:
 - one digit for the
     TENS OF SECONDS (0 to 5
 
-For a reply SEND command, used by a file end-of-receive procedure (most
+For a reply SEND command, used by a file end- of- receive procedure (most
 common occurrence), the symbolic variable &IDT is used to define the
 value of this IDT parameter, in order to retrieve the transfer identifier
 associated with the file received.
 
- 
-
 [Return to Command index](../../)
 
- 
-
- 

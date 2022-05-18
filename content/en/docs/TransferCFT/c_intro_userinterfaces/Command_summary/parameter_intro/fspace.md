@@ -1,8 +1,8 @@
 ---
-    title: "fspace"
-    linkTitle: "fspace"
-    weight: 1350
----<span id="fspace"></span>
+title: "fspace"
+linkTitle: "fspace"
+weight: 1350
+--- <span id="fspace"></span>
 
 ### fspace
 
@@ -18,10 +18,8 @@ Size of the receiver file, in Kbytes
 
 This size usually corresponds to the primary allocation.
 
-
 | UNIX | Parameter not applicable |
-| --- | --- |
-
+| - - - | - - - |
 
 <span id="fspace_CFTSEND"></span>
 
@@ -61,14 +59,12 @@ allocation of the file to be created is "no".<span id="FSPACE_Table"></span>
 
 QQQ_QQQ_QQQ removed fspace from top row
 
-
 | OS  | PARM  | PART  | CAT  | COM  | LOG  | ACCNT  |
-| --- | --- | --- | --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - | - - - | - - - | - - - |
 | MVS (z/OS) | 50  | 100  | no  | no  | 200  | 200  |
 | IBM i (OS400)  | 512  | 512  | no  | no  | 512  | 512  |
 | UNIX  | no  | no  | no  | no  | no  | no  |
 | OpenVMS  | no  | no  | no  | no  | no  | no  |
 | Windows | no  | no  | no  | no  | no  | no  |
-
 
 [Return to Command index](../../)

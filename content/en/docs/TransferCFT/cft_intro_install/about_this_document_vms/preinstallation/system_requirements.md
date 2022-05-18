@@ -1,8 +1,8 @@
 ---
-    title: "System requirements"
-    linkTitle: "System requirements"
-    weight: 180
----The installation process lasts approximately 10 to 15 minutes, depending on the system. It is performed from an account that has special privileges.
+title: "System requirements"
+linkTitle: "System requirements"
+weight: 180
+--- The installation process lasts approximately 10 to 15 minutes, depending on the system. It is performed from an account that has special privileges.
 
 > **Note**
 >
@@ -31,9 +31,8 @@ The privileges, identifiers and quotas required to execute {{< TransferCFT/axway
 
 The following table lists the ports and their uses with {{< TransferCFT/axwayvariablesComponentLongName  >}}. Additionally, you can print and record the values for your own installations.
 
-
 | Used for...  | Port Number (default)  | Firewall  | Your installation  |
-| --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - |
 | Available  | 1761 to 1768  | N/A  |   |
 | PeSIT  | 1761  |   |   |
 | Copilot Server  | 1766  |   |   |
@@ -48,7 +47,6 @@ The following table lists the ports and their uses with {{< TransferCFT/axwayvar
 | CA and password for root CA  |   |   |   |
 | License information  |   |   |   |
 
-
 ## Apply a license key
 
 You need to apply a valid license key to Transfer CFT in the following situations:
@@ -62,10 +60,10 @@ You need to apply a valid license key to Transfer CFT in the following situatio
 1. Install {{< TransferCFT/axwayvariablesComponentShortName >}}. You can install {{< TransferCFT/axwayvariablesComponentShortName >}} without a license key, and enter the key later.
 1. After completing the installation, or for an existing installation, use the command **`cftutil about`** to retrieve your system information.
 1. Contact the Axway Fulfillment team at the appropriate email address to obtain a key.
-    -   For a US key, contact: `fulfillment@us.axway.com`
-    -   For an EMEA or APAC key, contact: `product.key@axway.com`
+    - For a US key, contact: `fulfillment@us.axway.com`
+    - For an EMEA or APAC key, contact: `product.key@axway.com`
 1. Apply the license key(s) that you received from the Axway Fulfillment team as follows:
-    -   Enter the key in the default file: CFT_SCEN:CFT.KEY.
+    - Enter the key in the default file: CFT_SCEN:CFT.KEY.
 
 ### Apply a license key
 
@@ -73,9 +71,9 @@ Apply the license key(s) that you received from the Axway Fulfillment team as fo
 
 - Enter the key in the default file: CFT_SCEN:CFT.KEY.
 
-Transfer CFT allows you to use a single key for a multi-node installation. To use a single key for multiple hosts, either:
+Transfer CFT allows you to use a single key for a multi- node installation. To use a single key for multiple hosts, either:
 
 - The hostname must not be defined for the key, or
-- The hostname defined for the key matches the hostname of one of the hosts that composes the multi-node instance
+- The hostname defined for the key matches the hostname of one of the hosts that composes the multi- node instance
 
 Additionally, the key must have the cluster option.

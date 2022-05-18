@@ -1,8 +1,8 @@
 ---
-    title: "oblksize"
-    linkTitle: "oblksize"
-    weight: 2400
----<span id="oblksize"></span>
+title: "oblksize"
+linkTitle: "oblksize"
+weight: 2400
+--- <span id="oblksize"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
@@ -15,14 +15,12 @@ than the value of the OLRECL parameter.
 The following table indicates for each system if the parameter
 must be defined.
 
-
 | **OS** | **OBLKSIZE**  |
-| --- | --- |
+| - - - | - - - |
 | z/OS (MVS) | YES  |
 | OS400  | NO  |
 | UNIX  | NO  |
 | VMS  | NO  |
 | Windows  | NO |
-
 
 [Return to Command index](../../)

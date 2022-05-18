@@ -1,8 +1,8 @@
 ---
-    title: "inum"
-    linkTitle: "inum"
-    weight: 1700
----<span id="inum"></span>
+title: "inum"
+linkTitle: "inum"
+weight: 1700
+--- <span id="inum"></span>
 
 ## inum
 

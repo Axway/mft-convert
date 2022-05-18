@@ -1,12 +1,12 @@
 ---
-    title: "id"
-    linkTitle: "id"
-    weight: 1510
----<span id="id"></span>
+title: "id"
+linkTitle: "id"
+weight: 1510
+--- <span id="id"></span>
 
 ### id
 
-Identifier. The maximum length for an identifier value-type is 32 characters.
+Identifier. The maximum length for an identifier value- type is 32 characters.
 This affects all {{< TransferCFT/axwayvariablesComponentShortName  >}} commands.
 
 <span id="id_CFTAUTH"></span>
@@ -65,14 +65,12 @@ Command identifier (32 characters).
 The value of the identifier corresponds with the identifier in the related
 commands listed below.
 
-
 | EXIT type  | Command  | Parameter  |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | Directory  | CFTPROT | EXITA  |
 |   |   | EXIT  |
 | File  | CFTSEND, SEND, CFTRECV, RECV  | EXIT  |
 | End of transfer  | CFTPARM  | EXITEOT  |
-
 
 <span id="id_CFTPARM"></span>
 
@@ -149,10 +147,8 @@ as an intermediate partner. For the store and forward to be accepted,
 the command (CFTRECV ID = COMMUT) has to be customized explicitly on the
 store and forward site. If not, the store and forward is refused.
 
-
 | **PeSIT SIT profile** | For the PeSIT SIT profile, the model file identifier is subjected to the format constraint (Fnnnnn). See [Protocols: PeSIT](../../../../protocols_start_here/about_pesit). |
-| --- | --- |
-
+| - - - | - - - |
 
 <span id="id_CFTSEND"></span>
 
@@ -164,10 +160,8 @@ store and forward site. If not, the store and forward is refused.
 Local
 identifier of the model file (IDF) to be sent.
 
-
 | PeSIT SIT profile | In the PeSIT protocol with the SIT profile, the model file identifier is subject to the format constraint (Fnnnnn). See [Protocols: PeSIT](../../../../protocols_start_here/about_pesit). |
-| --- | --- |
-
+| - - - | - - - |
 
 <span id="Network_id"></span>
 

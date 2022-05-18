@@ -1,29 +1,29 @@
 ---
-    title: "Tracking a copied file "
-    linkTitle: "Tracking a copied file"
-    weight: 210
----This topic describes how you can copy a file to a different location without actually sending the file, yet still have the standard Transfer CFT tracking. This option allows you to copy a file, with visibility in either Transfer CFT or Central Governance, without using network resources.
+title: "Tracking a copied file "
+linkTitle: "Tracking a copied file"
+weight: 210
+--- This topic describes how you can copy a file to a different location without actually sending the file, yet still have the standard Transfer CFT tracking. This option allows you to copy a file, with visibility in either Transfer CFT or Central Governance, without using network resources.
 
 ## Enable the copy file functionality
 
-This functionality is comprised of a delivered configuration and sample script files. To enable the copy file functionality, interpret the `cft-copyfile.conf` configuration file.
+This functionality is comprised of a delivered configuration and sample script files. To enable the copy file functionality, interpret the `cft- copyfile.conf` configuration file.
 
 **Unix**
 
 ```
-CFTUTIL @conf/cft-copyfile.conf
+CFTUTIL @conf/cft- copyfile.conf
 ```
 
 **Windows**
 
 ```
-CFTUTIL #conf\\cft-copyfile.conf
+CFTUTIL #conf\\cft- copyfile.conf
 ```
 
 **OpenVMS**
 
 ```
-CFTUTIL @CFT_SCEN:CFT-COPYFILE.CONF
+CFTUTIL @CFT_SCEN:CFT- COPYFILE.CONF
 ```
 
 **z/OS**
@@ -69,16 +69,16 @@ send part = 'COPY_DST',
 
 **UNIX/Windows**
 
-On the sender side, an end-of-transfer script (exec/copyfile-snd.cmd) executes to update the information in the catalog, so that the fname parameter displays the parameter value used in the send command.
+On the sender side, an end- of- transfer script (exec/copyfile- snd.cmd) executes to update the information in the catalog, so that the fname parameter displays the parameter value used in the send command.
 
-On the receiver side, an end-of-transfer script (exec/copyfile-rcv.cmd) executes to copy the file, write a log message, and update the catalog entries based on the copy results.
+On the receiver side, an end- of- transfer script (exec/copyfile- rcv.cmd) executes to copy the file, write a log message, and update the catalog entries based on the copy results.
 
 The same concepts apply for all OS, but there is a different syntax depending on the platform.
 
 **OpenVMS**
 
-- exec/copyfile-snd.pro
-- exec/copyfile-rcv.pro
+- exec/copyfile- snd.pro
+- exec/copyfile- rcv.pro
 
 **z/OS**
 

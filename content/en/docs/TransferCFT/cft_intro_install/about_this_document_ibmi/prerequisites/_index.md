@@ -1,8 +1,8 @@
 ---
-    title: "Prerequisites"
-    linkTitle: "Prerequisites"
-    weight: 140
----This section describes the prerequisites for Transfer CFT {{< TransferCFT/PrimaryTransferCFTversion  >}} IBM i and covers:
+title: "Prerequisites"
+linkTitle: "Prerequisites"
+weight: 140
+--- This section describes the prerequisites for Transfer CFT {{< TransferCFT/PrimaryTransferCFTversion  >}} IBM i and covers:
 
 - Hardware environment
 - Software environment

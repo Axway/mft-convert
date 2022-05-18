@@ -1,8 +1,8 @@
 ---
-    title: "Install with security"
-    linkTitle: "External access management  (RACF)"
-    weight: 280
----To protect its objects, Transfer CFT uses the SAF interface (System Authorization Facility) on z/OS platforms to address authorization requests to an ESM, such as RACF. Transfer CFT does not perform any checks itself, and accepts the ESM decision. Before implementing specific protection, you must protect any Transfer CFT objects that the operating system recognizes from a file, an operator command, or program protection mechanisms.
+title: "Install with security"
+linkTitle: "External access management  (RACF)"
+weight: 280
+--- To protect its objects, Transfer CFT uses the SAF interface (System Authorization Facility) on z/OS platforms to address authorization requests to an ESM, such as RACF. Transfer CFT does not perform any checks itself, and accepts the ESM decision. Before implementing specific protection, you must protect any Transfer CFT objects that the operating system recognizes from a file, an operator command, or program protection mechanisms.
 
 When installing Transfer CFT, all procedures that update RACF must be performed by users with RACF rights. Other procedures are performed by the Transfer CFT administrator. For information on the Transfer CFT administrator definition, see the H83SAFDA member details.
 
@@ -12,11 +12,11 @@ Transfer CFT software can be installed with or without the security system. In a
 
 - Level 0: Transfer CFT without security
 
-<!-- -->
+<!- - - - >
 
 - Level 1: Transfer CFT with security controlling configuration files and transfers
 
-Level 2: corresponds to level 1 with an additional program-based control of accesses to CFT files (PADS) (USERCTRL=YES)
+Level 2: corresponds to level 1 with an additional program- based control of accesses to CFT files (PADS) (USERCTRL=YES)
 
 ### Access management under {{< TransferCFT/PrimaryCGorUM  >}}
 
@@ -34,11 +34,11 @@ The security system uses a general resource class, safcftcl. It is created using
 
 - H81SACDT / H81SAFCD: Creates a RACF class (to adapt to requirements) H81SACDT is based on the RACF dynamic class definition. H81SAFCD is the former linked class table.
 
-<!-- -->
+<!- - - - >
 
 - H82SAFRT: Creates a router table (to adapt to requirements), and is only required with H81SAFCD.
 
-<!-- -->
+<!- - - - >
 
 - MVS IPL: Applies RACF classes, needed only with the H81SAFCD JOB.
 
@@ -46,12 +46,12 @@ The security system uses a general resource class, safcftcl. It is created using
 
 - H83SAFDA: Creates groups and users
 
-Once the H83SAFDA job is adapted, use this job to create groups and the Transfer CFT administrator (admcft) responsible for installing the security system. This user must be able to create and manage general resource profiles for the Transfer CFT class (safcftcl), and perform all installation-related procedures (file creation rights).
+Once the H83SAFDA job is adapted, use this job to create groups and the Transfer CFT administrator (admcft) responsible for installing the security system. This user must be able to create and manage general resource profiles for the Transfer CFT class (safcftcl), and perform all installation- related procedures (file creation rights).
 
 #### Modify the existing configuration
 
 - A00CUSTO: Customizes installation files  
-      
+
     After adapting the security system values in the A03PARM member, you must execute the A00CUSTO job again.
 
 ```
@@ -77,21 +77,18 @@ When the general resource class (safcftcl) is applied by RACF, the authorized us
 
 #### Security system installation procedures
 
-
 | Job | Installation procedure |
-| --- | --- |
+| - - - | - - - |
 | H84SAFDF | Creates RACF general resource CFT profiles |
 | H85SAFPR | Executes RACF PERMIT commands |
 | H88PARM | Edits the parameter file (adds CFTAPPL) |
 | H89SAFAS | Creates CFT file protection profiles with PADS (upgrades from security level 1 to level 2) |
 | H89SAFAU | Sample allowing certain users to modify parameters and/or perform transfers |
 
-
 #### Delete security definitions
 
-
 | Job | Description |
-| --- | --- |
+| - - - | - - - |
 | H89SAFDD | Used to delete the RACF definitions created by the H84SAFDF job. |
 | H89SAFDS | Used to delete the RACF definitions created by the H89SAFAS job. |
 

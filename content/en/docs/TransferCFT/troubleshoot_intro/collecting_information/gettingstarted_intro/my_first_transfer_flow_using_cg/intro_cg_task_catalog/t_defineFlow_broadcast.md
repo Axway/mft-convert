@@ -1,8 +1,8 @@
 ---
-    title: "Create a broadcast flow "
-    linkTitle: "Create a broadcast flow"
-    weight: 520
----Click ****Flows**** on the top toolbar to open the ****Flows Monitoring**** page.
+title: "Create a broadcast flow "
+linkTitle: "Create a broadcast flow"
+weight: 520
+--- Click ****Flows**** on the top toolbar to open the ****Flows Monitoring**** page.
 
 1. Enter general information about the data flow, such as a name.
 1. Select the source as the initiator of the flow.

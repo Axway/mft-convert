@@ -1,8 +1,8 @@
 ---
-    title: "Support tools and contacting Support"
-    linkTitle: "Support tools and contacting Support"
-    weight: 220
----This section describes the tools available to help you collect information and contact support if you are unable to troubleshoot an error or issue.
+title: "Support tools and contacting Support"
+linkTitle: "Support tools and contacting Support"
+weight: 220
+--- This section describes the tools available to help you collect information and contact support if you are unable to troubleshoot an error or issue.
 
 <span id="Contacting_the_Axway_support"></span>
 
@@ -37,17 +37,17 @@ To submit a Support request, you can do the following:
 
 ## Using cft_support
 
-The cft_support tool collects all of the needed information from the customer's Transfer CFT installation environment, including the static configuration (PARM/PART), Unified Configuration parameters (UCONF), catalog information, communication media file status (CFTCOM), log files, execution environment (variables), disk space, and so on. This information is then packaged into a archive file called ****cft-support-&lt;date>(.tar.gz&#124;.zip)****.
+The cft_support tool collects all of the needed information from the customer's Transfer CFT installation environment, including the static configuration (PARM/PART), Unified Configuration parameters (UCONF), catalog information, communication media file status (CFTCOM), log files, execution environment (variables), disk space, and so on. This information is then packaged into a archive file called ****cft- support- &lt;date>(.tar.gz&#124;.zip)****.
 
 > **Note**
 >
-> When using the cft_support tool on other operating systems, refer to the OS-specific guide for the correct syntax.
+> When using the cft_support tool on other operating systems, refer to the OS- specific guide for the correct syntax.
 
 ### Using the user interface
 
 *Available on Unix and Windows*
 
-You can generate a `cft-support` archive file from the **Support** page in the **Operations** menu of the user interface. The report is saved in the Transfer CFT runtime directory by default. You can modify this directory using the UCONF `cft.support_dir` parameter.
+You can generate a `cft- support` archive file from the **Support** page in the **Operations** menu of the user interface. The report is saved in the Transfer CFT runtime directory by default. You can modify this directory using the UCONF `cft.support_dir` parameter.
 
 ### Using command line
 
@@ -55,30 +55,30 @@ In command line, enter: `cft_support collect` `[options]`
 
 Options:
 
-- --help: Display this help and exit.
-- --cat-filter: Filter the CFTUTIL LISTCAT output. See [LISTCAT](../../c_intro_userinterfaces/about_cftutil/monitoring_cftutil_intro/listcat_command), or enter `CFTUTIL HELP CMD=LISTCAT`, to view available parameters.
-- --cat-debug-filter: Filter the CFTUTIL LISTCAT CONTENT=DEBUG output. This option overrides `--cat-filter.`
-- --no-core-analysis-gdb: Do not use gdb to analyze the cores. *Unix only*
-- --no-core-analysis-dbx: Do not use dbx to analyze the cores. *Unix only*
+--- help: Display this help and exit.
+--- cat- filter: Filter the CFTUTIL LISTCAT output. See [LISTCAT](../../c_intro_userinterfaces/about_cftutil/monitoring_cftutil_intro/listcat_command), or enter `CFTUTIL HELP CMD=LISTCAT`, to view available parameters.
+--- cat- debug- filter: Filter the CFTUTIL LISTCAT CONTENT=DEBUG output. This option overrides `- - cat- filter.`
+--- no- core- analysis- gdb: Do not use gdb to analyze the cores. *Unix only*
+--- no- core- analysis- dbx: Do not use dbx to analyze the cores. *Unix only*
 
 ****Examples****
 
 Only collect information for a given transfer:
 
 ```
-cft_support collect --cat-filter="IDTU=A0000001"
+cft_support collect - - cat- filter="IDTU=A0000001"
 ```
 
 Collect information for all transfers in error for a given partner:
 
 ```
-cft_support collect --cat-filter="DIAGI=ERROR, PART=PARIS"
+cft_support collect - - cat- filter="DIAGI=ERROR, PART=PARIS"
 ```
 
 Collect transfer information related to a given IDF for all transfers in a brief LISTCAT, and only those transfers in error in a debug LISTCAT:
 
 ```
-cft_support collect --cat-filter="IDF=BIN" --cat-debug-filter="IDF=BIN, DIAGI=ERROR"
+cft_support collect - - cat- filter="IDF=BIN" - - cat- debug- filter="IDF=BIN, DIAGI=ERROR"
 ```
 
 #### IBM i

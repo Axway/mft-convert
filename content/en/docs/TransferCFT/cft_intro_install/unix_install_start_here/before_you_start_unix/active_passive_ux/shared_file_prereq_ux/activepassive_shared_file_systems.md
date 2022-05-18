@@ -1,8 +1,8 @@
 ---
-    title: "Using a shared file system"
-    linkTitle: "Using a shared file system"
-    weight: 220
----## Active/passive mode shared file systems
+title: "Using a shared file system"
+linkTitle: "Using a shared file system"
+weight: 220
+--- ## Active/passive mode shared file systems
 
 Active/passive mode requires a shared file system. Two typical shared file system implementations are NAS (network attached storage) and SAN (storage area network). This section describes GPFS, NFSv4, AWS EFS, and SMB/CIFS.
 
@@ -12,7 +12,7 @@ Active/passive mode requires a shared file system. Two typical shared file syste
 
 ## Using GPFS
 
-GPFS, General Parallel File System, is the shared file system of choice for Transfer CFT. It provides high-speed file access for Transfer CFT.
+GPFS, General Parallel File System, is the shared file system of choice for Transfer CFT. It provides high- speed file access for Transfer CFT.
 
 <span id="Using"></span>
 
@@ -57,9 +57,8 @@ NFS implements a weak data consistency called "Close To Open consistency" or `ct
 
 The following table summarizes the recommended NFS mount options. Note that depending on the OS platform, only one of the three locking options should be available.
 
-
 | Recommended option  | Not recommended  |
-| --- | --- |
+| - - - | - - - |
 | vers=4 (or nfsvers=4)  | not specified or value &lt;= 4  |
 | hard (default)  | "soft" specified  |
 | nointr (not the default)  | "intr" specified  |
@@ -67,7 +66,6 @@ The following table summarizes the recommended NFS mount options. Note that depe
 | lock (default)  | "nolock" specified  |
 | local_lock=none (default)  | any other value specified  |
 | cto (default)  | "nocto" specified  |
-
 
 ### Synchronous versus asynchronous option
 
@@ -113,14 +111,12 @@ Enables replies to requests only after the changes have been committed to stable
 
 #### Synchronous / asynchronous option impact
 
-
 | Client  | Server  | Internal data  | Transferable data  | Performance  |
-| --- | --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - | - - - |
 | Sync  | Sync  | 1  | 1  | Low  |
 | Sync  | Async  | 2 (secure the NFS server)  | 2 (secure the NFS server)  | Medium  |
 | Async  | Sync  | 1 (if cft.server.catalog.<br /> sync.enable=Yes)  | 1 (when using sync points)  | Medium - high  |
 | Async  | Async  | 3  | 3  | High  |
-
 
 Legend:
 
@@ -150,13 +146,13 @@ When transferring files that are located in a **N**etwork **F**ile **S**ystem, a
 
 ### Troubleshoot the UID and GID
 
-NFS uses UIDs and GIDs for all file permissions. Therefore during installation of a multihost multi-node architecture, the Transfer CFT user must have read and write access to any folder and files created on the other host or hosts. Additionally, all hosts in the implementation should use the same UID number.
+NFS uses UIDs and GIDs for all file permissions. Therefore during installation of a multihost multi- node architecture, the Transfer CFT user must have read and write access to any folder and files created on the other host or hosts. Additionally, all hosts in the implementation should use the same UID number.
 
-For more information, please refer to the [NFS](http://nfs.sourceforge.net/nfs-howto/ar01s07.html#pemission_issues) documentation.
+For more information, please refer to the [NFS](http://nfs.sourceforge.net/nfs- howto/ar01s07.html#pemission_issues) documentation.
 
 ## Using AWS EFS
 
-The recommendations in this section apply to a Transfer CFT multi-node, multi-host architecture based on an Amazon Web Services (AWS) Elastic File System (EFS) shared file system.
+The recommendations in this section apply to a Transfer CFT multi- node, multi- host architecture based on an Amazon Web Services (AWS) Elastic File System (EFS) shared file system.
 
 When using AWS EFS, you cannot set the server options; only the client is configurable.
 
@@ -181,4 +177,4 @@ SMB, Server Message Block, is a protocol used to share files across corporate in
 
 > **Note**
 >
-> CIFS, Common Internet File System, is an out-dated SMB protocol variant.
+> CIFS, Common Internet File System, is an out- dated SMB protocol variant.

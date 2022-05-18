@@ -1,8 +1,8 @@
 ---
-    title: "scredit"
-    linkTitle: "scredit"
-    weight: 3120
----<span id="scredit"></span>
+title: "scredit"
+linkTitle: "scredit"
+weight: 3120
+--- <span id="scredit"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
@@ -21,7 +21,5 @@ between 1 and 999. The Default value is ****4****.
 messages equal to the result of the negotiation (performed when the protocol
 session is established), before waiting for a new "credit" to
 be sent by the server.
-
- 
 
 [Return to Command index](../../)

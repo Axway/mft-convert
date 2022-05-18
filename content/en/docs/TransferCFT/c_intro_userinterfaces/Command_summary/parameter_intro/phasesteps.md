@@ -1,8 +1,8 @@
 ---
-    title: "phasesteps"
-    linkTitle: "phasesteps"
-    weight: 2600
----#### phasesteps
+title: "phasesteps"
+linkTitle: "phasesteps"
+weight: 2600
+--- #### phasesteps
 
 ****SWAITCAT****
 
@@ -17,7 +17,7 @@ During processing, the phasesteps can be:
 - \(C\) Processing/Current: When the processing of the Phase is executing.
 - \(K\) Keep: When the processing of the Phase is stopped.
 - \(X\) Done: This phase step only exists in the Done Phase, once all previous phases are complete.
-- \(E\) Exit EOT: This phase step only exists in the Post-processing phase, to signal an [end-of-transfer exit](../../../../app_integration_intro/managing_exits/about_the_end_of_transfer_type_exit).
+- \(E\) Exit EOT: This phase step only exists in the Post- processing phase, to signal an [end- of- transfer exit](../../../../app_integration_intro/managing_exits/about_the_end_of_transfer_type_exit).
 
 ****Example****
 

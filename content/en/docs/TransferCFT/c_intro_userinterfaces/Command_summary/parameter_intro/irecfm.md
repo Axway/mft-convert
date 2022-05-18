@@ -1,8 +1,8 @@
 ---
-    title: "irecfm"
-    linkTitle: "irecfm"
-    weight: 1720
----<span id="irecfm"></span>
+title: "irecfm"
+linkTitle: "irecfm"
+weight: 1720
+--- <span id="irecfm"></span>
 
 ### irecfm
 
@@ -19,10 +19,8 @@ System are indicated in the corresponding specific Operations Guide.
 If the input file is compressed (ICOMP not 0), the value of the IRECFM
 parameter is forced to V.
 
-
 | OS400, UNIX | The variable format concept is specific to {{< TransferCFT/axwayvariablesComponentShortName  >}} and is not valid for the systems indicated. |
-| --- | --- |
-
+| - - - | - - - |
 
 Refer to the {{< TransferCFT/axwayvariablesComponentShortName  >}} Operations Guide corresponding to your
 OS.

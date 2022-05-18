@@ -1,8 +1,8 @@
 ---
-    title: "About access management exits"
-    linkTitle: "Exit type access management"
-    weight: 170
----This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
+title: "About access management exits"
+linkTitle: "Exit type access management"
+weight: 170
+--- This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} offers an access management exit in the form of a dynamic library. This library implements a set of mandatory functions described in the `$CFTINSTALLDIR/inc/exam.h` file.
 

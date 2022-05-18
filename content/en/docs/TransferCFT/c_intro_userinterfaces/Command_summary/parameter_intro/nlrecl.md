@@ -1,8 +1,8 @@
 ---
-    title: "nlrecl"
-    linkTitle: "nlrecl"
-    weight: 2250
----<span id="nlrecl"></span>
+title: "nlrecl"
+linkTitle: "nlrecl"
+weight: 2250
+--- <span id="nlrecl"></span>
 
 ### nlrecl
 

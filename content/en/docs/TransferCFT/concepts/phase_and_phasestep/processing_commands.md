@@ -1,8 +1,8 @@
 ---
-    title: "Transfer phase"
-    linkTitle: "Transfer  phase"
-    weight: 170
----This is the key and only mandatory phase, which is activated for all flows. The former state and the adapted state will both be synchronized with the former state.
+title: "Transfer phase"
+linkTitle: "Transfer  phase"
+weight: 170
+--- This is the key and only mandatory phase, which is activated for all flows. The former state and the adapted state will both be synchronized with the former state.
 
 During this phase, the phase step is the same as the former state:
 

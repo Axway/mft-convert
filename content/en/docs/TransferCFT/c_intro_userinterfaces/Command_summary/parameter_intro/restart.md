@@ -1,8 +1,8 @@
 ---
-    title: "restart"
-    linkTitle: "restart"
-    weight: 2880
----<span id="restart"></span>
+title: "restart"
+linkTitle: "restart"
+weight: 2880
+--- <span id="restart"></span>
 
 ### restart
 
@@ -29,4 +29,3 @@ Option to manage the restart.
 
 [Return to Command index](../../)
 
- 

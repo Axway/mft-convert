@@ -1,8 +1,8 @@
 ---
-    title: "nack"
-    linkTitle: "nack"
-    weight: 2070
----### nack
+title: "nack"
+linkTitle: "nack"
+weight: 2070
+--- ### nack
 
 #### SEND
 

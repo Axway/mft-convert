@@ -1,8 +1,8 @@
 ---
-    title: "Receive template "
-    linkTitle: "Default receive template CFTRECV"
-    weight: 160
----This topic describes general file reception concepts and the
+title: "Receive template "
+linkTitle: "Default receive template CFTRECV"
+weight: 160
+--- This topic describes general file reception concepts and the
 CFTRECV template.
 
 [Receive
@@ -33,14 +33,14 @@ parameters can be classified into categories:
 - identification
     parameters
 
-<!-- -->
+<!- - - - >
 
 - general: ID,
     USERID, GROUPID
 - specific to
     the PeSIT protocol (PeSIT D CFT profile or PeSIT E): RUSER, SUSER
 
-<!-- -->
+<!- - - - >
 
 - protection of the
     parameters set: FORCE
@@ -49,7 +49,7 @@ parameters can be classified into categories:
 - execution control
     parameters:
 
-<!-- -->
+<!- - - - >
 
 - general: PRI
 - user: EXEC,
@@ -57,14 +57,14 @@ parameters can be classified into categories:
 - cycle management:
     MINDATE, CYCTIME
 
-<!-- -->
+<!- - - - >
 
 - data processing
     parameters: NCOMP, XLATE, FCODE
 - file parameters
     (general):
 
-<!-- -->
+<!- - - - >
 
 - file management:
     FACTION, FDISP
@@ -83,13 +83,11 @@ the file characteristics communicated by the sender.
 For a given transfer, these protocol values are the DEFAULT values of
 the corresponding Fxxxxx parameters:
 
-
 | PeSIT E CFT/CFT<br/> PeSIT D CFT profile  | In PeSIT E (CFT to CFT), or PeSIT D CFT profile (transfer between 2 {{< TransferCFT/axwayvariablesComponentShortName  >}}s), the default values taken by the FSPACE, FTYPE, FBLKSIZE, FLRECL and FRECFM parameters are the values sent by the partner (see the CFTSEND object, NSPACE, NTYPE, NBLKSIZE, NLRECL, NRECFM parameters). For open mode operation, the FNAME parameter can also inherit the value of the partner NFNAME parameter.  |
-| --- | --- |
+| - - - | - - - |
 | PeSIT E  | In PeSIT E, the default values taken by the FKEYLEN and FKEYPOS parameters are the values sent by the partner (see the NKEYLEN and NKEYPOS parameters of the CFTSEND object).  |
 | PeSIT SIT profile  | In PeSIT SIT profile, the "file size", "record format" and "record length" information items sent by the protocol are taken as the default values of the FSPACE, FRECFM, FLRECL parameters. |
 | ODETTE  | In the ODETTE protocol, the default values of the FRECFM, FLRECL and FSPACE parameters are deduced from the ODETTE parameters received |
-
 
 <span id="new_link_receive_templates"></span>For more information, see the [Protocol](../../../protocols_start_here) topics.
 
@@ -122,7 +120,7 @@ Use the Initial CFTRECV object to:
     name and local physical characteristics of the file to receive
 - Define the default
     actions to perform locally during and after the transfer (translation,
-    compression, call to a user EXIT, an end-of-transfer procedure...)
+    compression, call to a user EXIT, an end- of- transfer procedure...)
 - Authorize the default
     time slot and default user associated with the transfers
 
@@ -158,9 +156,9 @@ The CFTRECV command is used to specify, for each model file (IDF):
 - the actions to
     be performed locally such as:
 
-<!-- -->
+<!- - - - >
 
-- call of a user-written
+- call of a user- written
     "file EXIT" task during the transfer
 - actions performed
     by the monitor on the receiver file at the beginning of transfer
@@ -169,12 +167,12 @@ The CFTRECV command is used to specify, for each model file (IDF):
 - call to a procedure
     to be executed on completion of the transfer, and so on
 
-<!-- -->
+<!- - - - >
 
 - miscellaneous parameters
     controlling the execution of transfers, such as:
 
-<!-- -->
+<!- - - - >
 
 - authorized
     time slot
@@ -218,9 +216,8 @@ The following precedence rule applies globally:
     CFT adds a new member to an already existing partitioned file), this corresponds
     to an intermediate case between the two previous ones. New values may
     be taken into account for some parameters but not for others; Transfer
-    CFT’s behavior is system-dependent.
+    CFT’s behavior is system- dependent.
 
 The file received may be stored during the transfer in a temporary file
 which is renamed at the end of the transfer.
 
- 

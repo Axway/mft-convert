@@ -1,8 +1,8 @@
 ---
-    title: "Define environment variables file"
-    linkTitle: "Environment variables file"
-    weight: 190
----You must define the environment variables in the `..UPARM (CNFENV)` file with the DDname `STDENV`.
+title: "Define environment variables file"
+linkTitle: "Environment variables file"
+weight: 190
+--- You must define the environment variables in the `..UPARM (CNFENV)` file with the DDname `STDENV`.
 
 > **Note**
 >

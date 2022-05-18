@@ -1,8 +1,8 @@
 ---
-    title: "Creating  transfer templates"
-    linkTitle: "Ongoing CFTRECV"
-    weight: 420
----<span id="About_the_Ongoing_CFTRECV_object"></span>
+title: "Creating  transfer templates"
+linkTitle: "Ongoing CFTRECV"
+weight: 420
+--- <span id="About_the_Ongoing_CFTRECV_object"></span>
 
 ## About the ongoing CFTRECV object
 
@@ -12,7 +12,7 @@ Use the CFTRECV object to:
     local physical characteristics of the file to receive
 - List actions to
     perform locally during and after the transfer (translation, compression,
-    call to a user EXIT, an end-of-transfer procedure, etc.)
+    call to a user EXIT, an end- of- transfer procedure, etc.)
 - View authorized
     time slot and default user associated with the transfers
 
@@ -38,7 +38,7 @@ Use the CFTSEND object to specify:
     of the file to send to the partner
 - The actions to
     perform locally during and after a transfer (translation, compression,
-    call to a user EXIT, an end-of-transfer procedure...)
+    call to a user EXIT, an end- of- transfer procedure...)
 - An authorized time
     slot and default user associated with the transfers
 

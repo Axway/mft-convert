@@ -1,25 +1,23 @@
 ---
-    title: "CFTROLE"
-    linkTitle: "Roles - CFTROLE"
-    weight: 250
----Set the roles, which define a type of user and application permission. See also [Access Management using Flow Manager](../../../../internal_a_m_start_here/fm_access_management)
+title: "CFTROLE"
+linkTitle: "Roles - CFTROLE"
+weight: 250
+--- Set the roles, which define a type of user and application permission. See also [Access Management using Flow Manager](../../../../internal_a_m_start_here/fm_access_management)
 
 ### Using CFTROLE
 
-A role is a general profile that can be associated with a user. A role is based on one or more privileges, and a privilege is based on a resource. There are two types of roles: predefined and user-defined. Predefined roles are available by default to assign to users.
+A role is a general profile that can be associated with a user. A role is based on one or more privileges, and a privilege is based on a resource. There are two types of roles: predefined and user- defined. Predefined roles are available by default to assign to users.
 
 You can assign users to one or more roles. Typically, users with multiple roles have more privileges than users with fewer roles.
 
 Examples of roles can be ADMINISTRATOR, PARTNER MANAGER, IT MANAGER, and so on.
 
-
 | Field | Type | Comment |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | id | String32 | Role identifier |
 | comment | String80 | Comment |
 | privs[] | List of String32 | List of privileges associated to this role (1 to 128) |
 | aliases  | List of String64  | List of aliases associated with this role  |
-
 
 **Example 1**
 

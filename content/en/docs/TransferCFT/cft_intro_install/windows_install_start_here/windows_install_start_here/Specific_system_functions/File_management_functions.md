@@ -1,8 +1,8 @@
 ---
-    title: "File  management functions"
-    linkTitle: "File management functions"
-    weight: 260
-----   [Managing
+title: "File  management functions"
+linkTitle: "File management functions"
+weight: 260
+--- - [Managing
     file flushes](#Managing_file_flushes)
 - [Managing
     access conflicts to CFT working files](#Managing_access_conflicts_to_CFT_working_files)
@@ -32,11 +32,10 @@ During the transfer, Transfer CFT implements two types of flushes:
 - Flushes
     on the Transfer CFT catalog when synchronization points are received.
     See also the CFTCAT [UPDAT](../../../../../c_intro_userinterfaces/command_summary/parameter_intro/updat) parameter.
-     
 
 These flush operations tend to secure transfers against risks
 caused by serious hardware malfunctions and unexpected mains power failures.
-Since this security behavior is time-consuming,you may feel that such behavior is not warranted.
+Since this security behavior is time- consuming,you may feel that such behavior is not warranted.
 
 ### Deactivating the flush function
 
@@ -133,7 +132,7 @@ A suffix is defined in accordance with the following syntax:
 &lt;suffix of 1 to 3 letters>=&lt;letter defining the file type>
 
 Only characters supported by the operating system can be within the
-first 1-3 letters defining the suffix. Wild cards, ‘?’ and ‘\*’ cannot
+first 1- 3 letters defining the suffix. Wild cards, ‘?’ and ‘\*’ cannot
 be used.
 
 There are three main file types:
@@ -149,7 +148,7 @@ by the letter "B".
     files
 
 Transfer CFT treats this type of file as a series of text
-lines each separated by the pre-defined control code sequence CR-LF (0x0D
+lines each separated by the pre- defined control code sequence CR- LF (0x0D
 – 0x0A).  
 This type of file may or may not end in the binary code 0x5A (ctrl Z) For
 all Transfer CFTs, a text file is characterized by the letter "B".
@@ -168,7 +167,7 @@ type of file is characterized by the letter "V".
 In this architecture, you can operate Transfer CFT/Client
 Windows with a UNIX Transfer CFT/Server.
 
-When you select a Transfer CFT/Server-client architecture, the Transfer
+When you select a Transfer CFT/Server- client architecture, the Transfer
 CFT/Server and Transfer CFT/Client elements should be specified in conjunction
 with Axway Sales Department.
 
@@ -205,15 +204,13 @@ the CFTSUFX file.
 
 ****Letters defining a file type****
 
-
 | Letter  | Type of file  |
-| --- | --- |
+| - - - | - - - |
 | B  | Binary file  |
 | O  | Text file (Windows text files)  |
 | V  | Variable file (in the Transfer CFT sense)  |
 | T  | Text file (native)  |
 | X  | Text file (UNIX)  |
-
 
 Example of the content of the CFTSUFX file:
 
@@ -253,7 +250,7 @@ for the CFTSEND command has the following two characteristics:
 - The first character
     is a surrogate character ‘#’
 - The FNAME parameter
-    states a folder, or contains meta-characters
+    states a folder, or contains meta- characters
 
 ****Example****
 
@@ -281,7 +278,7 @@ parameter of the CFTPART command contains data and is different from the
 local system.
 
 In this mode, each file designated by the generic name of FNAME containing
-meta-characters is the object of a special transfer.
+meta- characters is the object of a special transfer.
 
 This request to send generates as many posts in the catalogue as there
 are files to transfer.
@@ -302,11 +299,11 @@ files designated by the generic FNAME of the sending Transfer CFT.
 
 This implementation is performed by calling a concatenation process
 external to Transfer CFT (before the transfer for the transmitter) then
-a "de-concatenation" process (after the transfer for the receiver).
+a "de- concatenation" process (after the transfer for the receiver).
 
-These operations are performed on large and medium-sized systems, by standard tools within the operative system (for example, the IEBCOPY utilities on the IBM host or tar on UNIX). This type of standard tool does not exist on Windows. Therefore, the tools zip/unzip are provided in the Transfer CFT Windows package.
+These operations are performed on large and medium- sized systems, by standard tools within the operative system (for example, the IEBCOPY utilities on the IBM host or tar on UNIX). This type of standard tool does not exist on Windows. Therefore, the tools zip/unzip are provided in the Transfer CFT Windows package.
 
-These tools operate, either with several incoming files and one outgoing (this is the concatenation called prior to the transmission), or with a single incoming and several outgoing files (this is the de-concatenation called after reception).
+These tools operate, either with several incoming files and one outgoing (this is the concatenation called prior to the transmission), or with a single incoming and several outgoing files (this is the de- concatenation called after reception).
 
 Transfer CFT/Windows ensures that this function is "opened"
 by calling different batches before transmission by the transmitter and
@@ -321,7 +318,7 @@ This is the file which will actually be transmitted.
 - The batch file
     CFTRST01 is called after reception and on the receiver
 
-This batch should de-concatenate the file that has been received. This
+This batch should de- concatenate the file that has been received. This
 file takes the name stated in the WFNAME parameter of the CFTRECV command.
 
 The CFTSVG01 and CFTRST01 batch files must be located in the folder
@@ -330,17 +327,17 @@ as default, when Transfer CFT is executed.
 These batch files are automatically called by the following parameters:
 
 - For CFTSVG01:
-    -   The 5th
+    - The 5th
         parameter (%5) designates all the files to concatenate and corresponds
         to the NFNAME of the CFTSEND command
-    -   The 6th
+    - The 6th
         parameter (%6) gives the name of the out file for the concatenation utility
         and corresponds to WFNAME of the CFTSEND command
 - For CFTRST01:
-    -   The 5th
-        parameter (%5) gives the name of the in file for the de-concatenation
+    - The 5th
+        parameter (%5) gives the name of the in file for the de- concatenation
         utility and corresponds to WFNAME of the CFTRECV command
-    -   The 6th
+    - The 6th
         parameter (%6) designates all the out files to concatenate and corresponds
         to the NFNAME of the CFTRECV command
 
@@ -354,13 +351,13 @@ mode, the conditions on the Transfer CFT parameters are as follows:
 
 - The parameter FNAME
     in the CFTSEND command is in the form of #&lt;string>, in which &lt;string>
-    indicates a folder or contains meta-characters
+    indicates a folder or contains meta- characters
 - The parameter WFNAME
     of the CFTSEND command is a string indicating the name of the out file
     for the concatenator on the transmitter
 - The parameter WFNAME
     of the CFTRECV command is a string indicating the name of the IN file
-    for the DE-concatenator on the receiver  
+    for the DE- concatenator on the receiver  
     This name does not need to be the same as that of WFNAME of the CFTSEND
     on the transmitter
 - The parameter FNAME
@@ -380,7 +377,7 @@ mode, the conditions on the Transfer CFT parameters are as follows:
 To use the above function between two different but standardized
 operating systems (such as Windows 7 for transmission and Windows Server for
 reception), check that the tool (or tool pair) can be used
-in your operating system. In the example above, the de-concatenation on Windows Server knows how to correctly restore on the Windows Server all of the files concatenated in Windows 7.
+in your operating system. In the example above, the de- concatenation on Windows Server knows how to correctly restore on the Windows Server all of the files concatenated in Windows 7.
 
 However there is a problem when the two Transfer CFT partners are standardized
 and you simply want to have recourse to the functions associated with

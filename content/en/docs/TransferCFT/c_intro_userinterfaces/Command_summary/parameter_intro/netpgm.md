@@ -1,8 +1,8 @@
 ---
-    title: "netpgm"
-    linkTitle: "netpgm"
-    weight: 2190
----<span id="netpgm"></span>
+title: "netpgm"
+linkTitle: "netpgm"
+weight: 2190
+--- <span id="netpgm"></span>
 
 ### netpgm
 
@@ -15,7 +15,5 @@ UNIX systems.
 
 - Value = ****string
     32****
-
- 
 
 [Return to Command index](../../)

@@ -1,11 +1,11 @@
 ---
-    title: "Networks and protocols"
-    linkTitle: "Networks and protocols"
-    weight: 90
----## File transfer protocols
+title: "Networks and protocols"
+linkTitle: "Networks and protocols"
+weight: 90
+--- ## File transfer protocols
 
 A file transfer protocol is
-a set of rules governing connections and file-based data interchange between
+a set of rules governing connections and file- based data interchange between
 remote sites. The sequence of connection messages, file selection, data
 transfer, synchronization points and disconnect requests must be defined
 and recognized by both Partners.

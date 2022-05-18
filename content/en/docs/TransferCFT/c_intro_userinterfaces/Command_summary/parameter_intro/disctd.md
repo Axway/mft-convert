@@ -1,8 +1,8 @@
 ---
-    title: "disctd"
-    linkTitle: "disctd"
-    weight: 720
----<span id="disctd"></span>
+title: "disctd"
+linkTitle: "disctd"
+weight: 720
+--- <span id="disctd"></span>
 
 ### disctd
 
@@ -24,11 +24,9 @@ indicated in the table below.
 
 Default values are:
 
-
 | Protocol  | Default value |
-| --- | --- |
+| - - - | - - - |
 | PeSIT ANY profile | 10  |
 | ODETTE  | 20  |
-
 
 [Return to Command index](../../)

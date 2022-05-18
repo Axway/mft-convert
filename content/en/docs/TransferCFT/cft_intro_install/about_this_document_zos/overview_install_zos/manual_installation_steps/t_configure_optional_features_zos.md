@@ -1,8 +1,8 @@
 ---
-    title: "Configure optional  features"
-    linkTitle: "Configure optional features"
-    weight: 250
----<span id="Create a Transfer CFT PKI file D43PKI"></span><span id="kanchor37"></span>
+title: "Configure optional  features"
+linkTitle: "Configure optional features"
+weight: 250
+--- <span id="Create a Transfer CFT PKI file D43PKI"></span><span id="kanchor37"></span>
 
 ## Create a Transfer CFT PKI file D43PKI
 
@@ -31,15 +31,15 @@ System Authorization Facility (SAF) based PKI offers a more secured SSL. The opt
 - Enable the IBM Crypto Express 2 coprocessor, if available
 - Configure the IBM ICSF program to use a secured PKDS database
 
-<!-- -->
+<!- - - - >
 
 - Install and configure the option for Transfer CFT
 
-<!-- -->
+<!- - - - >
 
 - Define RACF
 
-<!-- -->
+<!- - - - >
 
 - Define the CFTSSL PARM fields or ROOTCID/USERCID fields
 
@@ -55,9 +55,9 @@ A sample named RACDCERT is delivered in the cftv2.INSTALL library. This RACDCERT
 >
 > Transfer CFT no longer delivers sample certificates.
 
-For information on SAF compatible security products, such as ACF/2 or TOP-SECRET, refer to the product-supplied documentation.
+For information on SAF compatible security products, such as ACF/2 or TOP- SECRET, refer to the product- supplied documentation.
 
-For information on how to manage certificates using RACF, refer to the IBM documentation SA22-7687, Security Server RACF Command Language Reference. For example, if you are not using an IBM Crypto Express coprocessor, you must remove the PCICC(\*) parameter of the RACDCER ADD command.
+For information on how to manage certificates using RACF, refer to the IBM documentation SA22- 7687, Security Server RACF Command Language Reference. For example, if you are not using an IBM Crypto Express coprocessor, you must remove the PCICC(\*) parameter of the RACDCER ADD command.
 
 #### CFTSSL parameter changes for a SAF based PKI
 
@@ -65,7 +65,7 @@ SAF certificate management is based on:
 
 - A RING used to store one or more certificates (RACDECRT RING)
 
-<!-- -->
+<!- - - - >
 
 - The USER that owns the certificates (RACDCERT ID)
 
@@ -108,11 +108,11 @@ Required tasks for the correct exit functioning include:
 
 - The PKI exit sets or switches the security environment for the user defined as OWNER=userid. To set the security environment, Transfer CFT must be started and APF authorized
 
-<!-- -->
+<!- - - - >
 
 - You must add SAF security definitions for OWNER=userid, in the SAF CLASS named FACILITY. Setting the definitions involves a number of IRR.DIGCERT.\*.
 
-The SAF definitions are described in the IBM documentation SA22-7691 Security Server RACF Callable Services, chapter IRRSDL00.
+The SAF definitions are described in the IBM documentation SA22- 7691 Security Server RACF Callable Services, chapter IRRSDL00.
 
 Transfer CFT will perform the DATAGETFIRST/DATAGETNEXT and the CHECKSTATUS operations.
 

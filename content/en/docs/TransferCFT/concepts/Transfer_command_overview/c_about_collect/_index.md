@@ -1,8 +1,8 @@
 ---
-    title: "About broadcast and collecting"
-    linkTitle: "File transfers"
-    weight: 300
----Files from several partners can be collected
+title: "About broadcast and collecting"
+linkTitle: "File transfers"
+weight: 300
+--- Files from several partners can be collected
 through a single RECV command, making reference to a list of partners
 associated with this collection; this list is defined in the CFTDEST command.
 
@@ -43,7 +43,7 @@ in a list cannot itself be a broadcasting list.
 
 > **Note**
 >
-> The number of entries is not cross-checked against
+> The number of entries is not cross- checked against
 > the number of partners in the list.
 
 <span id="Definition_of_a_partner_list"></span>
@@ -100,7 +100,7 @@ Once ALL the transfers corresponding to each of the partners described
 in this list have been CORRECTLY completed, the record associated with
 the SEND or RECV command then changes to the T state.
 
-An end-of-transfer procedure can then be executed, provided it has been
+An end- of- transfer procedure can then be executed, provided it has been
 defined:
 
 - in the EXEC parameter

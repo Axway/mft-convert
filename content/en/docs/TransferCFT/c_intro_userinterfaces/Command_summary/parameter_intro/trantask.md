@@ -1,8 +1,8 @@
 ---
-    title: "trantask"
-    linkTitle: "trantask"
-    weight: 3600
----<span id="trantask"></span>
+title: "trantask"
+linkTitle: "trantask"
+weight: 3600
+--- <span id="trantask"></span>
 
 ### trantask
 
@@ -18,15 +18,13 @@ The MAXTASK value multiplied by the TRANTASK value should be less than or equal 
 
 The following table indicates the maximum value supported for each system, where 3 is the default for all systems.
 
-
 | Operating system  | Maximum value  |
-| --- | --- |
+| - - - | - - - |
 | Windows | 1000 |
 | UNIX/HP Nonstop | 64 |
 | z/OS (MVS) | 64 |
 | IBM i (OS400) | 64 |
 | OpenVMS  | 64 |
-
 
 ******Example******
 

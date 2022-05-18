@@ -1,8 +1,8 @@
 ---
-    title: "verify"
-    linkTitle: "verify"
-    weight: 3740
----<span id="verify"></span>
+title: "verify"
+linkTitle: "verify"
+weight: 3740
+--- <span id="verify"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
@@ -61,8 +61,6 @@ This example demonstrates the use of the client `ENFORCED `value.
 `CFTSSL type=client, verify=ENFORCED and CFTSSL type=server, verify=required`
 
 ![](/Images/TransferCFT/verify1.png)
-
- 
 
 ****Example 3****
 

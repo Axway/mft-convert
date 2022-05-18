@@ -1,8 +1,8 @@
 ---
-    title: "PURGE  - Purging the catalog"
-    linkTitle: "PURGE - Purge the catalog"
-    weight: 300
----This topic describes how to delete records which have exceeded the retention
+title: "PURGE  - Purging the catalog"
+linkTitle: "PURGE - Purge the catalog"
+weight: 300
+--- This topic describes how to delete records which have exceeded the retention
 time in the catalog. Transfer CFT provides the following purge options:
 
 - [Startup configuration purge](#Startup)
@@ -12,16 +12,14 @@ time in the catalog. Transfer CFT provides the following purge options:
 
 ********Syntax********
 
-
 | Command or parameter  | Description  |
-| --- | --- |
+| - - - | - - - |
 | PURGE  | Use this command to delete records which have exceeded the retention time indicated in the Transfer CFT parameter setting. You can set the purge time to meet your requirements and Transfer CFT activity.  |
 |  [TIMEP](../../../c_intro_userinterfaces/command_summary/parameter_intro/timep) | Purge time selected by the user.<br/> You can deactivate the next purge function by setting TIMEP = 00000000. Use care with this operation due to a risk of catalog overloading with a loss of performance, or overflow.<br/> If the next purge is part of a cycle, see the CFTCAT TIMEP parameter, the entire cycle is deleted, and not just the next occurrence of this cycle. |
 
-
 <span id="Startup"></span>
 
-## Start-up configuration purge
+## Start- up configuration purge
 
 You can configure a catalog purge to occur on Transfer CFT start up. The following [unified configuration](../../uconf/uconf_parameters) options are available:
 
@@ -106,7 +104,7 @@ CFTUTIL reconfig type=UCONF
 
 You can use the [unified configuration](../../uconf/uconf_parameters) parameters to modify the amount of time to keep transfers in catalog before purging without modifying the CFTCAT object.
 
-For each of the following, enter an integer value for the amount of time. If you enter the default value of -1, the CFTCAT configuration value is used.
+For each of the following, enter an integer value for the amount of time. If you enter the default value of - 1, the CFTCAT configuration value is used.
 
 - cft.purge.rx = requester state X
 - cft.purge.sx = server state X
@@ -127,7 +125,7 @@ Where the state is:
 
 The parameters listed above have a different meaning according to their value, either:
 
-- Setting the parameter value to -1 indicates that the value is ignored, and the CFTCAT setting is used.
+- Setting the parameter value to - 1 indicates that the value is ignored, and the CFTCAT setting is used.
 - Setting the parameter value to a lone integer, or an integer followed by the letter “D” specifies an amount of time in days. Setting the value to an integer followed by the letter “H” or “M” specifies an amount of time in hours or minutes. In each case, the value is converted to the corresponding amount of minutes, and the purge is calculated to within a minute.
 
 ****Example****

@@ -1,8 +1,8 @@
 ---
-    title: "Troubleshoot the Copilot server"
-    linkTitle: "Troubleshoot the Copilot server"
-    weight: 260
----## Failed cftsu
+title: "Troubleshoot the Copilot server"
+linkTitle: "Troubleshoot the Copilot server"
+weight: 260
+--- ## Failed cftsu
 
 ### {{< TransferCFT/suitevariablesUNIX  >}}
 
@@ -20,26 +20,26 @@ The following message may be due to one of the causes listed below.
 
 1. The owner is not root. Check:  
     ```
-    ls -l cftsu-rwsrwxrwx 1 cft cft cftsu
+    ls - l cftsu- rwsrwxrwx 1 cft cft cftsu
     ```
 
     Fix: Set the root using the chown root:root &lt;file> command.
 
     ```
-    ls -l cftsu-rwsrwxrwx 1 root root
+    ls - l cftsu- rwsrwxrwx 1 root root
     cftsu
     ```
 
 1. The setuid option (s) is not set for the cftsu file. Check:  
     ```
-    ls -l cftsu-rwxrwxrwx 1 root root cftsu
+    ls - l cftsu- rwxrwxrwx 1 root root cftsu
     ```
 
     Fix: Set using the chmod u+s &lt;file> command.
 
     ```
-    ls -l cftsu
-    -rw<u>s</u>rwxrwx 1 root root cftsu
+    ls - l cftsu
+    - rw<u>s</u>rwxrwx 1 root root cftsu
     ```
 
 1. The nosuid option is set for the disk. Check by executing the mount command:  

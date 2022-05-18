@@ -1,8 +1,8 @@
 ---
-    title: "Using Application programming interfaces (API)"
-    linkTitle: "Using APIs"
-    weight: 280
----> **Note**
+title: "Using Application programming interfaces (API)"
+linkTitle: "Using APIs"
+weight: 280
+--- > **Note**
 >
 > Only ILE (Integrated Language Environment) is supported.
 
@@ -14,7 +14,7 @@ The client application receives from Transfer CFT:
 
 - A return code
 
-<!-- -->
+<!- - - - >
 
 - The requested data, if applicable
 
@@ -33,7 +33,7 @@ Available commands include OPEN, SELECT, NEXT, MODIFY and CLOSE.
 
 ### Requesting a transfer: CFTU and CFTC functions
 
-Available parameters include: F-SEND, F-RECV, F-START, F-HALT, F-KEEP, F-DELETE, F-END and F-COM.
+Available parameters include: F- SEND, F- RECV, F- START, F- HALT, F- KEEP, F- DELETE, F- END and F- COM.
 
 ****COBOL/ILE Programming samples****
 

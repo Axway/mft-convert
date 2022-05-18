@@ -1,8 +1,8 @@
 ---
-    title: "Running   Transfer CFT for the first time "
-    linkTitle: "Running Transfer CFT for the first time"
-    weight: 200
----The elements and tasks required to
+title: "Running   Transfer CFT for the first time "
+linkTitle: "Running Transfer CFT for the first time"
+weight: 200
+--- The elements and tasks required to
 start {{< TransferCFT/axwayvariablesComponentShortName  >}} for the first time include:
 
 - [Set the environment](#Operations_to_perform_before_starting_CFT)
@@ -25,17 +25,17 @@ After installing {{< TransferCFT/axwayvariablesComponentShortName  >}}
     variables, or execute `profile.ps1` if you are using Windows PowerShell instead of Batch.
 - Create a new set of Transfer
     CFT working files, parameters, partners, catalog, communication file, logs,
-    use the sample configuration files cft-tcp.conf and cft-tcp-part.conf in the `runtime\conf` directory. You can configure these during the product installation or manually after installation.
+    use the sample configuration files cft- tcp.conf and cft- tcp- part.conf in the `runtime\conf` directory. You can configure these during the product installation or manually after installation.
 - Use `cftinit <configuration_file>` > and/or `cftupdate` to interpret the parameter and
     partner files.  
     ```
-    cftinit conf\\cft-tcp.conf
-    cftupdate conf\\cft-tcp-part.conf
+    cftinit conf\\cft- tcp.conf
+    cftupdate conf\\cft- tcp- part.conf
     ```
-      
+
     or  
     ```
-    cftinit conf\\cft-tcp.conf conf\\cft-tcp-part.conf
+    cftinit conf\\cft- tcp.conf conf\\cft- tcp- part.conf
     ```
 
 > **Note**
@@ -45,8 +45,8 @@ After installing {{< TransferCFT/axwayvariablesComponentShortName  >}}
 
 ****Sample file details****
 
-- `cft-tcp.conf`: Contains PARM object definitions (PARM, CAT, COM, LOG, ACCNT, PROT, SEND, RECV,...etc.).
-- `cft-tcp-part.conf`: Contains partner definitions (CFTPART, CFTTCP, CFTSSL).
+- `cft- tcp.conf`: Contains PARM object definitions (PARM, CAT, COM, LOG, ACCNT, PROT, SEND, RECV,...etc.).
+- `cft- tcp- part.conf`: Contains partner definitions (CFTPART, CFTTCP, CFTSSL).
 
 Delivered partners are:
 
@@ -56,15 +56,13 @@ Delivered partners are:
 
 ### Start and stop commands
 
-
 | Commands  |
-| --- |
+| - - - |
 | cft start  |
 | cft stop  |
 | cft status  |
-| cft force-stop  |
-| cft force-stop -kill  |
-
+| cft force- stop  |
+| cft force- stop - kill  |
 
 > **Note**
 >
@@ -118,10 +116,10 @@ You can use the Windows utility `cftw.exe` to open a desktop window that display
 >
 > When Transfer CFT is running as a service, you must have the service configured to authorize desktop interaction, and you must manually launch the cftw.exe.
 
-If {{< TransferCFT/axwayvariablesComponentLongName  >}}is not running, use the `-wait `option with cftw so that the utility waits for {{< TransferCFT/axwayvariablesComponentLongName  >}} to start instead of exiting immediately.
+If {{< TransferCFT/axwayvariablesComponentLongName  >}}is not running, use the `- wait `option with cftw so that the utility waits for {{< TransferCFT/axwayvariablesComponentLongName  >}} to start instead of exiting immediately.
 
 ```
-cftw.exe -w
+cftw.exe - w
 ```
 
 As of {{< TransferCFT/axwayvariablesComponentLongName  >}} v3.0.1, a second cftw UCONF parameter,` cft.nt.cftw_display_log_messages`, is available. To display log messages in the cftw window, change the parameter setting from **No** (default value) to **Yes**.

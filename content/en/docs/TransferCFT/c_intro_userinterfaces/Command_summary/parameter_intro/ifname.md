@@ -1,8 +1,8 @@
 ---
-    title: "ifname"
-    linkTitle: "ifname"
-    weight: 1580
----<span id="ifname"></span>
+title: "ifname"
+linkTitle: "ifname"
+weight: 1580
+--- <span id="ifname"></span>
 
 ### ifname
 

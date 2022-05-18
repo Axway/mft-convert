@@ -1,8 +1,8 @@
 ---
-    title: "mediacom"
-    linkTitle: "mediacom"
-    weight: 1970
----<span id="mediacom"></span>
+title: "mediacom"
+linkTitle: "mediacom"
+weight: 1970
+--- <span id="mediacom"></span>
 
 ### mediacom
 

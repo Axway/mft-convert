@@ -1,8 +1,8 @@
 ---
-    title: "After a synchronization point"
-    linkTitle: "Stage After a synchronization point"
-    weight: 430
----The value of the synchronization point designates:
+title: "After a synchronization point"
+linkTitle: "Stage After a synchronization point"
+weight: 430
+--- The value of the synchronization point designates:
 
 - For the sender, the position of
     the last record read in the file
@@ -22,9 +22,8 @@ point.
 
 ### Fields to define
 
-
 | Field  | Description  |
-| --- | --- |
+| - - - | - - - |
 | ret1 | Return code:<br/> • 0: processing ok<br/> • 9: refusal and end of transfer<br/> If file accessing is managed by {{< TransferCFT/axwayvariablesComponentShortName  >}}:<br/> • 1: record modified<br/> • 2: one or more records inserted<br/> • 3: record deleted  |
 | ret2 | Error message  |
 | msg | Message sent to the standard output  |
@@ -32,20 +31,18 @@ point.
 | frecs | Number of records written  |
 | fcars | Number of bytes written  |
 
-
 ### Field values
 
-
 | Field | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
-| --- | --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - | - - - |
 | mtype | 4 | 4 | 4 | 4 |
 | masc | = | * | = | * |
 | access | = | = | = | = |
 | retsync | 0 |   | 0 |   |
 | ret1 | 0 | * | 0 | * |
 | ret2 | blank | * | blank | * |
-| us-sem |   |   |   |   |
-| us-ctx |   |   |   |   |
+| us- sem |   |   |   |   |
+| us- ctx |   |   |   |   |
 | idexit | = | = | = | = |
 | exname | = | = | = | = |
 | parmexit | = | = | = | = |

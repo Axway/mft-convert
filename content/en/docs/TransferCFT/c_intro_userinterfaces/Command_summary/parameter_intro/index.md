@@ -1,8 +1,8 @@
 ---
-    title: "index"
-    linkTitle: "index"
-    weight: 1680
----<span id="index"></span>
+title: "index"
+linkTitle: "index"
+weight: 1680
+--- <span id="index"></span>
 
 ### index
 

@@ -1,8 +1,8 @@
 ---
-    title: "secfname"
-    linkTitle: "secfname"
-    weight: 3130
----<span id="secfname"></span>
+title: "secfname"
+linkTitle: "secfname"
+weight: 3130
+--- <span id="secfname"></span>
 
 ### secfname
 
@@ -11,7 +11,5 @@
 ****[SECFNAME = filename ]****
 
 Filename. Name of the {{< TransferCFT/axwayvariablesComponentShortName  >}} internal security file.
-
- 
 
 [Return to Command index](../../)

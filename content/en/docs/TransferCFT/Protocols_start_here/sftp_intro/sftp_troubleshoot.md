@@ -1,8 +1,8 @@
 ---
-    title: "Troubleshoot SFTP"
-    linkTitle: "Troubleshoot SFTP"
-    weight: 190
----******The supported operating systems are listed in the [Platform features](../../../datasheet) table.******
+title: "Troubleshoot SFTP"
+linkTitle: "Troubleshoot SFTP"
+weight: 190
+--- ******The supported operating systems are listed in the [Platform features](../../../datasheet) table.******
 
 ## Start Transfer CFT issues
 
@@ -26,7 +26,7 @@ The following is an example of a public key authentication issue where the clien
 Client side
 CATALOG 
 CLIENT_S SFH TH BIN J0219374 0 0 264 KEY
- 
+
 LOG 
 CFTT75E Network connect reject <IDTU=A000000W PART=CLIENT_SFTP_WIN IDF=BIN IDT=J0219374 DIAGI=264>
 CFTT82E Transfer aborted <IDTU=A000000W PART=CLIENT_SFTP_WIN IDF=BIN IDT=J0219374 DIAGI=264>
@@ -42,7 +42,7 @@ Transfer CFT client authentication mismatches can lead to the following errors:
 LOG 
 CFTT75E Incorrect user or password <IDTU=A000000I PART=CLIENT_SFTP_WIN IDF=BIN IDT=J0218294 DIAGI=433>
 CFTT82E Transfer aborted <IDTU=A000000I PART=CLIENT_SFTP_WIN IDF=BIN IDT=J0218294 DIAGI=433>
- 
+
 CATALOG
 CLIENT_S SFH TH BIN J0218294 0 0 433 00000001
 ```
@@ -53,7 +53,7 @@ You may require a [trace](#Perform) on the Transfer CFT server for additional i
 Invalid user:
 CFTSFTP CFT.SFTP [3] S50000: User SERV_SFTP wants to authenticate with method SYSTEM
 CFTSFTP CFT.SFTP [1] S50000: User SERV_SFTP not allowed to connect to the server
- 
+
 Invalid password:
 CFTSFTP CFT.SFTP [3] S50000: User serv_SFTP wants to authenticate with method PASSWORD
 CFTSFTP CFT.SFTP [1] S50000: User serv_SFTP not allowed to connect to the server
@@ -84,7 +84,7 @@ Here the connection is interrupted because of a `workingdir `issue when connecti
 
 ```
 Error: Unable to open .: received failure with description 'The working directories in CFTSEND and CFTRECV for the IDF are not the same'
-Error: Received unexpected end-of-file from SFTP server
+Error: Received unexpected end- of- file from SFTP server
 Error: Cannot recover the folder contents
 ```
 
@@ -120,11 +120,11 @@ FLOW IDT=J0913570 DIAGI=610>
 
 #### Open mode not allowed
 
-When open mode is not enabled on a non-Transfer CFT client, a generic message displays:
+When open mode is not enabled on a non- Transfer CFT client, a generic message displays:
 
 ```
 Command: put "C:\\Users\\...\\MyFile.jpg" "MyFile.jpg"
-Error: Received unexpected end-of-file from SFTP server
+Error: Received unexpected end- of- file from SFTP server
 Error: File transfer failed
 ```
 
@@ -176,7 +176,7 @@ If you were not able to remedy the issue as described in the previous sections, 
 Windows
 set XTRACE_CFT_SFTP_LEVEL=5
 set XTRACE_OUTPUT_FILENAME=sftptrace.txt
- 
+
 UNIX
 export XTRACE_CFT_SFTP_LEVEL=5
 export XTRACE_OUTPUT_FILENAME=sftptrace.txt

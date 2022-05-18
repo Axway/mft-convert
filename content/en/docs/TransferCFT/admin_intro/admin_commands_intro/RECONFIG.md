@@ -1,8 +1,8 @@
 ---
-    title: "Manage configuration updates - RECONFIG"
-    linkTitle: "RECONFIG - Modify the configuration"
-    weight: 310
----Use this command to manage configuration updates for the types listed below.
+title: "Manage configuration updates - RECONFIG"
+linkTitle: "RECONFIG - Modify the configuration"
+weight: 310
+--- Use this command to manage configuration updates for the types listed below.
 
 ********Syntax********
 

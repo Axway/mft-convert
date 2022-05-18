@@ -1,8 +1,8 @@
 ---
-    title: "fcomp"
-    linkTitle: "fcomp"
-    weight: 1100
----<span id="fcomp"></span>
+title: "fcomp"
+linkTitle: "fcomp"
+weight: 1100
+--- <span id="fcomp"></span>
 
 ### fcomp
 

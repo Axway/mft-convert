@@ -1,16 +1,16 @@
 ---
-    title: "About the PeSIT protocol"
-    linkTitle: "PeSIT protocol"
-    weight: 120
----## What is PeSIT?
+title: "About the PeSIT protocol"
+linkTitle: "PeSIT protocol"
+weight: 120
+--- ## What is PeSIT?
 
-PeSIT is an end-to-end public protocol designed to provide a reliable
+PeSIT is an end- to- end public protocol designed to provide a reliable
 and normalized interface for user applications to exchange files and messages
 between heterogeneous systems, irrespective of the network communication
 type. You can use the PeSIT protocol on TCP/IP as well as some
 proprietary communication networks.
 
-In this PeSIT protocol sub-book we'll first review PeSIT features, then discuss how PeSIT works in Transfer CFT, the processes involved in partner interactions, and lastly provide a description of PeSIT PI codes in a {{< TransferCFT/axwayvariablesComponentShortName  >}} context.
+In this PeSIT protocol sub- book we'll first review PeSIT features, then discuss how PeSIT works in Transfer CFT, the processes involved in partner interactions, and lastly provide a description of PeSIT PI codes in a {{< TransferCFT/axwayvariablesComponentShortName  >}} context.
 
 <span id="PeSIT"></span>
 
@@ -32,16 +32,16 @@ PeSIT features available for {{< TransferCFT/axwayvariablesComponentShortName  >
     compression](#Data)
 - [Generic
     file selection](#Generic)
-- [Two-way
-    transfers over the same logical connection](#Two-way)
-- [Acknowledgment/negative acknowledgment messages](#End-to-e)
-- [Relay store-and-forward mode](#Store-an)
+- [Two- way
+    transfers over the same logical connection](#Two- way)
+- [Acknowledgment/negative acknowledgment messages](#End- to- e)
+- [Relay store- and- forward mode](#Store- an)
 
 <span id="File"></span>
 
 ### File transmission
 
-File transmission, also known as file-writing, enables you to transfer
+File transmission, also known as file- writing, enables you to transfer
 data to a remote partner, provided that you have established a logical
 link between the two users.
 
@@ -70,7 +70,7 @@ partners can negotiate the following:
 - Interval
     between synchronization points
 - Whether
-    re-synchronization is allowed
+    re- synchronization is allowed
 
 <span id="Restarti"></span>
 
@@ -126,32 +126,32 @@ files. File selection can also be generic. The partner partners are responsible
 for handling the fact that several files may meet the given selection
 criteria.
 
-<span id="Two-way"></span>
+<span id="Two- way"></span>
 
-### Two-way transfers over the same logical connection
+### Two- way transfers over the same logical connection
 
 The PeSIT protocol allows only one file transfer in a given session at a time. Nevertheless, Transfer CFT can perform several concurrent transfers either as: 
 
 - Consecutive transfers within the same session
 - Several simultaneous file transfers on different sessions in both directions
 
-<span id="End-to-e"></span>
+<span id="End- to- e"></span>
 
-### End-to-end response acknowledgment messages
+### End- to- end response acknowledgment messages
 
 Message
 transfer which enables the transmission of application messages of arbitrary
-length, or end-to-end response acknowledgment messages.
+length, or end- to- end response acknowledgment messages.
 
-This operation enables items of relatively small information to be exchanged between the partners. A message is accompanied by a minimum of service information and may, for example, be used to acknowledge the correct processing of a received file. Transfer CFT enables you to transmit 512-character user messages (between two {{< TransferCFT/axwayvariablesComponentShortName  >}}s the limit is 4096 characters).
+This operation enables items of relatively small information to be exchanged between the partners. A message is accompanied by a minimum of service information and may, for example, be used to acknowledge the correct processing of a received file. Transfer CFT enables you to transmit 512- character user messages (between two {{< TransferCFT/axwayvariablesComponentShortName  >}}s the limit is 4096 characters).
 
 Additionally, {{< TransferCFT/axwayvariablesComponentShortName  >}} provides negative acknowledgment capabilities.
 
-<span id="Store-an"></span>
+<span id="Store- an"></span>
 
-### Relay store-and-forward mode
+### Relay store- and- forward mode
 
-The relay store-and-forward mode is available with automatic routing from one partner to another via intermediate
+The relay store- and- forward mode is available with automatic routing from one partner to another via intermediate
 partners.
 
 ## PeSIT diagnostic codes

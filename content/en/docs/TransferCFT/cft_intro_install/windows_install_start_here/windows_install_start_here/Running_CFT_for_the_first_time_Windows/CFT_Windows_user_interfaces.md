@@ -1,20 +1,20 @@
 ---
-    title: "Transfer CFT user interfaces"
-    linkTitle: "Transfer CFT user interfaces"
-    weight: 220
----Transfer CFT features the following user interfaces:
+title: "Transfer CFT user interfaces"
+linkTitle: "Transfer CFT user interfaces"
+weight: 220
+--- Transfer CFT features the following user interfaces:
 
 [CFTUTIL](../../../../../c_intro_userinterfaces/about_cftutil) - a command
 line utility that can be used after installation in the following modes:
 
 - Command mode
 
-<!-- -->
+<!- - - - >
 
 - File interpretation
     mode
 
-<!-- -->
+<!- - - - >
 
 - Interactive
     line mode

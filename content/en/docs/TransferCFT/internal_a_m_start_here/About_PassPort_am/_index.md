@@ -1,8 +1,8 @@
 ---
-    title: "About PassPort AM"
-    linkTitle: "PassPort type access management"
-    weight: 160
----This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
+title: "About PassPort AM"
+linkTitle: "PassPort type access management"
+weight: 160
+--- This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
 
 ## Concepts
 
@@ -14,7 +14,7 @@
     via a user/password login
 - Authorization enabling
     user access to {{< TransferCFT/axwayvariablesCompanyName >}} products resources
-- Role-based access
+- Role- based access
     that defines privileges for users
 
 ### User roles

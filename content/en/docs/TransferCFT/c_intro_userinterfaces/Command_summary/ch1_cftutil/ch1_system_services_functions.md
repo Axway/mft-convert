@@ -1,8 +1,8 @@
 ---
-    title: "System services functions"
-    linkTitle: "System services functions"
-    weight: 220
----System services functions include:
+title: "System services functions"
+linkTitle: "System services functions"
+weight: 220
+--- System services functions include:
 
 - _Date: Returns the current date.
 - _Time: Returns the current time.
@@ -126,7 +126,7 @@ The _DtSplit function breaks a datetime string into an YYYYMMDDHHMMSS date and h
 
 #### Parameters
 
-- Date_time: The name of the CHAR variable, having a minimum length of 16, which contains a date-time value that is the concatenation of a date and time format YYYYMMDDHHMMSS.
+- Date_time: The name of the CHAR variable, having a minimum length of 16, which contains a date- time value that is the concatenation of a date and time format YYYYMMDDHHMMSS.
 - Date: The name of the CHAR variable, having a length of 8, that returns the date.
 - Time: The name of the CHAR variable, having a length of 8, that receives an hour.
 
@@ -145,7 +145,7 @@ PRINT msg = 'The time is %TIME_START%'
 
 #### Syntax
 
-The _DtMerge function builds a date-time string YYYYMMDDHHMMSS from a date chain and an hour chain.
+The _DtMerge function builds a date- time string YYYYMMDDHHMMSS from a date chain and an hour chain.
 
 ```
 _DtMerge DATIME = date_time,
@@ -173,7 +173,7 @@ PRINT msg = 'The date is %DTDEBUT%'
 
 #### Syntax
 
-The _DtAdd function calculates a new date-time string by adding a date-time number one second.
+The _DtAdd function calculates a new date- time string by adding a date- time number one second.
 
 ```
 _DtAdd FROMDT = date_time_src,
@@ -183,9 +183,9 @@ SEC = second
 
 #### Values
 
-- Date_hour_src: The name of a CHAR type variable having a minimum length of 16, which contains a date-time value that is a concatenation of a date and time format: YYYYMMDDHHMMSS.
-- Date_hour_dest: name of a variable of type CHAR, minimum length 16, which will be stored in the new date-time destination.
-- Second: name of a variable of type LONG which contains the number of seconds to add to the date-time source.
+- Date_hour_src: The name of a CHAR type variable having a minimum length of 16, which contains a date- time value that is a concatenation of a date and time format: YYYYMMDDHHMMSS.
+- Date_hour_dest: name of a variable of type CHAR, minimum length 16, which will be stored in the new date- time destination.
+- Second: name of a variable of type LONG which contains the number of seconds to add to the date- time source.
 
 #### Example
 
@@ -194,8 +194,8 @@ CHAR name = DT_DEBUT, size = 16
 LONG name = DUREE
 CHAR name = DT_FIN, size = 16
 _DTADD FROMDT = DT_DEBUT, TODT = DT_FIN,SEC = DUREE
-PRINT msg = 'La date-heure de début est %DT_DEBUT%'
-PRINT msg = 'La date-heure de fin est %DT_FIN%'
+PRINT msg = 'La date- heure de début est %DT_DEBUT%'
+PRINT msg = 'La date- heure de fin est %DT_FIN%'
 ```
 
 ### Function _DtDiff
@@ -212,9 +212,9 @@ SEC = hundredth_of_seconds
 
 #### Values
 
-- date_time1: name of a variable of type CHAR, minimum length 16, which contains a date-time value that is the concatenation of a date and time format YYYYMMDDHHMMSS.
-- date_time2: name of a variable of type CHAR, minimum length 16, which contains a date-time value that is the concatenation of a date and time format YYYYMMDDHHMMSS.
-- hundredth_of_seconds: name of a variable of type LONG which will be stored in the difference-date-time1 date_heure2. This difference is calculated in hundredth of seconds.
+- date_time1: name of a variable of type CHAR, minimum length 16, which contains a date- time value that is the concatenation of a date and time format YYYYMMDDHHMMSS.
+- date_time2: name of a variable of type CHAR, minimum length 16, which contains a date- time value that is the concatenation of a date and time format YYYYMMDDHHMMSS.
+- hundredth_of_seconds: name of a variable of type LONG which will be stored in the difference- date- time1 date_heure2. This difference is calculated in hundredth of seconds.
 
 #### Examples
 

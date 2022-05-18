@@ -1,8 +1,8 @@
 ---
-    title: "during"
-    linkTitle: "during"
-    weight: 780
----<span id="during"></span>
+title: "during"
+linkTitle: "during"
+weight: 780
+--- <span id="during"></span>
 
 ### during
 

@@ -1,8 +1,8 @@
 ---
-    title: "rappl"
-    linkTitle: "rappl"
-    weight: 2790
----<span id="rappl"></span>
+title: "rappl"
+linkTitle: "rappl"
+weight: 2790
+--- <span id="rappl"></span>
 
 ### rappl
 
@@ -34,7 +34,7 @@ In standard PeSIT E standard or PeSIT E CFT/CFT, the responder/sender
 partner can send and control this field.
 
 In standard PeSIT E, this value is transported in the PI 04. Its maximum
-length is limited by the eight-character standard. The PI 04 contains
+length is limited by the eight- character standard. The PI 04 contains
 this value concatenated with the value of the ****ruser****
 field.
 

@@ -1,10 +1,10 @@
 ---
-    title: "Running Transfer CFT"
-    linkTitle: "Running Transfer CFT"
-    weight: 280
----To start the Transfer CFT server from the ****Operations**** menu, enter ********1.** Common Transfer CFT commands******, then******** **3. Start Transfer CFT**. Press ENTER to execute. Note that this starts the Transfer CFT subsystem if it was not already running.
+title: "Running Transfer CFT"
+linkTitle: "Running Transfer CFT"
+weight: 280
+--- To start the Transfer CFT server from the ****Operations**** menu, enter ********1.** Common Transfer CFT commands******, then******** **3. Start Transfer CFT**. Press ENTER to execute. Note that this starts the Transfer CFT subsystem if it was not already running.
 
-Operations that recreate files prior to the start-up are only required in specific restart conditions, such as after changing the configuration.
+Operations that recreate files prior to the start- up are only required in specific restart conditions, such as after changing the configuration.
 
 > **Note**
 >
@@ -14,23 +14,23 @@ Transfer CFT jobs are submitted in the following order:
 
 - 1: CFTMAIN (main task and transfer scheduling task)
 
-<!-- -->
+<!- - - - >
 
 - 2: CFTLOG (log management task)
 
-<!-- -->
+<!- - - - >
 
 - 3: CFTTCOM (command management task)
 
-<!-- -->
+<!- - - - >
 
 - 4: CFTTPRO (protocol management task)
 
-<!-- -->
+<!- - - - >
 
 - 5: Network handler(s)
 
-<!-- -->
+<!- - - - >
 
 - 6: CFTTFIL (file tasks)
 

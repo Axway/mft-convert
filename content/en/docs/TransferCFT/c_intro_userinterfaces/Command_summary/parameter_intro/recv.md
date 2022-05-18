@@ -1,8 +1,8 @@
 ---
-    title: "recv"
-    linkTitle: "recv"
-    weight: 2860
----<span id="recv"></span>
+title: "recv"
+linkTitle: "recv"
+weight: 2860
+--- <span id="recv"></span>
 
 ### recv
 
@@ -13,8 +13,5 @@
 Number of **receive any RPL** parameters
 for this resource. In general, the default value should not be changed.
 
- 
-
 [Return to Command index](../../)
 
- 

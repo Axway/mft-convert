@@ -1,18 +1,15 @@
 ---
     title: "XFBTransfer Tracked Object attributes"
-    linkTitle: "XFBTransfer Tracked Object attribute"
-    weight: 230
+linkTitle: "XFBTransfer Tracked Object attribute"
+weight: 230
 ---## Roles
-
 
 | Sentinel<br/> attribute | Data type | Length | Description | Name in<br/> {{< TransferCFT/axwayvariablesComponentShortName  >}} |
 | --- | --- | --- | --- | --- |
 | Direction | Integer | - |  • S: The file is sent (Sender).<br/> • R: The file is received (Receiver). | DIRECT |
 | IsServer | Integer | - |  • 1: The Sender or the Receiver is a Server.<br/> • 0: The Sender the Receiver is a Requester. | FLAG |
 
-
 ## Senders and receivers
-
 
 | Sentinel<br/> attribute | Data type | Length | Description | Name in<br/> {{< TransferCFT/axwayvariablesComponentShortName  >}} |
 | --- | --- | --- | --- | --- |
@@ -26,11 +23,9 @@
 | FinalReceiverId | String | 80 | Name of the final Receiver when using Store and Forward, otherwise the same as the ReceiverId. | NDEST |
 | OriginalSenderId | String | 80 | Name of the original Sender when using Store and Forward, otherwise the same as the SenderId. | NORIG |
 
-
 ## Product identification
 
 The product that sends the events is identified with the following:
-
 
 | Sentinel<br/> attribute | Data type | Length | Description | Name in<br/> {{< TransferCFT/axwayvariablesComponentShortName  >}} |
 | --- | --- | --- | --- | --- |
@@ -38,9 +33,7 @@ The product that sends the events is identified with the following:
 | Monitor | String | 4 | Product name. | “CFT” |
 | MonitorVersion | String | 25 | Product version. | Product version (see CFTUTIL about). |
 
-
 ## Transfer users
-
 
 | Sentinel<br/> attribute | Data type | Length | Description | Name in<br/> {{< TransferCFT/axwayvariablesComponentShortName  >}} |
 | --- | --- | --- | --- | --- |
@@ -52,9 +45,7 @@ The product that sends the events is identified with the following:
 | RUser | String | 30 | Optional local identifier of the user who received the transfer. | RUSER |
 | SUser | String | 30 | Optional local identifier of the user who sent the transfer. | SUSER |
 
-
 ## Transfer identification
-
 
 | Sentinel<br/> attribute | Data type | Length | Description | Name in<br/> {{< TransferCFT/axwayvariablesComponentShortName  >}} |
 | --- | --- | --- | --- | --- |
@@ -71,9 +62,7 @@ The product that sends the events is identified with the following:
 | UserParameter1 | String | 255 | Local transfer description. This description is recorded at the transfer request time in the local DB and remains local. | COMMENT |
 | Flowname | String | 100 | Parameter to define a flow name in Central Governance for monitoring purposes. | Flowname (v3.1.x) |
 
-
 ## Transfer validity periods
-
 
 | Sentinel<br/> attribute | Data type | Length | Description | Name in<br/> product |
 | --- | --- | --- | --- | --- |
@@ -82,9 +71,7 @@ The product that sends the events is identified with the following:
 | LatestDate | Date | - | Date on which the validity period ends. | DATEMAX |
 | LatestTime | Time | - | Time at which the validity period ends. | TIMEMAX |
 
-
 ## Transfer dates and times
-
 
 | Sentinel<br/> attribute | Data type | Length | Description | Name in<br/> {{< TransferCFT/axwayvariablesComponentShortName  >}} |
 | --- | --- | --- | --- | --- |
@@ -104,9 +91,7 @@ The product that sends the events is identified with the following:
 | EventTimestamp  | String  | 100  | The event time, in milliseconds, indicating the exact time the event occurred on Transfer CFT, rather than the time the event reaches Sentinel.<br/> You can use the a tool, such as [EpochConverter](https://www.epochconverter.com/), to convert the timestamp into a human-readable date.<br/> **Example**<br/> If the EventTimeStamp is 1631110828, the equivalent in GMT is Wednesday 8 September 2021 14:20:28.<br/> <blockquote> **Note**<br/> Introduced in the XFBTransfer TO as of the version 5.5.<br/> </blockquote>  | N/A  |
 | EventDateTime  | String  | 50  | The date and time event indicating the exact time the event occurred on Transfer CFT, rather than the date and time the event reaches Sentinel. This is a UTC standard value and follows the ISO 8601 format.<br/> **Example**<br/> 2021-07-28T08:32:30.049708Z<br/> <blockquote> **Note**<br/> Introduced in the XFBTransfer TO as of the version 5.5.<br/> </blockquote>  | N/A  |
 
-
 ## Transfer protocols
-
 
 | Sentinel<br/> attribute | Data type | Length | Description | Name in<br/> {{< TransferCFT/axwayvariablesComponentShortName  >}} |
 | --- | --- | --- | --- | --- |
@@ -115,9 +100,7 @@ The product that sends the events is identified with the following:
 | SSLAuth | String | 1 |  • S: The Server sent X.509 certificates to the Requester.<br/> • B: Both the Server and the Requester sent X.509 certificates to each other.<br/> • N: Neither the Server nor the Requester sent X.509 certificates. | SSLAUTH |
 | SSLCypher | String | 2 | The cipher suite that the Server and the Requester used during the SSL/TLS session. | SSLCIPH |
 
-
 ## Transfer options
-
 
 | Sentinel<br/> attribute | Data type | Length | Description | Name in<br/> {{< TransferCFT/axwayvariablesComponentShortName  >}} |
 | --- | --- | --- | --- | --- |
@@ -129,18 +112,14 @@ The product that sends the events is identified with the following:
 | RequestType | String | 1 | One of the following:<br/> • S: The Sender sent a single transfer to a single Receiver.<br/> • F: The Sender sent a group of transfers to a single Receiver. For each transfer in the group, the product generated one Processing Cycle.<br/> • D: The Sender sent a single transfer to a group of Receivers (diffusion). For each Receiver in the group, the product generated one Processing Cycle.<br/> • P: Cyclic transfer. | DIFTYP |
 | TransferType | String | 1 | One of the following:<br/> • S: The Sender sent a single transfer to a single Receiver.<br/> • F: The transfer belongs to a group of transfers that the Sender sent to a single Receiver. For each transfer in the group, the product generated one Processing Cycle.<br/> • D: The Receiver belongs to a group of Receivers to whom the Sender sent the transfer (diffusion). For each Receiver in the group, the product generated one Processing Cycle. | FILTYP |
 
-
 ## Transfer size
-
 
 | Sentinel<br/> attribute | Data type | Length | Description | Name in<br/> {{< TransferCFT/axwayvariablesComponentShortName  >}} |
 | --- | --- | --- | --- | --- |
 | FileSize | Integer | - | Size of the transferred file. This size is expressed in bytes.<br/> <blockquote> **Note**<br/> For PeSIT, an estimation of size is given at the beginning of the transfer. This value is updated upon completion of the transfer with the real value.<br/> </blockquote>  | FSPACE |
 | TransmittedBytes | Integer | - | Number of bytes transferred, after decompression, to transfer the file. This size is expressed in bytes.<br/> <blockquote> **Note**<br/> For PeSIT, this value sent is crosschecked by both the sender and receiver.<br/> </blockquote>  | NCAR |
 
-
 ## The structure and content of transfers
-
 
 | Sentinel<br/> attribute | Data type | Length | Description | Name in<br/> {{< TransferCFT/axwayvariablesComponentShortName  >}} |
 | --- | --- | --- | --- | --- |
@@ -153,9 +132,7 @@ The product that sends the events is identified with the following:
 | Transcoding | Integer |   | Character code of the transferred data:<br/> • A: ASCII<br/> • B: Binary<br/> • E: EBCDIC | FCODE |
 | TranslationTableId | String | 25 | Name of the local translation table use during the transfer (if any). | XLATE |
 
-
 ## Other attribute
-
 
 | Sentinel<br/> attribute | Data type | Length | Description | Name in<br/> {{< TransferCFT/axwayvariablesComponentShortName  >}} |
 | --- | --- | --- | --- | --- |

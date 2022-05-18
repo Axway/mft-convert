@@ -1,8 +1,8 @@
 ---
-    title: "modin"
-    linkTitle: "modin"
-    weight: 2020
----<span id="modin"></span>
+title: "modin"
+linkTitle: "modin"
+weight: 2020
+--- <span id="modin"></span>
 
 ### modin
 

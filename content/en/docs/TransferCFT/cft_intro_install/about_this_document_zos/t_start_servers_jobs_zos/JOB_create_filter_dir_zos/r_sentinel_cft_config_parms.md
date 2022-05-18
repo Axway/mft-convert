@@ -1,8 +1,8 @@
 ---
-    title: "Transfer CFT to Sentinel communication parameters"
-    linkTitle: "Sentinel communication parameters"
-    weight: 240
----To define to enable Sentinel to Transfer CFT interoperability, refer to:
+title: "Transfer CFT to Sentinel communication parameters"
+linkTitle: "Sentinel communication parameters"
+weight: 240
+--- To define to enable Sentinel to Transfer CFT interoperability, refer to:
 
 - [](#Communication%20with%20the%20Event%20Router)[Communication with an Event via TCP all platforms](#Communication%20with%20an%20Event%20via%20TCP) 
 - [UCONF parameters for Sentinel interoperability all platforms](#UCONF%20parameters%20for%20Sentinel%20interoperability)
@@ -17,14 +17,12 @@
 
 This table lists the main parameters that you must define in order to communicate with an Event via TCP, and uses TRKTYPE=TCP as the default value.
 
-
 |   | Event Router  | TRKUTIL  | Transfer CFT  |
-| --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - |
 | Configuration file  | USEPARIN  | TRKCONF  | UCONF  |
 | TCP definition  | (AGENT)<br/> queue=”NOQ” | TRKTYPE=TCP  | UCONFSET ID=sentinel.TRKTYPE,VALUE=TCP  |
 | TCP definition  | (TCPSOURCE) sap=nnnn  | TRKIPPORT=nnnn  | UCONFSET ID=sentinel.TRKIPPORT,VALUE=nnnn  |
 | TCP definition  | (TCPSOURCE)<br/> local_address= | TRKIPADDR=  | UCONFSET ID=sentinel.TRKIPADDR,VALUE=  |
-
 
 <span id="UCONF parameters for Sentinel interoperability"></span>
 
@@ -34,9 +32,8 @@ This table lists the main parameters that you must define in order to communicat
 
 The table below lists the UCONF values that are used in Transfer CFT to define Sentinel interoperability. You can set these UCONF values using either the Copilot UI or command line.
 
-
 | Unified configuration parameter  | Default value  | Former Sentinel parameter name<br/> trkapi.cfg |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | sentinel.xfb.enable  | NO  | XFB.Sentinel (trkapi.cfg)  |
 | sentinel.xfb.transfer | ALL | XFB.Transfer (trkapi.cfg) &lt;/p&gt; |
 | sentinel.xfb.shut | 0 &lt;/p&gt; | XFB.Shut (trkapi.cfg) &lt;/p&gt; |
@@ -52,7 +49,7 @@ The table below lists the UCONF values that are used in Transfer CFT to define S
 | sentinel.trkdelay  | 10 | TRKDELAY  |
 | sentinel.trktimeout  | 60 | TRKTIMEOUT  |
 | sentinel.trkproductname  | CFT  | TRKPRODUCTNAME  |
-| sentinel.trkipaddr  | sentinel-server-hostname  | TRKIPADDR  |
+| sentinel.trkipaddr  | sentinel- server- hostname  | TRKIPADDR  |
 | sentinel.trkipport  | 1761  | TRKIPPORT  |
 | sentinel.trk_min_port  | 5000  | TRK_MIN_PORT  |
 | sentinel.trk_max_port  | 32000 | TRK_MAX_PORT  |
@@ -65,7 +62,6 @@ The table below lists the UCONF values that are used in Transfer CFT to define S
 | sentinel.trktrcfile  | $(cft.runtime_dir)/run/sentinel.trc  | TRKTRCFILE  |
 | sentinel.trktrace  | 0  | TRKTRACE  |
 
-
 <span id="Communication with the Event Router"></span>
 
 ##  Communication with the Event Router
@@ -77,14 +73,12 @@ The following parameters define communication with the Event Router via XCF. In 
 - The XCF definition (queue=xxxx) is the XCF member name representing the ER server
 - The XCF group is PELISCOP by default. You can modify this default by setting queue = “member group”
 
-
 |   | ER  | TRKUTIL  | Transfer CFT  |
-| --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - |
 | Configuration file  | USEPARIN  | TRKCONF  | UCONF  |
 | SVC  | (SYSTEM)<br/> svc_nb=nnn | TRKSVC=nnn  | UCONFSET ID=sentinel.TRKSVC,VALUE=nnn  |
 | XCF definition  | (AGENT)queue=  | TRKQUEUE=  | UCONFSET ID=sentinel.TRKQUEUE,VALUE=xxxx  |
 | XCF definition  | (AGENT)queue=  | TRKTYPE=XCF  | UCONFSET ID=sentinel.TRKTYPE,VALUE=XCF  |
-
 
 <span id="Overflow file definition"></span>
 
@@ -97,13 +91,11 @@ The following table describes the overflow file definition for the Logger file. 
 - TRKSHAREDFILE=YES is MANDATORY when the logger file is shared between the {{< TransferCFT/suitevariablesEventRouterName >}} and other applications. Set this to NO if the applications are sending messages directly to the Sentinel server without going through the {{< TransferCFT/suitevariablesEventRouterName >}}
 - The log structure is ONLY used to define a logger file shared between the partitions of the SYSPLEX, and is NOT referenced in any parameters
 
-
 |   | Event Router  | TRKUTIL  | Transfer CFT  |
-| --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - |
 | Configuration file  | USEPARIN  | TRKCONF  | UCONF  |
 | Logger file  | (AGENT)<br/> api_file= | TRKTNAME=  | UCONFSET ID=sentinel.TRKTNAME, VALUE=xxxx.xxxx.xxx  |
 | Logger file  | (AGENT)<br/> api_file= | TRKSHAREDFILE=YES  | UCONFSET ID=sentinel.TRKSHAREDFILE,VALUE=YES  |
-
 
 ****Related topics****
 

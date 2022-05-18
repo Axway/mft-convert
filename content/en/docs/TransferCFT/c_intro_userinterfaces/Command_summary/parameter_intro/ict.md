@@ -1,8 +1,8 @@
 ---
-    title: "ict"
-    linkTitle: "ict"
-    weight: 1500
----#### COPYFILE
+title: "ict"
+linkTitle: "ict"
+weight: 1500
+--- #### COPYFILE
 
 ****[ICT = {H &#124; C},]****
 
@@ -10,7 +10,7 @@ Type of input file data compression:
 
 - C: {{< TransferCFT/axwayvariablesComponentShortName >}} to {{< TransferCFT/axwayvariablesComponentShortName >}}
     compression
-- H: PeSIT non-SIT
+- H: PeSIT non- SIT
     compression
 
 This parameter is only meaningful if the value of ICOMP is not 0. The

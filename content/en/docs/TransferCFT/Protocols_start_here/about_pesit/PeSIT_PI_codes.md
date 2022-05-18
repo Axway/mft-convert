@@ -1,8 +1,8 @@
 ---
-    title: "PeSIT PI code descriptions "
-    linkTitle: "PeSIT PI codes"
-    weight: 150
----This topic provides a description for each of the PeSIT parameter identifiers, PI,
+title: "PeSIT PI code descriptions "
+linkTitle: "PeSIT PI codes"
+weight: 150
+--- This topic provides a description for each of the PeSIT parameter identifiers, PI,
 codes used with {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
 ## About PeSIT PI codes
@@ -227,12 +227,10 @@ type. Transfer CFT processes this field in accordance with the specifications
 of the PeSIT protocol and defines it using the TYPE parameter of
 the transfer command:
 
-
 | TYPE parameter  | Description  |
-| --- | --- |
+| - - - | - - - |
 | SEND TYPE = MESSAGE,... | Outgoing message |
 | SEND TYPE = REPLY,... |  PI 11 of the file for which the message conveys the acknowledgement |
-
 
  Transfer
 CFT reserves the 0xFFFD value for subsequent use.
@@ -307,7 +305,7 @@ which has already been attempted.
     indicates a restart, the search criteria for a catalog entry relative
     to the network values received are as follows:
 
-<!-- -->
+<!- - - - >
 
 - File type (PI 11)
 - File identifier
@@ -317,7 +315,7 @@ which has already been attempted.
 - Connect Partner
     (PI 3 of FPDU CONNECT)
 
-<!-- -->
+<!- - - - >
 
 - Initial sender
     name (PI 61)
@@ -381,12 +379,12 @@ specifications of the PeSIT protocol.
 
 ### PI 19 End of transfer code
 
-This code specifies the type of end-of-transfer in the event of a voluntary
+This code specifies the type of end- of- transfer in the event of a voluntary
 interruption (F.CANCEL primitive). Transfer CFT manages this field internally
 and sets its value in accordance with the specifications of the PeSIT
 protocol.
 
-A HALT command causes an end-of-transfer type of 4.
+A HALT command causes an end- of- transfer type of 4.
 
 <span id="PI_20_Synchronization_point_number"></span>
 
@@ -430,14 +428,12 @@ In requester mode, Transfer CFT opens
 a connection type depending on the SROUT parameter of the CFTPROT
 command:
 
-
 | SPROUT value  | Access level  |
-| --- | --- |
+| - - - | - - - |
 | SROUT = SEND  | Write access |
 | SROUT = RECV  | Read access |
 | SROUT = BOTH  | Mixed access |
 | SROUT = NONE  | Transfer CFT refuses to perform the transfer. This value has no protocol reality, since no connection request is sent |
-
 
 In server mode, Transfer CFT only
 tolerates sessions in accordance with the value of the SRIN parameter.
@@ -570,10 +566,10 @@ be able to define the symbolic variable &FKEYPOS as required.
 ### PI 41 Space reservation unit
 
 This field defines the unit used to express the space reservation value.
-The possible units are kilo-bytes or articles.  
+The possible units are kilo- bytes or articles.  
 
 In sending mode, Transfer CFT always expresses the space reservation
-unit in kilo-bytes.  
+unit in kilo- bytes.  
 
 In reception mode, Transfer CFT supports both types of possible units.  
 The reservation unit can only be the article when the file format is fixed
@@ -585,7 +581,7 @@ The reservation unit can only be the article when the file format is fixed
 
 This field defines the size that the file cannot exceed. It is defined
 using the NSPACE parameter of the CFTSEND or SEND
-command and is always expressed in kilo-bytes.
+command and is always expressed in kilo- bytes.
 
 <span id="PI_51_Creation_data_and_time"></span>
 
@@ -670,7 +666,7 @@ See the [xlate](../../../c_intro_userinterfaces/command_summary/parameter_intro/
 
 Format:
 
-- 254 characters for Transfer CFT to a non-Transfer CFT.
+- 254 characters for Transfer CFT to a non- Transfer CFT.
 - 512 characters when transferring between two Transfer CFTs.
 
 This parameter allows a message to be conveyed from one user to another

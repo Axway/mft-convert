@@ -1,8 +1,8 @@
 ---
-    title: "bufsize"
-    linkTitle: "bufsize"
-    weight: 330
----<span id="bufsize"></span>
+title: "bufsize"
+linkTitle: "bufsize"
+weight: 330
+--- <span id="bufsize"></span>
 
 ### bufsize
 

@@ -1,14 +1,14 @@
 ---
-    title: "Upgrade  Transfer CFT "
-    linkTitle: "Upgrade Transfer CFT"
-    weight: 160
----This section explains how to upgrade an existing Transfer CFT from 3.1.3 or higher to{{< TransferCFT/axwayvariablesComponentShortName  >}} {{< TransferCFT/PrimaryTransferCFTversionlong  >}}. It begins by detailing the prerequisites for a standalone (non multi-node) upgrade. For details on upgrading a multi-node installation, see [Upgrade a Transfer CFT multi-node installation](../upgrade_multinode_ux#top).
+title: "Upgrade  Transfer CFT "
+linkTitle: "Upgrade Transfer CFT"
+weight: 160
+--- This section explains how to upgrade an existing Transfer CFT from 3.1.3 or higher to{{< TransferCFT/axwayvariablesComponentShortName  >}} {{< TransferCFT/PrimaryTransferCFTversionlong  >}}. It begins by detailing the prerequisites for a standalone (non multi- node) upgrade. For details on upgrading a multi- node installation, see [Upgrade a Transfer CFT multi- node installation](../upgrade_multinode_ux#top).
 
 ## About upgrades
 
 As of {{< TransferCFT/axwayvariablesComponentLongName  >}} 3.4 there is no separate upgrade package, you use the installation package to perform an upgrade procedure as described in the sections below.
 
-All passwords stored in the UCONF dictionary, or in the {{< TransferCFT/axwayvariablesComponentLongName  >}} databases (for example, CFTPART, CFTPARM) are cyphered using the key generated at installation. If you are performing an upgrade, all passwords are cyphered using a hard-coded key. We recommend that you generate an encryption key.
+All passwords stored in the UCONF dictionary, or in the {{< TransferCFT/axwayvariablesComponentLongName  >}} databases (for example, CFTPART, CFTPARM) are cyphered using the key generated at installation. If you are performing an upgrade, all passwords are cyphered using a hard- coded key. We recommend that you generate an encryption key.
 
 > **Note**
 >
@@ -22,11 +22,11 @@ Before beginning the upgrade procedure, you should:
 
 - Download the Transfer CFT installation kit, available  at [support.axway.com](https://support.axway.com/).
 
-<!-- -->
+<!- - - - >
 
 - Stop the Transfer CFT server and the Transfer CFT Copilot server, by entering:
-    -   cft stop
-    -   copstop -f
+    - cft stop
+    - copstop - f
 
 ## Limitations
 
@@ -46,25 +46,25 @@ Please refer to the [Central Governance documentation](https://docs.axway.com/bu
 
 You can use the following installer options for {{< TransferCFT/suitevariablesTransferCFTName  >}} {{< TransferCFT/axwayvariablesReleaseNumber  >}} when performing an upgrade:
 
-**--architecture &lt;architecture>**: Installation architecture (single or cluster mode).
+**- - architecture &lt;architecture>**: Installation architecture (single or cluster mode).
 
 - Default: single
 - Allowed: single first_host additional_host
 
-**--runtimedir &lt;runtimedir>**: Shared Runtime Directory. On LEGACY upgrades, you must specify the installation’s shared directory instead of the runtime. For example:` /mnt/Axway_Shared `or` Z:\Axway_Shared`
+**- - runtimedir &lt;runtimedir>**: Shared Runtime Directory. On LEGACY upgrades, you must specify the installation’s shared directory instead of the runtime. For example:` /mnt/Axway_Shared `or` Z:\Axway_Shared`
 
 - Only used when architecture=additional_host
 
-**--installdir &lt;installdir>**: Directory where the Transfer CFT is installed/upgraded. On LEGACY upgrades, this is the directory where the Axway Installer was installed.
+**- - installdir &lt;installdir>**: Directory where the Transfer CFT is installed/upgraded. On LEGACY upgrades, this is the directory where the Axway Installer was installed.
 
 - Not used when architecture=additional_host
 - Default:&lt;Current Drive>:\\axway\\cft
 
-**--conf-file &lt;conf-file>**: File used to personalize installation of Transfer CFT
+**- - conf- file &lt;conf- file>**: File used to personalize installation of Transfer CFT
 
 - In this type of installation only 2 parameters are used:
-    -   \- architecture and installdir (if architecture = single/first_host), or
-    -   \- architecture and runtimedir (if architecture = additional_host)
+    - \- architecture and installdir (if architecture = single/first_host), or
+    - \- architecture and runtimedir (if architecture = additional_host)
 
 You can set these using command line or the configuration file. The values passed in command line take precedence over the values in the configuration file.
 
@@ -84,7 +84,7 @@ Run the Axway Installer in update mode.
 
     Where \*\*\*\*\* represents the SP level and the platform
 
-    Example: Transfer_CFT_3.1.3_SP3_aix-power-64_BN8712000.zip
+    Example: Transfer_CFT_3.1.3_SP3_aix- power- 64_BN8712000.zip
 
 > **Note**
 >
@@ -110,13 +110,13 @@ Run the Axway Installer in update mode.
 
 The following available options are described in detail in [Upgrade options](#Upgrade):
 
-- --architecture &lt;architecture>
-- --runtimedir &lt;runtimedir> (only available when architecture = additional_hosts)
-- --installdir &lt;installdir>
-- --conf-file &lt;conf-file>
-- --help
-- --debuglevel
-- --mode
+--- architecture &lt;architecture>
+--- runtimedir &lt;runtimedir> (only available when architecture = additional_hosts)
+--- installdir &lt;installdir>
+--- conf- file &lt;conf- file>
+--- help
+--- debuglevel
+--- mode
 
 <span id="Upgrade"></span>
 
@@ -124,7 +124,7 @@ The following available options are described in detail in [Upgrade options](#Up
 
 After completing the upgrade procedure, your Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion  >}}, exec scripts are operational. However, you must rebuild your programs that use C and COBOL APIs and exits.
 
-After performing an upgrade, all passwords are cyphered using a hard-coded key. We recommend that you generate an encryption key as described in [Generate an encryption](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/Security/cipher_key.htm).
+After performing an upgrade, all passwords are cyphered using a hard- coded key. We recommend that you generate an encryption key as described in [Generate an encryption](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/Security/cipher_key.htm).
 
 ### Set the profile
 

@@ -1,14 +1,14 @@
 ---
-    title: "Transfer  error procedures"
-    linkTitle: "Transfer error procedures"
-    weight: 210
----You can define parameters so that the Transfer CFT performs certain
+title: "Transfer  error procedures"
+linkTitle: "Transfer error procedures"
+weight: 210
+--- You can define parameters so that the Transfer CFT performs certain
 terminating procedures if a transfer error occurs. A transfer error is
 defined as a problem leading to the Transfer CFT discontinuing the transfer.
 If this occurs, Transfer CFT can initiate one of the two procedures:
 
-- [End-of-transfer
-    procedure](#End-of-transfer)
+- [End- of- transfer
+    procedure](#End- of- transfer)
 - [Backup
     procedure](#Backup_procedures)
 
@@ -107,9 +107,9 @@ The symbolic variables which can be used to define the procedure name,
 and in the body of the procedure thereby named, are indicated in the *Symbolic
 variables* paragraph.
 
-<span id="End-of-transfer"></span>
+<span id="End- of- transfer"></span>
 
-### End-of-transfer procedures
+### End- of- transfer procedures
 
 Transfer CFT provides the possibility of executing end of transfer procedures
 having names defined in the corresponding EXEC\* parameters of the CFTPARM
@@ -140,5 +140,5 @@ to define the end of transfer submit mode. Submit either:
 
 You can use this command to restore the transfer context and consequently
 assign the values corresponding to this transfer to the symbolic variables.
-You may use it to re-activate an end of transfer procedure
+You may use it to re- activate an end of transfer procedure
 that had not taken place correctly.

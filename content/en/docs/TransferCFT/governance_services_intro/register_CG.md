@@ -1,8 +1,8 @@
 ---
-    title: "Register with Central Governance "
-    linkTitle: "Register with Central Governance"
-    weight: 180
----{{< TransferCFT/axwayvariablesComponentLongName  >}}s 3.1.3 or higher can register with {{< TransferCFT/PrimaryCGorUM  >}} in one of two ways:
+title: "Register with Central Governance "
+linkTitle: "Register with Central Governance"
+weight: 180
+--- {{< TransferCFT/axwayvariablesComponentLongName  >}}s 3.1.3 or higher can register with {{< TransferCFT/PrimaryCGorUM  >}} in one of two ways:
 
 - [Automatically activate connectivity](#Automati)
 - [Manually activate connectivity](#manually_activate_cg)
@@ -34,7 +34,7 @@ All commands in this section are performed using CFTUTIL unless stated otherwise
 
 ****Use compliant characters for the z/OS shared secret****
 
-When setting the Central Governance "shared secret" during a Transfer CFT z/OS installation, translation issues may occur if you use certain characters. For example, if you enter !SECRET (using code page IBM-1147) the shared secret is translated to §SECRET during the Central Governance registration. Therefore, you must use compliant characters in the shared secret value when working in a z/OS environment.
+When setting the Central Governance "shared secret" during a Transfer CFT z/OS installation, translation issues may occur if you use certain characters. For example, if you enter !SECRET (using code page IBM- 1147) the shared secret is translated to §SECRET during the Central Governance registration. Therefore, you must use compliant characters in the shared secret value when working in a z/OS environment.
 
 ****Verify the UCONF setting****
 
@@ -73,7 +73,7 @@ uconfset id=cft.instance_group, value=<cft_instance_group>
 uconfset id=cft.full_hostname, value=<cft_address>
 ```
 
-Additionally, if running in a multi-host/multi-node environment, you must set the load balancer address(FQDN or IP address) and port that {{< TransferCFT/PrimaryCGorUM  >}} uses to reach the Transfer CFT (`copilot.general.ssl_serverport`):
+Additionally, if running in a multi- host/multi- node environment, you must set the load balancer address(FQDN or IP address) and port that {{< TransferCFT/PrimaryCGorUM  >}} uses to reach the Transfer CFT (`copilot.general.ssl_serverport`):
 
 ```
 uconfset id=cft.multi_node.load_balancer.host, value=<load_balancer_address>
@@ -181,9 +181,9 @@ CHECK CONTENT=BRIEF&#124;FULL, FOUT=FileName
 
 Check the list in the output for errors and correct all errors before attempting registration. See also, [Use the check command](../../c_intro_userinterfaces/about_cftutil/check_command).
 
-## Register or re-register
+## Register or re- register
 
-Ensure that `cft_registration_id `is reset to `-1`. Otherwise, reset it as follows:  
+Ensure that `cft_registration_id `is reset to `- 1`. Otherwise, reset it as follows:  
 
 ```
 CFTUTIL uconfunset id=cg.registration_id

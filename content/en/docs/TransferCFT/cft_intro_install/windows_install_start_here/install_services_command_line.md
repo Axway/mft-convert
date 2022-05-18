@@ -1,8 +1,8 @@
 ---
-    title: "Install services in command line"
-    linkTitle: "Install services in command line"
-    weight: 130
----After adding a Windows service in command line, the default system user is the user that started the service. To define a specific user, you must edit the service properties in the Services page.
+title: "Install services in command line"
+linkTitle: "Install services in command line"
+weight: 130
+--- After adding a Windows service in command line, the default system user is the user that started the service. To define a specific user, you must edit the service properties in the Services page.
 
 > **Note**
 >
@@ -28,13 +28,13 @@
 
 From the {{< TransferCFT/axwayvariablesComponentShortName  >}} home directory, run:
 
-`copsrv.exe -install <service_name> <displayname> <cftdirruntime>`
+`copsrv.exe - install <service_name> <displayname> <cftdirruntime>`
 
 ******Example******
 
 For {{< TransferCFT/axwayvariablesComponentShortName  >}} version {{< TransferCFT/axwayvariablesComponentVersion  >}} Copilot you would enter:
 
-`c:\CFT36\Transfer_CFT\home\bin>copsrv.exe -install CFT_Copilot36 CFT_Copilot36 c:\CFT36\Transfer_CFT\runtime`
+`c:\CFT36\Transfer_CFT\home\bin>copsrv.exe - install CFT_Copilot36 CFT_Copilot36 c:\CFT36\Transfer_CFT\runtime`
 
 ### Activate services
 

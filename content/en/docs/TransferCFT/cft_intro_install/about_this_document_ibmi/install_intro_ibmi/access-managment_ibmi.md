@@ -1,8 +1,8 @@
 ---
-    title: "Define internal access management"
-    linkTitle: "Define internal access management"
-    weight: 250
----This section describes the OS specific settings required to enable internal access management. As a prerequisite, you should read and be familiar with the [Internal access management](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/internal_access_mgt/internal_a_m_start_here.htm) information in the *Transfer CFT User Guide*.
+title: "Define internal access management"
+linkTitle: "Define internal access management"
+weight: 250
+--- This section describes the OS specific settings required to enable internal access management. As a prerequisite, you should read and be familiar with the [Internal access management](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/internal_access_mgt/internal_a_m_start_here.htm) information in the *Transfer CFT User Guide*.
 
 ## Using system as the internal access management
 

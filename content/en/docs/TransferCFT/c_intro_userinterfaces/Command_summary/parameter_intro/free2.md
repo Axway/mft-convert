@@ -1,8 +1,8 @@
 ---
-    title: "free2"
-    linkTitle: "free2"
-    weight: 1340
----<span id="free2"></span>
+title: "free2"
+linkTitle: "free2"
+weight: 1340
+--- <span id="free2"></span>
 
 ### free2
 

@@ -1,8 +1,8 @@
 ---
-    title: "xlate"
-    linkTitle: "xlate"
-    weight: 3810
----<span id="xlate"></span>
+title: "xlate"
+linkTitle: "xlate"
+weight: 3810
+--- <span id="xlate"></span>
 
 ### xlate
 

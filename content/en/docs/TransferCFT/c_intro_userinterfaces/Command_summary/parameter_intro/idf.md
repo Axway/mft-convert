@@ -1,8 +1,8 @@
 ---
-    title: "idf"
-    linkTitle: "idf"
-    weight: 1530
----<span id="idf"></span>
+title: "idf"
+linkTitle: "idf"
+weight: 1530
+--- <span id="idf"></span>
 
 ### idf
 
@@ -80,7 +80,7 @@ ALL,     IDF     =    
 
 ****[IDF = identifier ]****
 
-Default 32-character identifier of the file for the partner.
+Default 32- character identifier of the file for the partner.
 
 This parameter offers the possibility of designating a generic name
 for each partner when the IDF in the object does not exist in the parameter

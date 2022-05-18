@@ -1,8 +1,8 @@
 ---
-    title: "About Windows Application Programming Interfaces (API)"
-    linkTitle: "Building APIs and exits"
-    weight: 230
----This section describes the application build features of the {{< TransferCFT/axwayvariablesComponentShortName  >}}
+title: "About Windows Application Programming Interfaces (API)"
+linkTitle: "Building APIs and exits"
+weight: 230
+--- This section describes the application build features of the {{< TransferCFT/axwayvariablesComponentShortName  >}}
 Windows Application Programming Interfaces, and introduces concepts
 including:
 
@@ -43,9 +43,9 @@ Before beginning to write {{< TransferCFT/axwayvariablesComponentShortName  >}} 
     APIs,.](../../../about_this_document_zos/using_apis)
 1. Familiarize yourself with the
     sample source files.
-    -   C: ..\\CFT\\API\\C\\SRC\\APISAMPL.C 
-    -   Delphi: ..\\CFT\\API\\DELPHI\\SAMPLE\\CFTAPIDP.DPR 
-    -   Visual Basic: ..\\CFT\\API\\VBASIC\\SAMPLE\\CFTAPIVB.VBP
+    - C: ..\\CFT\\API\\C\\SRC\\APISAMPL.C 
+    - Delphi: ..\\CFT\\API\\DELPHI\\SAMPLE\\CFTAPIDP.DPR 
+    - Visual Basic: ..\\CFT\\API\\VBASIC\\SAMPLE\\CFTAPIVB.VBP
 1. Copy
     APISAMPL, CFTAPIDP or CFTAPIVB in the {{< TransferCFT/axwayvariablesComponentShortName >}} folder.
 1. Start
@@ -71,7 +71,7 @@ For issued commands to be interpreted correctly by {{< TransferCFT/axwayvariable
 ### Design
 
 The {{< TransferCFT/axwayvariablesComponentShortName  >}} API functions, which can be called from an application,
-are not re-entrant. This means that all {{< TransferCFT/axwayvariablesComponentShortName  >}} API function calls
+are not re- entrant. This means that all {{< TransferCFT/axwayvariablesComponentShortName  >}} API function calls
 made by an application must be made in the same thread.
 
 <span id="Coding_constraints"></span>
@@ -106,18 +106,18 @@ the following options:
 - Zp1 /\* Structures
     and structure fields aligned on byte boundaries \*/
 
-<!-- -->
+<!- - - - >
 
 - Options specific
     to WIN32:
 
-<!-- -->
+<!- - - - >
 
 - D_X86=1 /\*
     Machine code generation for Intel x 86 processors \*/
 - DWIN32 /\* Win
     32 application \*/
-- D_MT /\* Multi-thread
+- D_MT /\* Multi- thread
     application \*/
 - G3 /\* Machine
     code generation compatible with 386 processors and compatibles \*/
@@ -128,7 +128,7 @@ the following options:
 
 #### Key Options
 
-Link-editing for a {{< TransferCFT/axwayvariablesComponentShortName  >}} API application can use all the default
+Link- editing for a {{< TransferCFT/axwayvariablesComponentShortName  >}} API application can use all the default
 options.
 
 #### Key Libraries
@@ -148,13 +148,13 @@ need the following files:
 
 - Necessary dynamic
     libraries:
-    -   apicft.dll
-    -   cftscp3.dll
+    - apicft.dll
+    - cftscp3.dll
 - Additional dynamic
     libraries for Visual Basic:  
-    -   cftvb.dll
+    - cftvb.dll
 - Other files:
-    -   profile
+    - profile
 
 These files  must
 be installed with the application executables in C or DELPHI on the Windows

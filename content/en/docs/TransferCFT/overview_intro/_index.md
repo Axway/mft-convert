@@ -1,10 +1,10 @@
 ---
-    title: "Overview"
-    linkTitle: "Overview"
-    weight: 70
----This section provides an overview of the Transfer CFT product, provided services, and how these can fit into an Axway MFT solution.
+title: "Overview"
+linkTitle: "Overview"
+weight: 70
+--- This section provides an overview of the Transfer CFT product, provided services, and how these can fit into an Axway MFT solution.
 
-- [About {{< TransferCFT/axwayvariablesComponentLongName >}}](about_transfer_cft) - Provides a high-level view of Transfer CFT in an enterprise architecture
+- [About {{< TransferCFT/axwayvariablesComponentLongName >}}](about_transfer_cft) - Provides a high- level view of Transfer CFT in an enterprise architecture
 - [Types of data flow](c_data_flow_descrpt) - Describes the various types of flows that you can create in your enterprise environment.
     &lt;/li>
 - [Implementation architecture](c_use_cases_cft) - Describes the general types of implementation when using {{< TransferCFT/axwayvariablesComponentShortName >}}, either with multiple {{< TransferCFT/axwayvariablesComponentShortName >}}s or in conjunction with other {{< TransferCFT/axwayvariablesCompanyName >}} products.

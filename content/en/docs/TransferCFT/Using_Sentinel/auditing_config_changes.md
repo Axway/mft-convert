@@ -1,7 +1,7 @@
 ---
     title: "Tracking configuration changes"
-    linkTitle: "Tracking configuration changes"
-    weight: 190
+linkTitle: "Tracking configuration changes"
+weight: 190
 ---The configuration auditing feature enables Transfer CFT to track configuration changes and send this information to the Sentinel
 server. The configuration change can be:
 
@@ -49,7 +49,6 @@ containing:
 
 ### Ident attribute details
 
-
 | CFTA0nX  | Details  |
 | --- | --- |
 | n=1 | CFTPARM file  |
@@ -61,11 +60,9 @@ containing:
 | X=I  | Information  |
 | X=E  | Error  |
 
-
 <span id="Return message attribute"></span>
 
 ### Return message attribute details
-
 
 | Attribute  | Details  |
 | --- | --- |
@@ -79,7 +76,6 @@ containing:
 | CrTime=&amp;ctime  | &amp;ctime is the Creation Time for the object  |
 | UpdDate=&amp;upddate  | &amp;upddate is the Update Date for the object  |
 | UpdTime=&amp;updtime  | &amp;updtime is the Update Time for the object  |
-
 
 ## Disable XFB.Log
 

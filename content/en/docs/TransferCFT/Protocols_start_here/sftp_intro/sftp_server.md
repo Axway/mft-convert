@@ -1,8 +1,8 @@
 ---
-    title: "Configure Transfer CFT as an SFTP server"
-    linkTitle: "Configure the Transfer CFT SFTP server"
-    weight: 150
----******The supported operating systems are listed in the [Platform features](../../../datasheet) table.******
+title: "Configure Transfer CFT as an SFTP server"
+linkTitle: "Configure the Transfer CFT SFTP server"
+weight: 150
+--- ******The supported operating systems are listed in the [Platform features](../../../datasheet) table.******
 
 This section describes how to set up Transfer CFT to use as a server with the SFTP protocol.
 
@@ -13,8 +13,8 @@ To set up Transfer CFT as the server:
 1. Add the key in the PKI database.
 1. Define the SSH parameter connection for SFTP.
 1. Define a partner to use in a flow.
-    -   Add the authentication to use.
-    -   Define a default flow model identifier.
+    - Add the authentication to use.
+    - Define a default flow model identifier.
 1. Optionally, set the transcoding parameters.
 
 ## Set the protocol (CFTPROT)
@@ -44,7 +44,7 @@ CFTPROT id = SFTP,
 When Transfer CFT is acting in server mode, your require the following:
 
 - If the client performs a `get `command, the Transfer CFT must use implicit mode (CFTSEND IMPL=YES) on the server side. If you do not have a model having IMPL=YES, the client cannot perform a download (get) and a `permission denied` error occurs.
-- If a third-party SFTP client performs a `put `command, the Transfer CFT server must use open mode (FNAME= &NFNAME). If you do not have a CFTRECV model, the client cannot perform an upload (put) and a `permission denied` error occurs. If you want to additionally provide the IDF for the {{< TransferCFT/axwayvariablesComponentLongName >}} server, you must use the following syntax `/idf/file` for the remote file where the IDF is `flow01.`
+- If a third- party SFTP client performs a `put `command, the Transfer CFT server must use open mode (FNAME= &NFNAME). If you do not have a CFTRECV model, the client cannot perform an upload (put) and a `permission denied` error occurs. If you want to additionally provide the IDF for the {{< TransferCFT/axwayvariablesComponentLongName >}} server, you must use the following syntax `/idf/file` for the remote file where the IDF is `flow01.`
 
 The root directory for the SFTP connection is the WORKINGDIR defined in the CFTSEND (IMPL=YES) or CFTRECV corresponding to the IDF. If both CFTSEND and CFTRECV are defined for that IDF but with different WORKINGDIR, there is a DIAGI 435 error for the Transfer CFT client, and an SFTP failure with an appropriate error message for other SFTP clients.
 
@@ -85,14 +85,14 @@ In the following example, defining a CFTAUTH creates visibility for **`FLOW01`**
 ```
 CFTPART ID=USER2, IDF=(FLOW02), NRPART="user2", SAUTH=AUTH2, RAUTH=AUTH2...
 CFTAUTH ID=AUTH2, IDF=(FLOW01,FLOW02)
- 
+
 CFTSEND IDF=FLOW01, IMPL=YES, workingdir=flow1_space, fname=&nfname
- 
+
 CFTSEND IDF=FLOW02, IMPL=YES, workingdir=flow2_space, fname=&nfname
 CFTRECV IDF=FLOW02, workingdir=user2_space, fname=&nfname
 ```
 
-The view for a third-party software client would resemble the following (where the flow identifier displays, but not the physical folder name). In this example, the `workingdir `is relative to the runtime directory.
+The view for a third- party software client would resemble the following (where the flow identifier displays, but not the physical folder name). In this example, the `workingdir `is relative to the runtime directory.
 
 > ![](/Images/TransferCFT/sftp_view_client.png)
 
@@ -128,7 +128,7 @@ This section you use CFTSSH to define a SSH profile in Transfer CFT. The CFTSSH
 - ID: Identifier of the object
 - DIRECT=SERVER
 - SRVPRIVKEY: Key Id containing the server private key (RSA) to use with key authentication.
-    -   If SRVPRIVKEY(CFTSSH direct=server) is not set, {{< TransferCFT/axwayvariablesComponentLongName >}} cannot start, and the message displays `CFTN05E SFTP bind() failed: ECDSA, DSA, or RSA host key file must be set`.
+    - If SRVPRIVKEY(CFTSSH direct=server) is not set, {{< TransferCFT/axwayvariablesComponentLongName >}} cannot start, and the message displays `CFTN05E SFTP bind() failed: ECDSA, DSA, or RSA host key file must be set`.
 
 ****Example****
 
@@ -165,7 +165,7 @@ There are two ways for you to configure how the server will check the client pas
 
 - Clear text: When NRPASSW=&lt;the user password>, the client password is in clear text.
 
-<!-- -->
+<!- - - - >
 
 - Uconf definition: When NRPASSW=_AUTH_, authentication is specified in `uconf:cft.server.authentication_method `is used.
 
@@ -210,10 +210,9 @@ CFTPART id = USER2,
 > prot = SFTP,
 > nrpart = "user2", ...
 
- 
 CFTTCP id = USER2,
 host = 127.0.0.1, ...
- 
+
 CFTSSH id = SSH_USER2,
 
 > direct = SERVER,
@@ -229,15 +228,15 @@ CFTSSH id = SSH_USER2,
 PKIUTIL pkikey id='USER2', ikname='user2.pub', ikform='ssh'
 ```
 
-### Two-factor (dual) authentication
+### Two- factor (dual) authentication
 
-When using **password and key** two-factor (dual) authentication:
+When using **password and key** two- factor (dual) authentication:
 
 - NRPASSW: Use one of the password authentication methods to configure how the server will check the client password, as described [here.](#Password)
 - CLIPUBKEY: To configure how the server will check the client key, as described [here.](#Key)  
     ![](/Images/TransferCFT/SFTP_DUALAUTH.png)
 
-<!-- -->
+<!- - - - >
 
 - ```
     CFTPART id = USER3,
@@ -247,12 +246,10 @@ When using **password and key** two-factor (dual) authentication:
     > nrpart = "user3",
     > nrpassw = "TheUser3Password",...
 
-     
     CFTTCP id = USER3,
 
     > host = 127.0.0.1, ...
 
-     
     CFTSSH id = USER3,
 
     > direct = SERVER,

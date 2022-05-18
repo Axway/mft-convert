@@ -1,18 +1,16 @@
 ---
-    title: "Using synchronous communication commands"
-    linkTitle: "Using synchronous communication commands"
-    weight: 250
----## About synchronous communication (TCP/IP)
+title: "Using synchronous communication commands"
+linkTitle: "Using synchronous communication commands"
+weight: 250
+--- ## About synchronous communication (TCP/IP)
 
-Synchronous communication provides a real-time response when sending data from a client to the Transfer CFT server. This response indicates that the client command was acknowledged by Transfer CFT and is listed in the catalog. For a transfer request, for example, the response would indicate the date/time stamp and unique identifier associated with the transfer.
+Synchronous communication provides a real- time response when sending data from a client to the Transfer CFT server. This response indicates that the client command was acknowledged by Transfer CFT and is listed in the catalog. For a transfer request, for example, the response would indicate the date/time stamp and unique identifier associated with the transfer.
 
 An additional benefit of synchronous communication is that you can use it for monitoring purposes, as it returns IDTU information about a transfer.
 
 The alternative to synchronous mode is an asynchronous mode, which places the client data in a communication file where it waits to be picked up by the Transfer CFT server, at which point it is then listed in the catalog.
 
 Another difference between modes is that unlike synchronous mode, asynchronous mode does not require that {{< TransferCFT/axwayvariablesComponentLongName  >}} be started for the client to send data.
-
- 
 
 ![](/Images/TransferCFT/new_synch_comm.png)
 

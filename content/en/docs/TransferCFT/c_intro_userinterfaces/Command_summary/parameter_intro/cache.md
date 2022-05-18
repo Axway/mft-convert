@@ -1,8 +1,8 @@
 ---
-    title: "cache"
-    linkTitle: "cache"
-    weight: 340
----<span id="cache"></span>
+title: "cache"
+linkTitle: "cache"
+weight: 340
+--- <span id="cache"></span>
 
 ### cache
 

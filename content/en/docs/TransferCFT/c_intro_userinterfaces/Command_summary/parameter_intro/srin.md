@@ -1,8 +1,8 @@
 ---
-    title: "srin"
-    linkTitle: "srin"
-    weight: 3310
----<span id="srin"></span>
+title: "srin"
+linkTitle: "srin"
+weight: 3310
+--- <span id="srin"></span>
 
 ### srin
 
@@ -21,7 +21,5 @@ for this protocol on the {{< TransferCFT/axwayvariablesComponentShortName  >}}:
 - ****BOTH**** (default value): both send and
     receive transfers
 - ****NONE****: no transfers
-
- 
 
 [Return to Command index](../../)

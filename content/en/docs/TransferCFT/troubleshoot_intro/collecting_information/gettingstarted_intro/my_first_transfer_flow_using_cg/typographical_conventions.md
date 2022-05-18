@@ -1,8 +1,8 @@
 ---
-    title: "Typographical  conventions"
-    linkTitle: "Typographical conventions"
-    weight: 350
----The typographical conventions specify the
+title: "Typographical  conventions"
+linkTitle: "Typographical conventions"
+weight: 350
+--- The typographical conventions specify the
 syntax to use in {{< TransferCFT/axwayvariablesComponentShortName  >}} commands, the
 parameters and their values. These rules apply equally for any additional
 parameter information, or information pertaining to the operating system
@@ -64,11 +64,9 @@ There are two types of parameters mandatory and optional:
 
 Each parameter description applies the following general syntax:
 
-
 | PARAMETER = value(s) | Information | SPECIFIC |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | Definition of the parameter | Indication of any additional information available for the value defined. | Indication of the field of application and any usage restrictions for the parameter |
-
 
 The information and specifics fields are optional.
 
@@ -110,9 +108,8 @@ parameter is:
 The notation conventions generally used to describe parameter values
 are listed in the following table.
 
-
 | Description  | Notation  | Example  |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | List of possible values  | {value, value}  | {filename, string}  |
 | Choice  | {1 &#124; 2}  | {CREATE &#124; DELETE}  |
 | Numeric field<br /> (value indicated between a and b)  | {a..b}  | {0..255}  |
@@ -121,26 +118,23 @@ are listed in the following table.
 | {value&#124;text} must be indicated  | italic  | filename  |
 | Mandatory parameter | (Mandatory) |   |
 
-
 <span id="Generic_type_parameter_values"></span>
 
-### Generic-type parameter values
+### Generic- type parameter values
 
-The conventions used for generic-type values are listed in the following
+The conventions used for generic- type values are listed in the following
 table.
 
-
 | Description  | Notation  | Example  |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | Character type value: one single character  | c | FTYPE = c  |
 | Numeric type value: numeric character string  | n | FLRECL = n  |
 | Character string value: series of alphanumeric characters or series of characters between quotes  | string | SAP = string  |
 | If the parameter is mandatory: string containing between 1 and n characters inclusive<br/> If the parameter is optional: string containing between 0 and n characters  | stringn | PUNAME = string10<br /> String containing between 1 and 10 characters<br /> <br /> [COMMENT = string32]<br /> String containing between 0 and 32 characters  |
 | String containing between n and m characters | stringn..m  | LUNAME = string3..8<br /> String containing between 3 and 8 characters  |
-| String containing exactly n characters | stringn  | KEY = string21<br /> 21-character string  |
-| Constant-type value (preset)  | VALUE  | TYPE = PESIT  |
+| String containing exactly n characters | stringn  | KEY = string21<br /> 21- character string  |
+| Constant- type value (preset)  | VALUE  | TYPE = PESIT  |
 | Password type value: string containing between n and m characters | string  |   |
-
 
 The string notation is used generically, in lists indicating
 the general parameter syntax for example. The stringn,
@@ -160,7 +154,7 @@ When using the CFTUTIL HELP command, as shown in the example below, the follow
 
 ```
 CFTUTIL help cmd=cftsend, content=detail
- 
+
 COMMAND CFTSEND USAGE
  MODE STRING max_length=7 Action to do in the parameter or partner base <REPLACE>
  'CREATE'
@@ -200,17 +194,15 @@ PARM = 'xxx,''yyy'',zzz',
 The conventions used for values concerning preset categories are listed
 in the following table.
 
-
 | Description  | Notation  |
-| --- | --- |
+| - - - | - - - |
 | Compression: numeric value between 0 and 15 indicating the compression algorithm  | cpr  |
-| Date: 8-digit string | YYYYMMDD  |
-| File name: 512 characters including the drive, path, root, suffix, where limitations are imposed by file system or operating system (such as list of unauthorized characters , length, case-sensitivity, etc.) | filename  |
+| Date: 8- digit string | YYYYMMDD  |
+| File name: 512 characters including the drive, path, root, suffix, where limitations are imposed by file system or operating system (such as list of unauthorized characters , length, case- sensitivity, etc.) | filename  |
 | Identifier: alphanumeric string of 1 to 32 alphanumeric characters and additional characters:<br/> @ # &amp; % ! : - _ + \ / &#124; ? { } [ ] ; * &lt; &gt; ~ ^ | identifier  |
 | Mask: string containing wildcard characters (* and ?) :<br/> When referring to ReGEX expressions, other value are possible. | mask  |
 | Time: string containing 2 to 8 digits  | HHMMSSSS |
 | Transfer identifier assigned by {{< TransferCFT/axwayvariablesComponentShortName  >}}  | transid  |
-
 
 <span id="OS_specificities"></span>
 
@@ -228,7 +220,7 @@ the operating system concerned.
 
 Example: ACCID
 =n           
-                           
+
 MVS
 
 The default value of a parameter may differ from one system to another;
@@ -293,12 +285,10 @@ not defined, the default value of the profile is used.
 Specificity concerning the PeSIT protocol. A protocol dependent parameter may involve one or more of the PeSIT
 protocol variants, indicated as follows:
 
-
 | Protocol  | Description  |
-| --- | --- |
+| - - - | - - - |
 | PeSIT | PeSIT protocol (standard) |
 | PeSIT CFT/CFT | PeSIT protocol used between two {{< TransferCFT/axwayvariablesComponentShortName  >}}s |
-
 
 <span id="Command_syntax"></span>
 
@@ -306,9 +296,8 @@ protocol variants, indicated as follows:
 
 The parameter setting commands are presented in the following format:
 
-
 | Syntax | Command syntax listed here [see parameters below] |
-| --- | --- |
+| - - - | - - - |
 | Description | Each parameter setting command generates one or more binary records in the PARAMETER or PARTNER file. |
 | Parameters | Parameter name and abbreviation |
 | id | identifier {0..32768}<br/> Identifies the object described by the parameter setting command. |
@@ -316,7 +305,6 @@ The parameter setting commands are presented in the following format:
 | Usage rules | All the parameters required to identify the file must be specified, except in the case of DELETE where the ID parameter is sufficient.<br/> When you select REPLACE the following occurs:<br/> • If the CLASS parameter is modified a new record is created<br/> • If the CLASS parameter is not modified the new record overwrites the existing one<br/> Only the parameters specified in the command are taken into account. Default value are used for unspecified parameters.<br/> The comment for the MODE parameter is common to all the parameter setting commands and is not repeated on the following pages. |
 | Example | When available, an example is listed here. |
 | Syntax | Command syntax listed here [see parameters below] |
-
 
 <span id="Command_reply_format"></span>
 

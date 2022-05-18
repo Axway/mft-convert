@@ -1,8 +1,8 @@
 ---
-    title: "HALT- Interrupt transfers "
-    linkTitle: "HALT - Halting a transfer"
-    weight: 310
----This command is used to suspend one or all the send and/or receive transfers,
+title: "HALT- Interrupt transfers "
+linkTitle: "HALT - Halting a transfer"
+weight: 310
+--- This command is used to suspend one or all the send and/or receive transfers,
 with the partners selected.
 
 The transfers halted are set to the H phasestep in the catalog. They can
@@ -34,9 +34,8 @@ Diagnostics and Messages](../../../../troubleshoot_intro/messages_and_error_code
 the D state (phase T and phasestep D) is automatically restarted. A transfer in the K or H phasestep
 must be manually restarted by a START command.
 
-
 | Parameters  | Description  |
-| --- | --- |
+| - - - | - - - |
 | [BLKNUM](../../../command_summary/parameter_intro/blknum) | Catalog block number. If the values '*' or ' ' are used then all transfers are selected regardless of the block that they belong to. |
 | [DIRECT](../../../command_summary/parameter_intro/direct)  | Transfer direction for the requests in question.<br/> The possible values are:<br/> • BOTH: (default) takes both send transfers and receive transfers into account,<br/> • RECV: limits the action to receive transfers,<br/> • SEND: limits the action to send transfers. |
 | [IDA](../../../command_summary/parameter_intro/ida)  | Local identifier of the transfer assigned by the user or user application. The maximum length is 64 characters.<br/> Several catalog entries may be associated with a given IDA. There is no default value. |
@@ -52,7 +51,6 @@ must be manually restarted by a START command.
 | [DIAGC]()  | Complimentary diagnostic information  |
 | [DIAGP](../../../command_summary/parameter_intro/diagp)  | Protocol diagnostic code  |
 | [PART](../../../command_summary/parameter_intro/part) <br/> (Mandatory) | Partner identifier.<br/> The associated value of this parameter can be:<br/> • *identifier*: the command only concerns the transfers with this partner<br/> • *mask*: the command concerns the transfers with the partners, whose identifiers correspond to this mask |
-
 
 Halt the send transfer of the ACCNT model file for the
 partner HQ.
@@ -82,9 +80,8 @@ partner HQ.
 
 The following tables describes the parameters used to modify a transfer entry in the catalog.
 
-
 | Command  | Parameter  | Value  | Description  |
-| --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - |
 | HALT  | DIAGC  | string  | Specify a comment.  |
 | HALT  | DIAGP  | string  | Specify a comment.  |
 

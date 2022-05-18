@@ -1,8 +1,8 @@
 ---
-    title: "Migration prerequisites"
-    linkTitle: "Perform a manual migration"
-    weight: 210
----After performing a {{< TransferCFT/axwayvariablesComponentShortName  >}} {{< TransferCFT/PrimaryTransferCFTversionlong  >}} installation, you should update to the most recent service pack.
+title: "Migration prerequisites"
+linkTitle: "Perform a manual migration"
+weight: 210
+--- After performing a {{< TransferCFT/axwayvariablesComponentShortName  >}} {{< TransferCFT/PrimaryTransferCFTversionlong  >}} installation, you should update to the most recent service pack.
 
 You require a new license key if you are migrating from a version 2.x {{< TransferCFT/axwayvariablesComponentShortName  >}} to a version 3.x.
 
@@ -20,7 +20,7 @@ Transfer CFT on Windows requires the **Visual C++ Redistributable Package for Vi
 
 ## Install {{< TransferCFT/axwayvariablesComponentShortName  >}} {{< TransferCFT/axwayvariablesComponentVersion  >}}
 
-Perform a {{< TransferCFT/axwayvariablesComponentShortName  >}} installation, as described in the OS-specific installation section.
+Perform a {{< TransferCFT/axwayvariablesComponentShortName  >}} installation, as described in the OS- specific installation section.
 
 ## Load the environment
 
@@ -32,7 +32,7 @@ Before beginning a standard migration procedure, you must load the old {{< Trans
 
 There is no profile file for Transfer CFT 2.4 in Windows.
 
-To execute a command you must be in the correct directory. Therefore, before starting the migration, change the directory to the version-appropriate {{< TransferCFT/axwayvariablesComponentShortName  >}} installation directory.
+To execute a command you must be in the correct directory. Therefore, before starting the migration, change the directory to the version- appropriate {{< TransferCFT/axwayvariablesComponentShortName  >}} installation directory.
 
 #### Transfer CFT 2.5 and higher
 

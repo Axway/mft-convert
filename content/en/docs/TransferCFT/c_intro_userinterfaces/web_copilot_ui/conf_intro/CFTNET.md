@@ -1,8 +1,8 @@
 ---
-    title: "CFTNET  - Network resources"
-    linkTitle: "Network resources - CFTNET"
-    weight: 220
----<span id="About_the_Generic_CFTNET_command"></span>You can use the CFTNET
+title: "CFTNET  - Network resources"
+linkTitle: "Network resources - CFTNET"
+weight: 220
+--- <span id="About_the_Generic_CFTNET_command"></span>You can use the CFTNET
 command to define a network access resource. The available CFTNET network
 is:
 
@@ -25,15 +25,13 @@ topics****
 
 #### Command parameters
 
-
 | Parameters  | Description  |
-| --- | --- |
+| - - - | - - - |
 | [CALL](../../../command_summary/parameter_intro/call) | Call direction possible through this network resource. |
 | [CLASS](../../../command_summary/parameter_intro/class) | Logical class for the physical link. |
 | [ID](../../../command_summary/parameter_intro/id) | Network resource identifier. |
 | [MAXCNX ](../../../command_summary/parameter_intro/maxcnx) | Maximum number of simultaneous connections that Transfer CFT will accept to establish on this network resource. |
 | [TYPE](../../../command_summary/parameter_intro/type)  | Defines the type of network resource. |
-
 
 <span id="Defining_TCP_IP__command_line_"></span>
 
@@ -53,14 +51,12 @@ Defining network resources topic.
 
 #### TYPE =  TCP
 
-
 | Parameters  | Description  |
-| --- | --- |
+| - - - | - - - |
 |  [CLASS](../../../command_summary/parameter_intro/class) | Class associated with this network resource.<br/> This concept is used to group resources of the same type, so that they can be used indifferently to establish connections with partners. |
 |  [HOST](../../../command_summary/parameter_intro/host)  | IP address of the local resource. |
 |  [MAXCNX](../../../command_summary/parameter_intro/maxcnx) | The maximum number of simultaneous connections that Transfer CFT accepts to establish on a given network resource. |
 |  [CALL](../../../command_summary/parameter_intro/call) | Call direction possible through this network resource. |
-
 
 ****Example****
 
@@ -119,9 +115,8 @@ interfaces and matching the bound port number are accepted.
 Use this command to access to a telecommunications network
 via another network.
 
-
 | Parameters  | Description  |
-| --- | --- |
+| - - - | - - - |
 | [CLASS](../../../command_summary/parameter_intro/class) | Class associated with this network resource. |
 | [ID](../../../command_summary/parameter_intro/id) | Identifier of the network accessed via a proxy. |
 | [TYPE](../../../command_summary/parameter_intro/type) = TCP | The type of network accessed via a proxy. |
@@ -130,8 +125,7 @@ via another network.
 | [HOST](../../../command_summary/parameter_intro/host)  | Addresses of the proxies in the first network, with up to four proxies in the same first network. |
 | [PORT](../../../command_summary/parameter_intro/port)  | Listening port of the proxy/proxies in the first network. |
 | [MAXCNX](../../../command_summary/parameter_intro/maxcnx) | Maximum number of concurrent connections that Transfer CFT will establish with the proxy/proxies. |
-| [USER](../../../command_summary/parameter_intro/user) | User name transmitted in the connection request addressed to the proxy.<br/> This parameter is case-sensitive. By default, it is set to the value of the user name in which Transfer CFT is being run. |
-
+| [USER](../../../command_summary/parameter_intro/user) | User name transmitted in the connection request addressed to the proxy.<br/> This parameter is case- sensitive. By default, it is set to the value of the user name in which Transfer CFT is being run. |
 
 For an example and proxy details, see [Transfers via
 a Proxy and SOCKS protocol](../../../../protocols_start_here/ipv6/use_proxy_and_socks_protocol).

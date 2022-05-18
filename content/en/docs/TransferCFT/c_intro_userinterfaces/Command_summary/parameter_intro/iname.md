@@ -1,8 +1,8 @@
 ---
-    title: "iname"
-    linkTitle: "iname"
-    weight: 1670
----<span id="iname"></span>
+title: "iname"
+linkTitle: "iname"
+weight: 1670
+--- <span id="iname"></span>
 
 ### iname
 

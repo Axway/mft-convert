@@ -1,8 +1,8 @@
 ---
-    title: "Apply a license key"
-    linkTitle: "Apply a license key"
-    weight: 180
----You need to apply a valid license key to Transfer CFT in the following situations:
+title: "Apply a license key"
+linkTitle: "Apply a license key"
+weight: 180
+--- You need to apply a valid license key to Transfer CFT in the following situations:
 
 - You perform an initial Transfer CFT installation.
 - To replace an expired license key (typically after a year).
@@ -21,8 +21,8 @@
     > on which Transfer CFT is installed.
 
 1. Contact the Axway Fulfillment team at the appropriate email address to obtain a valid key.
-    -   For a US key, contact: `fulfillment@us.axway.com`
-    -   For an EMEA or APAC key, contact: `product.key@axway.com`
+    - For a US key, contact: `fulfillment@us.axway.com`
+    - For an EMEA or APAC key, contact: `product.key@axway.com`
 
 1. Provide the hostname and system information for the installed or updated Transfer CFT.
 
@@ -33,14 +33,14 @@ Normally you enter the key that you received from the Axway Fulfillment team dur
 - The file can contain one or multiple license keys, but it must have one key per line.
 - On start up the first valid key is used.
 
-### Multi-node keys
+### Multi- node keys
 
 ****Transfer CFT 3.3.2 SP2 and higher****
 
-Transfer CFT allows you to use a single key for a multi-node installation. To use a single key for multiple hosts, either:
+Transfer CFT allows you to use a single key for a multi- node installation. To use a single key for multiple hosts, either:
 
 - The hostname must not be defined for the key, or
-- The hostname defined for the key matches the hostname of one of the hosts that composes the multi-node instance
+- The hostname defined for the key matches the hostname of one of the hosts that composes the multi- node instance
 
 Additionally, the key must have the cluster option.
 
@@ -48,7 +48,7 @@ For example, if you have 2 hosts and 4 nodes, you only need one key that matches
 
 ****Transfer CFT prior to 3.3.2 SP2****
 
-If you are using a Transfer CFT 3.3.2 prior to SP2, multi-node architecture requires:
+If you are using a Transfer CFT 3.3.2 prior to SP2, multi- node architecture requires:
 
 - One key per node, and if there is more than one host you require at least one valid key per host
 - Each key must have the cluster option

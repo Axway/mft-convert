@@ -1,8 +1,8 @@
 ---
-    title: "Transport  security in CFTSSL "
-    linkTitle: "CFTSSL configuration"
-    weight: 170
----<span id="Defining_a_transport_security_profile"></span>
+title: "Transport  security in CFTSSL "
+linkTitle: "CFTSSL configuration"
+weight: 170
+--- <span id="Defining_a_transport_security_profile"></span>
 
 ## Defining a transport security profile
 
@@ -77,12 +77,12 @@ Use this command to describes a security profile.
 <table>
    <tbody>
       <tr>
-         <td class="BodyE-Column1-Body1">Parameter         </td>
-         <td class="BodyD-Column1-Body1">Description         </td>
+         <td class="BodyE- Column1- Body1">Parameter         </td>
+         <td class="BodyD- Column1- Body1">Description         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body2"><p>[CERFNAME = string1..64]</p>         </td>
-         <td class="BodyD-Column1-Body2" width="45.371%"><p>File name root in which the remote user chain of certificates
+         <td class="BodyE- Column1- Body2"><p>[CERFNAME = string1..64]</p>         </td>
+         <td class="BodyD- Column1- Body2" width="45.371%"><p>File name root in which the remote user chain of certificates
 is recorded.</p>
 <p>If this parameter is set and the remote partner is authenticated,
 the chain of certificates proposed by the partner is recorded in DER format
@@ -92,9 +92,9 @@ via the &amp;SSLCFNAM symbolic variable or catalog query APIs. The file
 is systematically deleted when the corresponding catalog entry is purged.</p>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body1"><p>CIPHLIST = {(num, num,
+         <td class="BodyE- Column1- Body1"><p>CIPHLIST = {(num, num,
 ..)}</p>         </td>
-         <td class="BodyD-Column1-Body1" width="45.371%"><p>List of algorithms supported.</p>
+         <td class="BodyD- Column1- Body1" width="45.371%"><p>List of algorithms supported.</p>
 <p>Each value defines three algorithms:</p>
 <ul>
 <li>Authentication
@@ -110,148 +110,148 @@ selection, depending on the client's preference.</p>
 <table>
    <thead>
       <tr>
-<th class="HeadE-Column1-Header1"><p>Suite </p>         </th>
-<th style="text-align: center;" class="HeadE-Column1-Header1"><p>Order used</p>         </th>
-<th class="HeadE-Column1-Header1"><p>Authentication </p>         </th>
-<th class="HeadE-Column1-Header1"><p>Confidentiality </p>         </th>
-<th class="HeadD-Column1-Header1"><p>Integrity </p>         </th>
+<th class="HeadE- Column1- Header1"><p>Suite </p>         </th>
+<th style="text- align: center;" class="HeadE- Column1- Header1"><p>Order used</p>         </th>
+<th class="HeadE- Column1- Header1"><p>Authentication </p>         </th>
+<th class="HeadE- Column1- Header1"><p>Confidentiality </p>         </th>
+<th class="HeadD- Column1- Header1"><p>Integrity </p>         </th>
       </tr>
    </thead>
    <tbody>
       <tr>
-         <td class="BodyE-Column1-Body1" data-valign="top" width="9%">49199 **         </td>
-         <td style="text-align: center;" class="BodyE-Column1-Body1">1         </td>
-         <td class="BodyE-Column1-Body1" data-valign="top">ECDHE + RSA authentication         </td>
-         <td class="BodyE-Column1-Body1" data-valign="top" width="20%">AES-128 GCM         </td>
-         <td class="BodyD-Column1-Body1" data-valign="top" width="27%">SHA-256         </td>
+         <td class="BodyE- Column1- Body1" data- valign="top" width="9%">49199 **         </td>
+         <td style="text- align: center;" class="BodyE- Column1- Body1">1         </td>
+         <td class="BodyE- Column1- Body1" data- valign="top">ECDHE + RSA authentication         </td>
+         <td class="BodyE- Column1- Body1" data- valign="top" width="20%">AES- 128 GCM         </td>
+         <td class="BodyD- Column1- Body1" data- valign="top" width="27%">SHA- 256         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body2" data-valign="top" width="9%">49200 **         </td>
-         <td style="text-align: center;" class="BodyE-Column1-Body2">2         </td>
-         <td class="BodyE-Column1-Body2" data-valign="top">ECDHE + RSA authentication         </td>
-         <td class="BodyE-Column1-Body2" data-valign="top" width="20%">AES-256 GCM         </td>
-         <td class="BodyD-Column1-Body2" data-valign="top" width="27%">SHA-384         </td>
+         <td class="BodyE- Column1- Body2" data- valign="top" width="9%">49200 **         </td>
+         <td style="text- align: center;" class="BodyE- Column1- Body2">2         </td>
+         <td class="BodyE- Column1- Body2" data- valign="top">ECDHE + RSA authentication         </td>
+         <td class="BodyE- Column1- Body2" data- valign="top" width="20%">AES- 256 GCM         </td>
+         <td class="BodyD- Column1- Body2" data- valign="top" width="27%">SHA- 384         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body1" data-valign="top" width="9%">49191 **         </td>
-         <td style="text-align: center;" class="BodyE-Column1-Body1">3         </td>
-         <td class="BodyE-Column1-Body1" data-valign="top"><p>ECDHE + RSA authentication</p>         </td>
-         <td class="BodyE-Column1-Body1" data-valign="top" width="20%">AES-128         </td>
-         <td class="BodyD-Column1-Body1" data-valign="top" width="27%">SHA-256         </td>
+         <td class="BodyE- Column1- Body1" data- valign="top" width="9%">49191 **         </td>
+         <td style="text- align: center;" class="BodyE- Column1- Body1">3         </td>
+         <td class="BodyE- Column1- Body1" data- valign="top"><p>ECDHE + RSA authentication</p>         </td>
+         <td class="BodyE- Column1- Body1" data- valign="top" width="20%">AES- 128         </td>
+         <td class="BodyD- Column1- Body1" data- valign="top" width="27%">SHA- 256         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body2" data-valign="top" width="9%">49192**         </td>
-         <td style="text-align: center;" class="BodyE-Column1-Body2">4         </td>
-         <td class="BodyE-Column1-Body2" data-valign="top">ECDHE + RSA authentication         </td>
-         <td class="BodyE-Column1-Body2" data-valign="top" width="20%">AES-256         </td>
-         <td class="BodyD-Column1-Body2" data-valign="top" width="27%">SHA-384         </td>
+         <td class="BodyE- Column1- Body2" data- valign="top" width="9%">49192**         </td>
+         <td style="text- align: center;" class="BodyE- Column1- Body2">4         </td>
+         <td class="BodyE- Column1- Body2" data- valign="top">ECDHE + RSA authentication         </td>
+         <td class="BodyE- Column1- Body2" data- valign="top" width="20%">AES- 256         </td>
+         <td class="BodyD- Column1- Body2" data- valign="top" width="27%">SHA- 384         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body1" data-valign="top" width="9%">156 **         </td>
-         <td style="text-align: center;" class="BodyE-Column1-Body1">5         </td>
-         <td class="BodyE-Column1-Body1" data-valign="top">RSA authentication         </td>
-         <td class="BodyE-Column1-Body1" data-valign="top" width="20%">AES 128 GCM         </td>
-         <td class="BodyD-Column1-Body1" data-valign="top" width="27%">SHA-256         </td>
+         <td class="BodyE- Column1- Body1" data- valign="top" width="9%">156 **         </td>
+         <td style="text- align: center;" class="BodyE- Column1- Body1">5         </td>
+         <td class="BodyE- Column1- Body1" data- valign="top">RSA authentication         </td>
+         <td class="BodyE- Column1- Body1" data- valign="top" width="20%">AES 128 GCM         </td>
+         <td class="BodyD- Column1- Body1" data- valign="top" width="27%">SHA- 256         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body2" data-valign="top" width="9%">157 **         </td>
-         <td style="text-align: center;" class="BodyE-Column1-Body2">6         </td>
-         <td class="BodyE-Column1-Body2" data-valign="top">RSA authentication         </td>
-         <td class="BodyE-Column1-Body2" data-valign="top" width="20%">AES 256 GCM         </td>
-         <td class="BodyD-Column1-Body2" data-valign="top" width="27%">SHA-384         </td>
+         <td class="BodyE- Column1- Body2" data- valign="top" width="9%">157 **         </td>
+         <td style="text- align: center;" class="BodyE- Column1- Body2">6         </td>
+         <td class="BodyE- Column1- Body2" data- valign="top">RSA authentication         </td>
+         <td class="BodyE- Column1- Body2" data- valign="top" width="20%">AES 256 GCM         </td>
+         <td class="BodyD- Column1- Body2" data- valign="top" width="27%">SHA- 384         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body1" data-valign="top" width="9%">60*         </td>
-         <td style="text-align: center;" class="BodyE-Column1-Body1">7         </td>
-         <td class="BodyE-Column1-Body1" data-valign="top">RSA authentication (512, 1024, 2048, or 4096)         </td>
-         <td class="BodyE-Column1-Body1" data-valign="top" width="20%">AES-128         </td>
-         <td class="BodyD-Column1-Body1" data-valign="top" width="27%">SHA-256         </td>
+         <td class="BodyE- Column1- Body1" data- valign="top" width="9%">60*         </td>
+         <td style="text- align: center;" class="BodyE- Column1- Body1">7         </td>
+         <td class="BodyE- Column1- Body1" data- valign="top">RSA authentication (512, 1024, 2048, or 4096)         </td>
+         <td class="BodyE- Column1- Body1" data- valign="top" width="20%">AES- 128         </td>
+         <td class="BodyD- Column1- Body1" data- valign="top" width="27%">SHA- 256         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body2" data-valign="top" width="9%">61*         </td>
-         <td style="text-align: center;" class="BodyE-Column1-Body2">8         </td>
-         <td class="BodyE-Column1-Body2" data-valign="top">RSA authentication (512, 1024, 2048, or 4096)         </td>
-         <td class="BodyE-Column1-Body2" data-valign="top" width="20%">AES-256         </td>
-         <td class="BodyD-Column1-Body2" data-valign="top" width="27%">SHA-256         </td>
+         <td class="BodyE- Column1- Body2" data- valign="top" width="9%">61*         </td>
+         <td style="text- align: center;" class="BodyE- Column1- Body2">8         </td>
+         <td class="BodyE- Column1- Body2" data- valign="top">RSA authentication (512, 1024, 2048, or 4096)         </td>
+         <td class="BodyE- Column1- Body2" data- valign="top" width="20%">AES- 256         </td>
+         <td class="BodyD- Column1- Body2" data- valign="top" width="27%">SHA- 256         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body1" data-valign="top" width="9%">47
+         <td class="BodyE- Column1- Body1" data- valign="top" width="9%">47
 &lt;/td&gt;         </td>
-         <td style="text-align: center;" class="BodyE-Column1-Body1">9         </td>
-         <td class="BodyE-Column1-Body1" data-valign="top">RSA authentication (512, 1024, 2048, or 4096)
+         <td style="text- align: center;" class="BodyE- Column1- Body1">9         </td>
+         <td class="BodyE- Column1- Body1" data- valign="top">RSA authentication (512, 1024, 2048, or 4096)
 &lt;/td&gt;         </td>
-         <td class="BodyE-Column1-Body1" data-valign="top" width="20%">AES-128
+         <td class="BodyE- Column1- Body1" data- valign="top" width="20%">AES- 128
 &lt;/td&gt;         </td>
-         <td class="BodyD-Column1-Body1" data-valign="top" width="27%">SHA-1
-&lt;/td&gt;         </td>
-      </tr>
-      <tr>
-         <td class="BodyE-Column1-Body2" data-valign="top" width="9%">53         </td>
-         <td style="text-align: center;" class="BodyE-Column1-Body2">10         </td>
-         <td class="BodyE-Column1-Body2" data-valign="top">RSA authentication (512, 1024, 2048, or 4096)         </td>
-         <td class="BodyE-Column1-Body2" data-valign="top" width="20%">AES-256         </td>
-         <td class="BodyD-Column1-Body2" data-valign="top" width="27%">SHA-1         </td>
-      </tr>
-      <tr>
-         <td class="BodyE-Column1-Body1" data-valign="top" width="9%">10
-&lt;/td&gt;         </td>
-         <td style="text-align: center;" class="BodyE-Column1-Body1">11         </td>
-         <td class="BodyE-Column1-Body1" data-valign="top">RSA authentication (512, 1024, 2048, or 4096)
-&lt;/td&gt;         </td>
-         <td class="BodyE-Column1-Body1" data-valign="top" width="20%">Triple DES
-&lt;/td&gt;         </td>
-         <td class="BodyD-Column1-Body1" data-valign="top" width="27%">SHA-1
+         <td class="BodyD- Column1- Body1" data- valign="top" width="27%">SHA- 1
 &lt;/td&gt;         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body2" data-valign="top" width="9%">5
+         <td class="BodyE- Column1- Body2" data- valign="top" width="9%">53         </td>
+         <td style="text- align: center;" class="BodyE- Column1- Body2">10         </td>
+         <td class="BodyE- Column1- Body2" data- valign="top">RSA authentication (512, 1024, 2048, or 4096)         </td>
+         <td class="BodyE- Column1- Body2" data- valign="top" width="20%">AES- 256         </td>
+         <td class="BodyD- Column1- Body2" data- valign="top" width="27%">SHA- 1         </td>
+      </tr>
+      <tr>
+         <td class="BodyE- Column1- Body1" data- valign="top" width="9%">10
 &lt;/td&gt;         </td>
-         <td style="text-align: center;" class="BodyE-Column1-Body2">12         </td>
-         <td class="BodyE-Column1-Body2" data-valign="top">RSA authentication (512, 1024, 2048, or 4096)
+         <td style="text- align: center;" class="BodyE- Column1- Body1">11         </td>
+         <td class="BodyE- Column1- Body1" data- valign="top">RSA authentication (512, 1024, 2048, or 4096)
 &lt;/td&gt;         </td>
-         <td class="BodyE-Column1-Body2" data-valign="top" width="20%">RC4
+         <td class="BodyE- Column1- Body1" data- valign="top" width="20%">Triple DES
 &lt;/td&gt;         </td>
-         <td class="BodyD-Column1-Body2" data-valign="top" width="27%">SHA-1
+         <td class="BodyD- Column1- Body1" data- valign="top" width="27%">SHA- 1
 &lt;/td&gt;         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body1" data-valign="top" width="9%">4
+         <td class="BodyE- Column1- Body2" data- valign="top" width="9%">5
 &lt;/td&gt;         </td>
-         <td style="text-align: center;" class="BodyE-Column1-Body1">13         </td>
-         <td class="BodyE-Column1-Body1" data-valign="top">RSA authentication (512, 1024, 2048, or 4096)
+         <td style="text- align: center;" class="BodyE- Column1- Body2">12         </td>
+         <td class="BodyE- Column1- Body2" data- valign="top">RSA authentication (512, 1024, 2048, or 4096)
 &lt;/td&gt;         </td>
-         <td class="BodyE-Column1-Body1" data-valign="top" width="20%">RC4
+         <td class="BodyE- Column1- Body2" data- valign="top" width="20%">RC4
 &lt;/td&gt;         </td>
-         <td class="BodyD-Column1-Body1" data-valign="top" width="27%">MD5
-&lt;/td&gt;         </td>
-      </tr>
-      <tr>
-         <td class="BodyE-Column1-Body2" data-valign="top" width="9%">59*         </td>
-         <td style="text-align: center;" class="BodyE-Column1-Body2">14         </td>
-         <td class="BodyE-Column1-Body2" data-valign="top">RSA authentication (512, 1024, 2048, or 4096)         </td>
-         <td class="BodyE-Column1-Body2" data-valign="top" width="20%">None         </td>
-         <td class="BodyD-Column1-Body2" data-valign="top" width="27%">SHA-256         </td>
-      </tr>
-      <tr>
-         <td class="BodyE-Column1-Body1" data-valign="top" width="9%">2
-&lt;/td&gt;         </td>
-         <td style="text-align: center;" class="BodyE-Column1-Body1">15         </td>
-         <td class="BodyE-Column1-Body1" data-valign="top">RSA authentication (512, 1024, 2048, or 4096)
-&lt;/td&gt;         </td>
-         <td class="BodyE-Column1-Body1" data-valign="top" width="20%">None
-&lt;/td&gt;         </td>
-         <td class="BodyD-Column1-Body1" data-valign="top" width="27%">SHA-1
+         <td class="BodyD- Column1- Body2" data- valign="top" width="27%">SHA- 1
 &lt;/td&gt;         </td>
       </tr>
       <tr>
-         <td class="BodyB-Column1-Body2" data-valign="top" width="9%">1
+         <td class="BodyE- Column1- Body1" data- valign="top" width="9%">4
 &lt;/td&gt;         </td>
-         <td style="text-align: center;" class="BodyB-Column1-Body2">16         </td>
-         <td class="BodyB-Column1-Body2" data-valign="top">RSA authentication (512, 1024, 2048, or 4096) 
+         <td style="text- align: center;" class="BodyE- Column1- Body1">13         </td>
+         <td class="BodyE- Column1- Body1" data- valign="top">RSA authentication (512, 1024, 2048, or 4096)
 &lt;/td&gt;         </td>
-         <td class="BodyB-Column1-Body2" data-valign="top" width="20%">None
+         <td class="BodyE- Column1- Body1" data- valign="top" width="20%">RC4
 &lt;/td&gt;         </td>
-         <td class="BodyA-Column1-Body2" data-valign="top" width="27%">MD5
+         <td class="BodyD- Column1- Body1" data- valign="top" width="27%">MD5
+&lt;/td&gt;         </td>
+      </tr>
+      <tr>
+         <td class="BodyE- Column1- Body2" data- valign="top" width="9%">59*         </td>
+         <td style="text- align: center;" class="BodyE- Column1- Body2">14         </td>
+         <td class="BodyE- Column1- Body2" data- valign="top">RSA authentication (512, 1024, 2048, or 4096)         </td>
+         <td class="BodyE- Column1- Body2" data- valign="top" width="20%">None         </td>
+         <td class="BodyD- Column1- Body2" data- valign="top" width="27%">SHA- 256         </td>
+      </tr>
+      <tr>
+         <td class="BodyE- Column1- Body1" data- valign="top" width="9%">2
+&lt;/td&gt;         </td>
+         <td style="text- align: center;" class="BodyE- Column1- Body1">15         </td>
+         <td class="BodyE- Column1- Body1" data- valign="top">RSA authentication (512, 1024, 2048, or 4096)
+&lt;/td&gt;         </td>
+         <td class="BodyE- Column1- Body1" data- valign="top" width="20%">None
+&lt;/td&gt;         </td>
+         <td class="BodyD- Column1- Body1" data- valign="top" width="27%">SHA- 1
+&lt;/td&gt;         </td>
+      </tr>
+      <tr>
+         <td class="BodyB- Column1- Body2" data- valign="top" width="9%">1
+&lt;/td&gt;         </td>
+         <td style="text- align: center;" class="BodyB- Column1- Body2">16         </td>
+         <td class="BodyB- Column1- Body2" data- valign="top">RSA authentication (512, 1024, 2048, or 4096) 
+&lt;/td&gt;         </td>
+         <td class="BodyB- Column1- Body2" data- valign="top" width="20%">None
+&lt;/td&gt;         </td>
+         <td class="BodyA- Column1- Body2" data- valign="top" width="27%">MD5
 &lt;/td&gt;         </td>
       </tr>
    </tbody>
@@ -266,21 +266,21 @@ selection, depending on the client's preference.</p>
 </blockquote>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body2"><p>[DEPTH = {10 &#124; num}]</p>         </td>
-         <td class="BodyD-Column1-Body2" width="45.371%"><p>Maximum number of intermediate authorities authorized for
+         <td class="BodyE- Column1- Body2"><p>[DEPTH = {10 &#124; num}]</p>         </td>
+         <td class="BodyD- Column1- Body2" width="45.371%"><p>Maximum number of intermediate authorities authorized for
 the remote certificate.</p>
 <p>This optional parameter has a numeric value between 0 and
-10 (default value). 0 means that only self-signed certificates are accepted.
-1 means that only certificates that are self-signed or signed by a recognized
+10 (default value). 0 means that only self- signed certificates are accepted.
+1 means that only certificates that are self- signed or signed by a recognized
 root authority are accepted.</p>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body1"><p>DIRECT = CLIENT</p>         </td>
-         <td class="BodyD-Column1-Body1" width="45.371%"><p>Security profile for the client mode.</p>         </td>
+         <td class="BodyE- Column1- Body1"><p>DIRECT = CLIENT</p>         </td>
+         <td class="BodyD- Column1- Body1" width="45.371%"><p>Security profile for the client mode.</p>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body2"><p>[DNISSUER = string1..512]</p>         </td>
-         <td class="BodyD-Column1-Body2" width="45.371%"><p>List of values to be checked in the DN of the entity that directly issued the remote certificate.</p>
+         <td class="BodyE- Column1- Body2"><p>[DNISSUER = string1..512]</p>         </td>
+         <td class="BodyD- Column1- Body2" width="45.371%"><p>List of values to be checked in the DN of the entity that directly issued the remote certificate.</p>
 <p>Strings are limited to 512 bytes each. A check is
 performed as follows:</p>
 <ul>
@@ -295,8 +295,8 @@ string.</li>
 string are separated by the '/' character.</p>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body1"><p>[DNUSER = string1..512]</p>         </td>
-         <td class="BodyD-Column1-Body1" width="45.371%"><p>List of values to be checked in the remote certificate DN.</p>
+         <td class="BodyE- Column1- Body1"><p>[DNUSER = string1..512]</p>         </td>
+         <td class="BodyD- Column1- Body1" width="45.371%"><p>List of values to be checked in the remote certificate DN.</p>
 <p>Strings are limited to 512 bytes each. A check is
 performed as follows:</p>
 <ul>
@@ -311,36 +311,36 @@ string.</li>
 string are separated by the '/' character.</p>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body2"><p>ID = identifier</p>         </td>
-         <td class="BodyD-Column1-Body2" width="45.371%"><p>Security profile identifier.</p>         </td>
+         <td class="BodyE- Column1- Body2"><p>ID = identifier</p>         </td>
+         <td class="BodyD- Column1- Body2" width="45.371%"><p>Security profile identifier.</p>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body1"><p>[MODE = {REPLACE
+         <td class="BodyE- Column1- Body1"><p>[MODE = {REPLACE
 &#124; CREATE &#124; DELETE}]</p>         </td>
-         <td class="BodyD-Column1-Body1" width="45.371%"><p>Action for the command. For DELETE mode, the command is
+         <td class="BodyD- Column1- Body1" width="45.371%"><p>Action for the command. For DELETE mode, the command is
 deleted from the PARAMETERS database; only the ID and DIRECT parameters
 are required.</p>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body2">[ORIGIN = string ]         </td>
-         <td class="BodyD-Column1-Body2" width="45.371%">This parameter indicates the origin of an object.         </td>
+         <td class="BodyE- Column1- Body2">[ORIGIN = string ]         </td>
+         <td class="BodyD- Column1- Body2" width="45.371%">This parameter indicates the origin of an object.         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body1"><p>PASSW</p>
+         <td class="BodyE- Column1- Body1"><p>PASSW</p>
 <p>string</p>         </td>
-         <td class="BodyD-Column1-Body1" width="45.371%"><p>The parameter is the PassPort entity password for a user's certificate (the password that corresponds with the USERCID). This parameter enables PassPort connectivity.</p>         </td>
+         <td class="BodyD- Column1- Body1" width="45.371%"><p>The parameter is the PassPort entity password for a user's certificate (the password that corresponds with the USERCID). This parameter enables PassPort connectivity.</p>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body2">[PARM = string1..64]         </td>
-         <td class="BodyD-Column1-Body2" width="45.371%"><p>Freeform parameter associated with the security profile.</p>
+         <td class="BodyE- Column1- Body2">[PARM = string1..64]         </td>
+         <td class="BodyD- Column1- Body2" width="45.371%"><p>Freeform parameter associated with the security profile.</p>
 <p>This local data item is not used by the SSL protocol. It
 can be reused as a symbolic variable in an end of transfer procedure (&amp;SSLPARM).
 It is also passed to the end of transfer, directory or file exits.</p>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body1"><p>[ROOTCID = (identifier,
+         <td class="BodyE- Column1- Body1"><p>[ROOTCID = (identifier,
 identifier, ...)]</p>         </td>
-         <td class="BodyD-Column1-Body1" width="45.371%"><p>List of certificate authorities. This list can reference a maximum of 10 identifiers in the local certificate database.</p>
+         <td class="BodyD- Column1- Body1" width="45.371%"><p>List of certificate authorities. This list can reference a maximum of 10 identifiers in the local certificate database.</p>
 <p>In client mode, this list is used to check the server
 certificate. Only certificates signed by one of the authorities in the
 ROOTCID parameter are accepted.</p>
@@ -350,12 +350,12 @@ ROOTCID parameter are accepted.</p>
 </blockquote>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body2">[TRACE = number ]         </td>
-         <td class="BodyD-Column1-Body2" width="45.371%">SSL trace level.         </td>
+         <td class="BodyE- Column1- Body2">[TRACE = number ]         </td>
+         <td class="BodyD- Column1- Body2" width="45.371%">SSL trace level.         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body1"><p>[USERCID = identifier]</p>         </td>
-         <td class="BodyD-Column1-Body1" width="45.371%"><p>Local user certificate. Within the context of the Transfer
+         <td class="BodyE- Column1- Body1"><p>[USERCID = identifier]</p>         </td>
+         <td class="BodyD- Column1- Body1" width="45.371%"><p>Local user certificate. Within the context of the Transfer
 CFT integrated PKI, this identifier
 refers to the identifier of a user certificate in the database.</p>
 <p>This parameter is used to select a user certificate for
@@ -368,8 +368,8 @@ These variables are then substituted with the name of the transfer owner
 of the transfer partner respectively.</p>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body2"><p>[VERSION = {TLSV1 &#124; SSLV3 &#124; TLSV1COMP &#124; SSLV3COMP}]</p>         </td>
-         <td class="BodyD-Column1-Body2" width="45.371%"><p>Session version.</p>
+         <td class="BodyE- Column1- Body2"><p>[VERSION = {TLSV1 &#124; SSLV3 &#124; TLSV1COMP &#124; SSLV3COMP}]</p>         </td>
+         <td class="BodyD- Column1- Body2" width="45.371%"><p>Session version.</p>
 <p>Transfer CFT supports:</p>
 <ul>
 <li>TLS version 1.2, 1.1, 1.0 (TLSV1 &#124; TLSV1COMP keyword)</li>
@@ -386,8 +386,8 @@ of the transfer partner respectively.</p>         </td>
 <p>Limitation: The header length policy in the protocol header is only available for the PeSIT (ANY) protocol.</p>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body1">VERIFY         </td>
-         <td class="BodyD-Column1-Body1" width="45.371%"><p>Sets the authentication mode requirement.</p>
+         <td class="BodyE- Column1- Body1">VERIFY         </td>
+         <td class="BodyD- Column1- Body1" width="45.371%"><p>Sets the authentication mode requirement.</p>
 <ul>
 <li>ENFORCED: Ensures client authentication with the server. The transfer fails if the server does not ask for the client certificate during the handshake.</li>
 <li>OPTIONAL and REQUIRED: The same as NONE (enabling backward compatibility), but should not be used.</li>
@@ -427,16 +427,16 @@ Use this command to describes a security profile.
 <table>
    <tbody>
       <tr>
-         <td class="BodyE-Column1-Body1">Parameter         </td>
-         <td class="BodyD-Column1-Body1">Description         </td>
+         <td class="BodyE- Column1- Body1">Parameter         </td>
+         <td class="BodyD- Column1- Body1">Description         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body2" width="28.19%"><p>ID = identifier</p>         </td>
-         <td class="BodyD-Column1-Body2" width="47.156%"><p>Identifier of the security profile.</p>         </td>
+         <td class="BodyE- Column1- Body2" width="28.19%"><p>ID = identifier</p>         </td>
+         <td class="BodyD- Column1- Body2" width="47.156%"><p>Identifier of the security profile.</p>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body1" width="28.19%"><p>[CERFNAME = string1..64]</p>         </td>
-         <td class="BodyD-Column1-Body1" width="47.156%"><p>File name root used to record the remote user chain of
+         <td class="BodyE- Column1- Body1" width="28.19%"><p>[CERFNAME = string1..64]</p>         </td>
+         <td class="BodyD- Column1- Body1" width="47.156%"><p>File name root used to record the remote user chain of
 certificates.</p>
 <p>If this parameter is set and the remote partner is authenticated,
 the chain of certificates proposed by the partner is recorded in DER format
@@ -447,9 +447,9 @@ The file is systematically deleted when the corresponding catalog entry
 is purged.</p>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body2" width="28.19%"><p>CIPHLIST = {(num, num,
+         <td class="BodyE- Column1- Body2" width="28.19%"><p>CIPHLIST = {(num, num,
 ..)}</p>         </td>
-         <td class="BodyD-Column1-Body2" width="47.156%"><p>List of the algorithms supported.</p>
+         <td class="BodyD- Column1- Body2" width="47.156%"><p>List of the algorithms supported.</p>
 <p>Each value defines three algorithms:</p>
 <ul>
 <li>Authentication
@@ -464,22 +464,22 @@ in order of preference, for the purpose of determining the suite to be
 negotiated.</p>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body1" width="28.19%"><p>[DEPTH = {10
+         <td class="BodyE- Column1- Body1" width="28.19%"><p>[DEPTH = {10
 &#124; num}]</p>         </td>
-         <td class="BodyD-Column1-Body1" width="47.156%"><p>Maximum number of intermediate authorities authorized for
+         <td class="BodyD- Column1- Body1" width="47.156%"><p>Maximum number of intermediate authorities authorized for
 the remote certificate.</p>
 <p>This optional parameter has a numerical value between 0
-and 10, the default value. 0 signifies that only self-signed certificates
-are accepted. 1 signifies that only certificates that are self-signed
+and 10, the default value. 0 signifies that only self- signed certificates
+are accepted. 1 signifies that only certificates that are self- signed
 or signed by a recognized root authority are accepted.</p>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body2" width="28.19%"><p>DIRECT = SERVER</p>         </td>
-         <td class="BodyD-Column1-Body2" width="47.156%"><p>The security profile is applicable in the server mode.</p>         </td>
+         <td class="BodyE- Column1- Body2" width="28.19%"><p>DIRECT = SERVER</p>         </td>
+         <td class="BodyD- Column1- Body2" width="47.156%"><p>The security profile is applicable in the server mode.</p>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body1" width="28.19%"><p>[DNISSUER = string1...512]</p>         </td>
-         <td class="BodyD-Column1-Body1" width="47.156%"><p>Strings that are limited to 512 bytes each. A check is
+         <td class="BodyE- Column1- Body1" width="28.19%"><p>[DNISSUER = string1...512]</p>         </td>
+         <td class="BodyD- Column1- Body1" width="47.156%"><p>Strings that are limited to 512 bytes each. A check is
 performed as follows:</p>
 <ul>
 <li>dnuser='C=FR/O=
@@ -493,8 +493,8 @@ string.</li>
 string are separated by the '/' character.</p>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body2" width="28.19%"><p>[DNUSER = string1..512]</p>         </td>
-         <td class="BodyD-Column1-Body2" width="47.156%"><p>Strings that are limited to 512 bytes each. A check is
+         <td class="BodyE- Column1- Body2" width="28.19%"><p>[DNUSER = string1..512]</p>         </td>
+         <td class="BodyD- Column1- Body2" width="47.156%"><p>Strings that are limited to 512 bytes each. A check is
 performed as follows:</p>
 <ul>
 <li>dnuser='C=FR/O=
@@ -508,27 +508,27 @@ string.</li>
 string are separated by the '/' character.</p>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body1" width="28.19%"><p>[MODE = {REPLACE &#124;
+         <td class="BodyE- Column1- Body1" width="28.19%"><p>[MODE = {REPLACE &#124;
 CREATE &#124; DELETE}]</p>         </td>
-         <td class="BodyD-Column1-Body1" width="47.156%"><p>Action for the command. For DELETE mode, the command is
+         <td class="BodyD- Column1- Body1" width="47.156%"><p>Action for the command. For DELETE mode, the command is
 deleted from the PARAMETERS database; only the ID and DIRECT parameters
 are required.</p>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body2" width="28.19%">[ORIGIN = string ]         </td>
-         <td class="BodyD-Column1-Body2" width="47.156%">This parameter indicates the origin of an object.         </td>
+         <td class="BodyE- Column1- Body2" width="28.19%">[ORIGIN = string ]         </td>
+         <td class="BodyD- Column1- Body2" width="47.156%">This parameter indicates the origin of an object.         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body1" width="28.19%"><p>[PARM = string1..64]</p>         </td>
-         <td class="BodyD-Column1-Body1" width="47.156%"><p>Freeform parameter associated with the security profile.</p>
+         <td class="BodyE- Column1- Body1" width="28.19%"><p>[PARM = string1..64]</p>         </td>
+         <td class="BodyD- Column1- Body1" width="47.156%"><p>Freeform parameter associated with the security profile.</p>
 <p>This local data item is not used by the SSL protocol. It
 can be reused as a symbolic variable in an end of transfer procedure (&amp;SSLPARM).
 It is also passed to the end of transfer, directory or file exits.</p>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body2" width="28.19%"><p>[ROOTCID = (identifier,
+         <td class="BodyE- Column1- Body2" width="28.19%"><p>[ROOTCID = (identifier,
 identifier, ...)]</p>         </td>
-         <td class="BodyD-Column1-Body2" width="47.156%"><p>List of the certificate authorities. This list references
+         <td class="BodyD- Column1- Body2" width="47.156%"><p>List of the certificate authorities. This list references
 identifiers in the local certificate database.</p>
 <p>This list has two functions:</p>
 <ul>
@@ -544,12 +544,12 @@ server is supplied</li>
 </blockquote>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body1" width="28.19%">[TRACE = number ]         </td>
-         <td class="BodyD-Column1-Body1" width="47.156%">SSL trace level.         </td>
+         <td class="BodyE- Column1- Body1" width="28.19%">[TRACE = number ]         </td>
+         <td class="BodyD- Column1- Body1" width="47.156%">SSL trace level.         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body2" width="28.19%"><p>[USERCID = identifier]</p>         </td>
-         <td class="BodyD-Column1-Body2" width="47.156%"><p>Reference of a user certificate in the local certificate
+         <td class="BodyE- Column1- Body2" width="28.19%"><p>[USERCID = identifier]</p>         </td>
+         <td class="BodyD- Column1- Body2" width="47.156%"><p>Reference of a user certificate in the local certificate
 database. The purpose of this identifier is to select a user certificate
 for authentication by the client.</p>
 <p>If the server
@@ -563,9 +563,9 @@ the server mode (CFTSSL command indicated by a CFTPART command).</p>
 </blockquote>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body1" width="28.19%"><p>VERIFY = {REQUIRED
+         <td class="BodyE- Column1- Body1" width="28.19%"><p>VERIFY = {REQUIRED
 &#124; OPTIONAL &#124; NONE}</p>         </td>
-         <td class="BodyD-Column1-Body1" width="47.156%"><p>Sets the authentication mode requirement.</p>
+         <td class="BodyD- Column1- Body1" width="47.156%"><p>Sets the authentication mode requirement.</p>
 <p>The VERIFY and USERCID parameters set the security profile
 authentication mode.</p>
 <blockquote>
@@ -588,8 +588,8 @@ certificate is tolerated by the server. </li>
 </ul>         </td>
       </tr>
       <tr>
-         <td class="BodyE-Column1-Body2" width="28.19%"><p>[VERSION = {TLSV1 &#124; SSLV3 &#124; TLSV1COMP &#124; SSLV3COMP}]</p>         </td>
-         <td class="BodyD-Column1-Body2" width="47.156%"><p>SSL session version.</p>
+         <td class="BodyE- Column1- Body2" width="28.19%"><p>[VERSION = {TLSV1 &#124; SSLV3 &#124; TLSV1COMP &#124; SSLV3COMP}]</p>         </td>
+         <td class="BodyD- Column1- Body2" width="47.156%"><p>SSL session version.</p>
 <p><strong><strong>Client mode</strong></strong></p>
 <p>In Client mode (DIRECT=CLIENT), TLSV1COMP or SSLV3COMP set the header length in NSDU to enable compatibility with other products.</p>
 <p><strong><strong>Server mode</strong></strong></p>

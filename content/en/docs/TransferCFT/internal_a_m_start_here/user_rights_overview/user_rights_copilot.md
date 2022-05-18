@@ -1,8 +1,8 @@
 ---
-    title: "3. Define client user rights "
-    linkTitle: "3. Define client user rights"
-    weight: 220
----This section describes the `copilot.misc.createprocessasuser` parameter.
+title: "3. Define client user rights "
+linkTitle: "3. Define client user rights"
+weight: 220
+--- This section describes the `copilot.misc.createprocessasuser` parameter.
 
 ****When using {{< TransferCFT/suitevariablesCentralGovernanceName  >}}****
 
@@ -16,14 +16,12 @@ By default this parameter is set to NO and user authentication is controlled by 
 
 When set to YES, user authentication is controlled by the system where Transfer CFT is installed and the Transfer CFT Copilot server starts a process under the connected user. Note that the default value is platform specific. When set to NO, actions made on the configuration are done with the user that **started** the Transfer CFT Copilot server.
 
-
 | OS  | Default  |
-| --- | --- |
+| - - - | - - - |
 | Unix | NO  |
 | Windows | YES  |
 | IBM i  | YES  |
-| z/OS  | This functionality was modified in Transfer CFT 3.2.4 SP1:<br/> • Post-SP1: The default value for <code>createprocessasuser </code>is YES.<br/> • Pre-SP1: There is no definable value. The equivalent of <code>createprocessasuser </code>depends on the use of APF. If JOBLIB is not defined as an APF, it is the equivalent of NO. If defined, this is the equivalent of YES. |
-
+| z/OS  | This functionality was modified in Transfer CFT 3.2.4 SP1:<br/> • Post- SP1: The default value for <code>createprocessasuser </code>is YES.<br/> • Pre- SP1: There is no definable value. The equivalent of <code>createprocessasuser </code>depends on the use of APF. If JOBLIB is not defined as an APF, it is the equivalent of NO. If defined, this is the equivalent of YES. |
 
 > **Note**
 >

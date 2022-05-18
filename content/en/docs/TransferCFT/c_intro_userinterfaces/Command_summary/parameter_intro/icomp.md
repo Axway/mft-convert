@@ -1,8 +1,8 @@
 ---
-    title: "icomp"
-    linkTitle: "icomp"
-    weight: 1490
----<span id="icomp"></span>
+title: "icomp"
+linkTitle: "icomp"
+weight: 1490
+--- <span id="icomp"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 

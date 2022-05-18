@@ -1,8 +1,8 @@
 ---
-    title: "Server  transfer"
-    linkTitle: "Server transfer"
-    weight: 190
----This topic describes the steps involved in a server transfer. These
+title: "Server  transfer"
+linkTitle: "Server transfer"
+weight: 190
+--- This topic describes the steps involved in a server transfer. These
 steps include:
 
 - [Receiving
@@ -102,14 +102,14 @@ No entry is created in the catalog.
 
 The data in the file is transferred item by item, broken down, or concatenated
 with, the data units conveyed over the network. The exchange protocol
-may include re-synchronization and compression functions.
+may include re- synchronization and compression functions.
 
 <span id="Disconnecting"></span>
 
 ### Disconnecting
 
 When the data transfer is complete, the files are closed, and the network
-connection is cut after the expiration of the associated hold time-out.
+connection is cut after the expiration of the associated hold time- out.
 Depending on the protocol, the {{< TransferCFT/axwayvariablesComponentShortName  >}} parameter setting allows a network
 session to be held open to permit several transfers to be made in sequence.
 

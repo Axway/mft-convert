@@ -1,8 +1,8 @@
 ---
-    title: "Migration procedure"
-    linkTitle: "Migrate "
-    weight: 240
----This section describes the Transfer CFT z/OS migration procedure and the statements you use to complete the process.
+title: "Migration procedure"
+linkTitle: "Migrate "
+weight: 240
+--- This section describes the Transfer CFT z/OS migration procedure and the statements you use to complete the process.
 
 ## Prerequisites
 
@@ -18,9 +18,8 @@ The following table lists and describes the MIGR\* members used in a Transfer CF
 
 Migration Job Control Language (JCL) Statements
 
-
 | Member name | Purpose |
-| --- | --- |
+| - - - | - - - |
 | MIGR$SET | JCL variables to customize |
 | MIGRCAT | Migrate the catalog file |
 | MIGRCOM | Migrate the communication file |
@@ -34,7 +33,6 @@ Migration Job Control Language (JCL) Statements
 | MIGRPMCL | Sample - CLIST updates parameters extract file |
 | PMIGR2 | Common procedure to migrate PARM, PART, CATALOG and communication media file. |
 
-
 The MIGR$$$ file is located in the target.INSTALL library, and contains information about the JCL required for a Transfer CFT z/OS migration. Among the delivered JCL, MIGR$SET is used to customize variables used in the migration procedure. See the Migration Job Control Language (JCL) Statements table below for a description of the JCL and members to use.
 
 The PMIGR2 procedure, is comprised of several steps:
@@ -47,7 +45,7 @@ The PMIGR2 procedure, is comprised of several steps:
 
 ## Procedure
 
-This section describes how to migrate the various configuration elements in a non-multi-node environment or in a multi-node environment. Except for the migration of catalogs and the media communication file in a multi node environment, which are described in a specific section *Procedure for mutli-node*.
+This section describes how to migrate the various configuration elements in a non- multi- node environment or in a multi- node environment. Except for the migration of catalogs and the media communication file in a multi node environment, which are described in a specific section *Procedure for mutli- node*.
 
 1. Customize the MIGR$SET file.  
     Edit the MIGR$SET and SET variables.
@@ -55,9 +53,8 @@ This section describes how to migrate the various configuration elements in a no
 
 The following variables can be set in MIGR$SET file or/and in the PMIGR2 parameters.
 
-
 | Variable | Default value | Definition |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | OLDEXEC |   | Executable library for the Transfer CFT version (source) to migrate. |
 | OLDPARM |   | Transfer CFT PARM source file name. |
 | NEWPARM |   | Transfer CFT PARM target file name. |
@@ -66,16 +63,14 @@ The following variables can be set in MIGR$SET file or/and in the PMIGR2 paramet
 | TMPSPARM | 'CYL,(10,2)' | Size allocation for work file. |
 | CUSTOMPM | DUMMYJ<br/> (No customization) | Include member to customize parameters extract file. |
 
-
 ****Submit the procedure ..INSTALL(MIGRPARM)****
 
 1. Migrate the PART file. (MIGRPART)
 
 The following variables can be set in MIGR$SET file or/and in the PMIGR2 parameters.
 
-
 | Variable | Default value | Definition |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | OLDPART |   | Transfer CFT PART source file name. |
 | NEWPART |   | Transfer CFT PART target file name. |
 | DISPPART | 'R' | 'R' for replace, 'A' for ADD:<br/> ‘R’ = Create or recreate Transfer CFT PART file.<br/> ‘A’ = Only creates the Transfer CFT PART file. |
@@ -83,17 +78,14 @@ The following variables can be set in MIGR$SET file or/and in the PMIGR2 paramet
 | TMPSPART | 'CYL,(30,5)' | Size allocation for work file. |
 | CUSTOMPT | DUMMYJ<br/> (No customization) | Include member to customize partners extract file. |
 
-
 ****Submit the procedure ..INSTALL(MIGRPART)****
 
 1. Migrate the PKI file (MIGRPKIx).
 
-
 | Variable | Default value | Definition |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | OLDPKI |   | Transfer CFT PKI source file name |
 | NEWPKI |   | Transfer CFT PKItarget file name. |
-
 
 If the target version is lower than 3.4:
 
@@ -131,13 +123,12 @@ Etc.
 
 ****Submit the procedure ..INSTALL(MIGRUCNF)****
 
-1. Migrate the CATALOG file (MIGRCAT) for a non multi-node environment.
+1. Migrate the CATALOG file (MIGRCAT) for a non multi- node environment.
 
 You can set the following variables in the MIGR$SET file and (or) in the PMIGR2 parameters:
 
-
 | Variable | Default value | Definition |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | OLDEXEC |   | Executable library of the Transfer CFT version to migrate. |
 | OLDCAT |   | Transfer CFT CATALOG source file name. |
 | NEWCAT |   | Transfer CFT CATALOG target file name |
@@ -146,16 +137,14 @@ You can set the following variables in the MIGR$SET file and (or) in the PMIGR2 
 | TMPCAT | &amp;CFTENV..MCAT | Work file name. |
 | TMPSCAT | 'CYL,(50,10)' | Size allocation for work file.<br/> Use 3 cylinders for every 1000 transfers to be migrated. |
 
-
 ****Submit the procedure ..INSTALL(MIGRCAT).****
 
-1. Migrate the communication media file(s) (MIGRCOM)for a non mutli-node environment.
+1. Migrate the communication media file(s) (MIGRCOM)for a non mutli- node environment.
 
 You can set the following variables in the MIGR$SET file or/and in the PMIGR2 parameters:
 
-
 | Variable | Default value | Definition |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | OLDEXEC |   | Executable library of the Transfer CFT version to migrate. |
 | OLDCOM |   | Transfer CFT communication source file name. |
 | NEWCOM |   | Transfer CFT communication target file name. |
@@ -163,6 +152,5 @@ You can set the following variables in the MIGR$SET file or/and in the PMIGR2 pa
 | RECNBCOM | 5000 | Size in records if communication file must be created. |
 | TMPCOM |   | Work file name. |
 | TMPSCOM | 'CYL,(10,10)' | Size allocation for work file. |
-
 
 ****Submit the procedure ..INSTALL(MIGRCOM).****

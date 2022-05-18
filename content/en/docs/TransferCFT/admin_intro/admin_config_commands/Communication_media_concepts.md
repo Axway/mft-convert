@@ -1,8 +1,8 @@
 ---
-    title: "Communication  media "
-    linkTitle: "CFTCOM - Communication media "
-    weight: 240
----The CFTCOM object defines the communication media used by {{< TransferCFT/axwayvariablesComponentShortName  >}}.
+title: "Communication  media "
+linkTitle: "CFTCOM - Communication media "
+weight: 240
+--- The CFTCOM object defines the communication media used by {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 You can define as many CFTCOM objects as needed.
 
 Related
@@ -27,7 +27,7 @@ of the following media:
     such requests saturate the file. A CFTCOM command then defines a communication
     file and the frequency with which it is scanned by {{< TransferCFT/axwayvariablesComponentShortName >}}.
 
-<!-- -->
+<!- - - - >
 
 - A synchronous communication
     medium supported by the TCP/IP network (set TYPE= TCPIP)(for remote usage, use REST API)
@@ -54,7 +54,7 @@ media by type of object and parameter****
 
 - For file communication:
 
-<!-- -->
+<!- - - - >
 
 - The {{< TransferCFT/axwayvariablesComponentShortName >}} can be inactive at the time
     the commands assigned to it are issued, to the limit of the file size.
@@ -62,11 +62,11 @@ media by type of object and parameter****
     if a CFTCOM command relative to this communication file has been defined.
     A communication file can be created by the CFTFILE command.
 
-<!-- -->
+<!- - - - >
 
 - For TCP synchronous
     mediums:
-    -   Communication is only possible if the Transfer
+    - Communication is only possible if the Transfer
         CFT is present.
         To retrieve the IDT and the IDTU values of the transfer, you can use the
         variables %_CAT_IDT% and %_CAT_IDTU%.
@@ -79,10 +79,10 @@ TYPE = TCPIP,
 PROTOCOL = XHTTP,
 HOST = localhost,
 PORT = 1765
- 
+
 config TYPE=COM, MEDIACOM=TCPIP, FNAME=XHTTP://localhost:1765
 SEND PART=PART1, IDF=TEST1
- 
+
 CFTU00I SEND _ Correct (IDT=H1018055 IDTU=A0000004 )
 CFTU00I SEND _ Correct (part=PART1)
 listcat idt=%_CAT_IDT%

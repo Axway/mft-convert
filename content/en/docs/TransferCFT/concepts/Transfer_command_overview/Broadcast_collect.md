@@ -1,8 +1,8 @@
 ---
-    title: "Broadcast and collect"
-    linkTitle: "Broadcast and collect"
-    weight: 210
----This section describes the following two types of transfer functions, which you can perform in
+title: "Broadcast and collect"
+linkTitle: "Broadcast and collect"
+weight: 210
+--- This section describes the following two types of transfer functions, which you can perform in
 requester mode:
 
 - [Broadcast](#Broadcasting_mode):
@@ -212,7 +212,7 @@ by a DIAGP code equal to COLLECT, on querying the catalog.
 The associated end of transfer procedure is only executed when all the
 transfers are correctly completed.
 
-### End-of-send procedure
+### End- of- send procedure
 
 When all transfers are completed, the end of transfer procedure is executed on the generic transfer.
 

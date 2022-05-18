@@ -1,8 +1,8 @@
 ---
-    title: "tcp"
-    linkTitle: "tcp"
-    weight: 3490
----<span id="tcp"></span>
+title: "tcp"
+linkTitle: "tcp"
+weight: 3490
+--- <span id="tcp"></span>
 
 ### tcp
 
@@ -21,4 +21,3 @@ See also, [Configuring Odette](../../../../protocols_start_here/start_here_odett
 
 [Return to Command index](../../)
 
- 

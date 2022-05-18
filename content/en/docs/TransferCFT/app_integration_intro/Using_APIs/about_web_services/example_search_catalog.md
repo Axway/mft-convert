@@ -1,16 +1,16 @@
 ---
-    title: "Example catalog search request"
-    linkTitle: "Example catalog search request"
-    weight: 330
----Use this request to search for information in the catalog, for example details about the status of a transfer request.
+title: "Example catalog search request"
+linkTitle: "Example catalog search request"
+weight: 330
+--- Use this request to search for information in the catalog, for example details about the status of a transfer request.
 
 ## XFER_CAT_SELECT request with IDTU
 
 In this example the XFER_CAT_SELECT request uses the IDTU.
 
-&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+&lt;SOAP- ENV:Envelope xmlns:SOAP- ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP- ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema- instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
-> &lt;SOAP-ENV:Header>
+> &lt;SOAP- ENV:Header>
 
 > > &lt;m:ClientAuth xmlns:m="http://www.axway.com">
 > >
@@ -20,9 +20,9 @@ In this example the XFER_CAT_SELECT request uses the IDTU.
 > >
 > > &lt;/m:ClientAuth>
 >
-> &lt;/SOAP-ENV:Header>
+> &lt;/SOAP- ENV:Header>
 
-> &lt;SOAP-ENV:Body>
+> &lt;SOAP- ENV:Body>
 >
 > > &lt;m:XFER_CAT_SELECT xmlns:m="http://www.axway.com">
 > >
@@ -54,9 +54,9 @@ In this example the XFER_CAT_SELECT request uses the IDTU.
 > >
 > > &lt;/m:XFER_CAT_SELECT>
 >
-> &lt;/SOAP-ENV:Body>
+> &lt;/SOAP- ENV:Body>
 
-&lt;/SOAP-ENV:Envelope>
+&lt;/SOAP- ENV:Envelope>
 
 ## Successful response
 
@@ -64,9 +64,9 @@ In this example the XFER_CAT_SELECT request uses the IDTU.
 
 Executing the this request when Copilot is running but {{< TransferCFT/axwayvariablesComponentLongName  >}} is not running returns the same response.
 
-&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+&lt;?xml version="1.0" encoding="UTF- 8" standalone="yes"?>
 
-&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema- instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 &lt;soap:Body>
 
@@ -138,7 +138,7 @@ Executing the this request when Copilot is running but {{< TransferCFT/axwayvari
 
 In the following response the return code is 3, successful, but the LISCAT_ARRAY is empty.
 
-&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema- instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 > &lt;soap:Body>
 >

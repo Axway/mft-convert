@@ -1,8 +1,8 @@
 ---
-    title: "minlch"
-    linkTitle: "minlch"
-    weight: 1990
----<span id="minlch"></span>
+title: "minlch"
+linkTitle: "minlch"
+weight: 1990
+--- <span id="minlch"></span>
 
 ## {{< TransferCFT/SystemTitle  >}}
 

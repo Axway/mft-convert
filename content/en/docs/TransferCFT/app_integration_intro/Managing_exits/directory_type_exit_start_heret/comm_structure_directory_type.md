@@ -1,8 +1,8 @@
 ---
-    title: "Communication structure - directory type"
-    linkTitle: "Communication structure"
-    weight: 340
----This topic describes the structure for the communication area in a directory
+title: "Communication structure - directory type"
+linkTitle: "Communication structure"
+weight: 340
+--- This topic describes the structure for the communication area in a directory
 exit for C language as well as COBOL.
 
 <span id="Structure_in_C_Language"></span>
@@ -36,6 +36,6 @@ delivered with the {{< TransferCFT/axwayvariablesComponentShortName  >}} product
 
 ### Structure in COBOL
 
-If the user program is written in COBOL, the C-COBOL interfacing rules
+If the user program is written in COBOL, the C- COBOL interfacing rules
 must be complied with. Refer to the {{< TransferCFT/axwayvariablesComponentShortName  >}} delivered samples defined
 in ****exaus.cop****.

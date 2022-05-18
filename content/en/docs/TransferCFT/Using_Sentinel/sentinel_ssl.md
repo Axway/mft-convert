@@ -1,7 +1,7 @@
 ---
     title: "Implement SSL with Sentinel "
-    linkTitle: "Implement SSL with Sentinel"
-    weight: 250
+linkTitle: "Implement SSL with Sentinel"
+weight: 250
 ---This topic describes how to enable SSL connections between a Transfer CFT client and a Sentinel server when Central Governance is not implemented. To do this, you insert in the internal PKI base the CA certificate that is used to authenticate the Sentinel server.
 
 ## Prerequisites

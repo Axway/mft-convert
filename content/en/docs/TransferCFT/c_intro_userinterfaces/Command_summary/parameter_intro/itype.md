@@ -1,8 +1,8 @@
 ---
-    title: "itype"
-    linkTitle: "itype"
-    weight: 1730
----<span id="itype"></span>
+title: "itype"
+linkTitle: "itype"
+weight: 1730
+--- <span id="itype"></span>
 
 ### itype
 

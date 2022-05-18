@@ -1,8 +1,8 @@
 ---
-    title: "Collect information"
-    linkTitle: "Collect information"
-    weight: 210
----Transfer CFT generates messages that provide information about the processes
+title: "Collect information"
+linkTitle: "Collect information"
+weight: 210
+--- Transfer CFT generates messages that provide information about the processes
 and events that occur on the Transfer CFT. These messages are collected and
 stored in a log file. If you are using {{< TransferCFT/suitevariablesCentralGovernanceName  >}}, in the **Products List** page select the Transfer CFT in question. In the Transfer CFT page, select **Logs** in the right pane to view the Transfer CFT logs.
 
@@ -30,9 +30,8 @@ a Support request this information can help you to save time.
 To better help you resolve an incident, you can print and use
 the following table. It can serve as a guideline for gathering information, which can help you if you need to file an incident report.
 
-
 | Step  | Your remarks  |
-| --- | --- |
+| - - - | - - - |
 | 1. Identify the symptoms  |   |
 | Did the system crash? |   |
 | Is the error message due to a transfer request, a transfer in server mode, or other? |   |
@@ -44,10 +43,9 @@ the following table. It can serve as a guideline for gathering information, whic
 | Can you identify the source of the problem? |   |
 | Can you bypass the problem? |   |
 | 3. Find the cause |   |
-| Has your system or Transfer CFT recently been re-configured? |   |
+| Has your system or Transfer CFT recently been re- configured? |   |
 | Have you installed a new component, either hardware or software? |   |
 | Has the problem only recently occurred, or has it existed for some time? |   |
-
 
 <span id="Finding_OS_specific_relevant_information"></span>
 

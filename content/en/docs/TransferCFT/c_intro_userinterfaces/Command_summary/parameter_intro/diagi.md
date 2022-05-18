@@ -1,8 +1,8 @@
 ---
-    title: "diagi"
-    linkTitle: "diagi"
-    weight: 670
----<span id="diagi"></span>
+title: "diagi"
+linkTitle: "diagi"
+weight: 670
+--- <span id="diagi"></span>
 
 ### diagi
 

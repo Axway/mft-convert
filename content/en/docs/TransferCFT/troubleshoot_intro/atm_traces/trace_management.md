@@ -1,8 +1,8 @@
 ---
-    title: "Trace  management concepts"
-    linkTitle: "Trace management concepts"
-    weight: 290
----ATM trace management is comprised of two stages:
+title: "Trace  management concepts"
+linkTitle: "Trace management concepts"
+weight: 290
+--- ATM trace management is comprised of two stages:
 
 - Collect information,
     or trace acquisition, in Transfer CFT
@@ -71,7 +71,7 @@ task, which makes it possible to resolve trace file access conflict problems.
 Serialization is ensured by an internal flag setting mechanism, which
 enables message exchanges and synchronization of Transfer CFT tasks.
 
-The collection operation does not pre-empt or significantly
+The collection operation does not pre- empt or significantly
 disturb other Transfer CFT mechanisms.
 
 Consequently, if there is a bottleneck in the flag
@@ -81,12 +81,12 @@ or system resources), messages are purely and simply lost.
 Trace mechanisms include the following features:
 
 - You can make traces
-    started at the same time as Transfer CFT co-exist with other traces,
+    started at the same time as Transfer CFT co- exist with other traces,
     triggered during Transfer CFT operations, for the same trace file or for
     different trace files.
 - You can create
     a trace file with the CFTTRACE command, without having to synchronize
-    collection with Transfer CFT start-up. To do this, set the START
+    collection with Transfer CFT start- up. To do this, set the START
     parameter to DELAYED.
 - If a STARTTRC
     command is entered before the corresponding file has been defined, it

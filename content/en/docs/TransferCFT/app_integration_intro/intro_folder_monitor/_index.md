@@ -1,18 +1,18 @@
 ---
-    title: "Introduction to folder monitoring "
-    linkTitle: "Folder monitoring"
-    weight: 160
----This section describes how to set up folder monitoring for Transfer CFT directories. Transfer CFT supports two general types of folder monitoring:
+title: "Introduction to folder monitoring "
+linkTitle: "Folder monitoring"
+weight: 160
+--- This section describes how to set up folder monitoring for Transfer CFT directories. Transfer CFT supports two general types of folder monitoring:
 
-- **File-system event monitoring**: Transfer CFT immediately detects newly available files in a defined set of directories and identifies them as transfer candidates. File-system event monitoring is available on [Linux and Windows](#Supporte) exclusively.  
+- **File- system event monitoring**: Transfer CFT immediately detects newly available files in a defined set of directories and identifies them as transfer candidates. File- system event monitoring is available on [Linux and Windows](#Supporte) exclusively.  
     *  
     ![](/Images/TransferCFT/FILESYSTEM.png)  
     *
 
-<!-- -->
+<!- - - - >
 
 - <span id="scheduled_folder"></span>**Scheduled folder monitoring**: Transfer CFT periodically checks the status of files that are in a defined set of directories to see if there are transfer candidates.  
-      
+
     ![](/Images/TransferCFT/SCHEDULED.png)
 
 A set of [configurable](#Configur) options allow you to define which files are monitored and the condition that can trigger an automatic SEND command for these files.
@@ -29,7 +29,7 @@ For each monitored file, {{< TransferCFT/axwayvariablesComponentShortName  >}} t
 
 ******Folder monitoring directories******
 
-For each directory that Transfer CFT monitors (scan_dir parameter), there is a second directory (work_dir parameter) for Transfer CFT to use for tracking. These two directories must be separate entities (the work_dir must differ from the scan_dir, and the work_dir cannot be a sub-directory of the scan_dir), and allow files to move from one directory to the other. While Transfer CFT will not create the scan_dir directory, the work_dir is automatically created if it does not already exist.
+For each directory that Transfer CFT monitors (scan_dir parameter), there is a second directory (work_dir parameter) for Transfer CFT to use for tracking. These two directories must be separate entities (the work_dir must differ from the scan_dir, and the work_dir cannot be a sub- directory of the scan_dir), and allow files to move from one directory to the other. While Transfer CFT will not create the scan_dir directory, the work_dir is automatically created if it does not already exist.
 
 ******Tracking files******
 
@@ -42,7 +42,7 @@ See [Configuring file tracking options](#Configur2).
 
 ******SEND parameters******
 
-In addition to the file path, the [IDF](../../c_intro_userinterfaces/command_summary/parameter_intro/idf) and [PART](../../c_intro_userinterfaces/command_summary/parameter_intro/part) name parameters are supplied in the SEND command. You can set these as fixed parameter values, or extract them from the first or second sub-directory names. {{< TransferCFT/axwayvariablesComponentShortName  >}} then automatically creates the corresponding sub-directories in the work_dir directory tree, as needed.
+In addition to the file path, the [IDF](../../c_intro_userinterfaces/command_summary/parameter_intro/idf) and [PART](../../c_intro_userinterfaces/command_summary/parameter_intro/part) name parameters are supplied in the SEND command. You can set these as fixed parameter values, or extract them from the first or second sub- directory names. {{< TransferCFT/axwayvariablesComponentShortName  >}} then automatically creates the corresponding sub- directories in the work_dir directory tree, as needed.
 
 <span id="Prerequisites_foldermonitoring"></span>
 
@@ -59,20 +59,20 @@ This section lists the best practices for folder monitoring. Before configuring 
 
 ## Limitations
 
-- Directory scanning does not allow transferring a file whose name contains a wildcard character, for example the asterisk character (\*) on UNIX-like platforms. Files containing wildcard characters in their file names are not be processed; they remain in the scanning directory, and an error message displays in the log. For a list of wildcard characters per platform, see [Platform-specific characters and functions](../../cft_intro_install/about_this_document_vms/c_cft_introduction_vms/installation/platform_specific_characters_and_functions).
+- Directory scanning does not allow transferring a file whose name contains a wildcard character, for example the asterisk character (\*) on UNIX- like platforms. Files containing wildcard characters in their file names are not be processed; they remain in the scanning directory, and an error message displays in the log. For a list of wildcard characters per platform, see [Platform- specific characters and functions](../../cft_intro_install/about_this_document_vms/c_cft_introduction_vms/installation/platform_specific_characters_and_functions).
 - In an z/OS environment you can only use folder monitoring on UNIX file systems.
 - The WILDMAT parameter is available on Unix/Windows/IBM i systems.
 - When using the UCONF mode (deprecated mode) to enable folder monitoring, there is a limit to the number of folders due to the maximum length of the `folder_monitoring.folders` parameter being 512.
 - Presently the folder monitoring CFTFOLDER option is only available in command line.
 - Folder monitoring using a different user (USERID) is not available on Linux if the event mode is enabled (USEFSEVENTS=YES). Additionally, this feature is not supported in the obsolete UCONF folder configuration.
-- For a multi-host installation, the METHOD=MOVE for folder monitoring is not supported on an NFS 3 shared disk due to synchronization delays. Instead, use NFS 4 or METHOD=FILE.
+- For a multi- host installation, the METHOD=MOVE for folder monitoring is not supported on an NFS 3 shared disk due to synchronization delays. Instead, use NFS 4 or METHOD=FILE.
 - The system user management feature ([USERCTRL](../../internal_a_m_start_here/user_rights_overview)) is not supported for Folder Monitoring configurations.
 
 <span id="Supporte"></span>
 
-### Supported OS for file-system event monitoring
+### Supported OS for file- system event monitoring
 
-The operating system services for *file-system event monitoring* functionality only work on local file systems. Transfer CFT supports this type of monitoring on:
+The operating system services for *file- system event monitoring* functionality only work on local file systems. Transfer CFT supports this type of monitoring on:
 
 - Linux: EXT family of file systems
 - Windows: NTFS file systems
@@ -119,7 +119,7 @@ Where:
 
 ****Command that is submitted for a new file****
 
-The following example demonstrates how the PART name is used for the first directory sub-level, and the IDF name for the second level sub-directory.
+The following example demonstrates how the PART name is used for the first directory sub- level, and the IDF name for the second level sub- directory.
 
 - Original file:     `/dir_c/scan/newyork/idf1/my_file.txt`
 - Moved file: ` /dir_c/work/newyork/idf1/my_file.20131025.txt`
@@ -144,7 +144,7 @@ Submitting the SEND command occurs as follows:
 
 **Command that is submitted for a new file**
 
-This example uses the partner name in the first directory sub-level, and the IDF name in the second.
+This example uses the partner name in the first directory sub- level, and the IDF name in the second.
 
 - Original file:   ` /dir_c/scan/newyork/idf1/my_file.txt`
 - Metadata file: `/dir_c/work/newyork/idf1/my_file.txt.met`

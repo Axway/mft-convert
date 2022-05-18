@@ -1,8 +1,8 @@
 ---
-    title: "Store  and forward concepts"
-    linkTitle: "Store and forward modes"
-    weight: 260
----The store and forward mode enables you to route files from one computer
+title: "Store  and forward concepts"
+linkTitle: "Store and forward modes"
+weight: 260
+--- The store and forward mode enables you to route files from one computer
 to another via one or more intermediate relays (computers or communication sites). For example, when sending a file from computer A to computer C, where A and C are either not directly connected or have a connection problem, the file is routed via computer B.
 
 In the same way, a file to be sent to clients that are dependent on
@@ -31,7 +31,7 @@ The following illustration features 3 Transfer CFTs, where the protocol may be t
 
 - You cannot use a distribution list on the relay site when using {{< TransferCFT/suitevariablesFlowManager >}} or {{< TransferCFT/suitevariablesCentralGovernanceName >}}.
 
-<!-- -->
+<!- - - - >
 
 - {{< TransferCFT/axwayvariablesComponentLongName >}} store and forward mode is only possible from a requester/sender (write transfers only, not read).
 
@@ -71,14 +71,12 @@ forward site.
 Depending on the value of this parameter, the processing performed by
 the {{< TransferCFT/axwayvariablesComponentShortName  >}} on the store and forward site is as follows:
 
-
 | COMMUT value  | File is sent to partner  | Details  |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | YES  | Yes, immediately  | The a file is immediately sent to the intended partner. Default value.  |
 | NO  | No, no file forwarding  | The file transfer is refused because the partner is not able to perform the store and forward.  |
 | SERVER  | Yes, after processing  | Sending the file occurs at the initiative of the store and forward site. This mode is also known as [Store and forward with a VAN server](#VAN_server_Store_and_forward_processing).  |
 | PART  | Yes, immediately  | This forced store and forward occurs in server mode. If the recipient that is defined in the IPART parameter is not the final recipient, the received file is immediately sent on to the target partner.  |
-
 
 There are two ways for the sender to initiate a store and forward transfer:
 
@@ -88,11 +86,11 @@ There are two ways for the sender to initiate a store and forward transfer:
 
     `send part=<FINAL PARTNER>,...`
 
-<!-- -->
+<!- - - - >
 
 - Do not define the final partner in the sender's configuration. Using this method, you declare the final partner (ID) and the relay (IPART) when you execute the SEND command.
 
-<!-- -->
+<!- - - - >
 
 - `send part=<FINAL PARTNER>, ipart=<RELAY>,...`
 
@@ -126,12 +124,12 @@ The following actions apply to the final recipient site:
 
 - Transfer CFT receives the following application parameters,
     conveyed without modification from the initial sender:
-    -   PARM, SUSER, RUSER,
+    - PARM, SUSER, RUSER,
         SAPPL, RAPPL
-    -   IDT
-    -   Received file characteristics
+    - IDT
+    - Received file characteristics
         (NTYPE, NBLKSIZE, NLRECL, for example)
-    -   File date and time
+    - File date and time
         (FDATE, FTIME without the hundredths of seconds)
 - The physical file name on the receiving site can be specified by the
     initial sender, through the SEND PART = C, NFNAME = filename command,
@@ -169,7 +167,7 @@ This process repeats as many times as needed until reaching the final site.
 
 ![](/Images/TransferCFT/temp_commut_part.png)
 
-The REPLY command can be sent when the end-of-transfer procedure is executed (EXECRF). An acknowledgement message can be transferred also via all the intermediate sites until it reaches the initial partner (IPART).
+The REPLY command can be sent when the end- of- transfer procedure is executed (EXECRF). An acknowledgement message can be transferred also via all the intermediate sites until it reaches the initial partner (IPART).
 
 <span id="VAN_server_Store_and_forward_processing"></span>
 
@@ -266,15 +264,15 @@ Set up the intermediate partner B as follows:
 ```
 cftpart id=a,nspart=b,prot=pesitssl,sap=1762
 cfttcp id=a,host=@A
- 
+
 cftpart id=c,nspart=b,prot=pesitssl,sap=1762
 cfttcp id=c,host=@C
- 
+
 cftpart id=d,nspart=b,prot=pesitssl,sap=1762
 cfttcp id=d,host=@D
- 
+
 cftdest id=cd,part=(c,d),for=commut
- 
+
 cftappl id=commut,userid=&userid,groupid=&groupid NOTE: If you are using access management, you must define the CFTAPPL with the ID=COMMUT.
 ```
 
@@ -284,7 +282,7 @@ Execute the following partner C definition:
 cftpart id=b,nspart=c,prot=pesitssl,sap=1762
 cfttcp id=b,host= @B
 cftrecv id=broadcast,fname=pub/broadcast.rcv,faction=delete
- 
+
 cftpart id=a,nspart=c, ipart=b, omintime=0, omaxtime=0,prot=pesitssl,sap=1762
 ```
 
@@ -294,9 +292,9 @@ Execute the following partner D definition:
 cftpart id=b,nspart=d,prot=pesitssl,sap=1762
 cfttcp id=b,host=@B
 cftrecv id=broadcast,fname=pub/broadcast.rcv,faction=delete
- 
+
 cftpart id=a,nspart=c, ipart=b, omintime=0, omaxtime=0,prot=pesitssl,sap=1762
- 
+
 ```
 
 ****Testing the use case****

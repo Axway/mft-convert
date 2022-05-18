@@ -1,8 +1,8 @@
 ---
-    title: "Use the communication structure"
-    linkTitle: "Using the communication structure"
-    weight: 370
----The following topics describe the stages in a file transfer. These are:
+title: "Use the communication structure"
+linkTitle: "Using the communication structure"
+weight: 370
+--- The following topics describe the stages in a file transfer. These are:
 
 - [Before
     the file is allocated](#Before_the_File_is_Allocated)
@@ -34,14 +34,12 @@ Each stage is explained in a table as follows:
 
 The symbols used are indicated in the following table.
 
-
 | Symbol  | Description  |
-| --- | --- |
+| - - - | - - - |
 | / | This field does not apply to the current field  |
 | = | This field keeps the value taken in the previous stage  |
 | x | This field can be modified by the {{< TransferCFT/axwayvariablesComponentShortName  >}} (before the call) or by the user function (after the call)  |
 | * | This field can be defined by the user function  |
-
 
 The return code (ret1) must always be defined.
 
@@ -56,31 +54,28 @@ the stages at which you want to take control by defining the masc parameter.
 
 ### Fields to define
 
-
 | Field  | Description  |
-| --- | --- |
+| - - - | - - - |
 | masc | Mask used to select stages  |
 | access | File access:<br/> • 0: controlled by {{< TransferCFT/axwayvariablesComponentShortName  >}}<br/> • 1: controlled by the user |
 | ret1 | Return code:<br/> • 0: processing ok<br/> • 9: refusal and end of transfer  |
 | ret2 | Error message  |
 | msg | Message sent to the standard output  |
 
-
 <span id="Field_values"></span>
 
 ### Field values
 
-
 | Field | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After<br />  |
-| --- | --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - | - - - |
 | mtype | 0 | 0 | 0 | 0 |
 | masc | 10000000...000 | * | 10000000...000 | * |
 | access | 0 | * | 0 | * |
 | retsync | 0 |   | 0 |   |
 | ret1 | 0 | * | 0 | * |
 | ret2 | blank | * | blank | * |
-| us-sem |   |   |   |   |
-| us-ctx |   |   |   |   |
+| us- sem |   |   |   |   |
+| us- ctx |   |   |   |   |
 | idexit | IDEXIT | = | IDEXIT | = |
 | exname |   | = |   | = |
 | parmexit | PARM | = | PARM | = |
@@ -165,7 +160,6 @@ the stages at which you want to take control by defining the masc parameter.
 | XferCycleId | TRKR | = | TRKR | = |
 | XferObjectcId | "XFBTransfer" | = | "XFBTransfer" | = |
 
-
 <span id="Before_the_File_is_Opened"></span>
 
 ## Before the file is opened
@@ -175,27 +169,24 @@ this stage.
 
 ### Fields to define
 
-
 | Field  | Meaning  |
-| --- | --- |
+| - - - | - - - |
 | ret1 | Return code:<br/> • 0: processing ok<br/> • 9: refusal and end of transfer  |
 | ret2 | Error message  |
 | msg | Message sent to the standard output  |
 
-
 ### Field values
 
-
 |   | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
-| --- | --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - | - - - |
 | mtype | 1 | 1 | 1 | 1 |
 | masc | = | * | = | * |
 | access | = | = | = | = |
 | retsync | 0 |   | 0 |   |
 | ret1 | 0 | * | 0 | * |
 | ret2 | blank | * | blank | * |
-| us-sem |   |   |   |   |
-| us-ctx |   |   |   |   |
+| us- sem |   |   |   |   |
+| us- ctx |   |   |   |   |
 | idexit | = | = | = | = |
 | exname | = | = | = | = |
 | parmexit | = | = | = | = |
@@ -281,7 +272,6 @@ this stage.
 | XferCycleId | = | = | = | = |
 | XferObjectId | = | = | = | = |
 
-
 <span id="Before_the_Start_of_the_Transfer"></span>
 
 ## Before the start of the transfer
@@ -291,27 +281,24 @@ stage.
 
 ### Fields to define
 
-
 | Field  | Description  |
-| --- | --- |
+| - - - | - - - |
 | ret1 | Return code:<br/> • 0: processing ok<br/> • 9: refusal and end of transfer  |
 | ret2 | Error message  |
 | msg | Message sent to the standard output  |
 
-
 ### Field values
 
-
 |   | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
-| --- | --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - | - - - |
 | mtype | 2 | 2 |   |   |
 | masc | = | * |   |   |
 | access | = | = |   |   |
 | retsync | 0 |   |   |   |
 | ret1 | 0 | * |   |   |
 | ret2 | blank | * |   |   |
-| us-sem |   |   |   |   |
-| us-ctx |   |   |   |   |
+| us- sem |   |   |   |   |
+| us- ctx |   |   |   |   |
 | idexit | = | = |   |   |
 | exname | = | = |   |   |
 | parmexit | = | = |   |   |
@@ -396,7 +383,6 @@ stage.
 | XferCycleId | = | = |   |   |
 | XferObjectId | = | = |   |   |
 
-
 <span id="Before_a_Record_is_Sent_or_After_it_is_Received"></span>
 
 ## Before a record is sent or after it is received
@@ -427,14 +413,12 @@ received, the user function can perform the following operations:
 
 ### Fields to define
 
-
 | Field  | Description  |
-| --- | --- |
+| - - - | - - - |
 | ret1 | Return code:<br/> • 0 = processing ok.<br /> Record not modified<br/> • 4 = end of file<br /> The previous record becomes the last one<br/> • 9 = refusal and end of transfer<br/> If file accessing is managed by {{< TransferCFT/axwayvariablesComponentShortName  >}}:<br/> • 1 = record modified<br /> The user function must modify the ldata field and the zdata parameter. The record length must be consistent with the value of the flrecl field in order not to cause a read or write error.<br/> • 2 = one or more records inserted<br /> At the time the first record is inserted, you can save the current record in the zwork working area before handing back control to Transfer CFT. In the insertion mode (as long as ret1 = 2), the zdata is not defined by {{< TransferCFT/axwayvariablesComponentShortName  >}} in the following DATA_TYP stages and the user can continue to insert as many records as required.<br/> • 3 = record deleted <br /> On returning from the user function, {{< TransferCFT/axwayvariablesComponentShortName  >}} ignores the current record. The record is not sent when in send mode, and not written into the file when in receive mode. |
 | ret2 | Error message  |
 | msg | Message sent to the standard output  |
 | ldata | Record length (in bytes)  |
-
 
 #### Compression
 
@@ -454,17 +438,16 @@ transfer (ALLOC_TYP). A zero value inhibits compression.
 
 ### Field values
 
-
 | Field | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
-| --- | --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - | - - - |
 | mtype | 3 | 3 | 3 | 3 |
 | masc | = | * | = | * |
 | access | = | = | = | = |
 | retsync | 0 |   | 0 |   |
 | ret1 | 0 | * | 0 | * |
 | ret2 | blank | * | blank | * |
-| us-sem |   |   |   |   |
-| us-ctx |   |   |   |   |
+| us- sem |   |   |   |   |
+| us- ctx |   |   |   |   |
 | idexit | = | = | = | = |
 | exname | = | = | = | = |
 | parmexit | = | = | = | = |

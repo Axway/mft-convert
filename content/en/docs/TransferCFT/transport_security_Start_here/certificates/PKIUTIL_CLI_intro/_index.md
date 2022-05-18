@@ -1,8 +1,8 @@
 ---
-    title: "PKIUTIL  command line utility: Start here"
-    linkTitle: "Command line operations"
-    weight: 190
----This section describes the PKIUTIL commands that are used to manage the
+title: "PKIUTIL  command line utility: Start here"
+linkTitle: "Command line operations"
+weight: 190
+--- This section describes the PKIUTIL commands that are used to manage the
 local certificate database. This topic
 introduces the command line PKIUTIL utility CFTPKI.
 

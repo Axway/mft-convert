@@ -1,8 +1,8 @@
 ---
-    title: "netband"
-    linkTitle: "netband"
-    weight: 2170
----<span id="netband"></span>
+title: "netband"
+linkTitle: "netband"
+weight: 2170
+--- <span id="netband"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
@@ -23,12 +23,9 @@ If NETBAND is larger than the number of defined ranges, the last range is used.
 
 ****Example****
 
-In the case of SRCPORTS=(6000-6009,6010-6019,6020-6030)·
+In the case of SRCPORTS=(6000- 6009,6010- 6019,6020- 6030)·
 
 If NETBAND = 3, the third value is used as the outgoing port range.
 
- 
-
 [Return to Command index](../../)
 
- 

@@ -1,8 +1,8 @@
 ---
-    title: "nfver"
-    linkTitle: "nfver"
-    weight: 2210
----<span id="nfver"></span>
+title: "nfver"
+linkTitle: "nfver"
+weight: 2210
+--- <span id="nfver"></span>
 
 ### nfver
 
@@ -19,13 +19,13 @@ The values represent the following:
 
 - 0: version 0 of
     the file (default)
-- n: version -n of
+- n: version - n of
     the file
 
 ****Case 2****: NFVER is used alone
 (closed mode with implicit sending from the sender server end).
 
-FNAME = &PART.&IDF (-&NFVER).
+FNAME = &PART.&IDF (- &NFVER).
 
 The partner sends the version of the ‘&PART.&IDF’ logical file
 indicated in the NFVER
@@ -41,7 +41,7 @@ parameter.
 
 ****MVS****
 
-FNAME = &FNAME (-&NFVER).
+FNAME = &FNAME (- &NFVER).
 
 The partner sends the GDG file with the root and the version number
 indicated.
@@ -53,7 +53,7 @@ indicated.
 
 ****MVS****
 
-FNAME = &TEST.GDG (-&NFVER).
+FNAME = &TEST.GDG (- &NFVER).
 
 The partner sends version of the ‘&PART.&IDF’ file indicated
 in the NFVER parameter.

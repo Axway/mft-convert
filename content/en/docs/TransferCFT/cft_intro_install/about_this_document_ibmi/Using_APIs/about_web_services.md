@@ -1,8 +1,8 @@
 ---
-    title: "About Web services"
-    linkTitle: "Web Services"
-    weight: 270
----This documentation describes the Transfer CFT Web services interface option, and provides instructions for getting started with Web services, executing a SEND file transfer request, and retrieving the request details from the catalog.
+title: "About Web services"
+linkTitle: "Web Services"
+weight: 270
+--- This documentation describes the Transfer CFT Web services interface option, and provides instructions for getting started with Web services, executing a SEND file transfer request, and retrieving the request details from the catalog.
 
 Web services provide a way for applications to use software services over networks such as the Internet. Client applications use the Web Services Description Language (WSDL) to do this and exchange data using XML.
 Since you can use URLs, HTTP, and XML to access Web services, applications running on a variety of platforms and using various languages can access XML Web services.
@@ -56,7 +56,7 @@ You can find SOAP samples and documentation at:
 ## General restrictions
 
 The Web services process can receive any SOAP request that conforms
-to the W3C specifications and WS-I Recommendations.
+to the W3C specifications and WS- I Recommendations.
 
 The following restrictions apply to Transfer CFT Web services:
 
@@ -66,33 +66,33 @@ The following restrictions apply to Transfer CFT Web services:
 - Element attributes
     are not supported, nor parsed. This means that if there are incorrect
     spaces in names for any operation attribute or message, they are skipped and
-    no error is returned. Exceptions are made to support WS-I recommendations.
+    no error is returned. Exceptions are made to support WS- I recommendations.
 
-## WS-I recommendations
+## WS- I recommendations
 
 Verify that the correct option is set if your client requests have to
-be checked to conform to WS-I recommendations. To do this, set the UCONF [copilot.webservices.wsicomplience] identifier
+be checked to conform to WS- I recommendations. To do this, set the UCONF [copilot.webservices.wsicomplience] identifier
 to yes.
 
-The following WS-I constraints are checked by the UI server for the
+The following WS- I constraints are checked by the UI server for the
 XML representation of SOAP messages. These constraints include:
 
 - SOAP Header constraints:
-    -   R1009: A MESSAGE
+    - R1009: A MESSAGE
         MUST NOT contain processing instructions
-    -   R1012: A MESSAGE
-        MUST be serialized as either UTF-8 or UTF-16
+    - R1012: A MESSAGE
+        MUST be serialized as either UTF- 8 or UTF- 16
 - SOAP Body constraints:
-    -   R1006: A MESSAGE
+    - R1006: A MESSAGE
         MUST NOT contain soap:encoding
 - Style attributes on any element that is a child of soap:Body
-    -   R1007: A MESSAGE
-        described in an rpc-literal binding MUST NOT contain soap:encodingStyle
+    - R1007: A MESSAGE
+        described in an rpc- literal binding MUST NOT contain soap:encodingStyle
         attribute on any elements that are grandchildren of soap:Body
-    -   R1014: The
+    - R1014: The
         children of the soap:Body element in a MESSAGE MUST be namespace qualified
 
-For more information on WS-I recommendations, visit [http://www.ws-i.org](http://www.ws-i.org/)
+For more information on WS- I recommendations, visit [http://www.ws- i.org](http://www.ws- i.org/)
 
 ## Limit the number of failed login attempts
 
@@ -107,7 +107,7 @@ You can use the following UCONF parameters to manage this option:
 
 > **Note**
 >
-> In a multi-host environment, an attacker may have up to the copilot.general.max_login_failures \* &lt;number of host> tries before the user is locked if the file is not in a directory shared by all hosts.
+> In a multi- host environment, an attacker may have up to the copilot.general.max_login_failures \* &lt;number of host> tries before the user is locked if the file is not in a directory shared by all hosts.
 
 When the maximum number of login failures is reached, the user account is locked for 30 seconds.
 

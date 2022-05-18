@@ -1,8 +1,8 @@
 ---
-    title: "Virtual file association template"
-    linkTitle: "Template to virtual file association CFTIDF"
-    weight: 150
----****Related
+title: "Virtual file association template"
+linkTitle: "Template to virtual file association CFTIDF"
+weight: 150
+--- ****Related
 topics****
 
 - Command syntax
@@ -38,4 +38,3 @@ in server mode) and assigned in the absence of this command, is indicated.
 
 In DELETE mode, only the ID, TYPE, and PART parameters are mandatory.
 
- 

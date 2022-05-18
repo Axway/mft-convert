@@ -1,12 +1,11 @@
 ---
-    title: "Administrative configuration commands"
-    linkTitle: "Manage the configuration"
-    weight: 200
----The topics in this section describe how to use command line operations to administer Transfer CFT configuration options, and is comprised of the following:
-
+title: "Administrative configuration commands"
+linkTitle: "Manage the configuration"
+weight: 200
+--- The topics in this section describe how to use command line operations to administer Transfer CFT configuration options, and is comprised of the following:
 
 | Command  | Description  |
-| --- | --- |
+| - - - | - - - |
 | [CFTACCNT](cftaccnt_concepts)  | Recording mode for statistical data  |
 | [CFTCAT](catalog_parameter_concepts)  | Catalog attributes  |
 | [CFTCOM](communication_media_concepts)  | Communication media  |
@@ -14,7 +13,6 @@
 | [CFTNET](network_resource_concepts)  | Network resources  |
 | [CFTPARM](cftparm_general_parameters)  | General parameters definition  |
 | [CFTPROT](transfer_protocol_concepts)  | Transfer protocol  |
-
 
 ## What is a service file medium
 
@@ -37,7 +35,7 @@ The following terms are used in this section:
 - PHYSICAL FILE which
     describes the name and physical location of a file type medium
 - If the file name
-    begins with a reserved character, designated by ****char-file**** - see the {{< TransferCFT/axwayvariablesComponentShortName >}}*Operations Guide* corresponding to your OS,
+    begins with a reserved character, designated by ****char- file**** - see the {{< TransferCFT/axwayvariablesComponentShortName >}}*Operations Guide* corresponding to your OS,
     this is a logical name interpreted by {{< TransferCFT/axwayvariablesComponentShortName >}}
 - CFTIN and CFTOUT
     for standard task input/output
@@ -74,9 +72,8 @@ although {{< TransferCFT/axwayvariablesComponentShortName  >}} has default value
 ****{{< TransferCFT/axwayvariablesComponentShortName  >}}
 media by type of object and parameter****
 
-
 | Object  | Parameter  | File type described  |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | CFTCAT  | FNAME  | Catalog file  |
 | CFTCOM  | FNAME  | Communication medium  |
 | CFTLOG  | FNAME<br /> AFNAME  | Log files  |
@@ -85,10 +82,9 @@ media by type of object and parameter****
 | CFTXLATE  | FNAME  | File containing the description of a translation table  |
 | CFTDEST  | FNAME  | File containing a list of partners  |
 | CFTAUTH  | FNAME  | File containing a list of authorized or prohibited IDFs  |
-| CFTPARM  | EXEC ...  | End-of-transfer procedures  |
+| CFTPARM  | EXEC ...  | End- of- transfer procedures  |
 | CFTLOG  | EXEC  | Log switching procedure  |
 | CFTACCNT  | EXEC  | Statistics file switching procedure  |
-
 
 Depending on the system, {{< TransferCFT/axwayvariablesComponentShortName  >}} supports the following communication
 media:
@@ -114,16 +110,14 @@ to your OS.
 Use the CFTUTIL utility command CONFIG to set the names of the media
 it accesses, as presented in the table:
 
-
 | CONFIG command<br/> TYPE parameter | File type described  |
-| --- | --- |
+| - - - | - - - |
 | PARM  | Parameter file  |
 | PART  | Partner file  |
 | CAT  | Catalog file  |
 | COM  | Communication medium  |
 | INPUT  | Input data medium  |
 | OUTPUT  | Output data medium  |
-
 
 By default, in the absence of the CONFIG command, the media accessed
 by the utility are defined in the {{< TransferCFT/axwayvariablesComponentShortName  >}}*Operations Guide*
@@ -163,22 +157,18 @@ language applications.
 
 #### **Media names by service in COBOL language interface**
 
-
 | Service  | Command  | Parameter  | **File type described**  |
-| --- | --- | --- | --- |
-| CFTI  | OPEN  | D-CAT  | Catalog file  |
-| CFTU  | COM  | D-COM  | CFT communication medium  |
-
+| - - - | - - - | - - - | - - - |
+| CFTI  | OPEN  | D- CAT  | Catalog file  |
+| CFTU  | COM  | D- COM  | CFT communication medium  |
 
 #### **Media names by service in C language interface**
 
-
 | Service  | Command  | Parameter  | File type described  |
-| --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - |
 | cftai  | OPEN  | cat  | Catalog file  |
 | cftaix  | OPEN  | cat  | Catalog file  |
 | cftau  | COM  | param  | {{< TransferCFT/axwayvariablesComponentShortName  >}} communication medium  |
-
 
 The default names of the media accessed by the programming interface,
 CATALOG file and COMMUNICATION medium, are defined in the {{< TransferCFT/axwayvariablesComponentShortName  >}}*Operations Guide* corresponding to your OS.
@@ -208,16 +198,14 @@ The interactive function media are defined by the customization function
 of this component. The table below indicates, for each field, the file
 type described:
 
-
 | Field  | File type described  |
-| --- | --- |
+| - - - | - - - |
 | Parm  | Parameter file  |
 | Part  | Partner file  |
 | Cat  | Catalog files  |
 | Log1  | Log files  |
 | Log2  |   |
 | Com  | Communication medium  |
-
 
 If this function is not activated, the media accessed are those defined
 at the time the product is installed.

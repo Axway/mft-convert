@@ -1,8 +1,8 @@
 ---
-    title: "User rights and privileges use cases"
-    linkTitle: "User rights and privileges use cases"
-    weight: 240
----This topic describes how you can add mounting levels of security to your Transfer CFT environment, and features 4 typical user types. In all but the first example, no added security, the user types are defined by Central Governance roles. By adding file and user controls you can add increasing security controls.
+title: "User rights and privileges use cases"
+linkTitle: "User rights and privileges use cases"
+weight: 240
+--- This topic describes how you can add mounting levels of security to your Transfer CFT environment, and features 4 typical user types. In all but the first example, no added security, the user types are defined by Central Governance roles. By adding file and user controls you can add increasing security controls.
 
 For more information on roles and privileges in Central Governance, refer to the *Central Governance User Guide*.
 
@@ -29,15 +29,13 @@ This section presents example user types, and describes the actions that they ca
 
 These scenarios are based on a single {{< TransferCFT/headerfootervariableshflongproductname  >}}, **Machine1** in our examples, that is managed by {{< TransferCFT/PrimaryCGorUM  >}}.
 
-
 | User type  | CG role(s)  | Machine1 user  | File access  |
-| --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - |
 | Monitoring Assistant | Help Desk<br/> for Transfer CFT | Not defined  | N/A  |
 | Operator  | IT Manager for CG  | Defined  | All permissions on runtime files, but does not have access to other user's working directories |
 | Partner Manager  | CG Admin  | Not defined  | No privileges on the physical files  |
 | Flow Manager  | Middleware<br/> Manager for CG, and Application for Transfer CFT | Defined  | Rights on Machine1, and his own working directory  |
 | Superuser  | N/A  | Defined  | Rights on all runtime files on Machine1, but no rights on user's working directories  |
-
 
 Remember that these are examples and your system users, assigned roles, and file rights will vary.
 

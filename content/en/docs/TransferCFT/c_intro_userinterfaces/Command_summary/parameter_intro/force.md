@@ -1,8 +1,8 @@
 ---
-    title: "force"
-    linkTitle: "force"
-    weight: 1230
----<span id="force"></span>
+title: "force"
+linkTitle: "force"
+weight: 1230
+--- <span id="force"></span>
 
 ### force
 
@@ -41,7 +41,7 @@ set in an associated SEND command.
     command but is in a CFTSEND command, the value defined in the CFTSEND
     command is taken into account.
 
-<!-- -->
+<!- - - - >
 
 - YES: The parameters specified in CFTSEND
     take priority over the parameters defined in an associated SEND command.
@@ -58,9 +58,8 @@ or CFTSEND object with parameter FORCE set to YES.
 
 ****Parameters Default value Processing (FORCE = YES)****
 
-
 | Parameter | Default | Processing when FORCE = YES |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | EXEC, PARM, SAPPL, RAPPL, SUSER, RUSER, COMMENT, NFNAME, EXIT, WFNAME, SELFNAME, NOTIFY, USERID, GROUPID, XLATE, SPART | Empty string | If parameter is not set or set to a blank value, it can be override for a SEND/RECV command.If parameter is set to a true value, it cannot be override for a SEND/RECV command.If parameter is set to &lt;NULL&gt; (a new reserved keyword), it cannot be override for a SEND/RECV command. It means that parameter is empty |
 | FNAME | Empty string | If parameter is not set, it must be override for a SEND/RECV command (otherwise transfer will failed) .If parameter is set to a true value, it cannot be override for a SEND/RECV command. |
 | FCODE, FRECFM, NCODE, NRECFM | Blank char. | If parameter is not set, it can be override for a SEND/RECV command. If parameter is set to a true value, it cannot be override for a SEND/RECV command. |
@@ -79,14 +78,11 @@ or CFTSEND object with parameter FORCE set to YES.
 | OPERMSG | &lt;os dep.&gt; | Parameter cannot be overridden |
 | EXECSUB | LIST | Parameter cannot be overridden |
 
-
 <span id="INACT_force"></span>
 
 #### INACT, DELETE, END, HALT, KEEP, START, RESUME
 
 ****[FORCE = {<u>NO</u> &#124; YES}]****
-
- 
 
 <span id="START_force"></span>
 
@@ -101,9 +97,9 @@ has been restarted:
     no action is taken (default value)
 - YES:
     the request is restarted immediately if you have either a:
-    -   Diagnostic
+    - Diagnostic
         code diagi 302
-    -   Cyclic request
+    - Cyclic request
         in the D state
 
 The maximum execution time for a restarted request is 23595999.

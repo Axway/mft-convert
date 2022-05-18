@@ -1,8 +1,8 @@
 ---
-    title: "DIAGP protocol diagnostic codes"
-    linkTitle: "DIAGP - Protocol diagnostic codes"
-    weight: 310
----This section presents the protocol diagnostic codes (DIAGP) for {{< TransferCFT/axwayvariablesComponentLongName  >}} transfers. This code provides information on the
+title: "DIAGP protocol diagnostic codes"
+linkTitle: "DIAGP - Protocol diagnostic codes"
+weight: 310
+--- This section presents the protocol diagnostic codes (DIAGP) for {{< TransferCFT/axwayvariablesComponentLongName  >}} transfers. This code provides information on the
 
 transfer status or on the cause of an error depending on the protocol used.
 
@@ -20,10 +20,9 @@ DIAGP format and description
 
 The table below presents the DIAGP formats.
 
-
 | Format &lt;/th&gt;  | Meaning &lt;/th&gt;  |
-| --- | --- |
-| XXXXXXXX | Mnemonic code<br/> A "Mnemonic"-type DIAGP is a "character string" value providing information on the type of catalog entry or the status of the transfer associated with this entry. Some codes are specific to a single protocol. Please see the [Mnemonic DIAGP codes](#%22Mnemoni) table for details. |
+| - - - | - - - |
+| XXXXXXXX | Mnemonic code<br/> A "Mnemonic"- type DIAGP is a "character string" value providing information on the type of catalog entry or the status of the transfer associated with this entry. Some codes are specific to a single protocol. Please see the [Mnemonic DIAGP codes](#%22Mnemoni) table for details. |
 | L HH HHH | Local rejection of network connection<br/> These codes correspond to network connection rejection diagnostics. The character L indicates a local rejection. H represents a hexadecimal digit.<br/> The two hexadecimal numbers respectively represent:<br/> • REASON: a reason code according to the network context<br/> • DIAGN: a diagnostic code according to the network context<br/> For the meaning of these codes, refer to the [Network codes](../network_codes) that correspond with the type of network used in the transfer.<br/> This DIAGP format is associated with the following internal diagnostics: |
 | R HH HHH | Remote rejection of network connection<br/> These codes correspond to network connection rejection diagnostics. The character "R" indicates a remote rejection. H represents a hexadecimal digit.<br/> The two hexadecimal digits respectively represent:<br/> • REASON: a reason code according to the network context<br/> • DIAGN: a diagnostic code according to the network context<br/> For the meaning of these codes, refer to the section [Network codes](../network_codes) corresponding to the type of network used by the transfer.<br/> This DIAGP format is associated with the following internal diagnostics: |
 | HHHHHHHH | In general for {{< TransferCFT/axwayvariablesComponentShortName  >}}, this format represents an error code specific to the operating system of the host computer and only relates to NON network resources (file access, task management, system services, etc.). |
@@ -33,14 +32,12 @@ The table below presents the DIAGP formats.
 | NNN HHHH | (ODETTE) Received message contains a diagnostic message<br/> These codes corresponding to the reception of an FPDU with an error diagnostic code. H represents a hexadecimal digit and N a digit:<br/> • NNN is a numeric value corresponding to the ODETTE protocol diagnostic code. Please see the [ODETTE NNN value descriptions](#ODETTE_Protocol__Diagnostic_Codes) table for details.<br/> • HHHH is a hexadecimal value corresponding to the {{< TransferCFT/axwayvariablesComponentShortName  >}} numeric code ODETTE protocol. See also{{< TransferCFT/axwayvariablesComponentShortName  >}} Numeric Codes ODETTE Protocol. |
 | XXX HHHH | (ODETTE) Negotiation or send error<br/> These codes identifying an FPDU negotiation or send error in the ODETTE protocol (where H represents a hexadecimal digit and X a letter):<br/> • XXX is a Transfer CFT mnemonic code - ODETTE protocol. This is an alphanumeric value describing the origin of the anomaly or phase during which it occurred. See also, {{< TransferCFT/axwayvariablesComponentShortName  >}} Mnemonic Codes ODETTE Protocol.<br/> • HHHH is a {{< TransferCFT/axwayvariablesComponentShortName  >}} numeric code - ODETTE protocol. This is a hexadecimal value corresponding to the internal protocol code. See also "[}} ODETTE](../../../../protocols_start_here/start_here_odette)" |
 
-
 <span id=""Mnemoni"></span>
 
 ## "Mnemonic" DIAGP codes
 
-
 | Code  | Protocol  | Meaning  |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | ABOI_CD | ODETTE | CD send following reception of an ABORT indication (case of a RECV IDF=* command) |
 | ABORT |   | {{< TransferCFT/axwayvariablesComponentShortName  >}} transfer abort request |
 | ABORT_I | ODETTE | ABORT caused by the protocol engine, following detection of an error |
@@ -73,7 +70,7 @@ The table below presents the DIAGP formats.
 | EXIT |   | EXIT task initialization problem |
 | FCON_RN | ODETTE | Session parameter negotiation error, implying a connection rejection |
 | FORMAT |   | FPDU formatting error |
-| HOLD |   | Indication of an "on-hold" transfer, waiting for a reception request |
+| HOLD |   | Indication of an "on- hold" transfer, waiting for a reception request |
 | INACT |   | Transfer refused due to partner inactivity |
 | INV XFER |   | Message transfer unauthorized with this protocol |
 | LDT_TXT |   | Rusize is greater than MAXRUSIZE in "T" |
@@ -90,7 +87,7 @@ The table below presents the DIAGP formats.
 | MSG_NOAU |   | EERP send not authorized |
 | MSG_RN | ODETTE | The EERP message has not been acknowledged by the partner |
 | MYSELF |   | The target partner is the local site (CFTPARM PART) |
-| NO AUTH |   | Non-authorized partner or file (see the AUTH parameter, CFTAUTH command, and the CFTPART security parameters) |
+| NO AUTH |   | Non- authorized partner or file (see the AUTH parameter, CFTAUTH command, and the CFTPART security parameters) |
 | NO NEW |   | Receive file already exists for a reception request: (CFT)RECV FDISP=NEW |
 | NO OLD |   | Receive file does not exist for a reception request: (CFT)RECV FDISP=OLD |
 | NO OPEN |   | Transfer in open mode not authorized (see the OPEN parameter of the partner's CFTPART command) |
@@ -111,26 +108,24 @@ The table below presents the DIAGP formats.
 | RELEASE |   | Unexpected network outage, caused by the remote partner or the network |
 | RESTART0 |   | Transfer interruption (it will be restarted at the beginning of the file) |
 | RESTARTF |   | Transfer interruption (it will be restarted at the restart point) |
-| RTO |   | {{< TransferCFT/axwayvariablesComponentShortName  >}} time-out during the transfer phase. This time-out corresponds to the RTO parameter of the CFTPROT command |
+| RTO |   | {{< TransferCFT/axwayvariablesComponentShortName  >}} time- out during the transfer phase. This time- out corresponds to the RTO parameter of the CFTPROT command |
 | R_PASSW | ODETTE | The password given by the partner does not correspond to the parameter settings (CFTPART command). |
 | SFNA | ODETTE | Reception of an SFNA FPDU corresponding to a session parameter negotiation problem |
 | SROUT |   | The partner cannot be called (SROUT parameter of the CFTPROT command) |
 | SSY TFIL |   | Error sending data to CFTTFIL |
 | SYPOST |   | Communication error between {{< TransferCFT/axwayvariablesComponentShortName  >}} and the directory EXIT task |
 | TFIL | ODETTE | Reception of a transfer ABORT request originating from the file access task |
-| TIMEOUT |   | Monitoring time-out during the connection phase, due particularly to a missing response to a pre-connection (LOGON) string or a CONNECT FPDU. With the SIT profile, there is no pre-connection phase |
+| TIMEOUT |   | Monitoring time- out during the connection phase, due particularly to a missing response to a pre- connection (LOGON) string or a CONNECT FPDU. With the SIT profile, there is no pre- connection phase |
 | TSK_EXIT |   | Error initializing a file EXIT task. |
 | VRESID | ODETTE | Transfer ABORT caused by the reception of an ESID FPDU (partner session termination request) |
 | WF RENAM |   | Cannot rename the temporary file (WFNAME parameter) in FNAME, at the end of the transfer |
-
 
 <span id="FPDU"></span>
 
 ## FPDU Mnemonic Codes - PeSIT Protocol
 
-
 | XXX &lt;/th&gt;  | FPDU &lt;/th&gt;  | Definition &lt;/th&gt;  |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | ABO  | ABORT  | Sudden connection interruption  |
 | ACF  | AckCRF  | File closing confirmation  |
 | ACO  | ACONNECT  | Connection confirmation  |
@@ -153,7 +148,6 @@ The table below presents the DIAGP formats.
 | RCO  | RCONNECT  | Connection refusal  |
 | SEL  | SELECT  | File selection  |
 
-
 <span id="XXX NNN"></span>
 
 ## NNN values for the PeSIT protocol
@@ -167,15 +161,14 @@ the error. This message is not seen by the user.
 
 The severity and nature of an error is specified by PI 2, which is valid for all profiles.
 
-
 | Error Code &lt;/th&gt;  | FPDU &lt;/th&gt;  | Meaning &lt;/th&gt;  |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | 100 | RESYNC | Transmission error (invalid CRC) |
 | 139 |   | Invalid file attributes |
 | 200 | AckCREATE AckSELECT | Insufficient file characteristics (insufficient file parameters) |
 | 201 | AckCREATE AckSELECT | System resources currently insufficient |
 | 202 | AckCREATE AckSELECT | User resources currently insufficient |
-| 203 | AckCREATE AckSELECT | Non-priority transfer |
+| 203 | AckCREATE AckSELECT | Non- priority transfer |
 | 204 | AckCREATE | File already exists |
 | 205 | AckSELECT | File does not exist |
 | 206 | AckCREATE | Available disk space smaller than file size |
@@ -187,12 +180,12 @@ The severity and nature of an error is specified by PI 2, which is valid for al
 | 213 | IDT AckWRITE | Fatal file input/output error |
 | 214 | AckREAD | Restart point negotiation failure |
 | 215 | IDT | Error specific to the system |
-| 216 | IDT | Operator-requested premature abort |
+| 216 | IDT | Operator- requested premature abort |
 | 217 | IDT | Too many synchronization points without acknowledgment |
-| 218 | IDT | Cannot re-synchronize |
+| 218 | IDT | Cannot re- synchronize |
 | 219 | IDT | File space exceeded |
 | 220 | IDT | Record length greater than that declared |
-| 221 | IDT | Time-out |
+| 221 | IDT | Time- out |
 | 222 | IDT | Too much data without synchronization point |
 | 223 | AckTRANSFER.<br/> END AckDESELECT | Abnormal end of transfer |
 | 224 | AckTRANSFER.END | Declared file size smaller than actual size |
@@ -207,8 +200,8 @@ The severity and nature of an error is specified by PI 2, which is valid for al
 | 235 |   | Record format incompatible with file type |
 | 236 |   | Record length incompatible with file type |
 | 237 |   | Incorrect client identifier |
-| 238 |   | Non-authorized client |
-| 239 |   | Non-authorized client / requester / file type combination |
+| 238 |   | Non- authorized client |
+| 239 |   | Non- authorized client / requester / file type combination |
 | 240 |   | Client not authorized on this server |
 | 241 |   | Bank not authorized on this server |
 | 242 |   | Old password invalid |
@@ -228,7 +221,7 @@ The severity and nature of an error is specified by PI 2, which is valid for al
 | 301 | RelCONNECT | Identification of called party unknown |
 | 302 | RelCONNECT | Called party not attached to a Service Access Point (SAP) |
 | 303 | RelCONNECT | Maximum number of connections reached |
-| 304 | RelCONNECT AckCREATE AckSELECT ABORT | Non-authorized requester identification |
+| 304 | RelCONNECT AckCREATE AckSELECT ABORT | Non- authorized requester identification |
 | 305 | RelCONNECT | SELECT negotiation failure |
 | 306 | RelCONNECT | RESYN negotiation failure |
 | 307 | RelCONNECT | SYNC negotiation failure |
@@ -241,10 +234,10 @@ The severity and nature of an error is specified by PI 2, which is valid for al
 | 314 | ABORT/RELEASE | Unused connection closed to open a new connection |
 | 315 | ABORT | Negotiation failure |
 | 316 | ABORT/RELEASE | Connection closed by the administrator |
-| 317 | ABORT | Connection time-out |
+| 317 | ABORT | Connection time- out |
 | 318 | ABORT | Mandatory PI missing or invalid |
 | 319 | ABORT | Incorrect number of records or bytes |
-| 320 | ABORT | Excessive number of re-synchronizations |
+| 320 | ABORT | Excessive number of re- synchronizations |
 | 321 | RelCONNECT AckCREATE AckSELECT | Call backup number |
 | 322 | RelCONNECT AckCREATE AckSELECT | Call back later |
 | 323 |   | Incompatible CRC / connection mode |
@@ -255,14 +248,13 @@ The severity and nature of an error is specified by PI 2, which is valid for al
 | 328 |   | Receive access not supported |
 | 329 |   | Send access temporarily closed |
 | 330 |   | Send access not supported |
-| 331 |   | Excessive time-out value |
+| 331 |   | Excessive time- out value |
 | 332 |   | Write not negotiated |
 | 333 |   | Read not negotiated |
 | 334 |   | Reverse charging refused |
 | 335 |   | Invalid calling party number |
 | 336 |   | Server date and time refused |
 | 399 | All ABORT acknowledgment FPDUs | Other fatal errors |
-
 
 <span id="ODETTE_Protocol__Diagnostic_Codes"></span>
 
@@ -279,12 +271,11 @@ to which the {{< TransferCFT/axwayvariablesComponentShortName  >}} adds 100 or 2
     protocol messages.
 - Values between 200 and 299 correspond to the "ESID" (End Session
     IDentification) protocol message.
-- This code forms the "NNN NNNN"-type DIAGP protocol diagnostic
+- This code forms the "NNN NNNN"- type DIAGP protocol diagnostic
     code. Values are expressed in decimal.
 
-
 | Error code  | Description  |
-| --- | --- |
+| - - - | - - - |
 | 101 | File does not exist |
 | 102 | Target site does not exist for the file |
 | 103 | Source site does not exist for the file |
@@ -295,7 +286,7 @@ to which the {{< TransferCFT/axwayvariablesComponentShortName  >}} adds 100 or 2
 | 111 | Invalid number of characters |
 | 112 | Fatal file input/output error (file access method problem) |
 | 113 | File already exists |
-| 199 | Non-referenced errors |
+| 199 | Non- referenced errors |
 | 201 | NSDU (Network System Data Unit) not recognized (faulty header) |
 | 202 | Protocol error (reception of a invalid NSDU) |
 | 203 | Requestee identification not known |
@@ -304,7 +295,7 @@ to which the {{< TransferCFT/axwayvariablesComponentShortName  >}} adds 100 or 2
 | 206 | FPDU received with missing parameter or unexpected value |
 | 207 | Invalid NSDU size received |
 | 208 | User resources currently insufficient |
-| 209 | End of time-out |
-| 210 | Incorrect number of records. The number transported by the EFID FPDU does not correspond to the number of received records counted by the {{< TransferCFT/axwayvariablesComponentShortName  >}} (F- or V-format files) |
-| 211 | Number of characters incorrect. The number transported by the EFID FPDU does not correspond to the number of received characters counted by the {{< TransferCFT/axwayvariablesComponentShortName  >}} (T- or U-format files) |
+| 209 | End of time- out |
+| 210 | Incorrect number of records. The number transported by the EFID FPDU does not correspond to the number of received records counted by the {{< TransferCFT/axwayvariablesComponentShortName  >}} (F- or V- format files) |
+| 211 | Number of characters incorrect. The number transported by the EFID FPDU does not correspond to the number of received characters counted by the {{< TransferCFT/axwayvariablesComponentShortName  >}} (T- or U- format files) |
 

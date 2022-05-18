@@ -1,8 +1,8 @@
 ---
-    title: "TLS security profiles - CFTSSL"
-    linkTitle: "Security"
-    weight: 170
----The CFTSSL object describes a security
+title: "TLS security profiles - CFTSSL"
+linkTitle: "Security"
+weight: 170
+--- The CFTSSL object describes a security
 profile. The DIRECT parameter indicates the mode to which the security
 profile applies: DIRECT=CLIENT for client mode or DIRECT=SERVER for server
 mode.

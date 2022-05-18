@@ -1,8 +1,8 @@
 ---
-    title: "direct"
-    linkTitle: "direct"
-    weight: 690
----<span id="direct_CFTCAT"></span><span id="direct"></span>
+title: "direct"
+linkTitle: "direct"
+weight: 690
+--- <span id="direct_CFTCAT"></span><span id="direct"></span>
 
 ### direct
 
@@ -37,7 +37,5 @@ Security profile for the client mode.
 ****[DIRECT = {SEND&#124; RECV} ]****
 
 Transfer direction.
-
- 
 
 [Return to Command index](../../)

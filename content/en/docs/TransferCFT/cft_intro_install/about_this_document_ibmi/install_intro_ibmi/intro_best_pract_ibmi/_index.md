@@ -1,8 +1,8 @@
 ---
-    title: "Transfer CFT IBM i utilities"
-    linkTitle: "IBM i utilities"
-    weight: 260
----This section describes basic Transfer CFT operating procedures, and provides advice for using Transfer CFT in an IBM i environment. Topics include:
+title: "Transfer CFT IBM i utilities"
+linkTitle: "IBM i utilities"
+weight: 260
+--- This section describes basic Transfer CFT operating procedures, and provides advice for using Transfer CFT in an IBM i environment. Topics include:
 
 - [Using the Menu bar](using_the_menu_bar)
 - [Starting the Transfer CFT {{< TransferCFT/PrimaryForOS400 >}} Manager](../../post_install_intro_ibmi/start_cft_ibmi_manager)

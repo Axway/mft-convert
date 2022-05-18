@@ -1,8 +1,8 @@
 ---
-    title: "Connection and maximum transfer troubleshooting"
-    linkTitle: "Connection and maximum transfer troubleshooting"
-    weight: 240
----This section provides transfer examples that demonstrate parameter dependencies and typical log outputs, including errors, which you may encounter when using similar values. The goal is to understand the effect of parameter combinations, and be able to adapt settings to your particular needs.
+title: "Connection and maximum transfer troubleshooting"
+linkTitle: "Connection and maximum transfer troubleshooting"
+weight: 240
+--- This section provides transfer examples that demonstrate parameter dependencies and typical log outputs, including errors, which you may encounter when using similar values. The goal is to understand the effect of parameter combinations, and be able to adapt settings to your particular needs.
 
 The following examples show the output from both the server and requester sides.
 
@@ -100,8 +100,8 @@ MAXCNX is less than the MAXTRANS value on the requester side, and you want to p
 **Requester output**
 
 ```
-CFTH09E Network connect request local error <PART=SUN35-5 NCR=416 NCS=MAXCNX NET=TCP>
-CFTT75E connect reject <IDTU=A00000GE PART=SUN35-5 IDF=T1 IDT=D3011193 416 MAXCNX>
+CFTH09E Network connect request local error <PART=SUN35- 5 NCR=416 NCS=MAXCNX NET=TCP>
+CFTT75E connect reject <IDTU=A00000GE PART=SUN35- 5 IDF=T1 IDT=D3011193 416 MAXCNX>
 ```
 
 **Server output**
@@ -117,8 +117,8 @@ MAXCNX is less than the MAXTRANS value on the server side, and you want to perfo
 **Requester output**
 
 ```
-CFTH11E Error Opening session <PART=WINZZ-4 EV=VNRELI ST=CN0022>
-CFTT75E connect reject <IDTU=A000007D PART=WINZZ-4 IDF=T2 IDT=D3011264 302 R 0 2f2>
+CFTH11E Error Opening session <PART=WINZZ- 4 EV=VNRELI ST=CN0022>
+CFTT75E connect reject <IDTU=A000007D PART=WINZZ- 4 IDF=T2 IDT=D3011264 302 R 0 2f2>
 ```
 
 **Server output**
@@ -144,23 +144,23 @@ The transfers are executed quickly, in rapid succession because {{< TransferCFT/
 
 ```
 ...
-15/06/23 <u>17:40:46</u> CFTT53I Requester file selected <IDTU=A0000VKQ PART=SUN35-1 IDF=BIN IDT=F2402472>
-15/06/23 17:40:46 CFTT55I Requester file opened <IDTU=A0000VKQ PART=SUN35-1 IDF=BIN IDT=F2402472>
+15/06/23 <u>17:40:46</u> CFTT53I Requester file selected <IDTU=A0000VKQ PART=SUN35- 1 IDF=BIN IDT=F2402472>
+15/06/23 17:40:46 CFTT55I Requester file opened <IDTU=A0000VKQ PART=SUN35- 1 IDF=BIN IDT=F2402472>
 ...
-15/06/23 17:40:47 CFTH56I PESIT Requester session opened <PART=SUN35-2 IDS=00004 pi7=03:10240 HOST=127.0.0.1>
-15/06/23 17:40:47 CFTH56I PESIT Requester session opened <PART=SUN35-1 IDS=00003 pi7=03:10240 HOST=127.0.0.1>
-15/06/23 17:40:47 CFTT57I Requester transfer started <IDTU=A0000VKR PART=SUN35-2 IDF=BIN IDT=F2402473 >
+15/06/23 17:40:47 CFTH56I PESIT Requester session opened <PART=SUN35- 2 IDS=00004 pi7=03:10240 HOST=127.0.0.1>
+15/06/23 17:40:47 CFTH56I PESIT Requester session opened <PART=SUN35- 1 IDS=00003 pi7=03:10240 HOST=127.0.0.1>
+15/06/23 17:40:47 CFTT57I Requester transfer started <IDTU=A0000VKR PART=SUN35- 2 IDF=BIN IDT=F2402473 >
 ...
-15/06/23 17:40:47 CFTT56I Requester file closed <IDTU=A0000VKQ PART=SUN35-1 IDF=BIN IDT=F2402472>
-15/06/23 17:40:47 CFTT54I Requester file deselected <IDTU=A0000VKQ PART=SUN35-1 IDF=BIN IDT=F2402472>
+15/06/23 17:40:47 CFTT56I Requester file closed <IDTU=A0000VKQ PART=SUN35- 1 IDF=BIN IDT=F2402472>
+15/06/23 17:40:47 CFTT54I Requester file deselected <IDTU=A0000VKQ PART=SUN35- 1 IDF=BIN IDT=F2402472>
 ...
- 
-15/06/23 <u>17:40:47</u> CFTH56I PESIT Requester session opened <PART=SUN35-3 IDS=00006 pi7=03:10240 HOST=127.0.0.1>
-15/06/23 17:40:47 CFTH56I PESIT Requester session opened <PART=SUN35-4 IDS=00005 pi7=03:10240 HOST=127.0.0.1>
-15/06/23 17:40:47 CFTT57I Requester transfer started <IDTU=A0000VKS PART=SUN35-3 IDF=BIN IDT=F2402474 >
+
+15/06/23 <u>17:40:47</u> CFTH56I PESIT Requester session opened <PART=SUN35- 3 IDS=00006 pi7=03:10240 HOST=127.0.0.1>
+15/06/23 17:40:47 CFTH56I PESIT Requester session opened <PART=SUN35- 4 IDS=00005 pi7=03:10240 HOST=127.0.0.1>
+15/06/23 17:40:47 CFTT57I Requester transfer started <IDTU=A0000VKS PART=SUN35- 3 IDF=BIN IDT=F2402474 >
 ...
-15/06/23 17:40:47 CFTT56I Requester file closed <IDTU=A0000VKU PART=SUN35-5 IDF=BIN IDT=F2402480>
-15/06/23 17:40:47 CFTT54I Requester file deselected <IDTU=A0000VKU PART=SUN35-5 IDF=BIN IDT=F2402480>
+15/06/23 17:40:47 CFTT56I Requester file closed <IDTU=A0000VKU PART=SUN35- 5 IDF=BIN IDT=F2402480>
+15/06/23 17:40:47 CFTT54I Requester file deselected <IDTU=A0000VKU PART=SUN35- 5 IDF=BIN IDT=F2402480>
 15/06/23 <u>17:40:47</u> CFTT88I+<IDTU=A0000VKU WORKINGDIR= FNAME=pub/FTEST NBC=7104>
 ```
 
@@ -177,18 +177,18 @@ In Scenario 2 Transfer CFT is limited by the session, meaning that the same 5 p
 ```
 ...
 15/06/23 <u>17:58:21</u> CFTI34I PID=10956 CFTTFIL Task started successfully
-15/06/23 17:58:21 CFTT53I Requester file selected <IDTU=A0000VL2 PART=SUN35-1 IDF=T1 IDT=F2402492>
-15/06/23 17:58:21 CFTT55I Requester file opened <IDTU=A0000VL2 PART=SUN35-1 IDF=T1 IDT=F2402492>
+15/06/23 17:58:21 CFTT53I Requester file selected <IDTU=A0000VL2 PART=SUN35- 1 IDF=T1 IDT=F2402492>
+15/06/23 17:58:21 CFTT55I Requester file opened <IDTU=A0000VL2 PART=SUN35- 1 IDF=T1 IDT=F2402492>
 ...
-15/06/23 17:58:21 CFTT13I Session parameters <IDTU=A0000VL3 PART=SUN35-2 IDF=T1 IDT=F2402493 _ PROT=PESIT SAP=21761 HOST=sun35.lab1.lab.ptx.axway.int>
+15/06/23 17:58:21 CFTT13I Session parameters <IDTU=A0000VL3 PART=SUN35- 2 IDF=T1 IDT=F2402493 _ PROT=PESIT SAP=21761 HOST=sun35.lab1.lab.ptx.axway.int>
 15/06/23 17:58:21 CFTI34I PID=6160 CFTTFIL Task started successfully
 ...
-15/06/23 17:58:51 CFTH09E Network connect request local error <PART=SUN35-4 NCR=416 NCS=MAXCNX NET=TCP>
-15/06/23 17:58:51 CFTT75E connect reject <IDTU=A0000VL5 PART=SUN35-4 IDF=T1 IDT=F2402495 416 MAXCNX>
+15/06/23 17:58:51 CFTH09E Network connect request local error <PART=SUN35- 4 NCR=416 NCS=MAXCNX NET=TCP>
+15/06/23 17:58:51 CFTT75E connect reject <IDTU=A0000VL5 PART=SUN35- 4 IDF=T1 IDT=F2402495 416 MAXCNX>
 ...
-15/06/23 18:00:43 CFTT56I Requester file closed <IDTU=A0000VL6 PART=SUN35-5 IDF=T1 IDT=F2402500>
-15/06/23 18:00:43 CFTT54I Requester file deselected <IDTU=A0000VL6 PART=SUN35-5 IDF=T1 IDT=F2402500>
-15/06/23 <u>18:00:48</u> CFTH61I PESIT Server session closed <PART=SUN35-5 IDS=00012>
+15/06/23 18:00:43 CFTT56I Requester file closed <IDTU=A0000VL6 PART=SUN35- 5 IDF=T1 IDT=F2402500>
+15/06/23 18:00:43 CFTT54I Requester file deselected <IDTU=A0000VL6 PART=SUN35- 5 IDF=T1 IDT=F2402500>
+15/06/23 <u>18:00:48</u> CFTH61I PESIT Server session closed <PART=SUN35- 5 IDS=00012>
 ```
 
 Related topics

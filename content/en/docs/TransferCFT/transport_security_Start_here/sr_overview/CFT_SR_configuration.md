@@ -1,8 +1,8 @@
 ---
-    title: "SecureRelay with a standalone architecture"
-    linkTitle: "Secure Relay with a standalone architecture"
-    weight: 230
----This page describes how to configure Transfer CFT in a standalone architecture for use with Secure Relay.
+title: "SecureRelay with a standalone architecture"
+linkTitle: "Secure Relay with a standalone architecture"
+weight: 230
+--- This page describes how to configure Transfer CFT in a standalone architecture for use with Secure Relay.
 
 Step overview:
 
@@ -10,9 +10,9 @@ Step overview:
 - Configure Secure Relay
 - Enable Secure Relay and configure Java
 - Configure additional Transfer CFT objects
-    -   Network object CFTNET
-    -   Protocol object CFTPROT
-    -   Partner object CFTPART and CFTTCP
+    - Network object CFTNET
+    - Protocol object CFTPROT
+    - Partner object CFTPART and CFTTCP
 
 ## Secure Relay Router Agent installation
 
@@ -35,7 +35,7 @@ After completing installation, configure the Router Agents in the {{< TransferCF
 
 ```
 secure_relay.ra = 2
- 
+
 secure_relay.ra.0.enable = yes
 secure_relay.ra.0.dmz = DMZ0
 secure_relay.ra.0.host = @hostF
@@ -44,7 +44,7 @@ secure_relay.ra.0.comm_port = 6811
 secure_relay.ra.0.nb_data_connections = 5
 secure_relay.ra.0.data_channel_ciphering = No
 secure_relay.ra.0.outcall_network_interface =
- 
+
 secure_relay.ra.1.enable = Yes
 secure_relay.ra.1.dmz = DMZ1
 secure_relay.ra.1.host = @hostG
@@ -81,11 +81,11 @@ In {{< TransferCFT/axwayvariablesComponentLongName  >}} from the CFTUTIL prompt
 ### Createa CFTNET object
 
 1. Create a CFTNET object where:
-    -   TYPE= TCP
-    -   protocol value = SR
+    - TYPE= TCP
+    - protocol value = SR
 1. Define the mandatory parameters RECALLHOST and SSLTERM.
-    -   RECALLHOST: The host address on which the Master Agent calls Transfer CFT when Secure Relay receives an incoming call. If Transfer CFT and the Master Agent run of the same host, use the loopback network interface (for example, 127.0.0.1) instead of the public network interface. When using Secure Relay, the HOST parameter designates the network interface that is used on the Router Agent side.
-    -   SSLTERM: Set this Boolean to YES to enable SSL termination.
+    - RECALLHOST: The host address on which the Master Agent calls Transfer CFT when Secure Relay receives an incoming call. If Transfer CFT and the Master Agent run of the same host, use the loopback network interface (for example, 127.0.0.1) instead of the public network interface. When using Secure Relay, the HOST parameter designates the network interface that is used on the Router Agent side.
+    - SSLTERM: Set this Boolean to YES to enable SSL termination.
 1. If there is existing CFTNET object(s), the class parameter must be different.
 
 ****Example****
@@ -136,7 +136,7 @@ CFTPART id = PARIS,
  nspart = NPHOENIX,
   nrpart = NPARIS,
   mode = replace
- 
+
 CFTTCP id = PARIS,
  class = 1, /\* same class as the one used in the CFTNET \*/
  host = <remote_partner_host_address>,

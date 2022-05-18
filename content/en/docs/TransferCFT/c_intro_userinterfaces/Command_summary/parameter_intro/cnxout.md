@@ -1,8 +1,8 @@
 ---
-    title: "cnxout"
-    linkTitle: "cnxout"
-    weight: 430
----<span id="cnxout"></span>
+title: "cnxout"
+linkTitle: "cnxout"
+weight: 430
+--- <span id="cnxout"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 

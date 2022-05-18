@@ -1,8 +1,8 @@
 ---
-    title: "Rollback upgrade and restore the catalog"
-    linkTitle: "Rollback upgrade and restore catalog"
-    weight: 230
----This section describes the procedure to revert to the previous version if, for whatever reason, you need to roll back an upgrade. However, if you executed transfers in the upgraded version that used parameters or metadata that are not available in the earlier version, this metadata is lost when you roll back.
+title: "Rollback upgrade and restore the catalog"
+linkTitle: "Rollback upgrade and restore catalog"
+weight: 230
+--- This section describes the procedure to revert to the previous version if, for whatever reason, you need to roll back an upgrade. However, if you executed transfers in the upgraded version that used parameters or metadata that are not available in the earlier version, this metadata is lost when you roll back.
 
 ## Roll back to a previous version
 

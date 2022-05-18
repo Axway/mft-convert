@@ -1,8 +1,8 @@
 ---
-    title: "Troubleshoot user control (USERCTRL)"
-    linkTitle: "Troubleshoot user control (USERCTRL)"
-    weight: 420
----****Homogeneous transfers fail on UNIX systems****
+title: "Troubleshoot user control (USERCTRL)"
+linkTitle: "Troubleshoot user control (USERCTRL)"
+weight: 420
+--- ****Homogeneous transfers fail on UNIX systems****
 
 ```
 CFTF03E local file deselect error 00000008

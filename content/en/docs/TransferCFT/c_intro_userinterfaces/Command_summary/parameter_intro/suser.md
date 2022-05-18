@@ -1,8 +1,8 @@
 ---
-    title: "suser"
-    linkTitle: "suser"
-    weight: 3440
----<span id="suser"></span>
+title: "suser"
+linkTitle: "suser"
+weight: 3440
+--- <span id="suser"></span>
 
 ### suser
 
@@ -21,11 +21,9 @@ This parameter value is case sensitive in CFTUTIL commands if you enclose the v
 The server/sender
 partner sends and controls this parameter, where:
 
-
-| PeSIT E standard | In standard PeSIT E, the SUSER parameter is transported in the PI 03, and its length is limited to 8-characters. Therefore, the PI 03 contains the concatenated value along with the value of the SAPPL parameter. |
-| --- | --- |
+| PeSIT E standard | In standard PeSIT E, the SUSER parameter is transported in the PI 03, and its length is limited to 8- characters. Therefore, the PI 03 contains the concatenated value along with the value of the SAPPL parameter. |
+| - - - | - - - |
 | **<br /> **PeSIT E CFT/CFT | In PeSIT E between 2 {{< TransferCFT/axwayvariablesComponentShortName  >}}s, the SUSER parameter value is transported in the PI 99 if this value is longer than 8 characters. |
-
 
 > **Note**
 >

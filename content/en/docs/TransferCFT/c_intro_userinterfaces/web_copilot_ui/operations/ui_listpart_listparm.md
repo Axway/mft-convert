@@ -1,8 +1,8 @@
 ---
-    title: "Log"
-    linkTitle: "Log"
-    weight: 170
----## Viewing transfer details in the UI
+title: "Log"
+linkTitle: "Log"
+weight: 170
+--- ## Viewing transfer details in the UI
 
 To view the log of transfers:
 

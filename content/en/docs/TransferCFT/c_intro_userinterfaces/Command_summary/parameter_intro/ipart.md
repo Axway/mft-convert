@@ -1,8 +1,8 @@
 ---
-    title: "ipart"
-    linkTitle: "ipart"
-    weight: 1710
----<span id="ipart"></span>
+title: "ipart"
+linkTitle: "ipart"
+weight: 1710
+--- <span id="ipart"></span>
 
 ### ipart
 

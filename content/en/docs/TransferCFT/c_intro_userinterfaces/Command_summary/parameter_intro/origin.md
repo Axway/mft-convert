@@ -1,8 +1,8 @@
 ---
-    title: "origin"
-    linkTitle: "origin"
-    weight: 2510
----### origin
+title: "origin"
+linkTitle: "origin"
+weight: 2510
+--- ### origin
 
 #### All CFTXXX commands
 

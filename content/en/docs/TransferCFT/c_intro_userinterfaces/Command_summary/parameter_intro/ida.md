@@ -1,8 +1,8 @@
 ---
-    title: "ida"
-    linkTitle: "ida"
-    weight: 1520
----<span id="ida"></span>
+title: "ida"
+linkTitle: "ida"
+weight: 1520
+--- <span id="ida"></span>
 
 ### ida
 
@@ -17,8 +17,5 @@ may be associated with a given IDA.
 
 This parameter has a maximum length of 64 characters.
 
- 
-
 [Return to Command index](../../)
 
- 

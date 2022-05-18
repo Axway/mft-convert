@@ -1,8 +1,8 @@
 ---
-    title: "Before you start"
-    linkTitle: "Before you start"
-    weight: 210
----Prior to performing an upgrade or migration, you must:
+title: "Before you start"
+linkTitle: "Before you start"
+weight: 210
+--- Prior to performing an upgrade or migration, you must:
 
 - Update your Transfer CFT to the most recent service pack version.
 - Backup Transfer CFT before beginning the procedure.

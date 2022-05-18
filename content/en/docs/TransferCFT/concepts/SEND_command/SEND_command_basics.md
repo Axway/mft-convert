@@ -1,8 +1,8 @@
 ---
-    title: "SEND - Send files"
-    linkTitle: "Sending files"
-    weight: 180
----The SEND command initiates a send transfer. You can use it to send files, messages, or replies (acknowledgments). You can define the characteristics in the SEND command itself, or in a Central {{< TransferCFT/suitevariablesGovernance  >}} flow definition in a template command. Additionally you can use the SEND command for a single partner or a list of partners.
+title: "SEND - Send files"
+linkTitle: "Sending files"
+weight: 180
+--- The SEND command initiates a send transfer. You can use it to send files, messages, or replies (acknowledgments). You can define the characteristics in the SEND command itself, or in a Central {{< TransferCFT/suitevariablesGovernance  >}} flow definition in a template command. Additionally you can use the SEND command for a single partner or a list of partners.
 
 ## About sending files
 
@@ -22,7 +22,7 @@ parameters, such as specify the scheduling time for a transfer:
 - User
 - Schedule management
 
-<!-- -->
+<!- - - - >
 
 - Data processing
     parameters

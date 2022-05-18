@@ -1,8 +1,8 @@
 ---
-    title: "Transfer serialization in requester mode"
-    linkTitle: "Transfer serialization"
-    weight: 220
----## Requester mode
+title: "Transfer serialization in requester mode"
+linkTitle: "Transfer serialization"
+weight: 220
+--- ## Requester mode
 
 If the number of outgoing connections ([CNXOUT](../../../c_intro_userinterfaces/command_summary/parameter_intro/cnxout))
 is 1 for a partner, then all transfers with the same level of priority

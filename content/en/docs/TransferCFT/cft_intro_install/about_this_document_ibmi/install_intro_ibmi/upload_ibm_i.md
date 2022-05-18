@@ -1,8 +1,8 @@
 ---
-    title: "Upload and restore the installation files"
-    linkTitle: "Upload and restore installation files"
-    weight: 180
----This section describes the upload and restore options available for Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}} for the IBM i platform to perform prior to installation, using FTP and the RSTLIB command.
+title: "Upload and restore the installation files"
+linkTitle: "Upload and restore installation files"
+weight: 180
+--- This section describes the upload and restore options available for Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}} for the IBM i platform to perform prior to installation, using FTP and the RSTLIB command.
 
 Before starting a Transfer CFT session, you must add the value \*none in the initial program call to call a screen menu directly. Otherwise, the session cannot start.
 
@@ -28,7 +28,7 @@ Begin the installation process by uploading the Transfer CFT installation packag
     put Transfer_CFT_os400.bin CFT39
     ```
 
-<!-- -->
+<!- - - - >
 
 1. Restore the SAVF file:  
     ```

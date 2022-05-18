@@ -1,8 +1,8 @@
 ---
-    title: "pri"
-    linkTitle: "pri"
-    weight: 2720
----<span id="pri"></span>
+title: "pri"
+linkTitle: "pri"
+weight: 2720
+--- <span id="pri"></span>
 
 ### pri
 
@@ -23,7 +23,5 @@ See *mintime* for transfer timing details.
 - 128
     (default value)
 - A value from 0 to 255 (highest priority)
-
- 
 
 [Return to Command index](../../)

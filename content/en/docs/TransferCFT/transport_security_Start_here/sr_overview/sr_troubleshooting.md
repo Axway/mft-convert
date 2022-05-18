@@ -1,8 +1,8 @@
 ---
-    title: "Troubleshoot Secure Relay "
-    linkTitle: "Troubleshoot Secure Relay "
-    weight: 270
----Should you incur an issue, you can begin by checking for information in the following files:
+title: "Troubleshoot Secure Relay "
+linkTitle: "Troubleshoot Secure Relay "
+weight: 270
+--- Should you incur an issue, you can begin by checking for information in the following files:
 
 - Secure Relay Master Agent log file: secure_relay.ma.log_fname = C:\\cft35\\runtime\\log\\xsrMaster.log
 - Secure Relay Router Agent log file: located by default in the &lt;install_dir>/SecureRelayRA/log/router.log
@@ -66,13 +66,13 @@ Perform the following commands for the indicated product:
 
 ### On Transfer CFT
 
-`openssl x509 -in <secure_relay.ma.ca_cert_fname> -noout -text`
+`openssl x509 - in <secure_relay.ma.ca_cert_fname> - noout - text`
 
-`openssl pkcs12 -in <secure_relay.ma.cert_fname> -nokeys -passin pass:<secure_relay.ma.cert_password>  &#124; openssl x509 -noout -enddate`
+`openssl pkcs12 - in <secure_relay.ma.cert_fname> - nokeys - passin pass:<secure_relay.ma.cert_password>  &#124; openssl x509 - noout - enddate`
 
 ### On the Secure Relay Router Agent
 
-`openssl pkcs12 -in <secure_relay router agent  cert fname> -nokeys -passin pass: <secure_relay router agent  cert password>  &#124; openssl x509 -noout -enddate`
+`openssl pkcs12 - in <secure_relay router agent  cert fname> - nokeys - passin pass: <secure_relay router agent  cert password>  &#124; openssl x509 - noout - enddate`
 
 ## How to fix expired certificates
 
@@ -83,9 +83,9 @@ Perform the following commands for the indicated product:
 ### Secure Relay Master Agent on Transfer CFT
 
 1. Check the location and name of the certificates and encryption file in the following uconf parameters:
-    -   secure_relay.ma.ca_cert_fname
-    -   secure_relay.ma.cert_fname
-    -   secure_relay.ma.cert_password_fname
+    - secure_relay.ma.ca_cert_fname
+    - secure_relay.ma.cert_fname
+    - secure_relay.ma.cert_password_fname
 1. Replace certificates as needed.
 1. Set the uconf parameters listed above so that they point to the new certificates.
 1. Rename or remove the old file that the secure_relay.ma.cert_password_fname parameter referenced.
@@ -104,4 +104,3 @@ Perform the following commands for the indicated product:
     2.  Rename the existing XsrPwd.dat by XsrPwd.dat.bak from &lt;SecureRelayRAInstallationDirectory>/bin/SRencryptPwd pwd.txt XsrPwd.dat
     3.  Copy the new XsrPwd.dat to the path identified for &lt;PasswordFile> (configuration.xml)
 
- 

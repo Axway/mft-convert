@@ -1,8 +1,8 @@
 ---
-    title: "End-of-transfer  exit example"
-    linkTitle: "End-of-transfer exit example"
-    weight: 380
----This page introduces the following end-of-transfer elements, Parameter
+title: "End- of- transfer  exit example"
+linkTitle: "End- of- transfer exit example"
+weight: 380
+--- This page introduces the following end- of- transfer elements, Parameter
 settings, Structure
 in C language, User
 program in C.
@@ -12,7 +12,7 @@ program in C.
 ```
 /\* CFTPARM Card \*/
 cftparm id = idparm0          ,
-       
+
 exiteot = exe1          ,
 .....
 .....

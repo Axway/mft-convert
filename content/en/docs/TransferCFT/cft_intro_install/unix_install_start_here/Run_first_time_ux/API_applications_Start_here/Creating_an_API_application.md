@@ -1,8 +1,8 @@
 ---
-    title: "Creating  an API application"
-    linkTitle: "Creating an API application"
-    weight: 220
----The example provided below was designed for the ****cft-tcp.conf**** configuration example located in *&lt;installdir>/runtime/conf/*. For
+title: "Creating  an API application"
+linkTitle: "Creating an API application"
+weight: 220
+--- The example provided below was designed for the ****cft- tcp.conf**** configuration example located in *&lt;installdir>/runtime/conf/*. For
 this example, you should have already customized this file using the method described in [*Running
 {{< TransferCFT/axwayvariablesComponentShortName  >}} for the first time*]().
 
@@ -36,7 +36,7 @@ To test the configuration, proceed as follows:
 1. Generate the {{< TransferCFT/axwayvariablesComponentShortName >}} internal datafiles
     using *cftinit* with one of the two proposed configuration files:
 
-`     cftinit cft-tcp.conf`
+`     cftinit cft- tcp.conf`
 
 1. When the *cftinit complete*
     message is displayed, run {{< TransferCFT/axwayvariablesComponentShortName >}} using the command:

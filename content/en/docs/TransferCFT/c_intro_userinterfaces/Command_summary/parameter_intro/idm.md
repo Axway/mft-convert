@@ -1,8 +1,8 @@
 ---
-    title: "idm"
-    linkTitle: "idm"
-    weight: 1550
----<span id="idm"></span>
+title: "idm"
+linkTitle: "idm"
+weight: 1550
+--- <span id="idm"></span>
 
 ### idm
 
@@ -21,8 +21,5 @@ This identifier may be a search criterion for the catalog entry associated
 with this transfer. Several catalog entries can be associated with a given
 IDM.
 
- 
-
 [Return to Command index](../../)
 
- 

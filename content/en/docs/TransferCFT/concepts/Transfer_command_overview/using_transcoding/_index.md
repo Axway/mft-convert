@@ -1,12 +1,12 @@
 ---
-    title: "Using transcoding"
-    linkTitle: "Using transcoding"
-    weight: 340
----This page describes transcoding concepts with Transfer CFT.
+title: "Using transcoding"
+linkTitle: "Using transcoding"
+weight: 340
+--- This page describes transcoding concepts with Transfer CFT.
 
 Transcoding is the conversion of one type of encoding to another. With Transfer CFT there are two ways to transcode:
 
-- Basic transcoding (FCODE/NCODE) uses a translation table between 2 computers that use a different alphabet. Each table consists of a file containing a unique 256-character record, where each character defines the correspondence between two alphabets via its position and value.
+- Basic transcoding (FCODE/NCODE) uses a translation table between 2 computers that use a different alphabet. Each table consists of a file containing a unique 256- character record, where each character defines the correspondence between two alphabets via its position and value.
 - Extended transcoding (FCHARSET/NCHARSET) uses iconv libraries to convert one character encoding to another.
 
 You can use either a CFTXLATE table or extended transcoding to implement transcoding with {{< TransferCFT/axwayvariablesComponentLongName  >}}, but you can not use both methods simultaneously.
@@ -40,7 +40,7 @@ Character transcoding (using extended character sets) defines how data are encod
 
 ### What is extended transcoding?
 
-Typical transcoding, using either XLATE or internal transcoding (ASCII/EBCDIC/BINARY) methods, extends in Transfer CFT to include multi-bytes encoding. Note that using XLATE consumes less CPU than the NCHARSET/FCHARSET method, however XLATE is restricted to single-byte character sets.
+Typical transcoding, using either XLATE or internal transcoding (ASCII/EBCDIC/BINARY) methods, extends in Transfer CFT to include multi- bytes encoding. Note that using XLATE consumes less CPU than the NCHARSET/FCHARSET method, however XLATE is restricted to single- byte character sets.
 
 The FCHARSET parameter defines the local file encoding, and the NCHARSET
 parameter defines the remote and network data encoding. These parameters, FCHARSET and NCHARSET, are available for the following objects:

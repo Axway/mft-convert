@@ -1,8 +1,8 @@
 ---
-    title: "Functions"
-    linkTitle: "Functions"
-    weight: 210
----The function expression syntax is modeled on the following, while still respecting basic command rules:
+title: "Functions"
+linkTitle: "Functions"
+weight: 210
+--- The function expression syntax is modeled on the following, while still respecting basic command rules:
 
 - A unique keyword that identifies the function (id_func). This keyword is always preceded by the character _ (underscore).
 - Two invariable identifier parameters: PARM and RC. The PARM parameter specifies the function call, and RC provides an execution report.

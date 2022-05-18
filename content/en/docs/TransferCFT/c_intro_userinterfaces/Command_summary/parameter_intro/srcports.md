@@ -1,8 +1,8 @@
 ---
-    title: "srcports"
-    linkTitle: "srcports"
-    weight: 3300
----<span id="srcports"></span>
+title: "srcports"
+linkTitle: "srcports"
+weight: 3300
+--- <span id="srcports"></span>
 
 ### srcports
 
@@ -24,11 +24,10 @@ This defines
 3 outgoing port ranges:
 
 ```
-SRCPORTS=(6000-6009,6010-6019,6020-6030)
+SRCPORTS=(6000- 6009,6010- 6019,6020- 6030)
 ```
 
 Operating system port selection:
-  
 
 ```
 SRCPORTS= ()
@@ -38,7 +37,7 @@ SRCPORTS= ()
 is still possible
 
 ```
-SRCPORTS=(6000-6030)
+SRCPORTS=(6000- 6030)
 ```
 
 [Return to Command index](../../)

@@ -1,8 +1,8 @@
 ---
-    title: "Partners - CFTPART "
-    linkTitle: "CFTPART - Defining partners"
-    weight: 390
----This page describes how to define the Partners object (CFTPART ) to set partner
+title: "Partners - CFTPART "
+linkTitle: "CFTPART - Defining partners"
+weight: 390
+--- This page describes how to define the Partners object (CFTPART ) to set partner
 characteristics. Use this command to describe partner characteristics.
 
 See also:
@@ -12,9 +12,8 @@ See also:
 - Object concepts
     [Defining partners]()
 
-
 | Parameter  | Description  |
-| --- | --- |
+| - - - | - - - |
 | [COMMENT](../../../command_summary/parameter_intro/comment)  | Local comment associated with the partner.<br/> Not used during transfers. May be queried, for example by the LISTPART command. It can consequently be used to locally associate a long text (description in plain language) with the partner. |
 | [COMMUT](../../../command_summary/parameter_intro/commut) <br/> Only applicable for a store and forward site | Type of switching supported for this partner.<br/> The following types are possible:<br/> • YES: corresponds to "store and forward" switching<br/> • SERVER: corresponds to "VAN server switching"<br/> • NO: switching is refused for this partner<br/> • PART: store and forward mode is forced in server mode if the recipient specified in the IPART parameter is not the final receiver<br/> Processing according to the switching type is described in Transfer with routing - Store and forward. |
 | [COS]()  | Class of service parameter as it relates to bandwidth control.  |
@@ -29,7 +28,7 @@ See also:
 | [IPART](../../../command_summary/parameter_intro/ipart) | Local identifier of an intermediate partner. |
 | [NACK](../../../command_summary/parameter_intro/nack)  | PeSIT<br/> Enables or disables the negative acknowledgement feature. |
 | [NRPART](../../../command_summary/parameter_intro/npart) | Partner network identifier identifying the partner for incoming calls. |
-| [NRPASSW](../../../command_summary/parameter_intro/nrpassw)  | Partner sign-on password, authorizing a local site access right check. |
+| [NRPASSW](../../../command_summary/parameter_intro/nrpassw)  | Partner sign- on password, authorizing a local site access right check. |
 | [NSPART](../../../command_summary/parameter_intro/nspart)  | Network identifier by which the local Transfer CFT monitor identifies itself to its partner. |
 | [NSPASSW](../../../command_summary/parameter_intro/nspassw) | Password by which the Transfer CFT monitor identifies itself to the partner. |
 | [OMAXTIME](../../../command_summary/parameter_intro/omaxtime) | Maximum time after which the partner can no longer be called. |
@@ -45,7 +44,6 @@ See also:
 | [TRK](../../../command_summary/parameter_intro/trk) | Specification of how much detail Transfer CFT provides Sentinel about transfers. Transfer CFT sends detail about the transfers in the form of tracked instances. |
 | [Conversion tables: Translation](../../../command_summary/parameter_intro/xlate).  |
 
-
 ## CFTUTIL example
 
 ```
@@ -55,14 +53,14 @@ CREATE,
 /\* Partner identifier      \*/
      PROT =     PSITCFT,    
 /\* Only one communication protocol
-                                   
--> see CFTPROT      \*/
+
+- > see CFTPROT      \*/
      SAP =     13,          
 /\*      \*/
      RAUTH =     RECPAR5,    
 /\* The files authorized to be received
-                                     
---> see CFTAUTH      \*/
+
+- - > see CFTAUTH      \*/
      NRPART =     BULLDPS,    
 /\* Name and password that the     \*/
      NRPASSW =     44NTS,    

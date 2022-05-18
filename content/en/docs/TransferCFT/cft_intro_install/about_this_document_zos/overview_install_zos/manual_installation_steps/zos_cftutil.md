@@ -1,18 +1,18 @@
 ---
-    title: "CFTUTIL in a z/OS environment"
-    linkTitle: "CFTUTIL in a z/OS environment"
-    weight: 270
----CFTUTIL is the primary utility for Transfer CFT. This section details some functionally related specifically to z/OS. The CFTUTIL utility is called through two procedures: PCFTUTIL and PCFTUTL.
+title: "CFTUTIL in a z/OS environment"
+linkTitle: "CFTUTIL in a z/OS environment"
+weight: 270
+--- CFTUTIL is the primary utility for Transfer CFT. This section details some functionally related specifically to z/OS. The CFTUTIL utility is called through two procedures: PCFTUTIL and PCFTUTL.
 
 > **Note**
 >
 > There have been updates to this utility in versions 3.2.4 and 3.2.4 SP1.
 
-## CFTIN: Concatenate regular sequential data sets and in-stream data sets
+## CFTIN: Concatenate regular sequential data sets and in- stream data sets
 
 > **Note**
 >
-> MY.FB80.PARM -> RECFM=FB , LRECL=80
+> MY.FB80.PARM - > RECFM=FB , LRECL=80
 
 ### Regular data set defined first
 
@@ -24,7 +24,7 @@ ABOUT
 /\*
 ```
 
-### In-stream data set defined first
+### In- stream data set defined first
 
 ```
 //CFTUTIL EXEC PCFTUTIL,PARM=''
@@ -63,7 +63,7 @@ When no command is specified in the JCL PARM parameter, and if the DD CFTIN is n
 
 ## CFTPARM dummy
 
-When using the PCFTUTIL procedure and there is no data used from CFTPARM, we recommend specifying DUMMY as the DD CFTPARM to decrease EXCP and CPU consumption, for example in END-TRANSFER procedures.
+When using the PCFTUTIL procedure and there is no data used from CFTPARM, we recommend specifying DUMMY as the DD CFTPARM to decrease EXCP and CPU consumption, for example in END- TRANSFER procedures.
 
 ```
 //CFTUTIL EXEC PCFTUTIL,PARM=''

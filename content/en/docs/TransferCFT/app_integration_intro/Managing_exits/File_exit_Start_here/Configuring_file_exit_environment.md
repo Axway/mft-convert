@@ -1,8 +1,8 @@
 ---
-    title: "Configure  the environment"
-    linkTitle: "Configuring the environment"
-    weight: 330
----This topic describes how to configure the environment for a **file
+title: "Configure  the environment"
+linkTitle: "Configuring the environment"
+weight: 330
+--- This topic describes how to configure the environment for a **file
 type exit**. Before you submit an exit, you must customize the following
 {{< TransferCFT/axwayvariablesComponentShortName  >}} objects:
 

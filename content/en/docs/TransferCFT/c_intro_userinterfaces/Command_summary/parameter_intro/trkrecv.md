@@ -1,8 +1,8 @@
 ---
-    title: "trkrecv"
-    linkTitle: "trkrecv"
-    weight: 3630
----<span id="trkrecv"></span>
+title: "trkrecv"
+linkTitle: "trkrecv"
+weight: 3630
+--- <span id="trkrecv"></span>
 
 ### trkrecv
 
@@ -24,7 +24,5 @@ Select one of the following options:
 - ****SUMMARY****:
     for both the initial step and the final step of each transfer process,
     the monitor sends a Tracked Instance to Sentinel.
-
- 
 
 [Return to Command index](../../)

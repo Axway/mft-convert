@@ -1,8 +1,8 @@
 ---
-    title: "modout"
-    linkTitle: "modout"
-    weight: 2030
----<span id="modout"></span>
+title: "modout"
+linkTitle: "modout"
+weight: 2030
+--- <span id="modout"></span>
 
 ### modout
 

@@ -1,8 +1,8 @@
 ---
-    title: "Define additional environment variables "
-    linkTitle: "Define start environment variables"
-    weight: 300
----****Unix****
+title: "Define additional environment variables "
+linkTitle: "Define start environment variables"
+weight: 300
+--- ****Unix****
 
 When loading the Transfer CFT profile, files that are stored in the profile.d directory are also executed, and all of the defined environment variables are then available in the current environment. This enables you to use these variables in the Transfer CFT configuration or processing scripts.
 

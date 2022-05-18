@@ -1,55 +1,47 @@
 ---
-    title: "Operating system specific parameters"
-    linkTitle: "OS specific parameters"
-    weight: 250
----## Platform specific characters
+title: "Operating system specific parameters"
+linkTitle: "OS specific parameters"
+weight: 250
+--- ## Platform specific characters
 
 ********{{< TransferCFT/axwayvariablesComponentLongName  >}} Guardian specific values********
 
-
 | Notation | Object | Value |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | char_file | Prefix for logical names | = |
 | char_mask | Wildcard character | ? |
 | char_symb | Prefix for symbolic variables | ^ |
 | file_symb | Prefix for a file name passed to CFTUTIL as a parameter | @ |
 
-
 ********File properties automatically retrieved for send operations********
 
-
 | Notation | Object |
-| --- | --- |
+| - - - | - - - |
 | FSPACE | YES |
 | FLRECL | YES |
 | FBLKSIZE | YES |
 | FRECFM | YES |
 | FTYPE | YES |
 
-
 ********FTYPE values and associated implicit FCODE default values for send operations********
 
-
 | FTYPE | FCODE |
-| --- | --- |
+| - - - | - - - |
 | ' ' | BINARY |
 | E | ASCII |
-
 
 ********FTYPE, FRECFM, and FORG combinations for send operations********
 
 The last 3 columns in the following table provide the implicit values of each Guardian type for FTYPE, FRECFM, and FORG.
 
-
 | Guardian<br /> type | Guardian<br /> code | File type | FTYPE  | FRECFM  | FORG  |
-| --- | --- | --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - | - - - | - - - |
 | U | # 101 | Binary stream | ' ' | U | SEQ  |
 | U | = 101 | Edit file | E | U | SEQ  |
 | E | # 1 | Fixed sequential | ' ' | F | SEQ  |
 | E | = 1 | Sequential, variable emulation | ' ' | V | SEQ  |
 | R |   | Direct fixed | ' ' | F [1] | DIR  |
 | K |   | Fixed indexed sequential | ' ' | F [1] | IDX  |
-
 
 > **Note**
 >
@@ -61,9 +53,8 @@ The last 3 columns in the following table provide the implicit values of each G
 
 ********FTYPE, FRECFM, and FORG values for receive operations********
 
-
 | FTYPE | FRECFM | FORG  | File Type | Guardian Type | Guardian Code |
-| --- | --- | --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - | - - - | - - - |
 |   | U |   | Binary stream | U | 0 |
 | E |   |   | Edit file | U | 101 |
 |   | F | SEQ  | Fixed sequential | E | 0 |
@@ -72,7 +63,6 @@ The last 3 columns in the following table provide the implicit values of each G
 |   | V  | DIR [2]  | Direct fixed, variable emulation  | R  | 1  |
 |   | F  | IDX [2]  | Fixed indexed sequential  | K  | 0  |
 |   | V  | IDX [2]  | Indexed sequential, variable emulation  | K  | 1  |
-
 
 > **Note**
 >

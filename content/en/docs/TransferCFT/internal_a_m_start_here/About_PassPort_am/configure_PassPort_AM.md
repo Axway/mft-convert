@@ -1,8 +1,8 @@
 ---
-    title: "Configuring PassPort AM "
-    linkTitle: "Configuring PassPort AM"
-    weight: 190
----This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
+title: "Configuring PassPort AM "
+linkTitle: "Configuring PassPort AM"
+weight: 190
+--- This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
 
 <span id="Procedure PassPort parameters"></span>
 
@@ -11,16 +11,15 @@
 To configure the PassPort AM connection, set the UCONF parameters described
 in this section. From
 the ****Administration**** screen in the
-graphical user interface, access the *Unified Configuration* window. Double-click in the **Unified
+graphical user interface, access the *Unified Configuration* window. Double- click in the **Unified
 Configuration** window to begin editing parameters.
 
 1. Define the connection to the PassPort AM server using the UCONF parameters in the following tables. You must define the parameters in the order listed.
 
 ****PassPort AM connector parameters****
 
-
 | Parameter  | Description  |
-| --- | --- |
+| - - - | - - - |
 | <div > am.passport.hostname </div>  | <div > PassPort AM server hostname/IP address. </div>  |
 | <div > am.passport.port </div>  | <div > PassPort AM server port. </div>  |
 | am.passport.srchost  | The PassPort AM local network interface for outgoing connections. |
@@ -31,7 +30,6 @@ Configuration** window to begin editing parameters.
 | am.passport.use_ssl  | Enables SSL with PassPort AM.<br/> The server port is *not* the same as the default port when using SSL. |
 | am.passport.ca_cert  | Certification Authority (CA) public certificate to authenticate the PassPort AM server.  |
 | am.passport.csd_file  | Transfer CFT Component Security descriptor file for PassPort AM. The default value is $(cft.install_dir)/extras/PassPort/csd_Transfer_CFT.xml.  |
-
 
 1. Set the access management type parameter to PassPort: am.type = passport
 
@@ -65,16 +63,14 @@ Configuration** window to begin editing parameters.
 
 ## Optional PassPort AM
 
-
 | Parameter  | Definition  |
-| --- | --- |
+| - - - | - - - |
 | am.passport.userctrl.check_permissions_on_transfer_execution  | <span id="Check"></span>Check the permissions for the execute action on the transfer resource when the {{< TransferCFT/axwayvariablesComponentShortName  >}} user control is enabled ([USERCTRL](../../../c_intro_userinterfaces/command_summary/parameter_intro/userctrl)=YES). To disable the permission check, set the following parameter to No. The default is Yes. |
 | am.passport.domain  | PassPort AM domain.  |
 | am.passport.max_connections  | Maximum number of connections with PassPort.  |
 | am.passport.pipe_priority  | Pipelining priority mode.  |
 | am.passport.pipeline_size  | Maximum number of requests in the pipe for one PassPort.  |
 | am.passport.resource_prefix  | Only EXPERTS may use the resource prefix.  |
-
 
 ## References
 

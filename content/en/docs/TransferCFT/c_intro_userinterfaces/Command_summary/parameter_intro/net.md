@@ -1,8 +1,8 @@
 ---
-    title: "net"
-    linkTitle: "net"
-    weight: 2160
----<span id="net"></span>
+title: "net"
+linkTitle: "net"
+weight: 2160
+--- <span id="net"></span>
 
 ### net
 

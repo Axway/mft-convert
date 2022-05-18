@@ -1,8 +1,8 @@
 ---
-    title: "Extended  catalog query APIs"
-    linkTitle: "Extended catalog query APIs"
-    weight: 160
----This topic describes the additional
+title: "Extended  catalog query APIs"
+linkTitle: "Extended catalog query APIs"
+weight: 160
+--- This topic describes the additional
 fields relating to transport security that can be accessed via the catalog
 query APIs (cftaix). These fields are used to determine whether transport
 security was implemented for a terminated transfer, and if so, the session
@@ -32,15 +32,14 @@ char sProf[8+1] ;        /\* SSL profile ID \*/
 The following table describes the new fields declared in the structure
 returned by the extended catalog query API, cftaix.
 
-All string-type fields, char name[n+1], are expressed in text format,
+All string- type fields, char name[n+1], are expressed in text format,
 either ASCII or EBCDIC depending on the system, are left justified, and
 terminated by a null byte.
 
 ****Fields in cftaix queries****
 
-
 | Field  | Description  |
-| --- | --- |
+| - - - | - - - |
 | cMode  | Direction of the SSL session in which the transfer was performed.<br/> C signifies client and S signifies server.  |
 | cAuthPolicy  | Authentication mode of the SSL session in which the transfer was performed.<br/> • S signifies that only the server was authenticated.<br/> • B signifies that the client and server were authenticated.<br/> • A signifies that the anonymous mode has been implemented.  |
 | sCipher  | Suite negotiated for the SSL session.<br/> This suite is set to one of the values from the suites supported by Transfer CFT (1, 2, 4, 5, 9, 10 or 47).  |

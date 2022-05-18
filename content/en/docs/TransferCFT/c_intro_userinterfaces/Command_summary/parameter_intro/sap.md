@@ -1,8 +1,8 @@
 ---
-    title: "sap"
-    linkTitle: "sap"
-    weight: 3060
----<span id="sap"></span>
+title: "sap"
+linkTitle: "sap"
+weight: 3060
+--- <span id="sap"></span>
 
 ### sap
 
@@ -24,11 +24,9 @@ protocol is only available in requester mode.
 
 #### CFTPROT SAP - Parameter values
 
-
 | Access method  | Size in characters  | Details  |
-| --- | --- | --- |
-| TCP/IP  | 1 to 15<br />  | Number of the local monitoring port on which the Transfer CFT can be called, expressed in the form of the:<br/> • real number used by TCP/IP:<br/> • authorized numbers: between 1025 and 65535<br/> • recommended numbers: 1761, 1762, 1763, 1764, 1765, 1766, 1767, 1768 **(1)**<br/> • logical name associated with the number used by TCP/IP and configured in the SERVICES file (if this file exists)<br /> <br /> recommended logical names: cft-0, cft-1, cft-2, cft-3, cft-4, cft-5, cft-6, cft-7 **(1)** |
-
+| - - - | - - - | - - - |
+| TCP/IP  | 1 to 15<br />  | Number of the local monitoring port on which the Transfer CFT can be called, expressed in the form of the:<br/> • real number used by TCP/IP:<br/> • authorized numbers: between 1025 and 65535<br/> • recommended numbers: 1761, 1762, 1763, 1764, 1765, 1766, 1767, 1768 **(1)**<br/> • logical name associated with the number used by TCP/IP and configured in the SERVICES file (if this file exists)<br /> <br /> recommended logical names: cft- 0, cft- 1, cft- 2, cft- 3, cft- 4, cft- 5, cft- 6, cft- 7 **(1)** |
 
 **(1):** these logical port numbers and
 names have been officially reserved by Sopra from the IANA (Internet Assigned
@@ -63,16 +61,12 @@ system, as applicable, as specified in the table below.
 
 ****CFTPART SAP - Parameter values****
 
-
 | Access method  | Size in characters<br/> (alphanumeric) | Definition and comments  |
-| --- | --- | --- |
-| TCP/IP  | 1 to 15<br />  | Number of the port on which the monitor partner is listening.<br /> The value of this number can be:<br/> • a number in clear corresponding to the real number used by the remote partner at the protocol level of the TCP/IP protocol<br /> Authorized numbers: between 1025 and 65535 (not including limit values)<br /> Recommended numbers: between: 1761, 1762, 1763, 1764, 1765, 1766, 1767, 1768 (1)<br/> • the logical name associated with the number used by TCP/IP and configured in the SERVICES file, if this file exists<br /> Recommend logical names: cft-0, cft-1, cft-2, cft-3, cft-4,<br /> cft-5, cft-6, cft-7 (1)<br/> If the local and remote partner parameter setting commands (CFTPART and CFTPROT respectively) use the logical name of the port defined in the "SERVICES" database, the consistency of the two bases must be ensured  |
-
+| - - - | - - - | - - - |
+| TCP/IP  | 1 to 15<br />  | Number of the port on which the monitor partner is listening.<br /> The value of this number can be:<br/> • a number in clear corresponding to the real number used by the remote partner at the protocol level of the TCP/IP protocol<br /> Authorized numbers: between 1025 and 65535 (not including limit values)<br /> Recommended numbers: between: 1761, 1762, 1763, 1764, 1765, 1766, 1767, 1768 (1)<br/> • the logical name associated with the number used by TCP/IP and configured in the SERVICES file, if this file exists<br /> Recommend logical names: cft- 0, cft- 1, cft- 2, cft- 3, cft- 4,<br /> cft- 5, cft- 6, cft- 7 (1)<br/> If the local and remote partner parameter setting commands (CFTPART and CFTPROT respectively) use the logical name of the port defined in the "SERVICES" database, the consistency of the two bases must be ensured  |
 
 **(1)** These logical port numbers and
 names have been officially reserved by SOPRA from the IANA (Internet Assigned
 Numbers Authority).
-
- 
 
 [Return to Command index](../../)

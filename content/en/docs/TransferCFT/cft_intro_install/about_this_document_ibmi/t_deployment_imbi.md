@@ -1,8 +1,8 @@
 ---
-    title: "Create an Express Package"
-    linkTitle: "Create an Express Package"
-    weight: 180
----A product deployment package in Transfer CFT is called an Express Package. For the iSeries platform, you can create a deployment package for Transfer CFTs to be used with {{< TransferCFT/suitevariablesCentralGovernanceName  >}}, or for standalone Transfer CFTs.
+title: "Create an Express Package"
+linkTitle: "Create an Express Package"
+weight: 180
+--- A product deployment package in Transfer CFT is called an Express Package. For the iSeries platform, you can create a deployment package for Transfer CFTs to be used with {{< TransferCFT/suitevariablesCentralGovernanceName  >}}, or for standalone Transfer CFTs.
 
 This section describes how to create a reusable and distributable {{< TransferCFT/axwayvariablesComponentShortName  >}} package to simplify and ease the task of installing and configuring {{< TransferCFT/axwayvariablesComponentShortName  >}}s on multiple servers of the same architecture.
 

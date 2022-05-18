@@ -1,8 +1,8 @@
 ---
-    title: "icode"
-    linkTitle: "icode"
-    weight: 1480
----<span id="icode"></span>
+title: "icode"
+linkTitle: "icode"
+weight: 1480
+--- <span id="icode"></span>
 
 ### icode
 

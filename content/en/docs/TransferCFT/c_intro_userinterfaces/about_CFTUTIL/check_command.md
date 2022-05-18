@@ -1,8 +1,8 @@
 ---
-    title: "Use the check command"
-    linkTitle: "Use the check command"
-    weight: 170
----The CFTUTIL `CHECK `command validates the coherence of parameters, partners, and the Transfer CFT PKI database.
+title: "Use the check command"
+linkTitle: "Use the check command"
+weight: 170
+--- The CFTUTIL `CHECK `command validates the coherence of parameters, partners, and the Transfer CFT PKI database.
 
 The syntax is:
 
@@ -32,9 +32,9 @@ Where:
 
 You can use the `check`command with `cftinit `and `cftupdate `using the following syntax:
 
-- `cftinit -check file`
-- `cftupdate -check file`
+- `cftinit - check file`
+- `cftupdate - check file`
 
-Here, the `-check` option is equivalent to running `CFTUTIL CHECK `at the end of a successful cftinit or cftupdate .
+Here, the `- check` option is equivalent to running `CFTUTIL CHECK `at the end of a successful cftinit or cftupdate .
 
 **** ****

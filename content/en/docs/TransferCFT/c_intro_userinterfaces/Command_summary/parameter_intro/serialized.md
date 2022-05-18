@@ -1,8 +1,8 @@
 ---
-    title: "serialized"
-    linkTitle: "serialized"
-    weight: 3180
----### serialized
+title: "serialized"
+linkTitle: "serialized"
+weight: 3180
+--- ### serialized
 
 #### LISTCAT,  DISPLAY
 

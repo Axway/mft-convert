@@ -1,16 +1,16 @@
 ---
-    title: "SSO using SAML"
-    linkTitle: "SSO using SAML"
-    weight: 120
----{{< TransferCFT/axwayvariablesComponentLongName  >}} supports a web browser single sign-on, SSO, profile that enables users to use the same logging details for {{< TransferCFT/axwayvariablesComponentLongName  >}} as other Axway products (for example, Flow Manager), eliminating the need to log in multiple times on different web-based UIs.
+title: "SSO using SAML"
+linkTitle: "SSO using SAML"
+weight: 120
+--- {{< TransferCFT/axwayvariablesComponentLongName  >}} supports a web browser single sign- on, SSO, profile that enables users to use the same logging details for {{< TransferCFT/axwayvariablesComponentLongName  >}} as other Axway products (for example, Flow Manager), eliminating the need to log in multiple times on different web- based UIs.
 
-## Single sign-on using SAML
+## Single sign- on using SAML
 
-Single sign-on is a session/user authentication process that can be used to enhance interoperability. The SAML 2.0 standard describes how to exchange authentication and authorization data between entities.
+Single sign- on is a session/user authentication process that can be used to enhance interoperability. The SAML 2.0 standard describes how to exchange authentication and authorization data between entities.
 
 ### Security Assertion Markup Language
 
-The Security Assertion Markup Language, SAML, is an XML-based solution for exchanging user security information (authentication, authorization) between an Identity Provider and a Service Provider. SAML is a product of the OASIS Security Services Technical Committee.
+The Security Assertion Markup Language, SAML, is an XML- based solution for exchanging user security information (authentication, authorization) between an Identity Provider and a Service Provider. SAML is a product of the OASIS Security Services Technical Committee.
 
 ### Service Provider
 
@@ -18,7 +18,7 @@ A Service Provider, SP, protects access to requested resources, such as web site
 
 ### Identity Provider
 
-An Identity Provider, IdP, is a system that creates, maintains, and manages identity information for users, services, or systems, and provides authentication to other service providers (applications) within a network. An IdP is a trusted entity that users and servers can rely on when they are establishing a dialog that must be authenticated. The IdP sends an attribute assertion containing trusted information about the user to the SP. In an Axway deployment, the IdP is a third-party product.
+An Identity Provider, IdP, is a system that creates, maintains, and manages identity information for users, services, or systems, and provides authentication to other service providers (applications) within a network. An IdP is a trusted entity that users and servers can rely on when they are establishing a dialog that must be authenticated. The IdP sends an attribute assertion containing trusted information about the user to the SP. In an Axway deployment, the IdP is a third- party product.
 
 ### User agent
 
@@ -33,10 +33,10 @@ A user agent is usually a web browser. The person who uses the browser can be re
 
 To configure and use SAML SSO with {{< TransferCFT/axwayvariablesComponentLongName  >}}, you must:
 
-- Have a third-party IdP, such as Keycloak, installed and running.
+- Have a third- party IdP, such as Keycloak, installed and running.
 - Map the user roles between the IdP and Transfer CFT roles ([CFTROLE](../conf_intro/cftrole)). To view the CFTROLES/CFTPRIV sample, click [here](), or navigate locally in your {{< TransferCFT/axwayvariablesComponentLongName >}} installation to:
-    -   distrib/template/conf/roles-smp.conf
-    -   runtime/conf/roles-smp.conf
+    - distrib/template/conf/roles- smp.conf
+    - runtime/conf/roles- smp.conf
 - If you use {{< TransferCFT/suitevariablesTransferCFTName >}} with Flow Manager, you must manually set the uconf parameter am.type=saml on each {{< TransferCFT/suitevariablesTransferCFTName >}} after registering.
 - If you use {{< TransferCFT/suitevariablesTransferCFTName >}} with {{< TransferCFT/suitevariablesCentralGovernanceName >}}, you must manually set the uconf parameter am.type=saml on each {{< TransferCFT/suitevariablesTransferCFTName >}} and import all {{< TransferCFT/suitevariablesTransferCFTName >}} roles and privileges (CFTROLE and CFTPRIV, respectively) after registering.
 
@@ -61,7 +61,7 @@ Create your {{< TransferCFT/axwayvariablesComponentLongName  >}} client in the I
 **Note**: If you are using Keycloak, set the **Front Channel Logout** option to **OFF**.
 
 Set up the single logout.  
-When the IdP connects to Transfer CFT using an HTTPS connection, it validates the Transfer CFT’s certificate to ensure it is connecting to a trusted server. This is necessary in order to prevent man-in-the-middle attacks.
+When the IdP connects to Transfer CFT using an HTTPS connection, it validates the Transfer CFT’s certificate to ensure it is connecting to a trusted server. This is necessary in order to prevent man- in- the- middle attacks.
 
 - Put the Transfer CFT certificate, or the CA that signed the certificate, in the truststore used by the IdP.
 - Refer the specific IdP documentation for more information. For Keycloak details, go to [www.keycloak.org/docs/latest/server_installation/index.html](https://www.keycloak.org/docs/latest/server_installation/index.html#_truststore).

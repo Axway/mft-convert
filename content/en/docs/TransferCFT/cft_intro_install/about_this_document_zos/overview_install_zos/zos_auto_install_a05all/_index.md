@@ -1,19 +1,18 @@
 ---
-    title: "Standard installation (A05ALL )"
-    linkTitle: "Standand installation (A05ALL )"
-    weight: 210
----In this section you run A05ALL for a standard installation.
+title: "Standard installation (A05ALL )"
+linkTitle: "Standand installation (A05ALL )"
+weight: 210
+--- In this section you run A05ALL for a standard installation.
 
 ## Use A05ALL to perform an auto install
 
 The A05ALL JCL automatically runs the following members.
 
-
 | Step  | Description  | Member  |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | 1  | Create and initialize instance files: UCONF, UCONFRUN, FTEST, MONLOG, and LOG.  | A06FILES  |
-| 2  | Assemble and link-edit SGINSTAL for Transfer CFT z/OS options.<br/> Non-SMP/E installation mode. &lt;/p&gt; | A12AOPTS  |
-| 3  | Link-edit all Transfer CFT modules.<br/> Non-SMP/E installation mode. &lt;/p&gt; | B20LINK  |
+| 2  | Assemble and link- edit SGINSTAL for Transfer CFT z/OS options.<br/> Non- SMP/E installation mode. &lt;/p&gt; | A12AOPTS  |
+| 3  | Link- edit all Transfer CFT modules.<br/> Non- SMP/E installation mode. &lt;/p&gt; | B20LINK  |
 | 4  | Generate an encryption key. See also [Password encryption](../t_customize_instance_zos#Password).  | CFTGNKEY  |
 |  &lt;/td&gt;  | **5.A** *or* **5.B**  |   |
 | 5.A  | If cgenable is set to no:<br/> • Sets the uconf variables: • cft.runtime_dir<br/> • cft.listcat_compat<br/> • cft.state_compat<br/> <br/> • Generates the SAMPLE(CFTPARM) parameter sample from the SAMPLE(ZCFTPARM) template<br/> • Generates the SFTP SAMPLE(CFTSFTP) parameter sample from the SAMPLE(ZCFTSFTP) template | CFT$SET  |
@@ -40,7 +39,7 @@ The A05ALL JCL automatically runs the following members.
 | 45  | Configure SAML.  | CFTSAML  |
 |   | **Optional steps**  |  &lt;/td&gt;  |
 | 50  | Exits and API(s) samples compilation (ASM, C and COBOL).<br/> For COBOL, C: variable LNGPRFX must be customized (I91APICP). | I91APICP  |
-| 51  | API(s) link-edit.  | I92APILK  |
-| 52  | Exits (ASM, C, and COBOL) link-edit.  | LINKEXLE  |
+| 51  | API(s) link- edit.  | I92APILK  |
+| 52  | Exits (ASM, C, and COBOL) link- edit.  | LINKEXLE  |
 | 60  | Activate the Transfer CFT heartbeat.  | CFTHEART  |
 

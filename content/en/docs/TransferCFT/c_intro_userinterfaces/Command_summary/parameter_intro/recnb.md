@@ -1,8 +1,8 @@
 ---
-    title: "recnb"
-    linkTitle: "recnb"
-    weight: 2850
----<span id="recnb"></span>
+title: "recnb"
+linkTitle: "recnb"
+weight: 2850
+--- <span id="recnb"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 

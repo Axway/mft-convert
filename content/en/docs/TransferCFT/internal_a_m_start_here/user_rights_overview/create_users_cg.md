@@ -1,8 +1,8 @@
 ---
-    title: "1. Create new users"
-    linkTitle: "1. Create new users "
-    weight: 200
----Begin by creating a new user in {{< TransferCFT/suitevariablesCentralGovernanceName  >}}. You can refer to the {{< TransferCFT/PrimaryCGorUM  >}} {{< TransferCFT/suitevariablesDocTypeUser  >}} for detailed descriptions of user roles and privileges.
+title: "1. Create new users"
+linkTitle: "1. Create new users "
+weight: 200
+--- Begin by creating a new user in {{< TransferCFT/suitevariablesCentralGovernanceName  >}}. You can refer to the {{< TransferCFT/PrimaryCGorUM  >}} {{< TransferCFT/suitevariablesDocTypeUser  >}} for detailed descriptions of user roles and privileges.
 
 To create new systems users:
 
@@ -20,14 +20,12 @@ For users that have not yet implemented {{< TransferCFT/suitevariablesCentralGov
 
 The following parameters are now managed in {{< TransferCFT/suitevariablesCentralGovernanceName  >}}. This table maps the existing {{< TransferCFT/axwayvariablesComponentLongName  >}} defaults and values.
 
-
 | CG field  | CG values  | CFTUTIL parameter  | Description  |
-| --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - |
 | User for file access  | <u>Transfer CFT system account</u> &#124; USERID variable  | CFTPARM - USERCTRL = <u>NO</u> &#124; YES  | Specifies the account that is used to read/write transferred files.  |
 | User for script execution  | <u>Transfer CFT system account</u> &#124; USERID variable  | UCONF - cft.server.exec_as_ user = <u>NO</u> &#124; YES  | Specifies the account that is used to execute scripts. This parameter is not supported on Transfer CFTs running on z/OS and IBM i systems.  |
 | Check permission for transfer execution  | YES &#124; <u>NO</u>  | am.passport.userctrl.check_ permissions_on_transfer_ execution  | Checks whether the user has permissions to execute transfers.  |
 | Create process as user  | YES &#124; <u>NO</u>  | copilot.misc.createprocessasuser  | Specifies whether Transfer CFT Copilot user must have system rights.  |
-
 
 ****Related topics****
 

@@ -1,8 +1,8 @@
 ---
-    title: "Implement  security"
-    linkTitle: "Implement  security"
-    weight: 300
----Once the installation procedures are customized, they are designed to generate a minimum security environment for an existing instance of Transfer CFT, while allowing users to keep their original access rights. This environment can then be expanded according to requirements, but the procedure must be performed by the Transfer CFT administrator (cftadm).
+title: "Implement  security"
+linkTitle: "Implement  security"
+weight: 300
+--- Once the installation procedures are customized, they are designed to generate a minimum security environment for an existing instance of Transfer CFT, while allowing users to keep their original access rights. This environment can then be expanded according to requirements, but the procedure must be performed by the Transfer CFT administrator (cftadm).
 
 This section describes how to customize and implement the Transfer CFT z/OS security by:
 
@@ -48,14 +48,14 @@ Use this job to provide a model for the commands to be executed to allow:
 
 - A user to update the Transfer CFT configuration (example: CFTSEND command)
 
-<!-- -->
+<!- - - - >
 
 - A user to submit transfer requests  (example: SEND command)
 
-<!-- -->
+<!- - - - >
 
 - A transfer owner to send or receive a file (example: APPL object)
 
-<!-- -->
+<!- - - - >
 
 - Users to be associated with a group so that they can be granted Transfer CFT file access rights

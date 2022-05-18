@@ -1,8 +1,8 @@
 ---
-    title: "Example send file transfer request"
-    linkTitle: "Example send file request"
-    weight: 320
----This section describes how to execute a SEND transfer request using Web services. After submitting a request you can retrieve transfer processing information in the {{< TransferCFT/axwayvariablesComponentLongName  >}} catalog using a [Web services catalog search request](../example_search_catalog). Responses to SEND requests may differ depending on the type of COM media file that you are using (File or TCP).
+title: "Example send file transfer request"
+linkTitle: "Example send file request"
+weight: 320
+--- This section describes how to execute a SEND transfer request using Web services. After submitting a request you can retrieve transfer processing information in the {{< TransferCFT/axwayvariablesComponentLongName  >}} catalog using a [Web services catalog search request](../example_search_catalog). Responses to SEND requests may differ depending on the type of COM media file that you are using (File or TCP).
 
 ## XFER_CMD_SEND_FILE request
 
@@ -42,7 +42,7 @@ This example request uses only the minimal number of options needed to submit th
 
 In the following successful response, you can see that the IDTU value CAT_IDTU is returned. While the IDTU value CAT_IDTU indicates that the request is correctly delivered to {{< TransferCFT/axwayvariablesComponentLongName  >}}, you do not know the transfer status. To obtain the transfer status, see the section describing how to use the [XFER_CAT_SELECT](../example_search_catalog) function to view the catalog.
 
-&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema- instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 &lt;soap:Body>
 
@@ -76,7 +76,7 @@ An error message (unsuccessful response) is displayed if Copilot is running, but
 
 If Transfer CFT is not started and you are using TCP, an error message is displayed.
 
-&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema- instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 > &lt;soap:Body>
 >
@@ -84,7 +84,7 @@ If Transfer CFT is not started and you are using TCP, an error message is displ
 >
 > > &lt;RETURN_CODE>7&lt;/RETURN_CODE>
 > >
-> > &lt;RETURN_MESSAGE>ERROR : Open channel failed  (-6006/0).
+> > &lt;RETURN_MESSAGE>ERROR : Open channel failed  (- 6006/0).
 > >
 > > CSCcom()&lt;/RETURN_MESSAGE>
 >
@@ -102,7 +102,7 @@ If Transfer CFT is not started and you are using TCP, an error message is displ
 
 In this scenario no IDTU value is displayed because the request is not immediately processed by Transfer CFT. Instead the request is temporarily stored in the COM file until Transfer CFT is started.
 
-&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema- instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 > &lt;soap:Body>
 >

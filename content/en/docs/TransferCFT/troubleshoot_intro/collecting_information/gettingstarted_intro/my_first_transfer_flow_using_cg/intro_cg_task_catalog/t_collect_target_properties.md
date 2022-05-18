@@ -1,8 +1,8 @@
 ---
-    title: "Target properties in a collect operation"
-    linkTitle: "Target properties in a collect operation"
-    weight: 510
----For each Target in the collection flow, set the File properties to make the file available.
+title: "Target properties in a collect operation"
+linkTitle: "Target properties in a collect operation"
+weight: 510
+--- For each Target in the collection flow, set the File properties to make the file available.
 
 > **Note**
 >

@@ -1,8 +1,8 @@
 ---
-    title: "Troubleshoot the user interface"
-    linkTitle: "Troubleshoot the user interface"
-    weight: 180
----****The Copilot server is running, but cannot connect to the user interface****
+title: "Troubleshoot the user interface"
+linkTitle: "Troubleshoot the user interface"
+weight: 180
+--- ****The Copilot server is running, but cannot connect to the user interface****
 
 After a successful installation you can start the Transfer CFT Copilot server, but cannot connect to the user interface. Check the following:
 
@@ -81,7 +81,7 @@ copsrestw[2099] CFT.TRANSCO [0] TRACE From iconv_full (cfticonv.c:270)
 
 \+ 2021/11/24 15:31:22.649888 00000002 copsrestw[2099] CFT.TRANSCO [0] \* Illegal Multibyte Sequence (Â£#), errno=84 (Invalid or incomplete multibyte or wide character), skipping 1 byte..
 
-Check that the uconf `copilot.misc.local_encoding` value is set to UTF-8.
+Check that the uconf `copilot.misc.local_encoding` value is set to UTF- 8.
 
 ****Access management issue****
 
@@ -125,4 +125,3 @@ Check:
 - If the server sends an **insufficient rights** reply, this indicates that access management is enabled (either {{< TransferCFT/PrimaryCGorUM >}} or internal AM) and that you do not have the CONNECT privilege on the SERVICE:UI resource.
 - If you are using the **predefined filters** and there seem to be missing transfers or messages, it is possible that they are not displaying due to a difference in time between the client and the server. This is because the predefined filters use the client time and not the server time.
 
- 

@@ -1,8 +1,8 @@
 ---
-    title: "disctr"
-    linkTitle: "disctr"
-    weight: 730
----<span id="disctr"></span>
+title: "disctr"
+linkTitle: "disctr"
+weight: 730
+--- <span id="disctr"></span>
 
 ### disctr
 

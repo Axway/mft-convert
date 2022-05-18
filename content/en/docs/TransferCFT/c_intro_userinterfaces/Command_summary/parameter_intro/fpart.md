@@ -1,8 +1,8 @@
 ---
-    title: "fpart"
-    linkTitle: "fpart"
-    weight: 1300
----<span id="fpart"></span>
+title: "fpart"
+linkTitle: "fpart"
+weight: 1300
+--- <span id="fpart"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 

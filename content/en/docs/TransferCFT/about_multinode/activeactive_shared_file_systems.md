@@ -1,12 +1,12 @@
 ---
-    title: "Using a shared file system  "
-    linkTitle: "Using a shared file system "
-    weight: 210
----<span id="Active_active_mode_shared_file_systems_..4"></span><span id="Active_active_mode_shared_file_systems"></span>
+title: "Using a shared file system  "
+linkTitle: "Using a shared file system "
+weight: 210
+--- <span id="Active_active_mode_shared_file_systems_..4"></span><span id="Active_active_mode_shared_file_systems"></span>
 
 ## Active/active mode shared file systems
 
-In a multi-node context, a shared file system allows multiple applications to access the same files at the same time. Two typical shared file system implementations are NAS (network attached storage) and SAN (storage area network). This section describes GPFS, NFSv4, AWS EFS, and SMB/CIFS as they pertain to Transfer CFT multi-node installations.
+In a multi- node context, a shared file system allows multiple applications to access the same files at the same time. Two typical shared file system implementations are NAS (network attached storage) and SAN (storage area network). This section describes GPFS, NFSv4, AWS EFS, and SMB/CIFS as they pertain to Transfer CFT multi- node installations.
 
 > **Note**
 >
@@ -16,7 +16,7 @@ In a multi-node context, a shared file system allows multiple applications to ac
 
 ## Using GPFS
 
-GPFS, General Parallel File System, is the shared file system of choice for Transfer CFT. It provides high-speed file access for Transfer CFT when executing in a multi-node architecture.
+GPFS, General Parallel File System, is the shared file system of choice for Transfer CFT. It provides high- speed file access for Transfer CFT when executing in a multi- node architecture.
 
 <span id="Use_the_default_setting_for_GPFS_usage_..6"></span><span id="Use_the_default_setting_for_GPFS_usage"></span>
 
@@ -28,7 +28,7 @@ By default, the shared file system is set to `unknown`, the value to use for GPF
 
 ## Using NFSv4
 
-The recommendations in this section apply to a Transfer CFT multi-node, multi-host architecture based on an NFSv4 shared file system. To implement a Transfer CFT active/active architecture using NFS, version 4 is mandatory. This is because NFSv4 can detect host failures (unlike NFSv3). With host failure detections possible, Transfer CFT can restart another host's nodes when necessary.
+The recommendations in this section apply to a Transfer CFT multi- node, multi- host architecture based on an NFSv4 shared file system. To implement a Transfer CFT active/active architecture using NFS, version 4 is mandatory. This is because NFSv4 can detect host failures (unlike NFSv3). With host failure detections possible, Transfer CFT can restart another host's nodes when necessary.
 
 To implement active/active Transfer CFT you must use NFSv4 for the Transfer CFT runtime directory, which contains internal data such as the catalog, log, communication file, etc. Other versions of NFS are not supported for the runtime directory. For file exchanges, you can use either NFSv4 or v3. NFSv3 is not described in this document.
 
@@ -82,9 +82,8 @@ NFS implements a weak data consistency called "Close To Open consistency" or `ct
 
 The following table summarizes the recommended NFSv4 mount options. Note that depending on the OS platform, only one of the three locking options should be available.
 
-
 | Correct option  | Incorrect option  |
-| --- | --- |
+| - - - | - - - |
 | vers=4 (or nfsvers=4)  | not specified or value &lt;= 4  |
 | hard (default)  | "soft" specified  |
 | nointr (not the default)  | "intr" specified  |
@@ -92,7 +91,6 @@ The following table summarizes the recommended NFSv4 mount options. Note that de
 | lock (default)  | "nolock" specified  |
 | local_lock=none (default)  | any other value specified  |
 | cto (default)  | "nocto" specified  |
-
 
 <span id="Synchronous_versus_asynchronous_option_..15"></span><span id="Synchronous_versus_asynchronous_option"></span>
 
@@ -152,14 +150,12 @@ Enables replies to requests only after the changes have been committed to stable
 
 #### Synchronous / asynchronous option impact
 
-
 | Client  | Server  | Internal data  | Transferable data  | Performance  |
-| --- | --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - | - - - |
 | Sync  | Sync  | 1  | 1  | Low  |
 | Sync  | Async  | 2 (secure the NFS server)  | 2 (secure the NFS server)  | Medium  |
 | Async  | Sync  | 1 (if cft.server.catalog.<br /> sync.enable=Yes)  | 1 (when using sync points)  | Medium - high  |
 | Async  | Async  | 3  | 3  | High  |
-
 
 Legend:
 
@@ -181,7 +177,7 @@ The NFSv4 locking lease period affects the Transfer CFT delay required to detect
 
 ### Perform a NAS failover
 
-When using NAS failover in a multihost-multinode architecture, you must stop the cluster prior to performing the failover. For information on starting and stopping a cluster, see [Multi-node commands and management](../multi_node_commands)
+When using NAS failover in a multihost- multinode architecture, you must stop the cluster prior to performing the failover. For information on starting and stopping a cluster, see [Multi- node commands and management](../multi_node_commands)
 
 1. Stop the {{< TransferCFT/suitevariablesTransferCFTName >}} cluster.
 1. Perform the failover.
@@ -201,13 +197,13 @@ When transferring files that are located in a **N**etwork **F**ile **S**ystem, a
 
 ### Troubleshoot the UID and GID
 
-NFS uses UIDs and GIDs for all file permissions. Therefore during installation of a multihost multi-node architecture, the Transfer CFT user must have read and write access to any folder and files created on the other host or hosts. Additionally, all hosts in the implementation should use the same UID number.
+NFS uses UIDs and GIDs for all file permissions. Therefore during installation of a multihost multi- node architecture, the Transfer CFT user must have read and write access to any folder and files created on the other host or hosts. Additionally, all hosts in the implementation should use the same UID number.
 
-For more information, please refer to the [NFS](http://nfs.sourceforge.net/nfs-howto/ar01s07.html#pemission_issues) documentation.
+For more information, please refer to the [NFS](http://nfs.sourceforge.net/nfs- howto/ar01s07.html#pemission_issues) documentation.
 
 ## Using AWS EFS
 
-The recommendations in this section apply to a Transfer CFT multi-node, multi-host architecture based on an Amazon Web Services (AWS) Elastic File System (EFS) shared file system.
+The recommendations in this section apply to a Transfer CFT multi- node, multi- host architecture based on an Amazon Web Services (AWS) Elastic File System (EFS) shared file system.
 
 When using AWS EFS, you cannot set the server options; only the client is configurable.
 
@@ -232,4 +228,4 @@ SMB, Server Message Block, is a protocol used to share files across corporate in
 
 > **Note**
 >
-> CIFS, Common Internet File System, is an out-dated SMB protocol variant.
+> CIFS, Common Internet File System, is an out- dated SMB protocol variant.

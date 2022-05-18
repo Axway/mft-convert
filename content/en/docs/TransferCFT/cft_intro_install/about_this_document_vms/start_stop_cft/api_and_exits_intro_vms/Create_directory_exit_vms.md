@@ -1,8 +1,8 @@
 ---
-    title: "Creating  a directory exit - OpenVMS"
-    linkTitle: "Creating a directory exit"
-    weight: 260
----This page describes a delivered sample, `cft-tcp.conf` configuration sample located in `cft_scen or d$cft_run:[conf]`, that you can use to create an example directory exit.
+title: "Creating  a directory exit - OpenVMS"
+linkTitle: "Creating a directory exit"
+weight: 260
+--- This page describes a delivered sample, `cft- tcp.conf` configuration sample located in `cft_scen or d$cft_run:[conf]`, that you can use to create an example directory exit.
 
 > **Note**
 >
@@ -10,7 +10,7 @@
 
 ## Before you start
 
-Before running the directory exit test, modify the `cft-tcp.conf` file depending on the type of network used. Edit the file using a text editor (`EDIT, `for example) as follows.
+Before running the directory exit test, modify the `cft- tcp.conf` file depending on the type of network used. Edit the file using a text editor (`EDIT, `for example) as follows.
 
 1. Locate
     the *`cftprot`* command in the file and the following lines:
@@ -20,8 +20,8 @@ Before running the directory exit test, modify the `cft-tcp.conf` file depending
     commented as follows:
 1. Locate the communication properties
     for your site, which appear at the end of the file. When
-    modifying the `cft-tcp.conf` file, you must also find every occurrence
-    of the HOST string located in cfttcp-type commands and replace the` X` character
+    modifying the `cft- tcp.conf` file, you must also find every occurrence
+    of the HOST string located in cfttcp- type commands and replace the` X` character
     strings with your system name or address.
 
 ## Application components
@@ -48,7 +48,7 @@ To generate the sample CFTEXITA application:
 1. Access the `cft_scen` directory.
 1. Generate the {{< TransferCFT/axwayvariablesComponentShortName >}} databases
     using `cftinit` the configuration file provided
-    and modified for this EXIT:` cft-tcp.conf`
+    and modified for this EXIT:` cft- tcp.conf`
 1. After the` cftinit complete `
     message is displayed, start {{< TransferCFT/axwayvariablesComponentShortName >}}: `cft start`
 1. When the` CFTMAIN process   ID is xxxxx` message displays, perform an initial transfer

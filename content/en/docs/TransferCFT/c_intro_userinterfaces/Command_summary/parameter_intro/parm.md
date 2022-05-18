@@ -1,8 +1,8 @@
 ---
-    title: "parm"
-    linkTitle: "parm"
-    weight: 2550
----<span id="parm"></span>
+title: "parm"
+linkTitle: "parm"
+weight: 2550
+--- <span id="parm"></span>
 
 ### parm
 
@@ -35,7 +35,7 @@ See the [xlate](../xlate) parameter for transcoding details.
 
 **[PARM = {string64}]**
 
-Free-form parameter associated with the security profile.
+Free- form parameter associated with the security profile.
 
 This local data item is not used by the SSL protocol. It
 can be reused as a symbolic variable in an end of transfer procedure (&SSLPARM).

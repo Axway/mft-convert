@@ -1,8 +1,8 @@
 ---
-    title: "Types of broadcasts "
-    linkTitle: "Types of broadcasts"
-    weight: 320
----## **<span id="Simple_broadcasting"></span>Simple broadcasting**
+title: "Types of broadcasts "
+linkTitle: "Types of broadcasts"
+weight: 320
+--- ## **<span id="Simple_broadcasting"></span>Simple broadcasting**
 
 Site A wants to control the broadcasting of a file in its possession,
 but through an intermediate site B.
@@ -10,8 +10,6 @@ but through an intermediate site B.
 **Example of a simple broadcast**
 
 ![](/Images/TransferCFT/simple_broadcast.gif)
-
- 
 
 - *1st phase*
 
@@ -53,8 +51,6 @@ sites). Each production site designates a different broadcasting list.
 
 ![](/Images/TransferCFT/customized_broadcast.gif)
 
- 
-
 - *1st phase:*
 
 Each site Ap sends its broadcasting list to B:  
@@ -80,14 +76,12 @@ several distributing sites.
 
 ![](/Images/TransferCFT/composite_broadcast.gif)
 
- 
-
 - 1st
     phase:  
     A broadcasts the broadcasting lists Cp1, Cp2, ... Cpn to the direct
     partners Bn:  
     SEND PART=ID_B, FNAME=LIST_&PART, .....  
-      
+
     where B is the list of partners Bn:  
     CFTDEST ID=ID_B, PART=(ID_B1, ID_B2, .....ID_Bn), FOR=LOCAL
 

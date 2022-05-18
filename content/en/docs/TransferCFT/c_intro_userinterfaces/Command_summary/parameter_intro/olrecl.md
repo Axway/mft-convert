@@ -1,8 +1,8 @@
 ---
-    title: "olrecl"
-    linkTitle: "olrecl"
-    weight: 2450
----<span id="olrecl"></span>
+title: "olrecl"
+linkTitle: "olrecl"
+weight: 2450
+--- <span id="olrecl"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
@@ -43,15 +43,12 @@ If the output file:
 - Does not exist,
     value of ILRECL
 - Exists:
-    -   For systems handling
+    - For systems handling
         the file record concept: actual size of the output file records
-    -   For the systems below not handling this concept:  
-        
+    - For the systems below not handling this concept:  
+
 | **Windows**  | 512. |
-| --- | --- |
+| - - - | - - - |
 | **UNIX** | 512 for text files (OTYPE=T, X or O).<br /> 4096 for binary or variable files (OTYPE={B &#124; V}). |
-
-
- 
 
 [Return to Command index](../../)

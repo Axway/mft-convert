@@ -1,8 +1,8 @@
 ---
-    title: "Configure Transfer CFT as an SFTP client"
-    linkTitle: "Configure the Transfer CFT SFTP client"
-    weight: 160
----******The supported operating systems are listed in the [Platform features](../../../datasheet) table.******
+title: "Configure Transfer CFT as an SFTP client"
+linkTitle: "Configure the Transfer CFT SFTP client"
+weight: 160
+--- ******The supported operating systems are listed in the [Platform features](../../../datasheet) table.******
 
 To configure a {{< TransferCFT/suitevariablesTransferCFTName  >}} SFTP client:
 
@@ -60,7 +60,7 @@ Use CFTSSH to define a SSH profile in Transfer CFT. The CFTSSH definition conta
 - ID: Identifier of the object
 - DIRECT=CLIENT
 - SRVPUBKEY=Identifier of the key used to authenticate the server. If this is not set, there is no authentication control.
-- CLIPRIVKEY: Key Id of the client private key to use with key authentication or two-factor (dual) authentication.
+- CLIPRIVKEY: Key Id of the client private key to use with key authentication or two- factor (dual) authentication.
 
 ****Example****
 
@@ -95,7 +95,7 @@ Use  one of the following methods to configure the client password:
 
 - Clear text: When NSPASSW=&lt;the user password>, the client password is in clear text.
 
-<!-- -->
+<!- - - - >
 
 - Uconf definition: When NSPASSW=_AUTH_, authentication is specified in `uconf:cft.server.authentication_method `is used.
 
@@ -143,10 +143,9 @@ CFTPART id = USER2,
 > prot = SFTP,
 > nspart = "user2", ...
 
- 
 CFTTCP id = USER2,
 host = <remote host>, ...
- 
+
 CFTSSH id = SSH_USER2,
 
 > direct = CLIENT,
@@ -154,14 +153,14 @@ CFTSSH id = SSH_USER2,
 
 ```
 
-### Two-factor (dual) authentication
+### Two- factor (dual) authentication
 
-When using **password and key** two-factor (dual) authentication:
+When using **password and key** two- factor (dual) authentication:
 
 - NSPASSW: Use one of the methods to configure how the client sends its password, as described [here.](#Password)
 - CLIPRIVKEY: Use this to configure how the client sends its key, as described [here.](#Key)
 
-<!-- -->
+<!- - - - >
 
 - ```
     CFTPART id = USER3,
@@ -172,12 +171,10 @@ When using **password and key** two-factor (dual) authentication:
     > nspart = "user3",
     > nspassw = "TheUser3Password",...
 
-     
     CFTTCP id = USER3,
 
     > host = <remote host>, ...
 
-     
     CFTSSH id = USER3,
 
     > direct = CLIENT,

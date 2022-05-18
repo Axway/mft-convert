@@ -1,8 +1,8 @@
 ---
-    title: "Declaring  additional users"
-    linkTitle: "Declaring additional users"
-    weight: 230
----If Transfer CFT is to be run by users other than the holder of the account
+title: "Declaring  additional users"
+linkTitle: "Declaring additional users"
+weight: 230
+--- If Transfer CFT is to be run by users other than the holder of the account
 from which Transfer CFT was installed, these users must be added to the environment.
 
 In all subsequent definitions, it is assumed that Transfer CFT is installed,
@@ -25,7 +25,7 @@ set path=($path ~account_cft/cft/bin)
 If the user shell
 is *sh* (BOURNE shell) or *ksh* (KORN shell), add the following
 command to the *$HOME/.profile* file:  
-  
+
 PATH=$PATH:root/cft_account/cft/bin; export PATH
 
 where:
@@ -42,7 +42,7 @@ of the */home/transfer* account, enter the following commands:
     set path=($path ~transfer/cft/bin)
 - For *sh* or
     *ksh*:  
-      
+
     PATH=$PATH:/home/transfer/cft/bin; export PATH
 
 ### Transfer CFT file access environment
@@ -65,9 +65,8 @@ variable*).
 **Path Pointing
 to the Files**
 
-
 | **Environment variable**  | **Default definition**  |
-| --- | --- |
+| - - - | - - - |
 | CFTDIRINSTALL  | Top of the Transfer CFT installation directory structure  |
 | CFTDIRRUNTIME  | Runtime directory  |
 | CFTUCONF  | UCONF file  |
@@ -94,7 +93,6 @@ to the Files**
 | CFTPKU  | PKI file  |
 | CFTHINI  | Security system implementation file  |
 | CFTHPARM  | Security system implementation parameter file  |
-
 
 #### Setting the environment variables
 

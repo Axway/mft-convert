@@ -1,8 +1,8 @@
 ---
-    title: "Transfer scripts and temporary files"
-    linkTitle: "Transfer scripts and temporary files"
-    weight: 270
----This topic describes how to use scripts  in Transfer CFT Windows.
+title: "Transfer scripts and temporary files"
+linkTitle: "Transfer scripts and temporary files"
+weight: 270
+--- This topic describes how to use scripts  in Transfer CFT Windows.
 
 - [Updating
     batch procedures launched by Transfer CFT](#Updating%20batch%20procedures%20launched%20by%20Transfer%20CFT)

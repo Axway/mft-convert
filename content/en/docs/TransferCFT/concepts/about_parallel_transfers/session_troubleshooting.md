@@ -1,8 +1,8 @@
 ---
-    title: "Session related troubleshooting"
-    linkTitle: "Session related troubleshooting"
-    weight: 250
----This section provides transfer examples that demonstrate parameter dependencies and typical log outputs, including errors, which you may encounter when using similar values. The goal is to understand the effect of parameter combinations, and be able to adapt settings to your particular needs.
+title: "Session related troubleshooting"
+linkTitle: "Session related troubleshooting"
+weight: 250
+--- This section provides transfer examples that demonstrate parameter dependencies and typical log outputs, including errors, which you may encounter when using similar values. The goal is to understand the effect of parameter combinations, and be able to adapt settings to your particular needs.
 
 - [Example: cft.server.max_session is less than MAXCNX](#Example:)
 - [Example: cft.server.max_session is greater than MAXCNX](#Example:2)
@@ -35,7 +35,7 @@ For example, if cft.server.max_session = 3, then MAXCNX is limited to 3 on the r
 **Requester output**
 
 ```
-CFTT75E connect reject <IDTU=A00000FT PART=SUN35-5 IDF=T1 IDT=D2918351 416 MAXTRANS>
+CFTT75E connect reject <IDTU=A00000FT PART=SUN35- 5 IDF=T1 IDT=D2918351 416 MAXTRANS>
 ```
 
 **Server output**
@@ -55,7 +55,7 @@ CFTH66E Incoming calls (1) rejected, ERROR=sessions (ctx) in use >= max_sessions
 **Requester output**
 
 ```
-CFTT75E connect reject <IDTU=A000006O PART=WINZZ-5 IDF=T2 IDT=D2918471 302 R 0 2f2>
+CFTT75E connect reject <IDTU=A000006O PART=WINZZ- 5 IDF=T2 IDT=D2918471 302 R 0 2f2>
 ```
 <span id="Example:2"></span>
 
@@ -70,7 +70,7 @@ When cft.server.max_session is greater than MAXCNX on the requester side the det
 **Requester output**
 
 ```
-CFTH09E Network connect request local error <PART=SUN35-4 NCR=416 NCS=MAXCNX NET=TCP>
+CFTH09E Network connect request local error <PART=SUN35- 4 NCR=416 NCS=MAXCNX NET=TCP>
 ```
 
 **Server output**
@@ -90,8 +90,8 @@ There is no message / output on server side.
 **Requester output**
 
 ```
-CFTH11E Error Opening session <PART=WINZZ-4 EV=VNRELI ST=CN0022>
-CFTT75E connect reject <IDTU=A0000074 PART=WINZZ-4 IDF=T4 IDT=D2919014 302 R 0 2f2>
+CFTH11E Error Opening session <PART=WINZZ- 4 EV=VNRELI ST=CN0022>
+CFTT75E connect reject <IDTU=A0000074 PART=WINZZ- 4 IDF=T4 IDT=D2919014 302 R 0 2f2>
 ```
 
 Related topics

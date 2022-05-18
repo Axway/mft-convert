@@ -1,8 +1,8 @@
 ---
-    title: "fast"
-    linkTitle: "fast"
-    weight: 1040
----### fast
+title: "fast"
+linkTitle: "fast"
+weight: 1040
+--- ### fast
 
 #### SHUT
 
@@ -14,7 +14,7 @@ Type of shutdown:
     All the transfers in process are interrupted and change
     to the D state. No pending transfer is activated.
 
-<!-- -->
+<!- - - - >
 
 - NO: {{< TransferCFT/axwayvariablesComponentShortName >}} completes all the transfers
     in process and shuts down. No new transfer is initialized.

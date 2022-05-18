@@ -1,8 +1,8 @@
 ---
-    title: "Set up RACF security software"
-    linkTitle: "Set up RACF security software"
-    weight: 280
----This section describes how to set up RACF software to provide security control for file handling operations. Transfer CFT z/OS uses the SAF security interface, and is compatible with the security software packages that use this interface, in particular RACF.
+title: "Set up RACF security software"
+linkTitle: "Set up RACF security software"
+weight: 280
+--- This section describes how to set up RACF software to provide security control for file handling operations. Transfer CFT z/OS uses the SAF security interface, and is compatible with the security software packages that use this interface, in particular RACF.
 
 ## File handling operations control
 
@@ -12,17 +12,17 @@ Transfer CFT systematically checks the file access rights, both for its own acce
 
 You can activate more elaborate control in the following cases:
 
-- To request the submission of an end-of-send procedure under the authority of the transfer requester
+- To request the submission of an end- of- send procedure under the authority of the transfer requester
 
-<!-- -->
+<!- - - - >
 
-- To request the submitting an end-of-receive procedure under the authority of the transfer receiver
+- To request the submitting an end- of- receive procedure under the authority of the transfer receiver
 
-<!-- -->
+<!- - - - >
 
 - To request opening a file to be sent under the authority of the transfer requester
 
-<!-- -->
+<!- - - - >
 
 - To request opening a file to be received under the authority of the transfer receiver
 
@@ -34,11 +34,11 @@ Advanced use of RACF functions can be implemented when the following conditions 
 
 - Transfer CFT is an authorized program
 
-<!-- -->
+<!- - - - >
 
 - The corresponding option is activated in the SGINSTAL installation options
 
-<!-- -->
+<!- - - - >
 
 - The CFTPARM USERCTRL=YES parameter is set
 
@@ -50,7 +50,7 @@ RACF is required when the Internet interface is used to check the PASSWORDs. The
 
 - It is not authorized
 
-<!-- -->
+<!- - - - >
 
 - SAF is not available
 
@@ -62,7 +62,7 @@ The JAVA interface connects to the Transfer CFT Copilot server. It is identified
 
 - Password is not authorized
 
-<!-- -->
+<!- - - - >
 
 - SAF is not available
 
@@ -70,7 +70,7 @@ In either of these cases, you can enter any value in the PASSWORD field to conne
 
 > **Note**
 >
-> Transfer CFT z/OS accepts passwords in lower case using RACF or Top-Secret.
+> Transfer CFT z/OS accepts passwords in lower case using RACF or Top- Secret.
 
 <span id="RACF pas"></span>
 
@@ -80,7 +80,7 @@ In either of these cases, you can enter any value in the PASSWORD field to conne
 
 ****Limitations****
 
-- When using the user interface with RACF to enter your password phrase, the confirm password pop-up window does not display after the password phrase expiration.
+- When using the user interface with RACF to enter your password phrase, the confirm password pop- up window does not display after the password phrase expiration.
 - The RACF password phrase can consist of up to 30 characters.
 
 ### Access USS files
@@ -89,7 +89,7 @@ Specific configuration is required to access USS files:
 
 - Transfer CFT must be able to transfer USS files.
 
-<!-- -->
+<!- - - - >
 
 - The Transfer CFT Copilot server must be able to access USS files.
 
@@ -97,7 +97,7 @@ We recommend that you:
 
 - Assign a UID other than 0 to Transfer CFT and the Copilot server.
 
-<!-- -->
+<!- - - - >
 
 - Give READ access to the BPX.SERVER resource in the RACF FACILITY class.
 

@@ -1,8 +1,8 @@
 ---
-    title: "OFTP  (ODETTE): Start here"
-    linkTitle: "OFTP protocol"
-    weight: 130
----This section describes how to configure the OFTP (ODETTE) protocol for
+title: "OFTP  (ODETTE): Start here"
+linkTitle: "OFTP protocol"
+weight: 130
+--- This section describes how to configure the OFTP (ODETTE) protocol for
 Transfer CFT. This topic begins
 with an overview of the OFTP file transfer protocol describing:
 
@@ -21,15 +21,13 @@ to configure them:
 - Data compression
 - Change direction (CD)
 
-
 | Topic  | Describes...  |
-| --- | --- |
+| - - - | - - - |
 | [Configuring OFTP](configuring_odette) | The Transfer CFT objects that you must configure to use the OFTP (ODETTE) protocol. |
 | [Configuring partners](cftpart_parameters) | The Transfer CFT parameters that you must define for a partner when using the OFTP protocol. |
 | [Processing data](processing_data) | The compression functions in Transfer CFT when using the OFTP (ODETTE) protocol. |
 | [Submitting a transfer request](submitting_a_transfer_request) | The steps that enable you to submit a transfer request. |
 | [Receiving transfers](receiving_transfers) | How to configure the OFTP (ODETTE) environment you must define the transfer environment in the RECV object to receive a request. |
-
 
 <span id="About_OFTP"></span><span id="OFTP__ODETTE__features"></span>
 
@@ -45,14 +43,14 @@ Transfer CFT complies with the exchange protocol, but does not check
 the information. This enables you to use the protocol outside of the automobile
 sector.
 
-The data can be checked by an application initiated by the end-of-transfer
+The data can be checked by an application initiated by the end- of- transfer
 procedures.
 
 ### General features
 
 The general characteristics of the OFTP (ODETTE) protocol are as follows:
 
-- Two-way exchanges:
+- Two- way exchanges:
     transmission and reception
 - Transfer retry
     in the event of an incident
@@ -74,15 +72,15 @@ follows:
     identified by their name and the transfer date and time
 - The protocol supports
     four record formats:
-    -   F
+    - F
         for fixed format: all the file records have the same size
-    -   V
+    - V
         for variable format: the file records have a variable length
-    -   U
+    - U
         for unstructured format: the entire file is considered as a single
         character string. In this file format, the concept of record length
         does not exist
-    -   T
+    - T
         for text format: a text file is defined as a sequence of ASCII characters
         containing no control characters, except for CR/LF characters delimiting
         records

@@ -1,8 +1,8 @@
 ---
-    title: "Glossary"
-    linkTitle: "Glossary"
-    weight: 200
----##### A
+title: "Glossary"
+linkTitle: "Glossary"
+weight: 200
+--- ##### A
 
 <span id="Acceptance_by_CFT_"></span>
 
@@ -39,7 +39,7 @@ See EERP (End to End Response) acknowledgement.
 #### Authorized identifiers:
 
 List of model file identifiers (IDFs) governed by the same transfer
-authorizations or denials (user-defined in the CFTAUTH command).
+authorizations or denials (user- defined in the CFTAUTH command).
 
 <span id="Availability_for_the_monitor_"></span>
 
@@ -71,7 +71,7 @@ a list via a single request (partner list defined in CFTDEST).
 #### Broadcast list:
 
 List defined in parameter or file form to send a file or group of files
-to one or more partners via a single request (user-defined in the CFTDEST
+to one or more partners via a single request (user- defined in the CFTDEST
 command).
 
 ##### C
@@ -227,7 +227,7 @@ of the transfers for which it was created.
 #### CFTTPRO:
 
 Protocol task giving access to the resources defined via CFTNET commands
-and the application-level protocols declared in CFTPROT commands.
+and the application- level protocols declared in CFTPROT commands.
 
 <span id="CFTUTIL"></span>
 
@@ -360,14 +360,14 @@ with the aim of masking the meaning of data.
 
 There are two main systems:
 
-- Shared-key or symmetric
+- Shared- key or symmetric
     systems for which the ciphering and deciphering keys are the same; see
     [DES](#DES__IBM_Data_Encryption_Standard__) (IBM Data Encryption
      Standard)
 
-<!-- -->
+<!- - - - >
 
-- Dual-key or asymmetric
+- Dual- key or asymmetric
     systems for which the ciphering and deciphering keys are different; see [RSA](#RSA__Rivest_Shamir_Adelman__) (Rivest Shamir Adelman)
 
 <span id="Cycle"></span>
@@ -385,7 +385,7 @@ RECV).
 #### Data compacting:
 
 Data compression mode specific to the PeSIT protocol with a CFT profile.
-Only the most significant half-bytes in numbers or spaces coded in EBCDIC
+Only the most significant half- bytes in numbers or spaces coded in EBCDIC
 are transferred.
 
 <span id="Data_compression_"></span>
@@ -436,9 +436,9 @@ partner (defined in CFTPART).
 
 #### EERP (End to End Response) acknowledgement:
 
-Odette protocol service used to generate an end-to-end acknowledgement
+Odette protocol service used to generate an end- to- end acknowledgement
 for the transfer at application level. In {{< TransferCFT/axwayvariablesComponentShortName  >}}, this acknowledgement
-takes the form of a reply-type message (see [Reply
+takes the form of a reply- type message (see [Reply
 message](#Reply_message_)).
 
 <span id="End_of_transfer_exit_"></span>
@@ -461,7 +461,7 @@ been successfully sent or received (defined in CFTPARM, CFTSEND or CFTRECV).
 
 Information that can be accessed by programs via a predefined symbolic
 name and that contains a character string initialized when the execution
-environment was set up for the programs (OS-dependent feature).
+environment was set up for the programs (OS- dependent feature).
 
 <span id="Error_procedure_"></span>
 
@@ -503,7 +503,7 @@ Set of rules governing dialog and exchange management between two standard
 
 #### FPDU (File Protocol Data Unit):
 
-Data unit for the PeSIT protocol. Protocol-level message supporting
+Data unit for the PeSIT protocol. Protocol- level message supporting
 dialog between two PeSIT "protocol layer" entities. It includes
 a fixed and a variable part. See also [PI](#PI__Parameter_Identifier__)
 (Parameter Identifier).
@@ -650,7 +650,7 @@ standardization (Organisation de Données Echangées par TéléTransmission
 en Europe - European Organization for Data Transmission). This organization
 defined the Odette File Transfer Protocol (OFTP) used particularly to
 exchange data between car manufacturers and their suppliers. This protocol
-is based on X.25-type links (TCP/IP in future versions). The two terms
+is based on X.25- type links (TCP/IP in future versions). The two terms
 OFTP and ODETTE are sometimes used interchangeably.
 
 <span id="OFTP__Odette_File_Transfer_Protocol__"></span>
@@ -678,15 +678,13 @@ can receive data. A partner generally corresponds to a remote file transfer
 monitor or a subset of a remote monitor (defined in CFTPART, file created
 in CFTFILE TYPE=PART).
 
- 
-
 <span id="PeSIT__Protocole_d_Echanges_pour_un_Syst_me_Interbancaire_de_T_l___compensation__"></span>
 
 #### PeSIT (Protocole d'Echanges pour un Système Interbancaire de Télé- compensation):
 
 Exchange protocol for an interbank clearing system, first used within
-the SIT network and then enhanced by defining broader usage profiles. The non-SIT
-and secured profiles can be used for non-banking applications.
+the SIT network and then enhanced by defining broader usage profiles. The non- SIT
+and secured profiles can be used for non- banking applications.
 
 <span id="PI__Parameter_Identifier__"></span>
 
@@ -704,7 +702,7 @@ Set of rules defining how a service is used by an application. See [CFT API](#CF
 
 <span id="Reading_or_read_mode_transfer_"></span>
 
-#### Reading or read-mode transfer:
+#### Reading or read- mode transfer:
 
 For the PeSIT protocol, triggering by the requester of a file transfer
 from the server.
@@ -724,7 +722,7 @@ command.
 Character string used in the PeSIT E, PeSIT D (CFT profile) or Odette
 protocols and corresponding to a reply to a previous transfer from the
 remote partner concerned by the message. Used for example at the end of
-a file transfer to inform the sender that all receive-related operations
+a file transfer to inform the sender that all receive- related operations
 have been successfully executed.
 
 <span id="Request_"></span>
@@ -764,7 +762,7 @@ a file.
 
 #### Resynchronization:
 
-Protocol-based mechanism whereby an exchange can be restarted from the
+Protocol- based mechanism whereby an exchange can be restarted from the
 last synchronization point acknowledged.
 
 This mechanism is used during data transfer following a recoverable
@@ -795,7 +793,7 @@ File used when switching log or accounting files. See [Switching.](#Switching_)
 
 #### Secured mode:
 
-Means whereby data can be ciphered or sealed using DES- or RSA-type
+Means whereby data can be ciphered or sealed using DES- or RSA- type
 algorithms. See [Ciphering](#Ciphering), [DES](#DES__IBM_Data_Encryption_Standard__)
 (IBM Data Entrcyption Standard) and [RSA](#RSA__Rivest_Shamir_Adelman__)
 (Rivest Shamir Adelman).
@@ -834,7 +832,7 @@ for the partner](#Availability_for_the_partner_).
 #### Sending of a group of files:
 
 Sending of several files in a single request, using either an indirection
-file containing the list of files or a wildcard-based selection.
+file containing the list of files or a wildcard- based selection.
 
 <span id="Server_"></span>
 
@@ -892,7 +890,7 @@ next adjacent partner.
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} feature whereby files can be routed via one or more intermediary
 {{< TransferCFT/axwayvariablesComponentShortName  >}} sites, called store and forward sites. This feature is only
-available from a requester/sender (write-mode transfer). See [Store
+available from a requester/sender (write- mode transfer). See [Store
 and forward mechanism](#Store_and_forward_mechanism_).
 
 <span id="Store_and_forward_site_"></span>
@@ -967,7 +965,7 @@ A transfer owner is associated with each transfer. See ****userid****.
 
 #### Transfer restart:
 
-Protocol-based mechanism whereby a transfer can be restarted at the
+Protocol- based mechanism whereby a transfer can be restarted at the
 point at which it was interrupted. Depending on the protocol used, the
 transfer restarts at the current record (ODETTE) or at the last synchronization
 point acknowledged (PeSIT) prior to the transfer interrupt.
@@ -996,7 +994,7 @@ Transfers can be set to one of six states.
 - ****C****:
     The transfer is in progress (****C****urrent).
 
-<!-- -->
+<!- - - - >
 
 - ****D****:
     The transfer is available (at ****D****isposal)
@@ -1038,7 +1036,7 @@ aim of transferring only those characters that are different.
 
 <span id="Writing_or_write_mode_transfer_"></span>
 
-#### Writing or write-mode transfer:
+#### Writing or write- mode transfer:
 
 For the PeSIT protocol, sending of a file from the requester to the
 server.

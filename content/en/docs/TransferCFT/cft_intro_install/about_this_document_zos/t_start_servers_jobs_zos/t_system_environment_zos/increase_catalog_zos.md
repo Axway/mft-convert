@@ -1,8 +1,8 @@
 ---
-    title: "Increase the catalog size"
-    linkTitle: "Increase the catalog size"
-    weight: 290
----You can increase the catalog size either dynamically or statically as described below.
+title: "Increase the catalog size"
+linkTitle: "Increase the catalog size"
+weight: 290
+--- You can increase the catalog size either dynamically or statically as described below.
 
 ## Dynamic mode
 
@@ -46,9 +46,9 @@ For more general information on expanding the catalog, you can refer to the sect
 
 1. Start the INSTALL(CFTCATAL).
 
-### Static mode for multi-node
+### Static mode for multi- node
 
-If you are using a multi-node architecture, use this static mode procedure.
+If you are using a multi- node architecture, use this static mode procedure.
 
 1. Stop all {{< TransferCFT/axwayvariablesComponentLongName >}} nodes and all Copilot servers if not already done.
 1. Save the CATALOG files.
@@ -68,7 +68,7 @@ If you are using a multi-node architecture, use this static mode procedure.
 FNAME = %_ARGV3%%%%_ARGV1%,
 RECNB = %_ARGV2% \*/
 
-/\* or (2) CATALOG MULTI-NODES (No Transfer CFT HABILITATION) \*/
+/\* or (2) CATALOG MULTI- NODES (No Transfer CFT HABILITATION) \*/
 CFTFILE MODE = CREATE,TYPE=CAT,
 
 FNAME = %_ARGV3%%%%_ARGV1%,

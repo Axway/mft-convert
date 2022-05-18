@@ -1,8 +1,8 @@
 ---
-    title: "narchivename"
-    linkTitle: "narchivename"
-    weight: 2110
----### narchivename
+title: "narchivename"
+linkTitle: "narchivename"
+weight: 2110
+--- ### narchivename
 
 ### CFTRECV, RECV
 

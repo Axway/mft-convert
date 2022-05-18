@@ -1,8 +1,8 @@
 ---
-    title: "Filename  conventions"
-    linkTitle: "Filename conventions"
-    weight: 170
----This topic
+title: "Filename  conventions"
+linkTitle: "Filename conventions"
+weight: 170
+--- This topic
 provides examples of filenames, and file naming conventions.
 
 > **Note**
@@ -12,7 +12,7 @@ provides examples of filenames, and file naming conventions.
 
 ## Unauthorized characters
 
-The following characters are system-restricted characters:
+The following characters are system- restricted characters:
 
 - UNIX: /\*? $()
 - Windows: /\\:\*?"&lt;&gt;
@@ -86,14 +86,12 @@ This name includes a root and a version number. According to the case,
 the relative name is converted into an absolute name in different stages
 as shown in the following table.
 
-
 | Command  | Version  | Parameter  | Conversion to an absolute name  |
-| --- | --- | --- | --- |
-| CFTSEND  | 0 or -n  | IMPL=YES  | at the start of the transfer  |
+| - - - | - - - | - - - | - - - |
+| CFTSEND  | 0 or - n  | IMPL=YES  | at the start of the transfer  |
 |   |   | IMPL=NO  | when the request is placed in the catalog  |
-| SEND  |  • be 0 or -n<br/> • specific case of z/OS (MVS) (1) | FNAMEABS=YES  | when the request is placed in the catalog  |
+| SEND  |  • be 0 or - n<br/> • specific case of z/OS (MVS) (1) | FNAMEABS=YES  | when the request is placed in the catalog  |
 |   |   | FNAMEABS=NO  | at the start of the transfer  |
-
 
 \(1\) the version number may be 0 or
 - n and the FNAMEABS parameter must be set to YES. A GDG file is rotated
@@ -106,9 +104,9 @@ the same as the last notation used in the JCL.
 
 ```
 //ST1 EXEC PGM=USER
-//DD1 DD DSN=FIL(-1)
+//DD1 DD DSN=FIL(- 1)
 //ST4 EXEC PGM=CFTUTIL
-   SEND     FNAME=FIL(-1)
+   SEND     FNAME=FIL(- 1)
 ```
 
 ****OpenVMS****
@@ -121,7 +119,7 @@ value of DSN and FNAME is FIL;1.
 > For the &NFVER symbolic
 > variable: the use of &NFVER is only valid if the Transfer CFT is the sender server
 > and the send transfer is implicit (CFTSEND IMPL=YES). In this case, it
-> is possible to send the file version requested by the partner. Use the following parameter format: FNAME=GDGNAME(-&NFVER)
+> is possible to send the file version requested by the partner. Use the following parameter format: FNAME=GDGNAME(- &NFVER)
 
 <span id="Filename__listing_a_directory"></span>
 
@@ -204,13 +202,13 @@ record.
 The FNAME parameter can contain specific symbolic variables, such as
 &PART and &IDF.
 
-The name of the indirection file is preceded by the &lt;file-symb>
+The name of the indirection file is preceded by the &lt;file- symb>
 character specific to each system. In most environments, the ‘#’ symbol
 is used.
 
 > **Note**
 >
-> Refer to the table of platform-specific characters that corresponds to your operating system.
+> Refer to the table of platform- specific characters that corresponds to your operating system.
 
 A catalog entry is created for each file. Each file is transferred in
 the same way as any other file.

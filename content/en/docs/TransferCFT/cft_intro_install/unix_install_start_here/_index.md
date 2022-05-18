@@ -1,8 +1,8 @@
 ---
-    title: "UNIX: Installation and operation"
-    linkTitle: "Installation and operation UNIX"
-    weight: 90
----This section introduces prerequisite information as well as installation and information on operating Transfer CFT in UNIX.
+title: "UNIX: Installation and operation"
+linkTitle: "Installation and operation UNIX"
+weight: 90
+--- This section introduces prerequisite information as well as installation and information on operating Transfer CFT in UNIX.
 
 The information in this section
 may be supplemented, corrected, or even contradicted by the
@@ -39,7 +39,7 @@ The installation section describes prerequisites and how to install, migrate, up
 
 ## UNIX high availability
 
-When installing a cluster for high availability, after enabling the cluster option you must set the multi-node option to NO.
+When installing a cluster for high availability, after enabling the cluster option you must set the multi- node option to NO.
 
 - Using
     AIX with IBM
@@ -62,6 +62,6 @@ When installing a cluster for high availability, after enabling the cluster opti
 
 ![](/Images/TransferCFT/install01_(2).png)
 
-****Multi-node installation****
+****Multi- node installation****
 
 ****![](/Images/TransferCFT/install_multi.png)****

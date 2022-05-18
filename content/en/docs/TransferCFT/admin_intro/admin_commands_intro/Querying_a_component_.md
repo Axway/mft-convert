@@ -1,8 +1,8 @@
 ---
-    title: "Query internal Transfer CFT components"
-    linkTitle: "MQUERY - Querying a component "
-    weight: 290
----This page describes how to use the <span id="MQUERY_command"></span>MQUERY
+title: "Query internal Transfer CFT components"
+linkTitle: "MQUERY - Querying a component "
+weight: 290
+--- This page describes how to use the <span id="MQUERY_command"></span>MQUERY
 command to query the various {{< TransferCFT/axwayvariablesComponentShortName  >}} components.
 
 You can use this command to check transfers that should have started but are blocked, check a scheduled job that has not started, or to provide information when troubleshooting performance issues as shown in the examples below.
@@ -50,13 +50,11 @@ OBJECT = STATS or PROBE
 
 `[ NAME = { CAT   &#124; COMMAND &#124; CRON &#124; DMZ&#124; STAT } ]`
 
-
 | Parameter  |  Description  |
-| --- | --- |
+| - - - | - - - |
 | OBJECT  | Options: <u>CACHE</u> &#124; SYSTEM &#124; STATS &#124; PROBE &#124; TRACE (obsolete)  |
 | NAME  | The options available for the NAME depend on the type of OBJECT to be queried.<br/> If the object = cache (default) then the name can be set to:<br/> • CAT: Query of the catalog cache<br/> • COMMAND: Query of the command cache<br/> • CRON: Query the {{< TransferCFT/axwayvariablesComponentShortName  >}} CRON cache<br/> • DMZ: Query of the DMZ cache<br/> • STAT |
 | CONTENT  | If OBJECT=CACHE then you can select from the following values:<br/> BRIEF&#124; FULL &#124; STAT - or - XMLBRIEF&#124; XMLFULL &#124; RAW |
-
 
 ### Examples
 
@@ -98,8 +96,7 @@ listlog
 CFTI24I \*\*\* 3 COMMAND(S) INTO CACHE
 CFTI24I \*\*\* DATE=28/01/2018 TIME= 18:48:00.00 SWITCH LOG
 CFTI24I \*\*\* DATE=29/01/2018 TIME= 00:05:00.00 PURGE
-CFTI24I \*\*\* DATE=29/01/2018 TIME= 10:57:00.00 SWITCH ACCNT -
-CFTR12I MQUERY Treated for USER userid
+CFTI24I \*\*\* DATE=29/01/2018 TIME= 10:57:00.00 SWITCH ACCNT - CFTR12I MQUERY Treated for USER userid
 ```
 
 ### Displaying internal technical statistics for advanced diagnostic purposes

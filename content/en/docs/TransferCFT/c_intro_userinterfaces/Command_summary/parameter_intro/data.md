@@ -1,8 +1,8 @@
 ---
-    title: "data"
-    linkTitle: "data"
-    weight: 610
----<span id="data"></span>
+title: "data"
+linkTitle: "data"
+weight: 610
+--- <span id="data"></span>
 
 ### data
 

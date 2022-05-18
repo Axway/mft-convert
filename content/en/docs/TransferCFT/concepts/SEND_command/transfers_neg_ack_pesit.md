@@ -1,8 +1,8 @@
 ---
-    title: "Sending a negative acknowledgement "
-    linkTitle: "Sending a NACK"
-    weight: 220
----This topic describes the SEND NACK command, which sends a negative acknowledgement.
+title: "Sending a negative acknowledgement "
+linkTitle: "Sending a NACK"
+weight: 220
+--- This topic describes the SEND NACK command, which sends a negative acknowledgement.
 
 Via negative acknowledgments, the
 final partner signals to the initial sender of the file that application

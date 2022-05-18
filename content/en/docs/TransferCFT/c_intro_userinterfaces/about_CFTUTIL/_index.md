@@ -1,8 +1,8 @@
 ---
-    title: "About the CFTUTIL  interface"
-    linkTitle: "CFTUTIL interface"
-    weight: 110
----CFTUTIL is the command line interface for Transfer CFT. The Transfer
+title: "About the CFTUTIL  interface"
+linkTitle: "CFTUTIL interface"
+weight: 110
+--- CFTUTIL is the command line interface for Transfer CFT. The Transfer
 CFT utility is a program which can be activated in batch or interactive
 mode. The CFTUTIL interface is able to translate Transfer CFT parameter
 setting commands and operating commands.
@@ -25,7 +25,7 @@ The commands which can be interpreted by CFTUTIL are associated with:
 
 The following topics contain additional information on how to set up
 Transfer CFT and incorporate file transfers into application processing
-systems: use of end-of-transfer procedures, symbolic variables, and so
+systems: use of end- of- transfer procedures, symbolic variables, and so
 on.
 
 The typographical conventions used in the Transfer CFT documentation
@@ -65,18 +65,16 @@ In this syntax:
 - file_out is a file
     into which the results of the commands are written
 
-<!-- -->
+<!- - - - >
 
 - ‘file_symb’ designates a character specific to
     each environment. Refer to the Transfer CFT Installation Guide that corresponds
     to your OS.
 
-
 | OS |  file_symb |
-| --- | --- |
+| - - - | - - - |
 | Windows | # |
 | UNIX |  @ |
-
 
 Specifying parameters is optional, the default values are the
 standard input and output respectively.
@@ -89,7 +87,7 @@ On all systems:
 
 - CFTUTIL standard
     input and standard output are equivalent to:
-    -   CFTUTIL ‘file_symb’
+    - CFTUTIL ‘file_symb’
         CFTIN CFTOUT
 - CFTIN and CFTOUT
     are reserved words corresponding to the standard input and output

@@ -1,8 +1,8 @@
 ---
-    title: "Using  the communication area "
-    linkTitle: "Using the communication area"
-    weight: 360
----<span id="Communication_area_structure__End_of_transfer_exit"></span>This topic describes basic rules for the communication area for an end-of-transfer
+title: "Using  the communication area "
+linkTitle: "Using the communication area"
+weight: 360
+--- <span id="Communication_area_structure__End_of_transfer_exit"></span>This topic describes basic rules for the communication area for an end- of- transfer
 type exit.
 
 The interface provides the values used by the communication structure
@@ -10,7 +10,7 @@ before the user function is called. In return, you must supply the parameters
 that {{< TransferCFT/axwayvariablesComponentShortName  >}} requires to update the catalog and, optionally, a comment.
 
 If the user function pointer initialized in the init function contains
-a non-null value, the initialization and user functions are called whenever
+a non- null value, the initialization and user functions are called whenever
 an end of transfer occurs, whether it is normal or abnormal.
 
 If the transfer terminates abnormally, only some of the fields are completed.

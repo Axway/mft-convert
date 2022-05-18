@@ -1,8 +1,8 @@
 ---
-    title: "Certificates"
-    linkTitle: "Certificates"
-    weight: 180
----## Create a PEM certificate for IBM i
+title: "Certificates"
+linkTitle: "Certificates"
+weight: 180
+--- ## Create a PEM certificate for IBM i
 
 For a PEM certificate, you must create a file with a record length equal to the size of the certificate in bytes. You can then upload the certificate to the newly created file.
 

@@ -1,8 +1,8 @@
 ---
-    title: "About exit  lists"
-    linkTitle: "Exit list"
-    weight: 290
----An exit list is an optional component supplied with certain Transfer
+title: "About exit  lists"
+linkTitle: "Exit list"
+weight: 290
+--- An exit list is an optional component supplied with certain Transfer
 CFT products. The Exit list is a file exit designed to allow remote partners to consult
 the {{< TransferCFT/axwayvariablesComponentShortName  >}} server's catalog. The {{< TransferCFT/axwayvariablesComponentShortName  >}}
 Exit list is an EXIT used for consulting the catalog.
@@ -13,7 +13,7 @@ depends on the specific product configuration.
 
 ![](/Images/TransferCFT/exit_list.png)
 
-The following section explains the high-level steps when using an exit
+The following section explains the high- level steps when using an exit
 list.
 
 <span id="Set_the_exit_parameters"></span>
@@ -69,7 +69,7 @@ file may be defined by  either the:
 - Physical name in
     the PARM parameter, *or*
 
-<!-- -->
+<!- - - - >
 
 - Logical name, which
     must be the CFTEXIT object identifier
@@ -97,7 +97,7 @@ The server:
 - Processes the ****Selection criteria**** file
 - Consults the catalog
 - Sends the entries
-    selected from the catalog to the requesting partner as fixed-length records.
+    selected from the catalog to the requesting partner as fixed- length records.
     The selection implicitly chooses only catalog entries concerning this
     partner. This means that
     the Exit list does not allow a partner to consult the transfers sent to

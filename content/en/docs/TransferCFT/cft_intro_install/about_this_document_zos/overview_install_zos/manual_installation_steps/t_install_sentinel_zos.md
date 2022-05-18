@@ -1,31 +1,31 @@
 ---
-    title: "Enable Sentinel and Event Router"
-    linkTitle: "Enable Sentinel and Event Router "
-    weight: 260
----Enabling the Axway Sentinel option for Transfer CFT is generally comprised of the following steps, which you must execute in the order listed:
+title: "Enable Sentinel and Event Router"
+linkTitle: "Enable Sentinel and Event Router "
+weight: 260
+--- Enabling the Axway Sentinel option for Transfer CFT is generally comprised of the following steps, which you must execute in the order listed:
 
 - Install the Event Router
 
-<!-- -->
+<!- - - - >
 
 - Set the Sentinel parameters in the unified configuration file
 
-<!-- -->
+<!- - - - >
 
 - Create a LOGGER type padding file (optional)
-    -   Use the LOGGER in a SYSPLEX
+    - Use the LOGGER in a SYSPLEX
 
-<!-- -->
+<!- - - - >
 
 - Shut down Transfer CFT
 
-<!-- -->
+<!- - - - >
 
 - Restart Transfer CFT
 
 > **Note**
 >
-> Universal Agent installation is necessary only for end-to-end application monitoring.
+> Universal Agent installation is necessary only for end- to- end application monitoring.
 
 ## Procedure
 
@@ -71,7 +71,7 @@ UCONFSET ID=sentinel.TRKTNAME,VALUE=
 - The following message displays in the log when you restart Transfer CFT:
 
 ```
-CFTS31W XTRK Warning No Buffer File(LOGGER file)defined Error Code = -1
+CFTS31W XTRK Warning No Buffer File(LOGGER file)defined Error Code = - 1
 ```
 
 To connect to the Event Router via XFC, manually modify the commands file to activate the appropriate communication mode and comment commands:
@@ -86,7 +86,7 @@ To connect to the Event Router via XFC, manually modify the commands file to act
 
 If the Transfer CFT does not use the same padding file as the Event Router, you must create a padding file. This LOGGER type file should not be shared with other applications.  
 
-The new LOGGER file is a DASD-ONLY type file. Use the JCL SN10CLGR, via the IBM IXCMIAPU utility, to create this file.
+The new LOGGER file is a DASD- ONLY type file. Use the JCL SN10CLGR, via the IBM IXCMIAPU utility, to create this file.
 
 **Example**
 
@@ -114,7 +114,7 @@ SIZE(6000)
 INITSIZE(1200)
 REBUILDPERCENT(30)
 PRELIST(FACIL02,FACIL01)
- 
+
 The following is an example of a logstream definition:
 DEFINE LOGSTREAM NAME(&LGRID)
 STRUCTNAME(&userstr)
@@ -135,13 +135,11 @@ The following table describes the overflow file definition for the Logger file, 
 - TRKSHAREDFILE=YES is MANDATORY when the logger file is shared between the Event Router and applications. Set this to NO if the applications are sending messages directly to the Sentinel server without going through a ER
 - The log structure is ONLY used to define a logger file shared between the partitions of the SYSPLEX, and is NOT referenced in any parameters
 
-
 |   | Event Router  | TRKUTIL  | Transfer CFT 2.7 and later  |
-| --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - |
 | Configuration file  | USEPARIN  | TRKCONF  | UCONF  |
 | Logger file  | (AGENT)<br/> api_file= | TRKTNAME=  | UCONFSET ID=sentinel.TRKTNAME, VALUE=xxxx.xxxx.xxx  |
-| - " -  | - " -  | TRKSHAREDFILE=YES  | UCONFSET ID=sentinel.TRKSHAREDFILE,VALUE=YES  |
-
+| - " - | - " - | TRKSHAREDFILE=YES  | UCONFSET ID=sentinel.TRKSHAREDFILE,VALUE=YES  |
 
 <span id="Communication with the Event Router"></span>
 
@@ -152,20 +150,18 @@ The following parameters define communication with the Event Router via XCF. In 
 - The XCF definition (queue=xxxx) is the XCF member name representing the ER server
 - The XCF group is PELISCOP by default. You can modify this default by setting queue = “member group”
 
-
 |   | Event Router  | TRKUTIL  | Transfer CFT 2.6.x  |
-| --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - |
 | Configuration file  | USEPARIN  | TRKCONF  | UCONF  |
 | SVC  | (SYSTEM)<br/> svc_nb=nnn | TRKSVC=nnn  | UCONFSET ID=sentinel.TRKSVC,VALUE=nnn  |
 | XCF definition  | (AGENT)queue=  | TRKQUEUE=  | UCONFSET ID=sentinel.TRKQUEUE,VALUE=xxxx  |
 | XCF definition  | (AGENT)queue=  | TRKTYPE=XCF  | UCONFSET ID=sentinel.TRKTYPE,VALUE=XCF  |
 
+<span id="Modify the Transfer CFT start- up procedure"></span>
 
-<span id="Modify the Transfer CFT start-up procedure"></span>
+### Modify the Transfer CFT start- up procedure
 
-### Modify the Transfer CFT start-up procedure
-
-During the start-up procedure, the task dedicated to managing messages towards Sentinel allocates a sysout (ddname=TRKOUT) for any generated error messages or traces.
+During the start- up procedure, the task dedicated to managing messages towards Sentinel allocates a sysout (ddname=TRKOUT) for any generated error messages or traces.
 
 <span id="Register configuration file values"></span>
 
@@ -183,11 +179,11 @@ Possible values:
 
 - TRKTMODE=I: Immediate, default value
 
-<!-- -->
+<!- - - - >
 
 - TRKTMODE=D: Differed, the messages are stored to the buffer file
 
-<!-- -->
+<!- - - - >
 
 - TRKTMODE=R: Retry, enables the management of a sending delay via a parameter TRKTCONNRETRY=nn in case of a connection problem with SENTINEL
 
@@ -199,13 +195,13 @@ The system will assign one of the Ephemeral Port range (default is 1024 - 65535)
 
 Command: uconfset id='sentinel.trk_min_port',value=0
 
-### End-to-End monitoring examples
+### End- to- End monitoring examples
 
-The following JCLs are available as end-to-end monitoring examples:
+The following JCLs are available as end- to- end monitoring examples:
 
 - SNTLCFT: The deposit of a file transfer command via the CFTUTIL utility, with the same CycleID as generated by the TRKUTIL SENDEVENT command. This is available in the INSTALL library.
 
-<!-- -->
+<!- - - - >
 
 - SNTLEXEC: The end of transfer procedure, associating an acknowledgement via the CFTUTIL utility and the ‘COMPUTEIDENT’, ‘SENDEVENT’, and ‘SENDCYCLE’ TRKUTIL command. This is available in the EXEC library.
 

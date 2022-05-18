@@ -1,8 +1,8 @@
 ---
-    title: "config"
-    linkTitle: "config"
-    weight: 490
----<span id="config"></span>
+title: "config"
+linkTitle: "config"
+weight: 490
+--- <span id="config"></span>
 
 ### config
 

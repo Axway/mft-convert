@@ -1,8 +1,8 @@
 ---
-    title: "pkifname"
-    linkTitle: "pkifname"
-    weight: 2620
----<span id="pkifname"></span>
+title: "pkifname"
+linkTitle: "pkifname"
+weight: 2620
+--- <span id="pkifname"></span>
 
 ### pkifname
 
@@ -29,9 +29,5 @@ Name of the local certificate internal datafile in which the operation is to
 be performed. On each OS a default name is assigned to the local certificate
 database. The logical filename ****&CFTPKU****
 can be used.
-
- 
-
- 
 
 [Return to Command index](../../)

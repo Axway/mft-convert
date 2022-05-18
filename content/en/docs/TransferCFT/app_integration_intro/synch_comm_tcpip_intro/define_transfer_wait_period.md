@@ -1,8 +1,8 @@
 ---
-    title: "Wait for the catalog value to reach a state - SWAITCAT"
-    linkTitle: "Using the SWAITCAT command"
-    weight: 270
----The SWAITCAT command enables a client to wait until
+title: "Wait for the catalog value to reach a state - SWAITCAT"
+linkTitle: "Using the SWAITCAT command"
+weight: 270
+--- The SWAITCAT command enables a client to wait until
 a given transfer reaches a particular predefined phase, phasestep, or state before acting.
 
 ****Command syntax: [SWAITCAT](../../../c_intro_userinterfaces/command_summary)****
@@ -112,9 +112,9 @@ VALUE can be anything between double " or two single ' ' quotes.
 
 The Phases parameter is a string that can be composed of A, T, Y, Z, X and waits on the expected final phase.
 
-- \(A\) Pre-processing: All pre-transfer script execution occurs here
+- \(A\) Pre- processing: All pre- transfer script execution occurs here
 - \(T\) Transferring: All transfer execution occurs in this phase
-- \(Y\) Post-processing: All post-transfer script execution occurs here
+- \(Y\) Post- processing: All post- transfer script execution occurs here
 - \(Z\) Acknowledgement: Acknowledgement reception/send steps and ack script execution occur here
 - \(X\) Done: End condition when all of the previous phases are completed
 
@@ -127,7 +127,7 @@ The Phasesteps parameter is a string that can be composed of D, H, C, K, X, E an
 - \(C\) Processing/Current: The Phase processing is being executed.
 - \(R\) Retry: Retries renaming the file using the `FACTION retryrename `value.
 - \(X\) Done: This phase step only exists for the Done phase, once all previous phases are complete.
-- \(E\) Exit EOT: This phase step only exists for the Post-processing phase, to signal an [end-of-transfer exit](../../managing_exits/about_the_end_of_transfer_type_exit).
+- \(E\) Exit EOT: This phase step only exists for the Post- processing phase, to signal an [end- of- transfer exit](../../managing_exits/about_the_end_of_transfer_type_exit).
 
 ### States
 
@@ -146,7 +146,7 @@ Possible values for the states parameter are:
     reached the X state
 - XA: the transfer
     reached the X state and is acknowledged
-- Y: the transfer completed the post-processing phase
+- Y: the transfer completed the post- processing phase
 - Z: the transfer completed the acknowledged phase
 - N: the transfer completed and received a negative acknowledgment
 
@@ -173,7 +173,7 @@ SWAITCAT select='state=="D"',states=TX
 
 ```
 config type=com,mediacom=tcpip,fname=xhttp://localhost:1765
- 
+
 send part=paris,ida=batch_proccesing,idf=t1
 char name=idtu1,init=%_CAT_IDTU%
 send part=paris,ida=batch_proccesing,idf=t2
@@ -186,9 +186,9 @@ swaitcat select='IDTU=="%idtu1%"',phases=X,phasesteps=X
 swaitcat select='IDTU=="%idtu2%"',phases=X,phasesteps=X
 swaitcat select='IDTU=="%idtu3%"',phases=X,phasesteps=X
 swaitcat select='IDTU=="%idtu4%"',phases=X,phasesteps=X
- 
+
 PRINT MSG='batch processing completed with ERROR = %_CMDRET%'
- 
+
 Output
 CFTU00I CONFIG _ Correct (type=com,mediacom=tcpip,fname=xhttp://localhost:1765)
 CFTU00I SEND _ Correct (IDT=B1817083 IDTU=A000008N )
@@ -211,6 +211,6 @@ CFTU00I SWAITCAT _ Correct (SWAITCAT_OK: reached phase X, phasestep X, state X)
 CFTU00I SWAITCAT _ Correct (select='IDTU=="A000008R"',phases=X,phasesteps=X)
 CFTU00I SWAITCAT _ Correct (SWAITCAT_OK: reached phase X, phasestep X, state X)
 CFTU00I SWAITCAT _ Correct (select='IDTU=="A000008T"',phases=X,phasesteps=X)
- 
+
 batch processing completed with ERROR = 0
 ```

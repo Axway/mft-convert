@@ -1,10 +1,9 @@
 ---
-    title: "IFS access error codes: DIAGP"
-    linkTitle: "IFS access error codes: DIAGP"
-    weight: 240
----
-| Error code  | Description  |
-| --- | --- |
+title: "IFS access error codes: DIAGP"
+linkTitle: "IFS access error codes: DIAGP"
+weight: 240
+--- | Error code  | Description  |
+| - - - | - - - |
 | 1  | Kernel error  |
 | 13  | Invalid key  |
 | 14  | Invalid record address  |

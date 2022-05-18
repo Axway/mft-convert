@@ -1,8 +1,8 @@
 ---
-    title: "sndindfileerr"
-    linkTitle: "sndindfileerr"
-    weight: 3230
----<span id="sndindfileerr"></span>
+title: "sndindfileerr"
+linkTitle: "sndindfileerr"
+weight: 3230
+--- <span id="sndindfileerr"></span>
 
 ### sndindfileerr
 
@@ -10,7 +10,7 @@
 
 **[SNDINDFILEERR= <u>CONTINUE</u> &#124; ABORT ]**
 
-Use this parameter to define the policy for a group-of-files of transfer to address an overflow issue if there is an error.
+Use this parameter to define the policy for a group- of- files of transfer to address an overflow issue if there is an error.
 
 Parameter values:
 

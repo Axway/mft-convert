@@ -1,8 +1,8 @@
 ---
-    title: "Communication media - CFTCOM  "
-    linkTitle: "CFTCOM - Communication media"
-    weight: 300
----This topic describes the CFTCOM object and parameters. You can use this
+title: "Communication media - CFTCOM  "
+linkTitle: "CFTCOM - Communication media"
+weight: 300
+--- This topic describes the CFTCOM object and parameters. You can use this
 command to define the communication media used by Transfer CFT.
 
 ****Related
@@ -71,16 +71,14 @@ parameter.
 This table describes the parameters to define the CFTCOM object when the communication
 type is TCPIP.
 
-
 | Parameters  | Description  |
-| --- | --- |
+| - - - | - - - |
 | [HOST](../../../command_summary/parameter_intro/host) | Networking IP address of the local resource. |
 | [ID](../../../command_summary/parameter_intro/id)  | Identifier of the CFTCOM object. |
 | [MODE](../../../command_summary/parameter_intro/mode) | Action to do in the parameter or partner base. This parameter applies to all commands that affect CFT bases. |
 | [PORT](../../../command_summary/parameter_intro/port) | Listening port of the network. |
 | [PROTOCOL](../../../command_summary/parameter_intro/protocol) | Defines the remote TCP network resource |
 | [TYPE](../../../command_summary/parameter_intro/type) | Transfer CFT communication means. |
-
 
 <span id="Defining_CFTCOM_FILE"></span>
 
@@ -89,9 +87,8 @@ type is TCPIP.
 This table describes the parameters to define the CFTCOM object when the communication
 type is FILE.
 
-
 | Parameters  | Description  |
-| --- | --- |
+| - - - | - - - |
 | [ID](../../../command_summary/parameter_intro/id)  | Identifier of the CFTCOM command. |
 | [MODE](../../../command_summary/parameter_intro/mode) | Action to do in the parameter or partner base. This parameter applies to all commands that affect Transfer CFT bases. |
 | [TLVCEXEC](../../../command_summary/parameter_intro/tlvcexec)  | Batch to execute when the alert ends.  |
@@ -101,7 +98,6 @@ type is FILE.
 | [TLVWRATE](../../../command_summary/parameter_intro/tlvwrate)  | The minimum amount of time, in seconds, to wait before resending an alert.  |
 | [TYPE](../../../command_summary/parameter_intro/type)  | Transfer CFT communication means. |
 | [WSCAN](../../../command_summary/parameter_intro/wscan) | The frequency, in seconds, with which the Transfer CFT scans the communication file. |
-
 
 ****Example****
 

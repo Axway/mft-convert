@@ -1,8 +1,8 @@
 ---
-    title: "nfname"
-    linkTitle: "nfname"
-    weight: 2200
----<span id="nfname"></span>
+title: "nfname"
+linkTitle: "nfname"
+weight: 2200
+--- <span id="nfname"></span>
 
 ### nfname
 

@@ -1,8 +1,8 @@
 ---
-    title: "CFTUTIL predefined variables"
-    linkTitle: "CFTUTIL predefined variables"
-    weight: 290
----A number of variables are predefined in CFTUTIL for the catalog fields. These variables can be used in all of the batch programming commands.
+title: "CFTUTIL predefined variables"
+linkTitle: "CFTUTIL predefined variables"
+weight: 290
+--- A number of variables are predefined in CFTUTIL for the catalog fields. These variables can be used in all of the batch programming commands.
 
 Each variable begins with the underscore character _. For example, to display the IDTU value of a transfer, specify:
 
@@ -10,9 +10,8 @@ Each variable begins with the underscore character _. For example, to display th
 PRINT MSG='Transfer IDTU value: %_CAT_IDTU%'
 ```
 
-
 | Variable  | Description  |
-| --- | --- |
+| - - - | - - - |
 | _CAT_CFTV  | Catalog version.  |
 | _CAT_COMMENT  | Comment associated with the IDF.  |
 | _CAT_DATEB  | Transfer start date.  |

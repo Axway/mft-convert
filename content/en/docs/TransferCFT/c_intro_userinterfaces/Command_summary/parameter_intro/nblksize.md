@@ -1,8 +1,8 @@
 ---
-    title: "nblksize"
-    linkTitle: "nblksize"
-    weight: 2100
----<span id="nblksize"></span>
+title: "nblksize"
+linkTitle: "nblksize"
+weight: 2100
+--- <span id="nblksize"></span>
 
 ### nblksize
 
@@ -25,7 +25,7 @@ the partner supports the block size concept.
 Enter one of the following values:
 
 - the
-    value of fblksize (see the z/OS (MVS)-specific
+    value of fblksize (see the z/OS (MVS)- specific
     tab)
 - a value from 0 to 65535
 

@@ -1,8 +1,8 @@
 ---
-    title: "rh"
-    linkTitle: "rh"
-    weight: 2940
----<span id="rh"></span>
+title: "rh"
+linkTitle: "rh"
+weight: 2940
+--- <span id="rh"></span>
 
 ### rh
 
@@ -12,7 +12,5 @@
 
 Number of days after which the catalog entries of "unterminated"
 receive requests (H or K state) are automatically purged.
-
- 
 
 [Return to Command index](../../)

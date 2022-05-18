@@ -1,8 +1,8 @@
 ---
-    title: "prog"
-    linkTitle: "prog"
-    weight: 2740
----<span id="prog"></span>
+title: "prog"
+linkTitle: "prog"
+weight: 2740
+--- <span id="prog"></span>
 
 ### prog
 
@@ -21,13 +21,11 @@ module names are recommended:
 - ****CFTEXA****
     for a directory type EXIT
 - ****CFTEXE****
-    for an end-of-transfer type EXIT
+    for an end- of- transfer type EXIT
 - ****CFTEXF****
     for a file type EXIT
 
 If you define more than one EXIT, you can add two characters to the
 name to assign a sequential number (for example: CFTEXA01).
-
- 
 
 [Return to Command index](../../)

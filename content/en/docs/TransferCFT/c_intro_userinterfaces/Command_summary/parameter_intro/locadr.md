@@ -1,8 +1,8 @@
 ---
-    title: "locadr"
-    linkTitle: "locadr"
-    weight: 1800
----<span id="locadr"></span>
+title: "locadr"
+linkTitle: "locadr"
+weight: 1800
+--- <span id="locadr"></span>
 
 ### locadr
 

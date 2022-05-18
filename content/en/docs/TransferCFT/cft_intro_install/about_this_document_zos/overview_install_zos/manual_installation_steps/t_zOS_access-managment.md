@@ -1,8 +1,8 @@
 ---
-    title: "Define internal access management"
-    linkTitle: "Define internal access management"
-    weight: 280
----This section describes the OS specific settings required to enable internal access management. As a prerequisite, you must read and be familiar with the [Internal access management](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/internal_access_mgt/internal_a_m_start_here.htm) information in the *Transfer CFT User Guide*.
+title: "Define internal access management"
+linkTitle: "Define internal access management"
+weight: 280
+--- This section describes the OS specific settings required to enable internal access management. As a prerequisite, you must read and be familiar with the [Internal access management](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/internal_access_mgt/internal_a_m_start_here.htm) information in the *Transfer CFT User Guide*.
 
 ## About internal AM
 
@@ -36,10 +36,10 @@ RDEFINE FACILITY IRR.RADMIN.SETROPTS.LIST UACC(READ)
 If you defined the previous facilities as UACC(NONE), you must set READ rights each Transfer CFT user.
 
 ```
-PERMIT IRR.RADMIN.LISTUSER -CLASS(FACILITY) ACCESS(READ) ID(user)
-PERMIT IRR.RADMIN.LISTGRP -CLASS(FACILITY) ACCESS(READ) ID(user)
-PERMIT IRR.RADMIN.RLIST -CLASS(FACILITY) ACCESS(READ) ID(user)
-PERMIT IRR.RADMIN.SETROPTS.LIST -CLASS(FACILITY) ACCESS(READ) ID(user)
+PERMIT IRR.RADMIN.LISTUSER - CLASS(FACILITY) ACCESS(READ) ID(user)
+PERMIT IRR.RADMIN.LISTGRP - CLASS(FACILITY) ACCESS(READ) ID(user)
+PERMIT IRR.RADMIN.RLIST - CLASS(FACILITY) ACCESS(READ) ID(user)
+PERMIT IRR.RADMIN.SETROPTS.LIST - CLASS(FACILITY) ACCESS(READ) ID(user)
 ```
 
 In Transfer CFT, set the `group_database` to `system`.
@@ -54,21 +54,19 @@ With the **SAF class** method of access management, you define the mapping betwe
 
 When the access management method is **SAF class**, each user role is associated with a security resource (RACF, TSS, ACF2). You can set the name of the resource in the corresponding UCONF variable using the user norms in the table below.
 
-
 | Example resource name  | UCONF variable/role  | Access to resource  |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | CFT.ROLE.ADMIN  | am.internal.role.admin  | READ  |
 | CFT.ROLE.OPERATOR  | am.internal.role.helpdesk  | READ  |
 | CFT.ROLE.PARTNER  | am.internal.role.partnermanager  | READ  |
 | CFT.ROLE.DESIGNER  | am.internal.role.designer  | READ  |
 | CFT.ROLE.TRANSFER  | am.internal.role.application  | READ  |
 
-
 ```
 UCONFSET ID=am.internal.group_database,value=safclass
 UCONFSET ID=am.internal.safclass,value='Class
 ' (the class resource must be available)
- 
+
 For each ROLE (the following are examples, replace with your own values):
 
 > RDEFINE Class CFT.ROLE.ADMIN UACC(NONE) OWNER(...)
@@ -77,13 +75,11 @@ For each ROLE (the following are examples, replace with your own values):
 > RDEFINE Class CFT.ROLE.DESIGNER UACC(NONE) OWNER(...)
 > RDEFINE Class CFT.ROLE.TRANSFER UACC(NONE) OWNER(...)
 
- 
 Authorize users or groups: (RACF sample)
 
 > PERMIT CFT.ROLE.ADMIN CLASS(Class) ACCESS(READ) ID(USER001)
 > PERMIT CFT.ROLE.TRANSFER CLASS(Class) ACCESS(READ) ID(USER002)
 
- 
 NOTE: ACCESS must be set to READ
 .
 ```

@@ -1,8 +1,8 @@
 ---
-    title: "REST API server configuration"
-    linkTitle: "REST API server configuration"
-    weight: 300
----Before you can start using REST API operations with {{< TransferCFT/suitevariablesTransferCFTName  >}}, you need to set a few parameters in the {{< TransferCFT/suitevariablesTransferCFTName  >}} configuration.
+title: "REST API server configuration"
+linkTitle: "REST API server configuration"
+weight: 300
+--- Before you can start using REST API operations with {{< TransferCFT/suitevariablesTransferCFTName  >}}, you need to set a few parameters in the {{< TransferCFT/suitevariablesTransferCFTName  >}} configuration.
 
 ## Before you start
 
@@ -30,7 +30,7 @@ The REST server is a Copilot service. To start the REST server, use the `copsta
     CFTUTIL uconfset id=copilot.ssl.SslCertFile, value=<ssl pkcs12 certificate for copilot>
     CFTUTIL uconfset id=copilot.ssl.SslCertPassword, value=<ssl pkcs12 certificate password>
     ```
-      
+
     These parameter settings are described in [Install a certificate on the server side](../../../../admin_intro/manage_copilot#Install).  
 
 1. Specify the authentication method, as the client must provide credentials (user/password) to the REST server. Set the UCONF the `copilot.restapi.authentication_method` parameter.  
@@ -43,13 +43,11 @@ The REST server is a Copilot service. To start the REST server, use the `copsta
 
 The supported authentication methods are:
 
-
 | Authentication method  | copilot.restapi.authentication_method  | Details  |
-| --- | --- | --- |
-| Operating System  | system  | The user/password is checked against the operating system.<br/> <blockquote> **Note**<br/> We strongly recommend that you set copilot.misc.createprocessasuser=yes when using the system option.<br/> </blockquote> **Unix**<br/> You must use <code>cftsu </code>to create users as a superuser is required (sudo or root privilege) to create a group and assign a user to a group. Refer to [Using system users - UNIX](../../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/t_adding_system_user_unix) for details.<br/> • Create a group "group1": groupadd group1<br/> • Add user "user1" to group "group1": usermod -a -G group1 user1<br/> **Windows**<br/> You require a superuser (administrative user account) to create a group and assign a user to a group.<br/> • Create a group "group1": net localgroup group1 /add<br/> • Add user "user1" to group "group1": net localgroup group1 user1 /add<br/> <blockquote> **Note**<br/> For a user belonging to a domain, use: domain\user1 instead of user1<br/> </blockquote>  |
+| - - - | - - - | - - - |
+| Operating System  | system  | The user/password is checked against the operating system.<br/> <blockquote> **Note**<br/> We strongly recommend that you set copilot.misc.createprocessasuser=yes when using the system option.<br/> </blockquote> **Unix**<br/> You must use <code>cftsu </code>to create users as a superuser is required (sudo or root privilege) to create a group and assign a user to a group. Refer to [Using system users - UNIX](../../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/t_adding_system_user_unix) for details.<br/> • Create a group "group1": groupadd group1<br/> • Add user "user1" to group "group1": usermod - a - G group1 user1<br/> **Windows**<br/> You require a superuser (administrative user account) to create a group and assign a user to a group.<br/> • Create a group "group1": net localgroup group1 /add<br/> • Add user "user1" to group "group1": net localgroup group1 user1 /add<br/> <blockquote> **Note**<br/> For a user belonging to a domain, use: domain\user1 instead of user1<br/> </blockquote>  |
 | Access Management  | am  | This methods uses an indirection towards the Access Management system. The user/password is checked by the configured access management system: {{< TransferCFT/suitevariablesFlowManager  >}}, PassPort AM, or internal AM. |
-| xfbadm database<br/> (UNIX and HP NonStop exclusively) | xfbadm  | The user/password is checked using the xfbadm base (see the [xfbadmusr and xfbadmgrp utilities](../../../../cft_intro_install/unix_install_start_here/run_first_time_ux/use_cft_utilities)).<br/> A user that can execute xfbadmusr/xfbadmgrp utilities can create users and groups after executing the <code>profile </code>from the runtime directory.<br/> • Create a group "group1" with gid=200: xfbadmgrp add -G group1 -p group1_pw -g 200<br/> • From the user prompt, to add a user "user1" to group "group1"enter: xfbadmusr add -l user1 -p user1_pw -u AUTO -g 200 |
-
+| xfbadm database<br/> (UNIX and HP NonStop exclusively) | xfbadm  | The user/password is checked using the xfbadm base (see the [xfbadmusr and xfbadmgrp utilities](../../../../cft_intro_install/unix_install_start_here/run_first_time_ux/use_cft_utilities)).<br/> A user that can execute xfbadmusr/xfbadmgrp utilities can create users and groups after executing the <code>profile </code>from the runtime directory.<br/> • Create a group "group1" with gid=200: xfbadmgrp add - G group1 - p group1_pw - g 200<br/> • From the user prompt, to add a user "user1" to group "group1"enter: xfbadmusr add - l user1 - p user1_pw - u AUTO - g 200 |
 
 ********<span id="REST"></span>REST API server authentication method********
 
@@ -63,9 +61,8 @@ The supported authentication methods are:
 >
 > 2\. If copilot.restapi.authentication_method = xbfadm, then your access management type must be set to either am.type= none, or both am.type=internal and am.internal.group_database = xbfadm.
 
-
 | Parameter  | Type  | Default  | Description  |
-| --- | --- | --- | --- |
+| - - - | - - - | - - - | - - - |
 | copilot.restapi.enable  | bool  | No  | Enable/disable the REST API service:<br/> • Yes: enable<br/> • No: disable |
 | copilot.restapi.serverport  | int  | 1768  | REST API server port. |
 | copilot.restapi.authentication_method  | string  | system (Windows)<br/> xfbadm (UNIX) | Defines authentication method.<br/> <br/> See also, [xfbadmusr utilitiy.](../../../../cft_intro_install/unix_install_start_here/run_first_time_ux/use_cft_utilities#xfbadmusr1) |

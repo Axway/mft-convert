@@ -1,8 +1,8 @@
 ---
-    title: "CFTPARM  - General parameters"
-    linkTitle: "General parameters - CFTPARM"
-    weight: 170
----The <span id="Defining_CFTPARM"></span>CFTPARM object is used to specify parameters
+title: "CFTPARM  - General parameters"
+linkTitle: "General parameters - CFTPARM"
+weight: 170
+--- The <span id="Defining_CFTPARM"></span>CFTPARM object is used to specify parameters
 that control the operation of Transfer CFT as a whole and to select other
 parameter setting commands to be used at run time. The [Symbolic variables](../../../command_summary/symbolic_variables) topic describes
 how symbolic variables can be used in the identification and in the body
@@ -29,9 +29,8 @@ Use this command to:
     the other parameter setting commands which should be taken into account
     during execution
 
-
 | Parameter  | Description  |
-| --- | --- |
+| - - - | - - - |
 | [CFTACCNT](../../../command_summary/parameter_intro/accnt)). |
 | [see table](../../../command_summary/parameter_intro/bufsize)  | Size of the monitor internal buffer used to exchange data between monitor tasks, expressed in characters in bytes. |
 | [Defining the catalog parameters](../../../command_summary/parameter_intro/cat)). |
@@ -47,10 +46,10 @@ Use this command to:
 | [EXECSFA](../../../command_summary/parameter_intro/execsfa)  | Generic name of the file describing the procedures to be executed on receiving an acknowledgement (REPLY type message), following the sending of a file. |
 | [EXECSM](../../../command_summary/parameter_intro/execsm)  | Generic name of the file describing the procedures to be executed on completion of the sending of a message. |
 | [EXECSMA](../../../command_summary/parameter_intro/execsma)  | Generic name of the file describing the procedures to be executed on receiving an acknowledgement, REPLY type message, following the sending of a message. |
-| [EXITBOT]()  | EXIT identifier. To activate a beginning-of-transfer EXIT task, this identifier must point to a CFTEXIT command. |
-| [EXITEOT](../../../command_summary/parameter_intro/exiteot) | EXIT identifier. To activate an end-of-transfer EXIT task, this identifier must point to a CFTEXIT command. |
+| [EXITBOT]()  | EXIT identifier. To activate a beginning- of- transfer EXIT task, this identifier must point to a CFTEXIT command. |
+| [EXITEOT](../../../command_summary/parameter_intro/exiteot) | EXIT identifier. To activate an end- of- transfer EXIT task, this identifier must point to a CFTEXIT command. |
 | [ID](../../../command_summary/parameter_intro/id)  | Identifier of the CFTPARM command. |
-| [KEY](../../../command_summary/parameter_intro/key)  | The name of the indirection file preceded by the &lt;file-symb&gt; character, which is system specific, and containing the set of keys associated with the Transfer CFT. |
+| [KEY](../../../command_summary/parameter_intro/key)  | The name of the indirection file preceded by the &lt;file- symb&gt; character, which is system specific, and containing the set of keys associated with the Transfer CFT. |
 | [LENAPPL](../../../command_summary/parameter_intro/lenappl) | Length to be taken into account when comparing the file/message identifier, IDF or IDM, with the identifier of a CFTAPPL command.<br/> See, Security concepts: Start here. |
 | [LOG](../../../command_summary/parameter_intro/log) | Identifier of the monitor event log file description command CFTLOG.<br/> If this parameter is not defined, the Transfer CFT writes logging messages to the standard output of the monitor. |
 | [MAXTASK](../../../command_summary/parameter_intro/maxtask)  | Number of file access tasks authorized. |
@@ -69,7 +68,6 @@ Use this command to:
 | [USERCTRL](../../../command_summary/parameter_intro/userctrl) | Transferred file access control option. |
 | [see table](../../../command_summary/parameter_intro/waitresp) | Timeout in seconds used during internal communication between monitor tasks.<br/> This parameter is used during a synchronous exchange of requests between two monitor tasks. After waitresp seconds without reply, the timeout is interrupted. A message CFTS09 is written in the log. The task in question is then stopped, CFTTCOM task, for example.<br/> During the initialization phase, this parameter checks the time allowed for each of the Transfer CFT monitor tasks to start. In the event of an insufficient value (case of a highly loaded computer), the Transfer CFT monitor initialization stops.<br/> The following table indicates the default value for each system. |
 | [WAITTASK](../../../command_summary/parameter_intro/waittask)  | Time during which a file access task is inactive in minutes before being shut down. |
-
 
 <span id="Changing_the_initial_IDPARM_in_CFTUTIL"></span>
 

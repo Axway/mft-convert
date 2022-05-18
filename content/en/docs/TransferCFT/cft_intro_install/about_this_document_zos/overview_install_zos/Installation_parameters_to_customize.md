@@ -1,8 +1,8 @@
 ---
-    title: "Start A00CUSTO to customize installation files"
-    linkTitle: " Customize installation files (A00CUSTO)"
-    weight: 200
----<span id="Customizing JCL A00CUSTO parameters"></span><span id="kanchor76"></span>
+title: "Start A00CUSTO to customize installation files"
+linkTitle: " Customize installation files (A00CUSTO)"
+weight: 200
+--- <span id="Customizing JCL A00CUSTO parameters"></span><span id="kanchor76"></span>
 
 ## Customize JCL A00CUSTO parameters
 
@@ -14,13 +14,11 @@ The A00CUSTO JOB customizes the installation files. The customization is done di
 >
 > Do NOT customize the distribution environment.
 
-
 | Variables  | Description  |
-| --- | --- |
+| - - - | - - - |
 | CFTV2 | Prefix of the Transfer CFT instance environment. |
 | DISTLIB | Three first qualifiers of the distribution environment.<br/> Example: Axway.XFB.CFT00332 |
 | DISTLEV | Fourth qualifier of the distribution environment (level of distribution)<br/> Example: CF030000 |
-
 
 You can repeat A00CUSTO several times to customize any parameters that were not customized.
 

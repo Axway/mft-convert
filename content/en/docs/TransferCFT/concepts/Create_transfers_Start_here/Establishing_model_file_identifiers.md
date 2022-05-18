@@ -1,8 +1,8 @@
 ---
-    title: "Establishing  model file identifiers"
-    linkTitle: "Establishing model file identifiers"
-    weight: 240
----The mechanisms described in [Model file and physical file
+title: "Establishing  model file identifiers"
+linkTitle: "Establishing model file identifiers"
+weight: 240
+--- The mechanisms described in [Model file and physical file
 concepts](../model_and_physical_file_concepts) assume an equality between the local IDF and the
 IDF agreed upon between the partners.
 
@@ -20,7 +20,7 @@ following states:
 - Receiver requester
 - Sender server
 - Receiver/Requester
-    in selective-receive mode
+    in selective- receive mode
 
 This mechanism, for establishing an IDF, is based on the principle described
 in the figure below.
@@ -28,8 +28,6 @@ in the figure below.
 **Mechanism principle**
 
 ![](/Images/TransferCFT/Mechanism_principle.gif)
-
- 
 
 The correspondence between the locally known IDF and the NIDF sent or
 received can be established:
@@ -250,7 +248,7 @@ for a received NIDF**
 
 <span id="Receiver_Requester_in_selective_receive_mode"></span>
 
-## Receiver/Requester in selective-receive mode
+## Receiver/Requester in selective- receive mode
 
 **This
 scenario is only applicable between two {{< TransferCFT/axwayvariablesComponentShortName  >}}s using
@@ -281,7 +279,7 @@ This local IDF may be used to assign a name to the file received as
 indicated in the following example.
 
 **Requester end CFTIDF with an NIDF equal
-to the received NIDF received -  server
+to the received NIDF received - server
 end has unlocked transfers**
 
 ![](/Images/TransferCFT/CFTIDF_NIDF_equal_NIDF_rec_serverunlocked.gif)
@@ -302,7 +300,7 @@ The value of the CFTPROT IDF parameter may also be defined with an explicit
 value.
 
 In the example below, the local IDF value is defined by the substring
-mechanism. The corresponding character string is the 2-character sub-string
+mechanism. The corresponding character string is the 2- character sub- string
 extracted from the 11th character onwards of the NIDF string received.
 
 **Local IDF defined by the CFTPROT IDF**

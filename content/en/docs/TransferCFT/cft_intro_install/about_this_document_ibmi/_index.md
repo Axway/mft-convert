@@ -1,8 +1,8 @@
 ---
-    title: "IBM i: Installation and Operation"
-    linkTitle: "Installation and operation IBM i"
-    weight: 120
----This documentation provides information to aide you in installing, updating, upgrading, or migrating {{< TransferCFT/axwayvariablesComponentShortName  >}}.
+title: "IBM i: Installation and Operation"
+linkTitle: "Installation and operation IBM i"
+weight: 120
+--- This documentation provides information to aide you in installing, updating, upgrading, or migrating {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
 For more information on Axway products, visit [www.axway.com](https://www.axway.com/en).
 
@@ -22,7 +22,7 @@ This guide explains how to perform a full installation of {{< TransferCFT/axwayv
 
 **Uninstall** – Describes how you can uninstall {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
-**Troubleshoot the installation or registration process** – Describes the different types of troubleshooting errors you can encounter during installation, upgrade and post-installation.
+**Troubleshoot the installation or registration process** – Describes the different types of troubleshooting errors you can encounter during installation, upgrade and post- installation.
 
 ## About IBM i nomenclature
 

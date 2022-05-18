@@ -1,8 +1,8 @@
 ---
-    title: "Transfer CFT parameter settings"
-    linkTitle: "Transfer CFT parameter settings"
-    weight: 260
----A communication media must be configured before starting {{< TransferCFT/axwayvariablesComponentShortName  >}}. The CFTCOM command defines the communication medium and its attributes (medium type, name, etc.).
+title: "Transfer CFT parameter settings"
+linkTitle: "Transfer CFT parameter settings"
+weight: 260
+--- A communication media must be configured before starting {{< TransferCFT/axwayvariablesComponentShortName  >}}. The CFTCOM command defines the communication medium and its attributes (medium type, name, etc.).
 
 ```
 CFTCOM
@@ -22,7 +22,7 @@ The following service requests are specific to TCP/IP:
 
 - GETXINFO retrieves the report and information relating to the last transfer request (SEND or RECV).
 
-<!-- -->
+<!- - - - >
 
 - CLOSEAPI frees system resources allocated by the command API.
 
@@ -30,7 +30,7 @@ To implement TCP/IP communication, you must:
 
 - Configure Transfer CFT (CFTCOM command)
 
-<!-- -->
+<!- - - - >
 
 - Set the API command parameters (COM function)
 
@@ -47,11 +47,11 @@ A configuration file is a text file. It contains lines of instructions with one 
 The following two parameters are mandatory:
 
 - TYPE= {FILE &#124; TCP}
-    -   Mandatory instruction used to declare the communication type.
+    - Mandatory instruction used to declare the communication type.
 - NAME= MediaName
-    -   Mandatory instruction used to declare the name of the communication medium. Depending on the type, it is the name of the communication file for synchronous communication, the complete name of the TCP/IP communication channel (protocol://host:port).
+    - Mandatory instruction used to declare the name of the communication medium. Depending on the type, it is the name of the communication file for synchronous communication, the complete name of the TCP/IP communication channel (protocol://host:port).
 
-For a TCP/IP communication type (TYPE = TCP), the protocol field indicates the protocol implemented on the TCP/IP layer. For more information see the PROTOCOL parameter of the command CFTCOM. The protocol must correspond to the one declared on the monitor. The host field indicates the name of the host or the IP address of the machine where the {{< TransferCFT/axwayvariablesComponentShortName  >}} you want to reach is executing (local host only for machine-internal communication). The port field indicates the listening port of the {{< TransferCFT/axwayvariablesComponentShortName  >}} to contact.
+For a TCP/IP communication type (TYPE = TCP), the protocol field indicates the protocol implemented on the TCP/IP layer. For more information see the PROTOCOL parameter of the command CFTCOM. The protocol must correspond to the one declared on the monitor. The host field indicates the name of the host or the IP address of the machine where the {{< TransferCFT/axwayvariablesComponentShortName  >}} you want to reach is executing (local host only for machine- internal communication). The port field indicates the listening port of the {{< TransferCFT/axwayvariablesComponentShortName  >}} to contact.
 
 Example of API configuration file:
 
@@ -74,7 +74,7 @@ Use this function to free system resources allocated by the command API (memory,
 
 ### Return code
 
-With TCP/IP, the command API returns a processing report (rc or CFTRC field of Z-RC).
+With TCP/IP, the command API returns a processing report (rc or CFTRC field of Z- RC).
 
 ### CFTUTIL
 

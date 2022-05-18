@@ -1,10 +1,10 @@
 ---
-    title: "Management utilities"
-    linkTitle: "Management utilities"
-    weight: 190
----This section describes Transfer
+title: "Management utilities"
+linkTitle: "Management utilities"
+weight: 190
+--- This section describes Transfer
 CFT UNIX utilities located in the `cft/<installdir>/bin/`
-sub-directory after completing installation.
+sub- directory after completing installation.
 
 > **Note**
 >
@@ -23,47 +23,47 @@ The following utilities are detailed in this page.
 <table>
    <thead>
       <tr>
-<th class="TableStyle-SynchTableStyle_interop-HeadE-Column1-Header1"><p>Utility  </p>         </th>
-<th class="TableStyle-SynchTableStyle_interop-HeadD-Column1-Header1"><p>Definition  </p>         </th>
+<th class="TableStyle- SynchTableStyle_interop- HeadE- Column1- Header1"><p>Utility  </p>         </th>
+<th class="TableStyle- SynchTableStyle_interop- HeadD- Column1- Header1"><p>Definition  </p>         </th>
       </tr>
    </thead>
    <tbody>
       <tr>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2">[cftinit](#cftinit)         </td>
-         <td class="TableStyle-SynchTableStyle_interop-BodyD-Column1-Body2">General Transfer CFT initialization utility.         </td>
+         <td class="TableStyle- SynchTableStyle_interop- BodyE- Column1- Body2">[cftinit](#cftinit)         </td>
+         <td class="TableStyle- SynchTableStyle_interop- BodyD- Column1- Body2">General Transfer CFT initialization utility.         </td>
       </tr>
       <tr>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2">[cftutil](#cftutil)         </td>
-         <td class="TableStyle-SynchTableStyle_interop-BodyD-Column1-Body2">Simplified display of the standard CFTUTIL commands.         </td>
+         <td class="TableStyle- SynchTableStyle_interop- BodyE- Column1- Body2">[cftutil](#cftutil)         </td>
+         <td class="TableStyle- SynchTableStyle_interop- BodyD- Column1- Body2">Simplified display of the standard CFTUTIL commands.         </td>
       </tr>
       <tr>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2">[cftupdate](#cftupdate)         </td>
-         <td class="TableStyle-SynchTableStyle_interop-BodyD-Column1-Body2">Management Utility updating the Transfer CFT configuration.         </td>
+         <td class="TableStyle- SynchTableStyle_interop- BodyE- Column1- Body2">[cftupdate](#cftupdate)         </td>
+         <td class="TableStyle- SynchTableStyle_interop- BodyD- Column1- Body2">Management Utility updating the Transfer CFT configuration.         </td>
       </tr>
       <tr>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><p>[cftcatal](#cftcatal)  </p>         </td>
-         <td class="TableStyle-SynchTableStyle_interop-BodyD-Column1-Body2"><p>Utility migrating and/or extending the {{< TransferCFT/axwayvariablesComponentShortName  >}} catalog
+         <td class="TableStyle- SynchTableStyle_interop- BodyE- Column1- Body2"><p>[cftcatal](#cftcatal)  </p>         </td>
+         <td class="TableStyle- SynchTableStyle_interop- BodyD- Column1- Body2"><p>Utility migrating and/or extending the {{< TransferCFT/axwayvariablesComponentShortName  >}} catalog
 file.  </p>         </td>
       </tr>
       <tr>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><p>[xfbadmgrp](#xfbadm)  </p>         </td>
-         <td class="TableStyle-SynchTableStyle_interop-BodyD-Column1-Body2"><p>Group management utility (all users accessing the Transfer CFT Copilot server).  </p>         </td>
+         <td class="TableStyle- SynchTableStyle_interop- BodyE- Column1- Body2"><p>[xfbadmgrp](#xfbadm)  </p>         </td>
+         <td class="TableStyle- SynchTableStyle_interop- BodyD- Column1- Body2"><p>Group management utility (all users accessing the Transfer CFT Copilot server).  </p>         </td>
       </tr>
       <tr>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><p>[xfbadmusr](#xfbadmusr1)  </p>         </td>
-         <td class="TableStyle-SynchTableStyle_interop-BodyD-Column1-Body2"><p>Utility managing users accessing the Transfer CFT Copilot server.  </p>         </td>
+         <td class="TableStyle- SynchTableStyle_interop- BodyE- Column1- Body2"><p>[xfbadmusr](#xfbadmusr1)  </p>         </td>
+         <td class="TableStyle- SynchTableStyle_interop- BodyD- Column1- Body2"><p>Utility managing users accessing the Transfer CFT Copilot server.  </p>         </td>
       </tr>
       <tr>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><p>[xvi](#xvi)  </p>         </td>
-         <td class="TableStyle-SynchTableStyle_interop-BodyD-Column1-Body2"><p>Utility processing the conversion tables.  </p>         </td>
+         <td class="TableStyle- SynchTableStyle_interop- BodyE- Column1- Body2"><p>[xvi](#xvi)  </p>         </td>
+         <td class="TableStyle- SynchTableStyle_interop- BodyD- Column1- Body2"><p>Utility processing the conversion tables.  </p>         </td>
       </tr>
       <tr>
-         <td class="TableStyle-SynchTableStyle_interop-BodyE-Column1-Body2"><p>[atoe](#Conversion_tables)  </p>         </td>
-         <td class="TableStyle-SynchTableStyle_interop-BodyD-Column1-Body2"><p>ISO 8859-1 ASCII to EBCDIC conversion table.  </p>         </td>
+         <td class="TableStyle- SynchTableStyle_interop- BodyE- Column1- Body2"><p>[atoe](#Conversion_tables)  </p>         </td>
+         <td class="TableStyle- SynchTableStyle_interop- BodyD- Column1- Body2"><p>ISO 8859- 1 ASCII to EBCDIC conversion table.  </p>         </td>
       </tr>
       <tr>
-         <td class="TableStyle-SynchTableStyle_interop-BodyB-Column1-Body2"><p>[etoa](#Conversion_tables)  </p>         </td>
-         <td class="TableStyle-SynchTableStyle_interop-BodyA-Column1-Body2"><p>EBCDIC to ISO 8859-1 ASCII conversion table.  </p>         </td>
+         <td class="TableStyle- SynchTableStyle_interop- BodyB- Column1- Body2"><p>[etoa](#Conversion_tables)  </p>         </td>
+         <td class="TableStyle- SynchTableStyle_interop- BodyA- Column1- Body2"><p>EBCDIC to ISO 8859- 1 ASCII conversion table.  </p>         </td>
       </tr>
    </tbody>
 </table>
@@ -128,7 +128,7 @@ The *cftupdate* utility is used to update the configuration.
 
 The *cftutil* command submits a standard CFTUTIL instruction, but
 displays the results without a banner. In addition, if the command return
-code is non-null, a message is displayed.
+code is non- null, a message is displayed.
 
 **Syntax**
 
@@ -147,7 +147,7 @@ cftutil code 115
 ## cftcatal
 
 You can use the *cftcatal* utility to increase
-the size of the {{< TransferCFT/axwayvariablesComponentShortName  >}} catalog file without losing information. In a multi-node environment, this action resizes all nodes.
+the size of the {{< TransferCFT/axwayvariablesComponentShortName  >}} catalog file without losing information. In a multi- node environment, this action resizes all nodes.
 
 **Syntax**
 
@@ -161,27 +161,27 @@ The *xfbadmgrp* utility is used
 to create, delete, modify and check a group (of users) with access rights to
 the Transfer CFT Copilot server. It can be used in interactive mode associated with a command
 (add, delete, and so on) or in batch mode, specifying each of the required
-commands (-G group –p passwd, and so on).
+commands (- G group –p passwd, and so on).
 
 ****Syntax****
 
 Add a user group:
 
-`xfbadmgrp add [-G <group>] [-p <passwd>] [-g   <GID>] [-u <users>]`
+`xfbadmgrp add [- G <group>] [- p <passwd>] [- g   <GID>] [- u <users>]`
 
 Delete a user group:
 
-`xfbadmgrp delete [-G <group>]`
+`xfbadmgrp delete [- G <group>]`
 
 Modify a user group:
 
-`xfbadmgrp modify [-G <group>] [-p <passwd>] [-g   <GID>] [-u <users>]`
+`xfbadmgrp modify [- G <group>] [- p <passwd>] [- g   <GID>] [- u <users>]`
 
 Display information on existing groups:
 
-`xfbadmgrp print [-G <group>]`
+`xfbadmgrp print [- G <group>]`
 
-This command displays information on a given group (if the -G option
+This command displays information on a given group (if the - G option
 is used) or on all existing groups.
 
 ****Standard use****
@@ -193,11 +193,11 @@ is used) or on all existing groups.
 Various options can be used to make it easier to enter information or
 allow you to work in batch mode:
 
-- -G &lt;group>: ASCII name of the user group
-- -p &lt;passwd>: Password required to access this group
-- -g &lt;GID>: Numeric identifier of the group. If it is set to AUTO, the GID is generated
+- - G &lt;group>: ASCII name of the user group
+- - p &lt;passwd>: Password required to access this group
+- - g &lt;GID>: Numeric identifier of the group. If it is set to AUTO, the GID is generated
     automatically
-- -u &lt;usr1,usr2>: List of existing users, separated by a comma
+- - u &lt;usr1,usr2>: List of existing users, separated by a comma
 
 <span id="xfbadmusr1"></span>
 
@@ -207,32 +207,32 @@ You can use the `xfbadmusr`
 utility to create, delete, check, and modify a user with access rights
 to the Transfer CFT Copilot server. It can be used in interactive mode associated with
 a command (add, delete, and so on) or in batch mode, specifying each of
-the required commands (-G group -p passwd, and so on).
+the required commands (- G group - p passwd, and so on).
 
 ****Syntax****
 
 Add a user. If the group does not exist, it is automatically created with the user
 login name.
 
-`xfbadmusr add [-l <login>] [-p <passwd>] [-u   <UID>] [-g <GID>]`
+`xfbadmusr add [- l <login>] [- p <passwd>] [- u   <UID>] [- g <GID>]`
 
 Delete a user. Users in the `group `file are automatically deleted from all the groups
 with which they are associated.
 
-`xfbadmusr delete [-l <login>]`
+`xfbadmusr delete [- l <login>]`
 
 Modify a user. If necessary, modifications are applied automatically to the `group `file.
 
-`xfbadmusr modify [-l <login>] [-p <passwd>] [-u   <UID>] [-g <GID>]`
+`xfbadmusr modify [- l <login>] [- p <passwd>] [- u   <UID>] [- g <GID>]`
 
 Check a user.
 
-`xfbadmusr check [-l <login] [-p passwd]`
+`xfbadmusr check [- l <login] [- p passwd]`
 
-Display information on existing users. Display information on a given user (if the -l option
+Display information on existing users. Display information on a given user (if the - l option
 is used) or on all existing users.
 
-`xfbadmusr print [-l <login>]: `
+`xfbadmusr print [- l <login>]: `
 
 ****Standard use****
 
@@ -243,21 +243,21 @@ is used) or on all existing users.
 You can use the following options to make it easier to enter information,
 or to work in batch mode:
 
-- ****-l
+- ****- l
     &lt; login >****: Login name
-- ****-p
+- ****- p
     &lt; passwd >****: Password
-- ****-u
+- ****- u
     &lt; UID >****: User identifier - When set to AUTO, a UID is generated
     automatically
-- ****-g
+- ****- g
     &lt; GID >****: Group identifier - When set to AUTO, the GID is
     generated automatically
 
 ****Example****
 
 ```
-xfbadmusr add -l user1 -p thepassword -u AUTO -g AUTO
+xfbadmusr add - l user1 - p thepassword - u AUTO - g AUTO
 ```
 
 To check that the user1 is created, run:
@@ -279,7 +279,7 @@ The *xvi* utility is used to update a conversion table.
 
 **Syntax**
 
-`xvi [-d &#124; -a &#124; -e &#124; -l   <file> ] <table>`
+`xvi [- d &#124; - a &#124; - e &#124; - l   <file> ] <table>`
 
 ****Standard use****
 
@@ -289,17 +289,17 @@ The *xvi* utility is used to update a conversion table.
 
 The following options can be used with *xvi*:
 
-- -d: displays an existing, valid &lt;table>
+- - d: displays an existing, valid &lt;table>
     in ASCII
-- -a: creates a &lt;table> to convert
+- - a: creates a &lt;table> to convert
     ASCII to EBCDIC; this table is identical to the one accessed via the Transfer
     CFT CFTXLATE command (if &lt;table> exists, it is overwritten)
-- -e: creates a &lt;table> to convert
+- - e: creates a &lt;table> to convert
     EBCDIC to ASCII; this table is identical to the one accessed via the Transfer
     CFT CFTXLATE command (if &lt;table> exists, it is overwritten)
-- -l:
+- - l:
     creates a &lt;table> from an ASCII &lt;file>; the file generally
-    used is the file produced after running option -d (if &lt;table> exists,
+    used is the file produced after running option - d (if &lt;table> exists,
     it is overwritten)
 
 <span id="Conversion_tables"></span>
@@ -310,14 +310,14 @@ By default, {{< TransferCFT/axwayvariablesComponentShortName  >}} uses internal 
 to EBCDIC and vice versa. They are based on the ASCII character set as
 defined on PC/DOS systems.
 
-To perform a conversion using the ISO 8859-1
+To perform a conversion using the ISO 8859- 1
 ASCII character set, run the CFTXLATE command with the
 following external conversion tables:
 
 - atoe:
-    ISO 8859-1 ASCII to EBCDIC
+    ISO 8859- 1 ASCII to EBCDIC
 - etoa:
-    EBCDIC to ISO 8859-1 ASCII
+    EBCDIC to ISO 8859- 1 ASCII
 
 You can use the [xvi](#xvi) utility, described above,
 to create specific conversion tables or modify existing tables.

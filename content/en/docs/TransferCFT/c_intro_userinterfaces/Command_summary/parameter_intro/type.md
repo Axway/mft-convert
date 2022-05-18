@@ -1,8 +1,8 @@
 ---
-    title: "type"
-    linkTitle: "type"
-    weight: 3660
----<span id="type"></span>
+title: "type"
+linkTitle: "type"
+weight: 3660
+--- <span id="type"></span>
 
 ### type
 
@@ -98,8 +98,8 @@ The type of exit program, as follows:
 - FILE (default value): Data is recorded
     in the monitor files
 - ACCESS: To use a directory type EXIT
-- EXEC: To use an end-of-transfer type EXIT
-- BOT: To use a beginning-of-transfer type EXIT
+- EXEC: To use an end- of- transfer type EXIT
+- BOT: To use a beginning- of- transfer type EXIT
 
 <span id="type_CFTACCNT"></span>
 
@@ -140,14 +140,12 @@ TYPE ={ALL &#124; DEST &#124; PART &#124; TCP}
 
 #### Type table
 
-
 | Value  | Meaning  |
-| --- | --- |
+| - - - | - - - |
 | ALL  | Used to query the general and network characteristics of partners<br /> Parameters of the PARTNER file |
 | DEST  | Used to query the parameters configured in the CFTDEST command: concern the broadcasting lists  |
 | PART  | Used to query the parameters configured in the CFTPART command: description of the general data relative to partners  |
 | TCP | Used to query the parameters configured in the CFTTCP command: TCP/IP network parameters associated with each partner supporting TCP/IP  |
-
 
 <span id="type_CONFIG"></span>
 
@@ -158,16 +156,14 @@ TYPE = {CAT &#124; COM &#124; INPUT &#124; OUTPUT
 
 Defines the medium concerned.
 
-
 | Value  | Medium concerned  |
-| --- | --- |
+| - - - | - - - |
 | CAT  | Catalog file  |
 | COM  | Communication medium  |
 | INPUT  | Command input file  |
 | OUTPUT  | Report output file  |
 | PARM  | Parameter file  |
 | PART  | Partner file  |
-
 
 <span id="type_SWITCH"></span>
 
@@ -183,7 +179,7 @@ Defines the switch action for CFTLOG or CFTACCNT. File types are:
     the EXEC parameter of the CFTLOG
     object.
 
-<!-- -->
+<!- - - - >
 
 - ACCNT:
     The SWITCH command stops statistics from being written on the current
@@ -202,9 +198,8 @@ Defines the parameters to extract.
 
 #### Type table
 
-
 | Value  | Meaning  | Command |
-| --- | --- | --- |
+| - - - | - - - | - - - |
 | ALL  | All the parameter types of the CFTPARM and CFTPART files  |   |
 | ACCNT  | Description of the statistical files  | CFTACCNT  |
 | AUTH  | List of authorized files  | CFTAUTH  |
@@ -222,7 +217,6 @@ Defines the parameters to extract.
 | TCP  | TCP/IP partner definition  | CFTTCP  |
 | UCONF  | Unified configuration  | CFTEXT  |
 
-
 <span id="type_LISTPARM"></span>
 
 #### LISTPARM
@@ -238,9 +232,8 @@ TYPE can take the predefined values indicated in the Type table below.
 
 #### Type table
 
-
 | Value  | Definition  |
-| --- | --- |
+| - - - | - - - |
 | ACCNT  | Used to query statistical file parameters<br /> These parameters are submitted when CFTACCNT commands are entered  |
 | ALL  | Used to query all the parameters indicated in the PARAMETER file  |
 | AUTH  | Used to query file authorization lists<br /> These lists are customized by the CFTAUTH commands  |
@@ -259,7 +252,6 @@ TYPE can take the predefined values indicated in the Type table below.
 | DISPLAY | Used to query the information as with the LISTCAT command. It uses an external XML file that lists and describes customized models. These models are used to format the output |
 | ABOUT | Used to display the {{< TransferCFT/axwayvariablesComponentShortName  >}} computer characteristics |
 
-
 #### RECONFIG
 
 TYPE = { CRON &#124; UCONF &#124; CAT &#124; FOLDER &#124; PARMCACHE &#124; AM}
@@ -276,7 +268,5 @@ TYPE = { CRON &#124; UCONF &#124; CAT &#124; FOLDER &#124; PARMCACHE &#124; AM
 TYPE = string
 
 Enter a name for the object.
-
- 
 
 [Return to Command index](../../)

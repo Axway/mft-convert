@@ -1,8 +1,8 @@
 ---
-    title: "Procedure examples"
-    linkTitle: "Procedure examples"
-    weight: 220
----The command files described below provide the outlines for establishing
+title: "Procedure examples"
+linkTitle: "Procedure examples"
+weight: 220
+--- The command files described below provide the outlines for establishing
 end of transfer procedures using a syntax applicable to the Windows NT
 operating system.
 
@@ -29,8 +29,7 @@ name of the file associated with this procedure is:
 SFPAY.CMD.REM
 REM
 REM
---------------------------------------------------------
-REM EXAMPLE OF A PROCEDURE SUBMITTED BY CFT AT THE END
+--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - REM EXAMPLE OF A PROCEDURE SUBMITTED BY CFT AT THE END
 REM OF FILE TRANSMISSION
 REM
 REM This procedure declares that the current transfer
@@ -41,8 +40,7 @@ REM
 REM PART &PART PARTNER NAME
 REM IDT &IDT TRANSFER IDENTIFIER
 REM
-REM ---------------------------------------------------
-CFTUTIL END PART=&PART,IDT=&IDT
+REM - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - CFTUTIL END PART=&PART,IDT=&IDT
 ```
 <span id="Submitting_an_end_of_receive_procedure"></span>
 
@@ -63,8 +61,7 @@ procedure is: RFPAY.CMD.
 ```
 REM
 REM
---------------------------------------------------------
-REM
+--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - REM
 REM EXAMPLE OF A PROCEDURE SUBMITTED BY CFT AT THE END
 REM OF FILE RECEPTION
 REM This procedure executes the MYPROG program, passing
@@ -79,13 +76,12 @@ REM ETIME &ETIME END OF TRANSFER TIME
 REM FNAME &FNAME NAME OF FILE RECEIVED
 REM
 REM
-REM ----------------------------------------------------
-MYPROG &PART &IDF &IDT &EDATE &ETIME &FNAME
+REM - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - MYPROG &PART &IDF &IDT &EDATE &ETIME &FNAME
 ```
 
 If the transfer came from the SITEA partner, with a transfer IDT of
 A0112102, and if the execution of this procedure is interrupted before
-being completed, the user can re-activate it by the following command:
+being completed, the user can re- activate it by the following command:
 
 ```
 CFTUTIL SUBMIT
@@ -120,8 +116,7 @@ procedure is: RMPAY.CMD.
 ```
 REM
 REM
-------------------------------------------------------
-REM
+--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - REM
 REM EXAMPLE OF A PROCEDURE SUBMITTED BY CFT AT THE END
 REM FILE RECEPTION
 REM
@@ -133,7 +128,6 @@ REM
 REM PART &PART PARTNER NAME
 REM IDT &IDT TRANSFER IDENTIFIER
 REM
-REM ---------------------------------------------------
-CFTUTIL SEND TYPE=REPLY, PART=&PART, IDM=MES1, IDT=&idt,
+REM - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - CFTUTIL SEND TYPE=REPLY, PART=&PART, IDM=MES1, IDT=&idt,
 MSG=’File PAY received’
 ```

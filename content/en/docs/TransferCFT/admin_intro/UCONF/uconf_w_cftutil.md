@@ -1,8 +1,8 @@
 ---
-    title: "Setting unified configuration  values"
-    linkTitle: "Modifying UCONF fields with CFTUTIL"
-    weight: 250
----From a command line window, you can use the CFTUTIL utility to view
+title: "Setting unified configuration  values"
+linkTitle: "Modifying UCONF fields with CFTUTIL"
+weight: 250
+--- From a command line window, you can use the CFTUTIL utility to view
 and modify UCONF parameters. To view the contents and types of variables, you can create a list.
 Enter the command:
 
@@ -17,7 +17,7 @@ To extract the contents of the Unified Configuration tool, enter the command:
 **UCONFSET**:
 modify a technical parameter value.
 
-`UCONFSET id=PARAMETER-KEY,value=STRING`
+`UCONFSET id=PARAMETER- KEY,value=STRING`
 
 ****Example 1****
 
@@ -34,7 +34,7 @@ Set copilot.general.serverport parameter:
 **UCONFGET**:
 retrieve a single technical parameter value
 
-`UCONFGET id=PARAMETER-KEY`
+`UCONFGET id=PARAMETER- KEY`
 
 **Example**
 
@@ -50,7 +50,7 @@ return a specified parameter to the default value
 **LISTUCONF**:
 display multiple technical parameter values
 
-`LISTUCONF id=PARAMETER-KEY-PATTERN,scope=ALL&#124;USER&#124;   &#124;DEFAULT,content=BRIEF&#124;FULL&#124;DEBUG`
+`LISTUCONF id=PARAMETER- KEY- PATTERN,scope=ALL&#124;USER&#124;   &#124;DEFAULT,content=BRIEF&#124;FULL&#124;DEBUG`
 
 ****Example 1****
 
@@ -85,7 +85,7 @@ Where:
 
 - EXTRACT: Output suitable to enter in CFTUTIL
 - DEBUG: Additional information
-- PROPS: Property-like output
+- PROPS: Property- like output
 
 ****Example 5****
 

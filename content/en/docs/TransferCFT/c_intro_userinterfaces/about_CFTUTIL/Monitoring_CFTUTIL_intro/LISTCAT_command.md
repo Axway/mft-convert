@@ -1,8 +1,8 @@
 ---
-    title: "LISTCAT - List catalog  contents"
-    linkTitle: "LISTCAT - List catalog contents"
-    weight: 290
----This page describes how to list the catalog contents using command
+title: "LISTCAT - List catalog  contents"
+linkTitle: "LISTCAT - List catalog contents"
+weight: 290
+--- This page describes how to list the catalog contents using command
 line operations. The LISTCAT command is used to query the information
 associated with the selected transfers, recorded in the Transfer CFT catalog.
 
@@ -28,7 +28,7 @@ This command is used to display output for:
 - Dynamic transfer
     information such as the:
 
-<!-- -->
+<!- - - - >
 
 - Transfer status
 - Number of items
@@ -45,9 +45,8 @@ Command syntax: LISTCAT
 For the definition of the states of a transfer,
 refer to [Transfer control commands](../../../../concepts/transfer_command_overview/transfer_control_commands).
 
-
 | Command or Parameter  | Description |
-| --- | --- |
+| - - - | - - - |
 | LISTCAT command | Use this command to query the information associated with the selected transfers, recorded in the Transfer CFT catalog.  |
 |  [CONTENT](../../../command_summary/parameter_intro/content)  | Used to obtain part or all of the information of a catalog entry. |
 |  [DATETIMEMAX](../../../command_summary/parameter_intro/datetimemax)  | Use to display catalog transfers that happened on or before this end date and time according to the transfer record creation (DATEK, TIMEK).  |
@@ -64,7 +63,6 @@ refer to [Transfer control commands](../../../../concepts/transfer_command_overv
 |  [SORTBY](../../../command_summary/parameter_intro/sortby)  | Sorts the LISTCAT command information in an alphabetical/alphanumberic order.  |
 |  [STATE](../../../command_summary/parameter_intro/state) | Possible states of a catalog entry.<br/> The catalog entries in the state indicated by this parameter are selected. Any combination of the various states (D,C,H,K,T,X) is authorized. |
 |  [TYPE](../../../command_summary/parameter_intro/type)  | Type of catalog entry.<br/> If TYPE = * *or* ALL, no selection is made: all transfers present in the catalog (files, messages, reply messages) are displayed if they fulfill the selection criteria which may be defined by other parameters. |
-
 
 ### Examples
 
@@ -101,9 +99,8 @@ Displays the records by IDTU. This can be useful because the catalog's compact b
 
 `LISTCAT CONTENT = COMMUT`
 
-
 | Heading  | Meaning  |
-| --- | --- |
+| - - - | - - - |
 | 1  | Intermediate transfer (IPART)  |
 | 2  | State transfer<br /> The DTSA characters represent:<br/> • Direction = S/R (Send/Receive)<br/> • Type = F/M/R (File/Message/Reply)<br/> • State = D/C/H/K/T/X (Disp/Current/Hold/Keep/Terminated/eXecuted)<br/> • Ack = A (Acknowledge)<br/> <blockquote> **Note**<br/> If the UCONF compatibility option is set to the default value (no), the format is DTSAPP to include Phase and PhaseStep. For more information, see Backward compatibility.<br/> </blockquote>  |
 | 3  | File network identifier (NFNAME)  |
@@ -111,14 +108,12 @@ Displays the records by IDTU. This can be useful because the catalog's compact b
 | 5  | Local transfer identifier (IDTU)  |
 | 6  | Transfer CFT internal diagnostic code (DIAGI)  |
 
-
 ## LISTCAT CONTENT = EXTEND
 
 `LISTCAT CONTENT = EXTEND `
 
-
 | Heading  | Meaning  |
-| --- | --- |
+| - - - | - - - |
 | 1  | Local partner identifier described in the CFTPART (ID) or CFTDEST command (one of the PARTS of the broadcasting list)  |
 | 2  | Transfer state<br /> The DTSA characters mean:<br/> • Direction = S/R (Send/Receive)<br/> • Type = F/M/R (File/Message/Reply)<br/> • State = D/C/H/K/T/X (Disp/Current/Hold/Keep/Terminated/eXecuted)<br/> • Ack = A (Acknowledge)<br/> <blockquote> **Note**<br/> If the UCONF compatibility option is set to the default value (no), the format is DTSAPP to include Phase and PhaseStep. For more information, see Backward compatibility.<br/> </blockquote>  |
 | 3  | File identifier (IDF)  |

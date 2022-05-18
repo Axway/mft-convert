@@ -1,8 +1,8 @@
 ---
-    title: "About Transfer CFT system users "
-    linkTitle: "Manage user rights"
-    weight: 180
----There are two basic types of rights needed to enable {{< TransferCFT/axwayvariablesComponentLongName  >}} flows: the rights required to perform activities, such as starting or configuring Transfer CFT, and the rights that apply to files themselves.
+title: "About Transfer CFT system users "
+linkTitle: "Manage user rights"
+weight: 180
+--- There are two basic types of rights needed to enable {{< TransferCFT/axwayvariablesComponentLongName  >}} flows: the rights required to perform activities, such as starting or configuring Transfer CFT, and the rights that apply to files themselves.
 
 This topic describes the parameters used to manage:
 

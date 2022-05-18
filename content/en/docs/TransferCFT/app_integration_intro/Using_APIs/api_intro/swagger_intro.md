@@ -1,8 +1,8 @@
 ---
-    title: "Swagger UI usage"
-    linkTitle: "Swagger UI usage"
-    weight: 320
----The Swagger UI is both documentation and a client for the REST API. Each supported API command provides a detailed description, including possible parameters.
+title: "Swagger UI usage"
+linkTitle: "Swagger UI usage"
+weight: 320
+--- The Swagger UI is both documentation and a client for the REST API. Each supported API command provides a detailed description, including possible parameters.
 
 Swagger builds the HTTP frames and sends them to the REST server. However, before sending a command you must provide credentials.
 

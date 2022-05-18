@@ -1,8 +1,8 @@
 ---
-    title: "rrusize"
-    linkTitle: "rrusize"
-    weight: 3010
----<span id="rrusize"></span>
+title: "rrusize"
+linkTitle: "rrusize"
+weight: 3010
+--- <span id="rrusize"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 

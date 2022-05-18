@@ -1,8 +1,8 @@
 ---
-    title: "cycdate"
-    linkTitle: "cycdate"
-    weight: 570
----<span id="cycdate"></span>
+title: "cycdate"
+linkTitle: "cycdate"
+weight: 570
+--- <span id="cycdate"></span>
 
 ### cycdate
 
@@ -35,7 +35,5 @@ If the interval is expressed in:
     (TCYCLE = DAY or TCYCLE = MONTH), the default value is: CYCDATE = MINDATE + TCYCLE \* CYCLE
 - Minutes (TCYCLE
     = MIN), the default value is: CYCDATE = MINDATE
-
- 
 
 [Return to Command index](../../)
