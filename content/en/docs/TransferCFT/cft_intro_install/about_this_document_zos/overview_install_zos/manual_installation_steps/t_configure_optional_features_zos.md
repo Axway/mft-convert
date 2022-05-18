@@ -124,5 +124,5 @@ The communication between the APPLICATION and Transfer CFT is done through a med
 
 ****Related topics****
 
-- [Migrating Transfer CFT z/OS]()
+- Migrating Transfer CFT z/OS
 - [Installing a patch](../../../upgrade_prereqs_zos/c_update_zos/t_install_patch_zos)

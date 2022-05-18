@@ -2,7 +2,7 @@
 title: " Concurrent access to the communication file"
 linkTitle: "Concurrent access to the communication file"
 weight: 270
---- If users belonging to a group other than the Transfer CFT group want to submit commands in the Transfer CFT communication file, you must enable the concurrent access control mechanism at system level. The CFT_LOCK logical name is used to implement this mechanism. For more information, see the [Transfer CFT parameter settings]() section.
+--- If users belonging to a group other than the Transfer CFT group want to submit commands in the Transfer CFT communication file, you must enable the concurrent access control mechanism at system level. The CFT_LOCK logical name is used to implement this mechanism. For more information, see the Transfer CFT parameter settings section.
 
 ## CFT_LOCK
 

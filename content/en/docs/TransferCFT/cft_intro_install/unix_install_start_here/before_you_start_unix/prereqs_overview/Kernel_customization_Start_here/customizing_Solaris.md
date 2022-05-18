@@ -20,7 +20,7 @@ weight: 220
 While most of the corresponding parameter default values are suitable for normal {{< TransferCFT/axwayvariablesComponentShortName  >}} functioning, three of these parameter values must have at least the following minimum values:
 
 | Resource control  | {{< TransferCFT/axwayvariablesComponentShortName  >}} minimum value  |
-| - - - | - - - |
+| --- | --- |
 | project.max- shm- memory  | 33554432  |
 | process.max- msg- messages  | 8192  |
 | process.max- file- descriptor  | 1024  |

@@ -19,7 +19,7 @@ another.
 
 The following illustration features 3 Transfer CFTs, where the protocol may be the same or different between relay points:
 
-- Source [Initial Sender A]
+- Source Initial Sender A]
 - Relay [Store and Forward B]
 - Target [Final Receiver C]
 
@@ -72,7 +72,7 @@ Depending on the value of this parameter, the processing performed by
 the {{< TransferCFT/axwayvariablesComponentShortName  >}} on the store and forward site is as follows:
 
 | COMMUT value  | File is sent to partner  | Details  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | YES  | Yes, immediately  | The a file is immediately sent to the intended partner. Default value.  |
 | NO  | No, no file forwarding  | The file transfer is refused because the partner is not able to perform the store and forward.  |
 | SERVER  | Yes, after processing  | Sending the file occurs at the initiative of the store and forward site. This mode is also known as [Store and forward with a VAN server](#VAN_server_Store_and_forward_processing).  |
@@ -186,7 +186,7 @@ end of transfer procedure, after the associated processing and checks.
 The file is forwarded using the SEND
 command (coupled with a CFTSEND command). The SPART parameter of the SEND
 command sets the value of the sender NSPART parameter to the value of
-the INITIAL sender of the file (refer to the [SEND]() command).
+the INITIAL sender of the file (refer to the [SEND command).
 
 Instead of returning the file, the store and forward site (VAN server) can make
 the file available to the final receiver (SEND command ... , STATE = HOLD).

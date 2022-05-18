@@ -13,7 +13,7 @@ In the absence of a previous CONFIG TYPE = OUTPUT command,
 the execution report is written on the standard CFTUTIL program output.
 
 | Parameters  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [ID](../../../command_summary/parameter_intro/id)  | Identifier of the Transfer CFT command selected using the TYPE parameter.<br/> Used to limit the query to this identifier. |
 | [PART](../../../command_summary/parameter_intro/part) <br/> For TYPE = IDF | Partner identifier.<br/> Used to limit the search to the IDFs defined in the CFTIDF objects, relative to this partner. |
 | [Type table](../../../command_summary/parameter_intro/type). |
@@ -41,7 +41,7 @@ Displays the parameters of all the CFTSEND objects configured.
 TYPE can take the predefined values indicated in the table below.
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | ACCNT  | Used to query statistical file parameters.<br /> These parameters are submitted when CFTACCNT objects are entered. |
 | ALL  | Used to query all the parameters indicated in the PARAMETER file . |
 | AUTH  | Used to query file authorization lists.<br /> These lists are customized by the CFTAUTH objects.  |

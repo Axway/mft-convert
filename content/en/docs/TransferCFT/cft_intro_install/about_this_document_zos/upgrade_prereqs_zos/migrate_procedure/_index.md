@@ -19,7 +19,7 @@ The following table lists and describes the MIGR\* members used in a Transfer CF
 Migration Job Control Language (JCL) Statements
 
 | Member name | Purpose |
-| - - - | - - - |
+| --- | --- |
 | MIGR$SET | JCL variables to customize |
 | MIGRCAT | Migrate the catalog file |
 | MIGRCOM | Migrate the communication file |
@@ -54,7 +54,7 @@ This section describes how to migrate the various configuration elements in a no
 The following variables can be set in MIGR$SET file or/and in the PMIGR2 parameters.
 
 | Variable | Default value | Definition |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | OLDEXEC |   | Executable library for the Transfer CFT version (source) to migrate. |
 | OLDPARM |   | Transfer CFT PARM source file name. |
 | NEWPARM |   | Transfer CFT PARM target file name. |
@@ -70,7 +70,7 @@ The following variables can be set in MIGR$SET file or/and in the PMIGR2 paramet
 The following variables can be set in MIGR$SET file or/and in the PMIGR2 parameters.
 
 | Variable | Default value | Definition |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | OLDPART |   | Transfer CFT PART source file name. |
 | NEWPART |   | Transfer CFT PART target file name. |
 | DISPPART | 'R' | 'R' for replace, 'A' for ADD:<br/> ‘R’ = Create or recreate Transfer CFT PART file.<br/> ‘A’ = Only creates the Transfer CFT PART file. |
@@ -83,7 +83,7 @@ The following variables can be set in MIGR$SET file or/and in the PMIGR2 paramet
 1. Migrate the PKI file (MIGRPKIx).
 
 | Variable | Default value | Definition |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | OLDPKI |   | Transfer CFT PKI source file name |
 | NEWPKI |   | Transfer CFT PKItarget file name. |
 
@@ -128,7 +128,7 @@ Etc.
 You can set the following variables in the MIGR$SET file and (or) in the PMIGR2 parameters:
 
 | Variable | Default value | Definition |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | OLDEXEC |   | Executable library of the Transfer CFT version to migrate. |
 | OLDCAT |   | Transfer CFT CATALOG source file name. |
 | NEWCAT |   | Transfer CFT CATALOG target file name |
@@ -144,7 +144,7 @@ You can set the following variables in the MIGR$SET file and (or) in the PMIGR2 
 You can set the following variables in the MIGR$SET file or/and in the PMIGR2 parameters:
 
 | Variable | Default value | Definition |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | OLDEXEC |   | Executable library of the Transfer CFT version to migrate. |
 | OLDCOM |   | Transfer CFT communication source file name. |
 | NEWCOM |   | Transfer CFT communication target file name. |

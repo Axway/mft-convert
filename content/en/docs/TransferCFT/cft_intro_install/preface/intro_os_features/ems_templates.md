@@ -19,7 +19,7 @@ For general information on how an application obtains event messages from a subs
 All messages have the following tokens:
 
 | Token  | Description  |
-| - - - | - - - |
+| --- | --- |
 | ZSPI- TKN- SSID  | The Transfer CFT subsystem ID, whose value is XCF2_VAL_EXTERNAL_SSID. This token is described in the SPI Programming Manual. |
 | ZEMS- TKN- EVENTNUMBER  | The event number, as described in the EMS Manual. Its value is one of the values described in the table below. |
 | XCF2_TKN_SUBJ  | The message subject for which the values are described in the Event messages table below. |
@@ -31,7 +31,7 @@ Event messages
 The following table shows the relationship between the event, the subject, and the message type.
 
 | Event number  | EMS subject  | Event type  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | 4  | CFT INFO LOG  | Log information message  |
 | 5  | CFT WARN LOG  | Log warning message  |
 | 6  | CFT ERR LOG  | Log error message  |

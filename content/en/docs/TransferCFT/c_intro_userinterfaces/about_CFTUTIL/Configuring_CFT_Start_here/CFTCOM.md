@@ -72,7 +72,7 @@ This table describes the parameters to define the CFTCOM object when the communi
 type is TCPIP.
 
 | Parameters  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [HOST](../../../command_summary/parameter_intro/host) | Networking IP address of the local resource. |
 | [ID](../../../command_summary/parameter_intro/id)  | Identifier of the CFTCOM object. |
 | [MODE](../../../command_summary/parameter_intro/mode) | Action to do in the parameter or partner base. This parameter applies to all commands that affect CFT bases. |
@@ -88,7 +88,7 @@ This table describes the parameters to define the CFTCOM object when the communi
 type is FILE.
 
 | Parameters  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [ID](../../../command_summary/parameter_intro/id)  | Identifier of the CFTCOM command. |
 | [MODE](../../../command_summary/parameter_intro/mode) | Action to do in the parameter or partner base. This parameter applies to all commands that affect Transfer CFT bases. |
 | [TLVCEXEC](../../../command_summary/parameter_intro/tlvcexec)  | Batch to execute when the alert ends.  |

@@ -26,7 +26,7 @@ The following tables list all the fields of the communication structure.
 ### General information fields
 
 | ****Field**** | ****Explanation**** |
-| - - - | - - - |
+| --- | --- |
 | version  | Interface version number<br/> The current version number is "0130". |
 | idexit  | EXIT task identifier |
 | exname | User name<br/> The user name is equal to the value of the exaref parameter of the exaini function. |
@@ -53,7 +53,7 @@ The following tables list all the fields of the communication structure.
 ### Return codes
 
 | Field | Explanation |
-| - - - | - - - |
+| --- | --- |
 | ret1 | Return code<br/> • 0: Processing ok<br/> • 1: Transfer CFT must take charge of the call<br/> • 2: Connection refusal<br/> • 9: Processing error |
 | ret2  | Cause of connection refusal if the return code value is 2<br/> • 1: Partner not known<br/> • 2: Password not valid<br/> • 3: Address not known<br/> • 4: Call time not valid<br/> • 5: Communication protocol not valid<br/> • 6: Maximum number of virtual circuits reached<br/> • 7: Maximum number of transfers reached<br/> • 8: Maximum number of partners reached<br/> • 9: Caller taxation refusal<br/> • 10: Network problem<br/> • 255: Other cause of connection refusal<br/> These refusal codes are converted by {{< TransferCFT/axwayvariablesComponentShortName  >}} into internal diagnostic codes.<br/> In server mode, the internal diagnostic codes are converted into protocol diagnostic codes and sent to the calling partner.<br/> In requester mode, the internal diagnostic codes are saved in the catalog. |
 | diag | Diagnostic code if the return code is not 0 and 1<br/> The contents of this field are used in the EXIT related error. |
@@ -64,7 +64,7 @@ The following tables list all the fields of the communication structure.
 ### Partner information
 
 | Field | Explanation |
-| - - - | - - - |
+| --- | --- |
 | ptype | Partner type:<br/> • C: normal {{< TransferCFT/axwayvariablesComponentShortName  >}} partner<br/> • D: dynamic {{< TransferCFT/axwayvariablesComponentShortName  >}} partner<br/> • E: non {{< TransferCFT/axwayvariablesComponentShortName  >}} partner |
 | part | Partner local identifie |
 | ipart | Intermediate partner local identifier |
@@ -98,7 +98,7 @@ The following tables list all the fields of the communication structure.
 ### Partner network information
 
 | Field | Explanation |
-| - - - | - - - |
+| --- | --- |
 | ntype | Network type:<br/> • T: TCP |
 | addr | Remote partner address |
 | imaxt | Maximum incoming call time on the network resource |
@@ -117,7 +117,7 @@ The following tables list all the fields of the communication structure.
 ### Network dependent information
 
 | Field | Explanation |
-| - - - | - - - |
+| --- | --- |
 | udata | User data |
 | odata | Other data. |
 | speedin | Virtual circuit input speed (in bits/second) |
@@ -137,7 +137,7 @@ The following tables list all the fields of the communication structure.
 ### Additional information
 
 | Field | Explanation |
-| - - - | - - - |
+| --- | --- |
 | cMode | SSL mode Client/Server |
 | cAuthPolicy | SSL auth Anonymous/Simple/Double |
 | bCipher | SSL cipher suite |

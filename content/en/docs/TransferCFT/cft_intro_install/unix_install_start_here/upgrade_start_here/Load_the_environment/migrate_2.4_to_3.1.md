@@ -58,7 +58,7 @@ Use the parameter mapping between trkapi and UCONF, as listed in the following t
 Parameter mapping between the trkapi.cfg file and UCONF
 
 | Parameter in trkapi.cfg | Parameter names in UCONF |
-| - - - | - - - |
+| --- | --- |
 | TRACE | sentinel.trktrace |
 | TRKGMTDIFF | sentinel.trkgmtdiff |
 | TRKIPADDR_BKUP | sentinel.trkipaddr_bkup |
@@ -110,7 +110,7 @@ Use the parameters mapping between copconf and UCONF as listed in the following 
 Parameter mapping between copconf file and UCONF
 
 | Parameter in copconf.ini | Parameter name in UCONF |
-| - - - | - - - |
+| --- | --- |
 | BatchList | copilot.batches |
 | CFTCOM | copilot.cft.com |
 | CFTMEDIACOM | copilot.cft.mediacom |

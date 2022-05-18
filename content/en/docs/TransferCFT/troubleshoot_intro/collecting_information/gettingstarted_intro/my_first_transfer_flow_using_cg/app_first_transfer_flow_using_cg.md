@@ -17,7 +17,7 @@ Select **Products** on the top toolbar to open the **Product List** page.
 ****Copy the host name for each of the three Transfer CFTs that you will use in these exercises, for example copy them into a table as shown here.****
 
 | Transfer CFT  | Host  | Application name  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | {{< TransferCFT/axwayvariablesComponentShortName  >}} 1  | &lt; hostname 1&gt;  | MainOffice  |
 | {{< TransferCFT/axwayvariablesComponentShortName  >}} 2  | &lt; hostname 2&gt;  | Store_66  |
 | {{< TransferCFT/axwayvariablesComponentShortName  >}} 1  | &lt; hostname 3&gt;  | Store_89  |

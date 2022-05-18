@@ -17,7 +17,7 @@ of the calling partner.
 ### Partner information fields
 
 | Field  | Explanation  |
-| - - - | - - - |
+| --- | --- |
 | ptype  | Partner type  |
 | nrpart  | Remote partner name  |
 | nrpassw  | Remote partner password  |
@@ -56,7 +56,7 @@ in the following System information field table.
 ### System information fields
 
 | Field  | Explanation  |
-| - - - | - - - |
+| --- | --- |
 | syst  | System  |
 | code  | Code:<br/> • A: ASCII<br/> • E: EBCDIC |
 | open  | Obsolete parameter |

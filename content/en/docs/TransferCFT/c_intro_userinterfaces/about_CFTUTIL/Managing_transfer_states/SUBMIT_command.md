@@ -16,8 +16,8 @@ be applied to a generic transfer, whose PART parameter equals the broadcasting
 list identifier, when it is in the T phasestep.
 
 | Parameters  | Description  |
-| - - - | - - - |
-| [APPSTATE]()  | State of the [end] phase for the processing script to restart  |
+| --- | --- |
+| APPSTATE  | State of the end] phase for the processing script to restart  |
 | [BLKNUM](../../../command_summary/parameter_intro/blknum)  | Catalog block number. If the values '*' or ' ' are used then all transfers are selected regardless of the block that they belong to. |
 | [DIRECT](../../../command_summary/parameter_intro/direct) | Transfer direction for the requests in question.<br/> Possible values are:<br/> • BOTH: (default) takes both send transfers and receive transfers into account<br/> • RECV: limits the action to receive transfers<br/> • SEND: limits the action to send transfers |
 | [EXEC](../../../command_summary/parameter_intro/exec)  | Name of the file containing the procedure to be executed.<br/> By default, this name is the one defined by the parameters:<br/> • EXEC of the SEND/RECV command (according to the transfer direction),<br/> • or (if this parameter is not defined) EXECSF or EXECRF of CFTPARM (according to the transfer direction). |
@@ -26,8 +26,8 @@ list identifier, when it is in the T phasestep.
 | [IDT](../../../command_summary/parameter_intro/idu)  | Transfer identifier.<br/> This identifies a transfer for a given partner. The value ‘*****’ means that no selection is required using the IDT parameter (default value). |
 | [IDTU](../../../command_summary/parameter_intro/idtu)  | Transfer local counter identifier. |
 | [PART](../../../command_summary/parameter_intro/part) <br/> (Mandatory) | Partner identifier.<br/> The value of this parameter can be:<br/> • *Identifier*: the command only concerns the transfers with this partner<br/> • *Mask*: the command concerns the transfers with the partners, whose identifiers correspond to this mask |
-| [PHASE]()  | Phase of a catalog entry.  |
-| [PHASTESTEP]()  | Phase step of a catalog entry.  |
+| [PHASE  | Phase of a catalog entry.  |
+| PHASTESTEP  | Phase step of a catalog entry.  |
 | [SCOPE](../../../command_summary/parameter_intro/scope)  | Scope &lt;PARENT&gt; ('PARENT','ALL','CHILDREN').  |
 | [STATE](../../../command_summary/parameter_intro/state)  | Transfer request state.  |
 
@@ -87,7 +87,7 @@ Before the post- processing procedure is executed, the catalog
 looks like this.
 
 | STATE  | PART  | IDF  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | SFT  | LIST  | MYFILE (generic transfer)  |
 | SFT  | PART1  | MYFILE  |
 | SFT  | PART2  | MYFILE  |

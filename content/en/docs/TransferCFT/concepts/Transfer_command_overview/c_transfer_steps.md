@@ -3,7 +3,7 @@ title: "Requester and server modes"
 linkTitle: "Transfer steps"
 weight: 170
 --- Transfer CFT mechanisms differ depending on if the Transfer CFT is operating in
-requester mode or server mode, as mentioned in the [Introduction](). This section describes the transfer steps
+requester mode or server mode, as mentioned in the Introduction. This section describes the transfer steps
 in relation to each mode.
 
 - In

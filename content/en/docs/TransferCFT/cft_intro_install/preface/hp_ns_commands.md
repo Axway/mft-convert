@@ -109,7 +109,7 @@ You must define a TACL variable before running the command. This variable contai
 The following table gives the correspondences between the commands and the variables to use:
 
 | Command  | Variable  |
-| - - - | - - - |
+| --- | --- |
 | CFT  | CFT^OUT  |
 | CFTUTIL  | CFT^UTLOUT  |
 | PKIUTIL  | PKI^UTLOUT  |
@@ -167,7 +167,7 @@ To gather command details, Axway support may ask you to set the `CFTUTLX^TRACE^L
 The `CFTUTLX^TRACE^LEVEL` values are:
 
 | Value  | Description  | Temporary CFTUTLX files are deleted  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | 1  | Generates traces and redirects them to a temporary file.  | No  |
 | 2  | Generates traces and redirects them to the standard output.  | No  |
 | 3  | Both 1 and 2 occur.  | No  |

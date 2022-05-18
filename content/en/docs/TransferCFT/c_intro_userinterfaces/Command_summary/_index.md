@@ -11,7 +11,7 @@ The {{< TransferCFT/axwayvariablesComponentShortName  >}} commands are presented
 summary. Each
 command is presented with possible parameters and default values.
 
-See also, [Syntax
+See also, Syntax
 conventions and symbolic variables.](#Syntax_conventions)
 
 <span id="ABOUT"></span>
@@ -127,7 +127,7 @@ CFTAPPL MODE = DELETE
 
 [CFTAPPL details](../web_copilot_ui/flow_def_intro/cftappl)
 
-[Assign a transfer owner]()
+[Assign a transfer owner
 
 #### CFTAUTH: Defines an Authorized Flow Definition list
 
@@ -137,7 +137,7 @@ Syntax
 
 `ID = identifier`
 
-`[ COMMENT   = string ]`
+` COMMENT   = string ]`
 
 `[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
@@ -329,7 +329,7 @@ CFTDEST PART
 [CFTDEST details](../web_copilot_ui/flow_def_intro/cftdest)
 
 [Broadcast
-list]()
+list
 
 <span id="CFTEXIT"></span>
 
@@ -343,7 +343,7 @@ Syntax
 
 `TYPE   = FILE`
 
-`[ COMMENT   = string ]`
+` COMMENT   = string ]`
 
 `[ FORMAT   = { V23   &#124; 23 &#124; V24 &#124; 24 } ]`
 
@@ -566,10 +566,10 @@ Syntax
 
 `[ SWITCH   = { 00000000   &#124; time } ]`
 
-[CFTLOG details]()
+[CFTLOG details
 
-[Transfer
-Log file]()
+Transfer
+Log file
 
 <span id="CFTNET"></span>
 
@@ -583,7 +583,7 @@ Syntax
 
 `ID   = { identifier &#124; *identifier } `
 
-`[ CALL   = { INOUT   &#124; IN &#124; OUT } ]`
+` CALL   = { INOUT   &#124; IN &#124; OUT } ]`
 
 `[ CLASS   = { 1 &#124; n } ]`
 
@@ -825,10 +825,10 @@ Syntax
 
 `[ XLATE   = identifier ]`
 
-[CFTPART details]()
+[CFTPART details
 
-[Partner
-attribute concepts]()
+Partner
+attribute concepts
 
 <span id="CFTPROT"></span>
 
@@ -842,7 +842,7 @@ CFTPROT TYPE = ODETTE
 
 `NET   = identifier `
 
-`[ DISCTD   = { 20   &#124; n } ]`
+` DISCTD   = { 20   &#124; n } ]`
 
 `[ DISCTS   = { 65   &#124; n } ]`
 
@@ -2855,7 +2855,7 @@ Syntax
 [SWITCH details](../../admin_intro/admin_commands_intro/switching_files_manually)
 
 [Toggle
-log or accounting file]()
+log or accounting file
 
 <span id="UCONFSET"></span>
 

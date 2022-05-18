@@ -18,7 +18,7 @@ You can enter a command using CFTUTIL in a command window from the Transfer CFT 
 ```
 C:\\Axwaycft313sp1\\Transfer_CFT\\runtime> profile
 C:\\Axwaycft313sp1\\Transfer_CFT\\runtime> CFTUTIL  
-1:[CFU]
+1:CFU]
 ```
 
 ## Entering parameters
@@ -38,9 +38,9 @@ There are two ways to supply parameters for a command:
 The commands associated with the transfers are listed in the table below.
 
 | Type | Command | Description |
-| - - - | - - - | - - - |
-| Transfers  | [SEND]()  | Send files, messages, or replies (acknowledgments)  |
-| - " - | [RECV]()  | Receive files  |
+| --- | --- | --- |
+| Transfers  | [SEND  | Send files, messages, or replies (acknowledgments)  |
+| - " - | RECV  | Receive files  |
 | Actions on transfers  | [DELETE](../../admin_intro/admin_commands_intro/delete_command) | Delete catalog entries  |
 | - " - | [HALT](../../c_intro_userinterfaces/about_cftutil/managing_transfer_states/halt_command) | Stop transfers  |
 | - " - | [KEEP](../../c_intro_userinterfaces/about_cftutil/managing_transfer_states/keep_command) | Suspend transfers  |

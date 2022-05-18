@@ -52,7 +52,7 @@ involved:
     type does not exist
 
 | OS  | Monitor submitter  | Operator console  | Any user  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | MVS (z/OS) | NO  | YES  | YES  |
 | OS400 (IBM i) | YES  | YES  | YES  |
 | UNIX  | YES  | YES  | YES  |
@@ -63,7 +63,7 @@ The following table indicates, for each system, the default values of
 the NOTIFY parameter supported. The value ‘ ’ corresponds to 7 blank characters.
 
 | OS  | Default values for NOTIFY  |
-| - - - | - - - |
+| --- | --- |
 | MVS (z/OS) | OP  |
 | OS400  | ‘ ’  |
 | UNIX  | ‘ ’  |
@@ -76,7 +76,7 @@ only these two characters (OP) are interpreted; the following characters
 are not significant.
 
 | Operator console OS | Characters interpreted  | Messages sent to... |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | MVS (z/OS) | OP  | Operator console(s)  |
 | OS400  | OP  | QSYSOPR "message- queue"  |
 | UNIX  | OP  | Operator console  |
@@ -86,7 +86,7 @@ are not significant.
 For the user:
 
 | User OS  | Messages are...  |
-| - - - | - - - |
+| --- | --- |
 | MVS (z/OS) | Sent by SEND to the specified TSO USERID; in this case, the {{< TransferCFT/axwayvariablesComponentShortName  >}} program must be authorized (APF). |
 | VMS | Sent to the "VMS User " designated by its VMS name. In this case, the {{< TransferCFT/axwayvariablesComponentShortName  >}} task must have the OPER privilege. |
 

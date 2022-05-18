@@ -55,7 +55,7 @@ chmod u+x Transfer_CFT_<version>_<os>- <arch>- <xx>.run
 
 Execute the `install `command to start the Transfer CFT installation procedure, replacing `<installation_directory>` with the directory where you want to install Transfer CFT.
 
-For a new installation, this directory should be empty or nonexistent. However, the installation directory can point to an existing installation in order to upgrade it. For more information on performing an upgrade, refer to [Migrate or upgrade Transfer CFT]().
+For a new installation, this directory should be empty or nonexistent. However, the installation directory can point to an existing installation in order to upgrade it. For more information on performing an upgrade, refer to Migrate or upgrade Transfer CFT.
 
 You can use the following additional parameters:
 
@@ -66,7 +66,7 @@ You can use the following additional parameters:
 Enter:
 
 ```
-./Transfer_CFT_<version>_<os> <xx>.run install <installation_directory> [<guardian_installation_directory_prefix>] [- - post_install_script <fullpathtopinstscript>] [- - cryptokey_password <password>]
+./Transfer_CFT_<version>_<os> <xx>.run install <installation_directory> <guardian_installation_directory_prefix>] [- - post_install_script <fullpathtopinstscript>] [- - cryptokey_password <password>]
 ```
 
 **Examples**
@@ -110,9 +110,9 @@ If you opted to install the Guardian files, several files are created in the Gua
 For example, `/G/data14/cft39b` creates files where the volume name is $DATA14, the subvolume names begin with cft39b, and that ends with the values described in the following table.
 
 | Subvolume  | Description  |
-| - - - | - - - |
+| --- | --- |
 | &lt;subvolume&gt;IE  | Contains the Transfer CFT samples.<br/> Some of these samples are copied in the user configuration volume &lt;subvolume&gt;UP, where they can be modified. |
-| &lt;subvolume&gt;IF  | Contains the EMS dictionary and DDL template files.<br/> CFTPLATE contains the Transfer CFT templates to be concatenated with the system template for an EMS collector. See the XCFTDDL section in [Event messages](), which describes the DDL template. |
+| &lt;subvolume&gt;IF  | Contains the EMS dictionary and DDL template files.<br/> CFTPLATE contains the Transfer CFT templates to be concatenated with the system template for an EMS collector. See the XCFTDDL section in [Event messages, which describes the DDL template. |
 | &lt;subvolume&gt;IX  | Transfer CFT executables and procedures. |
 | &lt;subvolume&gt;IP  | Program samples.  |
 | &lt;subvolume&gt;IH  | Headers.  |

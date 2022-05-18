@@ -23,7 +23,7 @@ If the partner is:
 ### Partner information fields
 
 | Field  | Explanation  |
-| - - - | - - - |
+| --- | --- |
 | Field  | Explanation  |
 | ptype  | Partner type  |
 | part  | Partner local identifier  |
@@ -89,7 +89,7 @@ except the general information fields or the ptype and ntype fields.
 ****Field descriptions****
 
 | Field  | Explanation  |
-| - - - | - - - |
+| --- | --- |
 | part  | If this field:<br/> • is empty when the user function is returned from, the partner local identifier "UNDEFPTN" appears in the catalog and on the {{< TransferCFT/axwayvariablesComponentShortName  >}} standard output.<br/> • has been modified and if the new identifier is located in the {{< TransferCFT/axwayvariablesComponentShortName  >}} partner base, {{< TransferCFT/axwayvariablesComponentShortName  >}} sets the ret1 field to 9 (processing error) and the diag field to "PTNEXIST"<br/> • has been modified, during any network or protocol connection attempts that may have been made, the system behaves as if the partner is not known to Transfer CFT |
 | ipart  | If the ipart field is defined, a voluntary store and forward or backup mechanism<br /> (omintime = omaxtime) is possible.<br /> The user function is called to provide complete information or modify the intermediate partner information<br /> In the store and forward case, the commutfl field is set to 1. |
 | idprot, idnet, prot and prof  | The idnet, prot and prof fields are connected to the CFTPROT command identifier (idprot). If the idprot field is modified, the new value must correspond to a CFTPROT command ( {{< TransferCFT/axwayvariablesComponentShortName  >}} updates the fields that are associated with it)<br /> If not, {{< TransferCFT/axwayvariablesComponentShortName  >}} sets the ret1 field to 9 (processing error) and the diag field to "NOPROT".<br /> <br/> The protl field indicates the list of {{< TransferCFT/axwayvariablesComponentShortName  >}} parameter setting protocols.  |

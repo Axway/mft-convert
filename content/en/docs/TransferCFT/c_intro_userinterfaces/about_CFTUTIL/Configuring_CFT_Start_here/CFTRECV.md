@@ -20,7 +20,7 @@ topics****
     [CFTRECV](../../../command_summary#CFTRECV)
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [COMMENT](../../../command_summary/parameter_intro/comment) | Local alphanumeric comment associated with receive transfers. |
 | [CYCDATE](../../../command_summary/parameter_intro/cycdate) | Upper final date for activating the first transfer of a cycle. |
 | [CYCTIME](../../../command_summary/parameter_intro/cyctime) | Upper limit time for activating the first transfer of a cycle. |

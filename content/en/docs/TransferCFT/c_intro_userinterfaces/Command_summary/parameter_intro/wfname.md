@@ -56,7 +56,7 @@ This parameter can be used for "store and forward" purposes
 (CFTRECV ID = COMMUT command).
 
 | ****MVS, VMS**** | This parameter is mandatory if the receiver file is a version file (in particular for operation in the open mode and when the sender sends an NFNAME corresponding to a GDG name). |
-| - - - | - - - |
+| --- | --- |
 
 This parameter is mandatory when a copy/concatenation operation is performed
 during the send, transfer of a group of files in PeSIT CFT/CFT mode.

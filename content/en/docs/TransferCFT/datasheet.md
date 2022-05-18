@@ -71,7 +71,7 @@ Your browser- based experience is best when using the latest version of one of t
 ## File systems for multi- node
 
 | Operating system  | Supported  | Unsupported  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | AIX  | GPFS, NFSv4*  | NFSv3, CXFS, VeritasSF  |
 | HP- UX  | NFSv4*  | NFSv3, CXFS, VeritasSF  |
 | Linux- x86  | GPFS, NFSv4*  | NFSv3, CXFS, ACFS, OCFSv1, OCFSv2, QFS, VeritasSF  |
@@ -99,7 +99,7 @@ If you are implementing either {{< TransferCFT/suitevariablesTrustedFileName  >}
 The Internet Assigned Numbers Authority (IANA) reserves the TCP ports 1761- 1768 for {{< TransferCFT/axwayvariablesComponentShortName  >}}. For more information, refer to: [www.iana.org/assignments/service- names- port- numbers/service- names- port- numbers](http://www.iana.org/assignments/service- names- port- numbers/service- names- port- numbers.xhtml?&page=31).
 
 | Component  | Port |
-| - - - | - - - |
+| --- | --- |
 | PeSIT  | 1761  |
 | SSL  | 1762  |
 | SFTP  | 1763  |

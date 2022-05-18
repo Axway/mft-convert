@@ -6,12 +6,12 @@ weight: 160
 
 This chapter describes how to operate Transfer CFT, and is comprised of the following sections:
 
-- [Predefined commands](operating_cft/predefined_commands)
+- Predefined commands](operating_cft/predefined_commands)
 - [CFTUTIL commands](operating_cft/submit_cftutil_commands)
 - [Source files interpretation](operating_cft/interpret_source_member)
 - [Start/stop the UI server](start_copilot_server)
 - [Run Transfer CFT](operating_cft/running_transfer_cft) jobs:
-    - [Query Transfer CFT messages]()
+    - [Query Transfer CFT messages
     - [Start Transfer CFT](operating_cft/start_cft)
     - [Submit a transfer command](submit_transfer_command)
 - [Transfer CFT shutdown](operating_cft/shut_cft)

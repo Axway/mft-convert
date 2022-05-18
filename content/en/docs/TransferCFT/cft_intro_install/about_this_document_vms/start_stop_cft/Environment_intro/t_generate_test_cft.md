@@ -110,4 +110,4 @@ To begin submitting commands to Transfer CFT you can use:
 - Copilot
 - API programming interfaces
 
-For more information, see *[communications]()*.
+For more information, see *communications*.

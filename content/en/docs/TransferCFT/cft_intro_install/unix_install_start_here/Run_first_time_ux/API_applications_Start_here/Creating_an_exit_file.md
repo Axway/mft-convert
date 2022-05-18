@@ -4,8 +4,8 @@ linkTitle: "Creating an exit file"
 weight: 230
 --- The example described in this topic was designed to operate using the ****cft- tcp.conf**** configuration example located in ****&lt;installdir>/runtime/conf****.
 For this example, you should have already customized the
-file using the instructions in [*Running Transfer
-CFT for the First Time*]().
+file using the instructions in *Running Transfer
+CFT for the First Time*.
 
 ## Application components
 

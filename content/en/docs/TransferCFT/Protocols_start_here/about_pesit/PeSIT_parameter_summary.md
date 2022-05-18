@@ -6,7 +6,7 @@ weight: 160
 standardized PI codes and Transfer CFT defined values.
 
 | PI  | Description  |  Transfer CFT value  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | 1  | Use of a CRC (deprecated) | PAD  |
 | 2  | Diagnostic  | (T)  |
 | 3  | Requester identifier | NSPART(length &lt; 24)  |

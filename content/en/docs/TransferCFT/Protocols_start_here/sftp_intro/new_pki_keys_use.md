@@ -2,7 +2,7 @@
 title: "Generate and manage keys"
 linkTitle: "Generate and manage keys"
 weight: 170
---- ******The supported operating systems are listed in the [Platform features](../../../datasheet) table.******
+--- ******The supported operating systems are listed in the Platform features](../../../datasheet) table.******
 
 This section describes how to establish secure sessions and generate keys, import etc. in the context of SFTP.
 
@@ -54,15 +54,15 @@ A private key is comprised of both a private and public key component. You can u
 The PKIKEY command is similar to the PKICER command. Parameters include:
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [PKIFNAME](../../../c_intro_userinterfaces/command_summary/parameter_intro/pkifname) | The PKI database file ($CFTPKU by default) *only in command line* |
 | [ID](../../../c_intro_userinterfaces/command_summary/parameter_intro/id)  | The PKIKEY identifier  |
 | [COMMENT](../../../c_intro_userinterfaces/command_summary/parameter_intro/comment)  | Free comment  |
 | [STATE](../../../c_intro_userinterfaces/command_summary/parameter_intro/state)  | The state of the imported key (ACT or INACT). You cannot use deactivated keys (state=INACT) for SFTP  |
-| [IKDATA]()  | Use base- 64 data instead of a file (where the format corresponds with ikform)  |
-| [IKFORM](../../../c_intro_userinterfaces/command_summary/parameter_intro/iform)  | The key format (DER, PEM, PKCS8, SSH or KPRIV). The "SSH" value includes the SSH2 format and the ssh- rsa format  |
+| [IKDATA  | Use base- 64 data instead of a file (where the format corresponds with ikform)  |
+| IKFORM](../../../c_intro_userinterfaces/command_summary/parameter_intro/iform)  | The key format (DER, PEM, PKCS8, SSH or KPRIV). The "SSH" value includes the SSH2 format and the ssh- rsa format  |
 | [IKNAME](../../../c_intro_userinterfaces/command_summary/parameter_intro/ikname) | The key file to import *only in command line*  |
-| [IKPUB]() | Text- only public key in ssh- rsa format *only in command line*  |
+| [IKPUB | Text- only public key in ssh- rsa format *only in command line*  |
 | [IKPASSW](../../../c_intro_userinterfaces/command_summary/parameter_intro/ikpassw) | The key file protection password in PKCS8 or encrypted PEM (PKCS #5)  |
 | [MODE](../../../c_intro_userinterfaces/command_summary/parameter_intro/mode)  | The action to perform (CREATE, REPLACE, DELETE) *only in command line*  |
 

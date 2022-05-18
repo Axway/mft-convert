@@ -28,7 +28,7 @@ of the function only means that the command has been correctly placed
 in the communication medium.
 
 | Function | Use |
-| - - - | - - - |
+| --- | --- |
 | SEND | Send transfer request: file, message or reply |
 | RECV | Receive transfer request |
 | HALT | Interrupt one or more send or receive transfers with a given partner.<br/> The interrupted transfers are set to the "H" state and can be restarted at the partner's request. |
@@ -48,7 +48,7 @@ in the communication medium.
 ## Call syntax
 
 | CALL "CFTU" USING &lt;verb&gt; &lt;param&gt; &lt;rc&gt;<br /> CALL "CFTC" USING &lt;verb&gt; &lt;param&gt; &lt;rc&gt;  |
-| - - - |
+| --- |
 
 Where:
 
@@ -69,7 +69,7 @@ Where:
 The available &lt;verbs> are listed in the following table.
 
 | &lt;verb&gt; | Value | Service |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | F- SEND | SEND | Send |
 | F- RECV | RECV | Receive |
 | F- HALT | HALT | Interrupt |
@@ -94,7 +94,7 @@ is performed by the function.
 ## Return codes
 
 | Mnemonic | Description |
-| - - - | - - - |
+| --- | --- |
 | CAPI- NOERR | No error |
 | CAPI- FUNC- UNDEF | Command not valid |
 | CAPI- CMD- LENGTH | {{< TransferCFT/axwayvariablesComponentShortName  >}} command string invalid, does not exist, or greater than 1024 characters long  |

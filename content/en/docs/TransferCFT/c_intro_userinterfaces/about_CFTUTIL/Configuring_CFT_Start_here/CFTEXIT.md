@@ -14,7 +14,7 @@ topics********
     [Managing exits](../../../../app_integration_intro/managing_exits)
 
 | Parameters  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [ID](../../../command_summary/parameter_intro/id) | Command identifier |
 | [LANGUAGE](../../../command_summary/parameter_intro/language) | Language used to write the user program.<br/> The possible values are COBOL and C language.<br/> This attribute enables Transfer CFT to exchange data with the program using the EXIT task via the structure best suited to the language in which it is implemented. |
 | [PARM](../../../command_summary/parameter_intro/parm)  | Free field available to the user. |

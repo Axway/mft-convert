@@ -8,24 +8,24 @@ characteristics. Use this command to describe partner characteristics.
 See also:
 
 - Command syntax
-    [CFTPART](../../../command_summary#CFTPART)
+    CFTPART](../../../command_summary#CFTPART)
 - Object concepts
-    [Defining partners]()
+    [Defining partners
 
 | Parameter  | Description  |
-| - - - | - - - |
-| [COMMENT](../../../command_summary/parameter_intro/comment)  | Local comment associated with the partner.<br/> Not used during transfers. May be queried, for example by the LISTPART command. It can consequently be used to locally associate a long text (description in plain language) with the partner. |
+| --- | --- |
+| COMMENT](../../../command_summary/parameter_intro/comment)  | Local comment associated with the partner.<br/> Not used during transfers. May be queried, for example by the LISTPART command. It can consequently be used to locally associate a long text (description in plain language) with the partner. |
 | [COMMUT](../../../command_summary/parameter_intro/commut) <br/> Only applicable for a store and forward site | Type of switching supported for this partner.<br/> The following types are possible:<br/> • YES: corresponds to "store and forward" switching<br/> • SERVER: corresponds to "VAN server switching"<br/> • NO: switching is refused for this partner<br/> • PART: store and forward mode is forced in server mode if the recipient specified in the IPART parameter is not the final receiver<br/> Processing according to the switching type is described in Transfer with routing - Store and forward. |
-| [COS]()  | Class of service parameter as it relates to bandwidth control.  |
-| [CTRLPART](../../../command_summary/parameter_intro/ctrlpart) | Optional parameter that is relevant only in server mode. When a transfer is initiated by a remote partner, Transfer CFT always controls its identity. If the remote sender is not the initial sender, store and forward mode, the Transfer CFT can choose to control the initial sender identity according to CTRLPART parameter.  |
+| [COS  | Class of service parameter as it relates to bandwidth control.  |
+| CTRLPART](../../../command_summary/parameter_intro/ctrlpart) | Optional parameter that is relevant only in server mode. When a transfer is initiated by a remote partner, Transfer CFT always controls its identity. If the remote sender is not the initial sender, store and forward mode, the Transfer CFT can choose to control the initial sender identity according to CTRLPART parameter.  |
 | [ncharset.](../../../command_summary/parameter_intro/fcharset)  |
 | [FPREFIX](../../../command_summary/parameter_intro/fprefix) | File name.<br/> This parameter is used to associate a file name with a partner. During a send or receive operation (CFTSEND or SEND, CFTRECV or RECV), this file name is concatenated with the name specified in the FNAME parameter. |
 | [GROUP](../../../command_summary/parameter_intro/group)  | Group the partner belongs to.<br/> This parameter is used to locally define the symbolic variable &amp;GROUP. |
 | [ID](../../../command_summary/parameter_intro/id)  | Local partner identifier. |
 | [IDF](../../../command_summary/parameter_intro/idf)  | Default identifier of the file for the partner. |
 | [IMAXTIME](../../../command_summary/parameter_intro/imaxtime) | Maximum time after which the partner cannot call. |
-| [IMINTIME]()  | Minimum time before which the partner cannot call.<br/> IMINTIME and IMAXTIME define the time slot during which the partner calls the Transfer CFT monitor (incoming calls). |
-| [IPART](../../../command_summary/parameter_intro/ipart) | Local identifier of an intermediate partner. |
+| [IMINTIME  | Minimum time before which the partner cannot call.<br/> IMINTIME and IMAXTIME define the time slot during which the partner calls the Transfer CFT monitor (incoming calls). |
+| IPART](../../../command_summary/parameter_intro/ipart) | Local identifier of an intermediate partner. |
 | [NACK](../../../command_summary/parameter_intro/nack)  | PeSIT<br/> Enables or disables the negative acknowledgement feature. |
 | [NRPART](../../../command_summary/parameter_intro/npart) | Partner network identifier identifying the partner for incoming calls. |
 | [NRPASSW](../../../command_summary/parameter_intro/nrpassw)  | Partner sign- on password, authorizing a local site access right check. |
@@ -37,7 +37,7 @@ See also:
 | [RAUTH](../../../command_summary/parameter_intro/rauth)  | Identifier (ID parameter) of the CFTAUTH command designating a list of IDFs authorized for the receive transfers with this partner.<br/> RAUTH=* means that all the model files (all the IDFs) may be received.<br/> The identifier values beginning with the characters ‘NOT’ designate lists of unauthorized IDFs (see the CFTAUTH command). |
 | [SAP](../../../command_summary/parameter_intro/sap)  | Values of the remote SAPs, service access points, associated with each of the protocols defined by the PROT parameter. |
 | [SAUTH](../../../command_summary/parameter_intro/sauth)  | Identifier (ID parameter) of the CFTAUTH command designating a list of IDFs authorized for send transfers to this partner.<br/> SAUTH =* means that all model files (all IDFs) may be sent.<br/> The identifier values beginning with the characters ‘NOT’ designate lists of unauthorized IDFs (see CFTAUTH ). |
-| [SSH]()  | Associates a security profile with a partner definition.  |
+| [SSH  | Associates a security profile with a partner definition.  |
 | [SSL](../../../command_summary/parameter_intro/ssl)  | The parameter used to associate a security profile with a partner definition.  |
 | [STATE](../../../command_summary/parameter_intro/state)  | Partner state. |
 | [CFTXLATE](../../../command_summary/parameter_intro/syst) command)<br/> • To declare the file type, in this profile and when the partner is the receiver, in terms of its operating system, to the partner Transfer CFT (NTYPE parameter) |

@@ -11,7 +11,7 @@ Some configuration commands include specific features that enable {{< TransferCF
 The following table lists the default values that are used for {{< TransferCFT/axwayvariablesComponentShortName  >}} files.
 
 | Object  | Specific value  |
-| - - - | - - - |
+| --- | --- |
 | Parameter file | CFTPARM |
 | Partner file | CFTPART |
 | Catalog file | CFTCATA |
@@ -26,7 +26,7 @@ The following table lists the default values that are used for {{< TransferCFT/a
 Some characters have a unique meaning in commands and {{< TransferCFT/axwayvariablesComponentShortName  >}} configuration.
 
 | Notation  | Object  | Specific Value  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | char_file | Logical name prefix | No specific character, as the logical names are processed transparently by RMS |
 | char_mask | Wildcard character | % |
 | char_unit | Separator character (volume) | No volume concept on OpenVMS |

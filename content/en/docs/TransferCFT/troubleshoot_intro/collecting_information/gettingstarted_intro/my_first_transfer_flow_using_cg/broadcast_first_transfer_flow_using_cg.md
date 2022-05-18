@@ -15,7 +15,7 @@ Additionally, you can define what occurs if a partner is unknown, how the script
 ![Simplified diagram of a Source Transfer CFT sending a file to multiple Targets](/Images/TransferCFT/Broadcast_w_cg.png)
 
 |   |  Task  | Description  | Details  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | 1<br/>  | Create a flow.<br/> <br/> <br />  | In {{< TransferCFT/PrimaryCGorUM  >}} click ****Flows**** &gt; ****Add flow****.<br/> Create a flow named ****Broadcast_flow****, and give it the identifier ****flow04****.<br/> In this flow the MainOffice is the Source with the two stores as the Targets. | [![](/Images/TransferCFT/mapArrow.png)](../intro_cg_task_catalog/t_defineflow_broadcast)  |
 | 2<br/>  | Enable broadcasting mode.<br/>  |  <br/> In the Source Transfer properties, enable Broadcast list.<br/>  | [![](/Images/TransferCFT/mapArrow.png)](../intro_cg_task_catalog/t_defineflow_broadcast#enable_broadcast_cg)  |
 | 3<br/>  | Deploy the flow.<br/>  | In {{< TransferCFT/PrimaryCGorUM  >}} click ****Deploy**** to save and deploy the flow.<br/>  | [![](/Images/TransferCFT/mapArrow.png)](../intro_cg_task_catalog/t_savedeployflow)  |
@@ -30,7 +30,7 @@ Collecting files is the inverse of using a broadcast list. In the collect transf
 ![Simplified diagram of a Target Transfer CFT receiving files from multiple sources](/Images/TransferCFT/TransferCFT_Collect_w_CG.png)
 
 |   | Task  | Description  | Details  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | 1<br/>  | Create a flow.<br/> <br />  | In {{< TransferCFT/PrimaryCGorUM  >}} define a flow named ****Collect_flow****, and give it the identifier ****flow05****.<br/> Use the Source as MainOffice and the stores as the Target.<br />  | [![](/Images/TransferCFT/mapArrow.png)](../intro_cg_task_catalog/t_define_simpleflow)  |
 | 2<br/>  | Enable collect mode.<br/>  |  <br/> In the Collect_flow definition, modify so that the Target pulls file.<br/>  | [![](/Images/TransferCFT/mapArrow.png)](../intro_cg_task_catalog/t_defineflow_collect)  |
 | 3<br/>  | Define the path to the Target file for each store.  | In the Target (each store) select File properties. In Path field, enter the path to the file to send.<br/>  | [![](/Images/TransferCFT/mapArrow.png)](../intro_cg_task_catalog/t_collect_target_properties)  |

@@ -21,7 +21,7 @@ to be included in the application using the {{< TransferCFT/axwayvariablesCompon
 ## Call syntax
 
 | ****Syntax**** | rc = cftxx (verb,&amp;ptr,param) |
-| - - - | - - - |
+| --- | --- |
 | Element | Definition |
 | cftxx | ****cftai****: simple Transfer CFT catalog querying services<br/> ****cftaix****: extended {{< TransferCFT/axwayvariablesComponentShortName  >}} catalog querying services<br/> ****cftau****: transfer services with syntax analysis<br/> ****cftac****: transfer services without syntax analysis |
 | **verb** | Service requested |

@@ -27,7 +27,7 @@ If you do not enclose this value in "", the string is interpreted as: `CryptoKey
 > Parameters that have default values are flagged by @default.
 
 | Parameter  | Automatic or default  | Description  | UCONF  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | Installation architecture  | @default = single  | Defines single or cluster mode installation.<br/> Values: single, first_host, additional_host | N/A  |
 | installdir  |   | Transfer CFT installation directory.  | cft.install_dir  |
 | accept_general_conditions  | NO  | Set to YES to accept the General Terms and Conditions in the product [license](https://www.axway.com/en/legal/contract- documents) when performing a silent installation.  |   |
@@ -35,7 +35,7 @@ If you do not enclose this value in "", the string is interpreted as: `CryptoKey
 ****Basic installation parameters****
 
 | Parameter  | Automatic or default  | Description  | UCONF  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | runtimeDir  | ./runtime  | Transfer CFT runtime directory.<br/> Specify the directory where you want to install the Transfer CFT runtime directory.<br/> By default, the runtime directory is installed in a sub- directory of the Transfer CFT installation directory. Use the default directory, or specify a new directory. A runtime directory will be created if it does not already exist. | cft.runtime_dir  |
 | Full_Hostname | @automatic  | Host Address of the local server: FQDN (Fully Qualified Domain Name) or IP Address. See **Note*** | cft.full_hostname  |
 | multinode_hostname  | @automatic  | When not defined, this field is filled with the hostname of the machine where you are installing {{< TransferCFT/suitevariablesTransferCFTName  >}}, whether it is the first host or an additional host.<br/> If the hostname contains a "." period, the value used consists of the name of the host preceding the first period. For example, "myhost.fqdn.net" would be shortened to "myhost". | cft.multi_node.hostnames  |
@@ -53,7 +53,7 @@ If you do not enclose this value in "", the string is interpreted as: `CryptoKey
 ****Security configuration parameters****
 
 | Parameter  | Automatic or default  | Description  | UCONF  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | CryptoKey_Password | @mandatory  | Seed password to generate the encryption key.<br/> The password must contains at least 8 characters, contain upper and<br/> lower case characters as well as numeric and special characters (*$!?+- @). | N/A  |
 | CryptoKey_Key_File | @default = $CFTDIRRUNTIME/data/crypto/crypkey  | Location that stores the generated key file.  | crypto.key_fname  |
 | CryptoKey_Salt_File | @default = $CFTDIRRUNTIME/data/crypto/crypsalt  | Location that stores the generated salt file.  | crypto.salt_fname  |
@@ -61,7 +61,7 @@ If you do not enclose this value in "", the string is interpreted as: `CryptoKey
 ****Runtime configuration parameters****
 
 | Parameter  | Automatic or default  | Description  | UCONF  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | Key |   | Enter the license key for the Transfer CFT product.<br/> The key is stored in the $CFTDIRRUNTIME/conf/cft.key.<br/> *Without the key you can install, but not start the product.* |   |
 | Catalog_File_Size  | @default= 10000  | Sets the default catalog size. | cft.cftcat.default_size  |
 | Communication_File_Size  | @default = 1000  | Sets the default communication file size.  | cft.cftcom.default_size  |
@@ -79,7 +79,7 @@ If you do not enclose this value in "", the string is interpreted as: `CryptoKey
 ****Multi- node and Cluster parameters****
 
 | Parameter  | Automatic or default  | Description  | UCONF  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | Multinode_Enable  | @default = No  | Enable the multi- node architecture.<br/> To use a multi- node architecture, you must define the multi- node option in the initialize.properties file. | cft.multi_node.enable  |
 | Multinode_Number  | @default = 2  | Enter the number of nodes.  | cft.multi_node.nodes  |
 | LoadBalancer_Host  |   | Specify the host address of the load balancer.<br/> When using an ACTIVE/ACTIVE or ACTIVE/PASSIVE deployment, you require a load balancer to connect to the Transfer CFT Copilot server. | cft.multi_node.load_balancer.host  |
@@ -88,7 +88,7 @@ If you do not enclose this value in "", the string is interpreted as: `CryptoKey
 ****Central Governance parameters****
 
 | Parameter  | Automatic or default  | Description  | UCONF  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | CG_Enable | @default = No | Enter Yes to enable Central Governance connectivity.  | cg.enable  |
 | CG_Host  |   | The Central Governance host address.<br/> **If you enabled {{< TransferCFT/suitevariablesCentralGovernanceName  >}}, you must complete this field.** | cg.host  |
 | CG_Port | @default = 12553  | The Central Governance port.<br/> **If you enabled {{< TransferCFT/suitevariablesCentralGovernanceName  >}}, you must complete this field.** | cg.port  |
@@ -100,7 +100,7 @@ If you do not enclose this value in "", the string is interpreted as: `CryptoKey
 ****Sentinel Connector parameters****
 
 | Parameter  | Automatic or default  | Description  | UCONF  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | Sentinel_Enable  | @default = No  | Set to Yes to enable Sentinel.<br/> **Do not enable this if you have enabled {{< TransferCFT/suitevariablesCentralGovernanceName  >}}.** | sentinel.xfb.enable  |
 | Sentinel_Host  |   | Enter the Sentinel host address.  | sentinel.trkipaddr  |
 | Sentinel_Port  | @default= 1305  | Enter the Sentinel port.<br/> You do not need to define this field if you are registering Transfer CFT with {{< TransferCFT/suitevariablesCentralGovernanceName  >}}. | sentinel.trkipport  |
@@ -112,7 +112,7 @@ If you do not enclose this value in "", the string is interpreted as: `CryptoKey
 **Windows Services parameters**
 
 | Parameter  | Automatic or default  | Description  | UCONF  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | CFT_StartAsService  | @default = No  | Start Transfer CFT Server using service mode.  | cft.nt.service_mode  |
 | CFT_ServiceName<br/> CFT_ServiceDisplayName | @default= Transfer_CFT<br/> @default= AMPLIFY Transfer CFT | Transfer CFT Server Service name.<br/> You cannot have spaces in the CFT_ServiceName. |  cft.nt.service_name  |
 | CFT_ServiceSpecificUser  | @default= No  | Use a specific account to start the Transfer CFT Server Service.  | N/A  |
@@ -131,14 +131,14 @@ If you do not enclose this value in "", the string is interpreted as: `CryptoKey
 ****Miscellaneous parameters****
 
 | Parameter  | Automatic or default  | Description  | UCONF  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | JAVA_BINARY_PATH  |   | Java binary path used to start Transfer CFT jar files.  | cft.jre.java_binary_path  |
 | IntegrityControl_Enable  | @default = Yes  | Activate integrity control for the Transfer CFT databases.  |   |
 
 **SAML parameters**
 
 | Parameter  | Automatic or default  | UCONF  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | Enable SAML  | @default = No  | am.type= 'saml'  |
 
 ## Password management

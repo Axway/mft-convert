@@ -109,7 +109,7 @@ Transfer CFT puts the transfer on hold (K status). The operator must manually re
 The following tables lists common parameters for either SOCKS 4 or SOCKS 5. The only difference between the parameters used for SOCKS 4 and 5 is the PASSWORD parameter.
 
 | Parameters  | Value  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | **ID** | STRING max_length=32  | Network resource identifier. |
 | CALL | STRING max_length=0  | Call direction possible through this network resource. ('<u>INOUT</u>','OUT','IN') |
 | CLASS | Number &lt;1&gt; min=0 max=64  | Logical class for the physical link. |

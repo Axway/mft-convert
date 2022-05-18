@@ -30,7 +30,7 @@ This section presents example user types, and describes the actions that they ca
 These scenarios are based on a single {{< TransferCFT/headerfootervariableshflongproductname  >}}, **Machine1** in our examples, that is managed by {{< TransferCFT/PrimaryCGorUM  >}}.
 
 | User type  | CG role(s)  | Machine1 user  | File access  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | Monitoring Assistant | Help Desk<br/> for Transfer CFT | Not defined  | N/A  |
 | Operator  | IT Manager for CG  | Defined  | All permissions on runtime files, but does not have access to other user's working directories |
 | Partner Manager  | CG Admin  | Not defined  | No privileges on the physical files  |

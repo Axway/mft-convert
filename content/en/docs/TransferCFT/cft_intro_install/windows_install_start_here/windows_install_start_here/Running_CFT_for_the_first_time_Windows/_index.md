@@ -57,7 +57,7 @@ Delivered partners are:
 ### Start and stop commands
 
 | Commands  |
-| - - - |
+| --- |
 | cft start  |
 | cft stop  |
 | cft status  |

@@ -7,7 +7,7 @@ weight: 250
 On z/OS and IBM i platforms you should check the page code used by your local system. For example, x'5B' is the pound character (£) if you are using the United Kingdom EBCDIC page code 285, but is the dollar character ($) in the French EBCDIC page code 297. For more information, please refer to the Wikipedia [code page](https://en.wikipedia.org/wiki/Code_page).
 
 |   | Description  | Windows  | Unix | z/OS  | IBM i  | OpenVMS  |
-| - - - | - - - | - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- | --- | --- |
 | char_file  | Logical name prefix | $  | _  | x'5B'<br/> 285 = £<br/> 297 = $ | x'4E'<br/> 285 = +<br/> 297 = + | No specific character;<br/> logical names are<br/> processed transparently by RMS |
 | char_mask  | Wildcard character  | ?  | ?  | x' 6F<br/> 285 = ?<br/> 297 = ? | x'6F'<br/> 285 = ?<br/> 297 = ? | %x  |
 | char_unit  | Separator character (volume)  | %  | \01  | x' 6C'<br/> 285 = %<br/> 297 = % | x '5E'<br/> 285 = ;<br/> 297 = ; | No volume concept |

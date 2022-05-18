@@ -18,7 +18,7 @@ A zero value corresponds to no compression (default).
 Default values are:
 
 | Protocol  | Default value  |
-| - - - | - - - |
+| --- | --- |
 | PeSIT ANY profile | 0 |
 | ODETTE  | 1  |
 

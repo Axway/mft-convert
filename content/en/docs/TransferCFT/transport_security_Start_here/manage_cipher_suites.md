@@ -9,7 +9,7 @@ weight: 180
 {{< TransferCFT/axwayvariablesComponentLongName  >}} supports the cipher suites listed below, and prioritizes them as displayed in the **Order used** column (the {{< TransferCFT/axwayvariablesComponentLongName  >}} order overrides your cipher suite order). The order, between two approximate levels of security, favors the cipher suite that provides a better level of performance.
 
 | Suite  | Order used | Authentication  | Confidentiality  | Integrity  |
-| - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- |
 | 49199 **  | 1  | ECDHE + RSA authentication  | AES- 128 GCM  | SHA- 256  |
 | 49200 **  | 2  | ECDHE + RSA authentication  | AES- 256 GCM  | SHA- 384  |
 | 49191 **  | 3  | ECDHE + RSA authentication | AES- 128  | SHA- 256  |
@@ -51,7 +51,7 @@ This section describes how to specify the cipher suites for governance or when T
 <span id="cipher_suites"></span>You can use these UCONF parameters to define the cipher suites:
 
 | Parameter  | Description  | Type  | Default value  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | ssl.ciphersuites  | Defines the cipher suite to be used between the Transfer CFT connectors.  | int_list  | 49200, 49199, 156, 157, 60, 61, 47, 53  |
 | copilot.ssl.sslciphersuites | Defines the cipher suite to be used between the Transfer CFT UI client and UI server. | int_list  | $(ssl.ciphersuites)  |
 

@@ -94,7 +94,7 @@ The started procedure MUST delete the temporary files, regardless of the environ
 The following unified configuration parameters are specific to HP Nonstop.
 
 | Parameter | Default | Description |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | <span id="cft.guardian.cftwrk"></span>cft.guardian.cftwrk |   | The default working directory for the TACL and NETBATCH scripts.<br/> The parameter is set with the default value of “<code>&lt;</code><code>subvolume</code><code>&gt;UD</code>” (see [Guardian files](#Guardian)) during the Guardian files installation. |
 | <span id="cft.guardian.process_name_prefix"></span>cft.guardian.process_name_prefix | LA | The first two letters of the Guardian process names.<br/> Each Transfer CFT process is assigned a name using this prefix and a suffix, which depends on the executable name.<br/> For instance, using the default setting, CFTLOG is run with the name $LALOG with the Guardian convention (or /G/LALOG with the OSS convention).<br/> If empty, no Guardian process name is given.<br/> If you plan to run several instances of Transfer CFT at the same time on the same machine, you should assign each instance a unique value. |
 | <span id="cft.guardian.processor"></span>cft.guardian.processor | - 1 | Processor on which Transfer CFT is started.<br/> • - 1 indicates that Transfer CFT is started on the processor from which the start- up command is executed<br/> • Processor number |

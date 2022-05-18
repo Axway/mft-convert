@@ -165,7 +165,7 @@ You can define the filename either in the:
     object (recommended)
 
 | To receive... | Enter... |
-| - - - | - - - |
+| --- | --- |
 | a file | a complete physical file name |
 | a version of a file | a file name with a root and a version number |
 | a group of concatenated files | a directory name |

@@ -38,7 +38,7 @@ Displays using the same format as in {{< TransferCFT/headerfootervariableshflong
 - Format V24: The record is truncated if LRECL&lt;1569 or padded with spaces if LRECL>1569.
 
 | Type  | V24 length  | V23 length  | Description  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | CHAR  | 1  | 1  | 'L': start of record marker  |
 | CHAR  | 1  | 1  | SEND/RECV flag  |
 | CHAR  | 1  | 1  | STATE  |
@@ -65,7 +65,7 @@ Displays using the same format as in {{< TransferCFT/headerfootervariableshflong
 The fields are as described in the following table, where the field size depends on the format version (V23 or V24).
 
 | Type | V24 length | V23 length | Description |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | CHAR  | 1  | 1  | 'L': start of record marker  |
 | CHAR  | 1  | 1  | SEND/RECV flag  |
 | CHAR  | 1  | 1  | STATE  |

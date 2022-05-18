@@ -9,8 +9,8 @@ CFTT60I PART= &part IDF=
 &idf IDT= &idt, &messageLog
 
 | DiagP<br /> Catalog  | &amp;messageLog  | Comment  |
-| - - - | - - - | - - - |
-| - - - | Exit List V2.4.0  | Indicates the start of execution of the exit- list program  |
+| --- | --- | --- |
+| --- | Exit List V2.4.0  | Indicates the start of execution of the exit- list program  |
 | EXL RESV  | Err_parameter RESERV  | Error in RESERV parameter of CFTEXIT command<br/> RESERV = 16384 is correct  |
 | EXL FILE  | Err_open criteria file  | Selection criteria file opening error  |
 | EXL CATA  | Err_open catalog file  | Catalog opening error  |

@@ -8,7 +8,7 @@ This section describes how to install a patch or service pack on your z/OS Trans
 
 Information includes:
 
-- [Install update libraries (PTF)](#Install%20update%20libraries%20(PTF))
+- Install update libraries (PTF)](#Install%20update%20libraries%20(PTF))
 - [Transfer the PTF file to the host machine](#Transfer%20the%20PTF%20file%20to%20the%20host%20machine)
 - [Integrate PTF elements using A13PTFLD](#Integrate%20PTF%20elements%C2%A0using%20A13PTFLD) 
 - [Apply a PTF using A13PTFLK](#Apply%20a%20PTF%C2%A0using%20A13PTFLK) 
@@ -26,7 +26,7 @@ A PTF file results from the fixed formatting (80) of an ADRDSSU- type file conta
 Libraries taken into account during a DUMP ADRDSSU
 
 | Libraries  | Contents  |
-| - - - | - - - |
+| --- | --- |
 | INSTALL | Update the installation JCLs |
 | SAMPLE | Update the SAMPLES |
 | SAMPLEO | Update the COBOL samples |
@@ -87,7 +87,7 @@ If an FTP server is configured on the workstation, you can use the sample JCL, A
 All of the A13\* JCLs are used to update or apply a Service Pack to Transfer CFT as described here.
 
 | JCL  | Description  |
-| - - - | - - - |
+| --- | --- |
 | A13AUTO  | To automatically apply fixes.  |
 | A13PTFFT  | To transfer a patch to the distlib.UPLIB in binary mode (using FTP - mode GET).  |
 | A13PTFLD  | To update the distribution libraries. (ADRDSSU)  |
@@ -226,4 +226,4 @@ If ID='NONE', this JCL is not submitted.
 
 ****Related topics****
 
-- [About migrating Transfer CFT z/OS]()
+- [About migrating Transfer CFT z/OS

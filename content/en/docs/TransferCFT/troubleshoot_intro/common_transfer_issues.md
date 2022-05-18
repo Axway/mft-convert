@@ -5,7 +5,7 @@ weight: 230
 --- ## Diagi=302 
 
 | Event | Consequence |
-| - - - | - - - |
+| --- | --- |
 | NET - Network link broken (cut- off, time- out) outside the connection phase. DIAGP is then set to VNRELI | D status - RETRY/COMMUT<br /> Up to "RETRYM" number or retries are performed for the transfer and the access data. If the number of retries reaches the value in the RETRYM parameter, Transfer CFT switches the access data.<br/> • The partner access data for the next retry will relate to the next IP address parameter (CFTNET command), or the next PROT parameter (CFTPART command). The restart counter is reset to 0.<br/> • If the protocol used is the last in the list, the transfer is either switched to the backup partner (IPART parameter of the CFTPART command) or aborted with code 405, while maintaining the diagnostic code (DIAGP) of the last retry |
 
 The network link can break  during the connection phase or the transfer phase. If it occurs while trying to connect to the remote partner, remember that a remote partner is defined by 2 objects:
@@ -17,7 +17,7 @@ The network link can break  during the connection phase or the transfer phase. 
  Most issues come from an unreachable address or port. To solve or avoid these issues:
 
 | Check the issue and solutions | Description |
-| - - - | - - - |
+| --- | --- |
 | The remote host is unreachable |   |
 | Check that the remote host is reachable or that there is not a spelling mistake |  • If you have a domain name address, such as item- x123.axway.int, try using the ping command (ping &lt;host&gt;) with the corresponding numeric IP address.<br/><br/> • If the ping still fails, the remote host is unreachable.<br/> |
 | The remote host is still unreachable |   |
@@ -33,11 +33,11 @@ The network link can break  during the connection phase or the transfer phase. 
 ## Diagi=26x
 
 | Code | Event | Consequence |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | 26x | SSL/TLS problem | When the network session is opened and if a secured connection is required, you may have an SSL handshake.<br /> The handshake:<br/> • is an exchange of messages between an SSL Client and an SSL Server<br/><br/> • authenticates the SSL Client and the SSL Server<br/><br/> • selects the cryptographic algorithms used to secure the communication<br /> <br /> In Transfer CFT, the SSL/TLS protocol is configured through:<br/><br/> • the CFTSSL object (CFT Configuration)<br/><br/> • some uconf values (such as cft.ssl.version_min and cft.ssl.version_max)<br/> |
 
 | SSL objects | Description |
-| - - - | - - - |
+| --- | --- |
 | SSL Client | Initiates the handshake (requester side). To select the SSL client profile:<br /> <br /> If SSL is defined in a CFTPART object (objects that define the remote partner and the SSL client profile which will be used, either directly by defining a SSL parameter)<br /> 1.CFTPART ID=PART1,PROT=PESITSSL,SSL=SSL1<br /> 2.CFTSSL ID=SSL1,DIRECT=CLIENT,...<br /> <br /> If SSL is not defined in a CFTPART object:<br /> 1.CFTPART ID=PART1,PROT=PESITSSL<br /> 2.CFTPROT ID=PESITSSL,SSL=SSL1,...<br /> 3.CFTSSL ID=SSL1,DIRECT=CLIENT,... |
 | SSL Server | Answers to the client, authenticates itself and decides if the client must be authenticated too. As the handshake is executed before the PESIT session, the SSL profile selected is the one specified in the CFTPROT object. To select the SSL Server profile ( refers to the way the SSL profile is selected when CFT acts as a SSL server):<br /> 1.CFTPROT ID=PESITSSL,SSL=SSL2<br /> 2.CFTSSL ID=SSL2,DIRECT=SERVER,... |
 
@@ -80,14 +80,14 @@ Information and data are exchanged during these phases. If an error occurs, a 23
 To find the cause of the error, it is highly recommended that you use the CFTATM traces with protocol trace on the server and on the client.
 
 | Code | Event | Consequence |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | 230 | PROT - Protocol error. A protocol error has been detected: DIAGP is set to the PeSIT or ODETTE code of the error detected | H status - ABORT, EXECE, ASIT EXIT |
 | 730 | 1. PROT – Protocol error<br /> 2. PROT - (PeSIT) Transfer aborted by the remote end due to protocol error - PeSIT code: see DIAGP<br /> 3. PROT - (Odette) Reception of an ESID FPDU | H status - ABORT, EXECE, ASIT EXIT<br /> H status - ABORT, EXECE, ASIT EXIT<br /> <br /> H status - ABORT, EXECE |
 
 The 230 diagnostic codes may have different diagnostic protocols formats, for example:
 
 | Diagnostic codes | Event | Solution |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | eEEsSS | Protocol error, where an unexpected event (EE) occurs and does not correspond with any SS state.<br /> As for the code name, e stands for event, s for state. EE (2 digits) for the event a type of event | If the problem reoccurs:<br/> • Set the CFTATM traces.<br/><br/> • Execute the cft_support collect, in order to have the maximum information. <br/> |
 | PDU iNN | One element of the FPDU is not conform. The NN value indicates which parameter does not conform. | If the problem reproduces:<br/> • Set the CFTATM traces.<br/><br/> • Execute the cft_support collect, in order to have the maximum information.<br/> |
 

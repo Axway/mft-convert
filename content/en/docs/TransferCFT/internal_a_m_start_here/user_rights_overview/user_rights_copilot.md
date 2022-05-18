@@ -17,7 +17,7 @@ By default this parameter is set to NO and user authentication is controlled by 
 When set to YES, user authentication is controlled by the system where Transfer CFT is installed and the Transfer CFT Copilot server starts a process under the connected user. Note that the default value is platform specific. When set to NO, actions made on the configuration are done with the user that **started** the Transfer CFT Copilot server.
 
 | OS  | Default  |
-| - - - | - - - |
+| --- | --- |
 | Unix | NO  |
 | Windows | YES  |
 | IBM i  | YES  |

@@ -5,7 +5,7 @@ weight: 240
 --- This section presents the **multi- node** parameters and their default values. The column ****Modify**** indicates a strong recommendation that you should not modify this value if ****No**** is indicated.
 
 | Parameters | Description | Default | Values | Modify  |
-| - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- |
 | cft.multi_node.enable | Enables/disables the multi- node feature. | No | Yes, No | Yes  |
 | cft.multi_node.max | Maximum number of nodes. | 8 | integer from 0 to 8 | No  |
 | cft.multi_node.<br /> cftcomlock.fname | Lock file for the main communication media file task in multi- node | $(cft.runtime_dir)/data/cftcom.lck | fname | Yes  |
@@ -36,7 +36,7 @@ weight: 240
 ## Connection dispatcher parameters
 
 | Parameters | Description | Default | Values | Modify  |
-| - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- |
 | copilot.<br /> connection_dispatcher.enable | Enable client registering connection dispatching | Yes (multi- node), No otherwise | Yes, No | Yes  |
 | copilot.<br /> connection_dispatcher.control.port | Connection dispatcher TCP control port |   | integer | Yes  |
 | copilot.<br /> connection_dispatcher.retry_delay | Client registering to connection dispatcher retry delay in seconds | 5 | integer | Yes  |
@@ -47,11 +47,11 @@ weight: 240
 ### Node manager parameters
 
 | Parameters | Description | Default | Values | Modify  |
-| - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- |
 | copilot.<br /> node_manager.watchperiod | Interval between checking the status of two Transfer CFT nodes. The Copilot watchdog uses the double of this value to ensure shared file system lease lock is not met. The value must therefore be less than the NFS lease time. | 10 | integer | Yes  |
 
 ****Related topics****
 
-- [Multi- node commands](../../../../about_multinode/multi_node_commands)
-- [Managing multi- node]()
+- Multi- node commands](../../../../about_multinode/multi_node_commands)
+- [Managing multi- node
 - [UCONF: Protocols and networks](../../../../admin_intro/uconf/uconf_protocols_and_networks)

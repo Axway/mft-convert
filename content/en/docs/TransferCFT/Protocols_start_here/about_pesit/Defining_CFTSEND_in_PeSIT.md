@@ -168,7 +168,7 @@ The table below summarizes the parameter values authorized according
 to the functional levels negotiated for the protocol.
 
 | CFTSEND or SEND parameter  | PeSIT E  | PeSIT E<br/> +<br/> Transfer CFT extensions  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | FDATE/FTIME  | X  | X  |
 | NBLKSIZE  | - | X  |
 | NCODE  | X  | X  |

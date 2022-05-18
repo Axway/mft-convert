@@ -7,7 +7,7 @@ terminating procedures if a transfer error occurs. A transfer error is
 defined as a problem leading to the Transfer CFT discontinuing the transfer.
 If this occurs, Transfer CFT can initiate one of the two procedures:
 
-- [End- of- transfer
+- End- of- transfer
     procedure](#End- of- transfer)
 - [Backup
     procedure](#Backup_procedures)
@@ -20,7 +20,7 @@ described in the following section.
 ### Defining procedure names
 
 The names of these procedures are defined by the value of the EXEC\*
-parameters of the [CFTPARM](),
+parameters of the [CFTPARM,
 [CFTSEND/SEND](../../cft_configuration_concepts_start_here/default_send_template_concepts)
 or [CFTRECV/RECV](../../cft_configuration_concepts_start_here/default_receive_template_concepts)
 commands.

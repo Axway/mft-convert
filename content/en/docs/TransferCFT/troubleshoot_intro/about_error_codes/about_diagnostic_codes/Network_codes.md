@@ -28,7 +28,7 @@ In this case, refer to the manufacturer's documentation for the meaning
 of this code.
 
 | Hexadecimal Code  | Decimal Code  | Meaning  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | 23a | 570 | Reception of a Define Resource request concerning an already registered resource |
 | 23b | 571 | Reception of an Undefined Resource request for a resource with registered users |
 | 23c | 572 | Reception of an Undefined Resource request for a resource with active connections |

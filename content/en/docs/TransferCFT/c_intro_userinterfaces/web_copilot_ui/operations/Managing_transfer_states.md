@@ -23,7 +23,7 @@ To view the transfers log:
 Available actions to include in the Transfers page include:
 
 | UI  | More information  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | New  | Create a transfer request | Create a new transfer request  |
 | Clone  | No equivalent parameter  | Copy an existing transfer request  |
 | Restart  | [Restarting transfers](../../../about_cftutil/managing_transfer_states/start_command) | Restart transfers in the H or K state in the catalog |

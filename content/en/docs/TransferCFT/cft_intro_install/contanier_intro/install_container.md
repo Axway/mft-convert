@@ -25,7 +25,7 @@ Beyond the prerequisites listed above, the installation instructions for each co
 Depending on which method you plan to use, follow the corresponding link to the appropriate installation instructions.
 
 | Element | Instructions |
-| - - - | - - - |
+| --- | --- |
 | Docker Engine  | [https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)  |
 | Docker- Compose  | [compose/install/](https://docs.docker.com/compose/install/)  |
 | Kubernetes  | [https://kubernetes.io/docs/tasks/tools/install- kubectl/](https://kubernetes.io/docs/tasks/tools/install- kubectl/)  |

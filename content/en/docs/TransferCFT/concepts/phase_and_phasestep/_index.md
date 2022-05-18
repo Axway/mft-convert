@@ -45,7 +45,7 @@ The ****phasestep**** refers to the details that can occur during any given phas
 > The CFTSTATE in the Transfer CFT catalog corresponds to the transfer state in diagrams and tables.
 
 | Phase  | Phasestep  | <span id="State"></span>State  | Description  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | Pre- processing (A)  | Hold (H)  | Pre- processing (A)  | Pre- processing available  |
 | Pre- processing (A)  | Available (D)  | Pre- processing (A)  | Pre- processing is waiting resource to start  |
 | Pre- processing (A)  | Processing (C)  | Pre- processing (A)  | Pre- processing in progress  |

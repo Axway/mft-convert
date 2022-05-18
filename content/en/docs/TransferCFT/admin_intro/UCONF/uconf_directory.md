@@ -47,7 +47,7 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 > By default, all UCONF parameters are static and require a restart. Only parameters with the RECONFIG or IRECONFIG flags are dynamic; for these dynamic parameters only you can use the reconfig command and no restart is required.
 
 | Name | Description | Type | Restriction | Default Value | Platform | Flags |
-| - - - | - - - | - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- | --- | --- |
 | acceleration.enable | Enables the acceleration. | bool Yes No |   | No | "NT, UNIX" | EXPERT |
 | acceleration.ptcp | List of CFTNET objects that implement the pTCP acceleration. | string list |   |   | ALL |   |
 | acceleration.ptcp.&lt;logical_name&gt;.buffer_size | Internal acceleration buffer size in bytes. | int |   | 10240000 | ALL |   |

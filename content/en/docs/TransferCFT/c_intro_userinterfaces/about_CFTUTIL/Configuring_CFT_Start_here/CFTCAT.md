@@ -30,12 +30,12 @@ In the user interface, you can customize the catalog columns and filters. From t
 topics****
 
 - Command syntax
-    [CFTCAT](../../../command_summary#CFTCAT)
+    CFTCAT](../../../command_summary#CFTCAT)
 - Object concepts
     [Catalog attributes](../../../../admin_intro/admin_config_commands/catalog_parameter_concepts)
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [ID](../../../command_summary/parameter_intro/id)  | Name identifying the CFTCAT command. |
 | [FNAME](../../../command_summary/parameter_intro/fname) | Catalog file name. |
 | [CACHE](../../../command_summary/parameter_intro/cache)  | Size parameter for the monitor cache memory buffer size, containing the transfers waiting for resources. |
@@ -43,11 +43,11 @@ topics****
 | [RKERROR](../../../command_summary/parameter_intro/rkerror) | Action to be taken if a transfer aborts during the selection phase in server mode. |
 | [RT](../../../command_summary/parameter_intro/rt)  | Number of days (where a day equals a 24- hour interval) after which the catalog entries of terminated receive transfers (RT state) are automatically purged. |
 | [RX](../../../command_summary/parameter_intro/rx)  | Number of days after which the catalog entries of receive transfers for which the end of reception procedure is correctly executed (RX state) are automatically purged. |
-| [RY]()  | Number of days after which the catalog entries of receive transfers that are the in post- processing phase (RY state) are automatically purged.  |
-| [SH](../../../command_summary/parameter_intro/sh)  | Number of days (where a day equals a 24- hour interval) after which the catalog entries for "unterminated" send requests (H or K state) are automatically purged. |
+| [RY  | Number of days after which the catalog entries of receive transfers that are the in post- processing phase (RY state) are automatically purged.  |
+| SH](../../../command_summary/parameter_intro/sh)  | Number of days (where a day equals a 24- hour interval) after which the catalog entries for "unterminated" send requests (H or K state) are automatically purged. |
 | [ST](../../../command_summary/parameter_intro/st)  | Number of days (where a day equals a 24- hour interval) after which the catalog entries of terminated send transfers (ST state) are automatically purged. |
 | [SX](../../../command_summary/parameter_intro/sx) | Number of days (where a day equals a 24- hour interval) after which the catalog entries of terminated send transfers, for which the end- of- send transfer procedure was correctly executed (SX state), are automatically purged. |
-| [SY]()  | Number of days (where a day equals a 24- hour interval) after which the catalog entries of send transfers that are in the post- processing phase (SY state), are automatically purged.  |
+| [SY  | Number of days (where a day equals a 24- hour interval) after which the catalog entries of send transfers that are in the post- processing phase (SY state), are automatically purged.  |
 | [TLVCLEAR](../../../command_summary/parameter_intro/tlvclear) | Level below which the alert ceases, as a percentage of filling, where 0% indicates the file is empty and 100% that it is full. |
 | [TLVCEXEC](../../../command_summary/parameter_intro/tlvcexec) | Batch to execute when the alert ends. |
 | [TLVWRATE](../../../command_summary/parameter_intro/tlvwrate) | The minimum amount of time, in seconds, to wait before resending an alert. |

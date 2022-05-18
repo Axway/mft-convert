@@ -129,7 +129,7 @@ Silent mode enables you to perform an installation or configuration in a non- in
 Before you start the silent installation you must update the silent_install.conf installation file located in the install directory.
 
 | Value  | Default value  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | &amp;cftinstall | AXWAY.XFB.D332  | Library prefix qualifiers for distribution environment  |
 | &amp;distlev | CF030000  | Distribution prefix level  |
 | &amp;hostuplib | AXWAY.XFB.D332.CF030000.UPLIB | Library prefix to upload product  |

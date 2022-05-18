@@ -11,7 +11,7 @@ weight: 320
 1. Configure the remaining parameters as described in the following table to define the new alias.
 
 | Parameters  | Description  |
-| - - - | - - - |
+| --- | --- |
 | cft.scheduled_values  | List of scheduled aliases. Use a space to separate alias names.  |
 | cft.scheduled_values.(alias- id).start_time  | Start time using the format MM:HH:DAYS_OF_THE_WEEK. This is the begin time for when a value switches from its existing value to the temporary value. See [Details](#Details,%20days) below.  |
 | cft.scheduled_values.(alias- id).delay  | Delay using the format MM:HH.<br/> This is the length of time during which the value can be changed. |

@@ -31,6 +31,6 @@ The Transfer CFT operator interface for z/OS supplies the following responses:
 
 ****Related topics****
 
-[Diagnostic commands]()
+Diagnostic commands
 
-[The ? command]()
+The ? command

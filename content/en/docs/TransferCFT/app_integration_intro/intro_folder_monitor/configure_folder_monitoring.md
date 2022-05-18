@@ -36,7 +36,7 @@ weight: 180
     <!- - - - >
 
     - Define other Folder Monitoring parameters
-1. Optionally, to specify file- system event monitoring you additionally must set this in [CFTFOLDER object.](#Enable)
+1. Optionally, to specify file- system event monitoring you additionally must set this in CFTFOLDER object.](#Enable)
 
 <span id="CFTFOLDE"></span>
 
@@ -53,7 +53,7 @@ Use the following CFTFOLDER parameters to configure folder monitoring for each 
 ****Parameter descriptions****
 
 | <span id="Paramete"></span>Parameter  | Type  | Default  | Description  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | same as in UCONF<br/> &lt;folder_monitoring.enable&gt; | Boolean  | No  |  • No: No folder monitoring occurs.<br/> • Yes: Enable {{< TransferCFT/axwayvariablesComponentShortName  >}} folder monitoring. |
 | ID<br/> **Mandatory** | node  | None  | Add the logical folders to monitor (list of logical identifiers).<br/> You should provide a unique name to identify the set of configuration parameters corresponding to this directory. If you have more than one Folder to monitor, use a space between each logical value. |
 | STATE  | Boolean  | Active  | Enables a scan of the folder.<br/> <blockquote> **Note**<br/> NO = NOACTIVE.<br/> </blockquote>  |
@@ -75,7 +75,7 @@ Use the following CFTFOLDER parameters to configure folder monitoring for each 
 | RESUBMITCHANGED  | Boolean  | Yes  | This parameter has no effect when the configured method is MOVE.<br/> When the method parameter value is set to FILE:<br/> • Yes: When the state of a previously submitted file is seen as having changed, the file is submitted again.<br/> • No: Files are not resubmitted, regardless of changes.<br/> <blockquote> **Note**<br/> The file is resubmitted after any change regardless of if the modification is a small change, or purging and replacing the file with another file having the same name.<br/> </blockquote>  |
 | FILTERTYPE  | enum  | WILDMAT  | Defines the pattern matching algorithm to use for file name filtering.<br/> Values:<br/> • STRJCMP: The Transfer CFT pattern matching algorithm.<br/> • WILDMAT: A well known public domain algorithm, and is the default. **Unix/Windows only**<br/> • EREGEX: Extended regular expression syntax.<br/> See [Create inclusion and exclusion filters](../folder_customize#top) for details. |
 | RENAMEMETHOD  | Enum  | TIMESTAMP  | This parameter applies only to the MOVE method. When set to TIMESTAMP, a timestamp of the pattern YYYYMMDDHHMMSS is added at the end of the name of the renamed file but before the last '.'.<br/> For example, using timestamp_separators=".": • myfile is renamed myfile.20131025<br/> • myfile.txt is renamed myfile.20131025.txt<br/> <blockquote> **Note**<br/> Unset the default value and use " " to MOVE without adding a timestamp.<br/> </blockquote>  |
-| RENAMESEPARATOR  | string  | OpenVMS:<br/> " _ "<br/> All other OS:<br/> "." | This parameter only applies to the MOVE method.<br/> You can use no more than two characters from among the following:<br/> .[]()_- <br/> The first character defines the separator before the timestamp. The second one, when present, defines the separator after the timestamp.<br/> For example, using timestamp_separators "[]": - myfile is renamed myfile.[20131025] - myfile.txt is renamed myfile.[20131025].txt |
+| RENAMESEPARATOR  | string  | OpenVMS:<br/> " _ "<br/> All other OS:<br/> "." | This parameter only applies to the MOVE method.<br/> You can use no more than two characters from among the following:<br/> .[_- <br/> The first character defines the separator before the timestamp. The second one, when present, defines the separator after the timestamp.<br/> For example, using timestamp_separators "[]": - myfile is renamed myfile.[20131025] - myfile.txt is renamed myfile.[20131025].txt |
 | N/A in this version  | string  |   | Metadata used to control user changes.  |
 | USEFSEVENTS<br/> <br/> [More information](../../../c_intro_userinterfaces/web_copilot_ui/flow_def_intro/cftfolder) | Boolean  | No  | Set to YES to enable the file system events monitoring service to detect newly available files.  |
 | [Folder monitoring using USERCTRL](../../../c_intro_userinterfaces/command_summary/parameter_intro/userid). |

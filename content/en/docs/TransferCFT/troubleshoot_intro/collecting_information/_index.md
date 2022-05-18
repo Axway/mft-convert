@@ -31,7 +31,7 @@ To better help you resolve an incident, you can print and use
 the following table. It can serve as a guideline for gathering information, which can help you if you need to file an incident report.
 
 | Step  | Your remarks  |
-| - - - | - - - |
+| --- | --- |
 | 1. Identify the symptoms  |   |
 | Did the system crash? |   |
 | Is the error message due to a transfer request, a transfer in server mode, or other? |   |

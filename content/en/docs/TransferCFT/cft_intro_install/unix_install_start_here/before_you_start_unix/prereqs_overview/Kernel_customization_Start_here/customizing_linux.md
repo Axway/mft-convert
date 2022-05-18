@@ -13,7 +13,7 @@ The following table lists IPC tuning parameters to consider customizing and reco
 > To aid in correctly calculating semaphores, remember that each Transfer CFT has two semaphores per instance.
 
 | Parameter  | Recommended<br/> value | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | msgmax  | 8192  | Maximum size of a message in bytes.  |
 | msgmnb  | 32768  | Maximum size in bytes on a single IPC message queue.  |
 | msgmni  | 48 per {{< TransferCFT/axwayvariablesComponentLongName  >}} instance<br/> See [NOTE](#note_linux)** | Maximum number of IPC message queue resources allowed.<br/> You require as many message queues as processes per Transfer CFT instance (when using multiple instances, multiply the number of instances by the number of Transfer CFT processes). |

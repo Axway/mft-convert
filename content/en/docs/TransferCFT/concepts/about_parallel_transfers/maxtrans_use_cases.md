@@ -108,7 +108,7 @@ In addition to simply looking at the maximum number of sessions, connections, an
 The following table shows the impact on scheduling once Transfer CFT reaches a file transfer parameter limit.
 
 | Reached limit for the ...  | DIAGI - DIAGP  | Reschedules...  | Conditions to be executed..  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | Local MAXTRANS  | 0  | Immediately after a transfer is completed  | A transfer slot is available on the local site  |
 | Remote MAXTRANS  | 916- RCO 201  | In WSCAN minutes(CFTCAT)  | When a session is available on the remote site  |
 | Local MAXCNX  | 416- MAXCNX  | In WSCAN minutes (CFTCAT)  | When a session is available on the local site  |

@@ -15,7 +15,7 @@ server. The configuration change can be:
 
 ## Procedure
 
-To enable configuration change auditing, set the following [unified configuration](../../../admin_intro/uconf) (UCONF) parameters:
+To enable configuration change auditing, set the following unified configuration](../../../admin_intro/uconf) (UCONF) parameters:
 
 1. Activate the Sentinel connector by setting `sentinel.xfb.enable=yes`.
 1. Activate the audit by setting `sentinel.xfb.audit=yes.`
@@ -50,7 +50,7 @@ containing:
 ### Ident attribute details
 
 | CFTA0nX  | Details  |
-| - - - | - - - |
+| --- | --- |
 | n=1 | CFTPARM file  |
 | n=2 | CFTPART file  |
 | n=3 | CFTCAT file  |
@@ -65,7 +65,7 @@ containing:
 ### Return message attribute details
 
 | Attribute  | Details  |
-| - - - | - - - |
+| --- | --- |
 | Action=&amp;act  |  &amp;act is the action on an object (“CREATE” , “MODIFY” , “DELETE”)  |
 | Object=&amp;obj  | &amp;obj is the object identifier (type of object for the CFTFILE command)  |
 | id=&amp;id  |   |
@@ -88,4 +88,4 @@ CFTUTIL uconfset id=sentinel.xfb.log, value=' '
 ****Related topics****
 
 - UCONF: [unified configuration](../../../admin_intro/uconf)
-- [XFBTransfer]()
+- [XFBTransfer

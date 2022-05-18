@@ -93,7 +93,7 @@ signature section as described below.
 #### Certificate file description
 
 | Certificate field  | Description  |
-| - - - | - - - |
+| --- | --- |
 | Version  | The version of the encoded certificate value for X509v3 is 2.  |
 | Serial Number  | An integer assigned by the CA. The issuer name and serial number must identify a unique certificate.  |
 | Issuer Signature Algorithm  | The signature algorithm identifier used by the CA to sign the certificate (e.g., RSA with SHA- 1).  |

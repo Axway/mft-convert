@@ -20,7 +20,7 @@ The table indicates  if the iblksize parameter
 is used.
 
 | OS  | IBLKSIZE  |
-| - - - | - - - |
+| --- | --- |
 | MVS (z/OS) | YES  |
 | OS400  | YES  |
 | UNIX  | NO  |

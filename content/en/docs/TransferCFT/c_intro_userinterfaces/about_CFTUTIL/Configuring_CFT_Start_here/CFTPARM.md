@@ -4,7 +4,7 @@ linkTitle: "CFTPARM - General parameters"
 weight: 380
 --- The <span id="Defining_CFTPARM"></span>CFTPARM object is used to specify parameters
 that control the operation of Transfer CFT as a whole and to select other
-parameter setting commands to be used at run time. The [Symbolic variables](../../../command_summary/symbolic_variables) topic describes
+parameter setting commands to be used at run time. The Symbolic variables](../../../command_summary/symbolic_variables) topic describes
 how symbolic variables can be used in the identification and in the body
 of these procedures.
 
@@ -30,7 +30,7 @@ Use this command to:
     during execution
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [CFTACCNT](../../../command_summary/parameter_intro/accnt)). |
 | [see table](../../../command_summary/parameter_intro/bufsize)  | Size of the monitor internal buffer used to exchange data between monitor tasks, expressed in characters in bytes. |
 | [Defining the catalog parameters](../../../command_summary/parameter_intro/cat)). |
@@ -46,7 +46,7 @@ Use this command to:
 | [EXECSFA](../../../command_summary/parameter_intro/execsfa)  | Generic name of the file describing the procedures to be executed on receiving an acknowledgement (REPLY type message), following the sending of a file. |
 | [EXECSM](../../../command_summary/parameter_intro/execsm)  | Generic name of the file describing the procedures to be executed on completion of the sending of a message. |
 | [EXECSMA](../../../command_summary/parameter_intro/execsma)  | Generic name of the file describing the procedures to be executed on receiving an acknowledgement, REPLY type message, following the sending of a message. |
-| [EXITBOT]()  | EXIT identifier. To activate a beginning- of- transfer EXIT task, this identifier must point to a CFTEXIT command. |
+| [EXITBOT  | EXIT identifier. To activate a beginning- of- transfer EXIT task, this identifier must point to a CFTEXIT command. |
 | [EXITEOT](../../../command_summary/parameter_intro/exiteot) | EXIT identifier. To activate an end- of- transfer EXIT task, this identifier must point to a CFTEXIT command. |
 | [ID](../../../command_summary/parameter_intro/id)  | Identifier of the CFTPARM command. |
 | [KEY](../../../command_summary/parameter_intro/key)  | The name of the indirection file preceded by the &lt;file- symb&gt; character, which is system specific, and containing the set of keys associated with the Transfer CFT. |

@@ -6,9 +6,9 @@ weight: 200
 
 It includes:
 
-- [Configure send mode (IFS)](send_files_ifs)
+- Configure send mode (IFS)](send_files_ifs)
 - [Configure receive mode (IFS)](receive_files_ifs)
-- [Copyfile (IFS)]()
+- [Copyfile (IFS)
 
 See also [IFS access error codes.](../../os400_support_tool/ifs_access_errors)
 

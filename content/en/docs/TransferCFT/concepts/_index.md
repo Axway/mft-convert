@@ -47,7 +47,7 @@ See also, [Transfer command basics.](transfer_command_overview)
 Additionally, there are basic [transfer control commands](../c_intro_userinterfaces/web_copilot_ui/operations/managing_transfer_states) that you can use to manage a transfer.
 
 | Command  | Action  |
-| - - - | - - - |
+| --- | --- |
 | [DELETE](../admin_intro/admin_commands_intro/delete_command) | Deletes a catalog entry  |
 | [HALT](../c_intro_userinterfaces/about_cftutil/managing_transfer_states/halt_command) | Stops a transfer and sets it to the HOLD state  |
 | [KEEP](../c_intro_userinterfaces/about_cftutil/managing_transfer_states/keep_command) | Stops a transfer and sets it to the KEEP state  |

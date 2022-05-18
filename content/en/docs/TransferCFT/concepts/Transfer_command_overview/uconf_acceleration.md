@@ -30,7 +30,7 @@ You can globally enable or disable the acceleration function in the {{< Transfer
 #### Parameters
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | acceleration.enable  | Activate/deactivate the acceleration option.  |
 | acceleration.udt  | UDT default peer definition.  |
 | acceleration.ptcp  | pTCP default peer definition.  |
@@ -82,7 +82,7 @@ Additional attribute parameters are available for advanced users. The default va
 
 #### UDT parameters
 
-Refer to the [UCONF parameters](../../../admin_intro/uconf/uconf_directory) table `acceleration.udt.<logicalID>`.
+Refer to the UCONF parameters](../../../admin_intro/uconf/uconf_directory) table `acceleration.udt.<logicalID>`.
 
 #### pTCP parameters
 
@@ -103,7 +103,7 @@ Refer to the [UCONF parameters](../../../admin_intro/uconf/uconf_directory) tab
 
 Note that the new pTCP support is ****not**** compatible with the previously used version of pTCP. This means that {{< TransferCFT/axwayvariablesComponentShortName  >}} 3.0.1 SP2 and higher, and {{< TransferCFT/axwayvariablesComponentShortName  >}} 2.7.1 SP6, ****cannot**** exchange files with earlier versions of {{< TransferCFT/axwayvariablesComponentShortName  >}} using the pTCP protocol.
 
-For more information on supported platforms and transfer acceleration, refer to [Platform- specific functionality]().
+For more information on supported platforms and transfer acceleration, refer to [Platform- specific functionality.
 
 ****Related topics****
 

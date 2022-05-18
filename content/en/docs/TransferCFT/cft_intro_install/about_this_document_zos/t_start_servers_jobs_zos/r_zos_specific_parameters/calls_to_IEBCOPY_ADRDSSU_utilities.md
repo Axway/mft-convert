@@ -144,7 +144,7 @@ Where:
 #### Rules for interpreting DSNGEN
 
 | Model  | Interpretation  |
-| - - - | - - - |
+| --- | --- |
 | DSNGEN_ | DSN |
 | DSNGEN__ | DSN* |
 | DSNGEN._ | DSN.* |
@@ -298,7 +298,7 @@ Transfer CFT z/OS calls a single external utility at a given time. Memory use is
 **Memory use**
 
 | Utility  | 24 bit memory  | 31 bit memory  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | IEBCOPY | 1024K | 0 |
 | ADRDSSU | 2048K | 8192K |
 

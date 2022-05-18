@@ -21,7 +21,7 @@ system.
 > When MAXTASK is set to one, a high TRANTASK value is useless.
 
 | OS  | Maximum number supported  |
-| - - - | - - - |
+| --- | --- |
 | UNIX  | 64 |
 | Windows  | 64 |
 | z/OS (MVS) | 400 |

@@ -15,10 +15,10 @@ This logical name points to a directory containing all {{< TransferCFT/axwayvari
 
 The installation procedure creates a directory structure in which the supplied files are located. Each directory is defined by a logical name to make it easier to use. These logical names are not mandatory, but are used in the examples provided and the CFTLOGIN.COM procedure.
 
-The following table lists the logical names that are defined in the standard {{< TransferCFT/axwayvariablesComponentShortName  >}} product, located in the D$CFT_RUN:[profile]CFTLOGIN.COM procedure.
+The following table lists the logical names that are defined in the standard {{< TransferCFT/axwayvariablesComponentShortName  >}} product, located in the D$CFT_RUN:profile]CFTLOGIN.COM procedure.
 
 | Logical Name  | Description  |
-| - - - | - - - |
+| --- | --- |
 | D$CFT | Logical name pointing to the {{< TransferCFT/axwayvariablesComponentShortName  >}} installation directory.<br />  |
 | D$CFT_INST  | Logical name pointing to the Transfer CFT HOME directory.  |
 | D$CFT_RUN  | Logical name pointing to the Transfer CFT RUNTIME directory.  |
@@ -42,7 +42,7 @@ All {{< TransferCFT/axwayvariablesComponentShortName  >}} service files are desi
 The following table describes the logical names for {{< TransferCFT/axwayvariablesComponentShortName  >}} standard service files.
 
 | Standard Logical Name  | Meaning  |
-| - - - | - - - |
+| --- | --- |
 | CFTUCONF  | Client configuration file.  |
 | CFTUCONFDEF  | Transfer CFT dictionary values. Do ****not**** modify these values.  |
 | CFTPARM | Transfer CFT configuration file. The CFTLOGIN.COM procedure supplied with the product defines it as CFT_DAT:CFTPARM.INX. |
@@ -57,7 +57,7 @@ By default, the following logical names are not known to {{< TransferCFT/axwayva
 The following table lists the logical names that are used in the supplied {{< TransferCFT/axwayvariablesComponentShortName  >}} files.
 
 | Logical Name  | Meaning  |
-| - - - | - - - |
+| --- | --- |
 | CFTLOG<br /> CFTLOGA | {{< TransferCFT/axwayvariablesComponentShortName  >}} log files.<br /> CFT_LOG:CFTLOG.LOG and CFT_LOG:CFTLOG.LOGA.<br /> These must be defined with the /JOB attribute. |
 | CFTACCNT<br /> CFTACCNTA | Transfer CFT accounting files.<br /> CFT_LOG:CFTACCNT.LOG and CFT_LOG:CFTACCNT.LOGA. |
 | CFTPKU  | PKI base file. The CFTLOGIN.COM procedure supplied with the product defines it as CFT_PKI:CFTPKI.INX.  |
@@ -65,12 +65,12 @@ The following table lists the logical names that are used in the supplied {{< Tr
 
 ### Submitting {{< TransferCFT/axwayvariablesComponentShortName  >}} procedures
 
-A number of logical names are used to configure the {{< TransferCFT/axwayvariablesComponentShortName  >}} behavior with respect to the various procedures submitted by it. For more information, see the[MONIT_MEM utility]()  section.
+A number of logical names are used to configure the {{< TransferCFT/axwayvariablesComponentShortName  >}} behavior with respect to the various procedures submitted by it. For more information, see the[MONIT_MEM utility  section.
 
 The following table describes the logical names for the procedures that control {{< TransferCFT/axwayvariablesComponentShortName  >}} behavior.
 
 | Logical Name  | Description  |
-| - - - | - - - |
+| --- | --- |
 | CFT_QUEUE | This logical name designates the name of the batch queue, in which the monitor submits the various procedures that it controls. It must be defined with the /JOB attribute. |
 | CFT_SUBMIT | This logical name defines the behavior of the monitor when it submits an end of transfer procedure. If the logical name is set to USER, the procedures are submitted from the transfer owner account. |
 | CFT_PRINT | This logical name is used to define a print queue, via which the procedure execution reports are printed. It must be defined with the /JOB attribute. |
@@ -78,10 +78,10 @@ The following table describes the logical names for the procedures that control 
 
 ### Control memory usage
 
-Logical names are used to control {{< TransferCFT/axwayvariablesComponentShortName  >}} memory bottlenecks, refer to the [Delivered components](../../security_elements) section. The following table describes the logical names that are used to control {{< TransferCFT/axwayvariablesComponentShortName  >}} memory.
+Logical names are used to control {{< TransferCFT/axwayvariablesComponentShortName  >}} memory bottlenecks, refer to the Delivered components](../../security_elements) section. The following table describes the logical names that are used to control {{< TransferCFT/axwayvariablesComponentShortName  >}} memory.
 
 | Logical Name  | Meaning  |
-| - - - | - - - |
+| --- | --- |
 | CFT$MEMCSTE | This logical name is used to define the amount of memory used by the monitor images in the Transfer CFT JOB.<br /> Its default value is 1 100 000. |
 | CFT$CATA | This logical name is used to define the percentage of available memory, as from which the monitor implements the bottleneck control mechanism.<br /> Its default value is 80. |
 | CFT$COOL | This logical name is used to define the percentage of available memory, as from which the monitor is no longer in the alert status triggered by CFT$CATA.<br /> Its default value is 70. |
@@ -90,7 +90,7 @@ Logical names are used to control {{< TransferCFT/axwayvariablesComponentShortNa
 
 ### Concurrent access to the communication file
 
-If users belonging to a group other than the {{< TransferCFT/axwayvariablesComponentShortName  >}} group want to submit commands in the {{< TransferCFT/axwayvariablesComponentShortName  >}} communication file, you must enable the concurrent access control mechanism at system level. The CFT_LOCK logical name is used to implement this mechanism. For more information, see the [Transfer CFT parameter settings]() section.
+If users belonging to a group other than the {{< TransferCFT/axwayvariablesComponentShortName  >}} group want to submit commands in the {{< TransferCFT/axwayvariablesComponentShortName  >}} communication file, you must enable the concurrent access control mechanism at system level. The CFT_LOCK logical name is used to implement this mechanism. For more information, see the [Transfer CFT parameter settings section.
 
 ### CFT_LOCK
 

@@ -55,7 +55,7 @@ contained in the following table.
 ****CFTACCNT list of headings****
 
 | Heading  | Offset<br/> V24 | Offset<br/> V23 |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | Transfer mode (server or requester)  | 0  | 0  |
 | Transfer direction  | 1  | 1  |
 | Transfer type (File, Message or Reply message)  | 2  | 2  |
@@ -153,7 +153,7 @@ The CFTACCNT command references
 the {{< TransferCFT/axwayvariablesComponentShortName  >}} application via the utility.
 
 | Protocol  | Details  |
-| - - - | - - - |
+| --- | --- |
 | z/OS (MVS) | The ACCID parameter identifying the {{< TransferCFT/axwayvariablesComponentShortName  >}} application must be defined. |
 
 Syntax

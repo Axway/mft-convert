@@ -26,7 +26,7 @@ not 0), the value of the ORECFM parameter is forced
 to V.
 
 | OS  | Details  |
-| - - - | - - - |
+| --- | --- |
 | UNIX | The value "U" is kept for compatibility with previous versions. It has the same meaning as ORECFM=V. |
 
 [Return to Command index](../../)

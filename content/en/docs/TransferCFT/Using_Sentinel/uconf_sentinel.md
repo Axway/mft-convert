@@ -4,7 +4,7 @@ linkTitle: "UCONF: Sentinel options"
 weight: 240
 ---This section describes how to configure the Sentinel monitoring agent, which is part of Transfer CFT, using the following groups of UCONF parameters:
 
-- sentinel.trkxxxxx: These parameters correspond to the trkxxxxx parameter described in the [Sentinel Universal Agent User Guide]() .
+- sentinel.trkxxxxx: These parameters correspond to the trkxxxxx parameter described in the Sentinel Universal Agent User Guide .
 - sentinel.xfb.xxxx: These parameters indicate how the Sentinel monitoring agent is used in Transfer CFT.
 - Additional uconf values are related to the communication between the Sentinel monitoring agent and Sentinel
     - ssl.ciphersuites

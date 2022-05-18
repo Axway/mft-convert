@@ -40,7 +40,7 @@ weight: 170
 The following tables describe Transfer CFT's Amazon S3- related parameters.
 
 | Parameter  | Type  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | ssl.certificates.ca_cert_bundle  | string  | Path to the CA certificate bundle. This path can point to either a file containing the CA certificates (for example, <code>/etc/ssl/certs/ca- certificates.crt</code>) or to a directory containing the CA certificates (for example, <code>/etc/ssl/certs/</code>), which are stored individually with their filenames in a hash format.<br/> You can refer to the [cacert.pem](https://curl.haxx.se/docs/manpage.html#- - cacert)). |
 
 **Credentials**
@@ -48,7 +48,7 @@ The following tables describe Transfer CFT's Amazon S3- related parameters.
 Credential parameters identify who is making a request and whether access is allowed.
 
 | Parameter  | Type  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | aws.credentials  | node  | List of [STORAGEACCOUNT](#storageaccount) values where each STORAGEACCOUNT consists of an access key pair.  |
 | aws.credentials.&lt;storageaccount&gt;.access_key_id  | string  | Access key ID, a 20- character, alphanumeric sequence. |
 | aws.credentials.&lt;storageaccount&gt;.secret_access_key  | passwd  | Secret access key, a 40- character sequence. |
@@ -56,7 +56,7 @@ Credential parameters identify who is making a request and whether access is all
 **Region**
 
 | Parameter  | Type  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | aws.credentials.&lt;storageaccount&gt;.region  | string  | Region to use; this value overrides the parsing of the WORKINGDIR and the config/env settings.<br/> When using the endpoint format for WORKINGDIR, you can use this parameter to set the AWS Signature Version 4 region to something other than the default (us- east- 1). |
 
 **Server- side encryption**
@@ -64,7 +64,7 @@ Credential parameters identify who is making a request and whether access is all
 Server- side encryption type with Amazon S3.
 
 | Parameter  | Type  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | aws.credentials.&lt;storageaccount&gt;.encryption_type  | string  | Type of server- side encryption to use:<br/> • None: No encryption on Amazon S3 objects<br/> • sse- s3: Server- side encryption with AES 256<br/> • sse- kms: Server- side encryption with Key Management Service<br/> See the [example](#globally_encrypt) for details on encrypting files. |
 | aws.credentials.&lt;storageaccount&gt;.encryption_key_id  | string  | Key identifier for SSE- KMS encryption use; you must provide the full ID of the encryption key for the server. |
 
@@ -73,7 +73,7 @@ Server- side encryption type with Amazon S3.
 The ACL policy to apply to files when uploading a file to AWS. Please refer to the [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl- overview.html#canned- acl) for details.
 
 | Parameter  | Type  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | aws.credentials.&lt;storageaccount&gt;.acl  | string  | Type of ACL policy to apply to files when uploading a file to AWS:<br/> • private<br/> • public- read<br/> • public- read- write<br/> • aws- exec- read<br/> • authenticated- read<br/> • bucket- owner- read<br/> • bucket- owner- full- control |
 
 **Proxy parameters**
@@ -81,7 +81,7 @@ The ACL policy to apply to files when uploading a file to AWS. Please refer to t
 Connect to AWS S3 through an HTTP proxy for file uploads/downloads.
 
 | Parameter  | Type  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | aws.credentials.&lt;storageaccount&gt;.proxy_scheme  | string  | Proxy scheme to use (HTTP or HTTPS).  |
 | aws.credentials.&lt;storageaccount&gt;.proxy_host  | string  | Proxy IP address or FQDN.  |
 | aws.credentials.&lt;storageaccount&gt;.proxy_port  | string  | Proxy port.  |
@@ -105,7 +105,7 @@ secret_access_key = YOUR_SECRET
 You must include the following parameters in your [CFTSEND/CFTRECV](../../c_intro_userinterfaces/command_summary) definitions for S3 storage:
 
 | Parameter<span id="storageaccount"></span>  | Type  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | fname  | string (key)  | The fname field corresponds to the S3 services key.  |
 | workingdir  | string  | There are two supported formats. For either, the workingdir field must start with <code>s3://</code> and be followed by the designated items in the order listed:<br/> • <code>s3://bucket.region</code><br /> • the bucket name<br/> • a period (.)<br/> • the region<br/> <br/> • <code>s3://http[s]://endpoint[:port]/bucket</code><br /> • http:// or https:// for secure communication<br/> • the endpoint, which can be an IP address or the server's hostname<br/> • a colon (:) and port (if not using the default of 80 for HTTP, 443 for HTTPS)<br/> • a slash (/)<br/> • the bucket name<br/>  |
 | storageaccount  | string  | Points to the access key identifier(s) and the access key secret(s) stored in UCONF. See also [storageaccount](../../c_intro_userinterfaces/command_summary/parameter_intro/storageaccount).  |

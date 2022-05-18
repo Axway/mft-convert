@@ -144,7 +144,7 @@ The compile, link- edit, and run JCLs for these samples can be found in the CFTV
 **Main delivered samples**
 
 | Language  | Source file<br/> cftv2.SAMPLE* | Copy,<br/> Macro,<br/> Include used | API  | LINK EDIT command files (DLL) distlib.CNTL  | Load module  |
-| - - - | - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- | --- |
 | COBOL NODYNAM  | OAPIC | OPAICST | CFTC | LINRDACO | OPAIC |
 | - " - | OAPII | OAPIUST or OAPI24 | CFTI | LINRDAIO | OAPII |
 | - " - | OAPIW | OAPIUST or OAPI24 | CFTI<br/> CFTU | LINRDAWO | OAPIW |

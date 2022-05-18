@@ -24,7 +24,7 @@ The following conventions apply to the table below describing permissions to act
     > When referring to USERID, the same rules apply when using the optional GROUPID parameter.
 
 | Operating<br/> System | USERCTRL | Description |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | ALL OS  | NO  | The Transfer CFT user, that is, the account that started {{< TransferCFT/axwayvariablesComponentLongName  >}}, performs all file actions. Default value.  |
 | ALL OS  | YES  | The USERID performs all file actions.  |
 

@@ -13,7 +13,7 @@ The Transfer CFT IBM i templates are located in the production library (CFTPROD
 In the **CL program** column, click the program link for information on how to compile and execute.
 
 | CL program  | Associated COBOL  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | I_TCFTU_CBL  | TCFTU_CBL1  | Synchronous API.  |
 | I_INTCAT  | INTCAT  | Same results as CFTUTIL LISTCAT, with some filtering allowed.  |
 | I_ACCNTPGM  | ACCNTPGM  | Statistics based on the V23 ACCNT file.  |
@@ -26,12 +26,12 @@ In the **CL program** column, click the program link for information on how to c
 In the **Template** column, click the template link to view the sample template as a text file.
 
 | Template  | Function  | Services | Description  |
-| - - - | - - - | - - - | - - - |
-| [TCFTI_RPG]()  | CFTI  | OPEN - CLOSE - NEXT - SELECT- MODIF  | Using CFTI function (CFTAPI V23 structure )  |
-| [TCFTI2_RPG]()  | cftaix  | OPEN - CLOSE - SELECT240 - NEXT240 - SORT - DO - | Using CFTIX function (CFTAPI V24 structure )  |
-| [TCFTU_RP1]()  | CFTU  | SEND - DELETE  | Tests the CFTU, CFTC functions (asynchronous API)  |
-| [TCFTU_RP1N]()  | CFTU  | SEND  | Using PLIST for receiving the SEND command  |
-| [TCFTU_RP2]()  | CFTU  | COM, SEND, GETXINFO, CLOSEAPI  | Tests the CFTU function (synchronous API)  |
+| --- | --- | --- | --- |
+| TCFTI_RPG  | CFTI  | OPEN - CLOSE - NEXT - SELECT- MODIF  | Using CFTI function (CFTAPI V23 structure )  |
+| TCFTI2_RPG  | cftaix  | OPEN - CLOSE - SELECT240 - NEXT240 - SORT - DO - | Using CFTIX function (CFTAPI V24 structure )  |
+| TCFTU_RP1  | CFTU  | SEND - DELETE  | Tests the CFTU, CFTC functions (asynchronous API)  |
+| TCFTU_RP1N  | CFTU  | SEND  | Using PLIST for receiving the SEND command  |
+| TCFTU_RP2  | CFTU  | COM, SEND, GETXINFO, CLOSEAPI  | Tests the CFTU function (synchronous API)  |
 
 ## How to compile and execute a COBOL sample
 

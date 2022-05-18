@@ -65,7 +65,7 @@ There are two types of parameters mandatory and optional:
 Each parameter description applies the following general syntax:
 
 | PARAMETER = value(s) | Information | SPECIFIC |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | Definition of the parameter | Indication of any additional information available for the value defined. | Indication of the field of application and any usage restrictions for the parameter |
 
 The information and specifics fields are optional.
@@ -109,7 +109,7 @@ The notation conventions generally used to describe parameter values
 are listed in the following table.
 
 | Description  | Notation  | Example  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | List of possible values  | {value, value}  | {filename, string}  |
 | Choice  | {1 &#124; 2}  | {CREATE &#124; DELETE}  |
 | Numeric field<br /> (value indicated between a and b)  | {a..b}  | {0..255}  |
@@ -126,7 +126,7 @@ The conventions used for generic- type values are listed in the following
 table.
 
 | Description  | Notation  | Example  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | Character type value: one single character  | c | FTYPE = c  |
 | Numeric type value: numeric character string  | n | FLRECL = n  |
 | Character string value: series of alphanumeric characters or series of characters between quotes  | string | SAP = string  |
@@ -195,7 +195,7 @@ The conventions used for values concerning preset categories are listed
 in the following table.
 
 | Description  | Notation  |
-| - - - | - - - |
+| --- | --- |
 | Compression: numeric value between 0 and 15 indicating the compression algorithm  | cpr  |
 | Date: 8- digit string | YYYYMMDD  |
 | File name: 512 characters including the drive, path, root, suffix, where limitations are imposed by file system or operating system (such as list of unauthorized characters , length, case- sensitivity, etc.) | filename  |
@@ -286,7 +286,7 @@ Specificity concerning the PeSIT protocol. A protocol dependent parameter may in
 protocol variants, indicated as follows:
 
 | Protocol  | Description  |
-| - - - | - - - |
+| --- | --- |
 | PeSIT | PeSIT protocol (standard) |
 | PeSIT CFT/CFT | PeSIT protocol used between two {{< TransferCFT/axwayvariablesComponentShortName  >}}s |
 
@@ -297,7 +297,7 @@ protocol variants, indicated as follows:
 The parameter setting commands are presented in the following format:
 
 | Syntax | Command syntax listed here [see parameters below] |
-| - - - | - - - |
+| --- | --- |
 | Description | Each parameter setting command generates one or more binary records in the PARAMETER or PARTNER file. |
 | Parameters | Parameter name and abbreviation |
 | id | identifier {0..32768}<br/> Identifies the object described by the parameter setting command. |

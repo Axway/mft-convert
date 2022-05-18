@@ -13,7 +13,7 @@ entries. Additionally, you can sort the current selection in memory.
 > as an identifier, that exceed 8 to 32 characters.
 
 | Function | Use |
-| - - - | - - - |
+| --- | --- |
 | OPEN | Open catalog file<br/> This function:<br/> • Allocates the catalog file<br/> • Opens the file<br/> • Reserves an internal control block<br/> • Initializes the internal block parameter |
 | SELECT | Specify the selection criteria<br/> This function:<br/> • Checks the syntax used<br/> • Stores the selection criteria in the internal control block |
 | SELECT240 | Specify the selection criteria<br/> This function:<br/> • Is available in CFT v2.4 and higher<br/> • Retrieves identifiers that are longer than 8 to 32 characters<br/> • Checks the syntax used<br/> • Stores the selection criteria in the internal control block |
@@ -50,7 +50,7 @@ Where:
 The available verbs are listed in the following table.
 
 | &lt;verb&gt; | Service |
-| - - - | - - - |
+| --- | --- |
 | OPEN | Open catalog |
 | SELECT | Define selection criteria |
 | NEXT | Read next entry |
@@ -62,7 +62,7 @@ The available verbs are listed in the following table.
 The available &lt;param> are listed in the following table.
 
 | &lt;verb&gt; | &lt;param&gt; | Explanation |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | OPEN | cat | Path name or logical name of the catalog file. If the name is blank, Transfer CFT uses a default name. |
 | SELECT<br/> and SELECT240 | &amp;cftsel | Selection criteria according to the format described in the "**Selection data description**" in the ****cftapi.h**** file.<br/> • cftsel230T for SELECT service<br/> • cftsel240T for SELECT240 service<br/> All the fields must be defined by left- aligned character strings. If a field is equal to binary zeros, it is considered not selective.<br/> This structure can contain:<br/> • The size of the selection criteria field (slength) and the size of the field supporting the catalog entry (clength) in order to avoid recompiling the application program if these two fields are extended.<br/> • The transfer start and end date (BDATE and EDATE) to select transfers performed between these two dates.<br/> • A field can be composed of a mask with the special characters "?" and *". The "?" character replaces any character. The "*" character replaces a character string of any length.<br /> <br /> Examples:<br /> A*D replaces ABCD, ABCED or AID<br /> A??D replaces ABCD, AXYD or AQZD<br /> *CD replaces ABECD, YXZCDor TYUICD<br /> ?CD replaces ACD, XCD or ZCD<br /> ?B* replaces ABCDEF, XBZWEO or *KBWXCV<br /> ???? replaces ABCD, XYZW or HGFD<br/> You should initialize the following:<br/> • The param field to binary zero before defining it<br/> • The slength and clength by "itoa()"<br/> ****cftaix only****<br/> The selection is only taken into account at the time the DO service is called. |
 | NEXT<br/> and<br/> NEXT240 | &amp;cftcat | Next catalog entry according to the format described in the "**Selection data description**" in the ****cftapi.h**** file.<br/> • cftcatT for NEXT service<br/> • cftcat240T for NEXT240 service |
@@ -76,7 +76,7 @@ The available &lt;param> are listed in the following table.
 The following return codes apply to all services.
 
 | Mnemonic | Description |
-| - - - | - - - |
+| --- | --- |
 | CAPI_NOERR | No error |
 | CAPI_FUNC_UNDEF | Command not valid or service refused by the operating security system |
 | CAPI_INT_PTR | &lt;ptr&gt; parameter invalid |

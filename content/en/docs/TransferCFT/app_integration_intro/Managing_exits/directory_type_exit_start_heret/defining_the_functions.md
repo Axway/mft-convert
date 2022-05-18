@@ -61,7 +61,7 @@ The following table lists all the parameters of the
 initialization function.
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | exafref | Address of an (512+1) byte area.<br/> The initialization function can modify this area. |
 | mode | Address of a one- byte area<br/> Processing mode:<br/> • S: call in server mode<br/> • R: call in requester mode (Requester) |
 | part | Address of an (32+1) byte area.<br/> Partner local identifier if this identifier is known to {{< TransferCFT/axwayvariablesComponentShortName  >}}. |
@@ -83,7 +83,7 @@ Where EXA is defined as:
 ## User Function
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | zecom<br/> <br/>  | Address of the interface communication area. Also known as context table or transfer context, this area is:<br/> • allocated by the interface for each transfer<br/> • updated by the interface before each call of the user function<br/> • freed by the interface at the end of the transfer<br/> Some fields of this area can be updated by the user function. |
 | zgcom | Address of the global communication area (1024 bytes).<br/> This area is allocated and reset to 0 by the interface once and for all at the time the EXIT task is activated, and then freed by the interface at the time it is de- activated.<br/> You can use this area to save the information common to all the calls of user functions.<br/>  |
 | Return codes | Not used |
@@ -101,7 +101,7 @@ Example in C
 Interface files are listed in the following table.
 
 | File  | Description  |
-| - - - | - - - |
+| --- | --- |
 | EXAUS.H | File that contains the definition of the interface/user program communication structure<br /> For the interface and the user program  |
 | EXA.H  | File for the interface  |
 | EXA2MN.C  | Main entry point for the EXIT task  |

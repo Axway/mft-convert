@@ -4,7 +4,7 @@ linkTitle: "Create a Transfer CFT instance "
 weight: 190
 --- The concept of a target environment has been replaced by what is now referred to as a Transfer CFT **instance**, or run- time environment. This procedure describes how to install the Transfer CFT instance environment.
 
-If during installation you created both the distribution environment and the Transfer CFT instance environment, you may go directly to [Customize the instance environment](../../t_customize_instance_zos). Otherwise, you must first create your runtime environment.
+If during installation you created both the distribution environment and the Transfer CFT instance environment, you may go directly to Customize the instance environment](../../t_customize_instance_zos). Otherwise, you must first create your runtime environment.
 
 > **Note**
 >
@@ -26,4 +26,4 @@ This procedure:
 
 After creating the target environment, leave the distribution environment in its original state. You should now work exclusively in the target environment.
 
-Next, execute the installation JCLs as described in the table [JCL installation steps]().
+Next, execute the installation JCLs as described in the table [JCL installation steps.

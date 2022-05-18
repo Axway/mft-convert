@@ -9,7 +9,7 @@ weight: 230
 The following table shows the mapping for the IBM i (OS/400) platform when using the NCHARSET and FCHARSET parameters.
 
 | CFT_ charset  | IBM i  |
-| - - - | - - - |
+| --- | --- |
 | CFT_UTF- 8  | 01208  |
 | CFT_UTF- 16  | 01204  |
 | CFT_UTF- 16LE  | 01202  |

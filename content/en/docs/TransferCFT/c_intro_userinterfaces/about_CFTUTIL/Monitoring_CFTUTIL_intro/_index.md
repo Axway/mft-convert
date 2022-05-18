@@ -7,7 +7,7 @@ the Transfer CFT Catalog contents. It begins with this introductory topic
 and is comprised of the topics listed in the table below.
 
 | Topic or sub- book | Description |
-| - - - | - - - |
+| --- | --- |
 | [CFTCRON - Scheduled script execution](../../web_copilot_ui/flow_def_intro/cftcron) | Describes CRONJOB which enables Transfer CFT to execute jobs at predetermined dates and times. These jobs can perform functions such as periodically scanning one or more directories and issuing a SEND. |
 | [DISPLAY - Catalog output display models](display_command) | Describes how to use a predefined model to display the format for Catalog output. |
 | [LISTPART - List partner details](../configuring_cft_start_here/listpart_command) | Describes how to view the partner characteristics (general or network characteristics), according to the selection criteria indicated in the command. |

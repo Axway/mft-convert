@@ -9,7 +9,7 @@ weight: 210
 The A05ALL JCL automatically runs the following members.
 
 | Step  | Description  | Member  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | 1  | Create and initialize instance files: UCONF, UCONFRUN, FTEST, MONLOG, and LOG.  | A06FILES  |
 | 2  | Assemble and link- edit SGINSTAL for Transfer CFT z/OS options.<br/> Non- SMP/E installation mode. &lt;/p&gt; | A12AOPTS  |
 | 3  | Link- edit all Transfer CFT modules.<br/> Non- SMP/E installation mode. &lt;/p&gt; | B20LINK  |

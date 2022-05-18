@@ -38,24 +38,24 @@ to be deleted, and TYPE, the
 type of the file to be deleted.
 
 | OS  | Description  |
-| - - - | - - - |
+| --- | --- |
 | IBM i | The CFTFILE command is incorporated in Transfer CFT IBM i Manager. It can, however, be activated directly in the log file switching procedures. See the example supplied in the B_EXECLOG member. |
 
-You can use the [CFTCATAL](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/use_cft_utilities) utility to resize the catalog. In a multi- node environment, this action resizes all nodes.
+You can use the CFTCATAL](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/use_cft_utilities) utility to resize the catalog. In a multi- node environment, this action resizes all nodes.
 
 Use the CFTFILE command to create (MODE = CREATE) empty or delete (MODE
 = DELETE) Transfer CFT files.
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [see table](../../../c_intro_userinterfaces/command_summary/parameter_intro/fblksize) | Defines the block size of the file to be created (in bytes).<br/> Depends on the TYPE/OS |
 | [FNAME](../../../c_intro_userinterfaces/command_summary/parameter_intro/fname)  | Name of the file the command applies to. |
 | [see table](../../../c_intro_userinterfaces/command_summary/parameter_intro/fspace) | Primary allocation of the file to be created, expressed in K bytes (1024).<br/> Depends on the TYPE/OS |
 | [see table](../../../c_intro_userinterfaces/command_summary/parameter_intro/fspacex) | Secondary allocation of the file to be created, expressed in K bytes (1024).<br/>  |
 | [HABFNAME](../../../c_intro_userinterfaces/command_summary/parameter_intro/habfname) | Name of the security system initialization file. |
-| [TYPE]() = COM | Name of the lock file created in parallel with the communication file and used to manage file access conflicts. |
-| [MODE](../../../c_intro_userinterfaces/command_summary/parameter_intro/mode) | Action requested on the file. |
-| [NODE]() | Node identifier.<br/> Available when TYPE=CAT |
+| [TYPE = COM | Name of the lock file created in parallel with the communication file and used to manage file access conflicts. |
+| MODE](../../../c_intro_userinterfaces/command_summary/parameter_intro/mode) | Action requested on the file. |
+| [NODE | Node identifier.<br/> Available when TYPE=CAT |
 | [RECNB](../../../c_intro_userinterfaces/command_summary/parameter_intro/recnb) <br/> TYPE = {COM &#124; CAT} | Number of records in the file. |
 | [TYPE](../../../c_intro_userinterfaces/command_summary/parameter_intro/type) = {ACCNT &#124; CAT &#124; COM &#124; LOG &#124; PARM (PARMA) &#124; PART} | Type of file concerned by the command.<br/> When TYPE = CAT, COM, PARM or PART, you can use the HABFNAME parameter for security. |
 

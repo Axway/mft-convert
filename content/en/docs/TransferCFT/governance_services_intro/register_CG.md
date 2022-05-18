@@ -4,7 +4,7 @@ linkTitle: "Register with Central Governance"
 weight: 180
 --- {{< TransferCFT/axwayvariablesComponentLongName  >}}s 3.1.3 or higher can register with {{< TransferCFT/PrimaryCGorUM  >}} in one of two ways:
 
-- [Automatically activate connectivity](#Automati)
+- Automatically activate connectivity](#Automati)
 - [Manually activate connectivity](#manually_activate_cg)
 
 <span id="Automati"></span>
@@ -42,7 +42,7 @@ Prior to the registration, you must ensure that the JCL CFTMON (`copilot.misc.cf
 
 ### Procedure
 
-All commands in this section are performed using CFTUTIL unless stated otherwise. For details on the UCONF parameters referenced in this section, please see [UCONF: Central Governance options]().
+All commands in this section are performed using CFTUTIL unless stated otherwise. For details on the UCONF parameters referenced in this section, please see [UCONF: Central Governance options.
 
 #### Disable previously used connectors
 

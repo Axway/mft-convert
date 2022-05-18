@@ -17,7 +17,7 @@ CFT parameters that are specific to Windows concerning the characteristics of th
 #### Characteristics of files automatically detected on transmission
 
 | Parameter  | Automatically detected on transmission  |
-| - - - | - - - |
+| --- | --- |
 | FSPACE  | YES  |
 | FLRECL  | NO  |
 | FBLKSIZE  | NO  |
@@ -27,7 +27,7 @@ CFT parameters that are specific to Windows concerning the characteristics of th
 #### FTYPE values and FCODE values implicitly associated during transmission
 
 | FTYPE  | FCODE  | Type of sent file  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | ' '  | BINARY  | Binary  |
 | B  | BINARY  | Binary  |
 | V  | BINARY  | Binary file emulating locally a variable file format  |
@@ -46,7 +46,7 @@ FTYPE = J refers to stream text.The stream text type allows sending a text file 
 #### FTYPE and FRECFM values on receipt
 
 | FTYPE  | FRECFM  | Type of received file  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | B  | F  | Binary fixed- length sequential file  |
 | B | U/V | Binary sequential file  |
 | V  | V | Binary file emulating locally a variable file format  |

@@ -7,7 +7,7 @@ weight: 340
 HTTP status codes include:
 
 | Code  | Status  | Meaning, when to use  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | 200  | OK  | Everything went fine. The resource you requested has been found.  |
 | 201  | Created  | Use it for synchronous processing, that is, when creating a resource synchronously. This status code goes along with the Response Location HTTP header, indicating where the new resource is accessible.  |
 | 202  | Accepted  | Use it for asynchronous processing, typically for long running tasks (image processing, file compression, etc.). It indicates that the server has accepted the request but the result is not available yet. Responses usually contain a ‘task’ id the client can request (on a different URL) to get the status of a given long- running task.  |

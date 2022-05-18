@@ -14,7 +14,7 @@ The command generates a WLOG command which reports the event in the
 LOG file.
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [IDF](../../../command_summary/parameter_intro/idf) | Model file identifier. |
 | [IDTU](../../../command_summary/parameter_intro/idtu) | Local transfer counter identifier. |
 | [PART](../../../command_summary/parameter_intro/part)<br/> **(Mandatory)** | Identifier of the partner. |

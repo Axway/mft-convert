@@ -16,7 +16,7 @@ The templates titles are listed in the following tables according to OS and lang
 The following C language templates are delivered on UNIX, Windows, OpenVMS, IBM i (OS/400), with the exceptions as noted in the table below.
 
 | Template  | Function  | Services | Description  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | api2xmp1  | ipcai2_*  |  • ipcai2_initialize- ipcai2_catalog_open- ipcai2_catalog_selection_new<br/> • ipcai2_catalog_selection_set- ipcai2_catalog_selection_sortby<br/> • ipcai2_monitor_info_get<br/> • ipcai2_catalog_selection_next- ipcai2_catalog_info_get<br/> • ipcai2_catalog_selection_delete- ipcai2_catalog_close<br/> • ipcai2_finalize | {{< TransferCFT/axwayvariablesComponentShortName  >}} Catalog API sample program, which lists all catalog content.<br/> ** Not delivered on z/OS (iseries). |
 | api2xmp2  | ipcai2_*  |  • ipcai2_initialize- ipcai2_catalog_open<br/> • ipcai2_catalog_selection_new<br/> • ipcai2_catalog_selection_set<br/> • ipcai2_catalog_selection_sortby<br/> • ipcai2_monitor_info_get<br/> • ipcai2_catalog_selection_next- <br/> • ipcai2_catalog_info_get<br/> • ipcai2_catalog_selection_delete<br/> • ipcai2_catalog_close<br/> • ipcai2_finalize | {{< TransferCFT/axwayvariablesComponentShortName  >}} Catalog API sample program, which changes all Terminated transfers to Ended.<br/> ** Not delivered on z/OS (iseries). |
 | tcftsyn  | cftau  | COM, SEND, GETXINFO, SWAITCAT, CLOSEAPI  | {{< TransferCFT/axwayvariablesComponentShortName  >}} Communication and Catalog API sample program using a synchronous communication media.<br/> ** Not delivered on OS/400 or z/OS (iseries). |

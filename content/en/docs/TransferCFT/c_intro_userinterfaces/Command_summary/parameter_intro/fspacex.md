@@ -26,7 +26,7 @@ the FSPACEX does not need to be defined.<span id="FSPACEX_Table"></span>
 QQQ_QQQ_QQQ removed top row fspacex
 
 | OS  | PARM  | PART  | CAT  | COM  | LOG  | ACCNT  |
-| - - - | - - - | - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- | --- | --- |
 | z/OS (MVS) | 50  | 100  | 0  | 0  | 50  | 50  |
 | OS400  | 0  | 0  | 0  | 0  | 0  | 0  |
 | UNIX  | no  | no  | no  | no  | no  | no  |

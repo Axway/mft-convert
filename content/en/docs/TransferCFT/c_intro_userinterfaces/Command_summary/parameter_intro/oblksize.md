@@ -16,7 +16,7 @@ The following table indicates for each system if the parameter
 must be defined.
 
 | **OS** | **OBLKSIZE**  |
-| - - - | - - - |
+| --- | --- |
 | z/OS (MVS) | YES  |
 | OS400  | NO  |
 | UNIX  | NO  |

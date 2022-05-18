@@ -62,7 +62,7 @@ Fmodel structure
 Attributes for the &lt;CFTDisplayFilter>
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | id='string'  | Model ID, call within the DISPLAY command with the content parameter  |
 | mode = 'column &#124; line'  | Output orientation (line or column)  |
 | title_size = '- 1 &#124; NUM'  | Title size, only in column mode (undefined or number)  |
@@ -81,7 +81,7 @@ The &lt;Fields> tag has no attributes, but may contain one or several &lt;Field>
 Each &lt;Field> tag has the following attributes:
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | id  | This parameter is mandatory and should be the same as the listcat id parameter  |
 | title  | Title of the column / line.  |
 | maxlength : - 1 &#124; NUM  | Max length: - 1 means no maxlength  |
@@ -101,7 +101,7 @@ by lines (mode=line).
 Command syntax: [DISPLAY](../../../command_summary)
 
 | ****Parameter**** | ****Description**** |
-| - - - | - - - |
+| --- | --- |
 | CONTENT  | Filter to use on the messages written in the active LOG file.  |
 | DATETIMEMAX  | Use to display catalog transfers that happened on or before this end date and time according to the transfer record creation (DATEK, TIMEK).  |
 | DATETIMEMIN  | Use to display catalog transfers that happened on or after this start date and time according to the transfer record creation (DATED, TIMED).  |

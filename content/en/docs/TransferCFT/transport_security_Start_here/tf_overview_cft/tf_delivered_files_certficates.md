@@ -29,7 +29,7 @@ Conventions for Transfer CFT with Trusted File content includes:
 Unix scripts
 
 | Script  | Description  |
-| - - - | - - - |
+| --- | --- |
 | &lt;CFTDIRRUNTIME&gt;/exec/tf_decipher.cmd  | Trusted File deciphering script  |
 | &lt;CFTDIRRUNTIME&gt;/exec/tf_cipher.cmd  | Trusted File ciphering script  |
 | &lt;CFTDIRRUNTIME&gt;/exec/tf_delfile.cmd  | End of transfer procedure to delete the sent ciphered file  |
@@ -37,7 +37,7 @@ Unix scripts
 Windows scripts
 
 | Script  | Description  |
-| - - - | - - - |
+| --- | --- |
 | &lt;CFTDIRRUNTIME&gt;/exec/tf_decipher.bat  | Trusted File deciphering script  |
 | &lt;CFTDIRRUNTIME&gt;/exec/tf_cipher.bat  | Trusted File ciphering script  |
 | &lt;CFTDIRRUNTIME&gt;/exec/tf_delfile.bat  | End of transfer procedure to delete the sent ciphered file  |
@@ -77,7 +77,7 @@ The following files refer to “user1” and “user2”, which are used in the 
 Sample file descriptions
 
 | File  | Description  |
-| - - - | - - - |
+| --- | --- |
 | encfile_cms.xml  | Sample file used for encoding CMS format  |
 | encfile_pgp.xml  | Sample file used for encoding PGP format  |
 | encfile_smime.xml  | Sample file used for encoding S/MIME format  |
@@ -90,7 +90,7 @@ Sample file descriptions
 The following certificates are located in: &lt;CFTDIRRUNTIME>/conf/tf/.
 
 | Certificate  | Description  |
-| - - - | - - - |
+| --- | --- |
 | &lt;CFTDIRRUNTIME&gt;/conf/tf/certs/priv/xppuser1.p12  | Private delivered “user1” certificate  |
 | &lt;CFTDIRRUNTIME&gt;/conf/tf/certs/priv/xppuser2.p12  | Private delivered “user2” certificate  |
 | &lt;CFTDIRRUNTIME&gt;/conf/tf/certs/pub/xppuser1.pem  | Public delivered “user1” certificate  |
@@ -123,7 +123,7 @@ Refer to the **Trusted File 3.6 Reference Guide** for details, available on [sup
 The **** `<CFTDIRRUNTIME>/conf/tf/transcoding.tbl` **** file contains all available transcoding tables.
 
 | Table  | Description  |
-| - - - | - - - |
+| --- | --- |
 | &lt;CFTDIRINSTALL&gt;/distrib/tf/tables/iso_atoe.tbl  | Converts Latin ASCII to French EBCDIC  |
 | &lt;CFTDIRINSTALL&gt;/distrib/tf/tables/iso_etoa.tbl  | Converts French EBCDIC to Latin ASCII  |
 | &lt;CFTDIRINSTALL&gt;/distrib/tf/tables/std_atoe.tbl  | Converts IBM- PC850 to French EBCDIC  |

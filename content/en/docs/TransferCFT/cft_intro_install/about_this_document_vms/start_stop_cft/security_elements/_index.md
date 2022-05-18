@@ -11,7 +11,7 @@ To implement the transfer security measures using SSL protocol, you must have ac
 The following table describes the certificates.
 
 | Certificate name  | Function  |
-| - - - | - - - |
+| --- | --- |
 | AXWAY_MFT_DEMONSTRATION_ROOT_CERTIFICAT.DER  | Local authority certificate. |
 | MFT_DEMONSTRATION_USER_CERTIFICATE.DER  | Client certificate signed by the local authority. |
 | MFT_DEMONSTRATION_USER_CERTIFICATEK.DER  | Private key associated with the preceding certificate. |
@@ -23,7 +23,7 @@ The following table describes the certificates.
 The following table lists the logical name and the role of the logical name.
 
 | Logical name  | Role  |
-| - - - | - - - |
+| --- | --- |
 | CFTPKU  | Logical name specifying the certificate database  |
 
 .PKIUTIL is the symbol that launches PKIUTIL.EXE program execution.

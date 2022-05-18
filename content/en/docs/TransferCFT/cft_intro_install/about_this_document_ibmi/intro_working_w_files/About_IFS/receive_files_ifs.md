@@ -11,7 +11,7 @@ The following table lists the different types of files that can be received on a
 > The FRECFM possibilities for all FTYPE are: ‘V’, ‘F’, and ‘ ’ .
 
 | FTYPE  | Type of sent file  |
-| - - - | - - - |
+| --- | --- |
 | ‘S’  | Text  |
 | ‘D’ , ‘ ’  | Text  |
 | ‘E’  | Text  |

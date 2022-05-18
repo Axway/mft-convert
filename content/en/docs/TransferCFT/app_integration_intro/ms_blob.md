@@ -17,7 +17,7 @@ Transfer CFT implements Microsoft Azure Blob Storage services using ...
 The following table describes Transfer CFT's Microsoft Azure Blob Storage- related parameters.
 
 | Parameter  | Type  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | ssl.certificates.ca_cert_bundle  | string  | Path to the CA certificate bundle.<br/> This path can point to either a file containing the CA certificates (for example, <code>/etc/ssl/certs/ca- certificates.crt</code>) or to a directory containing the CA certificates (for example, <code>/etc/ssl/certs/</code>), which are stored individually with their filenames in a hash format.<br/> <blockquote> **Note**<br/> Please refer to the cURL man page for information on the cacert and capath options. If the certificate bundle is not available on your system, you can download it from: curl.haxx.se/docs/caextract.html (download from cacert.pem).<br/> </blockquote>  |
 
 ## Creating send and receive definitions
@@ -25,7 +25,7 @@ The following table describes Transfer CFT's Microsoft Azure Blob Storage- relat
 You must include the following parameters in your Google Cloud Storage [CFTSEND/CFTRECV](../../c_intro_userinterfaces/command_summary) definitions:
 
 | Parameter<span id="storageaccount"></span>  | Type  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | fname  | string  |   |
 | workingdir  | string  |   |
 | wfname  | string  |   |

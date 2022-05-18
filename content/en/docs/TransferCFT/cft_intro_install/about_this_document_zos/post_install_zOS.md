@@ -12,7 +12,7 @@ Once you install the product, the following subdirectories are available:
 - Install: Contains the Transfer CFT product and the configuration file for silent installation.
 
 | File Name  | Description  |
-| - - - | - - - |
+| --- | --- |
 | silent_install.conf  | File to customize for silent installation.  |
 | Transfer_CFT_mvs_adrdssu.bin  | Compressed Transfer CFT files in ADRDSSU format. Name: distlib.UPLIB(CFT332A) |
 | Transfer_CFT_mvs_xmit.bin  | Transfer CFT files in double XMIT format.<br/> Name: distlib.UPLIB(CFT332X) |

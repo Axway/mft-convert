@@ -87,7 +87,7 @@ the relative name is converted into an absolute name in different stages
 as shown in the following table.
 
 | Command  | Version  | Parameter  | Conversion to an absolute name  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | CFTSEND  | 0 or - n  | IMPL=YES  | at the start of the transfer  |
 |   |   | IMPL=NO  | when the request is placed in the catalog  |
 | SEND  |  • be 0 or - n<br/> • specific case of z/OS (MVS) (1) | FNAMEABS=YES  | when the request is placed in the catalog  |

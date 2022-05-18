@@ -13,7 +13,7 @@ weight: 350
 ## User with all rights
 
 | Command  | Object  | Class  | VARS  | UserID  | Actions  | File/ACC  | Notes  |
-| - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | ABOUT |   |   |   |   |   |   | No control |
 | PURGE |   |   |   |   |   | COM(UPDATE) | No control |
 | COPYFILE |   |   |   |   |   |   | No control |
@@ -65,7 +65,7 @@ Cmduser = System user (TSO) of the user submitting the command.
 QQQ_QQQ Table colspan
 
 | Command  | Object  | Class  | VARS  | UserID  | Actions  | File/ACC  | Notes  |
-| - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | ABOUT |   |   |   |   |   |   | No control |
 | PURGE |   |   |   |   |   | COM(UPDATE) | No control |
 | COPYFILE |   |   |   |   |   |   | No control |

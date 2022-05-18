@@ -4,7 +4,7 @@ linkTitle: "Changelog"
 weight: 40
 --- ****Transfer CFT 3.10****
 
-- [CORE] Support 64- character identifiers for CFTSSH and PKIKEY.
+- CORE] Support 64- character identifiers for CFTSSH and PKIKEY.
 - [CORE] Added a user audit log that tracks user authentication, administration, configuration, and denied transfer actions. [Details](../transport_security_start_here/user_auditing)
 - [CORE] Support using a group of files to send to or receive from: Google Cloud Storage [Details](../app_integration_intro/google_cloud) or Amazon S3 [Details](../app_integration_intro/amazon_s3)
 - [CORE] Support for Microsoft Azure Blob Storage and using a group of files to send to or receive from ABS. [Details](../app_integration_intro/ms_blob)
@@ -94,7 +94,7 @@ weight: 40
 - [CORE] Added usage tracking with the AMPLIFY Edge Agent. [Details](../reporting)
 - [CORE] Support Ceph Object Storage with S3. [Details](../app_integration_intro/amazon_s3#Use)
 - [CORE] Added a folder monitoring option that allows you to access files on the behalf of a specific user (USERID). *Available on Unix and Windows* [Details](../app_integration_intro/intro_folder_monitor/configure_folder_monitoring)
-- [CORE] You can automatically move a file to a specified directory following a successful file transfer either with folder monitoring [Details](), or without folder monitoring using FACTION [Details](../c_intro_userinterfaces/command_summary/parameter_intro/faction)
+- [CORE] You can automatically move a file to a specified directory following a successful file transfer either with folder monitoring [Details, or without folder monitoring using FACTION Details](../c_intro_userinterfaces/command_summary/parameter_intro/faction)
 - [CORE] Workingdir is available for SEND and RECV commands. [Details](../app_integration_intro/amazon_s3)
 - [CORE]) Added an alert mechanism for the Transfer CFT communication media file (CFTCOM) to indicate that the COM is nearing its threshold. [Details](../c_intro_userinterfaces/command_summary/parameter_intro/tlvwarn)
 - [CORE] Extended RCVALLER to include additional file- access type errors. [Details](../c_intro_userinterfaces/command_summary/parameter_intro/rcvaller)
@@ -131,8 +131,8 @@ weight: 40
 - [CORE] Support for SAML 2.0 as an Identity Provides (IdP) with Transfer CFT installations enables Single Sign- On (SSO) for Windows and Unix platforms. [Details](../c_intro_userinterfaces/web_copilot_ui/use_saml)
 - [CORE] Added API Access Tokens for use in REST API bearer authentication. [Details](../app_integration_intro/using_apis/api_intro/api_authentication)
 - [CORE] You can integrate an active/active Transfer CFT architecture with multiple Secure Relay Router Agents to provide secure data distribution in a high- availability scenario. [Details](../transport_security_start_here/sr_overview/cft_sr_conf_multinode)
-- [CORE] Developed and added Transfer CFT features to the web browser user interface, including Transfer CFT sever management (check the status, start, stop, and restart). See the [User interface comparison]() table.
-- [CORE] From the REST API you can perform Transfer CFT server administration (check the status, start, stop, and restart). Additionally, you can manage CFT, CFTIDF, and CFTXLATE objects. See the [Transfer CFT Swagger](http://apidocs.axway.com/swagger- ui/index.html?productname=transfercft&productversion=3.5&filename=transfercft- swagger- api.json) documentation for details.
+- [CORE] Developed and added Transfer CFT features to the web browser user interface, including Transfer CFT sever management (check the status, start, stop, and restart). See the [User interface comparison table.
+- CORE] From the REST API you can perform Transfer CFT server administration (check the status, start, stop, and restart). Additionally, you can manage CFT, CFTIDF, and CFTXLATE objects. See the [Transfer CFT Swagger](http://apidocs.axway.com/swagger- ui/index.html?productname=transfercft&productversion=3.5&filename=transfercft- swagger- api.json) documentation for details.
 - [CORE] You can now implement Transfer CFT in a Microsoft Azure environment. [Details](../datasheet#Virtuali)
 - [CORE] You can integrate GlusterFS as storage for file transfers. [Details](../cft_intro_install/unix_install_start_here/before_you_start_unix/n_active_active/shared_file_prereq_ux#Standalo)
 - [UNIX] Added parameters that allow you to configure the Transfer CFT `systemd` service when using Central Governance. [Details](../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/systemd_service_ux)
@@ -155,8 +155,8 @@ weight: 40
 - [CORE] Added a PASSWORD for the PKIEXT command, which enables you to export the user certificate and key in PKCS12 format. [Details](../transport_security_start_here/certificates/pkiutil_cli_intro/pkiext)
 - [CORE] You can now use a force retry for a transfer in the YR state using the start command.
 - [WIN] Added support for TrustedFile on Windows 64- bit.
-- [CORE] Updated some default values for the CFTTCP, CFTNET, CFTPART and CFTPARM commands. [Details]()
-- [CORE] Added parameter to define the local network interface for the outbound PassPort AM connection. [Details](../internal_a_m_start_here/about_passport_am/configure_passport_am)
+- [CORE] Updated some default values for the CFTTCP, CFTNET, CFTPART and CFTPARM commands. [Details
+- CORE] Added parameter to define the local network interface for the outbound PassPort AM connection. [Details](../internal_a_m_start_here/about_passport_am/configure_passport_am)
 - [AM] You can now use Central Governance as a form of access management. [Details](../internal_a_m_start_here/fm_access_management)
 - [Linux/Windows] Google Cloud Platform support.
 
@@ -176,31 +176,31 @@ weight: 40
 - [CORE] Added new CFTUTIL command CHECK to verify parameter coherence. SP1 [Details](../c_intro_userinterfaces/about_cftutil/check_command)
 - [CORE] Added new parameters XLATE, OCHARSET, and ICHARSET for the COPYFILE command. SP1 [Details](../admin_intro/admin_commands_intro/copyfile_command)
 - [CORE] Added new parameters, TYPE and ID, to the PKIEXT command. SP1 [Details](../transport_security_start_here/certificates/pkiutil_cli_intro/pkiext)
-- [CORE] You can now use PKIUTIL PKIKEY or PKIKUTIL PKICER to handle encrypted PEM private keys. SP1 [Details]()
-- [CORE] Added keyboard shortcuts to improve accessibility in the Transfer CFT UI. SP1 [Details](../c_intro_userinterfaces/web_copilot_ui)
-- [CORE] In the SWAITCAT command, added support for the T value in the PHASES parameter, and in the SEND and RECV commands added support for the T value in the WPHASES parameter. SP1 PHASES [Details](../c_intro_userinterfaces/command_summary/parameter_intro/phases), WPHASES [Details]()
-- [CORE] Added the requester JOBNAME in the `CFTR12I` message for SEND and RECEIVE commands (log format V24). Added requester JOBNAME in the `CFTS20I `message (when the communication file row number is deleted). SP1 CFTR12I [Details](../troubleshoot_intro/messages_and_error_codes_start_here/cftr_messages#CFTR12I), CFTS20I [Details](../troubleshoot_intro/messages_and_error_codes_start_here/cfts_messages#CFTS20I)
+- [CORE] You can now use PKIUTIL PKIKEY or PKIKUTIL PKICER to handle encrypted PEM private keys. SP1 [Details
+- CORE] Added keyboard shortcuts to improve accessibility in the Transfer CFT UI. SP1 [Details](../c_intro_userinterfaces/web_copilot_ui)
+- [CORE] In the SWAITCAT command, added support for the T value in the PHASES parameter, and in the SEND and RECV commands added support for the T value in the WPHASES parameter. SP1 PHASES [Details](../c_intro_userinterfaces/command_summary/parameter_intro/phases), WPHASES [Details
+- CORE] Added the requester JOBNAME in the `CFTR12I` message for SEND and RECEIVE commands (log format V24). Added requester JOBNAME in the `CFTS20I `message (when the communication file row number is deleted). SP1 CFTR12I [Details](../troubleshoot_intro/messages_and_error_codes_start_here/cftr_messages#CFTR12I), CFTS20I [Details](../troubleshoot_intro/messages_and_error_codes_start_here/cfts_messages#CFTS20I)
 - [CORE] Added new TLS1.2 cipher suites for the EBICS protocol. SP1 UI Details, CLI Details
 - [CORE] New Transfer CFT Graphical User Interface (replaces the Copilot user interface). [Details](../c_intro_userinterfaces/web_copilot_ui)
 - [CORE] Added custom ciphering key to protect sensitive data. [Details](../transport_security_start_here/cipher_key)
 - [LINUX] Added support for Amazon S3 capabilities. [Details](../app_integration_intro/amazon_s3)
 - [CORE] Added support for SSH File Transfer Protocol (SFTP) to transfer files using Transfer CFT as a server as well as a client. *Exclusively for Windows and Unix (see the SFTP introduction for a detailed list) as a technical preview*. [Details](../protocols_start_here/sftp_intro)
-- [LINUX] Added support for Amazon Web Services Elastic File System (EFS). [Details]()
-- [CORE] Added fine grain access control to the SERVICE:UI resource. Refer to the *Transfer CFT 3.3.2 Security Guide* *&gt; *FGAC privileges** for more information.
+- [LINUX] Added support for Amazon Web Services Elastic File System (EFS). [Details
+- CORE] Added fine grain access control to the SERVICE:UI resource. Refer to the *Transfer CFT 3.3.2 Security Guide* *&gt; *FGAC privileges** for more information.
 - [z/OS] Added support for password phrase.
 - [UNIX] Added the Transfer CFT utilities Bash auto- completion command feature. [Details](../c_intro_userinterfaces/about_cftutil/autocomplete)
 - [CORE] Added support for a range of internal communication ports between nodes in a multi- node installation (cft.multi_node.listen_port_range). [Details](../admin_intro/uconf/uconf_directory)
 - [z/OS] Added an EXECINFO catalog field, which contains the JOBID:JOBNAME of the last processing procedure executed.
-- [CORE] Added NIDT attribute as catalog selection criteria. [Details]()
+- [CORE] Added NIDT attribute as catalog selection criteria. [Details
 
 ****{{< TransferCFT/axwayvariablesComponentLongName  >}} 3.2.4****
 
-- [z/OS] Added support to connect to Copilot as a system user or as a Central Governance user (uconf:copilot.misc.createprocessasuser). Refer to the *Transfer CFT z/OS Installation and Operations Guide*.
+- z/OS] Added support to connect to Copilot as a system user or as a Central Governance user (uconf:copilot.misc.createprocessasuser). Refer to the *Transfer CFT z/OS Installation and Operations Guide*.
 - [z/OS] Added support for MSA4 extensions and Galois Counter Mode: GCM (AES- [128&#124;256]).
 - [CORE] You can now customize the SSL certificate distinguished name (DN) generated during Central Governance registration. SP1 Details
 - [CORE] The Copilot server automatically uses the SSL certificate, generated during {{< TransferCFT/suitevariablesCentralGovernanceName >}} registration, for SSL connections. SP1 [Details](../admin_intro/manage_copilot)
-- [SSL] Added support for synchronous COM SSL. SP1 [Details]()
-- [API] Added timeout feature for REST API requests. SP1 [Details](../app_integration_intro/using_apis/api_intro/api_commands)
+- [SSL] Added support for synchronous COM SSL. SP1 [Details
+- API] Added timeout feature for REST API requests. SP1 [Details](../app_integration_intro/using_apis/api_intro/api_commands)
 - [CORE] Updated information for the Sentinel connector. SP1 [Details](../using_sentinel/trk_parms)
 - [CORE] Enhanced the MQUERY component information. SP1 [Details](../admin_intro/admin_commands_intro/querying_a_component_)
 - [CORE] Added support for Server Name Identification (SNI), a TLS protocol extension. SP1 [Details](../transport_security_start_here/manage_ssl_tls_versions)
@@ -241,13 +241,13 @@ weight: 40
 - [IBM i] Process outputs (QPRINTS) are redirected to the following files in the production library: the CFTOUT file for Transfer CFT, and the COPOUT file for COPILOT. [Details](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_os400_en_PDF/resource/TransferCFT_InstallationGuide_os400_en.pdf)
 - [IBM i] Process joblogs (QPJOBLOG) are redirected to the following files in the production library: JLOG and JLOG2 files for Transfer CFT, and the COPJLOG and COPJLOG2 files for Copilot. [Details](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_os400_en_PDF/resource/TransferCFT_InstallationGuide_os400_en.pdf)
 - [CORE] Added support for the pre, post, and ack processing states to the Transfer JPI. [Details](../cft_intro_install/about_this_document_ibmi/using_apis/java_api)
-- [CORE] Added new parameters [SY]() and [RY](), and UCONF parameters cft.purge.sy and cft.purge.ry, to automatically purge transfers in the Y (post- processing phase) state. [Details](../admin_intro/admin_monitoring_intro/housekeeping_catalog)
+- [CORE] Added new parameters [SY and RY, and UCONF parameters cft.purge.sy and cft.purge.ry, to automatically purge transfers in the Y (post- processing phase) state. Details](../admin_intro/admin_monitoring_intro/housekeeping_catalog)
 - [CORE] Added a new parameter [SERIAL](../c_intro_userinterfaces/command_summary/parameter_intro/serial) for the SEND/RECV commands. [Details](../app_integration_intro/transfer_serialization)
 - [IBM i] Added the CFTSUPPORT command. [Details](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_os400_en_PDF/resource/TransferCFT_InstallationGuide_os400_en.pdf)
-- [CORE] Added new parameters [WPHASESTEPS]() and [WPHASE]() for the SEND/RECV commands.
-- [CORE] Added a new parameter FILENOTFOUND for the CFTSEND/CFTRECV objects and the SEND/RECV commands. [Details]()
-- [CORE] Added a new parameter FILENOTFOUND for the SEND and RECV commands. [Details]()
-- [UNIX] Added the RENAME option to the FACTION parameter, which replaces the existing FNAME file after the transfer completes with the WFNAME. [Details](../c_intro_userinterfaces/command_summary/parameter_intro/faction)
+- [CORE] Added new parameters [WPHASESTEPS and WPHASE for the SEND/RECV commands.
+- CORE] Added a new parameter FILENOTFOUND for the CFTSEND/CFTRECV objects and the SEND/RECV commands. [Details
+- CORE] Added a new parameter FILENOTFOUND for the SEND and RECV commands. [Details
+- UNIX] Added the RENAME option to the FACTION parameter, which replaces the existing FNAME file after the transfer completes with the WFNAME. [Details](../c_intro_userinterfaces/command_summary/parameter_intro/faction)
 - [CORE] Dynamically add, remove, enable, or disable a logical folder to monitor in the Transfer CFT runtime. [Details](../app_integration_intro/intro_folder_monitor/folder_monitor_uconf#Modifying_existing_configuration)
 - [GUI] Replaced the Copilot UI applet with a Java Web Start technology UI due to discontinued support for Java applets by web- browsers. Details
 - [CORE] PKI exits available on all platforms.
@@ -292,9 +292,9 @@ weight: 40
 - [AM] {{< TransferCFT/axwayvariablesCompanyName >}} PassPort AM local cache. [Details](../internal_a_m_start_here/about_passport_am/unconf_access_management)
 - [GOVERNANCE] Improved event generation. [Details](../using_sentinel/intro_sentinel/mapping_states)
 - [GOVERNANCE] Send NIDF instead of COMMUT to Axway Sentinel. [Details](../using_sentinel/uconf_sentinel)
-- [CORE] Added EXECRALL post- processing parameter to the receive command. Backported 3.0.1 SP4 and 2.7.1 SP8. [Details]()
-- [CORE] Added requester mode transfer parameter maxduration as a transfer timer. [Details]()
-- [CORE] Encrypt all passwords, previously some passwords were stored in clear.
+- [CORE] Added EXECRALL post- processing parameter to the receive command. Backported 3.0.1 SP4 and 2.7.1 SP8. [Details
+- CORE] Added requester mode transfer parameter maxduration as a transfer timer. [Details
+- CORE] Encrypt all passwords, previously some passwords were stored in clear.
 - [CORE] Added PROT parameter to SEND/RECV. [Details](../c_intro_userinterfaces/command_summary/parameter_intro/prot)
 - [CORE] Enable SEND or RECV with no IDF. [Details](../c_intro_userinterfaces/command_summary/parameter_intro/idf#IDF_send_recv)
 - [CORE] Enable/disable the use of a default file identifier. [Details](../admin_intro/uconf/default_idf)
@@ -339,8 +339,8 @@ weight: 40
 - [CORE] Executable file to retrieve system details CFTTELL. [Details](../admin_intro/admin_commands_intro/cfttell)
 - [GUI] Updated Wizards. Details
 - [GUI] CFT_support is generated directly from Copilot. [Details](../cft_intro_install/unix_install_start_here/troubleshoot_registration/support_tools)
-- [NET] Support for NFSv4. [Details]()
-- [CORE] Added padding/unpadding character for text files at the file and network level. SP1 [Details](../concepts/transfer_command_overview/padding)
+- [NET] Support for NFSv4. [Details
+- CORE] Added padding/unpadding character for text files at the file and network level. SP1 [Details](../concepts/transfer_command_overview/padding)
 - [CORE] Manage child transfers using the generic parent. SP1 Details
 - [CORE] Added MAXTIME parameter to START command. SP1 [Details](../c_intro_userinterfaces/command_summary/parameter_intro/maxtime)
 - [COPILOT] Added keep- alive parameter for client connections. SP1 [Details](../admin_intro/uconf/uconf_copilot)
@@ -371,7 +371,7 @@ weight: 40
 - [SENTINEL] Integrated Sentinel Heartbeat (`uconf:sentinel.heartbeat.*`). [UCONF](../using_sentinel/uconf_sentinel)
 - [SENTINEL] Sentinel transfer progress notifications. (`uconf:sentinel.xfb.transfer_progress_period`).  [UCONF](../using_sentinel/uconf_sentinel)
 - [NAVIGATOR] Transfer CFT Navigator self- registration (`uconf:navigator.*`). UCONF
-- [GOVERNANCE] Start/stop scripts. [UNIX](), [Windows](../cft_intro_install/windows_install_start_here/windows_install_start_here/running_cft_for_the_first_time_windows)
+- [GOVERNANCE] Start/stop scripts. [UNIX, Windows](../cft_intro_install/windows_install_start_here/windows_install_start_here/running_cft_for_the_first_time_windows)
 - [GOVERNANCE] SSA (Synchrony Support Assistant) support. [Details](../cft_intro_install/unix_install_start_here/troubleshoot_registration/support_tools)
 - [ADMIN] Integrated restart management (SHUT RESTART=YES). [Details](../admin_intro/admin_commands_intro/shut_command)
 - [ADMIN] Display internal statistics (MQUERY OBJECT=STATS). [Details](../admin_intro/admin_commands_intro/querying_a_component_)
@@ -455,8 +455,8 @@ weight: 40
 - [GUI] Added CFTAPPL object handling. Details
 - [LOG] Added custom filters for LOG output ([uconf](../admin_intro/uconf/uconf_parameters):cft.server.log.exclude_filters).[Details](../admin_intro/admin_monitoring_intro/housekeeping_logs)
 - [CORE] (Windows) Added Systray management. Details
-- [AM] (Unix/Windows) Connections to PassPort AM can now be secured ([uconf](../admin_intro/uconf/uconf_parameters):am.passport.use_ssl=Yes, uconf:am.passport.ca_cert). [Details]()
-- [PACK] (Unix/Windows) Added $CFTDIRRUNTIME/profile.d for custom environment.
+- [AM] (Unix/Windows) Connections to PassPort AM can now be secured ([uconf](../admin_intro/uconf/uconf_parameters):am.passport.use_ssl=Yes, uconf:am.passport.ca_cert). [Details
+- PACK] (Unix/Windows) Added $CFTDIRRUNTIME/profile.d for custom environment.
 - [MIGR] (Unix/Windows) Added an integrated migration at installation. See the *Synchrony Platform Installation Guide*.
 
 ****{{< TransferCFT/axwayvariablesComponentShortName  >}} 2.6.2****
@@ -534,7 +534,7 @@ weight: 40
 - [CORE] Added new V24 ACCNT Format (CFTACCNT [FORMAT](../c_intro_userinterfaces/command_summary/parameter_intro/format)=V24).
 - [CORE] Added new V24 EXIT Format (CFTEXIT [FORMAT](../c_intro_userinterfaces/command_summary/parameter_intro/format)=V24).
 - [CORE] Extended CFTEXIT [PROG](../c_intro_userinterfaces/command_summary/parameter_intro/prog) to 512 characters.
-- [CORE] Added a new transfer scheduler. [Details]()
+- [CORE] Added a new transfer scheduler. [Details
 - [CORE] Added balancing between server mode transfers and requester mode transfers.
 
 [Back to top](#top)

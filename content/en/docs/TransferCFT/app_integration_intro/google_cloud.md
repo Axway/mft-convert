@@ -36,7 +36,7 @@ For SSL connections to GCS, libCURL requires a path to the CA certificates bundl
 The following table describes Transfer CFT's Google Cloud Storage- related parameters.
 
 | Parameter  | Type  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | ssl.certificates.ca_cert_bundle  | string  | Path to the CA certificate bundle.<br/> This path can point to either a file containing the CA certificates (for example, <code>/etc/ssl/certs/ca- certificates.crt</code>) or to a directory containing the CA certificates (for example, <code>/etc/ssl/certs/</code>), which are stored individually with their filenames in a hash format.<br/> <blockquote> **Note**<br/> Please refer to the cURL man page for information on the cacert and capath options. If the certificate bundle is not available on your system, you can download it from: curl.haxx.se/docs/caextract.html (download from cacert.pem).<br/> </blockquote>  |
 
 ## Creating send and receive definitions
@@ -44,7 +44,7 @@ The following table describes Transfer CFT's Google Cloud Storage- related param
 You must include the following parameters in your Google Cloud Storage [CFTSEND/CFTRECV](../../c_intro_userinterfaces/command_summary) definitions:
 
 | Parameter<span id="storageaccount"></span>  | Type  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | fname  | string  | Corresponds to the Google Cloud Storage object name.  |
 | workingdir  | string  | The workingdir field must start with gs:// and be followed by the bucket name (as used with gsutil):<br/> <code>gs://my- bucket</code> |
 | wfname  | string  | In the CFTRECV command, this specifies the temporary object that is used to upload chunks of the file. The file is then concatenated to the value defined in the FNAME parameter. |

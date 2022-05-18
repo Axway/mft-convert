@@ -26,7 +26,7 @@ sent by Transfer CFT and a file to be decompressed after being received.
 
 `OFNAME   = filename `
 
-`[ CREATE   = { ‘   ‘ &#124; YES &#124; NO } ]`
+` CREATE   = { ‘   ‘ &#124; YES &#124; NO } ]`
 
 `[ IBLKSIZE   = { 0   &#124; n } ]`
 
@@ -69,11 +69,11 @@ sent by Transfer CFT and a file to be decompressed after being received.
 When using ICHARSET and OCHARSET, all file types are supported except Binary (B) and Variable (V).
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [CREATE](../../../c_intro_userinterfaces/command_summary/parameter_intro/create) | Output file creation option. |
 | [IBLKSIZE](../../../c_intro_userinterfaces/command_summary/parameter_intro/iblksize)  | Defines the block size of the input file, in bytes.<br/>  |
-| [ICHARSET]()  | Defines the input file encoding.  |
-| [ICODE](../../../c_intro_userinterfaces/command_summary/parameter_intro/icode)  | Codes the input file data. Internal code managed by the system, either ASCII, or EBCDIC. |
+| [ICHARSET  | Defines the input file encoding.  |
+| ICODE](../../../c_intro_userinterfaces/command_summary/parameter_intro/icode)  | Codes the input file data. Internal code managed by the system, either ASCII, or EBCDIC. |
 | [Compression](../../../c_intro_userinterfaces/command_summary/parameter_intro/icomp). |
 | [ICT](../../../c_intro_userinterfaces/command_summary/parameter_intro/ict)  | Type of input file data compression. The value of ICOMP must be compatible with the compression type. |
 | [IFNAME](../../../c_intro_userinterfaces/command_summary/parameter_intro/ifname)  | Name of the input file to be copied. |
@@ -81,7 +81,7 @@ When using ICHARSET and OCHARSET, all file types are supported except Binary (B
 | [IRECFM](../../../c_intro_userinterfaces/command_summary/parameter_intro/irecfm)<br/> see the specific Operations Guide | Input file record format:<br/> • F: fixed<br/> • V: variable<br/> • U: undefined |
 | [ITYPE](../../../c_intro_userinterfaces/command_summary/parameter_intro/itype) | Input file type.<br/> Refer to the Operations Guide corresponding to your OS.  |
 | [OBLKSIZE](../../../c_intro_userinterfaces/command_summary/parameter_intro/oblksize) OS | Output file block size (in bytes). The value indicated must be greater than the value of the OLRECL parameter. |
-| [OCHARSET]()  | Defines the output file encoding.  |
+| [OCHARSET  | Defines the output file encoding.  |
 | [OCODE](../../../c_intro_userinterfaces/command_summary/parameter_intro/ocode) | Codes the output file data. |
 | [OCOMP](../../../c_intro_userinterfaces/command_summary/parameter_intro/ocomp)  | Compresses the output file data. |
 | [OCT](../../../c_intro_userinterfaces/command_summary/parameter_intro/oct) | Type of output file data compression. The value of OCOMP must be compatible with the compression type. |
@@ -103,7 +103,7 @@ These two parameters may be classified into 5 sub- categories, as shown
 in the following table.
 
 | Parameter category  | Parameter concerned  |
-| - - - | - - - |
+| --- | --- |
 | Execution control parameters  | CREATE  |
 | Input data processing parameters  | ICT, ICOMP, ICODE, ICHARSET, XLATE |
 | Parameters associated with the input file:<br/> • physical name<br/> • physical characteristics (global file)<br/> • physical characteristics (records) |  <br/> <br/> IFNAME<br/> ITYPE<br/> IRECFM, ILRECL, IBLKSIZE  |
@@ -119,7 +119,7 @@ The utility prints out execution statistics.
 The following table indicates the heading contents.
 
 | Heading number  | Contents  |
-| - - - | - - - |
+| --- | --- |
 | 1  | Complete name of the input file  |
 | 2  | Coding of the input file data  |
 | 3  | Input file compression type:<br/> • EXT (PeSIT non- SIT)<br/> • CFT (PeSIT CFT to CFT) |

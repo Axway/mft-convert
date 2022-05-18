@@ -5,7 +5,7 @@ weight: 370
 --- The Transfer CFT z/OS file types are listed and defined below.
 
 | File  | Definition  | Note  | Grpaprm  | Grpdesk  | Grptrf  |
-| - - - | - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- | --- |
 | CFTV2.ACCNT1 | Account file | Update | None | None | None |
 | CFTV2.ACCNT2 | Account file | Update | None | None | None |
 | CFTV2.CATALOG | Catalog file | Update | None | Read* | Read* |

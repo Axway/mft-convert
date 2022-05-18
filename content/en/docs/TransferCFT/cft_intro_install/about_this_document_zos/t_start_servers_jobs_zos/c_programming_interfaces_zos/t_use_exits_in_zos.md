@@ -10,7 +10,7 @@ weight: 290
 
 ## Exit lists
 
-The exit list is installed automatically as CFTEXILI. For more information, refer to the Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion  >}} documentation on *[*Exit Lists*](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/Prog/Exits/EXIT_list/exit_lists_start_here.htm)*.
+The exit list is installed automatically as CFTEXILI. For more information, refer to the Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion  >}} documentation on **Exit Lists*](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/Prog/Exits/EXIT_list/exit_lists_start_here.htm)*.
 
 ## File type exits
 
@@ -113,4 +113,4 @@ For an exit in COBOL or C, the diagnostics are also available in the 'CEEDUMP' f
 
 ****Related topics****
 
-- [Managing exits]()
+- [Managing exits

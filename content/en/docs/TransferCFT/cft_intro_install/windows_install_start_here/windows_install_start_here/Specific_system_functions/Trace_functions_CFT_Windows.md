@@ -19,7 +19,7 @@ Depending on the origin of the problem it has detected, these traces
 are recorded in one of the following files:
 
 | Name of the Trace file  | Source of the problem  |
-| - - - | - - - |
+| --- | --- |
 | CFTSYSP.TRC  | Intermediate system section  |
 | CFTSYSS.TRC  | Specific Windows system section  |
 | CFTNET.TRC  | Network section  |

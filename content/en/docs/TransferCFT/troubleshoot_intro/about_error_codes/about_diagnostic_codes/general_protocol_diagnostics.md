@@ -21,7 +21,7 @@ DIAGP format and description
 The table below presents the DIAGP formats.
 
 | Format &lt;/th&gt;  | Meaning &lt;/th&gt;  |
-| - - - | - - - |
+| --- | --- |
 | XXXXXXXX | Mnemonic code<br/> A "Mnemonic"- type DIAGP is a "character string" value providing information on the type of catalog entry or the status of the transfer associated with this entry. Some codes are specific to a single protocol. Please see the [Mnemonic DIAGP codes](#%22Mnemoni) table for details. |
 | L HH HHH | Local rejection of network connection<br/> These codes correspond to network connection rejection diagnostics. The character L indicates a local rejection. H represents a hexadecimal digit.<br/> The two hexadecimal numbers respectively represent:<br/> • REASON: a reason code according to the network context<br/> • DIAGN: a diagnostic code according to the network context<br/> For the meaning of these codes, refer to the [Network codes](../network_codes) that correspond with the type of network used in the transfer.<br/> This DIAGP format is associated with the following internal diagnostics: |
 | R HH HHH | Remote rejection of network connection<br/> These codes correspond to network connection rejection diagnostics. The character "R" indicates a remote rejection. H represents a hexadecimal digit.<br/> The two hexadecimal digits respectively represent:<br/> • REASON: a reason code according to the network context<br/> • DIAGN: a diagnostic code according to the network context<br/> For the meaning of these codes, refer to the section [Network codes](../network_codes) corresponding to the type of network used by the transfer.<br/> This DIAGP format is associated with the following internal diagnostics: |
@@ -37,7 +37,7 @@ The table below presents the DIAGP formats.
 ## "Mnemonic" DIAGP codes
 
 | Code  | Protocol  | Meaning  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | ABOI_CD | ODETTE | CD send following reception of an ABORT indication (case of a RECV IDF=* command) |
 | ABORT |   | {{< TransferCFT/axwayvariablesComponentShortName  >}} transfer abort request |
 | ABORT_I | ODETTE | ABORT caused by the protocol engine, following detection of an error |
@@ -125,7 +125,7 @@ The table below presents the DIAGP formats.
 ## FPDU Mnemonic Codes - PeSIT Protocol
 
 | XXX &lt;/th&gt;  | FPDU &lt;/th&gt;  | Definition &lt;/th&gt;  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | ABO  | ABORT  | Sudden connection interruption  |
 | ACF  | AckCRF  | File closing confirmation  |
 | ACO  | ACONNECT  | Connection confirmation  |
@@ -162,7 +162,7 @@ the error. This message is not seen by the user.
 The severity and nature of an error is specified by PI 2, which is valid for all profiles.
 
 | Error Code &lt;/th&gt;  | FPDU &lt;/th&gt;  | Meaning &lt;/th&gt;  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | 100 | RESYNC | Transmission error (invalid CRC) |
 | 139 |   | Invalid file attributes |
 | 200 | AckCREATE AckSELECT | Insufficient file characteristics (insufficient file parameters) |
@@ -275,7 +275,7 @@ to which the {{< TransferCFT/axwayvariablesComponentShortName  >}} adds 100 or 2
     code. Values are expressed in decimal.
 
 | Error code  | Description  |
-| - - - | - - - |
+| --- | --- |
 | 101 | File does not exist |
 | 102 | Target site does not exist for the file |
 | 103 | Source site does not exist for the file |

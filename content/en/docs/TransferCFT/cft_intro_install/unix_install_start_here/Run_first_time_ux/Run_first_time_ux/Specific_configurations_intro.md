@@ -11,7 +11,7 @@ other operating systems:
 ## Specific values tables
 
 | Notation  | Object  | Value  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | char_file  | Prefix to logical names  | _ (underlined)  |
 | char_mask  | Wild card character  | ?  |
 | char_unit  | Separator (volume)  | none  |
@@ -22,7 +22,7 @@ other operating systems:
 ## Names of default files used by CFTUTIL
 
 | **Objet**  | ****Default name****  |
-| - - - | - - - |
+| --- | --- |
 | Parameters file  | _CFTPARM  |
 | Partners file  | _CFTPART  |
 | Catalogc file  | _CFTCATA  |

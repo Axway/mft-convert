@@ -21,7 +21,7 @@ the networks used. The TCP/IP network is supported.
 
 The installation section describes prerequisites and how to install, migrate, update and uninstal{{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
-- [Prerequisites](before_you_start_unix/prereqs_overview)
+- Prerequisites](before_you_start_unix/prereqs_overview)
 - [Start the installation](../windows_install_start_here/before_you_start_win/install_transfer_cft_1)
 
 ## UNIX operations
@@ -29,7 +29,7 @@ The installation section describes prerequisites and how to install, migrate, up
 - [{{< TransferCFT/axwayvariablesComponentShortName >}}
     UNIX utilities](run_first_time_ux/use_cft_utilities)
 - [Running
-    {{< TransferCFT/axwayvariablesComponentShortName >}} for the first time]()
+    {{< TransferCFT/axwayvariablesComponentShortName >}} for the first time
 - [Building
     {{< TransferCFT/axwayvariablesComponentShortName >}} API applications](run_first_time_ux/api_applications_start_here)
 - [Activating

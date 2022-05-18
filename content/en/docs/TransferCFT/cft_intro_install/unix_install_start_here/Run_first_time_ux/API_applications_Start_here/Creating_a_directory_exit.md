@@ -3,8 +3,8 @@ title: "Creating  a directory exit"
 linkTitle: "Creating a directory exit"
 weight: 240
 --- The following example was designed from a modified version of the ****cft- tcp.conf**** configuration example, located in ****&lt;installdir>/runtime/conf****. For this example, you should have customized
-at least one of these files, using the instructions in [Running Transfer
-CFT for the first time.]()
+at least one of these files, using the instructions in Running Transfer
+CFT for the first time.
 
 ## Prerequisites
 

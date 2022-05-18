@@ -19,6 +19,6 @@ PKIFILE
 ## Modifying the local certificate database
 
 | FNAME = string1..64 | Name of the local certificate database. |
-| - - - | - - - |
+| --- | --- |
 | [MODE = REPLACE &#124; CREATE &#124; DELETE] | Action on the database.<br/> • REPLACE purges the database<br/> • CREATE creates the internal datafile if it does not already exist<br/> • DELETE deletes the database |
 

@@ -8,7 +8,7 @@ To begin the procedure:
 
 1. Select the single host option to perform a classic Transfer CFT installation:
     ```
-    Installation type: Single host or multiple hosts. \* Single host(1) - Multiple hosts (2)........... [ 1
+    Installation type: Single host or multiple hosts. \* Single host(1) - Multiple hosts (2)...........  1
     ]:
     ```
 1. Specify the root and shared directories for components to install. The default directory is the login directory for the Transfer CFT account.
@@ -57,4 +57,4 @@ To begin the procedure:
     - - > Type M to modify, ENTER to continue:
     ```
 
-After completing the installation process, go to [Starting Transfer CFT]().
+After completing the installation process, go to [Starting Transfer CFT.

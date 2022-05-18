@@ -119,12 +119,12 @@ The transfer request is rejected.<span id="Internal_diagnostic_codes_table"></sp
 DIAGI - Internal diagnostic codes
 table
 
-The following table makes references to DIAGP. For details, please see the [DIAGP section.](../general_protocol_diagnostics)
+The following table makes references to DIAGP. For details, please see the DIAGP section.](../general_protocol_diagnostics)
 
 QQQ_QQQ Table
 
 | DIAGI Code  | Event  | Consequence  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | 0 | The transfer has terminated correctly | Execution of normal EXECRF or EXECSF end of transfer procedures |
 | 001 | SYS: Error creating the message queue or allocating the memory | H status - ABORT, EXECE |
 | 002 | Context definition error | H status - ABORT, EXECE |
@@ -149,8 +149,8 @@ QQQ_QQQ Table
 | 112  | Nonexistent unit  |   |
 | 113 | FILE - The file to be created already exists, even though the FDISP parameter prohibits it (FDISP = NEW). DIAGP is then set to NO NEW | H status - ABORT, EXECE in requester mode<br/> If there is a DIAGP for this, it is system specific. For these errors, check the DIAGC or the log for more information. |
 | 114 | FILE - Data write error in the receive file: file space full | H status - ABORT, EXECE<br/> If there is a DIAGP for this, it is system specific. For these errors, check the DIAGC or the log for more information. |
-| 115 | 1. FILE - The transfer owner is not authorized to access the file<br/> 2. FILE - The file cannot be deleted before the receive file has been created (FDISP = DELETE case)Protected file | H status - ABORT, EXECE in requester mode<br/> Please see the [Access management]() sections for more information. |
-| - "- | 3. FILE - The sent file cannot be deleted following a deletion request<br/> (FACTION = DELETE case) Protected file | H status - ABORT, EXECE<br/> Please see the [Access management]() sections for more information. |
+| 115 | 1. FILE - The transfer owner is not authorized to access the file<br/> 2. FILE - The file cannot be deleted before the receive file has been created (FDISP = DELETE case)Protected file | H status - ABORT, EXECE in requester mode<br/> Please see the [Access management sections for more information. |
+| - "- | 3. FILE - The sent file cannot be deleted following a deletion request<br/> (FACTION = DELETE case) Protected file | H status - ABORT, EXECE<br/> Please see the Access management sections for more information. |
 | 120 | PROT - Counter check error | H status - ABORT, EXECE<br/> This may require a trace. Please see [How to use ATM traces](../../../atm_traces). |
 | 121 | USER - Interruption by the operator | H status - ABORT, EXECE |
 | 122 | SYS - Error allocating memory when the transfer is executed | D status - RESTART |
@@ -268,7 +268,7 @@ between 501 and 999 correspond to a fault reported by the partner.
 Therefore when troubleshooting if the code is greater than 500 it refers to a remote issue. To find the actual DIAG, subtract 500 from the displayed code. If the DIAG is 916, for example, the issue is a remote problem corresponding to DIAG 416 (maximum number of transfers reached).
 
 | 500  | Constant to add to a remote code  |   |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | 600 | FILE - (PeSIT) (Odette) Transfer aborted by the remote end: file input/output error - PeSIT / Odette code: See [DIAGP.](../general_protocol_diagnostics) | H status- ABORT, EXECE |
 | 604 | FILE - (PeSIT) Transfer aborted by the remote end: file opening error | H status - ABORT, EXECE |
 | 605 | FILE - (PeSIT) Transfer aborted by the remote end: file closing error | H status - ABORT, EXECE |
@@ -304,7 +304,7 @@ Therefore when troubleshooting if the code is greater than 500 it refers to a re
 ## SSL alert errors
 
 | Code | Description |
-| - - - | - - - |
+| --- | --- |
 | 0 | Close notify |
 | 10 | Unexpected message |
 | 20 | Bad record MAC |

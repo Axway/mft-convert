@@ -38,7 +38,7 @@ Migrate the parameters from the Transfer CFT 2.4 trkapi.cfg file.
 
 1. 
 | Parameter in trkapi.cfg | UCONF parameter |
-| - - - | - - - |
+| --- | --- |
 | TRACE | sentinel.trktrace |
 | TRKGMTDIFF | sentinel.trkgmtdiff |
 | TRKIPADDR_BKUP | sentinel.trkipaddr_bkup |
@@ -82,7 +82,7 @@ Migrate parameters from the Transfer CFT 2.4 copconf.ini file.
     Copconf file to UCONF parameter mapping
 
 | Parameter in copconf.ini | UCONF parameter |
-| - - - | - - - |
+| --- | --- |
 | BatchList | copilot.batches |
 | CFTCOM | copilot.cft.com |
 | CFTMEDIACOM | copilot.cft.mediacom |

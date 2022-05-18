@@ -13,7 +13,7 @@ weight: 190
 The CFTSSH object parameters for a server definition (DIRECT = SERVER).
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | ID = identifier | Identifier of the security profile. |
 | CIPHLIST = {(num, num, ..)} | List of allowed ciphers (encryption methods).<br/> Each value defines three algorithms:<br/> • Authentication algorithm<br/> • Encryption algorithm<br/> • Sealing algorithm<br/> This list is compared with the list proposed by the client in order of preference, for the purpose of determining the suite to be negotiated.<br/> {{< TransferCFT/axwayvariablesComponentLongName  >}} supports the following: aes256- ctr, aes192- ctr, aes128- ctr, aes256- cbc, aes192- cbc, aes128- cbc, 3des- cbc, blowfish- cbc.<br/> <blockquote> **Note**<br/> If the field is empty, the default list is: aes256- ctr, aes192- ctr, aes128- ctr, aes256- cbc, aes192- cbc, aes128- cbc.<br/> </blockquote>  |
 | CLIPUBKEY  | When DIRECT=SERVER<br/> Key Id containing the client public key (RSA). When defined, the Transfer CFT server checks that the client public key referenced in CLIPUBKEY matches the public key provided by the client. If an error occurs, the connection is rejected with a DIAGI 433. |
@@ -30,7 +30,7 @@ The CFTSSH object parameters for a server definition (DIRECT = SERVER).
 The CFTSSH object parameters for a client definition (DIRECT = CLIENT).
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | ID = identifier | Identifier of the security profile. |
 | CIPHLIST = {(num, num, ..)} | List of allowed ciphers (encryption methods).<br/> Each value defines three algorithms:<br/> • Authentication algorithm<br/> • Encryption algorithm<br/> • Sealing algorithm<br/> This list is compared with the list proposed by the client in order of preference, for the purpose of determining the suite to be negotiated.<br/> {{< TransferCFT/axwayvariablesComponentLongName  >}} supports the following: aes256- ctr, aes192- ctr, aes128- ctr, aes256- cbc, aes192- cbc, aes128- cbc, 3des- cbc, blowfish- cbc.<br/> <blockquote> **Note**<br/> If the field is empty, the default list is: aes256- ctr, aes192- ctr, aes128- ctr, aes256- cbc, aes192- cbc, aes128- cbc.<br/> </blockquote>  |
 | CLIPRIVKEY  | When DIRECT=CLIENT Key Id containing the client private key (RSA) to use with key authentication. When defined, Transfer CFT uses key authentication. If an error occurs, the connection is rejected with a DIAGI 433.  |

@@ -29,7 +29,7 @@ Use the following command to install Transfer CFT in silent mode.
 QQQ_QQQ_CHECK maybe convert this to text? the cell in 3x2 will be big
 
 | Screen  | Description  |
-| - - - | - - - |
+| --- | --- |
 | Welcome  | Welcome to Transfer CFT landing page.  |
 | License agreement  | Select the check- box "<code>I accept...</code>" to continue with the installation.  |
 | Installation architecture  | Select to install on a single machine, a Cluster - first host, or cluster - additional host.<br/> • Single - Installs a single instance of Transfer CFT on a machine.<br/> • Cluster - Installs Transfer CFT on several machines. Select this option if you want to install Transfer CFT in multi- host/multi- node or in active/passive mode.<br/> • Cluster - First host: Install on a first machine before adding additional machines (nodes). You must install on a first node before you can select the option to install on additional nodes.<br/> • Cluster - Additional host: After installing on the first machine, you can select this option to install on an additional machine(s).<br/> • If you are performing a cluster installation and you enable the multi- node option in the configuration file, this creates an active/active Transfer CFT installation. Otherwise, the installation is active/passive. |

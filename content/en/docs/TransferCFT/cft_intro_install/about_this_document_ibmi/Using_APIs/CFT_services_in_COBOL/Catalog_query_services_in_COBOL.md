@@ -13,7 +13,7 @@ entries. Additionally, you can sort the current selection in memory.
 > as an identifier, that exceed 8 to 32 characters.
 
 | Function | Use |
-| - - - | - - - |
+| --- | --- |
 | OPEN | Open catalog file<br/> This function:<br/> • Allocates the catalog file<br/> • Opens the file<br/> • Reserves an internal control block<br/> • Initializes the internal block parameter |
 | SELECT | Specify the selection criteria<br/> This function:<br/> • Checks the syntax used<br/> • Stores the selection criteria in the internal control block |
 | SELECT240 | Specify the selection criteria<br/> This function:<br/> • Is available in CFT v2.4 and higher<br/> • Retrieves identifiers that are longer than 8 to 32 characters<br/> • Checks the syntax used<br/> • Stores the selection criteria in the internal control block |
@@ -51,7 +51,7 @@ Where:
 The available &lt;verbs> are listed in the following table.
 
 | &lt;verb&gt; | Value | Service |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | F- OPEN | OPEN | Open catalog |
 | F- SELECT | SELECT | Define selection criteria |
 | F- NEXT | NEXT | Read next entry |
@@ -61,7 +61,7 @@ The available &lt;verbs> are listed in the following table.
 The available &lt;param> are listed in the following table.
 
 | &lt;verb&gt; | &lt;param&gt; | Explanation |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | F- OPEN | D- CAT | Path name or logical name of the catalog file. If the name is blank, Transfer CFTI uses a default name. |
 | F- SELECT | Z- SEL | Selection criteria according to the format described in the "S**election data description"** in the ****cft.apicop**** file. If a field is blank or equal to binary zeros, it is considered not selective.<br/> This field can contain:<br/> • the size of the selection criteria field (SLENTGTH) and the size of the field supporting the catalog entry (CLENGTH) in order to avoid recompiling the application program if these two fields are extended.<br/> • the transfer start and end date (BDATE and EDATE) to select transfers performed between these two dates.<br/> • a mask with the special characters "?" and *". The "?" character replaces any character. The "*" character replaces a character string of any length.<br /> <br /> Examples:<br /> A*D replaces ABCD, ABCED or AID<br /> A??D replaces ABCD, AXYD or AQZD<br /> *CD replaces ABECD, YXZCDor TYUICD<br /> ?CD replaces ACD, XCD or ZCD<br /> ?B* replaces ABCDEF, XBZWEO or *KBWXCV<br /> ???? replaces ABCD, XYZW or HGFD |
 | F- NEXT | Z- CAT | Next catalog entry according to the format described in the "S**election data description**" in the ****cft.apicop**** file.<br/> The length of this field is defined by the SELECT service. See the CLENGTH field in the Selection data description. |
@@ -73,7 +73,7 @@ The available &lt;param> are listed in the following table.
 The return codes listed below apply to all services.
 
 | Mnemonic | Description |
-| - - - | - - - |
+| --- | --- |
 | CAPI- NOERR | No error |
 | CAPI- FUNC- UNDEF | Command not valid |
 | CAPI- INT- BLK | &lt;blk&gt; parameter invalid |

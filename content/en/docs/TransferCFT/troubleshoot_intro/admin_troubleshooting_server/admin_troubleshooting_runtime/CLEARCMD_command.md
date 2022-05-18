@@ -10,7 +10,7 @@ command to delete a transfer request from the communication file. A log message 
 > You must include either the COMMAND or JOBNAME parameter when using this command.
 
 | Parameters  | Description  |
-| - - - | - - - |
+| --- | --- |
 | COMMAND | Request keyword. |
 | INDEX | Request number as displayed by the LISTCOM command.<br/> For example:<br/> • <code>INDEX=*</code> Selects all record numbers.<br/> • <code>INDEX=12345</code> Selects the record number 12345 in the COM file. |
 | JOBNAME  | Jobname (string 15), which you can combine with wildcard characters.<br/> For example:<br/> • <code>JOBNAME=12345</code><br/> • <code>JOBNAME=123*</code><br/> • <code>JOBNAME=12?45</code> |

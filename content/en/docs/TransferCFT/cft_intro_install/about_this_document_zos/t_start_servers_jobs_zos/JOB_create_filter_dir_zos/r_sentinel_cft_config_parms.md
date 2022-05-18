@@ -18,7 +18,7 @@ weight: 240
 This table lists the main parameters that you must define in order to communicate with an Event via TCP, and uses TRKTYPE=TCP as the default value.
 
 |   | Event Router  | TRKUTIL  | Transfer CFT  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | Configuration file  | USEPARIN  | TRKCONF  | UCONF  |
 | TCP definition  | (AGENT)<br/> queue=”NOQ” | TRKTYPE=TCP  | UCONFSET ID=sentinel.TRKTYPE,VALUE=TCP  |
 | TCP definition  | (TCPSOURCE) sap=nnnn  | TRKIPPORT=nnnn  | UCONFSET ID=sentinel.TRKIPPORT,VALUE=nnnn  |
@@ -33,7 +33,7 @@ This table lists the main parameters that you must define in order to communicat
 The table below lists the UCONF values that are used in Transfer CFT to define Sentinel interoperability. You can set these UCONF values using either the Copilot UI or command line.
 
 | Unified configuration parameter  | Default value  | Former Sentinel parameter name<br/> trkapi.cfg |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | sentinel.xfb.enable  | NO  | XFB.Sentinel (trkapi.cfg)  |
 | sentinel.xfb.transfer | ALL | XFB.Transfer (trkapi.cfg) &lt;/p&gt; |
 | sentinel.xfb.shut | 0 &lt;/p&gt; | XFB.Shut (trkapi.cfg) &lt;/p&gt; |
@@ -74,7 +74,7 @@ The following parameters define communication with the Event Router via XCF. In 
 - The XCF group is PELISCOP by default. You can modify this default by setting queue = “member group”
 
 |   | ER  | TRKUTIL  | Transfer CFT  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | Configuration file  | USEPARIN  | TRKCONF  | UCONF  |
 | SVC  | (SYSTEM)<br/> svc_nb=nnn | TRKSVC=nnn  | UCONFSET ID=sentinel.TRKSVC,VALUE=nnn  |
 | XCF definition  | (AGENT)queue=  | TRKQUEUE=  | UCONFSET ID=sentinel.TRKQUEUE,VALUE=xxxx  |
@@ -92,7 +92,7 @@ The following table describes the overflow file definition for the Logger file. 
 - The log structure is ONLY used to define a logger file shared between the partitions of the SYSPLEX, and is NOT referenced in any parameters
 
 |   | Event Router  | TRKUTIL  | Transfer CFT  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | Configuration file  | USEPARIN  | TRKCONF  | UCONF  |
 | Logger file  | (AGENT)<br/> api_file= | TRKTNAME=  | UCONFSET ID=sentinel.TRKTNAME, VALUE=xxxx.xxxx.xxx  |
 | Logger file  | (AGENT)<br/> api_file= | TRKSHAREDFILE=YES  | UCONFSET ID=sentinel.TRKSHAREDFILE,VALUE=YES  |

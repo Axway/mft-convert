@@ -14,7 +14,7 @@ weight: 280
 ## Common causes
 
 | Issue vs<br /> Possible causes  | Hard disk bottleneck  | Catalog<br/> full | Network<br/> bottleneck | Memory or processor bottleneck*  | Corrupt<br/> file or DB ** |
-| - - - | - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- | --- |
 | Performance  | Disk check  |   | Network checks  | Check application  |   |
 | Start issue  | Disk check  | Catalog check  | Network checks  | timeout  | Check {{< TransferCFT/axwayvariablesComponentLongName  >}} files  |
 | Unexpected stop  | Disk check  | Catalog check  | Network checks  |   | Check {{< TransferCFT/axwayvariablesComponentLongName  >}} files  |

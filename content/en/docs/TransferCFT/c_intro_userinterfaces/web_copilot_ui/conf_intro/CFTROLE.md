@@ -13,7 +13,7 @@ You can assign users to one or more roles. Typically, users with multiple roles 
 Examples of roles can be ADMINISTRATOR, PARTNER MANAGER, IT MANAGER, and so on.
 
 | Field | Type | Comment |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | id | String32 | Role identifier |
 | comment | String80 | Comment |
 | privs[] | List of String32 | List of privileges associated to this role (1 to 128) |

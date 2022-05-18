@@ -20,7 +20,7 @@ be used to:
 The following table describes the commands associated with these actions.
 
 | Command  | Action  |
-| - - - | - - - |
+| --- | --- |
 | [DELETE](../../../admin_intro/admin_commands_intro/delete_command) | Deletes a catalog entry  |
 | [HALT](../../../c_intro_userinterfaces/about_cftutil/managing_transfer_states/halt_command) | Stops a transfer and sets it to the HOLD state  |
 | [KEEP](../../../c_intro_userinterfaces/about_cftutil/managing_transfer_states/keep_command) | Stops a transfer and sets it to the KEEP state  |

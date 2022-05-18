@@ -74,7 +74,7 @@ Download and unzip the {{< TransferCFT/suitevariablesTransferCFTName  >}} instal
 Create as many copies of the initialize.properties file as you have hosts in the multi- node installation. Customize the *N* initialize.properties file with the following parameters to enable a multi- node installation.
 
 | CFT_Full_Hostname  | Host Address of the local server: FQDN (Fully Qualified Domain Name) or IP Address.<br/> When you re installing a cluster, there are two ways to define this parameter:<br/> • If you do not set this in the silent file, the install determines it (if the machine is correctly configured)<br/><br/> • Set the FQDN for each machine in the cluster, that is, for each host installation |
-| - - - | - - - |
+| --- | --- |
 | Runtimedir  | The runtime directory must be in a shared directory.  |
 | Multinode_Enable  | Enable the multi- node architecture.<br/> To use a multi- node architecture, you must define the multi- node option in the initialize.properties file. |
 | Multinode_Number  | Enter the number of nodes.  |

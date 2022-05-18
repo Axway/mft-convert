@@ -101,7 +101,7 @@ When using multibyte encoding for fixed or limited record size files, please pay
 The following table shows the CHARSET mapping. Brackets in the UNIX/Windows column indicate platform exceptions.
 
 | CFT_ charset  | UNIX/Windows  | IBM i  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | CFT_UTF- 8  | UTF- 8  | 01208  |
 | CFT_UTF- 16  | UTF- 16  | 01204  |
 | CFT_UTF- 16LE  | UTF- 16LE<br/> [AIX] UTF- 16le<br/>  | 01202  |

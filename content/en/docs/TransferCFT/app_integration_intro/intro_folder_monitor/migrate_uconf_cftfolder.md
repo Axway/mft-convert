@@ -28,7 +28,7 @@ Two actions are available, you can extract the folder definitions to migrate, or
 ****Options****
 
 | Option  | Description  |
-| - - - | - - - |
+| --- | --- |
 | - s  | Simulate. No action is taken, simply displays all actions that should be taken.  |
 | - f  | Force. Ignores detected errors.<br/> By default, processing is canceled when error conditions are encountered.<br/> When the - f option is set, only fatal errors prevent processing. |
 | - p  | Pattern. The folder selection pattern.<br/> Searches for corresponding folder candidates, allowing you to specify a subset of the folders that must be processed.<br/> The pattern syntax is the same as the STRJCMP filter type used by CFTFOLDER. |
@@ -149,7 +149,7 @@ A prerequisite to performing a rollback is that you must have made a backup of t
 Parameter mapping and descriptions
 
 | Parameter  | UCONF  | Type  | Default<br/> UCONF | Default <br/> CFTFOLDER | Description  |
-| - - - | - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- | --- |
 | same as in UCONF | folder_monitoring.enable  | Boolean  | No  | No  |  • No: No folder monitoring occurs.<br/> • Yes: Enable {{< TransferCFT/axwayvariablesComponentShortName  >}} folder monitoring. |
 | ID  | folder_monitoring.folders  | node  | None  | None  | Add the logical folders to monitor (list of logical identifiers).<br/> You should provide a unique name to identify the set of configuration parameters corresponding to this directory. If you have more than one Folder to monitor, use a space between each logical value.<br/> See the **Comment***** below this table for additional information. |
 | STATE  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.enable | Boolean  | Yes  | Active  | Enables a scan of the folder.<br/> Note: NO = NOACTIVE. |
@@ -167,9 +167,9 @@ Parameter mapping and descriptions
 | INCLUDEFILTER  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.file_include_filter | string  | ""  | ""  | If this parameter is defined, only files whose names match this pattern are monitored.  |
 | EXCLUDEFILTER  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.file_exclude_filter | string  | ""  | ""  | If this parameter is defined, files whose names match this pattern are not monitored.  |
 | RESUBMITCHANGED  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.resubmit_changed_file | Boolean  | Yes  | Yes  | This parameter has no effect when the configured method is MOVE.<br/> When the method parameter value is set to FILE:<br/> • Yes: When the state of a previously submitted file is seen as having changed, the file is submitted again.<br/> • No: Files are not resubmitted, regardless of changes.<br/> <blockquote> **Note**<br/> The file is resubmitted after any change regardless of if the modification is a small change, or purging and replacing the file with another file having the same name.<br/> </blockquote>  |
-| FILTERTYPE  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.filter_type | enum  | WILDMAT  | WILDMAT  | Defines the pattern matching algorithm to use for file name filtering. Values:<br/> • STRJCMP: The Transfer CFT pattern matching algorithm.<br/> • WILDMAT: A well known public domain algorithm, and is the default. **Unix/Windows only**<br/> See [Create inclusion and exclusion filters](#Defining) for details. |
+| FILTERTYPE  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.filter_type | enum  | WILDMAT  | WILDMAT  | Defines the pattern matching algorithm to use for file name filtering. Values:<br/> • STRJCMP: The Transfer CFT pattern matching algorithm.<br/> • WILDMAT: A well known public domain algorithm, and is the default. **Unix/Windows only**<br/> See Create inclusion and exclusion filters](#Defining) for details. |
 | RENAMEMETHOD  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.renaming_method | Enum  | TIMESTAMP  | TIMESTAMP  | This parameter applies only to the MOVE method.<br/> • NONE or " ": The filename is unchanged (no timestamp is added). If the file already exists in the work directory, the MOVE process fails.<br/> • TIMESTAMP, a timestamp of the pattern YYYYMMDDHHMMSS is added at the end of the name of the renamed file but before the last '.'.<br/> For example, using timestamp_separators=".": • myfile is renamed myfile.20131025<br/> • myfile.txt is renamed myfile.20131025.txt |
-| RENAMESEPARATOR  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.renaming_separators | string  |   |   | This parameter only applies to the MOVE method. It must contain at most 2 characters from among the following:<br/> .[]()i_- <br/> The first character defines the separator before the timestamp. The second one, when present, defines the separator after the timestamp.<br/> For example, using timestamp_separators "[]": - myfile is renamed myfile.[20131025] - myfile.txt is renamed myfile.[20131025].txt |
+| RENAMESEPARATOR  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.renaming_separators | string  |   |   | This parameter only applies to the MOVE method. It must contain at most 2 characters from among the following:<br/> .[i_- <br/> The first character defines the separator before the timestamp. The second one, when present, defines the separator after the timestamp.<br/> For example, using timestamp_separators "[]": - myfile is renamed myfile.[20131025] - myfile.txt is renamed myfile.[20131025].txt |
 | N/A in this version  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.control | string  |   |   | Metadata used to control user changes.  |
 | USEFSEVENTS<br/>  | folder_monitoring.folders.<br/> &lt;logical_name&gt;.<br/> use_file_system_events<br/> [More information](../folder_monitor_uconf#File- sys) | Boolean  | No  | No  | Set to YES to enable the file system events monitoring service to detect newly available files.  |
 | USERID  | N/A  | N/A  | N/A  | N/A  | This feature is not available in UCONF folder monitoring.  |

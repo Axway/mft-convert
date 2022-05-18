@@ -25,7 +25,7 @@ This book is comprised of the following topics which describe how to
 create an API application.
 
 | Topic  | Details  |
-| - - - | - - - |
+| --- | --- |
 | [Creating an API application](creating_an_api_application) | Describes the procedure to create an API application in {{< TransferCFT/axwayvariablesComponentShortName  >}} UNIX. |
 | [Creating an exit file](creating_an_exit_file) | Describes how to create an exit file for {{< TransferCFT/axwayvariablesComponentShortName  >}} UNIX. |
 | [Creating a directory exit](creating_a_directory_exit) | Describes how to create a directory exit in {{< TransferCFT/axwayvariablesComponentShortName  >}} UNIX. |

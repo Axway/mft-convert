@@ -8,7 +8,7 @@ weight: 180
 
 ## Customize parameters in the JCL
 
-- [Set standard JCL parameters A03PARM](#Modifying_A03PARM)
+- Set standard JCL parameters A03PARM](#Modifying_A03PARM)
 - [Configure the SGINSTAL using UCONF or A12OPTSP](#Selectin)
 
 Execute the JOB:
@@ -45,7 +45,7 @@ The password is temporarily stored in the '`pswfname`' file, with the syntax `- 
 ### Environment customization
 
 | Keyword  | Default  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | jobname | '&amp;%strip(substr(userid(),1,6))"I"''  | Name of the JOB for submitting the installation JCLs **(*)**. |
 | userid | '&amp;SYSUID'  | Name of user authorized to submit the installation JCLs. |
 | account | 'valacc'  | Account number with which the installation JCLs are submitted **(*)**. |
@@ -80,7 +80,7 @@ The password is temporarily stored in the '`pswfname`' file, with the syntax `- 
 - Set `cftuload '&&TARGET".LOAD"'` to manage only one LOAD.
 
 | Keyword  | Default  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | cftuload  | '&amp;&amp;TARGET".USER.LOAD"'  | First loadlib in steplib / joblib  |
 | cftload  | '&amp;&amp;TARGET".LOAD"'  | Second loadlib in steplib / joblib  |
 | syslmods  | '&amp;%$cftuload'  | SYSLMOD (link output) for SGINSTAL Or $cftload  |
@@ -89,7 +89,7 @@ The password is temporarily stored in the '`pswfname`' file, with the syntax `- 
 #### Transfer CFT parameters customization
 
 | Keyword  | Default  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | <span id="pswfname"></span>pswfname  | '&amp;&amp;TARGET".UPARM(GENKEY)"'  | The password, required to generate the key for installation, is temporarily stored in the 'pswfname' file (and is removed after installation).<br/> **Syntax**: <code>- - pass &lt;password&gt;</code> |
 | keyfname  | '&amp;&amp;TARGET".CRYPKEY"'  | File in which the generated key is stored.  |
 | sltfname  | '&amp;&amp;TARGET".CRYPSALT"'  | File in which the computed salt is stored.  |
@@ -106,7 +106,7 @@ The password is temporarily stored in the '`pswfname`' file, with the syntax `- 
 #### Transfer CFT {{< TransferCFT/suitevariablesCopilotName  >}} server customization
 
 | Keyword  | Default  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | copenable | 'yes'  | Enable the {{< TransferCFT/suitevariablesTransferCFTName  >}} {{< TransferCFT/suitevariablesCopilotName  >}} server. |
 | copladdr | '&amp;&amp;HOSTBYADDR'  | Transfer CFT {{< TransferCFT/suitevariablesCopilotName  >}} server TCP/IP address. The key word '&amp;&amp;HOSTBYADDR' is substituted by the result of the REXX function socket ("GETHOSTBYADDR"). (copilot.general.serverhost) |
 | coplport | '1766'  | Transfer CFT {{< TransferCFT/suitevariablesCopilotName  >}} listening port (copilot.general.serverport). |
@@ -117,14 +117,14 @@ The password is temporarily stored in the '`pswfname`' file, with the syntax `- 
 #### Transfer CFT Heartbeat for Sentinel Dashboards
 
 | Keyword  | Default  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | jobcft  | 'S:&amp;:1.8SJOBNAME'  | Transfer CFT job name.  |
 | jobcop  | 'N:COPP'  | Transfer CFT Copilot server port.<br/> * 'COPP' is a keyword, and the asterisk value * is found via the uconf file. |
 
 #### Certificates management
 
 | Keyword  | Default  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | xpkiopt  | 'YES'  | Exit PKI used (YES or NO)<br/> Note that xpkiopt=YES is mandatory when **pkitype**=system, and that you should use the YES option when possible, even if using pkitype=**cft** or pkitype=**passport**. |
 | csflib  | 'CSF.SCSFMOD0'  | CSF library, mandatory if xpkiopt=yes  |
 | pkitype  | 'cft'  | Possible values:<br/> • cft: certificates are stored in a PKI internal datafile<br/> • passport: manages certificates via PassPort<br/> • system: PKI system is activated |
@@ -135,7 +135,7 @@ The password is temporarily stored in the '`pswfname`' file, with the syntax `- 
 #### Sentinel installation customization
 
 | Keyword  | Default  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | snenable  | 'no'  | Enable Sentinel services.  |
 | sntlload  | '&amp;&amp;TARGET".LOAD"'  | Location of the Universal Agent (TRKUTIL Load library).  |
 | sntllocad | '127.0.0.1'  | Local TCP/IP address for Sentinel. |
@@ -145,10 +145,10 @@ The password is temporarily stored in the '`pswfname`' file, with the syntax `- 
 
 #### Parameters for RACF (or SAF enabled) control of Transfer CFT
 
-Use these parameters only with the {{< TransferCFT/axwayvariablesComponentShortName  >}} z/OS security setup described in [Setting up RACF Security]().
+Use these parameters only with the {{< TransferCFT/axwayvariablesComponentShortName  >}} z/OS security setup described in [Setting up RACF Security.
 
 | Keyword  | Default  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | <code>grpcft </code> | <code>'grpcft' </code> | <code>Transfer CFT administrator SAF group.</code> |
 | grpmon  | 'grpmon'  | Transfer CFT SAF group.  |
 | grpaprm  | 'grpaprm'  | All parameters access SAF group.  |
@@ -163,7 +163,7 @@ Use these parameters only with the {{< TransferCFT/axwayvariablesComponentShortN
 If you modify the following values, you must un- comment them in the JCL \* CFT$SET corresponding steps CUSTOM3 and resubmit CFT$SET.
 
 | Keyword  | Default  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | cftenv | 'CFTENV'  | Id member included in each JCL:<br/> // INCLUDE MEMBER=CFTENV<br/> This member contains the command SET for the variables used in the JCL (except for CFTMAIN, and COPRUN). |
 | icftcat  | 'CATALOG'  | Transfer CFT catalog file identifier  |
 | <code>icftcom</code> | <code> 'COM' </code> | <code>Transfer CFT com file identifier</code> |
@@ -184,7 +184,7 @@ If you modify the following values, you must un- comment them in the JCL \* CFT$
 #### {{< TransferCFT/PrimaryCGorUM  >}}
 
 | Keyword  | Default  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | cgenable  | 'no'  | Enables exchanges with the {{< TransferCFT/PrimaryCGorUM  >}} server. (yes &#124; no)  |
 | cghost  | 'cghost'  | {{< TransferCFT/PrimaryCGorUM  >}} server host address.  |
 | cgport  | 'cgport' ('12553')  | Transfer CFT’s port for registering with Central Governance.  |
@@ -194,7 +194,7 @@ If you modify the following values, you must un- comment them in the JCL \* CFT$
 #### {{< TransferCFT/suitevariablesSecureRelayName  >}}
 
 | Keyword  | Default  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | srenable  | 'no'  | Enable/disable {{< TransferCFT/suitevariablesSecureRelayName  >}}.  |
 | srmapath  | '/home/AXWAY/CFT32X/inst'  | USS directory for Secure Relay Master Agent (/xsr is automatically added). &lt;/p&gt;<br/> <blockquote> **Note**<br/> Read only, you can share the directory with other Transfer CFTs.<br/> </blockquote>  |
 | srmarun  | '/home/AXWAY/CFT32X/runtime/xsr'  | Runtime directory for Secure Relay Master Agent; one per instance, with Read/Write rights for {{< TransferCFT/axwayvariablesComponentShortName  >}}.  |
@@ -208,7 +208,7 @@ If you modify the following values, you must un- comment them in the JCL \* CFT$
 #### SAML
 
 | Keyword  | Default  | Description  | Example  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | saml_enable  | no  | Enable SAML as the authentication method for this Transfer CFT (the UCONF am.type=saml).  |   |
 | saml_client_id  | '$(cft.instance_id)'  | Specify the Client_ID value to use as issuer for SAML requests. This should match the Identity Provider configuration.  |   |
 | authserver_host  | ' '  | Specify the SAML endpoint for AuthnRequest (HTTP- Redirect binding).<br/> If Keycloak is the Identity Provider, this should resemble: <code>https://authserver.host/auth/realms/\{realm- name}/protocol/saml. authserver_host ' '</code> | 'https://aa.bb.cc.int:8443'  |
@@ -221,7 +221,7 @@ If you modify the following values, you must un- comment them in the JCL \* CFT$
 You can customize specific prefixes for the following Transfer CFT files.
 
 | Keyword  | Default  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | pfx_cat  | '*'  | Catalog file  |
 | pfx_com  | '*'  | Communication file  |
 | pfx_parm  | '*'  | Parameter file  |
@@ -261,7 +261,7 @@ UCONFSET id=cft.mvs.sginstal.sdsfopt,value=’monitor’
 For continued compatibility, you can generate the Transfer CFT z/OS options tables. You can modify the parameters in the A12OPTSP member.
 
 | Parameters that can be used as the &lt;keyword&gt;=&lt;value&gt;  | Description  |
-| - - - | - - - |
+| --- | --- |
 | SYST = MVS | Transfer CFT operating system support type. |
 | [ARM = {<u>YES</u> &#124; NO}] | Transfer CFT transfer support of the Automatic Restart Manager component:<br/> • YES (default value): Transfer CFT is authorized (APF) and registers with the ARM component.<br /> Transfer CFT uses an element named Xidparm, where idparm is the startup parameter for Transfer CFT. For details, refer to Using Services &gt; Automatic Restart Manager.<br/> • NO: Transfer CFT does not register with ARM.<br/> <blockquote> **Note**<br/> The delivered sample uses the value 'ARM=NO'.<br/> </blockquote>  |
 | [BLKSIZE = {27920 &#124; n}] {4100…32760} | Maximum value used to calculate the BLKSIZE for files created by Transfer CFT, when this information is absent.<br/> You may reduce the default value by 32 if you want to create DF/SMS managed EXTENDED or LARGE format data sets.<br/> <blockquote> **Note**<br/> The delivered sample uses the value 'BLKSIZE=27998'.<br/> </blockquote>  |

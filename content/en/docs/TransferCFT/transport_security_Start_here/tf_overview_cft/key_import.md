@@ -33,7 +33,7 @@ When you import a private keyring file containing ElGamal subkey(s), you must pr
 There are several options you can add to the command line:
 
 | Options  | Description  |
-| - - - | - - - |
+| --- | --- |
 | - h or - help  | Displays the help with all available options.  |
 | - dn  | Subject DN of the generated certificate. If this option is not provided, the default subject DN is CN=PGP.  |
 | - out  | Output path of the generated certificate or PKCS#12 file. If this option is not provided, the file is stored in the current directory. It must contain the tailing file separator („\‟ on Windows and „/‟ on UNIX). |
@@ -72,7 +72,7 @@ TrustedFile exports keys and certificates with the
 following file names.
 
 | Key/certificate standard  | Exported file name  |
-| - - - | - - - |
+| --- | --- |
 | PGP Public Keyring | **useridpacket**_pub.asc |
 | PGP Secret Keyring and Public Keyring | **useridpacket**_sec.asc and **useridpacket**_pub.asc |
 | X.509 Certificate | **certificate alias.**der |
@@ -91,7 +91,7 @@ following file names.
 There are several options you can add to the command line:
 
 | Option | Description |
-| - - - | - - - |
+| --- | --- |
 | - help &#124; - h | Displays the help. |
 | - out | Output path (with the trailing path separator). If this option is not provided, the file is stored in the current directory. |
 | - passSecRing | PassPhrase of the generated secret Keyring. |

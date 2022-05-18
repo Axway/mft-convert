@@ -30,7 +30,7 @@ The following methods are available for updating your Transfer CFT product versi
 
 An upgrade is the process of updating to a newer, enhanced version of the software.
 
-For more information, go to [Manually upgrade a Transfer CFT 3.0.1 or 3.1.3 multi- node installation]().
+For more information, go to Manually upgrade a Transfer CFT 3.0.1 or 3.1.3 multi- node installation.
 
 This mode has the following advantages:
 

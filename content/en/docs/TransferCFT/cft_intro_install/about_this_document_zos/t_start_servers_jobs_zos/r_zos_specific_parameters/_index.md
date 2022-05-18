@@ -16,7 +16,7 @@ File characteristics that are found automatically for sending are listed in the 
 **File characteristics**
 
 | Parameter  | Found automatically for sending  |
-| - - - | - - - |
+| --- | --- |
 | FSPACE | YES |
 | FLRECL | YES |
 | FBLKSIZE | YES |
@@ -26,7 +26,7 @@ File characteristics that are found automatically for sending are listed in the 
 **FTYPE and FRECFM combinations for sending**
 
 | Type of file to be sent  | Implicit value of FTYPE  | Implicit value of FRECFMz  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | Disk sequential files |   | F/V/U |
 | Members of PDS files (1 transfer per member) |   | F/V/U |
 | Designated version of a file in GDG |   | F/V/U |
@@ -45,7 +45,7 @@ The PDS files copied by IEBCOPY are also received in the ‘U’ format, which i
 **Receiving values for FORG, FTYPE and FRECFM**
 
 | FORG  | FTYPE  | FRECFM  |  Type of receive file  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | SEQ |   | F/V/U | Disk sequential file |
 | PART |   | F/V/U | Member of PDS files (1 transfer per member) |
 | SEQ |   | F/V/U | Version designated - 1 to 0 of a file in GDG |

@@ -55,7 +55,7 @@ Delivered partners are:
 The following table lists the commands according to {{< TransferCFT/axwayvariablesComponentLongName  >}} version.
 
 | Version 2.7.1 and higher  | Version 2.7.0 and lower  |
-| - - - | - - - |
+| --- | --- |
 | cft start  | cftstart  |
 | cft stop  | cftstop  |
 | cft status  | cftstatus  |

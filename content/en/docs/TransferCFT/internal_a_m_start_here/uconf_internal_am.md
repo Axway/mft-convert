@@ -17,7 +17,7 @@ A user belongs to a group that is mapped to a role. So when this user provides c
 ### Internal access management example
 
 | Action  | Details  |
-| - - - | - - - |
+| --- | --- |
 | <code>am.internal.group_database</code> is set to <code>system</code>  | System users (local or LDAP users) belong to a group, for example <code>USER1 </code>is in the group <code>USERS_CFTUI_GROUP</code>. |
 | <code>USER1 </code>connects to the user interface  | Transfer CFT retrieves the corresponding system group and checks the configuration for an existing CFTROLE (using an ID or ALIASES). |
 | {{< TransferCFT/axwayvariablesComponentLongName  >}} locates the CFTROLE  | {{< TransferCFT/axwayvariablesComponentLongName  >}} loads the privileges associated with <code>USERS_CFTUI_GROUP</code> and allows <code>USER1</code> to connect. Additionally, {{< TransferCFT/axwayvariablesComponentLongName  >}} applies the appropriate rights and privileges for <code>USER1</code>.<br/> The same check occurs for each user who is part of a group that is defined in <code>am.internal.group_database</code>. |
@@ -45,7 +45,7 @@ Please refer to the [*Transfer CFT *{{< TransferCFT/axwayvariablesReleaseNumber
 Deprecated parameters are gray and noted as (deprecated).
 
 | Internal AM parameters  | Default  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | am.internal.group_database  | file (z/OS)<br/> system (all other platforms) | Group database where group members are defined.<br/> • system (UNIX, Windows, and IBM i): the groups are defined in the OS group database (Unix, Windows, IBM i - see [Transfer CFT control utilities](../../cft_intro_install/about_this_document_ibmi/install_intro_ibmi/access- managment_ibmi) |
 | am.internal.group_database.fname  |   | If you set<code> am.internal.group_database=file</code>, you must define this file name, which is a variable file containing the groups associated with each user.<br/> For example:<br/> • USER001 group01 group02 group04<br/> • USER002 group04 group05<br/> Where the groups are mapped as shown in the example [mapping](#Mapping) table below. |
 | am.internal.persistence_timeout  | 300  | Delay in seconds between updating the list of group that a user belongs to. |
@@ -130,7 +130,7 @@ This section describes the roles and privileges method that was implemented in {
 You can use the following information as a basis for your mapping, and enter the values via command line or the user interface.
 
 | Parameter  | The users have the following roles...  |
-| - - - | - - - |
+| --- | --- |
 | am.internal.role.admin=group01  | The user who belongs to group “group01” has the admin role.  |
 | am.internal.role.helpdesk=group02  | The user who belongs to group “group02” has the “helpdesk” role.  |
 | am.internal.role.partnermanager=group03  | The user who belongs to group “group03” has the “partner manager” role.  |

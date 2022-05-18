@@ -454,7 +454,7 @@ The table below summarizes the parameter values authorized according
 to the functional levels negotiated.
 
 | CFTPROT parameter <br /> for Negotiated functional levels  | PeSIT E  | PeSIT E +<br /> CFT extensions  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | DISCTD  | 0..3600<br /> (dft: 120)  | 0..3600<br /> (dft: 120)  |
 | DISCTS  | 0..3600<br /> (dft: 165)  | 0..3600<br /> (dft: 65)  |
 | LOGON  | YES, NO  | YES, NO  |

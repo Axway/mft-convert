@@ -5,7 +5,7 @@ weight: 200
 --- The topics in this section describe how to use command line operations to administer Transfer CFT configuration options, and is comprised of the following:
 
 | Command  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [CFTACCNT](cftaccnt_concepts)  | Recording mode for statistical data  |
 | [CFTCAT](catalog_parameter_concepts)  | Catalog attributes  |
 | [CFTCOM](communication_media_concepts)  | Communication media  |
@@ -73,7 +73,7 @@ although {{< TransferCFT/axwayvariablesComponentShortName  >}} has default value
 media by type of object and parameter****
 
 | Object  | Parameter  | File type described  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | CFTCAT  | FNAME  | Catalog file  |
 | CFTCOM  | FNAME  | Communication medium  |
 | CFTLOG  | FNAME<br /> AFNAME  | Log files  |
@@ -111,7 +111,7 @@ Use the CFTUTIL utility command CONFIG to set the names of the media
 it accesses, as presented in the table:
 
 | CONFIG command<br/> TYPE parameter | File type described  |
-| - - - | - - - |
+| --- | --- |
 | PARM  | Parameter file  |
 | PART  | Partner file  |
 | CAT  | Catalog file  |
@@ -158,14 +158,14 @@ language applications.
 #### **Media names by service in COBOL language interface**
 
 | Service  | Command  | Parameter  | **File type described**  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | CFTI  | OPEN  | D- CAT  | Catalog file  |
 | CFTU  | COM  | D- COM  | CFT communication medium  |
 
 #### **Media names by service in C language interface**
 
 | Service  | Command  | Parameter  | File type described  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | cftai  | OPEN  | cat  | Catalog file  |
 | cftaix  | OPEN  | cat  | Catalog file  |
 | cftau  | COM  | param  | {{< TransferCFT/axwayvariablesComponentShortName  >}} communication medium  |
@@ -199,7 +199,7 @@ of this component. The table below indicates, for each field, the file
 type described:
 
 | Field  | File type described  |
-| - - - | - - - |
+| --- | --- |
 | Parm  | Parameter file  |
 | Part  | Partner file  |
 | Cat  | Catalog files  |

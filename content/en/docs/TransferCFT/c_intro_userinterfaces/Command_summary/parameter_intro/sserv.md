@@ -21,7 +21,7 @@ for incoming calls.
 <span id="sserv_parameter_details"></span>Sserv parameter details
 
 | PeSIT profile  | Details  |
-| - - - | - - - |
+| --- | --- |
 | PeSIT ANY  | The SSERV = GSIT value is used in requester mode for exchanges via TCP/IP.<br /> Use of this parameter value does not affect the message, which contains the "PeSIT" value.  |
 | PeSIT SIT | The default value is: SSERV = ‘ ’ as this parameter is ineffective. In the SIT profile, there is no Log in message. |
 

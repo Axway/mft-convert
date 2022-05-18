@@ -26,7 +26,7 @@ See the [xlate](../../../c_intro_userinterfaces/command_summary/parameter_intro/
 ### Sending messages
 
 | Parameters | Description |
-| - - - | - - - |
+| --- | --- |
 | [IDA](../../../c_intro_userinterfaces/command_summary/parameter_intro/ida)  | Local transfer identifier assigned by the user or user application. |
 | [IDM](../../../c_intro_userinterfaces/command_summary/parameter_intro/idm)  | Message identifier. |
 | [PART](../../../c_intro_userinterfaces/command_summary/parameter_intro/part)  | Transfer partner identifier. |

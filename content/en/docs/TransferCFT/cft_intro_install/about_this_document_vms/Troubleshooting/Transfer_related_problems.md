@@ -83,7 +83,7 @@ If the reason code is equal to 2, the diagnostic code may be 1 or 2. If the reas
 The following table describes the reason and diagnostic codes.
 
 | Reason  | Diagnostic  | Meaning  | Action  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | 2 | 1 | Internal memory allocation problem.<br /> Insufficient dynamic memory for the JOB. | Increase the JOB PGFLQUOTA or implement the memory control mechanism, refer to section 3.2. |
 | 2 | 2 | Maximum number of VCs declared for the resource (configuration CFTNET command) reached. | Modify your subscription and increase the value of the CFTNET command MAXCNX parameter defining the network resource, or wait until one of the VCs of the resource used is released for another transfer. |
 | 3 | System code | System code returned by the network access system services.<br /> To determine the meaning of this code, refer to paragraphs SYS$QIO, SYS$ASSIGN, SYS$CANCEL and SYS$DASSGN in the System Services Reference Manual, or the programming guide for the corresponding network. | According to the meaning of the code, refer to the OpenVMS guide entitled System Messages and Recovery Procedures. |

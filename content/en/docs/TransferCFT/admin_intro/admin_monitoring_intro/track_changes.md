@@ -50,7 +50,7 @@ containing:
 ### Ident attribute details
 
 | CFTA0nX  | Details  |
-| - - - | - - - |
+| --- | --- |
 | n=1 | CFTPARM file  |
 | n=2 | CFTPART file  |
 | n=3 | CFTCAT file  |
@@ -65,7 +65,7 @@ containing:
 ### Return message attribute details
 
 | Attribute  | Details  |
-| - - - | - - - |
+| --- | --- |
 | Action=&amp;act  |  &amp;act is the action on an object (“CREATE” , “MODIFY” , “DELETE”)  |
 | Object=&amp;obj  | &amp;obj is the object identifier (type of object for the CFTFILE command)  |
 | id=&amp;id  |   |

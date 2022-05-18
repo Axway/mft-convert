@@ -25,7 +25,7 @@ can import all their certificates with the same identifier.
 Some parameters are available only in command line, as indicated in the table.
 
 | CID = string | Unique local identifier of the certificate to be created, replaced or deleted. |
-| - - - | - - - |
+| --- | --- |
 | [CHECK = YES &#124; NO] | Certificate check during import: this option is only applicable for a user or intermediate authority certificate.<br/> A check is performed:<br/> • To establish whether the root or intermediate authority certificate exists in the local database<br/> • On the certificate signature<br/> • To determine whether the public key matches the private key (if the private key is to be imported) |
 | [COMMENT = string1..64] | Comment associated with the certificate: for the CREATE or REPLACE operations only. |
 | IDATA  | Source as base64 or PEM data instead of a file. If you use PKIUTIL IDATA, you cannot also use INAME, and vice versa.  |

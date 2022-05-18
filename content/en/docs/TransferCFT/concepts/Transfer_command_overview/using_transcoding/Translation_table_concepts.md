@@ -10,7 +10,7 @@ proceeds, or OFF LINE to any file using the COPYFILE command.
 - Create a new translation table
     - Delivered tools
     - Reduced alphabets
-- [Define a translation and execute a transfer](#Define)
+- Define a translation and execute a transfer](#Define)
 - [Limitations](#Limitati)
 - [CFTXLATE command syntax](../../../../c_intro_userinterfaces/command_summary#CFTXLATE)
 - [Code pages and translation tables](#Code2)
@@ -50,7 +50,7 @@ Transfer CFT is delivered with a platform specific tool to help you create an XL
 
 - Mainframes - A JCL is provided to help with creating both local and remote tables. Refer to the CFTXLATE member in the installation library.
 
-- UNIX/Windows - Use the Axway delivered [xvi utility Use this utility to update a conversion table.]()
+- UNIX/Windows - Use the Axway delivered [xvi utility Use this utility to update a conversion table.
     located in the `home/bin` folder.
 
     xvi syntax
@@ -196,7 +196,7 @@ The following tables provide basic mapping printable hexadecimal characters for 
 #### Printable hexadecimal EBCDIC (CP1047)
 
 |   | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
-| - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 4 |   |   | ƒ | „ | … |   | ? | † | ‡ | ¤ | › | . | &lt; | ( | + | &#124; |
 | 5 | &amp; | ‚ | ˆ | ‰ | Š | ¡ | Œ | ‹ | ? | á | ! | $ | * | ) | ; | ^ |
 | 6 | - | / | ? | Ž | ? | ? | ? | ? | € | ¥ | ? | "," | % | _ | &gt; | ? |
@@ -213,7 +213,7 @@ The following tables provide basic mapping printable hexadecimal characters for 
 #### Printable hexadecimal ASCII (CP437)
 
 |   | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
-| - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2 |   | ! | " | # | $ | % | &amp; | ' | ( | ) | * | + | , | - | . | / |
 | 3 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | : | ; | &lt; | = | &gt; | ? |
 | 4 | @ | A | B | C | D | E | F | G | H | I | J | K | L | M | N | O |

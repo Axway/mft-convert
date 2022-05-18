@@ -11,7 +11,7 @@ Additionally, this page describes how to export an SSH public key for [SFTP](..
 You can use a mix of the ID and TYPE parameters to create extraction filters. See the [examples](#Examples) below for details.
 
 | Parameters  | Description  |
-| - - - | - - - |
+| --- | --- |
 | ID  | Identifier of either the certificate or key to be extracted.<br/> When this parameter is not defined, all of the certificates and keys are extracted pending if TYPE is defined. |
 | BASE64  | Export base64 data:<br/> • Yes<br/> • No (default)<br/> When exporting data from the PKI database, you can request Base64 data instead of files. This way, additional files are not created. |
 | FOUT | Name of the file where the command’s standard output is redirected.<br/> This generated file can then be interpreted directly by PKIUTIL.<br/> If this parameter is not defined, the standard output is displayed. |

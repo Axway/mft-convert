@@ -35,7 +35,7 @@ To simplify the use of Transfer CFT commands, you can use the bash autocompletio
 The CFTUTIL utility uses the following keys as shortcuts when entering a command.
 
 | Key | Action |
-| - - - | - - - |
+| --- | --- |
 | Left Arrow | Move the cursor one character to the left. |
 | Right Arrow | Move the cursor one character to the right. |
 | Ctrl + Left Arrow | Move the cursor one word to the left. |
@@ -140,7 +140,7 @@ To retrieve a command you know, begin by typing the first characters of the comm
 Use the following uconf parameters to manage the command- history settings.
 
 | Parameter | Default value | Description |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | cft.readline.history_size | 500 | Maximum number of commands that you can store. |
 | cft.readline.enable | Yes | Save and retrieve the commands from disk. |
 | cft.readline.history_fname |  • Win: %APPDATA%\cft\CftutilHistory.txt<br/> • Unix: $(HOME)/.cft_history | Name of the file containing the command history. |

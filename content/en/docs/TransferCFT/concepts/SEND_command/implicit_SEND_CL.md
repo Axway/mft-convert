@@ -14,7 +14,7 @@ Use this command to make a file available for transfer
 without it being explicitly requested.
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [IMPL](../../../c_intro_userinterfaces/command_summary/parameter_intro/impl)  | The implicit send makes a file available. Select from:<br/> • YES<br/> • NO<br/> This parameter must be set to NO for the default model file description. |
 | Other parameters | For other SEND parameters refer to [Sending files](../send_command_basics).  |
 

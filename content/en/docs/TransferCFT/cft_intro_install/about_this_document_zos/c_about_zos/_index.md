@@ -27,7 +27,7 @@ For example if your Transfer CFT is version 3.3.x, the file ZOS/CFT/&lt;version>
 
 ## Delivery - distribution method
 
-Axway delivers Transfer CFT z/OS on the support site: [support.axway.com](https://support.axway.com/). To download the packages from Axway support, you require a user ID and password.
+Axway delivers Transfer CFT z/OS on the support site: support.axway.com](https://support.axway.com/). To download the packages from Axway support, you require a user ID and password.
 
 There are three Transfer CFT packages available on the Axway support site - 2 packages for the standard Transfer CFT installation method (which differ only in file format, ADRDSSU or XMIT), and additionally the SMP/E Transfer CFT installation package.
 
@@ -39,7 +39,7 @@ Again, there are 2 product packaging formats in the **`Components\Transfer_CFT_V
 **<span id="kanchor13"></span>Installation directory contents**
 
 | File  | Description  |
-| - - - | - - - |
+| --- | --- |
 | Transfer_CFT_&lt;version&gt;_mvs_&lt;format&gt;.bin | Product |
 | Transfer_CFT_&lt;version&gt;_mvs_&lt;format&gt;_J1IDIST.txt | JCL that creates the distribution environment |
 | Transfer_CFT_&lt;version&gt;_mvs_&lt;format&gt;_J2IICFT.txt | JCL that creates the instance environment |
@@ -75,7 +75,7 @@ The Transfer CFT z/OS components include:
 ## Special characters
 
 |   | Description  | Windows  | Unix  | OpenVMS  | z/OS  | IBM i  |
-| - - - | - - - | - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- | --- | --- |
 | char_file  | Logical name prefix | $  | _  | No specific character;<br/> logical names are<br/> processed transparently by RMS | $  | +  |
 | char_mask  | Wildcard character  | ?  | ?  | %  | ?  | ?  |
 | char_unit  | Separator character (volume)  | %  | \01  | No volume concept on VMS  | %  | ;  |
@@ -85,4 +85,4 @@ The Transfer CFT z/OS components include:
 ****Related topics****
 
 - [Prerequisites](r_prerequistes_zos)
-- [Installing Transfer CFT z/OS]()
+- [Installing Transfer CFT z/OS

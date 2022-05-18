@@ -33,7 +33,7 @@ Transfers are assigned to a specific class of bandwidth through the **COS** fiel
 ### Class- of- service parameters
 
 | Parameter  | Default  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | uconf:cft.server.bandwidth.cos.&lt;cos- num&gt;.weight_in  | unlimited  | This value is used to compute the nominal rate of incoming data for this class of service. **  |
 | uconf:cft.server.bandwidth.cos.&lt;cos- num&gt;.weight_out  | unlimited  | This value is used to compute the nominal rate of outgoing data for this class of service. **  |
 | uconf:cft.server.bandwidth.cos.&lt;cos- num&gt;.max_rate_out  | unlimited  | Maximum rate of incoming data for that class- of- service  |
@@ -49,7 +49,7 @@ Transfers are assigned to a specific class of bandwidth through the **COS** fiel
 ### Global parameters
 
 | Parameter  | Default  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | uconf:cft.server.bandwidth.enable  | No  | Enable bandwidth control feature  |
 | uconf:cft.server.bandwidth.cos_server_default  | 0  | Set default class- of- service in server mode  |
 | uconf:cft.server.bandwidth.cos_requester_default  | 0  | Set default class- of- service in requester mode  |
@@ -57,7 +57,7 @@ Transfers are assigned to a specific class of bandwidth through the **COS** fiel
 ### Expert level global parameters
 
 | Parameter  | Default  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | uconf:cft.server.bandwidth.delay  | 1s  | Bandwidth control granularity (this value is expressed in microseconds, so for example 1s = 1000000 ms).  |
 | uconf:cft.server.bandwidth.smoothing_factor  | 3  | The bandwidth smoothing parameter optimizes resources to flatten, or smooth, bandwidth usage. Values range from 1 to 10, where 1 is the smoothest and 10 may result in irregular bandwidth usage.  |
 

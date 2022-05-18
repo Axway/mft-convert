@@ -35,7 +35,7 @@ CFTU00I SEND _ Correct (part=paris,idf=t2,wphases=Z,wtimeout=40,ackstate=require
 
 **Example 1: Transfer request using WSTATES**
 
-Trigger a command pending that a transfer has reached a certain defined state. See also [WSTATES](). This task resembles an FTP transfer.
+Trigger a command pending that a transfer has reached a certain defined state. See also WSTATES. This task resembles an FTP transfer.
 
 ```
 config type=com,mediacom=tcpip,fname=xhttp://localhost:1765

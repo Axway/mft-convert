@@ -11,7 +11,7 @@ weight: 250
 {{< TransferCFT/axwayvariablesComponentShortName  >}} messages provide information on the status of the {{< TransferCFT/axwayvariablesComponentShortName  >}}. Messages have the general format and supporting information:
 
 | The message severity is displayed | CFTxxx: the actual message that is displayed on {{< TransferCFT/axwayvariablesComponentShortName  >}} |
-| - - - | - - - |
+| --- | --- |
 | Explanation | The elements, such as variables, in the above message are detailed. |
 | Consequence | Description of what happens to the {{< TransferCFT/axwayvariablesComponentShortName  >}}, or lists corrective actions. |
 | Action  | If applicable, add corrective action here.  |
@@ -60,7 +60,7 @@ Where:
 ### Message source
 
 | Code  | Meaning  |
-| - - - | - - - |
+| --- | --- |
 | C  | Catalog: Access to the catalog  |
 | E  | End: {{< TransferCFT/axwayvariablesComponentShortName  >}} shutdown phase  |
 | F  | File: Access to files  |
@@ -85,7 +85,7 @@ The sequence number is an index characterizing the message within a given class.
 The severity code is described in the following table.
 
 | Code  | Indicates  |
-| - - - | - - - |
+| --- | --- |
 | I  | Informational message only  |
 | W  | An anomaly which may be an error  |
 | E  | An error requiring correction (parameter setting or environment error)  |
@@ -105,7 +105,7 @@ This applies to messages sent to the user defined in the notify parameter in CFT
 The table below lists the symbolic variables used in message text.
 
 | Code | Description |
-| - - - | - - - |
+| --- | --- |
 | char | Alphanumeric character |
 | cr | Function return code |
 | cmd | Parameter setting or operator command name<br /> Example: CFTPARM, SEND |

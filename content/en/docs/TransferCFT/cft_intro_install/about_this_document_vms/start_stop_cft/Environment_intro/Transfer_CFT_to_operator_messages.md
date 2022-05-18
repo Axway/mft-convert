@@ -21,7 +21,7 @@ $ reply/enable=oper1
 **Hexadecimal values for the operator classes**
 
 | Symbolic Name  | Hexadecimal Mask  | Decimal Value  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | OPC$M_NM_CENTRL | 1 | 1 |
 | OPC$M_NM_PRINT | 2 | 2 |
 | OPC$M_NM_TAPES | 4 | 4 |

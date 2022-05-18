@@ -66,7 +66,7 @@ variable*).
 to the Files**
 
 | **Environment variable**  | **Default definition**  |
-| - - - | - - - |
+| --- | --- |
 | CFTDIRINSTALL  | Top of the Transfer CFT installation directory structure  |
 | CFTDIRRUNTIME  | Runtime directory  |
 | CFTUCONF  | UCONF file  |

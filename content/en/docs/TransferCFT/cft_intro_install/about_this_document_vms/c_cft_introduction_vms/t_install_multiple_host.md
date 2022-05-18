@@ -8,7 +8,7 @@ Installing a multi- host Transfer CFT architecture requires additional prerequis
 
 ### Step overview
 
-1. Install the first machine using the [****First host**** installation](#host_installation_step) option.
+1. Install the first machine using the ****First host**** installation](#host_installation_step) option.
     - For the first host installation, you should enter all hosts for the installation architecture.
 
     <!- - - - >
@@ -102,4 +102,4 @@ To begin the procedure:
     - - > Type M to modify, ENTER to continue:
     ```
 
-After completing the installation process, go to [Starting Transfer CFT]().
+After completing the installation process, go to [Starting Transfer CFT.

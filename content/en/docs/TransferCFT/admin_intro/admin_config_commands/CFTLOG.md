@@ -12,12 +12,12 @@ Related
 topics
 
 - Command syntax
-    [CFTLOG](../../../c_intro_userinterfaces/command_summary#CFTLOG)
+    CFTLOG](../../../c_intro_userinterfaces/command_summary#CFTLOG)
 - Object concepts
-    [Log parameters]()
+    [Log parameters
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [AFNAME](../../../c_intro_userinterfaces/command_summary/parameter_intro/afname)  | Name of the alternate log file. |
 | [CONTENT](../../../c_intro_userinterfaces/command_summary/parameter_intro/content) | The messages written in the active LOG file are filtered. The possible values are:<br/> • FULL: all the messages are printed out<br/> • BRIEF: the following messages no longer appear in the LOG |
 | [EXEC](../../../c_intro_userinterfaces/command_summary/parameter_intro/exec) | Name of the procedure to be executed when switching to the other log file. By default this is rotate.cmd/bat. |

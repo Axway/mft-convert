@@ -7,7 +7,7 @@ weight: 290
 ## Single node deployment
 
 | Usage  | Process  | Configurable  | Configuration Parameter  | Network Interface  |
-| - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- |
 | Listening port for file transfer protocol  | CFTTCPS  | Yes  | CFTPROT:SAP  | See CFTNET:HOST  |
 | Listening port for Synchronous Communication Media  | CFTTCOMS  | Yes  | CFTCOM:PORT  | See CFTCOM:HOST  |
 | Inter- process communication  | CFTPRX  | No  | N/A: port provided by the operating system  | 127.0.0.1  |
@@ -22,7 +22,7 @@ weight: 290
 ## Multi- node deployment
 
 | Usage  | Process  | Configurable  | Configuration Parameter  | Network Interface  |
-| - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- |
 | Listening port for Synchronous Communication Media  | copcoms  | Yes  | CFTCOM:PORT  | See CFTCOM:HOST  |
 | Listening port for Synchronous Communication Media  | CFTTCOMS  | Yes  | cft.multi_node.listen_port_range  | 0.0.0.0  |
 | Inter- node communication for transfer recovery  | CFTPRX  | Yes  | cft.multi_node.listen_port_range  | 0.0.0.0  |

@@ -109,7 +109,7 @@ The table below summarizes the parameter values authorized as a function
 of the various functional levels negotiated for the protocol.
 
 | CFTRECV parameter for<br /> Functional negotiated v  | PeSIT E  | PeSIT E +<br /> Transfer CFT extensions  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | Generic IDF  | X  | X  |
 | NFNAME, NFVER<br /> (reception in open mode)  | - | X  |
 | NIDF  | string14  | string32 |

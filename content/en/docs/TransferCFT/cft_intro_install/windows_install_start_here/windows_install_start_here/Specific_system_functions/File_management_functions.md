@@ -205,7 +205,7 @@ the CFTSUFX file.
 ****Letters defining a file type****
 
 | Letter  | Type of file  |
-| - - - | - - - |
+| --- | --- |
 | B  | Binary file  |
 | O  | Text file (Windows text files)  |
 | V  | Variable file (in the Transfer CFT sense)  |

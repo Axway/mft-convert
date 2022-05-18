@@ -96,7 +96,7 @@ FPDU related PI codes and the corresponding
 Transfer CFT values
 
 | PI  | Description  | Transfer CFT value  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | 3  | Sending application’s name<br /> Sending user’s name  | PI 4 of the acknowledged file creation request  |
 | 4  | Receiver application name<br /> Receiver user name  | PI 4 of the acknowledged file creation request  |
 | 11  | File type  | PI 11 of the acknowledged file creation request  |

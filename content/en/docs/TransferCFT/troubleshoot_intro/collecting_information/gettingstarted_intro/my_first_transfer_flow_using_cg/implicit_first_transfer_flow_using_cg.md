@@ -11,7 +11,7 @@ weight: 310
 ![Simplified diagram of a Target Transfer CFT requesting a file from the Source](/Images/TransferCFT/Implicit_mode_cft_w_cg.png)
 
 |   |  Task  | Description  | Details  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | 1<br/> <br/> <br/>  | Create a flow where the target is the requester.<br/> <br/> <br/> <br />  | In {{< TransferCFT/PrimaryCGorUM  >}} click ****Flows**** &gt; ****Add flow****.<br/> Create a flow named ****implicit_flow**** and define the identifier as ****flow03****.<br/> To enable implicit mode, select ****Target pulls file****.<br/> Define the MainOffice as the Target, which will pull the file, and Store_89 as the file Source.<br/> <br />  | [![](/Images/TransferCFT/mapArrow.png)](../intro_cg_task_catalog/t_defineflow)  |
 | 2<br/> <br/>  | Define the path to the file location.<br/> <br/>  | In the File properties of the Source, define the path to the file to be sent.<br/> You can use, for example, the <code>TEST </code>file located by default in the source {{< TransferCFT/axwayvariablesComponentShortName  >}}'s <code>runtime/pub</code> folder.<br/>  |   |
 | 3<br/>  | Deploy the flow.<br/>  | In {{< TransferCFT/PrimaryCGorUM  >}} click ****Deploy**** to save and deploy.<br/>  | [![](/Images/TransferCFT/mapArrow.png)](../intro_cg_task_catalog/t_savedeployflow)  |

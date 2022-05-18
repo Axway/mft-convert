@@ -22,7 +22,7 @@ table, where:
 - System: Includes all internal messages, such as Transfer CFT start, stop, catalog, tasks, multi- node, and so on.
 
 | Value  | Message category  | Type  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | 1  | Operating information messages  | I  |
 | 2  | System information messages  | I  |
 | 4  | Operating warning messages  | W  |

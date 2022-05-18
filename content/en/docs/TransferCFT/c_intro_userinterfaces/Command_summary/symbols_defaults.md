@@ -15,7 +15,7 @@ CFT that are specific to each operating system and comprises:
 ## Specific symbols
 
 | Description  | Windows  | Unix  | z/OS  | IBM i  | **OpenVMS  |
-| - - - | - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- | --- |
 | Logical name prefix (the character used to specify an environmental variable)<br/> If the file name begins with this character, this is a logical name interpreted by Transfer CFT. | $  | $ or _  | x'5B'<br/> 285 = £<br/> 297 = $ | x'4E'<br/> 285 = +<br/> 297 = + | No specific character;<br/> logical names are<br/> processed transparently by RMS |
 | Wildcard character<br/> When using the STRJCMP method, a single character that must be an exact match with a character and is used in masks for groups of files and folder monitoring. | ?  | ?  | x' 6F<br/> 285 = ?<br/> 297 = ? | x'6F'<br/> 285 = ?<br/> 297 = ? | %x  |
 | Separator character (volume)<br/> For example, a file name can be represented as follows: &lt;unit&gt;&lt;Separator&gt;&lt;unitc&gt;&lt;Separator&gt;&lt;path&gt;&lt;root&gt;&lt;suf&gt;<br/> In a z/OS environment: UNIT%UNITC%PATH.ROOT.SUF | none  | none  | x' 6C'<br/> 285 = %<br/> 297 = % | x '5E'<br/> 285 = ;<br/> 297 = ; | No volume concept |
@@ -26,7 +26,7 @@ CFT that are specific to each operating system and comprises:
 ## Default files used by CFTUTIL
 
 | File | Default<br/> Windows | Unix | z/OS | IBM i | OpenVMS |
-| - - - | - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- | --- |
 | Parameters file  | $CFTPARM  | $CFTPARM |  $CFTPARM |  +CFTPARM |  CFTPARM |
 | Partners file  | $CFTPART  |  $CFTPART |  $CFTPART |  +CFTPART |  CFTPART |
 | Catalog file  | $CFTCATA |  $CFTCATA |  $CFTCAT |  +CFTCAT |  CFTCATA |

@@ -61,7 +61,7 @@ cftcrypt - - genkey - - keyfname FILENAME - - saltfname FILENAME - - pass PASSWO
 ****Encryption parameters in UCONF****
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | crypto.key_fname  | The path to the encryption key, which is required at {{< TransferCFT/axwayvariablesComponentLongName  >}} runtime.<br/> If this parameter is not set (empty), at runtime {{< TransferCFT/headerfootervariableshflongproductname  >}} uses a hard- coded key and operates as in {{< TransferCFT/headerfootervariableshflongproductname  >}} 3.2.4. |
 | crypto.salt_fname  | The path to the salt file, which is required to renew the key.  |
 

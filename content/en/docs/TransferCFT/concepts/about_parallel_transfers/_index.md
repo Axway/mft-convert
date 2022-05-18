@@ -221,7 +221,7 @@ CFTTCP ID =<partner1_id>, HOST=<partner1_URL>, CNXIN=2, CNXOUT=3, CNXINOUT=4, ..
 When using a stand alone Transfer CFT to another stand alone Transfer CFT (or other PeSIT application), the recommendations for a heavily loaded configuration should remain symmetrical.
 
 | Stand alone  | Stand alone  |
-| - - - | - - - |
+| --- | --- |
 | CNXOUT=(Partner's CNXIN) | CNXIN = (Partner’s CNXOUT)  |
 | CNXIN=(Partner’s CNXOUT) | CNXOUT=(Partner’s CNXIN)  |
 | CNXINOUT=CNXIN+CNXOUT | CNXINOUT=CNXIN+CNXOUT  |

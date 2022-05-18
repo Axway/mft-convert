@@ -4,7 +4,7 @@ linkTitle: "Migrate or upgrade Transfer CFT"
 weight: 220
 --- This chapter is designed to assist administrators or users who are tasked with upgrading or migrating from an existing Transfer CFT version to Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}}.
 
-- [Migrate](#Migrate): Use this procedure to migrate an existing Transfer CFT 2.3.2 installation
+- Migrate](#Migrate): Use this procedure to migrate an existing Transfer CFT 2.3.2 installation
 - [Upgrade](#Upgrade): Use this procedure to automatically upgrade an existing Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber >}}
 
 <span id="Importan"></span>
@@ -133,7 +133,7 @@ Before performing an upgrade be certain to review the section [Important informa
 
 ### Overview
 
-You can perform an upgrade by installing Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}} over an existing Transfer CFT 3.2.4 installation using the procedure described in [Install Transfer CFT]() . However, the installation directory `<installation_directory>` should point to the installation directory of the existing Transfer CFT 3.2.4 installation. You can then provide the same additional parameters.
+You can perform an upgrade by installing Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}} over an existing Transfer CFT 3.2.4 installation using the procedure described in [Install Transfer CFT . However, the installation directory `<installation_directory>` should point to the installation directory of the existing Transfer CFT 3.2.4 installation. You can then provide the same additional parameters.
 
 The installation procedure upgrades Transfer CFT, where the configuration of the existing installation is exported, and is automatically re- imported after the upgrade.
 
@@ -146,7 +146,7 @@ The installation creates a new directory called `up- <version>` in the runtime d
 The auto- import directory contains the following:
 
 | File  | Directory  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | cftcat.xml  |   | Catalog file  |
 | cftcom.xml  |   | Communication media  |
 | cftconf.cfg  |   | The general Transfer CFT configuration, which is applied to the new installation (contained in CFTPARM/CFTPART internal datafiles)  |

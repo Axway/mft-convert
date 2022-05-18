@@ -13,7 +13,7 @@ the ACT command to reactivate:
 ****Command guide: [ACT](../../../../c_intro_userinterfaces/command_summary#ACT)****
 
 | Parameter | Description |
-| - - - | - - - |
+| --- | --- |
 | [ID](../../../../c_intro_userinterfaces/command_summary/parameter_intro/id)  | Identifier for the object to be reactivated. To reactivate several objects with a single command, use wildcard characters or meta characters. |
 | [MODE](../../../../c_intro_userinterfaces/command_summary/parameter_intro/mode) | Mode to be reactivated on partners (only when TYPE=PART object):<br/> • BOTH (default)<br/> • REQUESTER<br/> • SERVER<br/> You can use the shortcuts B, R and S in place of the keywords. |
 | [TYPE](../../../../c_intro_userinterfaces/command_summary/parameter_intro/type)  | Object to reactivate:<br/> • PART<br/> • TRK<br/> • CRON<br/> • FOLDER |

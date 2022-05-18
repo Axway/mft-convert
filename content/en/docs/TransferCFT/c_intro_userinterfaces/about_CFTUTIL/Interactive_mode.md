@@ -21,7 +21,7 @@ In this syntax:
     to your OS:
 
 | OS |  file_symb |
-| - - - | - - - |
+| --- | --- |
 | Windows | # |
 | UNIX |  @ |
 

@@ -9,7 +9,7 @@ Each of these services is described in one of the following sections, which prov
 of the service. Applications can address requests to {{< TransferCFT/axwayvariablesComponentShortName  >}} via
 service call functions:
 
-- [REST API](../../../app_integration_intro/using_apis/api_intro)
+- REST API](../../../app_integration_intro/using_apis/api_intro)
 - [Web services](../../about_this_document_ibmi/using_apis/about_web_services)
 - [Using JPI](../../about_this_document_ibmi/using_apis/java_api)
 - Transfer
@@ -40,4 +40,4 @@ for COBOL.
     only. See [Windows
     operations](../../windows_install_start_here).
 - The security APIs are not covered in this section. See [Managing
-    security]().
+    security.

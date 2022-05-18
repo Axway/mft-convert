@@ -15,7 +15,7 @@ The tables in this section provide information about the files and allocation re
 ## Distribution environment file formats and requirements
 
 | File  | Info  | Allocation in cylinders  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | INSTALL | Installation and exploitation<br/> PO – FB – 80<br/> DSNTYPE=LIBRARY | 10 |
 | SAMPLE | Sample JCLs, and Transfer CFT sample parameters<br/> PO – FB – 80<br/> DSNTYPE=LIBRARY | 2 |
 | SAMPLEO | COBOL samples (Exit and API)<br/> PO – FB – 80<br/> DSNTYPE=LIBRARY | 2 |
@@ -44,7 +44,7 @@ The tables in this section provide information about the files and allocation re
 The following allocations are required per {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
 | **File** | **Environment** | **Allocation** |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | INSTALL | PO – FB – 80<br/> DSNTYPE=PDS | SPACE = (3120,(600,225,40) ) |
 | SAMPLE | PO – FB – 80<br/> DSNTYPE=PDS | SPACE = (27920,(100,100,30)) |
 | SAMPLEO | PO – FB – 80<br/> DSNTYPE=LIBRARY | SPACE = (27920,(100,100,- )) |
@@ -80,5 +80,5 @@ The following allocations are required per {{< TransferCFT/axwayvariablesCompone
 
 ****Related topics****
 
-- [About Transfer CFT in z/OS](../)
-- [Installation overview]()
+- About Transfer CFT in z/OS](../)
+- [Installation overview

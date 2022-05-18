@@ -14,7 +14,7 @@ the execution report is written on the standard output of the CFTUTIL
 program.
 
 | ****Parameters**** | Description  |
-| - - - | - - - |
+| --- | --- |
 | [ID](../../../command_summary/parameter_intro/id)  | Partner or partner list identifier.<br/> Used to select a single partner or a set of partners, using the special wildcard character "*****".<br/> Example:<br/> ID = PART1: for the partner PART1 only<br /> ID = IB*: for all the partners whose identifier begins with "IB"<br /> ID = *: for all the partners |
 | [TYPE](../../../command_summary/parameter_intro/type) | Defines the type of characteristics to be listed.<br/> TYPE can take the predefined values indicated in the Type table. |
 

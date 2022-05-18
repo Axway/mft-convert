@@ -13,7 +13,7 @@ If you want to enable {{< TransferCFT/suitevariablesCentralGovernanceName  >}} d
 This table presents a high- level overview of the installation process. By default, the {{< TransferCFT/axwayvariablesComponentLongName  >}} installation uses a delivered configuration file called `initialize.properties` that provides a series of default values to simplify installation. It is important that you understand the difference between customizing this file before or after running the installer prior to starting the process.
 
 |   | Step  | Details  | More info  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | 1  | Complete prerequisites  | Check and fulfill prerequisites such as obtaining a key or system- specific prerequisites.  | [Prerequisites](prereqs_overview)  |
 | 2  | Download and unzip  | Download the installation package from the support site and unzip.  | Download the installation package  |
 | 3  | Customize the properties file  | Some installation parameters are mandatory to run Transfer CFT.<br/> You can customize the <code>initialize.properties</code> file before the install, use your own file, or use the unmodified default file, but you cannot start Transfer CFT until the mandatory values are set. | [](new_install_ux#top)  |

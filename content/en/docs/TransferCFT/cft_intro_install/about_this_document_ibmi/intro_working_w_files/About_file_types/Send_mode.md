@@ -11,7 +11,7 @@ The following table lists the different types of files that can be used accordin
 > Bold  values indicate a recommended combination. For example, when FTYPE=D and FRECFM=V then RCDLEN- 5 is the recommended PF- DTA with variable data.
 
 | FTYPE  | FRECFM  | PF- DTA<br/> Fixed data | PF- DTA<br/> Variable data | PF- SRC  | SAVF  |
-| - - - | - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- | --- |
 |   |   | FRECFL  | FRECFL  | FRECFL  |   |
 | ‘D’ |  ‘F’ | **RCDLEN** | RCDLEN <sup>1</sup> | RCDLEN | 528 |
 | ‘D’  | ‘V’ | RCDLEN | **RCDLEN- 5** <sup>2</sup> | RCDLEN | 528 |
@@ -35,7 +35,7 @@ The following table lists the different types of files that can be used accordin
 The behavior of the values ‘’ and ‘ ’, for FTYPE and FRECFM respectively, are not detailed in the following table. These values correspond to `undefined`, meaning that the transfer in emission takes the value of both the file type and the member content.
 
 | FTYPE | FRECFM | Supported files and data organizations (if applicable). |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | ‘D’  | ‘F’  | PF- DTA Member containing fixed data |
 | ‘D’  | ‘V’  | PF- DTA Member containing variable data |
 | ‘D’  | ‘F’  | PF- SRC  |

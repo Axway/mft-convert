@@ -35,7 +35,7 @@ To create exits with Assembler, access the following files:
     - Transfer CFT modules for various Transfer CFT exits. The value for ‘n’ may vary from 0 to 9. Use the naming conventions in the following table.
 
 | Main exported EPA  | DLL name  | CFTEXIT PROG=value  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | calllexig0  | CFTDXG0  | CFTEXIG0  |
 | callexig1  | CFTDXG1  | CFTEXIG1  |
 | And up to callexig9  | And up to CFTDXG9  | up to CFTEXIG9  |
@@ -46,7 +46,7 @@ To create exits with Assembler, access the following files:
 `*  CFT/MVS file EXIT - DLL versionSETOPT  PARM(CALL,REUS=RENT,DYNAM=DLL,CASE=MIXED)* Customer codeINCLUDE   USER(AEXFDLL) ** the exit* Import EXIT support codeIMPORT    CODE,CFTDMAI,'exfrun1'MODE       AMODE(31)MODE       RMODE(ANY)NAME       CFTDXG5(R)`
 
 | File  | Definition  |
-| - - - | - - - |
+| --- | --- |
 | AEX*DLL | Sample program in Assembler. This sample provides the 3 steps needed in a Transfer CFT exit. |
 | AEX*UST | Macro containing the DSECTs of the exchange areas with the Transfer CFT. |
 
@@ -73,7 +73,7 @@ To create exits with C, access the following files:
     - Transfer CFT modules for various Transfer CFT exits. The value for ‘n’ may vary from 0 to 9. Use the naming conventions in the following table.
 
 | Main exported EPA  | DLL name  | CFTEXIT PROG=value  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | calllexig0  | CFTDXG0  | CFTEXIG0  |
 | callexig1  | CFTDXG1  | CFTEXIG1  |
 | And up to callexig9  | And up to CFTDXG9  | Up to CFTEXIG9  |
@@ -92,7 +92,7 @@ To create exits with C, access the following files:
 **`NAME CFTDXG5(R)`**
 
 | File  | Definition  |
-| - - - | - - - |
+| --- | --- |
 | CEX*DLL  | Sample program in C. This sample provides the 3 steps needed in a Transfer CFT exit.  |
 | *XEUS  | The header containing the structure of the exchange areas with the Transfer CFT.  |
 
@@ -130,7 +130,7 @@ To create exits with Cobol, access the following files:
     - Transfer CFT modules for various Transfer CFT exits. The value for ‘n’ may vary from 0 to 9. Use the naming conventions in the following table.
 
 | Main exported EPA  | DLL name  | CFTEXIT PROG=value  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | calllexig0  | CFTDXG0  | CFTEXIG0  |
 | callexig1  | CFTDXG1  | CFTEXIG1  |
 | And up to callexig9  | And up to CFTDXG9  | Up to CFTEXIG9  |
@@ -141,7 +141,7 @@ To create exits with Cobol, access the following files:
 `* CFT/zos exit TYPE=FILE- DLL versionSETOPT PARM(CALL,REUS=RENT,DYNAM=DLL,CASE=MIXED)* Customer codeINCLUDE USER(OEXFDLL) ** the exit* Import EXIT support codeIMPORT CODE,CFTDMAI,'exfrun1'MODE AMODE(31)MODE RMODE(ANY)NAME CFTDXG5(R)`
 
 | File  | Definition  |
-| - - - | - - - |
+| --- | --- |
 | OEX*DLL  | Sample program in C. This sample provides the 3 steps needed in a Transfer CFT exit.  |
 | OEX*UST  | Copy book containing the structure of the exchange areas with the Transfer CFT (format V23).  |
 | OEX*240  | Copy book containing the structure of the exchange areas with the Transfer CFT (format V24).  |
@@ -155,7 +155,7 @@ Calls to a Transfer CFT synchronous API are only supported in DLL.
 **Exit examples summary for COBOL**
 
 | Source file<br/> cftv2.<br/> SAMPLEx | Jcl compilation<br/> cftv2.<br/> INSTALL | Command file<br/> for link- edit<br/> distlib.CNTL | Jcl for link- edit cftv2.<br/> INSTALL | DLL name |
-| - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- |
 | OEXADLL | I91APICP | LINRDXG6 | LINKEXLE | CFTDXG6 |
 | OEXEDLL | I91APICP | LINRDXG7 | LINKEXLE | CFTDXG7 |
 | OEXFDLL | I91APICP | LINRDXG8 | LINKEXLE | CFTDXG8 |
@@ -163,7 +163,7 @@ Calls to a Transfer CFT synchronous API are only supported in DLL.
 **Exit examples summary for C language**
 
 | Source file<br/> cftv2.<br/> SAMPLEx | Jcl compilation<br/> cftv2.<br/> INSTALL | Command file<br/> for link- edit<br/> distlib.CNTL | Jcl for link- edit cftv2.<br/> INSTALL | DLL name |
-| - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- |
 | CEXADLL | I91APICP | LINRDXG0 | LINKEXLE | CFTDXG0 |
 | CEXEDLL | I91APICP | LINRDXG1 | LINKEXLE | CFTDXG1 |
 | CEXFDLL | I91APICP | LINRDXG2 | LINKEXLE | CFTDXG2 |
@@ -172,7 +172,7 @@ Calls to a Transfer CFT synchronous API are only supported in DLL.
 **Exit examples summary for Assembler**
 
 | Source file<br/> cftv2.<br/> SAMPLEx | Jcl compilation<br/> cftv2.<br/> INSTALL | Command file<br/> for link- edit<br/> distlib.CNTL | Jcl for link- edit cftv2.<br/> INSTALL | DLL name |
-| - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- |
 | AEXADLL | I91APICP | LINRDXG4 | LINKEXLE | CFTDXG4 |
 | AEXEDLL | I91APICP | LINRDXG3 | LINKEXLE | CFTDXG3 |
 | AEXFDLL | I91APICP | LINRDXG5 | LINKEXLE | CFTDXG5 |

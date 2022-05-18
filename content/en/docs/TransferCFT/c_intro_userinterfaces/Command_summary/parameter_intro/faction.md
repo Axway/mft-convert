@@ -68,7 +68,7 @@ The following table shows the combined effect of the FDISP and FACTION parameter
 > There no impact on FDISP when used in combination with RENAME or RETRYRENAME.
 
 | CFTRECV, FDISP  | CFTRECV, FACTION  | Comments  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | both  | delete  | If no file exists, the file is created. If file exists it is deleted and recreated (regardless of if it is empty or not).  |
 | both  | erase  | If no file exists, the file is created. If file exists it is overwritten (no matter if it is empty or not).  |
 | both  | verify  | If no file exists, the file is created. If file exists and it is not empty, the transfer is aborted. If file exists but it is empty, the file is overwritten.  |
@@ -78,7 +78,7 @@ The following table shows the combined effect of the FDISP and FACTION parameter
 | old  | verify  | If no file exists, the transfer is aborted. If file exists and it is not empty, the transfer is aborted. If file exists but it is empty, the file is overwritten.  |
 
 | OS  | Details  |
-| - - - | - - - |
+| --- | --- |
 | z/OS | For VSAM files, only FACTION = ERASE is accepted. |
 
 [Return to Command index](../../)[ ](#)

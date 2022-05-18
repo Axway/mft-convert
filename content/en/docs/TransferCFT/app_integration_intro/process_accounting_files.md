@@ -19,7 +19,7 @@ weight: 240
 Transfer CFT delivers a sample source written in C language called `exacct.c` as well as a compilation procedure, which is system dependent.
 
 | System  | File location  | Build command  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | UNIX  | &lt;install_dir&gt;/home/distrib/template/src/exit  | makefile  |
 | Windows  | &lt;install_dir&gt;\home\distrib\template\src\exit  | exit.mak  |
 | z/OS  | Distrib..SAMPLEC(EXACCT)  | Compilation: Runtime..INSTALL(I91APICP)<br/> Link- edit: Runtime..INSTALL(I92APILK) |

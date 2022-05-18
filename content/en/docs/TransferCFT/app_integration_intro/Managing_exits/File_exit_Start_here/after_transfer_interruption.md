@@ -18,7 +18,7 @@ before handing back control to {{< TransferCFT/axwayvariablesComponentShortName 
 ### Fields to define
 
 | Field  | Description  |
-| - - - | - - - |
+| --- | --- |
 | ret1 | Return code:<br/> • 0: processing ok<br/> • 9: refusal and end of transfer  |
 | ret2 | Error message  |
 | msg | Message sent to the standard output  |
@@ -28,7 +28,7 @@ before handing back control to {{< TransferCFT/axwayvariablesComponentShortName 
 ### Field values
 
 | Field | Sender mode<br /> Before<br />  | Sender mode<br /> After<br />  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
-| - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- |
 | mtype | 9 | 9 | 9 | 9 |
 | masc | = | * | = | * |
 | access | = | = | = | = |

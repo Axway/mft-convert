@@ -63,7 +63,7 @@ The suites supported by Transfer CFT are described in the following
 table:
 
 | Suite  | Order used | Authentication  | Confidentiality  | Integrity  |
-| - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- |
 | 49199 **  | 1  | ECDHE + RSA authentication  | AES- 128 GCM  | SHA- 256  |
 | 49200 **  | 2  | ECDHE + RSA authentication  | AES- 256 GCM  | SHA- 384  |
 | 49191 **  | 3  | ECDHE + RSA authentication | AES- 128  | SHA- 256  |

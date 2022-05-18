@@ -7,7 +7,7 @@ weight: 200
 It contains the internal datafile files used by Transfer CFT.
 
 | File | Contents |
-| - - - | - - - |
+| --- | --- |
 | CFTPARM.INX  | CFT PARAMETER file. This file is not supplied. It is created by CFTUTIL in the CFTDAT procedure.  |
 | CFTPART.INX  | CFT PARTNER file. This file is not supplied. It is created by CFTUTIL in the CFTDAT procedure.  |
 | CFTCATA.REL | CFT CATALOG file.<br /> This file is not supplied. It is created by CFTUTIL in the CFTDAT procedure. |
@@ -29,7 +29,7 @@ Logical name CFT_LOG points to D$CFT:[CFT.RUNTIME.LOG] directory.
 It stores Transfer CFT log files.
 
 | File | Contents |
-| - - - | - - - |
+| --- | --- |
 | CFTLOG.LOG | CFT LOG file.<br /> This file is not supplied. It is created by CFTUTIL in the CFTDAT procedure. |
 | CFTLOG.LOGA | CFT LOG file.<br /> This file is not supplied. It is created by CFTUTIL in the CFTDAT procedure. |
 | CFTACCNT.LOG | CFT ACCOUNT file.<br /> This file is not supplied. It is created by CFTUTIL in the CFTDAT procedure. |
@@ -45,7 +45,7 @@ The D$CFT:[CFT.CFTSEND] => CFT_SEND directory used to store the files to be sent
 `D$CFT:[CFT.CFTSEND] => CFT_SEND directory         </code></p>`
 
 | File | Contents |
-| - - - | - - - |
+| --- | --- |
 | TEST.SND | Variable sequential file. |
 | FIXED.SND | Fixed sequential file. |
 

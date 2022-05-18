@@ -12,7 +12,7 @@ The default value (No) sets:
 ![](/Images/TransferCFT/temp_compat.png)
 
 | Phase  | Phasestep  | State  | Description  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | Pre- processing (A)  | Hold (H)  | Pre- processing (A)  | Pre- processing available  |
 | Pre- processing (A)  | Available (D)  | Pre- processing (A)  | Pre- processing is waiting on a resource to start  |
 | Pre- processing (A)  | Processing (C)  | Pre- processing (A)  | Pre- processing in progress  |
@@ -37,7 +37,7 @@ The default value (No) sets:
 ## Compatibility parameters in unified configuration
 
 | Parameter  | Default value  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | Uconf:cft.listcat_compat  | No  | Defines the LISTCAT display:<br/> • Yes = Display using the former product format, which does not include the new columns. The format in LISTCAT is DTSA.<br/> • No= Display using the product version 3.0 and higher catalog format. The format in LISTCAT is DTSASPP. |
 | Uconf:cft.state_compat  | No  | Defines the transfer states:<br/> • Yes= The phase state is fully compatible with the states in versions prior to 3.0.<br/> • No = The state reflects the phase used in Transfer CFT 3.0 and higher. This uses phase instead of the former states, except during the Transfer phase, when the former state is the same as the phase step.<br/> ****Note****: Uconf:cft.state_compat also impacts the [acknowledgement](../ack_phase) behavior if ackstate is set to ignore. |
 

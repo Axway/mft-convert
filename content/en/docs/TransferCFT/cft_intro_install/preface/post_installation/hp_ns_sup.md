@@ -53,7 +53,7 @@ More information and additional commands are described in the following sections
 The following table lists the UCONF parameters related to the NonStop option configuration. See the [UCONF parameters](../../intro_os_features/hp_ns_batch#UCONF) descriptions for more detailed information.
 
 | Parameter  | Default value  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | cft.guardian.nonstop  | No  | Enable the nonstop mode.<br/> • Yes: Activate<br/> • No: Deactivate |
 | cft.guardian.collector  | &lt;no value&gt;  | Name of the EMS collector where the supervisor sends messages. See [Customize the EMS collector](#Customiz) for details.  |
 | cft.guardian.processor  | - 1  | Processor on which Transfer CFT is started.  |

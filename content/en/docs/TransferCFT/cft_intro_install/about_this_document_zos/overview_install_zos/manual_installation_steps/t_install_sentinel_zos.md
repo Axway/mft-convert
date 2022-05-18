@@ -136,7 +136,7 @@ The following table describes the overflow file definition for the Logger file, 
 - The log structure is ONLY used to define a logger file shared between the partitions of the SYSPLEX, and is NOT referenced in any parameters
 
 |   | Event Router  | TRKUTIL  | Transfer CFT 2.7 and later  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | Configuration file  | USEPARIN  | TRKCONF  | UCONF  |
 | Logger file  | (AGENT)<br/> api_file= | TRKTNAME=  | UCONFSET ID=sentinel.TRKTNAME, VALUE=xxxx.xxxx.xxx  |
 | - " - | - " - | TRKSHAREDFILE=YES  | UCONFSET ID=sentinel.TRKSHAREDFILE,VALUE=YES  |
@@ -151,7 +151,7 @@ The following parameters define communication with the Event Router via XCF. In 
 - The XCF group is PELISCOP by default. You can modify this default by setting queue = “member group”
 
 |   | Event Router  | TRKUTIL  | Transfer CFT 2.6.x  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | Configuration file  | USEPARIN  | TRKCONF  | UCONF  |
 | SVC  | (SYSTEM)<br/> svc_nb=nnn | TRKSVC=nnn  | UCONFSET ID=sentinel.TRKSVC,VALUE=nnn  |
 | XCF definition  | (AGENT)queue=  | TRKQUEUE=  | UCONFSET ID=sentinel.TRKQUEUE,VALUE=xxxx  |

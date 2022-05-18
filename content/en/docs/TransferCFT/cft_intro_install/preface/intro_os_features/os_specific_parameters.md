@@ -7,7 +7,7 @@ weight: 250
 ********{{< TransferCFT/axwayvariablesComponentLongName  >}} Guardian specific values********
 
 | Notation | Object | Value |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | char_file | Prefix for logical names | = |
 | char_mask | Wildcard character | ? |
 | char_symb | Prefix for symbolic variables | ^ |
@@ -16,7 +16,7 @@ weight: 250
 ********File properties automatically retrieved for send operations********
 
 | Notation | Object |
-| - - - | - - - |
+| --- | --- |
 | FSPACE | YES |
 | FLRECL | YES |
 | FBLKSIZE | YES |
@@ -26,7 +26,7 @@ weight: 250
 ********FTYPE values and associated implicit FCODE default values for send operations********
 
 | FTYPE | FCODE |
-| - - - | - - - |
+| --- | --- |
 | ' ' | BINARY |
 | E | ASCII |
 
@@ -35,7 +35,7 @@ weight: 250
 The last 3 columns in the following table provide the implicit values of each Guardian type for FTYPE, FRECFM, and FORG.
 
 | Guardian<br /> type | Guardian<br /> code | File type | FTYPE  | FRECFM  | FORG  |
-| - - - | - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- | --- |
 | U | # 101 | Binary stream | ' ' | U | SEQ  |
 | U | = 101 | Edit file | E | U | SEQ  |
 | E | # 1 | Fixed sequential | ' ' | F | SEQ  |
@@ -54,7 +54,7 @@ The last 3 columns in the following table provide the implicit values of each G
 ********FTYPE, FRECFM, and FORG values for receive operations********
 
 | FTYPE | FRECFM | FORG  | File Type | Guardian Type | Guardian Code |
-| - - - | - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- | --- |
 |   | U |   | Binary stream | U | 0 |
 | E |   |   | Edit file | U | 101 |
 |   | F | SEQ  | Fixed sequential | E | 0 |

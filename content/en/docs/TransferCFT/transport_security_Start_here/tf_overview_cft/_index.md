@@ -6,12 +6,12 @@ weight: 200
 
 This topic describes how to implement Axway Trusted File encoding. {{< TransferCFT/axwayvariablesComponentShortName  >}} in conjunction with TrustedFile enables you to send encrypted files in S/MIME, CMS, and OpenPGP format, for increased security for data exchanges. To initiate this additional security, Transfer CFT delivers a set of samples and certificates to implement TrustedFile in your environment. To get started using TrustedFile with Transfer CFT, read the following sections:
 
-- [Before you start](#Before)
+- Before you start](#Before)
 - [About the Transfer CFT configuration file](#Transfer)
 - [Defining the unified configuration parameters](#Defining)
 - [Command example (to encode/decode a file)](#Command)
 
-The topic [Delivered files and certificates](tf_delivered_files_certficates) describes the scripts, conversion tables, files and samples delivered with Transfer CFT. And for more information on TrustedFile functionality, please refer to the [TrustedFile Reference Guide]() .
+The topic [Delivered files and certificates](tf_delivered_files_certficates) describes the scripts, conversion tables, files and samples delivered with Transfer CFT. And for more information on TrustedFile functionality, please refer to the [TrustedFile Reference Guide .
 
 #### Limitations
 
@@ -37,12 +37,12 @@ The Transfer CFT sample configuration file `runtime/conf/cft- tf- smp.conf` incl
 ****Sending****
 
 | cftsend id = trusted_file, &lt;br/&gt;ftype = B, &lt;br/&gt;fcode = BINARY, &lt;br/&gt;fname = pub/FTEST, &lt;br/&gt;EXEC = $CFTDIREXEC/tf/tf_delfile.cmd, &lt;br/&gt;PREEXEC = $CFTDIREXEC/tf/tf_cipher.cmd,<br /> mode = replace  |
-| - - - |
+| --- |
 
 ****Receiving****
 
 | cftrecv id = trusted_file, &lt;br/&gt;ftype = B,<br /> fcode = BINARY, &lt;br/&gt;fname = $CFTDIRPUB/TF_&amp;part_&amp;idtu,<br /> EXEC = $CFTDIREXEC/tf/tf_decipher.cmd,<br /> faction = delete ,<br /> fdisp = both, mode = replace  |
-| - - - |
+| --- |
 
 <span id="Defining"></span>
 
@@ -51,7 +51,7 @@ The Transfer CFT sample configuration file `runtime/conf/cft- tf- smp.conf` incl
 The Transfer CFT installation process automatically sets the following Transfer CFT unified configuration parameters to enable {{< TransferCFT/suitevariablesTrustedFileName  >}} functioning. For information on uconf, see [About the Unified Configuration](../../admin_intro/uconf).
 
 | Parameter (uconf)  | Default values  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | tf.proofslocation  | &lt;HOME&gt;/Axway/Transfer_CFT/runtime/data/tf  | References the absolute path to the directory that the product uses to generate proofs  |
 | tf.proofsenabled  | yes  | Indicates whether proofs are enabled or not. This field takes the value yes or no (yes by default). If the value is set to no, the generation of proofs is deactivated  |
 | tf.messageslocation  | &lt;HOME&gt;/Axway/Transfer_CFT/home/distrib/tf/english  | Transfer CFT runtime directory  |

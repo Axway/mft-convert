@@ -11,7 +11,7 @@ The behavior of the values ‘’ and ‘ ’, for FTYPE and FRECFM respectively
 The following table lists the different types of files that can be created on an IBM i system if the file to receive does not already exist:
 
 | FTYPE  | FRECFM  | Created file<br /> Type  | Created file<br /> Max record length  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | ‘D’ | ‘F’ | PF- DTA  | FLRECL |
 | ‘D’  | ‘V’ | PF- DTA | FLRECL + 5 bytes <sup>1</sup> |
 | ‘S’ | ‘F’ | PF- SRC | FLRECL |
@@ -31,7 +31,7 @@ The following table describes the {{< TransferCFT/headerfootervariableshflongpro
 QQQ_QQQ_CHECK Does **Existing file** apply to col 5?
 
 |  FTYPE  |  FRECFM  | Existing file<br /> PF- DTA<br/> Record length / member header | Existing file<br /> PF- SRC<br/> Record length / member header | Overwriting on a SAVF<br/> with FACTION=ERASE |
-| - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- |
 | ‘D’ | ‘F’ | **FLRECL / No** | FLRECL / No | Yes <sup>3</sup> |
 | ‘D’  | ‘V’ | FLRECL+5 / 5 | **FLRECL+5 / 5** | Yes <sup>3</sup> |
 | ‘S’ | ‘F’ | FLRECL / 0 OK | **FLRECL / 12** | Error<br/> DIAGI: 102<br/> DIAGP: 1140850696 |

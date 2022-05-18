@@ -41,7 +41,7 @@ This section lists new features and product enhancements added since the last ma
 The table below lists the available Transfer CFT 3.9 features according to the version and operating system where they were introduced.
 
 | Function  | Windows  | UNIX  | z/OS  | IBM i  | HP NS  | OpenVMS  |
-| - - - | - - - | - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- | --- | --- |
 | should we add Azure Blob?  |   |   |   |   |   |   |
 | should we add Am S3?  |   |   |   |   |   |   |
 | Google Cloud storage  | 3.9  | 3.8  | - | - | - | - |
@@ -88,7 +88,7 @@ The table below lists the available Transfer CFT 3.9 features according to the v
 #### User interface comparison
 
 | Functionality  | Central Governance<br /> or Flow Manager | Transfer CFT user interface<br />  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | Administration | X  | X  |
 | Configuration  | X*  | X  |
 | Monitor transfers  | X  | X  |
@@ -118,7 +118,7 @@ The table below lists the available Transfer CFT 3.9 features according to the v
 The following non- exhaustive table lists shared file systems that have been tested with Transfer CFT.
 
 | Operating system  | Tested and supported  | Not supported  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | AIX  | GPFS (recommended), NFSv4  | NFSv3, CXFS, VeritasSF  |
 | HP- UX  | NFSv4  | NFSv3, CXFS, VeritasSF  |
 | Linux- x86  | GPFS (recommended), NFSv4, GFS2, AWS EFS  | NFSv3, CXFS, ACFS, OCFSv1, OCFSv2, QFS, VeritasSF  |

@@ -12,7 +12,7 @@ Syntax
 `[ RESTART = { YES &#124; NO } ]`
 
 | Command or Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | **SHUT** command | Use this command to request the Transfer CFT immediate or delayed shutdown. |
 |  [FAST](../../../c_intro_userinterfaces/command_summary/parameter_intro/fast)  | Type of shutdown. |
 |  [RESTART](../../../c_intro_userinterfaces/command_summary/parameter_intro/restart)  | Manages restart.  |

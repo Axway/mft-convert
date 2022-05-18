@@ -109,7 +109,7 @@ headings contained in this example.
 comments**
 
 | Heading  | Description  |
-| - - - | - - - |
+| --- | --- |
 | 1  | Partner network identifier.<br /> The partner network name corresponds to the NRPART parameter of the CFTPART command and has a length of 16 characters only.  |
 | 2  | Transfer state<br /> The characters DTSA mean:<br/> • Direction = S/R (Send/Receive)<br/> • Type = F/M/R (File/Message/Reply)<br/> • State = D/C/H/K/T/X (Disp/Current/Hold/Keep/Terminated/eXecuted)<br/> • Ack = A (Acknowledge) |
 | 3  | File identifier (IDF) for a file transfer or message identifier (IDM)  |
@@ -178,7 +178,7 @@ The following table contains the comments associated with the various
 headings contained in this figure.
 
 | Heading  | Description  |
-| - - - | - - - |
+| --- | --- |
 | ****1 **** | Identifier of the partner described in the commands CFTPART (corresponding to the ID parameter) or CFTDEST (one of the PART in the broadcasting list)  |
 | ****2 **** | Transfer state description<br /> The DTSA characters mean:<br/> • **D**irection = S/R (Send/Receive)<br/> • **T**ype = F/M/R (File/Message/Reply)<br/> • **S**tate = D/C/H/K/T/X Disp/Current/Hold/Keep/Terminated/eXecuted)<br/> • **A**ck = A (Acknowledge) |
 | ****3 **** | File identifier (IDF) for a file transfer or message identifier (IDM).  |

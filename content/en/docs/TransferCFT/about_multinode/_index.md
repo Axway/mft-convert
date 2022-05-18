@@ -70,7 +70,7 @@ The multi- node setup comprises:
 
 ********Normal functioning********
 
-![](/Images/TransferCFT/normal_multinode.png)
+!](/Images/TransferCFT/normal_multinode.png)
 
 ********If Host A goes down, then Host B takes over Node 1********
 
@@ -177,7 +177,7 @@ For information on troubleshooting multi- node issues, please refer to [Troubles
 ****Related topics****
 
 - [Multi- node commands](multi_node_commands)
-- [Managing multi- node]()
+- [Managing multi- node
 - [Unified configuration parameters](../cft_intro_install/about_this_document_zos/c_multinode_zos/multi_node_parameters)
 - [Configure multi- node simultaneous transfers](../concepts/about_parallel_transfers/multi_node_simultaneous_transfers)
 - [Using a shared file system](../cft_intro_install/unix_install_start_here/before_you_start_unix/n_active_active/shared_file_prereq_ux/activeactive_shared_file_systems)

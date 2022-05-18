@@ -38,7 +38,7 @@ of the function only means that the command has been correctly placed
 in the communication medium.
 
 | Function | Use |
-| - - - | - - - |
+| --- | --- |
 | SEND | Send transfer request: file, message or reply |
 | RECV | Receive transfer request |
 | HALT | Interrupt one or more send or receive transfers with a given partner.<br/> The interrupted transfers are set to the "H" state and can be restarted at the partner's request. |
@@ -77,7 +77,7 @@ Where:
 The available &lt;verbs> are listed in the following table.
 
 | &lt;verb&gt; | Service |
-| - - - | - - - |
+| --- | --- |
 | SEND | Send |
 | RECV | Receive |
 | HALT | Interrupt |
@@ -112,7 +112,7 @@ if applicable, depending on the command:
 ## Return codes
 
 | Mnemonic | Description |
-| - - - | - - - |
+| --- | --- |
 | CAPI_NOERR | No error |
 | CAPI_FUNC_UNDEF | Command not valid |
 | CAPI_CMD_LENGTH | cftau only<br/> {{< TransferCFT/axwayvariablesComponentShortName  >}} command string invalid, does not exist, or greater than 1024 characters long  |

@@ -32,7 +32,7 @@ This compression is negotiated between the sender and the receiver.
 Default values are:
 
 | Protocol  | Default value |
-| - - - | - - - |
+| --- | --- |
 | PeSIT ANY profile | 0 |
 | ODETTE  | 1  |
 

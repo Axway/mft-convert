@@ -81,7 +81,7 @@ The following procedure is based on using the SoapUI tool. The exact steps may v
 When using Web services the return codes are as follows:
 
 | Name  | Description  | XTS <br/> mapping |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | RCVA_RESPONSE_NOK_VALUE_ERROR  | Value error  | 10  |
 | RCVA_RESPONSE_NOK_NOT_FOUND  | Not found  | 11  |
 | RCVA_PASSPORT_ERROR  | Passport AM interrogation error  | 12  |

@@ -11,7 +11,7 @@ weight: 370
 This code specifies a build error in the received PeSIT FPDU. It forms the "PDU iNN"- type protocol diagnostic code.
 
 | Error code  | Description  |
-| - - - | - - - |
+| --- | --- |
 | 1 | Received AckCONNECT FPDU header does not conform: an error was detected in the source or target identifier content. The source identifier must be null. The target identifier must be the same as the source identifier sent in the CONNECT FPDU |
 | 2 | Reception of two or more FPDUs concatenated in one NSDU. According to protocol specifications, an FPDU cannot be followed or preceded by another FPDU |
 | 3 | Reception of a CONNECT FPDU followed by two bytes that do not belong to it, but the CRC option has not been implemented |
@@ -41,7 +41,7 @@ indicate the source of the failure. This code forms the DIAGP protocol diagnosti
 code. Values are expressed in hexadecimal.
 
 | Error code  | Description  |
-| - - - | - - - |
+| --- | --- |
 | 0101 | Application area allocation error |
 | 0102 | Unknown event during network connection |
 | 0150 | Protocol release error |
@@ -96,7 +96,7 @@ This code forms the "XXX HHHH"- type DIAGP protocol diagnostic
 code. Values are expressed in mnemonic form.
 
 | Error code  | Description  |
-| - - - | - - - |
+| --- | --- |
 | CDT | Error during "credit" negotiation |
 | DAT | Synchronization problem in "credit" and "data" exchanges |
 | FMT | Internal FPDU formatting error |
@@ -119,7 +119,7 @@ protocol diagnostic code in the PeSIT protocol; it represents the XXX
 part. Values are expressed in mnemonic form.
 
 | Code  | FPDU  |
-| - - - | - - - |
+| --- | --- |
 | ABO | ABORT |
 | ACF | Ack CLOSE REMOTE FILE |
 | ACO | Ack CONNECT |

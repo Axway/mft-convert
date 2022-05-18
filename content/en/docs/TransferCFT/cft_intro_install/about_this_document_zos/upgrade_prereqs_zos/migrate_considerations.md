@@ -7,7 +7,7 @@ weight: 200
 **Transfer CFT file IDs**
 
 | File ID  | Migrate or upgrade procedures  |
-| - - - | - - - |
+| --- | --- |
 | PARM  | MIGRPARM  |
 | PART  | MIGRPART  |
 | CATALOG  | MIGRCAT  |

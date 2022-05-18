@@ -30,7 +30,7 @@ topics****
 ## Parameter descriptions
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | ID | Identifier of the CFTACCNT command. |
 | MODE  | Select to perform one of the following:<br/> • CREATE<br/> • REPLACE<br/> • DELETE |
 | [TYPE](../../../command_summary/parameter_intro/type#type_CFTACCNT)  | Defines the accounting type.<br/> • FILE: statistical data is recorded in the Transfer CFT files described by the FNAME and AFNAME parameters.<br/> • SYST: statistical data is recorded in a "system" file, through an interface with the system accounting utility. If TYPE=SYST then you must define ACCID. |

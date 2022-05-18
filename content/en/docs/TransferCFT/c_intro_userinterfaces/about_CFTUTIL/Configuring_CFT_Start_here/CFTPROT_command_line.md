@@ -18,7 +18,7 @@ topics****
 Use this command to define network parameter settings.
 
 | Parameters  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [DISCTD](../../../command_summary/parameter_intro/disctd) | Wait time- out (in seconds) before disconnection, in the absence of a new transfer request to the partner, in requester mode.<br/> The session established for a transfer remains active for DISCTD seconds after the completion of this transfer.<br/> If the value is 0, the wait time- out is infinite. |
 | [see table](../../../command_summary/parameter_intro/discts) | Wait time- out (in seconds) before disconnection, in the absence of a new transfer request from the partner, in server mode.<br/> The session established for a transfer remains active for DISCTS seconds after the completion of this transfer. If at the end of this time- out, no new transfer has been received, the connection is freed by the ABORT FPDU. |
 | [DYNAM](../../../command_summary/parameter_intro/dynam) | Dynamic partner identifier (8 characters) in server mode. |
@@ -69,7 +69,7 @@ and specifics regarding the use of this particular protocol.
 **Description**: Use this command to describe the ODETTE transfer protocol.
 
 | Parameter | Description  |
-| - - - | - - - |
+| --- | --- |
 | [EERP](../../../command_summary/parameter_intro/eerp) | Used to interpret the value of the ORIGINATOR and DESTINATOR fields contained in the EERP message, according to the protocol version.<br/> The End to End ResPonse service generates a message called EERP. This message informs the file sender that the data sent arrived correctly.<br/> The first version of the protocol (1986) specifies that:<br/> • the ORIGINATOR protocol field corresponds to the file sender<br/> • the DESTINATOR protocol field corresponds to the file receiver<br/> The second version (1991) specifies that:<br/> • the ORIGINATOR protocol field corresponds to the EERP sender (i.e. the file receiver)<br/> • the DESTINATOR protocol field corresponds to the EERP receiver (i.e. the file sender)<br/> Note: heck the consistency of the customized values from one end to another. If the sender and receiver have different versions, it is not possible to acknowledge the transfer. |
 | [PAD](../../../command_summary/parameter_intro/pad)  | *Deprecated in* {{< TransferCFT/axwayvariablesComponentLongName  >}} ** {{< TransferCFT/axwayvariablesReleaseNumber  >}}<br/> Option applying "SPECIAL LOGIC" to the data exchange buffers.<br/> This option is negotiated with the partner when the protocol session is established (in the SSID FPDU). If the option is set to NO for one of the partners, the "special logic" is not applied. |
 | [RCREDIT](../../../command_summary/parameter_intro/rcredit)  | Value of the "credit" (expressed as a number of "DATA" messages) proposed by Transfer CFT when it is server.<br/> This value is negotiated with the value proposed by the requester (see the SCREDIT parameter) when the protocol session is established. |
@@ -114,7 +114,7 @@ the use of each of these variants, refer to the Transfer CFT [Protocols](../../.
 **Description**: Use CFTPROT TYPE = PESIT command to describe the PeSIT transfer protocol.
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [CONCAT](../../../command_summary/parameter_intro/concat)<br/> Only in sender mode | Option to concatenate FPDUs (File Protocol Data Units) in a given NSDU.<br/> This option is not negotiated. |
 | [CTO](../../../command_summary/parameter_intro/cto)  | Minimum duration (in minutes) of the session, Cycle Time Out.<br/> At the end of a transfer, the wait time- out for a nfew transfer is recalculated depending on:<br/> • the time (hour) for opening the session<br/> • the current time<br/> • the wait delay before disconnection (DISCTS for the protocol)<br/> • the duration of the session (CTO)<br/> The session is liberated if no transfer was initiated by the remote partner during the indicated duration. |
 | [CYCLE](../../../command_summary/parameter_intro/cycle)  | Periodicity (in minutes) for creation of a protocol session:<br/> • 0: PeSIT session open on startup<br/> • n: periodicity |
@@ -185,7 +185,7 @@ Description: Use the CFTPROT object to set:
     profile in server mode
 
 | Parameter | Description  |
-| - - - | - - - |
+| --- | --- |
 | [SSL](../../../command_summary/parameter_intro/ssl) | SSL commands Identifier used for security profiles. |
 
 <span id="PeSIT_examples"></span>

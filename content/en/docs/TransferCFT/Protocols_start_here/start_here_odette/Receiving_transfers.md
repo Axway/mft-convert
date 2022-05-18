@@ -68,7 +68,7 @@ If the receiver file type is not defined, {{< TransferCFT/axwayvariablesComponen
 contained in the table below, according to the receiving system.
 
 | Receiving system  | FTYPE default  |
-| - - - | - - - |
+| --- | --- |
 | z/OS (MVS) | ‘ ’  |
 | IBM i (OS400) | E  |
 | UNIX  | T  |

@@ -9,7 +9,7 @@ weight: 240
 The following table lists the Sentinel parameters in the unified configuration and the corresponding former Sentinel parameter.
 
 | UCONF parameter  | Default  | Former Sentinel parameter<br/> TRKCNF |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | sentinel.xfb.enable  | NO  | XFB.Sentinel (TRKCNF)  |
 | sentinel.xfb.transfer | ALL | XFB.Transfer (TRKCNF) &lt;/p&gt; |
 | sentinel.xfb.shut | 0 &lt;/p&gt; | XFB.Shut (TRKCNF) &lt;/p&gt; |
@@ -55,7 +55,7 @@ The following table lists the Heartbeat parameters that you can set in the unifi
 Each Transfer CFT environment number n (from 1 to 5) has its own corresponding Heartbeat script. You should check the default names (such as in the production library, jobd, and Transfer CFT file) that are used in the script.
 
 | Unified configuration parameter  | Default value  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | sentinel.heartbeat.enable  | NO  | Enables sending Heartbeats to the Sentinel Server. |
 | sentinel.heartbeat.periodicity  | 300  | The delay in seconds between sending Heartbeats.  |
 | sentinel.heartbeat.script  | CFTPROD/HEARTBEAT | Script for executing Heartbeats.  |

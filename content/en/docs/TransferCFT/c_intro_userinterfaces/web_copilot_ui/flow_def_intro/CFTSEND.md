@@ -9,16 +9,16 @@ template. Use this command to SEND a file or files to a partner.
 topics****
 
 - Command syntax
-    [CFTSEND](../../../command_summary#CFTSEND)
+    CFTSEND](../../../command_summary#CFTSEND)
 - Object concepts
     [Default
     send templates](../../../../concepts/cft_configuration_concepts_start_here/default_send_template_concepts)
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [ACKEXEC](../../../command_summary/parameter_intro/ackexec)  | Name of the file describing the procedure to be executed when receiving an acknowledgement reply for the transfer.  |
-| [ARCHIVEFNAME]()  | The archived source file name after transfer completion if FACTION=ARCHIVE.<br/> <blockquote> **Note**<br/> The fname and archivefname must be on the same volume (all platforms).<br/> </blockquote>  |
-| [COMMENT](../../../command_summary/parameter_intro/comment) | Local alphanumeric comment associated with the send transfer. |
+| [ARCHIVEFNAME  | The archived source file name after transfer completion if FACTION=ARCHIVE.<br/> <blockquote> **Note**<br/> The fname and archivefname must be on the same volume (all platforms).<br/> </blockquote>  |
+| COMMENT](../../../command_summary/parameter_intro/comment) | Local alphanumeric comment associated with the send transfer. |
 | [CYCDATE](../../../command_summary/parameter_intro/cycdate) | Upper final date for activating the first transfer of a cycle. |
 | [CYCLE](../../../command_summary/parameter_intro/cycle) | Number of units defining the transfer cycle period. |
 | [CYCTIME](../../../command_summary/parameter_intro/cyctime) | Upper limit time for activating the first transfer of a cycle. |
@@ -91,10 +91,10 @@ rather than in the CFTSEND object. Click on the links in the following
 table for examples and details.
 
 | Format  | Processing  |
-| - - - | - - - |
+| --- | --- |
 | [FNAME = filename](../../../command_summary/filename_conventions)  | Sends a file or a version of a file  |
 | FNAME = {mask &#124; dirname}  | Lists a directory  |
-| [FNAME = #filename]()  | Sends a group of files, the list of which is located in the specified file  |
+| [FNAME = #filename  | Sends a group of files, the list of which is located in the specified file  |
 | FNAME = {#mask &#124; #dirname}  |  • Sends a group of files selected in line with the generic name specified (#mask)<br/> • Sends all files in the directory specified (#dirname)  |
 
 <span id="Example"></span>

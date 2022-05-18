@@ -67,7 +67,7 @@ function to be called if you want to take control at one stage at least.
 The following table lists all the parameters of the initialization function.
 
 | Parameter | Explanation |
-| - - - | - - - |
+| --- | --- |
 | ex_name | Address of an (512+1) byte area.<br/> The initialization function can modify this area. |
 | idf | Address of an (32+1) byte area.<br/> This area contains the file identifier of the transfer in process. |
 | parm | Address of an (64+1) byte area.<br/> This area contains the value of the PARM parameter of the CFTEXIT command and can be modified by the initialization function. |
@@ -103,7 +103,7 @@ typedef long (\*EXF)
 The following table describes the parameters involved in the user functions.
 
 |   |   |
-| - - - | - - - |
+| --- | --- |
 | Parameter | Explanation |
 | psCtx | Address of the interface communication area.<br/> Also known as context table or transfer context, this area is:<br/> • Allocated by the interface for each transfer<br/> • Updated by the interface before each call of the user function<br/> • Freed by the interface at the end of the transfer<br/> For simultaneous transfers using a given EXIT, the interface manages the context tables. Each transfer has its own context.<br/> Some fields of the context table can be updated by the user function. For more information, refer to the [About the communication structure](../file_exit_communication_area_) topic.  |
 | psCtxWork | Address of the user working area.<br/> This area, allocated and de- allocated by the interface for each transfer, enables users to save the information they consider necessary for the purposes of the processing performed.<br/> Its size equals the value of the RESERV parameter of the CFTEXIT object. |
@@ -130,7 +130,7 @@ long EXFxmp1   (char
 The following table describes the interface files.
 
 | File | Explanation |
-| - - - | - - - |
+| --- | --- |
 | EXFUS.H | File that contains the definition of the interface/user program communication structure<br /> For the interface and the user program  |
 | EXF.H  | File for the interface  |
 | EXF2MN.C  | Main entry point for the EXIT task  |

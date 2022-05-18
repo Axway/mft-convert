@@ -287,4 +287,4 @@ The formatting is found in the SGTRACE file, such as in a z/OS dump, and calls 
 
 ****Related topics****
 
-****[The ? command]()****
+****The ? command****

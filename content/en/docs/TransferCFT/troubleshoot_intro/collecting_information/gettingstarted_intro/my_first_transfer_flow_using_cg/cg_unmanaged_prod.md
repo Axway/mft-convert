@@ -34,7 +34,7 @@ The information in this configuration example corresponds to the text used in th
 Parameter mapping
 
 | Transfer CFT  | Unmanaged product configuration fields  |
-| - - - | - - - |
+| --- | --- |
 | CFTTCP HOST  | Host in the unmanaged product configuration  |
 | CFTPART SYST  | Operating system  |
 | CFTPART NRPART  | PeSIT Login  |
@@ -59,7 +59,7 @@ In this step you create a communication profile on the source {{< TransferCFT/su
 Parameter mapping
 
 | Transfer CFT  | Communication profile for the Unmanaged product  |
-| - - - | - - - |
+| --- | --- |
 | CFTPROT  | Protocol name  |
 | NSPART  | Login  |
 | NSPASSW  | Password  |
@@ -92,7 +92,7 @@ Make the following selections, using the default values for all other fields.
 1. Click **Save**, then click ****Deploy****.
 
 | Transfer CFT  | Flow field  |
-| - - - | - - - |
+| --- | --- |
 | CFTSEND ID  | Flow identifier  |
 
 ## Check the flow on {{< TransferCFT/axwayvariablesComponentLongName  >}}

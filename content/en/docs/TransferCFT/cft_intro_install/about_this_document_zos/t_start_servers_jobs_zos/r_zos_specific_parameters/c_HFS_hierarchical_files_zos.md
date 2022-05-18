@@ -2,9 +2,9 @@
 title: "HFS hierarchical files"
 linkTitle: "HFS hierarchical files"
 weight: 310
---- The [HFS Hierarchical File System]() data architecture is consecutive and non- structured for records and blocks. The HFS files are installed in hierarchical disk spaces, and divided into directories and sub- directories according to UNIX conventions.
+--- The HFS Hierarchical File System data architecture is consecutive and non- structured for records and blocks. The HFS files are installed in hierarchical disk spaces, and divided into directories and sub- directories according to UNIX conventions.
 
-HFS files are managed either by applications that work in an UNIX/OMVS environment, or by applications that use the [USS UNIX System Services](), such as the management and access interface.
+HFS files are managed either by applications that work in an UNIX/OMVS environment, or by applications that use the USS UNIX System Services, such as the management and access interface.
 
 Transfer CFT only accepts the complete name from the root directory. All file name components are separated by the ‘/’ character. The complete name is limited to 248 characters.
 

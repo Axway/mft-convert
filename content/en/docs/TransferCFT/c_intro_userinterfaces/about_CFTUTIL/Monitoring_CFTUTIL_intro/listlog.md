@@ -7,7 +7,7 @@ weight: 320
 ****Command syntax: `listlog <filter list>`****
 
 | Parameter  | Default  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | loglevel  | I  | Minimum severity level for the log lines to display.<br/> • I: INFORMATION<br/> • E: ERROR<br/> • W: WARNING<br/> • F: FATAL |
 | lines  | - 100  | Defines the number of lines to display from all log files, both current and backup.<br/> • A positive value displays the *x* oldest lines.<br/> • The value zero (0) displays all of the lines.<br/> • A negative value displays the **x** most recent lines.<br/> Enter zero (0), or a positive or negative value between 1 and 10,000. |
 | datemin  | 0  | There are multiple formats to use to define the minimum date for log display.<br/> • Use the format YYMMDD to display logs that happened on or after this date.<br/> • Use a partial date for a more generic display. For example, <code>1604 </code>displays the log since April 2016.<br/> • Use a negative value to display logs for x number of days prior to today. For example, entering - 2 displays the log since the day before yesterday, and - 0 displays today’s log. |

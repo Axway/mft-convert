@@ -23,7 +23,7 @@ For a transfer, the combination of the values taken for these two parameters
 is used as a basis for the on- line data compression protocol negotiation.
 
 | PeSIT D CFT profile<br /> <br /> PeSIT E | This parameter should only be used for transfers in PeSIT (with the profile or version indicated when the value of the SCOMP parameter of the CFTPROT command is too high for the model file in question). |
-| - - - | - - - |
+| --- | --- |
 | ODETTE | This parameter is used to inhibit compression for a send transfer following a connection phase in which compression has been negotiated to 1 (SCOMP and/or RCOMP parameters of CFTPROT set to 1). |
 
 [Return to Command index](../../)

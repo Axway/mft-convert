@@ -15,7 +15,7 @@ server. The configuration change can be:
 
 ## Procedure
 
-To enable configuration change auditing, set the following [unified configuration](../../admin_intro/uconf) (UCONF) parameters:
+To enable configuration change auditing, set the following unified configuration](../../admin_intro/uconf) (UCONF) parameters:
 
 1. Activate the Sentinel connector by setting `sentinel.xfb.enable=yes`.
 1. Activate the audit by setting `sentinel.xfb.audit=yes.`
@@ -88,4 +88,4 @@ CFTUTIL uconfset id=sentinel.xfb.log, value=' '
 ****Related topics****
 
 - UCONF: [unified configuration](../../admin_intro/uconf)
-- [XFBTransfer]()
+- [XFBTransfer

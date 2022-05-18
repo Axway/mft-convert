@@ -92,7 +92,7 @@ CFTU20I Version 3.0.1 15/02/2012
 CFTU20I (C) Copyright AXWAY 1989- 2012
 CFTU20I ====> Starting Session on 06/07/2012 Time is 14:58:27
 CFTU20I
-1:[CFU] config type=com,mediacom=file,fname=my_file
+1:CFU] config type=com,mediacom=file,fname=my_file
 CFTU00I CONFIG   _ Correct (type=com,mediacom=file,fname=my_file)
 2:[CFU]
 ```
@@ -143,4 +143,4 @@ Communication file users must have read and write access rights for the file. If
 
 You can also grant write access rights to authorized users only using ACLs on the file.
 
-If users from various groups use the communication file, it is recommended that you set the CFT_LOCK logical name to SYSTEM and grant the SYSLCK privilege to the relevant users. For more information, see the [Transfer CFT parameter settings]() section.
+If users from various groups use the communication file, it is recommended that you set the CFT_LOCK logical name to SYSTEM and grant the SYSLCK privilege to the relevant users. For more information, see the [Transfer CFT parameter settings section.

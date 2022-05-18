@@ -11,7 +11,7 @@ PeSIT DIAGP.
 Event Codes for all protocols
 
 | Code | Meaning  |
-| - - - | - - - |
+| --- | --- |
 | 00 | VFABORTD - Transfer abort request by {{< TransferCFT/axwayvariablesComponentShortName  >}} |
 | 01 | VFCAND - Transfer interrupt request by {{< TransferCFT/axwayvariablesComponentShortName  >}} |
 | 02 | VFCANR - Response to a transfer interrupt indication |

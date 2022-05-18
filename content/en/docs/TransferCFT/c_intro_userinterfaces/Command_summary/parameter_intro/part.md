@@ -68,7 +68,7 @@ This identifier designates:
 - either a partner described by the command:
 
 | CFTPART | ID = &lt;PART parameter value&gt;, ... |   |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 
 <!- - - - >
 
@@ -76,7 +76,7 @@ This identifier designates:
     the command:
 
 | CFTDEST | ID = &lt;PART parameter value&gt;, |   |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 |   | PART = (*identifier, identifier . . .*) |   |
 
 #### CFTIDF

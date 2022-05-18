@@ -63,7 +63,7 @@ The application and {{< TransferCFT/suitevariablesTransferCFTName  >}} run on di
 
 ####  Architecture versus file storage summary
 | Architecture | Local volume | Shared volume | Cloud storage |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | 1. Same pod | yes | yes | yes |
 | 2. Two pods on the same node | yes | yes | yes |
 | 3. Two pods regardless of the running node | no | yes | yes |

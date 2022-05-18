@@ -11,7 +11,7 @@ PRINT MSG='Transfer IDTU value: %_CAT_IDTU%'
 ```
 
 | Variable  | Description  |
-| - - - | - - - |
+| --- | --- |
 | _CAT_CFTV  | Catalog version.  |
 | _CAT_COMMENT  | Comment associated with the IDF.  |
 | _CAT_DATEB  | Transfer start date.  |

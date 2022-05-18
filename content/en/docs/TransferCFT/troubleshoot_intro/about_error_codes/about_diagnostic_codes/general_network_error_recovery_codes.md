@@ -21,7 +21,7 @@ The codes are expressed in decimal form.
 RECOV - General Network Error Recovery Codes
 
 | Code &lt;/th&gt;  | Meaning &lt;/th&gt;  |
-| - - - | - - - |
+| --- | --- |
 | 1 | Normal remote end disconnection |
 | 2 | L=1 Local time- out<br/> L=0 Network time- out |
 | 3 | L=1 Insufficient local resources<br/> L=0 Protocol procedure error |

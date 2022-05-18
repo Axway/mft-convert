@@ -31,7 +31,7 @@ These parameters can have the values:
 The EXECSUBPRE, EXECSUB and EXECSUBA parameters define the execution policy for pre- processing, post- processing and acknowledgement processing procedures for a group of files request.
 
 | Parameter  | Command  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | [EXECSUBPRE](../../../c_intro_userinterfaces/command_summary/parameter_intro/execsubpre)  | CFTSEND, SEND  | Execution policy for the PREEXEC script.  |
 | [EXECSUB](../../../c_intro_userinterfaces/command_summary/parameter_intro/execsub)  | CFTSEND, SEND  | Execution policy for the EXEC and EXECE scripts.  |
 | [EXECSUBA](../../../c_intro_userinterfaces/command_summary/parameter_intro/execsuba)  | CFTSEND, SEND  | Execution policy for the ACKEXEC script to execute at the acknowledgment phase.  |
@@ -57,7 +57,7 @@ The result of mixing a broadcast with a group of files creates 3 levels of reque
 The processing level that is executed when you mix EXEXPRE/EXEC/EXECA with EXESUBPRE/EXECSUB/EXECSUBA parameters is shown in the following example.
 
 | EXEXPRE/EXEC/EXECA<br /> EXESUBPRE/EXECSUB/EXECSUBA  | PART  | DEST  | CHILDREN  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | FILE  | L1 + L2 + L3  | L1  | L2 + L3  |
 | LIST  | L1 + L2  | L1  | L2  |
 | SUBF  | L1 + L3  | L1  | L3  |

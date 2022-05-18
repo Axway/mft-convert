@@ -9,7 +9,7 @@ weight: 360
 ## Parameters
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [FNAME](../../../../c_intro_userinterfaces/command_summary/parameter_intro/fname)  | Selects the Access Management cache file. By default, this is the CFTAM file, which is located in the <code>data </code>folder.  |
 | [FOUT](../../../../c_intro_userinterfaces/command_summary/parameter_intro/fout)  | Selects the output file. By default, it is the console.  |
 | [ID](../../../../c_intro_userinterfaces/command_summary/parameter_intro/id)  | Selects the user, or users, for which you want to obtain access rights. By default, the function returns all users.<br/> You can use the wildcard characters <code>*</code> and <code>?</code> to filter the user names. |

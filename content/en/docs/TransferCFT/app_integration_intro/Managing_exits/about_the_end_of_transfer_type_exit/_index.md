@@ -40,7 +40,7 @@ The following
 table shows the transfer possible changes of state.
 
 | Change of state  | End of transfer procedure submitted  |
-| - - - | - - - |
+| --- | --- |
 | H to K  | Abnormal end of transfer procedure  |
 | K to H  | Abnormal end of transfer procedure  |
 | T to X  | No call  |

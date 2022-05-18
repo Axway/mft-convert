@@ -22,7 +22,7 @@ to configure them:
 - Change direction (CD)
 
 | Topic  | Describes...  |
-| - - - | - - - |
+| --- | --- |
 | [Configuring OFTP](configuring_odette) | The Transfer CFT objects that you must configure to use the OFTP (ODETTE) protocol. |
 | [Configuring partners](cftpart_parameters) | The Transfer CFT parameters that you must define for a partner when using the OFTP protocol. |
 | [Processing data](processing_data) | The compression functions in Transfer CFT when using the OFTP (ODETTE) protocol. |

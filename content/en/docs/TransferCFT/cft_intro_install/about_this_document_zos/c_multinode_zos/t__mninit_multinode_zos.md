@@ -25,7 +25,7 @@ Edit the MNINIT JCL located in the INSTALL Library as described in the following
 > You only perform steps 4 and 8 if you are setting up a multi host multi- node configuration (not for a mono host, multi- node configuration).
 
 | Step  | Task  | Command or details  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | 0  | Define file size  |   |
 | 1  | Activate multi- node  | PARM=’UCONFSET ID=cft.multi_node.enable,value=yes’  |
 | 2  | Define the number of nodes | PARM=’UCONFSET ID=cft.multi_node.nodes,value=2’  |

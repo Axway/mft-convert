@@ -5,7 +5,7 @@ weight: 270
 --- The PKIUTIL command PKIKEYGEN can generate a new RSA key pair (PKIKEY) and inserts it in the Transfer CFT PKI database, which you can use when implementing [SFTP](../../../../protocols_start_here/sftp_intro).
 
 | Parameter  | Values  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | PKIFNAME  | string  | Transfer CFT PKI database file name  |
 | ID  | string, 32 char  | PKIKEY identifier  |
 | COMMENT  | string  | A free comment  |

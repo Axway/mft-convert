@@ -7,7 +7,7 @@ weight: 180
 ## Standard commands
 
 | Command | Comment |
-| - - - | - - - |
+| --- | --- |
 | CFTSTART | Start Transfer CFT |
 | CFTSTOP | Stop Transfer CFT |
 | COPSTART | Start the UI server |
@@ -17,7 +17,7 @@ weight: 180
 ## Deprecated commands
 
 | Replace this command...  | With the new command...  |
-| - - - | - - - |
+| --- | --- |
 | SHUT | CFTSTOP + COPSTOP |
 | CFTMGSBM | CFTSTART |
 | STARTCOPB | COPSTART |

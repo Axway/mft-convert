@@ -49,7 +49,7 @@ The following table lists the logical names of files, and
 defines the role.
 
 | Working file  | Logical name  | Comment  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | Parameter  | CFTPARM  | Parameter file  |
 | Partner  | CFTPART  | Partner file  |
 | Catalogue  | CFTCATA  | Catalogue file  |

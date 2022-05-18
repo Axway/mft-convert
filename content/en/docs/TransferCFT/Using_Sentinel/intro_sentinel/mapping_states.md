@@ -11,7 +11,7 @@ weight: 250
 - Compatibility state: The {{< TransferCFT/axwayvariablesComponentShortName >}} status as displayed in the catalog when using the backward compatibility mode.
 - Sentinel state: The state attribute identifies the step of the transfer process.
 
-For details on Sentinel states, see [XFBTransfer Tracked Objects]().
+For details on Sentinel states, see XFBTransfer Tracked Objects.
 
 Mapping states
 

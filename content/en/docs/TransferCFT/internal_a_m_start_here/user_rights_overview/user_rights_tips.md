@@ -13,7 +13,7 @@ The following best practices may help you avoid or correct user rights issues. D
 - Changing the domain may affect your ability to log in on the Transfer CFT client.
 - If you modify the createprocessasuser parameter setting, you must restart Copilot for the parameter change to be taken into account.
 - The am.passport.superuser can perform any superuser activity. From {{< TransferCFT/suitevariablesCentralGovernanceName >}} there is no check on the superuser; this user has all access regardless of the {{< TransferCFT/suitevariablesCentralGovernanceName >}} roles and privileges.
-- When USERCTRL is set to YES and if the [USERID](../../../c_intro_userinterfaces/command_summary/parameter_intro/userid) parameter is not set, then the file transfer owner (when receiving) or file reader (when sending) is the user that started {{< TransferCFT/axwayvariablesComponentLongName >}}.
+- When USERCTRL is set to YES and if the USERID](../../../c_intro_userinterfaces/command_summary/parameter_intro/userid) parameter is not set, then the file transfer owner (when receiving) or file reader (when sending) is the user that started {{< TransferCFT/axwayvariablesComponentLongName >}}.
 
 ## Troubleshooting user rights issues
 
@@ -60,7 +60,7 @@ To fix the issue, delete the persistent cache files (CFTAM and CFTAM.idx) and re
 
 For more information, see the following platform specific guides for the appropriate OS:
 
-- UNIX - [Running Transfer CFT for the first time UNIX]()
+- UNIX - [Running Transfer CFT for the first time UNIX
     - [Defining user rights](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/user_rights_and_interface_unix)
     - [Declaring additional users](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/declaring_additional_users)
     - [UNIX system users](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/t_adding_system_user_unix)

@@ -11,7 +11,7 @@ weight: 380
 Copy or note the host name or IP address for each of the three Transfer CFTs that you will use in these exercises.
 
 | Transfer CFT  | Host name  | Application name  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | {{< TransferCFT/axwayvariablesComponentShortName  >}} 1  | &lt; host name / IP address &gt;  | MainOffice  |
 | {{< TransferCFT/axwayvariablesComponentShortName  >}} 2  | &lt; host name / IP address &gt;  | Store_66  |
 | {{< TransferCFT/axwayvariablesComponentShortName  >}} 1  | &lt; host name / IP address &gt;  | Store_89  |

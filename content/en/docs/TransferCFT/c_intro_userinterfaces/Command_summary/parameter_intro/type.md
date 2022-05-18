@@ -141,7 +141,7 @@ TYPE ={ALL &#124; DEST &#124; PART &#124; TCP}
 #### Type table
 
 | Value  | Meaning  |
-| - - - | - - - |
+| --- | --- |
 | ALL  | Used to query the general and network characteristics of partners<br /> Parameters of the PARTNER file |
 | DEST  | Used to query the parameters configured in the CFTDEST command: concern the broadcasting lists  |
 | PART  | Used to query the parameters configured in the CFTPART command: description of the general data relative to partners  |
@@ -157,7 +157,7 @@ TYPE = {CAT &#124; COM &#124; INPUT &#124; OUTPUT
 Defines the medium concerned.
 
 | Value  | Medium concerned  |
-| - - - | - - - |
+| --- | --- |
 | CAT  | Catalog file  |
 | COM  | Communication medium  |
 | INPUT  | Command input file  |
@@ -199,7 +199,7 @@ Defines the parameters to extract.
 #### Type table
 
 | Value  | Meaning  | Command |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | ALL  | All the parameter types of the CFTPARM and CFTPART files  |   |
 | ACCNT  | Description of the statistical files  | CFTACCNT  |
 | AUTH  | List of authorized files  | CFTAUTH  |
@@ -233,7 +233,7 @@ TYPE can take the predefined values indicated in the Type table below.
 #### Type table
 
 | Value  | Definition  |
-| - - - | - - - |
+| --- | --- |
 | ACCNT  | Used to query statistical file parameters<br /> These parameters are submitted when CFTACCNT commands are entered  |
 | ALL  | Used to query all the parameters indicated in the PARAMETER file  |
 | AUTH  | Used to query file authorization lists<br /> These lists are customized by the CFTAUTH commands  |

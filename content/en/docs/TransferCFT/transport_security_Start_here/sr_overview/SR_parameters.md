@@ -13,7 +13,7 @@ The MA and RA parameters are described in the following separate tables, and are
 Parameters that appear in Master agent configuration file are in bold.
 
 | Parameter | Type | Default | Comment |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | secure_relay.enable | Bool | No | General flag to access Transfer CFT through Secure Relay if set to Yes. |
 | secure_relay.ma.autostart | Bool | Yes | Allows an automatic start of the embedded Secure Relay Master Agent.  |
 | secure_relay.ma.jar_fname | String | $(cft.install.xsr_dir)/xsrMaster.jar | Secure Relay Master Agent jar file.  |
@@ -43,7 +43,7 @@ In the Secure Relay parameters table below:
 - For an array, use the notation format ****secure_relay.ra.N.parameter****, where N is between 0 and number of routers – 1.
 
 | Parameter | Type | Default | Comment |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | secure_relay.ra.N.enable | Bool | Yes | Enables the Router agent.  |
 | secure_relay.ra.N.dmz | String | DMZ0 | Logical name of the DMZ where the Router Agent is running, with a maximum of 32 characters.  |
 | secure_relay.ra.N.host | String | None | Router Agent IP address or FQDN. |

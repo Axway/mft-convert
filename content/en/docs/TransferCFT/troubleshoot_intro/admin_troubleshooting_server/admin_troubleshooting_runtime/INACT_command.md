@@ -19,7 +19,7 @@ This page describes the INACT command and its parameters. You can use the INACT 
 Command guide: [INACT](../../../../c_intro_userinterfaces/command_summary#INACT)
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [ID](../../../../c_intro_userinterfaces/command_summary/parameter_intro/id)  | Identifier for the object to be deactivated. To deactivate several objects with a single command, use wildcard characters or meta characters. |
 | [TYPE](../../../../c_intro_userinterfaces/command_summary/parameter_intro/type)  | Object to be deactivated:<br/> • PART<br/> • TRK<br/> • CRON<br/> • FOLDER |
 | [MODE](../../../../c_intro_userinterfaces/command_summary/parameter_intro/mode)  | Mode to be deactivated on partners (only when TYPE=PART object):<br/> • BOTH (default)<br/> • REQUESTER<br/> • SERVER<br/> You can use the shortcuts B, R and S in place of the keywords. |

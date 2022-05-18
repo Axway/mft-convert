@@ -35,7 +35,7 @@ The messages have the following format:
 ****Transfer CFT z/OS system interface messages****
 
 | Message | Definition |
-| - - - | - - - |
+| --- | --- |
 | CFINnnI:text | CFTINT interface information messages under VTAM. |
 | SGEXnnL:text | Task manager information message that displays with information ‘SGTRACE 2’. |
 | SGABnnL:text | Message consecutive to a Transfer CFT abnormal end. These messages are also recorded in the Transfer CFT diagnostics file. |
@@ -44,7 +44,7 @@ The messages have the following format:
 **Transfer CFT z/OS messages**
 
 | Message | Definition |
-| - - - | - - - |
+| --- | --- |
 | CFST00E | Transfer CFT region is limited to 1024 Mb. It is recommended that you not start Transfer CFT with REGION=0M. |
 | CHSM01I | HSM Recall of: filename HSM recall in synchronous mode for a file. |
 | CHSM02I | Recall completed: filename HSM recall in synchronous mode terminated normally. |

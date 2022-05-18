@@ -19,7 +19,7 @@ These values are given explicitly in the CFTRECV command or received at protocol
 The following table describes the physical properties for transferred files.
 
 | Parameter  | Definition  |
-| - - - | - - - |
+| --- | --- |
 | FSPACE | Disk space occupied by the file in KB. |
 | FLRECL | Maximum size of a record in the file. |
 | FBLKSIZE | The first multiple of 512 greater than the length of the record in the file. |
@@ -33,7 +33,7 @@ The following table describes the physical properties for transferred files.
 The following table describes the FTYPE, FRECFM and FCODE assigned by {{< TransferCFT/axwayvariablesComponentShortName  >}} according to the file type.
 
 | FAB Record Format Field Value (FAB$B_RFM)  | FRECFM  | FTYPE  | FCODE  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | FAB$C_FIX | 'F' | ' ' | ASCII |
 | FAB$C_UDF | 'U' | ' ' | ASCII |
 | FAB$C_VAR | 'V' | 'P' | ASCII |
@@ -45,7 +45,7 @@ The following table describes the FTYPE, FRECFM and FCODE assigned by {{< Transf
 The following table describes the file type according to the FRECFM and FTYPE parameters.
 
 | FRECFM  | FTYPE  | FAB Record Format Field Value (FAB$B_RFM)  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | 'F' |   | FAB$C_FIX |
 | 'U' |   | FAB$C_UDF |
 | 'V' | 'C' | FAB$C_VFC |

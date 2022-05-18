@@ -124,7 +124,7 @@ proposed by site A, and SRIN is the transfer direction determined by site
 B.
 
 | If... | Then the final values are... |
-| - - - | - - - |
+| --- | --- |
 | SROUT = BOTH and SRIN = SENDER | SROUT = RECEIVER and SRIN = SENDER |
 | SROUT = BOTH and SRIN = RECEIVER | SROUT = SENDER and SRIN = RECEIVER |
 | SRIN = BOTH and SROUT = SENDER | SROUT = SENDER and SRIN = RECEIVER |

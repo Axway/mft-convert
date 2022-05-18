@@ -52,7 +52,7 @@ Begin by planning your MFT architecture and deployment strategy. After installi
 Transfer CFTs running under {{< TransferCFT/suitevariablesCentralGovernanceName  >}} or {{< TransferCFT/suitevariablesFlowManager  >}} can manage or have support for the following features.
 
 | Feature  |  Manage using {{< TransferCFT/suitevariablesFlowManager  >}} or {{< TransferCFT/PrimaryCGorUM  >}}  | Supported but not configurable using Central Governance or {{< TransferCFT/suitevariablesFlowManager  >}}  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | Folder monitoring  | yes  | yes  |
 | Multi- node architecture  | no  | yes  |
 | CRONJOB  | yes  | yes  |

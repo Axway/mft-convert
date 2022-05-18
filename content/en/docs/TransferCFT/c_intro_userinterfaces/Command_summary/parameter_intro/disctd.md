@@ -25,7 +25,7 @@ indicated in the table below.
 Default values are:
 
 | Protocol  | Default value |
-| - - - | - - - |
+| --- | --- |
 | PeSIT ANY profile | 10  |
 | ODETTE  | 20  |
 

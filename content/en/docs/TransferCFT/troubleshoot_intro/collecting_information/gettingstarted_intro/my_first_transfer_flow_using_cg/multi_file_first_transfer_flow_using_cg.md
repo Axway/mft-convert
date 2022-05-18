@@ -7,7 +7,7 @@ weight: 300
 ![](/Images/TransferCFT/TransferCFT_Multiple_send_w_CG.png)
 
 |   | Task  | Description  | Details  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | 1<br/> <br/>  | Create a flow.<br/> <br/> <br />  | In {{< TransferCFT/PrimaryCGorUM  >}} click ****Flows**** &gt; ****Add flow****.<br/> Create a flow named ****multiple_files_flow****, and give it the identifier ****flow02****.<br/> Define Store_66 as the Source, and MainOffice as the Target.<br/> <br />  | [![](/Images/TransferCFT/mapArrow.png)](../intro_cg_task_catalog/t_multiple_filesflow)  |
 | 2<br/>  | Enable a multiple files exchange.<br/>  | Select the Source, and then ****File properties****.<br/> Under Filename select ****Multiple****.<br/>  | [![](/Images/TransferCFT/mapArrow.png)](../intro_cg_task_catalog/t_multiple_files)  |
 | 3<br/>  | Deploy the flow.<br/>  | In {{< TransferCFT/PrimaryCGorUM  >}} click ****Deploy**** to save and deploy.<br/>  | [![](/Images/TransferCFT/mapArrow.png)](../intro_cg_task_catalog/t_savedeployflow)  |

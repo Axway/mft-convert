@@ -58,7 +58,7 @@ NFS implements a weak data consistency called "Close To Open consistency" or `ct
 The following table summarizes the recommended NFS mount options. Note that depending on the OS platform, only one of the three locking options should be available.
 
 | Recommended option  | Not recommended  |
-| - - - | - - - |
+| --- | --- |
 | vers=4 (or nfsvers=4)  | not specified or value &lt;= 4  |
 | hard (default)  | "soft" specified  |
 | nointr (not the default)  | "intr" specified  |
@@ -112,7 +112,7 @@ Enables replies to requests only after the changes have been committed to stable
 #### Synchronous / asynchronous option impact
 
 | Client  | Server  | Internal data  | Transferable data  | Performance  |
-| - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- |
 | Sync  | Sync  | 1  | 1  | Low  |
 | Sync  | Async  | 2 (secure the NFS server)  | 2 (secure the NFS server)  | Medium  |
 | Async  | Sync  | 1 (if cft.server.catalog.<br /> sync.enable=Yes)  | 1 (when using sync points)  | Medium - high  |

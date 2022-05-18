@@ -19,7 +19,7 @@ weight: 360
 FILE(ACCESS): PARM(READ), PART(READ), COM(UPD), CATLG(UPD), LOG(UPD).
 
 | Command  | Object  | Class  | Variable  | UserID  | Action  |
-| - - - | - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- | --- |
 | START | APPL | applcls | &amp;ID | Cmduser | Control |
 | HALT | APPL | applcls | &amp;ID | Cmduser | Control |
 | KEEP | APPL | applcls | &amp;ID | Cmduser | Control |
@@ -32,7 +32,7 @@ FILE(ACCESS): PARM(READ), PART(READ), COM(UPD), CATLG(UPD), LOG(UPD).
 FILE(ACCESS): PARM(READ), PART(READ), COM(UPD), CATLG(UPD), LOG(UPD).
 
 | Command  | Object  | Class  | Variable  | UserID  | Action  |
-| - - - | - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- | --- |
 | START | ALL_CAT | opercls | &amp;FNAME | Cmduser | Control |
 | HALT | ALL_CAT | opercls | &amp;FNAME | Cmduser | Control |
 | KEEP | ALL_CAT | opercls | &amp;FNAME | Cmduser | Control |
@@ -284,7 +284,7 @@ Trfuser = System user (TSO) of the original file transfer owner.
 QQQ_QQQ_TEST END
 
 |   | Object  | Class  | Variable  | UserID  | Action  | Notes  |
-| - - - | - - - | - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- | --- | --- |
 | SHUT | SHUT | cmdecls |   | Cmduser | Create |   |
 | MQUERY | MQUERY | cmdecls |   | Cmduser | Create |   |
 | SWITCH LOG | SWT_LOG | cmdecls |   | Cmduser | Create |   |

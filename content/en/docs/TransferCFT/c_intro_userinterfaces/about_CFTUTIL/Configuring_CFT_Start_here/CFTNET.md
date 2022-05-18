@@ -6,7 +6,7 @@ weight: 370
 command to define a network access resource. The available CFTNET network
 is:
 
-- [TCI/IP](#Defining_TCP_IP__command_line_)
+- TCI/IP](#Defining_TCP_IP__command_line_)
 
 The example below is not an actual Transfer CFT command. It lists the
 parameters which are common to all the network access methods.
@@ -26,7 +26,7 @@ topics****
 #### Command parameters
 
 | Parameters  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [CALL](../../../command_summary/parameter_intro/call) | Call direction possible through this network resource. |
 | [CLASS](../../../command_summary/parameter_intro/class) | Logical class for the physical link. |
 | [ID](../../../command_summary/parameter_intro/id) | Network resource identifier. |
@@ -52,7 +52,7 @@ Defining network resources topic.
 #### TYPE =  TCP
 
 | Parameters  | Description  |
-| - - - | - - - |
+| --- | --- |
 |  [CLASS](../../../command_summary/parameter_intro/class) | Class associated with this network resource.<br/> This concept is used to group resources of the same type, so that they can be used indifferently to establish connections with partners. |
 |  [HOST](../../../command_summary/parameter_intro/host)  | IP address of the local resource. |
 |  [MAXCNX](../../../command_summary/parameter_intro/maxcnx) | The maximum number of simultaneous connections that Transfer CFT accepts to establish on a given network resource. |
@@ -116,11 +116,11 @@ Use this command to access to a telecommunications network
 via another network.
 
 | Parameters  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [CLASS](../../../command_summary/parameter_intro/class) | Class associated with this network resource. |
 | [ID](../../../command_summary/parameter_intro/id) | Identifier of the network accessed via a proxy. |
 | [TYPE](../../../command_summary/parameter_intro/type) = TCP | The type of network accessed via a proxy. |
-| [INET]() | Identifier of the CFTNET command defining access to the first network. |
+| [INET | Identifier of the CFTNET command defining access to the first network. |
 | [PROTOCOL](../../../command_summary/parameter_intro/protocol)  | The proxy dialog protocol. Transfer CFT supports SOCKS4 and SOCKS5. |
 | [HOST](../../../command_summary/parameter_intro/host)  | Addresses of the proxies in the first network, with up to four proxies in the same first network. |
 | [PORT](../../../command_summary/parameter_intro/port)  | Listening port of the proxy/proxies in the first network. |

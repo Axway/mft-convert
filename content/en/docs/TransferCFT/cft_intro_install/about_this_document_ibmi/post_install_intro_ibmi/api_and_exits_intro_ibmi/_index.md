@@ -31,7 +31,7 @@ The development kit used to integrate the {{< TransferCFT/axwayvariablesComponen
 into several directories that include the CFTPGM library, which contains all library modules necessary for APIs and exits. These library modules are required to use the corresponding function:
 
 | Module (in C language)  | Required to use Transfer CFT...  |
-| - - - | - - - |
+| --- | --- |
 | libapisrv1.srvpgm and librdrovrf.srvpgm  | APIs  |
 | libcftexa.srvpgm  | Directory EXITs  |
 | libcftexf.srvpgm  | File EXITs  |

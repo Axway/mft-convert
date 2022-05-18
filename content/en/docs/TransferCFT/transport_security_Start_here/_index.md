@@ -20,7 +20,7 @@ security operations, and comprises a set of sub- sections that describe how to c
 and manage the Transfer CFT security objects as well as use additional {{< TransferCFT/axwayvariablesCompanyName  >}} products to offer security features.
 
 | Topics/sections  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [Transport security concepts](transport_security_concepts_start_here) | Describes transfer security concepts that are referred to further in this document, as well as how these security functions work. |
 | [Configuring transport security](configuring_transport_security_start_here#CFT_Configuration) | Explains how to use line commands to configure the Transfer CFT to manage the SSL and TLS protocols. |
 | [Managing certificates](certificates#Managing%20certificates:%20Start%20here) | Explains how to use either the UI or line commands to manage security certificates. |

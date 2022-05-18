@@ -38,7 +38,7 @@ The following SSL crypto devices and related crypto algorithms are available for
 This table lists, for each possible SSL- protocol cryptographic function and Pki.type used, whether a crypto device used.
 
 | TLS protocol exchange  | Cryptographic function  | Pki.type  | z9 - z10  | z196  |
-| - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- |
 | Handshake phase  | RSA  | CFT<br/> PASSPORT<br/> SYSTEM | Software<br/> Software<br/> CEX2 | Software<br/> Software<br/> CEX3 |
 | Record Level SYM encryption  | DES, 3DES  | CFT<br/> PASSPORT<br/> SYSTEM | CPACF<br/> CPACF<br/> CPACF | CPACF<br/> CPACF<br/> CPACF |
 | Record Level SYM encryption  | AES  | CFT<br/> PASSPORT<br/> SYSTEM | CPACF<br/> CPACF<br/> CPACF | CPACF<br/> CPACF<br/> CPACF |

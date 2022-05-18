@@ -59,7 +59,7 @@ Displays using the same format as in {{< TransferCFT/headerfootervariableshflong
 ##### Format 2
 
 | Type | V24 length | V23 length | Description |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | CHAR  | 1  | 1  | 'L': start of record marker  |
 | CHAR  | 1  | 1  | SEND/RECV flag  |
 | CHAR  | 1  | 1  | STATE  |

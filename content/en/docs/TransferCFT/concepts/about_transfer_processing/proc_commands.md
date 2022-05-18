@@ -390,7 +390,7 @@ Depending on the operating system, the temporary file is treated as follows:
     ### KEEP
 
 | Command  | Parameter  | Value  | Description  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | KEEP  | DIAGP  | string  | Specify a customized error that will be set for DIAGP in the catalog.  |
 | KEEP  | DIAGC  | string  | Specify a customized error that will be set for DIAGC in the catalog.  |
 | KEEP  | PHASE  | char  | The transfer phase at which the command is applied.  |
@@ -399,7 +399,7 @@ Depending on the operating system, the temporary file is treated as follows:
     ### HALT
 
 | Command  | Parameter  | Value  | Description  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | HALT  | DIAGP  | string  | Specify a customized error that will be set for DIAGP in the catalog.  |
 | HALT  | DIAGC  | string  | Specify a customized error that will be set for DIAGC in the catalog.  |
 | HALT  | PHASE  | char  | The transfer phase at which the command is applied.  |
@@ -408,7 +408,7 @@ Depending on the operating system, the temporary file is treated as follows:
     ### SUBMIT
 
 | Command  | Parameter  | Value  | Description  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | SUBMIT  | APPSTATE  | string  | Specify an application state for the processing script that will allow a SUBMIT to occur at the correct script step.  |
 | - " - | PHASE  | char  | The transfer phase at which the command is applied.  |
 | - " - | PHASE STEP  | char  | The phase step at which the command is applied.  |
@@ -416,7 +416,7 @@ Depending on the operating system, the temporary file is treated as follows:
     ### START
 
 | Command  | Parameter  | Value  | Description  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | START  | PHASE  | char  | The transfer phase at which the command is applied.  |
 | - " - | MAXDURATION  | integer  | Restart a transfer that reached its maxduration, time in minutes {<u>0</u>...32767}.  |
 | - " - | PHASE STEP  | char  | The phase step at which the command is applied.  |

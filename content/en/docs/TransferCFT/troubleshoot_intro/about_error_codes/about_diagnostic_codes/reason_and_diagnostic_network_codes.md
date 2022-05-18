@@ -24,7 +24,7 @@ The codes are expressed in hexadecimal.
 ****TCP/IP Reason codes****
 
 | Code  | Description  |
-| - - - | - - - |
+| --- | --- |
 | ****00**** | Connection request rejected by the network or break caused by the remote partner |
 | ****01**** | Time- out for a connection request. The called party is probably not connected to the network |
 | ****02**** | Insufficient resources (other than memory) |

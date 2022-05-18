@@ -29,7 +29,7 @@ Command syntax: ****[CFTEXT](../../../../c_intro_userinterfaces/command_summary#
 the parameter and partner files.
 
 | Parameters  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [ID](../../../../c_intro_userinterfaces/command_summary/parameter_intro/id)  | Identifier of the parameter to be extracted.<br/> The value of this identifier is the value of the ID of the command CFTxxxx corresponding to the TYPE parameter; this allows the extraction to be limited:<br/> • To an explicitly indicated value (identifier)<br/> • Or to a group of values designated through the use of a mask using "wildcard" characters<br/> When this parameter is not defined, all the occurrences of the parameter type (defined by TYPE) are extracted. |
 | [CONTENT](../../../../c_intro_userinterfaces/command_summary/parameter_intro/content)  | Level of content included in output:<br/> • BRIEF = Empty or default value parameters are omitted<br/> • FULL = All parameters are included |
 | [FOUT](../../../../c_intro_userinterfaces/command_summary/parameter_intro/fout)  | Name of the file to which the command’s standard output will be redirected.<br/> This generated file can then be interpreted directly by CFTUTIL.<br/> When this parameter is not filled, all occurrences of the type parameter (defined in the TYPE parameter) are extracted. |

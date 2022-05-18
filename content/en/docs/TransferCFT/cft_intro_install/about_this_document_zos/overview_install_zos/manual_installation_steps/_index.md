@@ -9,7 +9,7 @@ The following JCLs are contained in the INSTALL library. Execute the JCLs in the
 ### Target customization
 
 | Step  | JCL  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | 1  | [A03PARM](../t_customize_instance_zos#Modifying_A03PARM) | Customize file parameters |
 | 2  | [A00CUSTO](../installation_parameters_to_customize) | Customize JOBs installation |
 | 3  | A06FILES  | Create and initialize instance files  |
@@ -18,7 +18,7 @@ The following JCLs are contained in the INSTALL library. Execute the JCLs in the
 After performing Steps 1 - 4, you can either continue with the following step- by- step instructions, or start the JOB A05ALL, which uses the customized settings in the A03PARM file to run.
 
 | Step  | JCL  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | 5  | B20LINK | General LINK- EDIT of Transfer CFT modules. Submit for non- SMP/E installations. |
 | 6  | CFTGNKEY  | Generate an encryption key. See also [Password encryption](../t_customize_instance_zos#Password).  |
 | 7  | COPA010 |   |
@@ -26,7 +26,7 @@ After performing Steps 1 - 4, you can either continue with the following step- b
 ### Transfer CFT installation customization
 
 | Step  | JCL  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | 8  | [CFT$SET](../zos_auto_install_a05all/t_customize_install_zos#JOB%C2%A0H80EXEC)<br/> CFT$SETC  | Select one of the two options available for this step to set the UCONF variables and create Transfer CFT parameters from a template.<br/> • CFT$SET: When not using Central Governance.<br/> • CFT$SETC: When using Central Governance. |
 | 9  | [D40INIT](../zos_auto_install_a05all/t_customize_install_zos#D40INIT) | Format the Transfer CFT work files |
 | 10  | [E50PARM](../t_customize_instance_zos)  | CFTPARM configuration example  |
@@ -35,7 +35,7 @@ After performing Steps 1 - 4, you can either continue with the following step- b
 ### Optional steps
 
 | Step  | JCL  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | 12  | C32XMEM | Communication server |
 | 13  | [D47SYST](t_configure_optional_features_zos#Create%20a%20Transfer%20CFT%20PKI%20file%C2%A0D43PKI) | Select one of the options listed for Step 12:<br/> • D43PKI: Create internal datafile for PKI data<br/> • D44PASS: Declare link to PassPort server<br/> • D47SYST: Enable use of system PKI |
 | 14  | [Customize Sentinel](t_install_sentinel_zos) configuration file |

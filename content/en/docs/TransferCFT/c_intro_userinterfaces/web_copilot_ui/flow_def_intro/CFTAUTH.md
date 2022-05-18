@@ -20,7 +20,7 @@ Object concepts
 authorized/unauthorized identifiers list](../../../../concepts/cft_configuration_concepts_start_here/authorization_list_concepts)
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [ID](../../../command_summary/parameter_intro/id) | Authorization list identifier. If the identifier is prefixed by"<code>NOT</code>", the object indicates a list of forbidden file identifiers. For example, CFTAUTH ID = NOTSIBM1. |
 | [FNAME](../../../command_summary/parameter_intro/fname) | The name of the file where authorized or unauthorized file identifiers (IDF) are listed.<br/> Each element of the list in this file can be:<br/> • An explicit file identifier, or<br/> • A mask (using wildcards '*?'), where all of the file identifiers corresponding to this mask are affected<br/> There is no limit to the number of identifiers in this list. |
 | [IDF](../../../command_summary/parameter_intro/idf) | List of authorized or unauthorized IDFs.<br/> The value associated with each of these IDFs may be:<br/> • An explicit file identifier, or<br/> • A mask (using wildcards '*?'), where all of the file identifiers corresponding to this mask are affected by the command |

@@ -33,7 +33,7 @@ And the corresponding catalog entry  would include the DIAGI=416 and DIAGP=MAXC
 ## How to configure
 
 | UCONF value  | Type  | Default  | Description  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | cft.server.nrdp.enable  | boolean  | No  | Enable the prevention of network resource depletion.  |
 | cft.server.nrdp.conn_retry_delay_min  | int  | 1  | Connection retry delay minimum in seconds when a network resource depletion is detected.  |
 | cft.server.nrdp.conn_retry_delay_max | int  | 5  | Connection retry delay maximum in seconds when a network resource depletion is detected.  |

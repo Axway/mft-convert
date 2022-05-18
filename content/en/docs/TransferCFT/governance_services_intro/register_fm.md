@@ -2,7 +2,7 @@
 title: "Register Transfer CFT with Flow Manager"
 linkTitle: "Register with Flow Manager"
 weight: 170
---- This section describes how to register a Transfer CFT instance with either an on premise or SaaS {{< TransferCFT/suitevariablesFlowManager  >}}. You can refer to the [Flow Manager User Guide](https://docs.axway.com/bundle/FlowManager_20_allOS_en_HTML5/page/user_guide.html) for Flow Manager details.
+--- This section describes how to register a Transfer CFT instance with either an on premise or SaaS {{< TransferCFT/suitevariablesFlowManager  >}}. You can refer to the Flow Manager User Guide](https://docs.axway.com/bundle/FlowManager_20_allOS_en_HTML5/page/user_guide.html) for Flow Manager details.
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ The automatic activation is only available on UNIX and Windows platforms and can
 
 This section describes the steps to register your {{< TransferCFT/axwayvariablesComponentLongName  >}} with {{< TransferCFT/suitevariablesFlowManager  >}}. The procedure is the same for either an on- premise or SaaS {{< TransferCFT/suitevariablesFlowManager  >}}, with the exception of the two steps described in [Define the {{< TransferCFT/suitevariablesFlowManager  >}} Agent](#Define).
 
-All commands in this section are performed using CFTUTIL unless stated otherwise. For details on the UCONF parameters referenced in this section, please see [UCONF: Central Governance options]().
+All commands in this section are performed using CFTUTIL unless stated otherwise. For details on the UCONF parameters referenced in this section, please see [UCONF: Central Governance options.
 
 #### Define UCONF parameters used for {{< TransferCFT/axwayvariablesComponentLongName  >}} instance identification
 

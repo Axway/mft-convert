@@ -7,7 +7,7 @@ weight: 420
 ## Transfer properties
 
 | CG parameter  | CG values  | CFTUTIL parameter  | Description  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | Transfer priority  | LOW,<br /> MEDIUM: default,<br /> HIGH,<br /> CUSTOM  | CFTSEND, pri<br /> <br /> LOW - &gt;0<br /> MEDIUM- &gt;128<br /> HIGH- &gt; 255<br /> CUSTOM- &gt; integer between 0...255  | Transfer priorities are equivalent to integer values ranging from 0 (low) to 255 (high).<br /> When {{< TransferCFT/axwayvariablesComponentShortName  >}} reaches the maximum number of transfers allowed, it queues transfers. When an ongoing transfer is finished and a slot is available for a new transfer, the system selects the one with the highest priority.<br /> The same priority is used for the transfer in target side  |
 | Bandwidth allocation  | LOW ,<br /> MEDIUM : default, HIGH  | CFTSEND, cos<br /> LOW - &gt;0<br /> MEDIUM- &gt;1<br /> HIGH- &gt; 2  | The amount of bandwidth allocated to this flow. The value you select determines the data transfer rate for this flow.<br /> The same Bandwidth allocation is used for the transfer in target side  |
 | Transfer state  | Ready: default ,<br /> On hold,<br /> Kept  | CFTSEND, state<br /> <br /> Ready (D) - &gt; DISP<br /> On hold (H) - &gt;HOLD<br /> Kept (K) - &gt;KEEP  | Indicates the state of the transfer request.: Ready, On Hold, Kept.<br /> Field is available in UI only if the Initiator is the source.<br /> If Target is the initiator, in source side the transfer state is ready and the field cannot be configured in CG UI.<br />  |
@@ -24,7 +24,7 @@ weight: 420
 Indicates whether you are sending a single file or multiple files.
 
 | CG parameter &lt;/th&gt;  | CG values  | CFTUTIL parameter  | Description  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | Single - &gt; Path  | string max 64  | CFTSEND, fname  | Indicate the single file to be sent.  |
 | Multiple - &gt; Path  | string max 64  | CFTSEND, fname  | If you selected Multiple, the value you enter can be:<br /> A directory name – All the files in this directory will be transferred.<br /> A generic file name, including wildcard characters – Only files that match are transferred. For example, mydirectory/toto*.  |
 | Multiple - &gt; File list  | string max 64  | CFTSEND, selfname  | This field is displayed if you selected Multiple in the Files field.<br /> Specify the name of the file that contains the list of files to be transferred. This file is also referred to as an indirection file. It must contain one file name per record, and that name must start in the first column of the file. The file names contained in the file must not contain an asterisk (*).<br /> When specifying a file here, the Path field is also required.  |
@@ -35,7 +35,7 @@ Indicates whether you are sending a single file or multiple files.
 ## File properties &gt; file type
 
 | CG parameter  | CFTUTIL parameter  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | Binary  | CFTSEND, fcode =B  | Specify whether the file is a binary file.  |
 | Text  | CFTSEND, see configuration for FTYPE=TEXT | Specify whether the file is a text file.  |
 | Record format  | CFTSEND, see configuration for record format | Indicate whether the records in the file are fixed or variable length.  |
@@ -43,7 +43,7 @@ Indicates whether you are sending a single file or multiple files.
 ## Processing scripts &gt; pre- processing
 
 | CG parameter &lt;/th&gt;  | CG values  | CFTUTIL parameter  | Description  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | Script - &gt; Filename  | if Custom, Filename field: string of max 512c  | CFTSEND, preexec  | Specify the script to be executed before the file is transferred.  |
 | State  | Ready: default,<br /> On hold  | CFTSEND, prestate<br /> Ready - &gt;DISP : default<br /> On hold - &gt; HOLD  | Indicate the status of the transfer on the source. The script is run only if the transfer is in the specified state.<br /> Ready – Indicates that the transfer is available and can start immediately.<br /> On hold – Indicates that the transfer is deferred until a remote receive request is accepted, or until a local START command changes this transfer to the ready state.  |
 | Apply to broadcast list  | On main request: default,<br /> For each target in the list,<br /> Both  | CFTDEST, execpre<br /> <br /> On main request - &gt; DEST For each target in the list - &gt; CHILDREN<br /> Both - &gt; PART  | This field is displayed if you enabled a broadcast list in source transfer properties.<br /> On main request – Executes the script only on the main request.<br /> For each target in the list – Executes the script only for each target in the list.<br /> Both – Executes the script both for the main request and for each target in the list.  |
@@ -51,7 +51,7 @@ Indicates whether you are sending a single file or multiple files.
 ## Processing scripts &gt; post- processing
 
 | CG parameter &lt;/th&gt;  | CG values  | CFTUTIL parameter  | Description  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | Script - &gt; Filename  | if Custom, Filename field: string of max 512c  | CFTSEND, exec  | Specify the script to be executed after the file is transferred.  |
 | Apply to group of files  | On main request: Default,<br /> For each file in group,<br /> Both  | CFTSEND, execsub<br /> On main request - &gt; LIST<br /> For each file in group - &gt; FILE<br /> Both - &gt; SUBF  | This field is displayed if you enabled a broadcast list in source transfer properties.<br /> Values – On main request &#124; For each target in the list &#124; Both<br /> On main request – Executes the script only on the main request.<br /> For each target in the list – Executes the script only for each target in the list.<br /> Both – Executes the script both for the main request and for each target in the list.  |
 | Apply to broadcast list  | On main request: default,<br /> For each target in the list,<br /> Both  | CFTDEST, exec<br /> <br /> On main request - &gt; DEST For each target in the list - &gt; CHILDREN<br /> Both - &gt; PART  | This field is displayed if you enabled a broadcast list in source transfer properties.<br /> On main request – Executes the script only on the main request.<br /> For each target in the list – Executes the script only for each target in the list.<br /> Both – Executes the script both for the main request and for each target in the list.  |
@@ -59,7 +59,7 @@ Indicates whether you are sending a single file or multiple files.
 ## Processing scripts &gt; acknowledgment
 
 | CG parameter &lt;/th&gt;  | CG values  | CFTUTIL parameter  | Description  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | Script - &gt; Filename  | if Custom, Filename field: string of max 512c  | CFTSEND, ackexec  | Specify the script to be executed after an acknowledgement is received for a sent file.  |
 | State  | Require,<br /> Ignore: default  | CFTSEND, ackstate<br /> Require - &gt; REQUIRE<br /> Ignore - &gt; IGNORE  | Indicate if the transfer must wait for an acknowledgement.<br /> Require – The transfer must wait for an acknowledgement before it can be considered complete.<br /> Ignore – The transfer can be considered complete, even if an acknowledgement is not received.  |
 | Apply to group of files  | On main request,<br /> For each file in group,<br /> Both: default  | CFTSEND, execsub<br /> On main request - &gt; LIST<br /> For each file in group - &gt; FILE<br /> Both - &gt; SUBF  | This field is displayed if you enabled a broadcast list in source transfer properties.<br /> Values – On main request &#124; For each target in the list &#124; Both<br /> On main request – Executes the script only on the main request.<br /> For each target in the list – Executes the script only for each target in the list.<br /> Both – Executes the script both for the main request and for each target in the list.  |
@@ -68,7 +68,7 @@ Indicates whether you are sending a single file or multiple files.
 ## Processing scripts &gt; error
 
 | CG parameter &lt;/th&gt;  | CG values  | CFTUTIL parameter  | Description  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | Script - &gt; Filename  | if Custom, Filename field: string of max 512c  | CFTSEND, exece  | Specify the script to be executed after an error occurs during a transfer.  |
 
 ****&lt;&lt;**** [](../../)

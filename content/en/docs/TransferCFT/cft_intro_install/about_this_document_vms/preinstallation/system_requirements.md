@@ -32,7 +32,7 @@ The privileges, identifiers and quotas required to execute {{< TransferCFT/axway
 The following table lists the ports and their uses with {{< TransferCFT/axwayvariablesComponentLongName  >}}. Additionally, you can print and record the values for your own installations.
 
 | Used for...  | Port Number (default)  | Firewall  | Your installation  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | Available  | 1761 to 1768  | N/A  |   |
 | PeSIT  | 1761  |   |   |
 | Copilot Server  | 1766  |   |   |

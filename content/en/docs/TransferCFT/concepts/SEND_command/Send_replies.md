@@ -56,7 +56,7 @@ of a particular type. This message is a reply to a previous transfer from
 the partner.
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | [EXEC](../../../c_intro_userinterfaces/command_summary/parameter_intro/exec) | Filename. |
 | [IDA](../../../c_intro_userinterfaces/command_summary/parameter_intro/ida)  | Local transfer identifier assigned by the user or user application. The maximum length is 64 characters. |
 | [IDM](../../../c_intro_userinterfaces/command_summary/parameter_intro/idm)  | Message identifier. The value of this identifier is unrestricted. |

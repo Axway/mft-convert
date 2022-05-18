@@ -39,7 +39,7 @@ The symbolic variable syntax is as follows:
     by the character(s):
 
 | Character  | Indicates...  |
-| - - - | - - - |
+| --- | --- |
 | +  | That the variable toggles to upper case  |
 | - | That the variable toggles to lower case  |
 | :  | That the right padding of the variable is suppressed  |
@@ -348,7 +348,7 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 #### USER domain
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | &amp;SUSER  | 32  | Sending user name  |
 | &amp;RUSER  | 32  | Receiving user name  |
 | &amp;USERID  | 32  | Local user identifier  |
@@ -360,7 +360,7 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 #### APPLICATIONS domain
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | &amp;SAPPL |  <br/> 8<br/> 48 | Sending application name <br/> PeSIT E<br/> PeSIT E CFT/CFT |
 | &amp;RAPPL  |  <br/> 8<br/> 48 | Receiving application name<br/> PeSIT E PeSIT E CFT/CFT |
 | &amp;IDA  | 64  | Application identifier  |
@@ -370,7 +370,7 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 #### TRANSFER domain
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | &amp;IDT | 8  | Transfer identifier  |
 | &amp;NIDT  | 8  | Protocol transfer identifier  |
 | &amp;IDTU  | 8  | Local transfer counter (unique) |
@@ -397,7 +397,7 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 #### FILE domain
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | &amp;IDF  | 32  | Model file identifier (logical name)  |
 | &amp;FNAME | 512  | Physical file local name  |
 | &amp;FKEYLEN  | 5  | Length (received) of the indexed file key at the sender’s site  |
@@ -435,7 +435,7 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 #### MESSAGES domain
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | &amp;IDM | 32  | Message identifier  |
 | &amp;MSG  |  <br/> 80<br/> 512 | Message text <br/> PeSIT D CFT<br/> PeSIT E |
 
@@ -453,7 +453,7 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 - Day: DD
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | &amp;FDATE  | 8  | Date associated with the file  |
 | &amp;FTIME  | 8  | Time associated with the file  |
 | &amp;FYEAR  | 2  | Year associated with the file  |
@@ -463,7 +463,7 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 #### DATE and TIME associated with a CATALOG 
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | &amp;CDATE  | 8  | Catalog entry date  |
 | &amp;CTIME  | 8  | Catalog entry time  |
 | &amp;CYEAR  | 2  | Catalog entry year  |
@@ -473,7 +473,7 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 #### DATE and TIME associated with a TRANSFER 
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | &amp;BDATE  | 8  | Transfer start date <br/> When listcat content=debug the start date is<br/> DATEB instead of BDATE |
 | &amp;BTIME  | 8  | Transfer start time  |
 | &amp;BYEAR  | 2  | Start year for the transfer |
@@ -489,7 +489,7 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 #### CONTROL OUTPUT  domain
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | &amp;FLOG  | 512  | Name of last log file used by {{< TransferCFT/axwayvariablesComponentShortName  >}}  |
 | &amp;FACCNT  | 512  | Name of last statistics file used by {{< TransferCFT/axwayvariablesComponentShortName  >}}  |
 | &amp;FCAT | 512  | Name of catalog used by {{< TransferCFT/axwayvariablesComponentShortName  >}} |
@@ -497,7 +497,7 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 #### TRACKING domain
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | &amp;XFRCYCID  | 250  | Processing cycle identifier (set of tracked instances that concern a single transfer)  |
 | &amp;XFROBJID  | 32  | Tracked object name  |
 
@@ -506,7 +506,7 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 These variables are linked to SSL use.
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | &amp;SSL | 1  | Indicates if the session the transfer was carried out on was secured (‘1’) or not (‘0’)  |
 | &amp;SSLMODE  | 1  | SSL session mode on which the transfer was carried out. (C: Client / S: Server)  |
 | &amp;SSLAUTH  | 1  | Authentication rule<br /> (A: Anonymous /S: Server / B: Both)  |
@@ -520,7 +520,7 @@ These variables are linked to SSL use.
 #### SYSTEM  domain
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | &amp;SYSDATE  | 8  | System date  |
 | &amp;SYSTIME  | 8  | System time  |
 | &amp;SYSQQ  | 3  | Number of the day in the year associated with the system date  |
@@ -529,7 +529,7 @@ These variables are linked to SSL use.
 #### CAT/ ACCOUNT ENVIRONMENT domain
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | &amp;CFTNAME | 32  | Name of the {{< TransferCFT/axwayvariablesComponentShortName  >}} (CFTPARM PART parameter) |
 | &amp;CFTEVENT | 16  | The type of job submitted by {{< TransferCFT/axwayvariablesComponentShortName  >}}, see (2) below |
 | &amp;SJOBNAME  | 15  | The {{< TransferCFT/axwayvariablesComponentShortName  >}} jobname, which is the name of the job submitting the cronjob or exec procedure (z/OS)  |
@@ -569,7 +569,7 @@ Symbolic variables can be used:
     operations defined by the user in the procedures associated with the transfers
 
 | Parameter  | Symbolic variables  |
-| - - - | - - - |
+| --- | --- |
 | WFNAME, NFNAME, FNAME for the CFTSEND/SEND and CFTRECV/RECV commands  |  • &amp;FDATE, &amp;FTIME, &amp;FYEAR, &amp;FMONTH, &amp;FDAY<br /> <br/> • &amp;BDATE, &amp;BTIME, &amp;BYEAR, &amp;BMONTH, &amp;BDAY<br /> <br/> • &amp;SPART, &amp;RPART, &amp;PART, &amp;NPART, &amp;GROUP<br /> <br/> • &amp;SUSER, &amp;RUSER<br /> <br/> • &amp;SAPPL, &amp;RAPPL<br /> <br/> • &amp;IDF, &amp;PARM, &amp;IDA<br /> <br/> • &amp;NIDF<br /> <br/> • &amp;NFNAME (only for FNAME and WFNAME)<br /> <br/> • &amp;IDT (only the FNAME and WFNAME parameters when you receive a file)<br /> <br/> • &amp;SYSQQ<br/> • &amp;WORKINGDIR |
 | EXEC, EXECE, PREEXEC for the CFTSEND/SEND and CFTRECV/RECV commands<br/> EXECRE, EXECSE, EXECRF, EXECSF, EXECSFA, EXECSM, EXECRM, EXECSMA for CFTPARM command |  • &amp;SPART, &amp;RPART, &amp;PART, &amp;GROUP, &amp;NRPART, &amp;NSPART, &amp;USERID,&amp;GROUPID<br/> • &amp;BDATE, &amp;BTIME, &amp;BYEAR, &amp;BMONTH, &amp;BDAY<br/> • &amp;CDATE, &amp;CTIME, &amp;CYEAR, &amp;CMONTH, &amp;CDAY<br/> • &amp;FDATE, &amp;FTIME, &amp;FYEAR, &amp;FMONTH, &amp;FDAY<br/> • &amp;EDATE, &amp;ETIME, &amp;EYEAR, &amp;EMONTH, &amp;EDAY<br/> • &amp;COMMENT<br/> • &amp;SUSER, &amp;RUSER<br /> <br/> • &amp;SAPPL, &amp;RAPPL<br /> <br/> • &amp;PARM, &amp;MSG, &amp;PI99<br /> <br/> • &amp;DIAGI, &amp;DIAGP, &amp;DIAGC<br /> <br/> • &amp;FNAME*, &amp;UNIT*, &amp;UNITC*, &amp;NFNAME*, &amp;NFVER*, &amp;FDB*, &amp;SELFNAME*, &amp;FUNITC*, &amp;FUNIT*, &amp;FPATH*, &amp;FROOT*, &amp;SFNAME*, &amp;WORKINGDIR*, &amp;HOME*<br /> <br/> • &amp;IDF*, &amp;PIDTU, &amp;IDTU, &amp;IDT, &amp;NIDT, &amp;NIDF*, &amp;IDA, &amp;IDM, &amp;NSUB, &amp;PATH*, &amp;ROOT*, &amp;SUF*<br /> <br/> • &amp;FCODE, &amp;NCODE, &amp;fcharset, &amp;ncharset<br /> <br/> • &amp;BLKNUM<br /> <br/> • &amp;CFTEVENT, &amp;CFTNAME<br/> • &amp;FMCL, &amp;MODE, &amp;TRTYPE<br/> • &amp;FBLKSIZE*, &amp;FKEYLEN*, &amp;FKEYPOS*, &amp;NKEYLEN*, &amp;NKEYPOS*, &amp;FLRECL*, &amp;FORG*, &amp;FRECFM*, &amp;FSPACE*, &amp;FTYPE*<br/> • &amp;NBR*, &amp;NBC*, &amp;NBT*, &amp;TT, &amp;QQ, &amp;COMP, &amp;NOTIFY, &amp;SYSQQ<br/> • &amp;SSLAUTH, &amp;SSLCIPH, &amp;SSLMODE, &amp;SSLPROF, &amp;SSLPARM, &amp;SSLRMCN, &amp;SSLRMCA, &amp;SSLUSER, &amp;SSLCFNA, &amp;SSL<br/> • &amp;XLATE<br/> • &amp;SYSDATE, &amp;SYSTIME, &amp;SYSDAY<br/> • &amp;PRI<br/> • &amp;XFRCYCID, &amp;XFROBJID<br/> • &amp;EXITFREE<br/> • &amp;JOBNAME, &amp;NCHARSET<br/> • &amp;APPSTATE, &amp;PHASESTEP, &amp;PHASE<br/> • &amp;[TARGETAPPL](../parameter_intro/sourceappl)<br/> <blockquote> **Note**<br/> You cannot use the variables designated by asterisk (*) in procedures associated with the EXEC* parameters relative to message transfers.<br/> </blockquote>  |
 | EXEC for CFTACCNT or CFTLOG  | &amp;FACCNT, &amp;FLOG  |

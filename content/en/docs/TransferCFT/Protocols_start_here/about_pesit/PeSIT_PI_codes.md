@@ -7,7 +7,7 @@ codes used with {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
 ## About PeSIT PI codes
 
-During the file transfer phase, as seen in [How PeSIT works](), messages called FPDU (File
+During the file transfer phase, as seen in How PeSIT works, messages called FPDU (File
 transfer Protocol Data
 Units) are exchanged between partners. Each FPDU comprises a
 header (six bytes) that specifies the type of data transferred. The body of the FPDUs comprises a series of parameter identifiers (PI) used to specify
@@ -228,7 +228,7 @@ of the PeSIT protocol and defines it using the TYPE parameter of
 the transfer command:
 
 | TYPE parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | SEND TYPE = MESSAGE,... | Outgoing message |
 | SEND TYPE = REPLY,... |  PI 11 of the file for which the message conveys the acknowledgement |
 
@@ -429,7 +429,7 @@ a connection type depending on the SROUT parameter of the CFTPROT
 command:
 
 | SPROUT value  | Access level  |
-| - - - | - - - |
+| --- | --- |
 | SROUT = SEND  | Write access |
 | SROUT = RECV  | Read access |
 | SROUT = BOTH  | Mixed access |

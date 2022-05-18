@@ -9,7 +9,7 @@ To assist Axway Customer Support, the CFTSUPPORT command collects useful informa
 Collected information for the Transfer CFT {{< TransferCFT/PrimaryForOS400  >}} platform includes these different CFTPROD/SUPOUT file members:
 
 | File  | Comment  |
-| - - - | - - - |
+| --- | --- |
 | ABOUT  | About information  |
 | ALOG  | Cftlog file  |
 | CFTOUTQ  | List the Transfer CFT Out Queue messages  |

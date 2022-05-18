@@ -32,7 +32,7 @@ See Related topics below for links to more information on these access managemen
 1. Define the unified configuration settings so that you enable authentication yes, and select the method.
 
 | Parameters  | Default  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | cft.server.cftcoms.authentication_enable  | No  | Authentication for synchronous communication:<br/> • Yes: Enable password authentication<br/> • No: Disable authentication |
 | cft.server.authentication_method  | None  | Authentication method can be:<br/> • none: No method defined<br/> • system: Operating system<br/> • am: PassPort AM or AM exit<br/> • xfbadm: [xfbadmusr](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/use_cft_utilities#xfbadmusr1) utility |
 

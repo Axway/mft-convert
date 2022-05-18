@@ -42,7 +42,7 @@ The following table contains comments on the new sections.
 ****Section definitions for LISTCAT CONTENT=FULL****
 
 | Section  | Description  |
-| - - - | - - - |
+| --- | --- |
 | 1  | SSL session direction used for the transfer.<br/> C signifies client and S signifies server.  |
 | 2  | SSL session authentication mode used for the transfer.<br/> • S signifies that only the server was authenticated.<br/> • B signifies that the client and server were authenticated.<br/> • A signifies that the anonymous mode has been implemented.  |
 | 3  | Suite negotiated for the SSL session.<br/> This suite is set to one of the values from the suites supported by Transfer CFT (1, 2, 4, 5, 9, 10 or 47).  |

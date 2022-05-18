@@ -24,7 +24,7 @@ or intermediate authority certificate is deactivated, all dependent certificates
 The syntax is the same for both commands.
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | ID = string1..8 | Unique local identifier of the certificate(s) to be activated or deactivated, depending on the command.<br/> The * and ? wildcard characters are accepted for the ID parameter value. |
 | [ INUM= number1..99]  | Internal number for the intermediate certificates in an imported chain of certificates (in the PKI database). |
 | [PKIFNAME = string1..64]  | [PKIFNAME = string1..64] *Obsolete for Windows/Unix.*  |

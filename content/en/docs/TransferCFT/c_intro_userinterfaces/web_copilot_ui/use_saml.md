@@ -34,7 +34,7 @@ A user agent is usually a web browser. The person who uses the browser can be re
 To configure and use SAML SSO with {{< TransferCFT/axwayvariablesComponentLongName  >}}, you must:
 
 - Have a third- party IdP, such as Keycloak, installed and running.
-- Map the user roles between the IdP and Transfer CFT roles ([CFTROLE](../conf_intro/cftrole)). To view the CFTROLES/CFTPRIV sample, click [here](), or navigate locally in your {{< TransferCFT/axwayvariablesComponentLongName >}} installation to:
+- Map the user roles between the IdP and Transfer CFT roles (CFTROLE](../conf_intro/cftrole)). To view the CFTROLES/CFTPRIV sample, click [here, or navigate locally in your {{< TransferCFT/axwayvariablesComponentLongName >}} installation to:
     - distrib/template/conf/roles- smp.conf
     - runtime/conf/roles- smp.conf
 - If you use {{< TransferCFT/suitevariablesTransferCFTName >}} with Flow Manager, you must manually set the uconf parameter am.type=saml on each {{< TransferCFT/suitevariablesTransferCFTName >}} after registering.
@@ -46,11 +46,11 @@ This section describes the UCONF parameter settings required for SAML implement
 
 ## Set up SAML 
 
-1. Configure the {{< TransferCFT/axwayvariablesComponentLongName >}} REST API server, as Transfer CFT UI relies on the REST API. See [Configure the REST API server](../../../app_integration_intro/using_apis/api_intro/api_configure).
+1. Configure the {{< TransferCFT/axwayvariablesComponentLongName >}} REST API server, as Transfer CFT UI relies on the REST API. See Configure the REST API server](../../../app_integration_intro/using_apis/api_intro/api_configure).
 1. Insert the IdP certificate, used to sign SAML messages, in the PKI database:  
     PKIUTIL PKICER id=idp, iname=&lt;path to the idp certificate>
 1. Set the following UCONF parameters.
-1. Define the roles that you require for your {{< TransferCFT/axwayvariablesComponentLongName >}} users. To view the CFTROLES sample, click [here](), and edit using your favorite text editor.
+1. Define the roles that you require for your {{< TransferCFT/axwayvariablesComponentLongName >}} users. To view the CFTROLES sample, click [here, and edit using your favorite text editor.
 1. Start the Copilot server.
 1. <span id="step6"></span>Export the SAML SP ({{< TransferCFT/axwayvariablesComponentLongName >}}) metadata.
 

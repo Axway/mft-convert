@@ -7,7 +7,7 @@ weight: 310
 The following table describes the {{< TransferCFT/axwayvariablesComponentShortName  >}} user types and privileges.
 
 | Name  | Type  | Meaning  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | OPER | Optional | Privilege for Transfer CFT exclusively. Used to implement the CFTLOG command NOTIFY parameter. |
 | SYSNAM | Optional | Privilege for Transfer CFT exclusively. To be assigned if you are using the DECnet network. |
 | BYPASS | Optional | Privilege for Transfer CFT exclusively. Used to implement the mechanism controlling user accesses to the files to be transferred. |
@@ -28,7 +28,7 @@ According to your operating environment, you are advised to track monitor activi
 Quotas Used by {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
 | Quota  | Level  | Use  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | ASTLM | Process  | The ASTs are used for inter- process communications and network monitoring. The processes managing the network ( CFTTCPS) make the most intensive use of ASTs.<br /> For each process, there is one AST for inter- process communications, one AST per protocol using this type of network (TCP/IP) multiplied by the number of resources (CFTNET) in the same class, and two ASTs for each session in progress. |
 | BIOLM | Process  | Buffered I/Os are used for the file input/output operations and exchanges over the network.<br /> Each CFTTFIL process only performs one input/output at a given time.<br /> The processes managing the networks make the most intensive use of buffered I/Os.<br /> For each network process, there must be at least two buffered I/Os per active session. |
 | BYTLM | JOB  | This resource is associated with the buffered I/O.<br /> The use made of this resource is determined by the size of the disk write buffers and data exchanged over the network (CFTPROT command SRUSIZE and RRUSIZE parameters).<br /> It also depends on the number of active sessions.<br /> For the network buffers, you must include the protocol- level overhead, depending on the protocol used (session encapsulation).<br />  |

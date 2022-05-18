@@ -15,7 +15,7 @@ See also [CFTLOG](../../../web_copilot_ui/conf_intro/cftlog), the [exec](../../.
 In either command line or the user interface, set the following:
 
 | Parameter  | Value  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | cft.cftlog.fname  | $(cft.cftlog.fname)  | Replaces the CFTLOG logical name.  |
 | cft.cftlog.afname  | $(cft.cftlog.fname)  | Replaces the CFTLOGA logical name.  |
 | cft.cftlog.backup_count  | 3  | Number of rotate out files.  |

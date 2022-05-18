@@ -78,7 +78,7 @@ media</a>
 **Command syntax**: [CONFIG](../../command_summary#CONFIG)
 
 | Command and Parameters | Description |
-| - - - | - - - |
+| --- | --- |
 | **CONFIG** command | Use this command to redefine the data media with which the CFTUTIL utility operates.  |
 |  [FNAME](../../command_summary/parameter_intro/fname)<br/>  | For TYPE = {CAT &#124; INPUT &#124; OUTPUT &#124; PARM &#124; PART }<br/> Name of the file associated with the medium type accessed by CFTUTIL. |
 |  [FNAME](../../command_summary/parameter_intro/fname)<br/>  | For TYPE = COM<br/> There must be a correspondence with the CFTCOM NAME parameter that defines the communication medium as seen from Transfer CFT.<br/> For a communication medium supported by TCP/IP (MEDIACOM=TCPIP) this is either:<br/> • A host name (string) using the format: "protocol://machine:port", or<br/> • A configuration file (filename) |

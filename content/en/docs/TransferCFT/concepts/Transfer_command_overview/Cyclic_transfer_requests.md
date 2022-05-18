@@ -60,7 +60,7 @@ the time the catalog is queried (LISTCAT CONTENT=BRIEF).
 ******Generic entry values******
 
 | Diagp value  | Cycle  |
-| - - - | - - - |
+| --- | --- |
 | MIN CYC  | Cycle expressed in minutes  |
 | DAY CYC  | Cycle expressed in days  |
 | MON CYC  | Cycle expressed in months  |

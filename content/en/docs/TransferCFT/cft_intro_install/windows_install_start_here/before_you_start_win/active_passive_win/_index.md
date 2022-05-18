@@ -61,7 +61,7 @@ Download and unzip the {{< TransferCFT/suitevariablesTransferCFTName  >}} instal
 Create as many copies of the initialize.properties file as you have hosts in the installation. Customize the *n* initialize.properties file with the following parameters.
 
 | CFT_Full_Hostname  | Host Address of the local server: FQDN (Fully Qualified Domain Name) or IP Address.<br/> When you re installing a cluster, there are two ways to define this parameter:<br/> • If you do not set this in the silent file, the installation determines it (if the machine is correctly configured)<br/><br/> • Set the FQDN for each machine in the cluster, that is, for each host installation |
-| - - - | - - - |
+| --- | --- |
 | Runtimedir  | The runtime directory must be in a shared directory.  |
 | LoadBalancer_Host  | Specify the host address of the load balancer, which is the cluster's public IP address in an active/passive deployment.<br/> <blockquote> **Note**<br/> The load balancer is used to connect to the Transfer CFT Copilot server.<br/> </blockquote>  |
 | LoadBalancer_Port  | Specify the load balancer port, which is redirected to the Central Governance dedicated port of the Transfer CFT UI Server.  |

@@ -3,8 +3,8 @@ title: "Creating  an API application"
 linkTitle: "Creating an API application"
 weight: 220
 --- The example provided below was designed for the ****cft- tcp.conf**** configuration example located in *&lt;installdir>/runtime/conf/*. For
-this example, you should have already customized this file using the method described in [*Running
-{{< TransferCFT/axwayvariablesComponentShortName  >}} for the first time*]().
+this example, you should have already customized this file using the method described in *Running
+{{< TransferCFT/axwayvariablesComponentShortName  >}} for the first time*.
 
 ## Application components
 

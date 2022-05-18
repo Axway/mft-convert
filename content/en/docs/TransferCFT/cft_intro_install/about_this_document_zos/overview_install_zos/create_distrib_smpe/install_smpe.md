@@ -7,7 +7,7 @@ weight: 180
 The Transfer CFT software has a SYSMOD FMID (Function Module ID) that identifies the software and its release number. For example, FMID TCF0300 identifies the Transfer CFT 3.3.2 release.
 
 | FMID | Format |
-| - - - | - - - |
+| --- | --- |
 | TCF0100 |   |
 
 ## Upload the SMP/E package to the mainframe
@@ -17,7 +17,7 @@ The Transfer CFT software has a SYSMOD FMID (Function Module ID) that identifie
 1. Enter the following parameters in the console. Upon completion you require an FTP client.
 
 | Question | Default value |
-| - - - | - - - |
+| --- | --- |
 | Dataset name for the product SMPE samples | AXWAY.SMPE.CFT332.SMPCNTL |
 | USS SMP/E Network Temporary Store | /home/AXWAY/smpnts |
 | USS package subdirectory | CFT332 |
@@ -41,7 +41,7 @@ The user ID you use must have read access to the SAF facility class resources GI
 1. Edit the sample jobs in the following table, modifying as necessary; supply a valid JOB JCL card statement, select and modify the dataset qualifier &HLQ&, and the optional device &UNIT& and volume &VOLUME&.  
 
 | Member Name | Description |
-| - - - | - - - |
+| --- | --- |
 | $C01DCSI | Allocate the SMP/E CSI, and the operational and work data sets used by SMP/E. |
 | $C02DZON | Define the SMP/E distribution and target zones. |
 
@@ -52,14 +52,14 @@ The user ID you use must have read access to the SAF facility class resources GI
 1. Edit the sample job listed in the following table, modifying as necessary; supply a valid JOB JCL card statement, select and modify the dataset qualifier &HLQ&.  
 
 | Member name | Description |
-| - - - | - - - |
+| --- | --- |
 | $C10RECV | UNPAX the archive package and RECEIVE the FMIDs functions. |
 
 1. Submit the job.  
     The following data sets (approximately 300 cylinders) are created and suffixed by their corresponding FMID identifier (TCF0nnn) and RELFILEs number (Fn).  
 
 | File Number | Data Set Suffix | Description |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 |  1 | TCF0nnn.F1 | HFS pax files |
 |  2 | TCF0nnn.F2 | Transfer CFT XML files |
 |  3 | TCF0nnn.F3 | Transfer CFT exec procedures  |
@@ -81,7 +81,7 @@ The user ID you use must have read access to the SAF facility class resources GI
 1. Edit the sample jobs that are listed in the following table, modifying as necessary; supply a valid JOB JCL card statement, select and modify the dataset qualifier &HLQ& and the optional device &UNIT& and volume &VOLUME&.  
 
 | Member name | Description |
-| - - - | - - - |
+| --- | --- |
 | $C20ALLT | Allocate the Target libraries. |
 | $C30FAPP | Perform an APPLY (with the CHECK operand) to install the SYSMOD functions in the target zone and libraries. |
 
@@ -90,7 +90,7 @@ The user ID you use must have read access to the SAF facility class resources GI
     The $C20ALLT job creates, and the $C30FAPP job updates, the following data sets (approximately 300 cylinders).  
 
 | Data Set Suffix | File Type | Description |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | CF0nnnnn.SCR  | PDSE / VB | HFS pax files |
 | CF0nnnnn.XMLLIB  | PDSE / VB | Transfer CFT XML files |
 | CF0nnnnn.EXEC  | PDS / FB | Transfer CFT exec procedures  |
@@ -112,7 +112,7 @@ The user ID you use must have read access to the SAF facility class resources GI
     Edit the sample job listed below, modifying as necessary: supply a valid JOB JCL card statement, choose and modify the dataset qualifier &HLQ& of the SMP/E target libraries, and select the appropriate Transfer CFT instance qualifier &CFT& and Transfer CFT instance device &UNIT& and volume &VOLUME&.
 
 | Member Name | Description |
-| - - - | - - - |
+| --- | --- |
 | $C40ICFT | Creates the Transfer CFT instance files. |
 
     Submit the job.
@@ -126,7 +126,7 @@ The user ID you use must have read access to the SAF facility class resources GI
     The following table lists additional sample jobs.
 
 | Member Name | Description |
-| - - - | - - - |
+| --- | --- |
 | $C10REJT | Performs a REJECT of the SYSMODs in the SMP/E global zone. |
 | $C50ALLD | Allocates the distribution libraries. |
 | $C60FACC | Performs an ACCEPT (with the CHECK operand) the SYSMOD functions in the distribution zone and libraries. |

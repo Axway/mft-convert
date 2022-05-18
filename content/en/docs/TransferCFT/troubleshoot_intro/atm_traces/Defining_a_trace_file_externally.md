@@ -6,7 +6,7 @@ weight: 310
 following table.
 
 | Action &lt;/th&gt;  | Command &lt;/th&gt;  |
-| - - - | - - - |
+| --- | --- |
 | Define the trace file or files:<br/> • Before Transfer CFT starts <br/> • During Transfer CFT operations  |  <br/> • TRCFILE<br/> • SETTRC |
 | Start information collection:<br/> • Transfer CFT start<br/> • During Transfer CFT operations  | STARTTRC |
 | Stop information collection  | STOPTRC  |
@@ -22,7 +22,7 @@ be used for the various trace processes.
 ### Define trace files
 
 | Trace file definition | Command &lt;/th&gt;  | Parameter &lt;/th&gt;  | Description &lt;/th&gt;  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | Before starting<br /> Transfer CFT  | CFTPARM  | TRACE=identifier  | CFTTRACE command identifier  |
 |   | CFTTRACE  |   |   |
 |   | or TRCFILE (1)  | TYPE=TRACE  | The defined file is a trace file  |
@@ -34,7 +34,7 @@ that do not allow dynamic file definition.
 ### Start collecting information
 
 | Starting information collection &lt;/th&gt;  | Command used to define the file &lt;/th&gt;  | Parameter &lt;/th&gt;  | Command to enter &lt;/th&gt;  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | When starting up Transfer CFT  | CFTTRACE  | START=CFT |   |
 |   | TRCFILE (1)  | START=CFT  | CFTTRACE  |
 | During Transfer CFT<br /> operations  | CFTTRACE  | START=DELAYED  | STARTTRC  |
@@ -46,7 +46,7 @@ that do not allow dynamic file definition.
 ### Stop collecting - close the file and shutdown the process
 
 | Action &lt;/th&gt;  | Define the file with &lt;/th&gt;  | Enter the command &lt;/th&gt;  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | Stop information collection  | CFTTRACE  | STOPTRC |
 |   | SETTR  | STOPTRC  |
 | Stop collection, close the files and shutdown the process  | CFTTRACE  | STOPTRC<br /> and<br /> SETTRC MODE=DELETE |

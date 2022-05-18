@@ -55,7 +55,7 @@ With the **SAF class** method of access management, you define the mapping betwe
 When the access management method is **SAF class**, each user role is associated with a security resource (RACF, TSS, ACF2). You can set the name of the resource in the corresponding UCONF variable using the user norms in the table below.
 
 | Example resource name  | UCONF variable/role  | Access to resource  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | CFT.ROLE.ADMIN  | am.internal.role.admin  | READ  |
 | CFT.ROLE.OPERATOR  | am.internal.role.helpdesk  | READ  |
 | CFT.ROLE.PARTNER  | am.internal.role.partnermanager  | READ  |

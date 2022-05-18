@@ -15,7 +15,7 @@ The {{< TransferCFT/axwayvariablesComponentShortName  >}} z/OS templates are loc
 ## Assembler language
 
 | Template  | Function  | Services |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | AAPIDLL | cftai - cftac - cftinit  | COM - SEND - OPEN - CLOSE - (SELECT - NEXT) or (SELECT240 - NEXT240)  |
 | AXPIDLL | cftaix - cftac - cftinit  | COM - SEND - OPEN - CLOSE - DO - SELECT (NEXT or NEXT240)  |
 
@@ -24,7 +24,7 @@ The {{< TransferCFT/axwayvariablesComponentShortName  >}} z/OS templates are loc
 ## C language
 
 | Template  | Function  | Services | Description  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | CAPI2A | ipcai2_*  |  • ipcai2_initialize- ipcai2_catalog_open- ipcai2_catalog_selection_new<br/> • ipcai2_catalog_selection_set<br/> • ipcai2_catalog_selection_sortby<br/> • ipcai2_catalog_selection_skip<br/> • ipcai2_catalog_selection_next<br/> • ipcai2_catalog_record_get<br/> • ipcai2_catalog_info_get<br/> • ipcai2_catalog_selection_delete<br/> • ipcai2_catalog_close- ipcai2_finalize- <br/> • ipcai2_get_errno_str | {{< TransferCFT/axwayvariablesComponentShortName  >}} catalog API sample program, listing all catalog content.  |
 | CAPI2B | ipcai2_*  |  • ipcai2_initialize<br/> • ipcai2_catalog_open<br/> • ipcai2_catalog_selection_new<br/> • ipcai2_catalog_selection_set<br/> • ipcai2_catalog_selection_sortby<br/> • ipcai2_catalog_selection_skip<br/> • ipcai2_catalog_selection_next<br/> • ipcai2_catalog_record_get<br/> • ipcai2_catalog_info_get<br/> • ipcai2_catalog_selection_delete<br/> • ipcai2_catalog_close<br/> • ipcai2_finalize<br/> • ipcai2_get_errno_str | {{< TransferCFT/axwayvariablesComponentShortName  >}} catalog API sample program, which changes all Terminated transfers to Ended.  |
 | CAPIC | cftai - cftac - cftau  | OPEN- SELECT - NEXT - MODIFY - CLOSE - SEND - RECV - HALT - START - DELETE  | C Sample for {{< TransferCFT/axwayvariablesComponentShortName  >}} API.  |
@@ -37,7 +37,7 @@ The {{< TransferCFT/axwayvariablesComponentShortName  >}} z/OS templates are loc
 ## COBOL language
 
 | Template  | Function  | Services | Description  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | OAPI2A | ipcai2_*  |  • ipcai2_initialize<br/> • ipcai2_catalog_open<br/> • ipcai2_catalog_selection_new<br/> • ipcai2_catalog_selection_set<br/> • ipcai2_catalog_selection_sortby<br/> • ipcai2_catalog_selection_skip<br/> • ipcai2_catalog_selection_next<br/> • ipcai2_catalog_record_get<br/> • ipcai2_catalog_info_get<br/> • ipcai2_catalog_selection_delete<br/> • ipcai2_catalog_close<br/> • ipcai2_finalize<br/> • ipcai2_get_errno_str | {{< TransferCFT/axwayvariablesComponentShortName  >}} catalog API template program, which lists all catalog content.  |
 | OAPI2AS | ipcai2_*  |  • ipcai2_initialize<br/> • ipcai2_catalog_open<br/> • ipcai2_catalog_selection_new<br/> • ipcai2_catalog_selection_set<br/> • ipcai2_catalog_selection_sortby<br/> • ipcai2_catalog_selection_skip<br/> • ipcai2_catalog_selection_next<br/> • ipcai2_catalog_record_get<br/> • ipcai2_catalog_info_get<br/> • ipcai2_catalog_selection_delete<br/> • ipcai2_catalog_close<br/> • ipcai2_finalize<br/> • ipcai2_get_errno_str | {{< TransferCFT/axwayvariablesComponentShortName  >}} catalog API template program, which lists all of the catalog content.  |
 | OAPI2B | ipcai2_*  |  • ipcai2_initialize- <br/> • ipcai2_catalog_open<br/> • ipcai2_catalog_selection_new<br/> • ipcai2_catalog_selection_set<br/> • ipcai2_catalog_selection_sortby<br/> • ipcai2_catalog_selection_skip<br/> • ipcai2_catalog_selection_next<br/> • ipcai2_catalog_record_get<br/> • ipcai2_catalog_info_get<br/> • ipcai2_catalog_selection_delete<br/> • ipcai2_catalog_close<br/> • ipcai2_finalize<br/> • ipcai2_get_errno_str | {{< TransferCFT/axwayvariablesComponentShortName  >}} catalog API template program, which changes all successful transfers to a completed state.  |
@@ -51,7 +51,7 @@ The {{< TransferCFT/axwayvariablesComponentShortName  >}} z/OS templates are loc
 | OAPIWS | CFTI - CFTU  | SEND - OPEN - CLOSE - (SELECT - NEXT) or (SELECT240 - NEXT240)  | Perform a SEND request with an IDA and wait for the transfer to complete successfully, reach the time out, or abort the transfer.  |
 
 | Template  | Function  | Services |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | OAPI2A | ipcai2_*  |  • ipcai2_initialize<br/> • ipcai2_catalog_open<br/> • ipcai2_catalog_selection_new<br/> • ipcai2_catalog_selection_set<br/> • ipcai2_catalog_selection_sortby<br/> • ipcai2_catalog_selection_skip<br/> • ipcai2_catalog_selection_next<br/> • ipcai2_catalog_record_get<br/> • ipcai2_catalog_info_get<br/> • ipcai2_catalog_selection_delete<br/> • ipcai2_catalog_close<br/> • ipcai2_finalize<br/> • ipcai2_get_errno_str |
 | OAPI2AS | ipcai2_*  |  • ipcai2_initialize<br/> • ipcai2_catalog_open<br/> • ipcai2_catalog_selection_new<br/> • ipcai2_catalog_selection_set<br/> • ipcai2_catalog_selection_sortby<br/> • ipcai2_catalog_selection_skip<br/> • ipcai2_catalog_selection_next<br/> • ipcai2_catalog_record_get<br/> • ipcai2_catalog_info_get<br/> • ipcai2_catalog_selection_delete<br/> • ipcai2_catalog_close<br/> • ipcai2_finalize<br/> • ipcai2_get_errno_str |
 | OAPI2B | ipcai2_*  |  • ipcai2_initialize- <br/> • ipcai2_catalog_open<br/> • ipcai2_catalog_selection_new<br/> • ipcai2_catalog_selection_set<br/> • ipcai2_catalog_selection_sortby<br/> • ipcai2_catalog_selection_skip<br/> • ipcai2_catalog_selection_next<br/> • ipcai2_catalog_record_get<br/> • ipcai2_catalog_info_get<br/> • ipcai2_catalog_selection_delete<br/> • ipcai2_catalog_close<br/> • ipcai2_finalize<br/> • ipcai2_get_errno_str |

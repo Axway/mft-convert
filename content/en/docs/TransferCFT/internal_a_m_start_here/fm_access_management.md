@@ -44,7 +44,7 @@ You can assign users to one or more roles. Typically, users with multiple roles 
 Examples of roles can be ADMINISTRATOR, PARTNER MANAGER, IT MANAGER, and so on.
 
 | Field | Type | Comment |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | id | String32 | Role identifier |
 | comment | String80 | Comment |
 | privs[] | List of String32 | List of privileges associated to this role (1 to 128) |
@@ -75,7 +75,7 @@ CFTROLE      ID          = 'Application',
 Privileges give users authorization to access and perform actions in the user interface. Examples of actions include CREATE, DELETE, VIEW, EDIT (use \* to assign all actions).
 
 | Field | Type | Comment |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | id | String32 | Privilege identifier |
 | comment | String80 | Comment |
 | resource | String32 | Resource on which this privilege applies |
@@ -125,7 +125,7 @@ Comparison operators include:
 The following table is an exhaustive list of all properties for all resources. These properties are available regardless of the action to be checked. However, if a resource has no properties, setting a condition for it has no impact.
 
 | Resource | Actions | Properties |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | CONFIGURATION:PKICER | CREATE, DELETE, VIEW, EDIT, ACTIVATE, DEACTIVATE | ID |
 | CONFIGURATION:PKIENTITY | CREATE, DELETE, VIEW, EDIT, ACTIVATE, DEACTIVATE | ID |
 | CONFIGURATION:PKIKEY | CREATE, DELETE, VIEW, EDIT, ACTIVATE, DEACTIVATE | ID |

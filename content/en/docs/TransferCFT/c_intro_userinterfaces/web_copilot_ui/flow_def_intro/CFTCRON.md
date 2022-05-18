@@ -2,7 +2,7 @@
 title: "Scheduling script execution - CFTCRON"
 linkTitle: "Cron jobs - CFTCRON"
 weight: 250
---- The [CRONJOB Job Scheduler]() feature enables Transfer CFT to execute scripts at predetermined
+--- The CRONJOB Job Scheduler feature enables Transfer CFT to execute scripts at predetermined
 dates and times. An example script, `cron- wlog.cmd`, is delivered in the installed product
 packaging ($CFTDIRRUNTIME/exec on Unix/Windows). You can adapt this example to suit your local requirements.
 
@@ -67,7 +67,7 @@ minutes, while an upper case M defines months.
 - A, b, c are integers
 
 | Rule | Syntax | Alternate syntax |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | time | time_element; time<br/> time_element |   |
 | time_element | seconds= content<br/> minutes= content<br/> hours= content<br/> monthdays= content<br/> weekdays= content<br/> months= content | s= content<br/> m= content<br/> h= content<br/> D= content<br/> W= content<br/> M= content |
 | content | content_elt, content<br/> content_elt |   |
@@ -78,7 +78,7 @@ minutes, while an upper case M defines months.
 ### Time parameter descriptions
 
 | Symbol  | Description  | Values  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | s  | Second  | 0 to 59  |
 | m  | Minute  | 0 to 59  |
 | h  | Hour  | 0 to 23  |
@@ -89,7 +89,7 @@ minutes, while an upper case M defines months.
 ### Time syntax examples
 
 | If you use this syntax… | The job is executed… |
-| - - - | - - - |
+| --- | --- |
 | m=30 | Once an hour at minute 30 |
 | m=1,5,40 | 3 times an hour for minutes 1, 5, and 40 |
 | m=[30:40]/2 | Every 2 minutes, of every hour, between the minutes 30 and 40, this means on the minute for 30, 32, 34, 36, 38, 40 |
@@ -124,7 +124,7 @@ The table below lists the symbolic variables available in the CRONJOB
 procedure. Define these using the EXEC parameter of the CFTCRON command.
 
 | Symbolic variable | Corresponding substituted value |
-| - - - | - - - |
+| --- | --- |
 | &amp;CFTEVENT | Fixed name=CRONJOB  |
 | &amp;CFTNAME | The PART value in the command CFTPARM  |
 | &amp;SYSDATE | System date |

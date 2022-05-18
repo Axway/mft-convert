@@ -21,7 +21,7 @@ The file type. Some FTYPE parameter values are OS specific. Refer to the Transfe
 ****UNIX<span id="UNIX_ftype"></span>****
 
 | FTYPE  | FCODE  | Type of sent file  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | ‘ ‘  | BINARY  | Binary  |
 | B  | BINARY  | Binary  |
 | V  | BINARY  | Binary file emulating locally a variable file format  |
@@ -35,7 +35,7 @@ See also, [UNIX &gt; Transferable files](../../../../cft_intro_install/unix_inst
 ****Windows****
 
 | FTYPE  | FCODE  | Type of sent file  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | ' '  | BINARY  | Binary  |
 | B  | BINARY  | Binary  |
 | V  | BINARY  | Binary file emulating locally a variable file format  |
@@ -54,7 +54,7 @@ See also, [Windows &gt; Transferable files](../../../../cft_intro_install/window
 Implicit indicates that the FTYPE is automatically detected by the OS.
 
 | FTYPE  | FCODE  | Type of sent file  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | Implicit  | BINARY  | Disk sequential files |
 | Implicit  | BINARY  | Members of PDS files (1 transfer per member) |
 | Implicit  | BINARY  | Designated version of a file in GDG |
@@ -67,7 +67,7 @@ Implicit indicates that the FTYPE is automatically detected by the OS.
 HFS file characteristics
 
 | FTYPE  | FCODE  | Type of sent file  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | B | BINARY  | Binary file (default) |
 | T | EBCDIC  | Text file |
 | J  | EBCDIC  | Stream text<br/> Using stream text (J) allows a text type file to be sent that contains records that exceed 32 KB. As opposed to text type (FTYPE=T), stream text does not add an EOL sequence (LF or CRLF) to the received file.<br/> When using stream text (FTYPE=J), the sender and the receiver must both have the FTYPE set to J. Setting only the sender or receiver to FTYPE=J results in unexpected content for the transferred file. |
@@ -87,7 +87,7 @@ The following table lists the different types of files that can be used accordin
 > Bold values indicate a recommended combination. For example, FTYPE=D and FRECFM=V, are the recommended settings for PF- DTA files with variable data.
 
 | FTYPE | FRECFM | Supported files and data organizations (if applicable). |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | ‘D’  | ‘F’  | **PF- DTA with fixed data**, PF- DTA with variable data, PF- SRC, SAVF  |
 | ‘D’  | ‘V’  | PF- DTA with fixed data, **PF- DTA with variable data**, PF- SRC, SAVF  |
 | ‘S’  | ‘F’  | PF- DTA with fixed data, PF- DTA with variable data, **PF- SRC** |
@@ -101,7 +101,7 @@ The following table lists the different types of files that can be used accordin
 The behavior of the values ‘’ and ‘ ’, for FTYPE and FRECFM respectively, are not detailed in the following table. These values correspond to `undefined`, meaning that the transfer in emission takes the value of both the file type and the member content..
 
 |   | Default FTYPE | Default FRECFM |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | PF- DTA<br /> Member containing fixed data | ‘D’  | ‘F’  |
 | PF- DTA<br /> Member containing variable data | ‘D’  | ‘V’  |
 | PF- SRC  | ‘D’  | ‘F’  |
@@ -112,7 +112,7 @@ The behavior of the values ‘’ and ‘ ’, for FTYPE and FRECFM respectively
 The following table lists the different types of files that can be used according to the type of data to transfer when using IFS.
 
 | FTYPE  | FRECFM  | Type of file  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | ‘S’  | ‘V’, ‘F’, ‘ ’  | Text  |
 | ‘D’ , ‘ ’  | ‘V’, ‘F’, ‘ ’  | Text  |
 | ‘E’  | ‘V’, ‘F’, ‘ ’  | Text  |
@@ -128,7 +128,7 @@ The following table lists the different types of files that can be used accordin
 For Unix files, use the values in the Unix [table](#UNIX_ftype) above. For native HP NonStop files, the values are as follows.
 
 | FTYPE  | FCODE  | Type of sent file  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | ‘ ‘  | BINARY  | Binary  |
 | B  | BINARY  | Binary  |
 | V  | BINARY  | Binary file emulating locally a variable file format  |
@@ -144,7 +144,7 @@ For Unix files, use the values in the Unix [table](#UNIX_ftype) above. For nativ
 The FTYPE is automatically detected when sending a file.
 
 | FTYPE / FRECFM  | FCODE  | Type of sent file  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | ' ' / 'F'  | ASCII  | FAB$C_FIX  |
 | ' ' / 'U'  | ASCII  | FAB$C_UDF  |
 | 'P' / 'V'  | ASCII  | FAB$C_VAR  |

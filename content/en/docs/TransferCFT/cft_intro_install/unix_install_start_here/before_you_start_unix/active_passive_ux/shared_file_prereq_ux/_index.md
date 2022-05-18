@@ -18,7 +18,7 @@ The following table lists the file systems that are supported and tested with Tr
 ****<span id="Supported_fs_ux_standalone"></span>Supported file systems****
 
 | Operating system  | File system  |
-| - - - | - - - |
+| --- | --- |
 | AIX  | GPFS, NFSv3, NFSv4*  |
 | HP- UX  | NFSv3, NFSv4*  |
 | Linux- x86  | GFS2, GPFS, GlusterFS, NFSv3, NFSv4*  |
@@ -40,7 +40,7 @@ You can use any POSIX compliant shared file system for both Transfer CFT data fi
 The following non- exhaustive table lists shared file systems that have been tested with Transfer CFT.
 
 | Operating system  | Supported  | Unsupported  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | AIX  | GPFS, NFSv4*  | NFSv3, CXFS, VeritasSF  |
 | HP- UX  | NFSv4*  | NFSv3, CXFS, VeritasSF  |
 | Linux- x86  | GPFS, GFS2, NFSv4*, AWS EFS  | NFSv3, CXFS, ACFS, OCFSv1, OCFSv2, QFS, VeritasSF  |

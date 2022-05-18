@@ -48,7 +48,7 @@ If the output file:
     - For the systems below not handling this concept:  
 
 | **Windows**  | 512. |
-| - - - | - - - |
+| --- | --- |
 | **UNIX** | 512 for text files (OTYPE=T, X or O).<br /> 4096 for binary or variable files (OTYPE={B &#124; V}). |
 
 [Return to Command index](../../)

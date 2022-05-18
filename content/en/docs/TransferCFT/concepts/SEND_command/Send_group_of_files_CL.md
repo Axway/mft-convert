@@ -163,7 +163,7 @@ Mandatory parameters for homogeneous sends include:
 - SYST: Defined for a remote partner, where the default value is the local operating system. Homogeneous transfers are only possible when CFTPART command's SYST value is the same as the local operating system.
 
 | Platform  | UNIX- like environment  | Native  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | UNIX  | Available  | Available  |
 | Windows  | Not supported  | Available  |
 | z/OS  | Not supported  | Available  |
@@ -215,7 +215,7 @@ To force heterogeneous mode:
 ********Unix/Windows********
 
 | Parameter  | Default  | Description  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | cft.server.force_heterogeneous_mode  | No  | Force heterogeneous mode for group file transfers. This parameter replaces the deprecated environment variable: CFTSFMCPY.<br/> Possible values:<br/> • Yes: Force heterogeneous mode exchanges (override homogeneous mode)<br/> • No: Standard heterogeneous and homogeneous functioning |
 
 #### Sending to a remote site in homogeneous mode
@@ -385,7 +385,7 @@ WFNAME = '&idtu.tmp'
 A STRJCMP pattern- matching filter can contain the asterisk (\*) and/or the question mark (?) characters. The STRJCMP filter characters are interpreted as follows:
 
 | Character  | Description  | Example  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | *  | Indicates any sequence of zero or more characters.  | The filter "*.dat" selects any file name that has the extension ".dat".  |
 | ?  | Indicates any single character.  | The filter "T*.???" selects any file name starting with a 'T' and having an extension of exactly three characters.  |
 
@@ -396,7 +396,7 @@ EREGEX (extended regular expressions) is the use of special characters and strin
 In POSIX- Extended regular expressions, all characters match themselves meaning they match a sub- string anywhere inside the string to be searched. For example *abc*, matches abc123, 123abc, and 123abcxyz. Some symbols are exceptions though; commonly used symbols and example usages are listed in the following table.
 
 | Symbol  | Indicates  | Example  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | .  | Any character except newline (line break)  | *a.c* matches abc  |
 | [ ]  | Or  | *[def]* means d or e or f  |
 | {}  | Exactly  | *{3}* means exactly three  |
@@ -431,7 +431,7 @@ Parameter values:
 Simplified catalog view when set to CONTINUE
 
 | Transfer type  | IDTU  | PIDTU  | Phasestep  | Diagi  |
-| - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- |
 | Parent  | 1  |   | H  | 0  |
 | Child  | 2  | 1  | K  | 110  |
 | Child  | 3  | 1  | C  | 0  |
@@ -440,7 +440,7 @@ Simplified catalog view when set to CONTINUE
 Simplified catalog view when set to ABORT
 
 | Transfer type  | IDTU  | PIDTU  | Phasestep  | Diagi  |
-| - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- |
 | Parent  | 1  |   | H  | 200  |
 | Child  | 2  | 1  | K  | 132  |
 

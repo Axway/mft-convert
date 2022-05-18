@@ -78,7 +78,7 @@ When the general resource class (safcftcl) is applied by RACF, the authorized us
 #### Security system installation procedures
 
 | Job | Installation procedure |
-| - - - | - - - |
+| --- | --- |
 | H84SAFDF | Creates RACF general resource CFT profiles |
 | H85SAFPR | Executes RACF PERMIT commands |
 | H88PARM | Edits the parameter file (adds CFTAPPL) |
@@ -88,7 +88,7 @@ When the general resource class (safcftcl) is applied by RACF, the authorized us
 #### Delete security definitions
 
 | Job | Description |
-| - - - | - - - |
+| --- | --- |
 | H89SAFDD | Used to delete the RACF definitions created by the H84SAFDF job. |
 | H89SAFDS | Used to delete the RACF definitions created by the H89SAFAS job. |
 

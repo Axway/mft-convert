@@ -19,7 +19,7 @@ Configuration** window to begin editing parameters.
 ****PassPort AM connector parameters****
 
 | Parameter  | Description  |
-| - - - | - - - |
+| --- | --- |
 | <div > am.passport.hostname </div>  | <div > PassPort AM server hostname/IP address. </div>  |
 | <div > am.passport.port </div>  | <div > PassPort AM server port. </div>  |
 | am.passport.srchost  | The PassPort AM local network interface for outgoing connections. |
@@ -64,7 +64,7 @@ Configuration** window to begin editing parameters.
 ## Optional PassPort AM
 
 | Parameter  | Definition  |
-| - - - | - - - |
+| --- | --- |
 | am.passport.userctrl.check_permissions_on_transfer_execution  | <span id="Check"></span>Check the permissions for the execute action on the transfer resource when the {{< TransferCFT/axwayvariablesComponentShortName  >}} user control is enabled ([USERCTRL](../../../c_intro_userinterfaces/command_summary/parameter_intro/userctrl)=YES). To disable the permission check, set the following parameter to No. The default is Yes. |
 | am.passport.domain  | PassPort AM domain.  |
 | am.passport.max_connections  | Maximum number of connections with PassPort.  |

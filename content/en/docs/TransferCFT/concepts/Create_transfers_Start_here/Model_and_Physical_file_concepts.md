@@ -446,13 +446,13 @@ generic IDF**
 #### Global Receptions
 
 | **ODETTE, PeSIT D CFT profile, PeSIT E**  | Available only with the protocols mentioned above.  |
-| - - - | - - - |
+| --- | --- |
 
 This mechanism allows the requester to receive all the files pending
 at the server end.
 
 | **ODETTE**  | Only the following receive command is valid:<br /> RECV IDF = *<br /> Although sequencing is at the sender’s initiative, the receiver end catalog will contain a record corresponding to the global reception request and a record for each reception, in the same way as for the other protocols. This command provides the possibility to change direction and hence globally receive all the files pending at the remote partner end.  |
-| - - - | - - - |
+| --- | --- |
 | **PeSIT D CFT profile**  | To activate a reception from a requester {{< TransferCFT/axwayvariablesComponentShortName  >}} to a server monitor, only the following commands are valid:<br /> RECV IDF = * and RECV IDF = *, FILE = ALL |
 | **PeSIT D CFT profile, PeSIT E**  | Possible between two {{< TransferCFT/axwayvariablesComponentShortName  >}}s, using one of these two protocols.<br /> Between two CFTs, this is a special case of selective reception, the command being RECV IDF = *, FILE = ALL  |
 

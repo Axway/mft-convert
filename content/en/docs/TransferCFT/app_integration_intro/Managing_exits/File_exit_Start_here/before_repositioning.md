@@ -16,7 +16,7 @@ the beginning of the file by setting the ret1 field to 1.
 ### Fields to define
 
 | Field  | Description  |
-| - - - | - - - |
+| --- | --- |
 | ret1 | Return code:<br/> • 0: processing ok<br/> • 1: restart at the beginning of the file<br/> • 9: refusal and end of transfer |
 | ret2 | Error message  |
 | msg | Message sent to the standard output  |
@@ -24,7 +24,7 @@ the beginning of the file by setting the ret1 field to 1.
 ### Field values
 
 | Field | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
-| - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- |
 | mtype | 5 | 5 | 5 | 5 |
 | masc | = | * | = | * |
 | access | = | = | = | = |

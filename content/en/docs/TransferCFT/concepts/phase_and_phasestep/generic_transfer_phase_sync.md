@@ -7,7 +7,7 @@ weight: 210
 The table below shows a generic transfer A0000001, in the phase ****A**** along with its children A0000002 through A000000n.
 
 | A<br/> Pre- processing | T<br/> Transfer | Y<br/> Post- processing | Z<br/> Ack- processing | X<br/> Done |
-| - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- |
 | **A0000001**  |   |   |   |   |
 | A0000002  |   |   |   |   |
 | A0000003  |   |   |   |   |
@@ -18,7 +18,7 @@ The table below shows a generic transfer A0000001, in the phase ****A**** along
 The child transfers begin to pass through the preprocessing, transfer, and post- processing phases.
 
 | A<br/> Pre- processing | T<br/> Transfer | Y<br/> Post- processing | Z<br/> Ack- processing | X<br/> Done |
-| - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- |
 | **A0000001**  |   |   |   |   |
 | A0000002  |   |   |   |   |
 |   |   | A0000003  |   |   |
@@ -29,7 +29,7 @@ The child transfers begin to pass through the preprocessing, transfer, and post-
 The generic transfer, however, must wait for its last child transfer to move to the next phase and then immediately follows its phases.
 
 | A<br/> Pre- processing | T<br/> Transfer | Y<br/> Post- processing | Z<br/> Ack- processing | X<br/> Done |
-| - - - | - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- | --- |
 |   | **A0000001**  |   |   |   |
 |   | A0000002  |   |   |   |
 |   |   |   |   | A0000003  |

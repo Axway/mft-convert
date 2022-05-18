@@ -9,7 +9,7 @@ weight: 240
 Privileges give users authorization to access and perform actions in the user interface. Examples of actions include CREATE, DELETE, VIEW, EDIT (use \* to assign all actions).
 
 | Field | Type | Comment |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | id | String32 | Privilege identifier |
 | comment | String80 | Comment |
 | resource | String32 | Resource on which this privilege applies |

@@ -15,7 +15,7 @@ The filter_type parameter value indicates how the comparison of file names again
 A STRJCMP pattern- matching filter can contain the asterisk (\*) and/or the question mark (?) characters. The STRJCMP filter characters are interpreted as follows:
 
 | Character  | Description  | Example  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | *  | Indicates any sequence of zero or more characters.  | The filter "*.dat" selects any file name that has the extension ".dat".  |
 | ?  | Indicates any single character.  | The filter "T*.???" selects any file name starting with a 'T' and having an extension of exactly three characters.  |
 
@@ -28,7 +28,7 @@ A STRJCMP pattern- matching filter can contain the asterisk (\*) and/or the que
 The WILDMAT pattern- matching filter offers more operations than the STRJCMP filter_type. The WILDMAT filter characters are interpreted as follows, where x and y are used to indicate any character:
 
 | Character  | Description  | Example  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | *  | Indicates any sequence of zero or more characters.  | The filter "*.dat" selects any file name that has the extension ".dat".  |
 | ?  | Indicates any single character.  | The filter "T*.???" selects any file name starting with a 'T' and having an extension of exactly three characters.  |
 | \x  | Indicates that when x is a special character, x is interpreted as a normal character.  | This is generally used to invalidate the meaning of the * and ? characters.  |
@@ -45,7 +45,7 @@ EREGEX (extended regular expressions) is the use of special characters and strin
 In POSIX- Extended regular expressions, all characters match themselves meaning they match a sub- string anywhere inside the string to be searched. For example *abc*, matches abc123, 123abc, and 123abcxyz. Some symbols are exceptions though; commonly used symbols and example usages are listed in the following table.
 
 | Symbol  | Indicates  | Example  |
-| - - - | - - - | - - - |
+| --- | --- | --- |
 | .  | Any character except newline (line break)  | *a.c* matches abc  |
 | [ ]  | Or  | *[def]* means d or e or f  |
 | {}  | Exactly  | *{3}* means exactly three  |

@@ -46,7 +46,7 @@ For the definition of the states of a transfer,
 refer to [Transfer control commands](../../../../concepts/transfer_command_overview/transfer_control_commands).
 
 | Command or Parameter  | Description |
-| - - - | - - - |
+| --- | --- |
 | LISTCAT command | Use this command to query the information associated with the selected transfers, recorded in the Transfer CFT catalog.  |
 |  [CONTENT](../../../command_summary/parameter_intro/content)  | Used to obtain part or all of the information of a catalog entry. |
 |  [DATETIMEMAX](../../../command_summary/parameter_intro/datetimemax)  | Use to display catalog transfers that happened on or before this end date and time according to the transfer record creation (DATEK, TIMEK).  |
@@ -100,7 +100,7 @@ Displays the records by IDTU. This can be useful because the catalog's compact b
 `LISTCAT CONTENT = COMMUT`
 
 | Heading  | Meaning  |
-| - - - | - - - |
+| --- | --- |
 | 1  | Intermediate transfer (IPART)  |
 | 2  | State transfer<br /> The DTSA characters represent:<br/> • Direction = S/R (Send/Receive)<br/> • Type = F/M/R (File/Message/Reply)<br/> • State = D/C/H/K/T/X (Disp/Current/Hold/Keep/Terminated/eXecuted)<br/> • Ack = A (Acknowledge)<br/> <blockquote> **Note**<br/> If the UCONF compatibility option is set to the default value (no), the format is DTSAPP to include Phase and PhaseStep. For more information, see Backward compatibility.<br/> </blockquote>  |
 | 3  | File network identifier (NFNAME)  |
@@ -113,7 +113,7 @@ Displays the records by IDTU. This can be useful because the catalog's compact b
 `LISTCAT CONTENT = EXTEND `
 
 | Heading  | Meaning  |
-| - - - | - - - |
+| --- | --- |
 | 1  | Local partner identifier described in the CFTPART (ID) or CFTDEST command (one of the PARTS of the broadcasting list)  |
 | 2  | Transfer state<br /> The DTSA characters mean:<br/> • Direction = S/R (Send/Receive)<br/> • Type = F/M/R (File/Message/Reply)<br/> • State = D/C/H/K/T/X (Disp/Current/Hold/Keep/Terminated/eXecuted)<br/> • Ack = A (Acknowledge)<br/> <blockquote> **Note**<br/> If the UCONF compatibility option is set to the default value (no), the format is DTSAPP to include Phase and PhaseStep. For more information, see Backward compatibility.<br/> </blockquote>  |
 | 3  | File identifier (IDF)  |

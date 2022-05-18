@@ -95,7 +95,7 @@ The client and server security profiles must be mutually authenticated. However,
 {{< TransferCFT/PrimaryCGorUM  >}} or {{< TransferCFT/suitevariablesFlowManager  >}} sends the updated configuration to {{< TransferCFT/axwayvariablesComponentShortName  >}}. The following are the {{< TransferCFT/axwayvariablesComponentShortName  >}} parameters updated in this process. However, you can overwrite certain default values by assigning an existing policy at registration. Please see, below for details.
 
 | Parameter  | Value  |
-| - - - | - - - |
+| --- | --- |
 | am.passport.cg.organization  | Org<br/> <blockquote> **Note**<br/> You must restart both Transfer CFT and Copilot following a change to this parameter.<br/> </blockquote>  |
 | am.passport.domain  | CG |
 | am.passport.hostname  | &lt;{{< TransferCFT/suitevariablesFlowManager  >}} or {{< TransferCFT/PrimaryCGorUM  >}} host name &gt;  |

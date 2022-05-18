@@ -28,7 +28,7 @@ of the function only means that the command has been correctly placed
 in the communication medium.
 
 | Function | Use |
-| - - - | - - - |
+| --- | --- |
 | SEND | Send transfer request: file, message or reply |
 | RECV | Receive transfer request |
 | HALT | Interrupt one or more send or receive transfers with a given partner.<br/> The interrupted transfers are set to the "H" state and can be restarted at the partner's request. |

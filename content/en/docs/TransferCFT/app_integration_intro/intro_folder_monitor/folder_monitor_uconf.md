@@ -4,7 +4,7 @@ linkTitle: "Deprecated folder monitoring (UCONF)"
 weight: 220
 --- This section provides a description of how to use Transfer CFT UCONF values to manage folder monitoring. This method is no longer recommended; you should use the CFTFOLDER object method.
 
-- [Configure folder monitoring using UCONF](#Configur)
+- Configure folder monitoring using UCONF](#Configur)
 - [How {{< TransferCFT/axwayvariablesComponentShortName >}} handles monitored files](#How2)
 - [Modify and apply configuration changes](#Modifying_existing_configuration)
 - [Directory configuration examples](#Director)
@@ -58,7 +58,7 @@ Use the following UCONF parameters to configure folder monitoring for each dire
 ****Parameter descriptions****
 
 | UCONF parameter  | Type  | Default | Description  |
-| - - - | - - - | - - - | - - - |
+| --- | --- | --- | --- |
 | folder_monitoring.enable  | Boolean  | No  |  • No: No folder monitoring occurs.<br/> • Yes: Enable {{< TransferCFT/axwayvariablesComponentShortName  >}} folder monitoring. |
 | folder_monitoring.folders  | node  | None  | Add the logical folders to monitor (list of logical identifiers).<br/> You should provide a unique name to identify the set of configuration parameters corresponding to this directory. If you have more than one Folder to monitor, use a space between each logical value.<br/> See the **Comment***** below this table for additional information. |
 | folder_monitoring.folders.<br/> &lt;logical_name&gt;.enable | Boolean  | Yes  | Enables a scan of the folder, where NO deactivates folder monitoring. |
@@ -78,7 +78,7 @@ Use the following UCONF parameters to configure folder monitoring for each dire
 | folder_monitoring.folders.<br/> &lt;logical_name&gt;.resubmit_changed_file | Boolean  | Yes  | This parameter has no effect when the configured method is MOVE.<br/> When the method parameter value is set to FILE:<br/> • Yes: When the state of a previously submitted file is seen as having changed, the file is submitted again.<br/> • No: Files are not resubmitted, regardless of changes.<br/> <blockquote> **Note**<br/> The file is resubmitted after any change regardless of if the modification is a small change, or purging and replacing the file with another file having the same name.<br/> </blockquote>  |
 | folder_monitoring.folders.<br/> &lt;logical_name&gt;.filter_type | enum  | WILDMAT  | Defines the pattern matching algorithm to use for file name filtering. Values:<br/> • STRJCMP: The Transfer CFT pattern matching algorithm.<br/> • WILDMAT: A well known public domain algorithm, and is the default. **Unix/Windows only**<br/> See [Create inclusion and exclusion filters](../folder_customize#Defining) for details. |
 | folder_monitoring.folders.<br/> &lt;logical_name&gt;.renaming_method | Enum  | TIMESTAMP  | This parameter applies only to the MOVE method.<br/> • NONE or " ": The filename is unchanged (no timestamp is added). If the file already exists in the work directory, the MOVE process fails.<br/> • TIMESTAMP: A timestamp having the format YYYYMMDDHHMMSS is added at the end of the name of the renamed file but before the last '.'.<br/> For example, using timestamp_separators=".": • myfile is renamed myfile.20131025<br/> • myfile.txt is renamed myfile.20131025.txt |
-| folder_monitoring.folders.<br/> &lt;logical_name&gt;.renaming_separators | string  |   | This parameter only applies to the MOVE method. It must contain at most 2 characters from among the following:<br/> .[]()i_- <br/> The first character defines the separator before the timestamp. The second one, when present, defines the separator after the timestamp.<br/> For example, using timestamp_separators "[]": - myfile is renamed myfile.[20131025] - myfile.txt is renamed myfile.[20131025].txt |
+| folder_monitoring.folders.<br/> &lt;logical_name&gt;.renaming_separators | string  |   | This parameter only applies to the MOVE method. It must contain at most 2 characters from among the following:<br/> .[i_- <br/> The first character defines the separator before the timestamp. The second one, when present, defines the separator after the timestamp.<br/> For example, using timestamp_separators "[]": - myfile is renamed myfile.[20131025] - myfile.txt is renamed myfile.[20131025].txt |
 | folder_monitoring.folders.<br/> &lt;logical_name&gt;.control | string  |   | Metadata used to control user changes.  |
 | folder_monitoring.folders.<br/> &lt;logical_name&gt;.<br/> use_file_system_events<br/> [More information](#File- sys) | Boolean  | No  | Set to YES to enable the file system events monitoring service to detect newly available files.  |
 

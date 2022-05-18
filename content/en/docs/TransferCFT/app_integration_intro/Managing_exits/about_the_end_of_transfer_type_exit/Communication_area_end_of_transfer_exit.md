@@ -28,7 +28,7 @@ The following tables list all the fields of the communication structure.
 ### General information fields
 
 | Field | Explanation |
-| - - - | - - - |
+| --- | --- |
 | idt | Transfer identifier |
 | idf | File identifier (if TYPE = FILE) |
 | idm | Message identifier (if TYPE= MESSAGE) |
@@ -43,7 +43,7 @@ The following tables list all the fields of the communication structure.
 ### Local file information fields
 
 | Field | Explanation |
-| - - - | - - - |
+| --- | --- |
 | fblksize | File block size |
 | fcode | Data code (A, E or B) |
 | fkeylen | Key length (indexed file) |
@@ -69,7 +69,7 @@ The following tables list all the fields of the communication structure.
 ### Network file information
 
 | Field | Explanation |
-| - - - | - - - |
+| --- | --- |
 | nidf | Network identifier of the file |
 | npart | Remote partner |
 | nfname | Network name of the file |
@@ -287,7 +287,7 @@ Please refer to the CFTPARM page for additional parameters and details
 ### Information input/returned by the user
 
 | Field | Explanation |
-| - - - | - - - |
+| --- | --- |
 | version | Exit version<br/> The value of this parameter is used to identify the version of the EXIT task supplied. |
 | comment | Local comment<br/> This field can be modified by the user program. Any modifications are taken into account when the catalog is updated (if usraction = UPDATE with or without change of state). |
 | state | State requested on UPDATE (D, H, K, X). See [Transfer states.](../#Transfer_state) |
@@ -297,7 +297,7 @@ Please refer to the CFTPARM page for additional parameters and details
 ### Information returned by the user
 
 | Field | Explanation |
-| - - - | - - - |
+| --- | --- |
 | usraction | Action requested by the user:<br/> • U: UPDATE<br/> • D: DELETE<br/> • N: NONE<br/> Note: If the value of the parameter is N (NONE), any changes to parameters that have been requested, for example, modifications made to the comment field, are ignored. |
 | usrmsg | User message, 80 characters, recorded in the {{< TransferCFT/axwayvariablesComponentShortName  >}} LOG file (CFTS18I)<br/> This message can contain the code returned by the user function and other information. |
 
@@ -306,7 +306,7 @@ Please refer to the CFTPARM page for additional parameters and details
 ### Additional information
 
 | Field | Explanation |
-| - - - | - - - |
+| --- | --- |
 | recblkn | Catalog block number |
 | typ | Transfer type:<br/> • 1: FILE<br/> • 2: MSG<br/> • 3: REPLY |
 | stated | Transfer acknowledgement |
