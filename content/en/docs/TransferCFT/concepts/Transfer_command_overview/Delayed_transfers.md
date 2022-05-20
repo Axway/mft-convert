@@ -267,7 +267,7 @@ of:
 
 - MAXDATE:
 
-- -   If MAXTIME
+    -   If MAXTIME
         is greater than MINTIME : MINDATE
     -   If MAXTIME
         is less than MINTIME : MINDATE + 1
