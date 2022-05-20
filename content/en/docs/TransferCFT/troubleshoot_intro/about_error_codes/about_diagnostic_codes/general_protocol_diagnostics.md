@@ -34,7 +34,7 @@ The table below presents the DIAGP formats.
 | XXX HHHH | (ODETTE) Negotiation or send error<br/> These codes identifying an FPDU negotiation or send error in the ODETTE protocol (where H represents a hexadecimal digit and X a letter):<br/> • XXX is a Transfer CFT mnemonic code - ODETTE protocol. This is an alphanumeric value describing the origin of the anomaly or phase during which it occurred. See also, {{< TransferCFT/axwayvariablesComponentShortName  >}} Mnemonic Codes ODETTE Protocol.<br/> • HHHH is a {{< TransferCFT/axwayvariablesComponentShortName  >}} numeric code - ODETTE protocol. This is a hexadecimal value corresponding to the internal protocol code. See also "[}} ODETTE](../../../../protocols_start_here/start_here_odette)" |
 
 
-<span id=""Mnemoni"></span>
+<span id="Mnemoni"></span>
 
 ## "Mnemonic" DIAGP codes
 
