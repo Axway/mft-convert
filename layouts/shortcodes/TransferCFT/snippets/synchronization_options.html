@@ -19,16 +19,16 @@ of data obtained after compression.
 The interval between synchronization points must be selected taking
 the following factors into account:
 
-- Exchange of synchronization
+* Exchange of synchronization
     points: a small interval penalizes performance
-- Spacing of synchronization
+* Spacing of synchronization
     points: a large interval penalizes restarts
-- Spacing of synchronization
+* Spacing of synchronization
     points assumes a large "buffering" capability, since this parameter
     is related to the acknowledgement anticipation
     window (see below) and consequently to the availability of memory
     resources
-- Synchronization
+* Synchronization
     point can only be set between file articles, even if segmentation has
     taken place
 

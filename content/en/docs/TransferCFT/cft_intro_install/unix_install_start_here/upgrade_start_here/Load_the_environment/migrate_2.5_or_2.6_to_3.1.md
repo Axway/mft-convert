@@ -52,9 +52,9 @@ cftinit cft-extract.conf
 
 1. Create a script file such as:
 
-- UNIX: `uconf-import.sh`
+* UNIX: `uconf-import.sh`
 
-- Windows: `uconf-import.bat`
+* Windows: `uconf-import.bat`
 
 1. For each parameter you select, add a line to the new script file in the format:
 
@@ -76,11 +76,11 @@ CFTUTIL <prefix_character><script_filename>
 
 ****Example****
 
-- UNIX: CFTUTIL @uconf-import.sh
+* UNIX: CFTUTIL @uconf-import.sh
 
 <!-- -->
 
-- Windows: CFTUTIL #uconf-import.bat
+* Windows: CFTUTIL #uconf-import.bat
 
 ### Migrating PKI certificates
 
@@ -100,19 +100,19 @@ For Transfer CFT 2.5, you must be at Transfer CFT 2.5.1 SP2 or higher before per
 
 1. Create a new PKI internal datafile using the command PKIUTIL PKIFILE. Replace &lt;pki_database_filename> with the appropriate value: `PKIUTIL PKIFILE fname=<pki_database_filename>, mode='CREATE’`
 
-- UNIX: $CFTPKU
+* UNIX: $CFTPKU
 
-- Windows: The absolute path value for the CFTPKU environment variable
+* Windows: The absolute path value for the CFTPKU environment variable
 
 1. Import your PKI certificates into the new Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion >}} using the command PKIUTIL. Replace the &lt;script_filename> with the new script file path: `PKIUTIL <prefix_character><script_filename>`
 
 ****Example****
 
-- UNIX: `PKIUTIL @pki-extract.conf`
+* UNIX: `PKIUTIL @pki-extract.conf`
 
 <!-- -->
 
-- Windows: `PKIUTIL #pki-extract.conf`
+* Windows: `PKIUTIL #pki-extract.conf`
 
 ## Migrating the runtime environment
 
@@ -134,8 +134,8 @@ CFTMI240 MIGR type=CAT, direct=FROMCAT, ifname=<catalog_2.5_filename>, ofname=ca
 
 1. Import the catalog using the command CFTMI. Replace the &lt;catalog_filename_new_installation> with the corresponding environment variable:
 
-- UNIX: _CFTCATA
-- Windows: $CFTCATA
+* UNIX: _CFTCATA
+* Windows: $CFTCATA
 
 Example
 
@@ -161,11 +161,11 @@ CFTMI240 MIGR type=COM, direct=FROMCOM, ifname=<com_2.5_filename>, ofname=com_ou
 
 1. Import the communication media file using command CFTMI. Replace the &lt;com_filename_new_installation> with the corresponding environment variable:
 
-- UNIX: `_CFTCOM`
+* UNIX: `_CFTCOM`
 
 <!-- -->
 
-- Windows: `$CFTCOM`
+* Windows: `$CFTCOM`
 
 Example
 

@@ -7,15 +7,15 @@ that you must configure to use the OFTP protocol, before submitting a file trans
 each of the Transfer CFT objects. Each of these objects topics indicates
 the parameters that you must set to complete the Transfer CFT OFTP configuration.
 
-- CFTPROT: defines
+* CFTPROT: defines
     both the application protocol type and profile
-- CFTPART: defines
+* CFTPART: defines
     a partner and list the possible protocols for communicating with this
     partner
-- CFTxxx: is a generic
+* CFTxxx: is a generic
     command that defines the network parameters associated with this partner,
     for a network connection CFTTCP
-- CFTNET: defines
+* CFTNET: defines
     the network resources associated with the protocol
 
 The configuration is recorded in a text file interpreted by the Transfer
@@ -35,10 +35,10 @@ To designate the Odette protocol, set the TYPE parameter to ODETTE.
 To allow a restart of a file transfer interrupted during a previous
 session, set the RESYNC parameter to YES.
 
-- If RESYNC = YES and a transfer has been interrupted (H state in the
+* If RESYNC = YES and a transfer has been interrupted (H state in the
     catalog), the transfer is resumed from the last synchronization point
     acknowledged during the previous attempt.
-- If RESYNC = NO, no attempt is made in the session to restart interrupted
+* If RESYNC = NO, no attempt is made in the session to restart interrupted
     transfers, and the `CFTT71E PART=<part> IDF=<idf> IDT=<idt> remote creation reject 123` message displays in the CFTLOG file.
 
 <span id="Read_time_out"></span>
@@ -104,11 +104,11 @@ phase.
 To specify the direction of transfers for each partner, you can use
 the following parameters to set the SRIN and SROUT parameters to:
 
-- SENDER: the partner
+* SENDER: the partner
     can only send files
-- RECEIVER: the partner
+* RECEIVER: the partner
     can only receive files
-- BOTH: the partner
+* BOTH: the partner
     can send and receive files
 
 SRIN controls the direction of transfers authorized for the Transfer
@@ -157,13 +157,13 @@ control byte).
 
 The selected value must be:
 
-- Between 128 and 32750
-- Greater than the
+* Between 128 and 32750
+* Greater than the
     maximum article size likely to be sent
 
 ### Processing method used for protocol messages
 
 When setting the TCP parameter with CFTPROT TYPE=ODETTE command, note that:
 
-- TCP=OFTP: Messages are compliant with the RFC 2204 (default value).
-- TCP=CFT: Method is specific to Transfer CFT and may not be compatible with other transfer files products. This means that Odette transfer errors can be due to this incompatibly.
+* TCP=OFTP: Messages are compliant with the RFC 2204 (default value).
+* TCP=CFT: Method is specific to Transfer CFT and may not be compatible with other transfer files products. This means that Odette transfer errors can be due to this incompatibly.

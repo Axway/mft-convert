@@ -64,8 +64,8 @@ It is recommended that you use only procedures to access the Transfer CFT utilit
 
 We provide two procedure examples:
 
-- PCFTUTIL: All Transfer CFT files are allocated, except for the PKI database and LOG.
-- PCFTUTL: Same procedure that PCFTUTIL, but CATALOG, COM, PART, PARM file are not allocated.
+* PCFTUTIL: All Transfer CFT files are allocated, except for the PKI database and LOG.
+* PCFTUTL: Same procedure that PCFTUTIL, but CATALOG, COM, PART, PARM file are not allocated.
 
 These procedures are customized during installation phase.
 
@@ -99,10 +99,10 @@ It is recommended as far as possible not to point directly to the product librar
 
 To do this, copy the following members into a specific PROCLIB:
 
-- CFTENV
-- CFTINC
-- PCFTUTIL
-- PCFTUTL
+* CFTENV
+* CFTINC
+* PCFTUTIL
+* PCFTUTL
 
 When changing the Transfer CFT version, you should get the new version of these members. A rollback is done by copying the backups of these members. This also applies to the end-of-transfer procedures.
 
@@ -112,25 +112,25 @@ When changing the Transfer CFT version, you should get the new version of these 
 
 The target.EXEC library contains an example of Transfer CFT procedures:
 
-- EXECSF: End of file send procedure
-- EXECRF: End of file reception procedure
-- SWIACC: Procedure submitted when SWITCHING the Transfer CFT accounting file
-- SWILOG: Procedure submitted when switching the Transfer CFT log file
-- EXECCRON: Procedure submitted by a CFTCRON command
-- COPXLOG: Sample of JCL submitted by Transfer CFT Navigator (with dynamic parameter)
-- COPEXT: Sample of JCL submitted by Transfer CFT Navigator to extract Transfer CFT parameter in a file
-- CFTHEART: HEARTBEAT JCL for SENTINEL dashboards
-- SNTLEXEC: End of file reception procedure including SENTINEL
-- TFCIPH: Transfer CFT Preprocessing script for TrustedFile
-- TFDCIPH: Transfer CFT End of transfer script for TrustedFile
-- TFDELFIL: Transfer CFT Send exec script for TrustedFile
-- CA7POST: Indicates to CA7 that the creation of a data set has completed
-- COPYFILR and COPYFILS: templates that use the COPYFILE command
-- CRONSTAR: Sample of the JCL that is submitted at Transfer CFT STARTUP
-- CRONSHUT: Sample of the JCL that is submitted at Transfer CFT shutdown
-- EXECIDF: End of file reception procedure sample with conditional steps
-- EXECIFD2: The value of the IDF is checked among a list of values ​​by a REXX that sets a return code
-- EXECIDF3: The JCL is conditional and uses the )SEL and )ENDSEL syntax - see [Syntax for )SEL and )ENDSEL](#Syntax)
+* EXECSF: End of file send procedure
+* EXECRF: End of file reception procedure
+* SWIACC: Procedure submitted when SWITCHING the Transfer CFT accounting file
+* SWILOG: Procedure submitted when switching the Transfer CFT log file
+* EXECCRON: Procedure submitted by a CFTCRON command
+* COPXLOG: Sample of JCL submitted by Transfer CFT Navigator (with dynamic parameter)
+* COPEXT: Sample of JCL submitted by Transfer CFT Navigator to extract Transfer CFT parameter in a file
+* CFTHEART: HEARTBEAT JCL for SENTINEL dashboards
+* SNTLEXEC: End of file reception procedure including SENTINEL
+* TFCIPH: Transfer CFT Preprocessing script for TrustedFile
+* TFDCIPH: Transfer CFT End of transfer script for TrustedFile
+* TFDELFIL: Transfer CFT Send exec script for TrustedFile
+* CA7POST: Indicates to CA7 that the creation of a data set has completed
+* COPYFILR and COPYFILS: templates that use the COPYFILE command
+* CRONSTAR: Sample of the JCL that is submitted at Transfer CFT STARTUP
+* CRONSHUT: Sample of the JCL that is submitted at Transfer CFT shutdown
+* EXECIDF: End of file reception procedure sample with conditional steps
+* EXECIFD2: The value of the IDF is checked among a list of values ​​by a REXX that sets a return code
+* EXECIDF3: The JCL is conditional and uses the )SEL and )ENDSEL syntax - see [Syntax for )SEL and )ENDSEL](#Syntax)
 
 These procedures are customized during the A00CUSTO phase.
 
@@ -146,8 +146,8 @@ The test is systematically performed on the length of the first argument, enabli
 
 The maximum number of nested )SELs is 32, where:
 
-- argument = constant, variable in the &xxx format
-- op = condition operator
+* argument = constant, variable in the &xxx format
+* op = condition operator
 
 > = EQU or EQ: equal to
 
@@ -183,15 +183,15 @@ The parameters in this JCL were customized during the (A00CUSTO) process, while 
 
 List of updated variables:
 
-- cft.runtime_dir
-- cft.full_hostname
-- cft.state_compat
-- cft.listcat_compat
-- cft.instance_id
-- cft.instance_group
-- samples.pesitany_sap.value
-- samples.pesitssl_sap.value
-- samples.coms_port.value
+* cft.runtime_dir
+* cft.full_hostname
+* cft.state_compat
+* cft.listcat_compat
+* cft.instance_id
+* cft.instance_group
+* samples.pesitany_sap.value
+* samples.pesitssl_sap.value
+* samples.coms_port.value
 
 You can run the JCL multiple times, once to create the member .. SAMPLE (CFTPARM), which the procedure does not modify.
 
@@ -201,44 +201,44 @@ You can run the JCL multiple times, once to create the member .. SAMPLE (CFTPARM
 
 The JOB D40INIT prepares the Transfer CFT z/OS files. Before submitting this JOB, adapt the following points to the requirements of the operating service:
 
-- File names (if the default values in the samples are not usable)
-    -   By default file names are defined in JCL INCLUDE=CFTENV
+* File names (if the default values in the samples are not usable)
+    *   By default file names are defined in JCL INCLUDE=CFTENV
 
 <!-- -->
 
-- The values of the parameters RECNB and FSPACE
+* The values of the parameters RECNB and FSPACE
 
 The following data is required to use the basic Transfer CFT installation customization parameters. These work files are:
 
-- CFTPARM: VSAM KSDS file, Transfer CFT parameters descriptions
+* CFTPARM: VSAM KSDS file, Transfer CFT parameters descriptions
 
 <!-- -->
 
-- CFTPART: VSAM KSDS file, Transfer CFT partners description
+* CFTPART: VSAM KSDS file, Transfer CFT partners description
 
 <!-- -->
 
-- CFTCAT: VSAM ESDS file, Transfer CFT catalog
+* CFTCAT: VSAM ESDS file, Transfer CFT catalog
 
 <!-- -->
 
-- CFTLOG1: Sequential file used as the log file by Transfer CFT
+* CFTLOG1: Sequential file used as the log file by Transfer CFT
 
 <!-- -->
 
-- CFTLOG2: Sequential file used by Transfer CFT as the alternate log file
+* CFTLOG2: Sequential file used by Transfer CFT as the alternate log file
 
 <!-- -->
 
-- CFTACNT1: Sequential file used as the account file by Transfer CFT
+* CFTACNT1: Sequential file used as the account file by Transfer CFT
 
 <!-- -->
 
-- CFTACNT2:  Sequential file used by Transfer CFT as the alternate account file
+* CFTACNT2:  Sequential file used by Transfer CFT as the alternate account file
 
 <!-- -->
 
-- CFTCOM: VSAM ESDS file used by Transfer CFT as a buffer for the Transfer CFT commands submitted by CFTUTIL, a BATCH program, a TSO user, the Transfer CFT Copilot, or the Transfer CFT UI
+* CFTCOM: VSAM ESDS file used by Transfer CFT as a buffer for the Transfer CFT commands submitted by CFTUTIL, a BATCH program, a TSO user, the Transfer CFT Copilot, or the Transfer CFT UI
 
 <span id="JOB E50PARM CFTPARM"></span>
 

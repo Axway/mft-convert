@@ -6,10 +6,10 @@ weight: 240
 
 The following examples show the output from both the server and requester sides.
 
-- [Example: the number of transfers exceeds the CNXINOUT](#Example:4)
-- [Example: MAXCNX is greater than MAXTRANS](#Example:3)
-- [Example: the number of transfers exceeds the CNXINOUT](#Example:4)
-- [Example: MAXCNX greater than MAXTRANS with session limit](#Example:5)
+* [Example: the number of transfers exceeds the CNXINOUT](#Example:4)
+* [Example: MAXCNX is greater than MAXTRANS](#Example:3)
+* [Example: the number of transfers exceeds the CNXINOUT](#Example:4)
+* [Example: MAXCNX greater than MAXTRANS with session limit](#Example:5)
 
 See [Session related troubleshooting](../session_troubleshooting) for session related output.
 
@@ -193,5 +193,5 @@ In Scenario 2 Transfer CFT is limited by the session, meaning that the same 5 p
 
 Related topics
 
-- [About parallel transfers](../)
-- [FAQ and troubleshooting](../faq)
+* [About parallel transfers](../)
+* [FAQ and troubleshooting](../faq)

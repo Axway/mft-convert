@@ -12,11 +12,11 @@ of correctly terminated transfers. See also the parameter list
 
 Two recording modes are available:
 
-- Recording data
+* Recording data
     in {{< TransferCFT/axwayvariablesComponentShortName >}} files. When the primary file is full, {{< TransferCFT/axwayvariablesComponentShortName >}}
     switches to an alternate file. This mode is available on all operating
     systems.
-- Recording data
+* Recording data
     in the files of the operating system accounting utility.
 
 The CFTACCNT object can be permanently deleted from the configuration.
@@ -36,14 +36,14 @@ of the CFTPARM command is defined.
 
 Two recording modes can be used, depending on the system:
 
-- Recording of data
+* Recording of data
     in {{< TransferCFT/axwayvariablesComponentShortName >}} files. In this case, the CFTACCNT command defines the names of the files receiving
     the data and their management (parameter setting TYPE = FILE). This mode
     is available on ALL SYSTEMS.
 
 <!-- -->
 
-- Recording of data
+* Recording of data
     in the files of the accounting utility of the operating system in question
     parameter setting TYPE = SYST. This
     mode is only available on z/OS (MVS) systems.
@@ -116,11 +116,11 @@ When you
 define the Type parameter to File
 in the CFTACCNT object, you must define the following parameters as well.
 
-- afname
-- exec
-- fname
-- maxrec
-- switch
+* afname
+* exec
+* fname
+* maxrec
+* switch
 
 The {{< TransferCFT/axwayvariablesComponentShortName  >}} statistical
 file is full when the maximum number of records, the MAXREC parameter,

@@ -4,8 +4,8 @@ linkTitle: "Configure exchanges that use SSL"
 weight: 250
 ---There are two ways to configure Transfer CFT with Secure Relay using the TLS protocol:
 
-- End-to-end SSL: The remote peer communicates with Transfer CFT via Secure Relay (RA) using end-to-end SSL.
-- SSL termination: The remote peer communicates with Secure Relay (RA) through an SSL channel. In this scenario, the handshake occurs between the remote peer and the Secure Relay RA. The RA retrieves the key and certificate stored in Transfer CFT through the Master Agent (MA) in order to complete the handshake.
+* End-to-end SSL: The remote peer communicates with Transfer CFT via Secure Relay (RA) using end-to-end SSL.
+* SSL termination: The remote peer communicates with Secure Relay (RA) through an SSL channel. In this scenario, the handshake occurs between the remote peer and the Secure Relay RA. The RA retrieves the key and certificate stored in Transfer CFT through the Master Agent (MA) in order to complete the handshake.
 
 The communication between the Master Agent (MA) and {{< TransferCFT/axwayvariablesComponentLongName  >}} occurs over a plain-text channel.
 
@@ -15,10 +15,10 @@ End-to-end SSL compared with SSL termination
 
 This page describes how to create and configure the following Transfer CFT objects to enable SSL exchanges using Secure Relay:
 
-- Network object CFTNET
-- Protocol object CFTPROT
-- Security object CFTSSL
-- Partner objects CFTPART and CFTTCP
+* Network object CFTNET
+* Protocol object CFTPROT
+* Security object CFTSSL
+* Partner objects CFTPART and CFTTCP
 
 SSL termination in Secure Relay is possible using the internal PKI database. As such, the internal PKI base (pki.type=cft), rootcid, and usercid correspond to certificates stored in the internal PKI database.
 
@@ -27,12 +27,12 @@ SSL termination in Secure Relay is possible using the internal PKI database. As 
 ### Create a CFTNET object
 
 1. Create a CFTNET object where:
-    -   TYPE=TCP
-    -   PROTOCOL=SR
+    *   TYPE=TCP
+    *   PROTOCOL=SR
 1. Define the mandatory parameters RECALLHOST, HOST, and SSLTERM.
-    -   RECALLHOST: The host address on which the Master Agent calls Transfer CFT when Secure Relay receives an incoming call. If Transfer CFT and the Master Agent run of the same host, use the loopback network interface (for example, 127.0.0.1) instead of the public network interface.
-    -   HOST: Designates the network interface that is used on the Router Agent side.
-    -   SSLTERM: Set this Boolean to NO for end-to-end SSL.
+    *   RECALLHOST: The host address on which the Master Agent calls Transfer CFT when Secure Relay receives an incoming call. If Transfer CFT and the Master Agent run of the same host, use the loopback network interface (for example, 127.0.0.1) instead of the public network interface.
+    *   HOST: Designates the network interface that is used on the Router Agent side.
+    *   SSLTERM: Set this Boolean to NO for end-to-end SSL.
 
 ****Example****
 
@@ -53,9 +53,9 @@ sslterm = NO
 
 This section describes the CFTPROT object, and how various parameters are related to enabling secure data transmission using Secure Relay.
 
-- CFTPROT is linked to the CFTNET object through the NET parameter.
-- The SAP parameter is the listening port that is used on the RA side (using the CFTNET HOST parameter as the network interface).
-- The CFTPROT SSL parameter refers to a CFTSSL object, in this case PESITSSL, which is used when Secure Relay performs SSL termination in server mode.
+* CFTPROT is linked to the CFTNET object through the NET parameter.
+* The SAP parameter is the listening port that is used on the RA side (using the CFTNET HOST parameter as the network interface).
+* The CFTPROT SSL parameter refers to a CFTSSL object, in this case PESITSSL, which is used when Secure Relay performs SSL termination in server mode.
 
 ****Example****
 
@@ -75,8 +75,8 @@ prof = ANY
 
 Create a CFTSSL object to supply detailed information to Secure Relay on how the SSL termination should be done. Secure Relay only supports the SSL version TLSV1COMP.
 
-- Secure Relay uses the CFTSSL parameters rootcid, usercid and its password, cipher suites list, SSL version and client authentication policy.
-- Secure relay uses a restricted list of cipher suites (cipher suites ‘59’, ‘60’ and ’61 are not supported).
+* Secure Relay uses the CFTSSL parameters rootcid, usercid and its password, cipher suites list, SSL version and client authentication policy.
+* Secure relay uses a restricted list of cipher suites (cipher suites ‘59’, ‘60’ and ’61 are not supported).
 
 ****Example****
 
@@ -138,8 +138,8 @@ host = <remote_partner_host_address>
 
 #### Prerequisites
 
-- You require an installed Secure Relay Router Agent 2.7.4 that has a license for FIPS mode. Please refer to the *Secure Relay Router Agent 2.7.4 documentation* at [docs.axway.com](https://docs.axway.com/bundle) for more information.
-- Your {{< TransferCFT/axwayvariablesComponentLongName >}} license key requires the FIPS option.
+* You require an installed Secure Relay Router Agent 2.7.4 that has a license for FIPS mode. Please refer to the *Secure Relay Router Agent 2.7.4 documentation* at [docs.axway.com](https://docs.axway.com/bundle) for more information.
+* Your {{< TransferCFT/axwayvariablesComponentLongName >}} license key requires the FIPS option.
 
 #### Configure the Master Agent in {{< TransferCFT/axwayvariablesComponentLongName  >}}
 
@@ -151,12 +151,12 @@ host = <remote_partner_host_address>
 ### Create a CFTNET object
 
 1. Create a CFTNET object where:
-    -   TYPE=TCP
-    -   PROTOCOL=SR
+    *   TYPE=TCP
+    *   PROTOCOL=SR
 1. Define the mandatory parameters RECALLHOST, HOST, and SSLTERM.
-    -   RECALLHOST: The host address on which the Master Agent calls Transfer CFT when Secure Relay receives an incoming call. If Transfer CFT and the Master Agent run of the same host, use the loopback network interface (for example, 127.0.0.1) instead of the public network interface.
-    -   HOST: Designates the network interface that is used on the Router Agent side.
-    -   SSLTERM: Set this Boolean to YES to enable SSL termination.
+    *   RECALLHOST: The host address on which the Master Agent calls Transfer CFT when Secure Relay receives an incoming call. If Transfer CFT and the Master Agent run of the same host, use the loopback network interface (for example, 127.0.0.1) instead of the public network interface.
+    *   HOST: Designates the network interface that is used on the Router Agent side.
+    *   SSLTERM: Set this Boolean to YES to enable SSL termination.
 
 ****Example****
 
@@ -177,9 +177,9 @@ sslterm = YES
 
 This section describes the CFTPROT object, and how various parameters are related to enabling secure data transmission using Secure Relay.
 
-- CFTPROT is linked to the CFTNET object through the NET parameter.
-- The SAP parameter is the listening port that is used on the RA side (using the CFTNET HOST parameter as the network interface).
-- The CFTPROT SSL parameter refers to a CFTSSL object, in this case PESITSSL, which is used when Secure Relay performs SSL termination in server mode.
+* CFTPROT is linked to the CFTNET object through the NET parameter.
+* The SAP parameter is the listening port that is used on the RA side (using the CFTNET HOST parameter as the network interface).
+* The CFTPROT SSL parameter refers to a CFTSSL object, in this case PESITSSL, which is used when Secure Relay performs SSL termination in server mode.
 
 ****Example****
 
@@ -199,8 +199,8 @@ prof = ANY
 
 Create a CFTSSL object to supply detailed information to Secure Relay on how the SSL termination should be done. Secure Relay only supports the SSL version TLSV1COMP.
 
-- Secure Relay uses the CFTSSL parameters rootcid, usercid and its password, cipher suites list, SSL version and client authentication policy.
-- Secure relay uses a restricted list of cipher suites (cipher suites ‘59’, ‘60’ and ’61 are not supported).
+* Secure Relay uses the CFTSSL parameters rootcid, usercid and its password, cipher suites list, SSL version and client authentication policy.
+* Secure relay uses a restricted list of cipher suites (cipher suites ‘59’, ‘60’ and ’61 are not supported).
 
 ****Example****
 

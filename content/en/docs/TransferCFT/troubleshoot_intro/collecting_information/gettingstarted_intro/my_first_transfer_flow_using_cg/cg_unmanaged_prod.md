@@ -6,10 +6,10 @@ weight: 320
 
 ## You will need...
 
-- A {{< TransferCFT/axwayvariablesComponentLongName >}} associated with an application.
-- An unmanaged product.
-- An installed and running {{< TransferCFT/PrimaryCGorUM >}} on which you have rights to create a flow.
-- A CG_CA certificate.
+* A {{< TransferCFT/axwayvariablesComponentLongName >}} associated with an application.
+* An unmanaged product.
+* An installed and running {{< TransferCFT/PrimaryCGorUM >}} on which you have rights to create a flow.
+* A CG_CA certificate.
 
 <span id="Paramete"></span>
 
@@ -86,10 +86,10 @@ Make the following selections, using the default values for all other fields.
     From the list, select {{< TransferCFT/axwayvariablesComponentLongName >}} as the product type and select your {{< TransferCFT/suitevariablesTransferCFTName >}}. Confirm by clicking **Add source**.  
     ![](/Images/TransferCFT/flow03.png)
 1. Select ****Protocol****. In the Protocol page, select:
-    -   PeSIT as the **Exchange protocol**.
-    -   Enter a value for the Flow identifier. Record this identifier as a reference if you want to check the flow configuration on your {{< TransferCFT/axwayvariablesComponentLongName >}}.
-    -   Mutual authentication.
-    -   Select Show Transfer CFT communication profiles and select the communication profile that you created.
+    *   PeSIT as the **Exchange protocol**.
+    *   Enter a value for the Flow identifier. Record this identifier as a reference if you want to check the flow configuration on your {{< TransferCFT/axwayvariablesComponentLongName >}}.
+    *   Mutual authentication.
+    *   Select Show Transfer CFT communication profiles and select the communication profile that you created.
 1. Select **Target**, then **Unmanaged products**.  
     Click **Edit** product and then from the list, click to select your product.
 1. Click **Select as target** to confirm.
@@ -111,8 +111,8 @@ Then create a new transfer using the unmanaged product and the flow identifier y
 
 1. Add a file to exchange. For example put a file called ****report001****, in the {{< TransferCFT/axwayvariablesComponentShortName >}}` runtime/pub` folder.
 1. From the source {{< TransferCFT/axwayvariablesComponentShortName >}}, run the SEND command.
-    -   Remember to replace `<instance_target>` with your unmanaged product (target).
+    *   Remember to replace `<instance_target>` with your unmanaged product (target).
 
     <!-- -->
 
-    -   The ****Flow identifier**** field is equivalent to the {{< TransferCFT/axwayvariablesComponentShortName >}} IDF parameter.
+    *   The ****Flow identifier**** field is equivalent to the {{< TransferCFT/axwayvariablesComponentShortName >}} IDF parameter.

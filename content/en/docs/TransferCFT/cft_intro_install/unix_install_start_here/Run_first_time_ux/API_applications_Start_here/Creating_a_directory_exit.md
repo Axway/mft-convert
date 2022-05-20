@@ -73,7 +73,7 @@ MODE      = REPLACE
 
 <!-- -->
 
-- If you are
+* If you are
     modifying the cft-tcp.conf file, you must also find every occurrence
     of the HOST string located in cfttcp-type commands and replace the X character
     strings with your system name or address
@@ -82,25 +82,25 @@ MODE      = REPLACE
 
 The *&lt;installdir>/runtime/src/exit/* subdirectory contains:
 
-- A sample source
+* A sample source
     module, called *exaxmpm.c*, with its associated include file (*exaus.h*),
     and an additional file called *exaxmpp.h*  
     This program is used to check the following features:
-- Activation
+* Activation
     of a transfer to a partner known to the directory EXIT but not to Transfer
     CFT
-- Activation
+* Activation
     of a transfer to a partner not known to either {{< TransferCFT/axwayvariablesComponentShortName >}} or the directory
     EXIT
 
 <!-- -->
 
-- The *mk_cftexita*
+* The *mk_cftexita*
     compilation procedure used to generate the CFTEXITA program
 
 The *&lt;installdir>/lib* subdirectory contains:
 
-- The *libcftexa*.*a*
+* The *libcftexa*.*a*
     module required to use the {{< TransferCFT/axwayvariablesComponentShortName >}} directory EXITs
 
 To generate the sample CFTEXITA application, proceed as follows.

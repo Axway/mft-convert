@@ -8,9 +8,9 @@ weight: 140
 
 You can define the list of authorized file identifiers for the CFTAUTH in one of the following two ways:
 
-- IDF: Use a list of identifiers
+* IDF: Use a list of identifiers
     for the ****IDF**** parameter
-- FNAME: Use a path to the file where
+* FNAME: Use a path to the file where
     the list is saved for the ****FNAME****
     parameter
 
@@ -18,9 +18,9 @@ These two methods are mutually exclusive; you cannot use the IDF and FNAME param
 
 The following can be associated with each partner:
 
-- Send list: The identifier of the send list is defined by the value of the SAUTH
+* Send list: The identifier of the send list is defined by the value of the SAUTH
     parameter of CFTPART.
-- Receive list: The identifier of the receive list is defined by the value of the RAUTH
+* Receive list: The identifier of the receive list is defined by the value of the RAUTH
     parameter of CFTPART.
 
 For an example and command parameter details, see [Authorized flow definitions - CFTAUTH](../../../c_intro_userinterfaces/web_copilot_ui/flow_def_intro/cftauth).

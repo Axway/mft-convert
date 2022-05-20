@@ -14,11 +14,11 @@ Once you verify the installation, continue on to [post-installation](../t_start_
 
 The Transfer CFT installation creates the following environments:
 
-- Distribution environment: Contains the files extracted from the delivery. These files are necessary to create the customized target environment.
+* Distribution environment: Contains the files extracted from the delivery. These files are necessary to create the customized target environment.
 
 <!-- -->
 
-- Instance environment: An instance environment is an environment customized for the user. You can create more than one instance environment.
+* Instance environment: An instance environment is an environment customized for the user. You can create more than one instance environment.
 
 The act of installing Transfer CFT creates a distribution environment that contains product binaries and templates. Do no store any personal files in this environment, or modify existing files in this environment, as they are erased during updates.
 

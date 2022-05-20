@@ -16,9 +16,9 @@ an end of transfer occurs, whether it is normal or abnormal.
 If the transfer terminates abnormally, only some of the fields are completed.
 The remaining fields are reset to:
 
-- ****0****
+* ****0****
     in C
-- ****blank****
+* ****blank****
     in COBOL
 
 If the transfer state is T, the value in the ****diagp****
@@ -52,9 +52,9 @@ typedef union {
 
 The choice of structure depends on the programming language used:
 
-- EXEusC:
+* EXEusC:
     if the user program is written in C
-- EXEusO:
+* EXEusO:
     to provide an interface with a user program written in COBOL
 
 <span id="Communication_structure_in_COBOL"></span>

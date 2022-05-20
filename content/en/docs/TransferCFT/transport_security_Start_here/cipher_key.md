@@ -4,13 +4,13 @@ linkTitle: "Manage the database ciphering key"
 weight: 220
 ---This topic describes how to manage the ciphering key using the ****cftcrypt**** tool,  which ciphers all passwords. Information includes:
 
-- Overview
-- Command description
-- Renew a key
-- Upgrade a Transfer CFT
-    -   Export the configuration    
-    -   Generate a key
-    -   Import the configuration
+* Overview
+* Command description
+* Renew a key
+* Upgrade a Transfer CFT
+    *   Export the configuration    
+    *   Generate a key
+    *   Import the configuration
 
 ## Overview
 
@@ -28,25 +28,25 @@ All passwords stored in the UCONF dictionary, or in the {{< TransferCFT/axwayva
 
 Actions:
 
-- genkey: Generate an encryption key using a password.
-- renewkey: Regenerate an encryption key using a new password along with the old password.
-- help: Display this help.
+* genkey: Generate an encryption key using a password.
+* renewkey: Regenerate an encryption key using a new password along with the old password.
+* help: Display this help.
 
 Genkey options:
 
-- keyfname: File where the generated key is stored.
-- saltfname: File where the computed salt is stored.
-- pass: Password.
+* keyfname: File where the generated key is stored.
+* saltfname: File where the computed salt is stored.
+* pass: Password.
 
 Renewkey options:
 
-- pkitmp: Temporary file where the PKI configuration is stored.
-- pkipref : Prefix for certificates temporary files (z/OS only, on all other systems the non modifiable `cftcrtmp ` value is the prefix, for example, an exported certificate could have a name such as "cftcrtmpROOT0001").
-- noremove: Do not remove the temporary file; you can use this to keep track of what has been exported.
-- nopki:  Do not export/import the PKI base.
-- pass: Password.
-- oldpass: Old password.
-- tmpfname: Temporary file where the Transfer CFT configuration is stored.
+* pkitmp: Temporary file where the PKI configuration is stored.
+* pkipref : Prefix for certificates temporary files (z/OS only, on all other systems the non modifiable `cftcrtmp ` value is the prefix, for example, an exported certificate could have a name such as "cftcrtmpROOT0001").
+* noremove: Do not remove the temporary file; you can use this to keep track of what has been exported.
+* nopki:  Do not export/import the PKI base.
+* pass: Password.
+* oldpass: Old password.
+* tmpfname: Temporary file where the Transfer CFT configuration is stored.
 
 > **Note**
 >
@@ -79,14 +79,14 @@ The command succeeds if the referenced key and salt files exist and the `oldpass
 
 ****Platform specifics****
 
-- z/OS: Use the JCL CFTRNKEY for key renewal.
+* z/OS: Use the JCL CFTRNKEY for key renewal.
 
 ### Troubleshoot the key renewal
 
 The cftcrypt tool automatically exports/imports the PKI database when you perform a key renewal. However, to avoid potential issues, the process stops and an error is returned if an issue is detected during the PKI export/import.
 
-- To perform a key renewal with an empty PKI base or without a PKI file, you can use: ` cftcrypt --renewkey --nopki `
-- To facilitate debugging, you can use the `--noremove` option, so that the temporary files used by cftcrypt are not deleted. See the `cftcrypt --help `for more information.
+* To perform a key renewal with an empty PKI base or without a PKI file, you can use: ` cftcrypt --renewkey --nopki `
+* To facilitate debugging, you can use the `--noremove` option, so that the temporary files used by cftcrypt are not deleted. See the `cftcrypt --help `for more information.
 
 <span id="Generate"></span>
 

@@ -15,28 +15,28 @@ weight: 1630
 
 For records of:
 
-- Fixed format (IFRECFM = F): input file record
+* Fixed format (IFRECFM = F): input file record
     size
-- Variable format (IFRECFM = V): maximum record
+* Variable format (IFRECFM = V): maximum record
     size
 
 ILRECL is expressed in bytes.
 
 If ILRECL is less than the actual record length and if:
 
-- The input file is compressed, processing is aborted
-- The input file is not compressed, the record is
+* The input file is compressed, processing is aborted
+* The input file is not compressed, the record is
     truncated to the supplied length
 
 If ILRECL is greater than the actual length of the record to be written
 and if:
 
-- The file is of fixed format (IRECFM = F), the
+* The file is of fixed format (IRECFM = F), the
     record is padded with "spaces", i.e. according to the value
     of the ICODE parameter:
-- x‘20’ if ICODE = ASCII
-- x‘40’ if ICODE = EBCDIC
-- The file is not of fixed format, this parameter
+* x‘20’ if ICODE = ASCII
+* x‘40’ if ICODE = EBCDIC
+* The file is not of fixed format, this parameter
     is ignored.
 
 *Default values:* for systems handling

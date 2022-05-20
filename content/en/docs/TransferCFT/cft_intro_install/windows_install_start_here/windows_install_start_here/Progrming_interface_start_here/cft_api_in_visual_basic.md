@@ -10,11 +10,11 @@ for Visual Basic version 4.0 and higher.
 The {{< TransferCFT/axwayvariablesComponentShortName  >}} APIs enable you to implement the facilities
 described in [About API](../../../../about_this_document_zos/using_apis).
 
-- Cftai:
+* Cftai:
     catalog consultation
-- Cftau:
+* Cftau:
     transfer commands with syntactical analysis
-- Cftac:
+* Cftac:
     transfer commands without syntactical analysis
 
 The {{< TransferCFT/axwayvariablesComponentShortName  >}} API Visual Basic call structures and return
@@ -25,31 +25,31 @@ API functions in C. For more information, refer to [Using {{< TransferCFT/axwayv
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} Windows provides:
 
-- a sample of a Visual
+* a sample of a Visual
     Basic program
-- a dynamic library
+* a dynamic library
     cftvb.dll to allow interfacing between {{< TransferCFT/axwayvariablesComponentShortName >}}/Windows
     XXX with a Visual Basic application
-- a file
+* a file
     cftapivb.bas containing the statements necessary to use the cftvb.dll
     dynamic library
 
 The cftvb.dll dynamic library:
 
-- must be visible
+* must be visible
     to all Visual Basic applications using the {{< TransferCFT/axwayvariablesComponentShortName >}} APIs
-- itself uses
+* itself uses
     the dynamic library apicft.dll (programming interface in C) supplied
     with {{< TransferCFT/axwayvariablesComponentShortName >}}/Windows, and must therefore be visible to that
-- exports the
+* exports the
     functions set out below
 
 The source Visual Basic file cftapivb.bas:
 
-- contains the
+* contains the
     statements of structure and of functions required to use the Transfer
     CFT APIs in a Visual Basic program
-- must be incorporated
+* must be incorporated
     into all projects using the Visual Basic {{< TransferCFT/axwayvariablesComponentShortName >}} APIs
 
 ## Available Visual Basic functions

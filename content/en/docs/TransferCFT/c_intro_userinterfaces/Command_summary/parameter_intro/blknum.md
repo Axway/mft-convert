@@ -16,7 +16,7 @@ selected regardless of the block that they belong to.
 
 You should use [IDTU](../idtu) instead of the BLKNUM parameter, as BLKNUM use is:
 
-- Deprecated in a mono-node instance
-- Not supported in multi-node configurations
+* Deprecated in a mono-node instance
+* Not supported in multi-node configurations
 
 [Return to Command index](../../)

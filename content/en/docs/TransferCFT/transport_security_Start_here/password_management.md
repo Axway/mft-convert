@@ -4,9 +4,9 @@ linkTitle: "Password management"
 weight: 240
 ---This section describes how to implement three different types of password management. For each of these methods, an example is provided that shows the server side configuration and an example user command from the client side. These management types are:
 
-- [Static passwords](#Static)
-- [External flat files](#External)
-- [System level authentication](#System)
+* [Static passwords](#Static)
+* [External flat files](#External)
+* [System level authentication](#System)
 
 <span id="kanchor31"></span><span id="kanchor32"></span>
 
@@ -16,9 +16,9 @@ In addition to RUSER or SUSER, you can provide a password in the RPASSWD/SPASSWD
 
 RPASSWD and SPASSWD can be provided directly as ****mypassw123****, through an external flat file such as ****@fname****,or using another system. Other system types include:
 
-- Operating System User Management
-- Transfer CFT UI User Access Base ([xfbadm](../../cft_intro_install/unix_install_start_here/run_first_time_ux/use_cft_utilities#xfbadmusr1))
-- Access Management System ([PassPort AM](../../internal_a_m_start_here/about_passport_am), [AM exit](../../internal_a_m_start_here/am_exits))
+* Operating System User Management
+* Transfer CFT UI User Access Base ([xfbadm](../../cft_intro_install/unix_install_start_here/run_first_time_ux/use_cft_utilities#xfbadmusr1))
+* Access Management System ([PassPort AM](../../internal_a_m_start_here/about_passport_am), [AM exit](../../internal_a_m_start_here/am_exits))
 
 To use one of these other systems, set the `rpasswd/spasswd `to the` keyword _AUTH_` value and the `cft.server.authentication_method` parameter to the appropriate authentication method. See also, [UCONF parameters](../../admin_intro/uconf/uconf_directory).
 

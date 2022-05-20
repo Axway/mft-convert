@@ -13,9 +13,9 @@ weight: 3360
 The maximum number of SSL tasks that can execute simultaneously in a
 {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
-- ****8****:
+* ****8****:
     default value for all operating systems
-- ****64****:
+* ****64****:
     is the maximum for all operating systems
 
 [Return to Command index](../../)

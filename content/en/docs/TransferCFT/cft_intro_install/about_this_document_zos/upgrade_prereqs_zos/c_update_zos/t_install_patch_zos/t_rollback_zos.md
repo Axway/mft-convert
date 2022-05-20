@@ -8,9 +8,9 @@ weight: 270
 
 Use the A13RBACK to restore the executable file library, USS Copilot and USS {{< TransferCFT/suitevariablesSecureRelayName  >}} environment. This JCL executes the following three JCLs:
 
-- A13RSTOR: Restores the Transfer CFT Load library.
-- A13UCOPR: Restores the Transfer CFT USS Copilot environment.
-- A13UXSRR: Restores the Transfer CFT USS {{< TransferCFT/suitevariablesSecureRelayName >}} environment.
+* A13RSTOR: Restores the Transfer CFT Load library.
+* A13UCOPR: Restores the Transfer CFT USS Copilot environment.
+* A13UXSRR: Restores the Transfer CFT USS {{< TransferCFT/suitevariablesSecureRelayName >}} environment.
 
 Before submitting the JOB configure the following JCL in automatic mode:
 
@@ -26,9 +26,9 @@ Before submitting the JOB configure the following JCL in automatic mode:
 
 ..INSTALL(A13UXSRD) &gt;&gt; ID='AUTO'
 
-- Stop Transfer CFT and {{< TransferCFT/suitevariablesCopilotName >}}.
-- Set the parameter 'ID' with the last six characters of the patch id. For example, 0E0500 for the patch id CF0E0500.
-- Submit the JCL.
+* Stop Transfer CFT and {{< TransferCFT/suitevariablesCopilotName >}}.
+* Set the parameter 'ID' with the last six characters of the patch id. For example, 0E0500 for the patch id CF0E0500.
+* Submit the JCL.
 
 > **Note**
 >

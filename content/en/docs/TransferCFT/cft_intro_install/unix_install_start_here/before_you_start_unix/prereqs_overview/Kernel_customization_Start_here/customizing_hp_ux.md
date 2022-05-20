@@ -4,9 +4,9 @@ linkTitle: "HP-UX: Customize the kernel"
 weight: 200
 ---This topic provides information on customizing the HP-UX kernel, and how to:
 
-- Modify
+* Modify
     the message queue depth
-- Modify
+* Modify
     the number of files used by a process
 
 <span id="Modify_the_message_queue_depth"></span>
@@ -23,9 +23,9 @@ To customize the message queue:
     the sam command.
 1. Select the following sub-menus,
     respectively:
-    -   Kernel
+    *   Kernel
         Configuration
-    -   Configurable
+    *   Configurable
         Parameters
 1. Set the pointer to the *msgtql*
     parameter.
@@ -58,9 +58,9 @@ kernel parameter to 1024. To do so:
     enter the sam
     command.
 1. Select the following sub-menus:
-    -   Kernel
+    *   Kernel
         Configuration
-    -   Configurable
+    *   Configurable
         Parameters
 1. Set the pointer to the *maxfiles*
     parameter.

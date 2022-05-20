@@ -6,17 +6,17 @@ weight: 280
 be established. The CFTPROT object sets up these transfer rules, or file
 transfer protocols. Transfer protocols include:
 
-- PeSIT
-- Odette
+* PeSIT
+* Odette
 
 Related
 topics
 
-- Command syntax
+* Command syntax
     [CFTPROT](../../../c_intro_userinterfaces/command_summary#CFTPROT)
-- Parameter list
+* Parameter list
     [CFTPROT](../../../c_intro_userinterfaces/about_cftutil/configuring_cft_start_here/cftprot_command_line)
-- [Proxy
+* [Proxy
     and SOCKS protocol](../../../protocols_start_here/ipv6/use_proxy_and_socks_protocol)
 
 <span id="About_the_CFTPROT_Transfer_Protocol"></span>
@@ -30,11 +30,11 @@ use, must be supported by the local Transfer CFT and the partner Transfer CFT.
 
 Use the CFTPROT object to:
 
-- Select a protocol,
+* Select a protocol,
     either PeSIT or Odette, and a way of using this protocol, such
     as with or without compression, with or without restart possibility, and
     so on
-- Specify certain
+* Specify certain
     parameters related to the use of network resources for protocol exchanges,
     such as the connection protocol selection mechanism (SAP parameter)
 
@@ -43,11 +43,11 @@ The access methods, or data exchange protocols, implemented is TCP/IP, which can
 
 The following file transfer protocols are implemented:
 
-- PeSIT
+* PeSIT
     D (SIT, External and CFT profiles)
-- PeSIT
+* PeSIT
     E (ANY profile)
-- ODETTE
+* ODETTE
 
 A transfer with a partner is possible if the transfer protocol and the
 data exchange protocol used are supported by the local Transfer CFT and the
@@ -68,13 +68,13 @@ are common to all protocols; other parameters are only meaningful for
 a given protocol, and therefore for a given TYPE. The CFTPROT object defines
 the following:
 
-- Parameters, that
+* Parameters, that
     are common to all the protocols as described in the *CFTPROT object*
-- Specific parameters,
+* Specific parameters,
     grouped by types of protocol, which are described in *CFTPROT TYPE =
     xxx*. The TYPE parameter can take one of the following values:
     ODETTE, PeSIT
-- The parameter allowing
+* The parameter allowing
     the association of a protocol to a security profile, or SSL, as described
     in [Transport
     Security](../../../transport_security_start_here/configuring_transport_security_start_here)

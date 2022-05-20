@@ -29,8 +29,8 @@ To begin the procedure:
     --> Type M to modify, ENTER to continue:
     ```
 1. Enter the local Transfer CFT instance details.
-    -   Group name: Use this field to assign your Transfer CFT to a Transfer CFT group.
-    -   Local name: This value is your CFTNAME, as defined by LOCALPART in CFTPARM by default. See also the UCONF values.
+    *   Group name: Use this field to assign your Transfer CFT to a Transfer CFT group.
+    *   Local name: This value is your CFTNAME, as defined by LOCALPART in CFTPARM by default. See also the UCONF values.
 
     ```
     Local Transfer CFT instance details. \* Group Name .......... [Production.VMS]: \* Local Name .......... [I64OV1_MYCFTNAME]: \* Hostname [I64OV1.LAB1.LAB.PTX.AXWAY.INT]:

@@ -22,9 +22,9 @@ The [Transfer CFT API documentation](http://apidocs.axway.com/swagger-ui/index.h
 
 ## Resources
 
-- ****API description****: Is a technical description, in JSON, that specifies the API verbs, URL, encoding, input and output parameters, errors, etc.: `https://<copilot_host>:<uconf:copilot.restapi.serverport>/cft/api/v1/api-docs/service.json`  
+* ****API description****: Is a technical description, in JSON, that specifies the API verbs, URL, encoding, input and output parameters, errors, etc.: `https://<copilot_host>:<uconf:copilot.restapi.serverport>/cft/api/v1/api-docs/service.json`  
     ****Example****  
     https://localhost:1768/cft/api/v1/api-docs/service.json
-- ****API documentation****: You can access the {{< TransferCFT/axwayvariablesComponentLongName >}} Swagger UI documentation at: `https://<copilot_host>:<uconf:copilot.restapi.serverport>/cft/api/v1/ui/`  
+* ****API documentation****: You can access the {{< TransferCFT/axwayvariablesComponentLongName >}} Swagger UI documentation at: `https://<copilot_host>:<uconf:copilot.restapi.serverport>/cft/api/v1/ui/`  
     ****Example****  
     https://localhost:1768/cft/api/v1/ui/

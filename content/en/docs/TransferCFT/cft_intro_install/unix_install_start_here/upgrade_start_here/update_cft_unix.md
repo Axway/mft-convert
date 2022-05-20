@@ -18,8 +18,8 @@ You can easily perform {{< TransferCFT/suitevariablesTransferCFTName  >}} update
 
 Note that from the {{< TransferCFT/PrimaryCGorUM  >}} interface you cannot:
 
-- Remove service packs or patches.
-- Update {{< TransferCFT/axwayvariablesComponentLongName >}}s installed in multi-node/multi-hosts from {{< TransferCFT/PrimaryCGorUM >}}.
+* Remove service packs or patches.
+* Update {{< TransferCFT/axwayvariablesComponentLongName >}}s installed in multi-node/multi-hosts from {{< TransferCFT/PrimaryCGorUM >}}.
 
 <span id="Install"></span>
 

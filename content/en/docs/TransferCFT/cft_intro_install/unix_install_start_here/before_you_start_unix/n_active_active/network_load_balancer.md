@@ -10,7 +10,7 @@ That said, {{< TransferCFT/suitevariablesTransferCFTName  >}} actually does its 
 
 For example, you have two servers hostA and hostB each having 2 nodes:
 
-- If the 2 nodes go down on hostA, they are restarted on hostB.
-- At that point, you have 4 nodes on hostB and 0 on hostA.
-    -   If Copilot is up on hostA, hostA can still receive incoming traffic, which it redirects to hostB.
-    -   If Copilot is down on hostA, then that server cannot be used, and all incoming traffic is directed to hostB.
+* If the 2 nodes go down on hostA, they are restarted on hostB.
+* At that point, you have 4 nodes on hostB and 0 on hostA.
+    *   If Copilot is up on hostA, hostA can still receive incoming traffic, which it redirects to hostB.
+    *   If Copilot is down on hostA, then that server cannot be used, and all incoming traffic is directed to hostB.

@@ -20,14 +20,14 @@ send transfer, the transfer changing to the H or K state.
 
 This name may include the following symbolic variables:
 
-- &IDF, &PARM
-- &PART, &RPART,
+* &IDF, &PARM
+* &PART, &RPART,
     &SPART, &GROUP
-- &RUSER, &SUSER,
+* &RUSER, &SUSER,
     &USERID
-- &RAPPL, &SAPPL
-- &DIAGI, &DIAGP
-- &NIDF
+* &RAPPL, &SAPPL
+* &DIAGI, &DIAGP
+* &NIDF
 
 The character ‘&’ designates the char_symb character defined in
 the {{< TransferCFT/axwayvariablesComponentShortName  >}} *Operations Guide* that corresponds with your OS.

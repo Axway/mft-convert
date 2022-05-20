@@ -19,13 +19,13 @@ completion of sending a file.
 
 This name may include the following symbolic variables:
 
-- &IDF, &PARM
-- &PART, &RPART,
+* &IDF, &PARM
+* &PART, &RPART,
     &SPART, &GROUP
-- &RUSER, &SUSER,
+* &RUSER, &SUSER,
     &USERID
-- &RAPPL, &SAPPL
-- &NIDF
+* &RAPPL, &SAPPL
+* &NIDF
 
 The character ‘&’ designates the char_symb character defined in
 the {{< TransferCFT/axwayvariablesComponentShortName  >}} *Operations Guide* that corresponds with your OS.

@@ -14,9 +14,9 @@ Message in text sent to the partner.
 
 String:
 
-- string80
+* string80
     PeSIT D CFT profile
-- string512
+* string512
     PeSIT E
 
 This text may include spaces. It must be included between single quotes

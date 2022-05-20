@@ -4,12 +4,12 @@ linkTitle: "Use the NonStop mode"
 weight: 200
 ---Transfer CFT HP NonStop provides a start-process supervisor (CFTSUP) that can restart the Transfer CFT server or UI server in case of an unexpected stop. This section presents the following NonStop information:
 
-- [Overview](#Overview): describes the non-stop feature and compares it with the NonStop functionality delivered in previous versions
-- [Enable](#Enable): how to activate the non-stop mode
-- [Configure](#Configur): how to set additional non-stop mode parameters
-- [Syntax](#Syntax): the commands and their syntax
-    -   [Messages](#Conventi): provides examples of using CFTSUP commands and returned messages
-- [Help](#Help): information on using command line help
+* [Overview](#Overview): describes the non-stop feature and compares it with the NonStop functionality delivered in previous versions
+* [Enable](#Enable): how to activate the non-stop mode
+* [Configure](#Configur): how to set additional non-stop mode parameters
+* [Syntax](#Syntax): the commands and their syntax
+    *   [Messages](#Conventi): provides examples of using CFTSUP commands and returned messages
+* [Help](#Help): information on using command line help
 
 <span id="Overview"></span>
 
@@ -17,17 +17,17 @@ weight: 200
 
 The CFTSUP interface consist of:
 
-- A component watchdog called the supervisor
-- A utility that allows you to:
-    -   Start and stop the supervisor
-    -   Start and stop the Transfer CFT server and Transfer CFT Copilot server
-    -   Display the status of these components
+* A component watchdog called the supervisor
+* A utility that allows you to:
+    *   Start and stop the supervisor
+    *   Start and stop the Transfer CFT server and Transfer CFT Copilot server
+    *   Display the status of these components
 
 The differences between the CFTSUP interface and the NonStop mode delivered in Transfer CFT 2.3 are:
 
-- The Transfer CFT server and Transfer CFT Copilot server are both managed in NonStop mode.
-- The CFTSUP interface replaces the former CFTNSMON and CFTNSHUT commands.
-- Transfer CFT stops and is not restarted unless the reset command is set to` RESTART=YES` when you execute the Transfer CFT command `CFTUTIL SHUT <...`&gt;.
+* The Transfer CFT server and Transfer CFT Copilot server are both managed in NonStop mode.
+* The CFTSUP interface replaces the former CFTNSMON and CFTNSHUT commands.
+* Transfer CFT stops and is not restarted unless the reset command is set to` RESTART=YES` when you execute the Transfer CFT command `CFTUTIL SHUT <...`&gt;.
 
 <span id="Enable"></span>
 
@@ -43,8 +43,8 @@ More information and additional commands are described in the following sections
 
 ### Recommendations
 
-- You can use the `cftsup cft start `command to start Transfer CFT, which also starts the supervisor. However, this does not mean the NonStop mode is running. To implement the NonStop mode, you must activate `cft.guardian.nonstop` in the UCONF configuration.
-- If you need to kill the Transfer CFT server, for example, use the `cftsup cft kill` command to keep the component from restarting.
+* You can use the `cftsup cft start `command to start Transfer CFT, which also starts the supervisor. However, this does not mean the NonStop mode is running. To implement the NonStop mode, you must activate `cft.guardian.nonstop` in the UCONF configuration.
+* If you need to kill the Transfer CFT server, for example, use the `cftsup cft kill` command to keep the component from restarting.
 
 <span id="Configur"></span>
 
@@ -100,27 +100,27 @@ Where:
 
 `component [ALL &#124; SUPV &#124; CFT &#124; COPILOT]`
 
-- ALL (default): Action applies to all components
-- SUPV: Watchdog utility
-    -   Process is started with the name: prefix added to SUP
+* ALL (default): Action applies to all components
+* SUPV: Watchdog utility
+    *   Process is started with the name: prefix added to SUP
         -   For example: `CFTL50I Started the supervisor with process id $`**`LASUP`**
         -   Prefix = cft.guardian.process_name_prefix (the prefix in the example is `LA`)
-    -   Stops when all components are terminated except if it was started explicitly as standalone process:
-    -   cftsup SUPV START
-    -   In this case, it only stops with an explicit stop:
-    -   cftsup SUPV STOP
-- CFT: Action applies to the Transfer CFT server
-- COPILOT: Action applies to Transfer CFT Copilot server
+    *   Stops when all components are terminated except if it was started explicitly as standalone process:
+    *   cftsup SUPV START
+    *   In this case, it only stops with an explicit stop:
+    *   cftsup SUPV STOP
+* CFT: Action applies to the Transfer CFT server
+* COPILOT: Action applies to Transfer CFT Copilot server
 
 `Actions [ START &#124; STOP &#124; STATUS &#124; KILL &#124; SHUT (for Transfer CFT server only)]`
 
-- KILL is only valid for the Transfer CFT and Transfer CFT Copilot servers.
+* KILL is only valid for the Transfer CFT and Transfer CFT Copilot servers.
 
 > **Note**
 >
 > The SHUT option only apply to the Transfer CFT sever.
 
-- CFTUTIL SHUT FAST=YES the equivalent is cftsup CFT SHUT FAST=YES
+* CFTUTIL SHUT FAST=YES the equivalent is cftsup CFT SHUT FAST=YES
 
 <span id="Conventi"></span>
 

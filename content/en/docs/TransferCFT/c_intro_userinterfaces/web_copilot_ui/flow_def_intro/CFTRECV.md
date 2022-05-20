@@ -5,18 +5,18 @@ weight: 210
 ---This topic describes the {{< TransferCFT/suitevariablesTransferCFTName  >}}
 receive template. You can use the CFTRECV object to:
 
-- Give the default
+* Give the default
     name and local physical characteristics of the file to receive
-- Define the default
+* Define the default
     actions to perform locally during and after the transfer (translation,
     compression, call to a user EXIT, an end-of-transfer procedure...)
-- Authorize the default
+* Authorize the default
     time slot and default user associated with the transfers
 
 ****Related
 topics****
 
-- Command syntax
+* Command syntax
     [CFTRECV](../../../command_summary#CFTRECV)
 
 

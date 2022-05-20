@@ -31,4 +31,4 @@ The following parameters are now managed in {{< TransferCFT/suitevariablesCentra
 
 ****Related topics****
 
-- [Recommendations and troubleshooting](../user_rights_tips)
+* [Recommendations and troubleshooting](../user_rights_tips)

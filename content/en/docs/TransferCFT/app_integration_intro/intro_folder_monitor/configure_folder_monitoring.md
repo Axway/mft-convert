@@ -11,31 +11,31 @@ weight: 180
 ## Folder monitoring set up
 
 1. Activate the folder monitoring option.
-    -   Set uconf parameter folder_monitoring.enable to ****Yes****.
+    *   Set uconf parameter folder_monitoring.enable to ****Yes****.
 1. Declare your logical directories to monitor.
-    -   Add CFTFOLDER objects.
+    *   Add CFTFOLDER objects.
 1. For each logical directory defined, configure the specific options you want to use for each:
-    -   File management method
+    *   File management method
 
     <!-- -->
 
-    -   Used sub-directories
+    *   Used sub-directories
 
     <!-- -->
 
-    -   Set the IDF
+    *   Set the IDF
 
     <!-- -->
 
-    -   Set the partner name
+    *   Set the partner name
 
     <!-- -->
 
-    -   Define the delay to take into account the file
+    *   Define the delay to take into account the file
 
     <!-- -->
 
-    -   Define other Folder Monitoring parameters
+    *   Define other Folder Monitoring parameters
 1. Optionally, to specify file-system event monitoring you additionally must set this in [CFTFOLDER object.](#Enable)
 
 <span id="CFTFOLDE"></span>
@@ -86,21 +86,21 @@ Use the following CFTFOLDER parameters to configure folder monitoring for each 
 >
 > \*You cannot use the following characters in the SCANDIR or WORKDIR definition. Additionally you cannot use a comma (,) in the CFTFOLDER SCANDIR or WORKDIR definition.
 
-- {{< TransferCFT/PrimaryForunix >}} /
-- For {{< TransferCFT/PrimaryforWindows >}} \\ / : \* ? " &lt; > &#124;
+* {{< TransferCFT/PrimaryForunix >}} /
+* For {{< TransferCFT/PrimaryforWindows >}} \\ / : \* ? " &lt; > &#124;
 
 ### Parameter settings and actions
 
-- The delay between scans of a given directory is defined by its interval parameter value.
-- By default the ENABLESUBDIR [enable_subdir] parameter is set to YES, and the directory and all its sub-directories are scanned.
-- For each file detected, the name is checked against the configured parameters values in the include and exclude file filters. Files that match the combined criteria are monitored, all others are ignored.
+* The delay between scans of a given directory is defined by its interval parameter value.
+* By default the ENABLESUBDIR [enable_subdir] parameter is set to YES, and the directory and all its sub-directories are scanned.
+* For each file detected, the name is checked against the configured parameters values in the include and exclude file filters. Files that match the combined criteria are monitored, all others are ignored.
 
 For a file to become a candidate to be submitted, the following conditions must be met:
 
-- File size: If these values are configured, the following rules apply.
-    -   FILESIZEMIN [file_size_min]: The current size must not be less than this value.
-    -   FILESIZEMAX [file_size_max]: The current size must not be greater than this value.
-- The last modification time and duration must not have changed within a number of seconds as defined in the FILEIDLEDELAY [file_idle_delay] parameter value.
+* File size: If these values are configured, the following rules apply.
+    *   FILESIZEMIN [file_size_min]: The current size must not be less than this value.
+    *   FILESIZEMAX [file_size_max]: The current size must not be greater than this value.
+* The last modification time and duration must not have changed within a number of seconds as defined in the FILEIDLEDELAY [file_idle_delay] parameter value.
 
 ## Create or modify a CFTFOLDER object
 
@@ -139,8 +139,8 @@ CFTFOLDER ID=<myfolderobject>, USEFSEVENTS=YES, ...
 
 This feature can be resource intensive for Transfer CFT and the system in general in the following situations:
 
-- You have a large number of directories and sub-directories monitored using file-system events.
-- The activity in terms of file additions, removals, changes of files in those directories is high.
+* You have a large number of directories and sub-directories monitored using file-system events.
+* The activity in terms of file additions, removals, changes of files in those directories is high.
 
 We recommended that you only use file-system event monitoring when immediate attention by Transfer CFT is a functional requirement.
 
@@ -203,8 +203,8 @@ This section presents an example that consists of configuring 3 directories for 
 
 The first directory presents the simplest possible configuration, leaving most parameters set to their default values.
 
-- All of the files in the directory sub-tree are candidates for the SEND submission.
-- The files are sent to a given partner, `newyork`, using an IDF name of IDFA.
+* All of the files in the directory sub-tree are candidates for the SEND submission.
+* The files are sent to a given partner, `newyork`, using an IDF name of IDFA.
 
 The following commands create the configuration defined for directory A.
 
@@ -223,9 +223,9 @@ CFTUTIL CFTFOLDER ID=A, SCANDIR='/home/CFT/fm/dir_a/scan', WORKDIR='/home/CFT/f
 
 For the second directory, directory B, we want to:
 
-- Be able to send files to the following partners, newyork, berlin, london, rome, brussels, and paris.
-- Use the id given as the IDF, in this example TXT.
-- Send only files suffixed by .txt.
+* Be able to send files to the following partners, newyork, berlin, london, rome, brussels, and paris.
+* Use the id given as the IDF, in this example TXT.
+* Send only files suffixed by .txt.
 
 The following commands create the required directory B configuration.
 
@@ -252,13 +252,13 @@ The files to be sent must be moved to the directory that corresponds to the dest
 
 For directory C we want to:
 
-- Send files to multiple partners, newyork and paris.
-- Use idf1, idf2, or idf3 as the newyork partner IDF.
-- Use idfa, idfb, idfc, or idfd as the paris partner IDF.
-- Not send files suffixed by .tmp.
-- Automatically move the files to be sent to the SCANDIR, so the FILEIDLEDELAY parameter value is set to zero.
-- Submit files within a delay of approximately 10 seconds (INTERVAL).
-- Limit the number of send submissions per interval to 4 (FILECOUNT).
+* Send files to multiple partners, newyork and paris.
+* Use idf1, idf2, or idf3 as the newyork partner IDF.
+* Use idfa, idfb, idfc, or idfd as the paris partner IDF.
+* Not send files suffixed by .tmp.
+* Automatically move the files to be sent to the SCANDIR, so the FILEIDLEDELAY parameter value is set to zero.
+* Submit files within a delay of approximately 10 seconds (INTERVAL).
+* Limit the number of send submissions per interval to 4 (FILECOUNT).
 
 The following commands create the described directory C configuration.
 
@@ -301,8 +301,8 @@ Consequently, Transfer CFT automatically creates a request based on the above sy
 SEND part=part1,idf=idf1,ida=A0001,sappl="appli1",suser="cft"
 ```
 
-- For more information on how to effectively use separators with symbolic variables, please see [Separate fields in symbolic variables.](../../../c_intro_userinterfaces/command_summary/symbolic_variables#Separate)
-- For more information on the various symbolic variables to use in CFTSEND with CFTFOLDER, see [List of symbolic variables.](../../../c_intro_userinterfaces/command_summary/symbolic_variables#List_of_symbolic_variables)
+* For more information on how to effectively use separators with symbolic variables, please see [Separate fields in symbolic variables.](../../../c_intro_userinterfaces/command_summary/symbolic_variables#Separate)
+* For more information on the various symbolic variables to use in CFTSEND with CFTFOLDER, see [List of symbolic variables.](../../../c_intro_userinterfaces/command_summary/symbolic_variables#List_of_symbolic_variables)
 
 ## Archiving with folder monitoring
 
@@ -327,12 +327,12 @@ The following example describes how to scan a folder, send any new file, and the
 
 Create the following:
 
-- A folder to scan, for example: `mkdir myScanFolder`
-- A working folder, for example: `mkdir myWorkFolder`
-- An archive folder, for example: `mkdir myArchiveFolder`
-- A test file, for example: `myFile.txt`
-- Folder monitoring must be enabled: `uconfset id=folder_monitoring.enable, value=yes`
-- Stop {{< TransferCFT/suitevariablesTransferCFTName >}} prior to start the procedure, enter: `cft stop `
+* A folder to scan, for example: `mkdir myScanFolder`
+* A working folder, for example: `mkdir myWorkFolder`
+* An archive folder, for example: `mkdir myArchiveFolder`
+* A test file, for example: `myFile.txt`
+* Folder monitoring must be enabled: `uconfset id=folder_monitoring.enable, value=yes`
+* Stop {{< TransferCFT/suitevariablesTransferCFTName >}} prior to start the procedure, enter: `cft stop `
 
 In the **Steps** below, we use the absolute paths, that is, the folders are located in the runtime directory.
 

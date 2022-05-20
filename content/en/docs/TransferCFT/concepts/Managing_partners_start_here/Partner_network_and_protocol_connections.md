@@ -76,9 +76,9 @@ next paragraph.
 Transfer CFT can authorize several application protocols per partner
 (PeSIT, ODETTE). A requester Transfer CFT must consequently address:
 
-- A computer: network
+* A computer: network
     address
-- An application:
+* An application:
     a protocol of the corresponding Transfer CFT
 
 Transfer CFT (server) is seen as several applications by
@@ -93,23 +93,23 @@ must be made according to the network access methods used.
 
 More specifically:
 
-- At the requester
+* At the requester
     end - remote SAP:
-    -   When the
+    *   When the
         transfer is activated, the requester Transfer CFT chooses a protocol (PROT
         parameter of CFTPART), and consequently an application protocol and a
         network access method.
-    -   The SAP
+    *   The SAP
         parameter of the CFTPART object determines the partner application access
         point.
-- At the server end - local SAP:
-    -   The SAP
+* At the server end - local SAP:
+    *   The SAP
         value allows Transfer CFT to define the associated protocol, by linking
         this value with those of the SAP parameters of the CFTPROT objects
-    -   The Transfer
+    *   The Transfer
         CFT checks whether this protocol (application and network access
         method) is valid for the requester partner, the CFTPART PROT parameter
-    -   The network
+    *   The network
         interface informs Transfer CFT of the calls presenting one of the SAP
         parameters that the server Transfer CFT previously defined for it, during
         the initialization phase
@@ -131,9 +131,9 @@ In this example:
 
 The figure below provides a schematic overview of the:
 
-- Links to be established
+* Links to be established
     between the various commands to be set at the requester end
-- SAP as a TCP port
+* SAP as a TCP port
 
 ****Schematic overview****
 

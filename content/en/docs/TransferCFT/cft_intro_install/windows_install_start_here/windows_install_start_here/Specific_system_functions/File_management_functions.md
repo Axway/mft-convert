@@ -4,13 +4,13 @@ linkTitle: "File management functions"
 weight: 260
 ----   [Managing
     file flushes](#Managing_file_flushes)
-- [Managing
+* [Managing
     access conflicts to CFT working files](#Managing_access_conflicts_to_CFT_working_files)
-- [Recognizing
+* [Recognizing
     file types](#Recognizing_file_types)
-- [Sending
+* [Sending
     a group of files](#Sending_a_group_of_files)
-- [Disabling
+* [Disabling
     the homogeneous mode](#Disabling_the_homogeneous_mode)
 
 <span id="About_file_management_functions"></span>
@@ -26,10 +26,10 @@ physical flush operations.
 
 During the transfer, Transfer CFT implements two types of flushes:
 
-- Flushes
+* Flushes
     on received files. These types of flush take place each time synchronization
     points are received.
-- Flushes
+* Flushes
     on the Transfer CFT catalog when synchronization points are received.
     See also the CFTCAT [UPDAT](../../../../../c_intro_userinterfaces/command_summary/parameter_intro/updat) parameter.
      
@@ -122,8 +122,8 @@ suffix is collected into a text file of which the logical name is CFTSUFX
 
 The CFTSUFX file is made up of lines that may consist of:
 
-- A comment
-- The definition
+* A comment
+* The definition
     of a suffix, possible followed by a comment
 
 A comment is any item of text beginning with the character ‘#’.
@@ -138,14 +138,14 @@ be used.
 
 There are three main file types:
 
-- Binary files
+* Binary files
 
 Transfer CFT treats this type of file as any collection of
 bytes. In this type of file, no binary configuration takes any particular
 role. In the Transfer CFT parameterization, this type of file is characterized
 by the letter "B".
 
-- Text
+* Text
     files
 
 Transfer CFT treats this type of file as a series of text
@@ -154,7 +154,7 @@ lines each separated by the pre-defined control code sequence CR-LF (0x0D
 This type of file may or may not end in the binary code 0x5A (ctrl Z) For
 all Transfer CFTs, a text file is characterized by the letter "B".
 
-- Variable
+* Variable
     files
 
 In this type of file, records with binary contents are preceded
@@ -188,9 +188,9 @@ addition to the letter "T", so that the text file properties
 can be given in full within a Transfer CFT server/client architecture,
 operating UNIX and Windows machines:
 
-- O: forces Windows
+* O: forces Windows
     text type
-- X: forces UNIX
+* X: forces UNIX
     text type
 
 The "T" type signifies native text (a Transfer CFT/Windows
@@ -241,18 +241,18 @@ For example:
 This section describes how to create a command to send a group
 of files. To better understand this section, refer to the following general group file information:
 
-- [Sending
+* [Sending
     a group of files](../../../../../concepts/send_command/send_group_of_files_cl)
-- The [FNAME](../../../../../c_intro_userinterfaces/command_summary/parameter_intro/fname)
+* The [FNAME](../../../../../c_intro_userinterfaces/command_summary/parameter_intro/fname)
     and [WFNAME](../../../../../c_intro_userinterfaces/command_summary/parameter_intro/wfname) parameters
     in the CFTSEND and CFTRECV commands
 
 A group file send request takes place implicitly when the value of the FNAME parameter
 for the CFTSEND command has the following two characteristics:
 
-- The first character
+* The first character
     is a surrogate character ‘#’
-- The FNAME parameter
+* The FNAME parameter
     states a folder, or contains meta-characters
 
 ****Example****
@@ -312,13 +312,13 @@ Transfer CFT/Windows ensures that this function is "opened"
 by calling different batches before transmission by the transmitter and
 after reception on the receiver, as follows:
 
-- The batch file
+* The batch file
     CFTSVG01 is called before transmission and on the transmitter
 
 This batch should constitute the file called WFNAME in the CFTSEND command.
 This is the file which will actually be transmitted.
 
-- The batch file
+* The batch file
     CFTRST01 is called after reception and on the receiver
 
 This batch should de-concatenate the file that has been received. This
@@ -329,18 +329,18 @@ as default, when Transfer CFT is executed.
 
 These batch files are automatically called by the following parameters:
 
-- For CFTSVG01:
-    -   The 5th
+* For CFTSVG01:
+    *   The 5th
         parameter (%5) designates all the files to concatenate and corresponds
         to the NFNAME of the CFTSEND command
-    -   The 6th
+    *   The 6th
         parameter (%6) gives the name of the out file for the concatenation utility
         and corresponds to WFNAME of the CFTSEND command
-- For CFTRST01:
-    -   The 5th
+* For CFTRST01:
+    *   The 5th
         parameter (%5) gives the name of the in file for the de-concatenation
         utility and corresponds to WFNAME of the CFTRECV command
-    -   The 6th
+    *   The 6th
         parameter (%6) designates all the out files to concatenate and corresponds
         to the NFNAME of the CFTRECV command
 
@@ -352,18 +352,18 @@ insignificant.
 To implement the transfer of a group of files in standardized
 mode, the conditions on the Transfer CFT parameters are as follows:
 
-- The parameter FNAME
+* The parameter FNAME
     in the CFTSEND command is in the form of #&lt;string>, in which &lt;string>
     indicates a folder or contains meta-characters
-- The parameter WFNAME
+* The parameter WFNAME
     of the CFTSEND command is a string indicating the name of the out file
     for the concatenator on the transmitter
-- The parameter WFNAME
+* The parameter WFNAME
     of the CFTRECV command is a string indicating the name of the IN file
     for the DE-concatenator on the receiver  
     This name does not need to be the same as that of WFNAME of the CFTSEND
     on the transmitter
-- The parameter FNAME
+* The parameter FNAME
     of the CFTRECV command indicates the full path of a folder name ending
     with the ‘/’ character
 

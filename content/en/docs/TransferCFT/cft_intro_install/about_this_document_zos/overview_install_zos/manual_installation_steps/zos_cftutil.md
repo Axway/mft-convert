@@ -36,8 +36,8 @@ ABOUT
 
 For data set concatenation on Transfer CFT 3.2.4 and higher:
 
-- For PDSs concatenation, as specified in the IBM documentation, the data set with the largest block size must appear first in the concatenation.
-- You cannot concatenate PDSs that have different record lengths when RECFM=FB.
+* For PDSs concatenation, as specified in the IBM documentation, the data set with the largest block size must appear first in the concatenation.
+* You cannot concatenate PDSs that have different record lengths when RECFM=FB.
 
 ## CFTIN: Working with UNIX files
 
@@ -47,15 +47,15 @@ For data set concatenation on Transfer CFT 3.2.4 and higher:
 // PATH='/home/user/cft_cmd.txt'
 ```
 
-- File concatenation does not work.
-- cft_cmd.txt is a EBCDIC text file.
+* File concatenation does not work.
+* cft_cmd.txt is a EBCDIC text file.
 
 ## CFTIN: CFTIN is missing
 
 When no command is specified in the JCL PARM parameter, and if the DD CFTIN is not defined in the JCL:
 
-- The CFTUTIL return code is: 8
-- The following WTO is performed:
+* The CFTUTIL return code is: 8
+* The following WTO is performed:
 
 ```
 +CFTUZ1E \*\* CFTIN/VFMIN DD STATEMENT MISSING \*\*

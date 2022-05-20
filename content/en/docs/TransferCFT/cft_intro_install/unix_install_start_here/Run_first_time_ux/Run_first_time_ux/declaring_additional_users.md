@@ -30,17 +30,17 @@ PATH=$PATH:root/cft_account/cft/bin; export PATH
 
 where:
 
-- root is the
+* root is the
     path pointing to the user directories (usually /home)    
-- cft_account
+* cft_account
     is the name of the Transfer CFT installation account     
 
 For example, if Transfer CFT is installed in the *cft* subdirectory
 of the */home/transfer* account, enter the following commands:
 
-- For *csh*:  
+* For *csh*:  
     set path=($path ~transfer/cft/bin)
-- For *sh* or
+* For *sh* or
     *ksh*:  
       
     PATH=$PATH:/home/transfer/cft/bin; export PATH
@@ -184,11 +184,11 @@ another Transfer CFT started by a different user.
 The only constraint is the rights that they have when accessing Transfer
 CFT configuration files. The minimum requirement is:
 
-- Write access rights
+* Write access rights
     for the communication file to which the CFTTCOM environment variable points
-- Read access rights
+* Read access rights
     for all files to which the other Transfer CFT environment variables point
-- Read access rights
+* Read access rights
     for all Transfer CFT programs
-- Read and execute
+* Read and execute
     access rights for all procedures written in a shell

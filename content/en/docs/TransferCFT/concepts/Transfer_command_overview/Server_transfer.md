@@ -5,15 +5,15 @@ weight: 190
 ---This topic describes the steps involved in a server transfer. These
 steps include:
 
-- [Receiving
+* [Receiving
     an incoming call](#Receiving_an_incoming_call)
-- [Exchanging
+* [Exchanging
     protocol information](#Exchanging_protocol_information)
-- [Creating
+* [Creating
     or releasing the file](#Creating_or_releasing_the_file)
-- [Transferring
+* [Transferring
     data](#Transferring_data)
-- [Disconnecting](#Disconnecting)
+* [Disconnecting](#Disconnecting)
 
 <span id="Receiving_an_incoming_call"></span>
 
@@ -41,16 +41,16 @@ during this phase differs according to the protocol. See also [Protocols.](../..
 
 Transfer CFT may refuse the transfer if:
 
-- The partner is
+* The partner is
     unknown, does not give the right password, or is not authorized at that
     time, time slot, and so on
-- The requested protocol
+* The requested protocol
     is not supported for this partner
-- The number of connections
+* The number of connections
     with this partner is exceeded
-- A directory type
+* A directory type
     EXIT generates a refusal
-- Negotiation is
+* Negotiation is
     impossible
 
 A catalog entry has not yet been created.
@@ -63,23 +63,23 @@ Once the recognition phase is complete, Transfer CFT receives a request
 to create a file (receive), open a file (send), or receive a message.
 This is followed by one of the two following events:
 
-- Transfer release
+* Transfer release
 
 There is already a catalog entry, in the H state,
 corresponding to the request received. This transfer may be in the H state
 as a result of:
 
-- A SEND ...
+* A SEND ...
     STATE=HOLD command - this is a request by the requester to release a transfer
     previously put on hold at the server end
-- A HALT command - this is then a request to resume an intentionally halted transfer
-- An accidental
+* A HALT command - this is then a request to resume an intentionally halted transfer
+* An accidental
     transfer interruption; the request is then a resumption request
 
 Transfer CFT is able to link the transfer request
 with the existing entry.
 
-- Transfer creation
+* Transfer creation
 
 There is no catalog entry corresponding to this transfer
 and one is then created.
@@ -87,10 +87,10 @@ and one is then created.
 The Transfer CFT may refuse the transfer,
 in the following cases in particular:
 
-- The partner
+* The partner
     is not authorized to send or receive the file (CFTAUTH command, internal
     or external security system, etc.)
-- It is impossible
+* It is impossible
     to create or open the file (file not known or inaccessible, characteristics
     incompatible with the Transfer CFT description, for example)
 

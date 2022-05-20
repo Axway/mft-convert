@@ -32,12 +32,12 @@ The recommendations in this section apply to a Transfer CFT multi-node, multi-h
 
 To implement active/active Transfer CFT you must use NFSv4 for the Transfer CFT runtime directory, which contains internal data such as the catalog, log, communication file, etc. Other versions of NFS are not supported for the runtime directory. For file exchanges, you can use either NFSv4 or v3. NFSv3 is not described in this document.
 
-- [Required NFSv4 mount options](#Required)
-- [Mount options summary](#Mount) 
-- [Synchronous / asynchronous option impact](#Impact)
-- [Tuning NFSv4 locking for node failover](#Tuning)
-- [Perform a NAS failover](#Perform)
-- [Troubleshoot an NFS lock daemon issue](#Troubles)
+* [Required NFSv4 mount options](#Required)
+* [Mount options summary](#Mount) 
+* [Synchronous / asynchronous option impact](#Impact)
+* [Tuning NFSv4 locking for node failover](#Tuning)
+* [Perform a NAS failover](#Perform)
+* [Troubleshoot an NFS lock daemon issue](#Troubles)
 
 <span id="Define_NFS_as_the_shared_file_system_..8"></span><span id="Define_NFS_as_the_shared_file_system"></span>
 
@@ -112,9 +112,9 @@ On the client side, use the `mount `command to specify the `async/sync` option.
 
 The NFS client treats the `sync `mount option differently than some other file systems. If neither `sync `nor `async `is specified (or if `async `is specified), the NFS client delays sending application writes to the server until any of the following events occur:
 
-- Memory limitations force reclaiming of system memory resources.
-- Transfer CFT explicitly flushes file data (PeSIT synchronization points, for example).
-- Transfer CFT closes a file.
+* Memory limitations force reclaiming of system memory resources.
+* Transfer CFT explicitly flushes file data (PeSIT synchronization points, for example).
+* Transfer CFT closes a file.
 
 This means that under normal circumstances, data written by Transfer CFT may not immediately appear on the server that hosts the file.
 
@@ -163,11 +163,11 @@ Enables replies to requests only after the changes have been committed to stable
 
 Legend:
 
-- 1 = Secure
-- 2 = Fairly secure
-- 3 = Not secure
-- Internal data = Transfer CFT runtime files, such as the catalog
-- Transferable data = Files exchanged using Transfer CFT
+* 1 = Secure
+* 2 = Fairly secure
+* 3 = Not secure
+* Internal data = Transfer CFT runtime files, such as the catalog
+* Transferable data = Files exchanged using Transfer CFT
 
 <span id="Tuning_NFSv4_locking_for_node_failover_..23"></span><span id="Tuning_NFSv4_locking_for_node_failover"></span><span id="Tuning"></span><span id="Perform_a_NAS failover_..24"></span><span id="Perform_a_NAS failover"></span><span id="Perform"></span><span id="Troubleshoot_an_NFS_lock_daemon_issue_with_no_error_message_..25"></span><span id="Troubleshoot_an_NFS_lock_daemon_issue_with_no_error_message"></span><span id="Troubles"></span><span id="Troubleshoot_the_UID_and_GID_..26"></span><span id="Troubleshoot_the_UID_and_GID"></span><span id="Using_AWS EFS_..27"></span><span id="Using_AWS EFS"></span><span id="Using_SMB_CIFS_..28"></span><span id="Using_SMB_CIFS"></span>
 
@@ -193,11 +193,11 @@ When transferring files that are located in a **N**etwork **F**ile **S**ystem, a
 
 ****Symptom****
 
-- Flow transfers hang in the phase `T` and phasestep `C`, with a timeout but no error message.
+* Flow transfers hang in the phase `T` and phasestep `C`, with a timeout but no error message.
 
 ****Remedy****
 
-- Check that the correct port for the lockd service is open on the firewall (default=4045).
+* Check that the correct port for the lockd service is open on the firewall (default=4045).
 
 ### Troubleshoot the UID and GID
 
@@ -215,8 +215,8 @@ This system is based on NFSv4. For more information on NFSv4, please see [Using 
 
 This shared file system has features that impact performance, as compared to a traditional NFS:
 
-- Distributed systems replicating data  
-- Processing does not continue until all data is replicated
+* Distributed systems replicating data  
+* Processing does not continue until all data is replicated
 
 ## Using SMB/CIFS
 
@@ -226,9 +226,9 @@ SMB, Server Message Block, is a protocol used to share files across corporate in
 
 ****SMB recommendations for Transfer CFT****
 
-- We recommend SMB 2 or higher.
-- The minimum supported Samba version is 4.15.3 if Samba (smbd) is your SMB provider.
-- If your SMB provider supports opportunistic locks (oplocks), we recommend that you disable this feature.
+* We recommend SMB 2 or higher.
+* The minimum supported Samba version is 4.15.3 if Samba (smbd) is your SMB provider.
+* If your SMB provider supports opportunistic locks (oplocks), we recommend that you disable this feature.
 
 > **Note**
 >

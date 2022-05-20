@@ -12,10 +12,10 @@ weight: 2390
 
 **** ****
 
-- CACHE: Displays in the log all cache information concerning purge and switchlog
-- SYSTEM: Displays internal task information (for advanced diagnostic purposes)
-- STATS: Display internal statistics (for advanced diagnostic purposes)
-- PROBE: Display probe transfer information
+* CACHE: Displays in the log all cache information concerning purge and switchlog
+* SYSTEM: Displays internal task information (for advanced diagnostic purposes)
+* STATS: Display internal statistics (for advanced diagnostic purposes)
+* PROBE: Display probe transfer information
 
  
 

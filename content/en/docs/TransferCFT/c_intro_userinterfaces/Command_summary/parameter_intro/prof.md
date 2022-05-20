@@ -21,11 +21,11 @@ The profile options are:
 PeSIT is then used in the SIT network context. This is the same in PeSIT version D and version E. It provides synchronization point management but does
 not manage:
 
-- segmentation:
+* segmentation:
     the value of the SEGMENT parameter must be set to NO (SEGMENT = NO), or
-- multi-records:
+* multi-records:
     the value of the MULTART parameter must be set to NO (MULTART = NO), or
-- compression:
+* compression:
     the RCOMP and SCOMP parameters are not applicable, or receive
     transfer requests
 

@@ -24,13 +24,13 @@ weight: 320
 
 DAYS_OF_WEEK:
 
-- A star ‘\*’ indicates every day of the week.
-- Indicate one or several days between Monday (0) and Sunday (6) using the digits separated by a comma (,).
-- Indicate a range of days using the minus (-) sign.
-- Examples of start_time using different of DAY_OF_WEEK formats:
-    -   10:11:\* : 11h10 indicates every day of the week
-    -   10:11:1 : 11h10 indicates every Tuesday
-    -   10:11:0,2,4-6 : 11h10 indicates every Monday, Wednesday, Friday, Saturday and Sunday
+* A star ‘\*’ indicates every day of the week.
+* Indicate one or several days between Monday (0) and Sunday (6) using the digits separated by a comma (,).
+* Indicate a range of days using the minus (-) sign.
+* Examples of start_time using different of DAY_OF_WEEK formats:
+    *   10:11:\* : 11h10 indicates every day of the week
+    *   10:11:1 : 11h10 indicates every Tuesday
+    *   10:11:0,2,4-6 : 11h10 indicates every Monday, Wednesday, Friday, Saturday and Sunday
 
 ****Example****
 
@@ -56,11 +56,11 @@ This example defines a schedule where the value of cft.purge.sx can be changed d
 >
 >  
 
-- The same configuration value can be scheduled several times in a day.
-- Scheduled periods for the same value can be contiguous, but they should not overlap.
+* The same configuration value can be scheduled several times in a day.
+* Scheduled periods for the same value can be contiguous, but they should not overlap.
 
 ****Related topics****
 
-- [About the Unified Configuration interface](../)
-- [Using Unified configuration (UCONF) in the GUI](../uconf_userinterface)
-- [Using Unified configuration (UCONF) in CFTUTIL](../uconf_w_cftutil)
+* [About the Unified Configuration interface](../)
+* [Using Unified configuration (UCONF) in the GUI](../uconf_userinterface)
+* [Using Unified configuration (UCONF) in CFTUTIL](../uconf_w_cftutil)

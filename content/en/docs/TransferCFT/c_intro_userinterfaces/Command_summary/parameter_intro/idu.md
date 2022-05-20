@@ -26,15 +26,15 @@ the catalog).
 
 Its value is an 8-character string, defined as follows:
 
-- one letter indicating
+* one letter indicating
     the MONTH (A to L, A for January, etc.),
-- two digits for
+* two digits for
     the DAY (01 to 31),
-- two digits for
+* two digits for
     the HOUR (00 to 23),
-- two digits for
+* two digits for
     the MINUTES (00 to 59),
-- one digit for the
+* one digit for the
     TENS OF SECONDS (0 to 5
 
 For a reply SEND command, used by a file end-of-receive procedure (most

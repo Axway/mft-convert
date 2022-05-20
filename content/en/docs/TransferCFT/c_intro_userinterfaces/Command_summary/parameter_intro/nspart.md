@@ -11,10 +11,10 @@ weight: 2360
 **[NSPART = {<u>value of the NPART
 parameter of CFTPARM</u> &#124; *string*}]**
 
-- string24     PeSIT
+* string24     PeSIT
     E  
-- string25     ODETTE
-- string64 SFTP  
+* string25     ODETTE
+* string64 SFTP  
 
 Network identifier by which the
 local {{< TransferCFT/axwayvariablesComponentShortName  >}} identifies itself to its partner. The remote partner must retrieve the CFTPART description such that the

@@ -18,9 +18,9 @@ formats (for PKICER only).
 
 There are two ways to specify the password:
 
-- By
+* By
     value: The value assigned to the parameter is used directly as a password.
-- By
+* By
     reference to a file: The value assigned to the parameter is the name
     of a file, the first record of which contains the password; in this case,
     the file name must be preceded

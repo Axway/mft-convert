@@ -8,14 +8,14 @@ For more information on starting your {{< TransferCFT/axwayvariablesComponentSho
 
 This topic describes how to:
 
-- [Perform a file transfer using the sample configuration](#Perform)
-- [Perform a standard mode transfer](#Perform2)
-- [Use the explicit mode to get a file](#Use)
-- [Receive multiple files from a partner](#Receive)
-- [Use the implicit transfer mode](#Use2)
-- [Send using open mode](#Send)
-- [Receive using open mode](#Receive2)
-- [Perform broadcast and collect operations](#Perform3)
+* [Perform a file transfer using the sample configuration](#Perform)
+* [Perform a standard mode transfer](#Perform2)
+* [Use the explicit mode to get a file](#Use)
+* [Receive multiple files from a partner](#Receive)
+* [Use the implicit transfer mode](#Use2)
+* [Send using open mode](#Send)
+* [Receive using open mode](#Receive2)
+* [Perform broadcast and collect operations](#Perform3)
 
 > **Note**
 >

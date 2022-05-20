@@ -29,10 +29,10 @@ Before running the directory exit test, modify the `cft-tcp.conf` file depending
 The `d$cft_run:[src.exit] `subdirectory contains several sample source
 modules used to check the following:
 
-- Activation
+* Activation
     of a transfer to a partner known to the directory EXIT but not to Transfer
     CFT
-- Activation
+* Activation
     of a transfer to a partner not known to either {{< TransferCFT/axwayvariablesComponentShortName >}} or the directory
     EXIT
 

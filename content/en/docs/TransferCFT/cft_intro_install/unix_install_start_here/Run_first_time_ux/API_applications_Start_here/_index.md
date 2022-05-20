@@ -10,10 +10,10 @@ This book begins with this topic
 which introduces the two application families that can be developed using
 these two interfaces and the development kit contents for building APIs.
 
-- Applications communicating
+* Applications communicating
     with {{< TransferCFT/axwayvariablesComponentShortName >}} to submit and monitor transfers or query the catalog,
     for example. See [Using APIs.](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/Prog/API/Using_APIs.htm)
-- Exits enabling
+* Exits enabling
     user programs to take control during a send operation. See [Managing
     exits.](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/Prog/Exits/Managing_exits.htm)
 
@@ -40,25 +40,25 @@ create an API application.
 The development kit used to integrate the {{< TransferCFT/axwayvariablesComponentShortName  >}} APIs is divided
 into several directories:
 
-- *&lt;installdir>/lib/*
+* *&lt;installdir>/lib/*
     containing all required libraries, in C, including:
-- A *libcftapi.a*
+* A *libcftapi.a*
     module: this library is required for any application using the Transfer
     CFT APIs
-- A *libcftexa.a*
+* A *libcftexa.a*
     module: this library is required for any application using the Transfer
     CFT directory exits
-- A *libcftexf.a*
+* A *libcftexf.a*
     module; this library is required for any application using the file EXITs
-- A *libcftexe.a*
+* A *libcftexe.a*
     module; this library is required for any application using the end of
     transfer EXITs
 
 To generate a user application based on the {{< TransferCFT/axwayvariablesComponentShortName  >}} APIs and use
 the file exit function, you must link the following with the *libcftapi.a* and *libexe.a* libraries.
 
-- &lt;installdir>/runtime/src/capi/ containing
+* &lt;installdir>/runtime/src/capi/ containing
     a command entry and catalog query example
-- &lt;installdir>/runtime/src/exit/ containing
+* &lt;installdir>/runtime/src/exit/ containing
     simple examples of file exits, directory exits, and end
     of transfer exits

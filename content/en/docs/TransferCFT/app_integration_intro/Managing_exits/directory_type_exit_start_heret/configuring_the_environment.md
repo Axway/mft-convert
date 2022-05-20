@@ -6,9 +6,9 @@ weight: 350
 type exit. Before you submit a directory type EXIT, you must customize
 the following {{< TransferCFT/axwayvariablesComponentShortName  >}} objects:
 
-- [CFTPROT](#Defining_the_CFTPROT_object)
+* [CFTPROT](#Defining_the_CFTPROT_object)
     defines both the application protocol type and profile
-- [CFTEXIT](#Defining_the_CFTEXIT_object)
+* [CFTEXIT](#Defining_the_CFTEXIT_object)
     describes the EXIT environment and how this EXIT is activated
 
 Each CFTEXIT object corresponds to an EXIT task. The number of EXIT
@@ -81,8 +81,8 @@ the EXITA parameter of the related CFTPROT object.
 Optional parameter. Indicates the format
 for the communication area.
 
-- ****V23**** (Default value)
-- ****V24****
+* ****V23**** (Default value)
+* ****V24****
 
 ******[[LANGUAGE](../../../../c_intro_userinterfaces/command_summary/parameter_intro/language)
 = {COBOL &#124; C}]******

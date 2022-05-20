@@ -4,8 +4,8 @@ linkTitle: "Get started with Web services"
 weight: 310
 ---This section describes how to get started using Web services with {{< TransferCFT/axwayvariablesComponentLongName  >}}. You can use a tool such as SoapUI to create and test SOAP requests. A typical usage for Web services when running Transfer CFT is:
 
-- To use web services to submit a high number of transfer requests.
-- To trace exchanges using the transfer requests' IDT and IDTU.
+* To use web services to submit a high number of transfer requests.
+* To trace exchanges using the transfer requests' IDT and IDTU.
 
 When using Web services with {{< TransferCFT/headerfootervariableshflongproductname  >}}, select the type media communication type, either COM FILE or COM TCP, to use for transfer requests (SEND/RECV), or administration services (such as HALT). If you are using Web services with TCP as the selected COM media type, refer to [About synchronous communication](../../../synch_comm_tcpip_intro) for information on configuring the client.
 
@@ -13,8 +13,8 @@ When using Web services with {{< TransferCFT/headerfootervariableshflongproductn
 
 You require a tool for developing Web services requests, such as SoapUI.
 
-- SoapUI information: [www.soapui.org/about-soapui/what-is-soapui-.html](http://www.soapui.org/about-soapui/what-is-soapui-.html)
-- SoapUI download: [www.soapui.org/downloads/latest-release.html](http://www.soapui.org/downloads/latest-release.html)
+* SoapUI information: [www.soapui.org/about-soapui/what-is-soapui-.html](http://www.soapui.org/about-soapui/what-is-soapui-.html)
+* SoapUI download: [www.soapui.org/downloads/latest-release.html](http://www.soapui.org/downloads/latest-release.html)
 
 ## View available operations
 
@@ -26,8 +26,8 @@ Regardless of the mode you select, COM FILE or [COM TCP](../../../synch_comm_tc
 
 ### COM FILE
 
-- Pros: There is no effect on persistence; if {{< TransferCFT/headerfootervariableshflongproductname >}} stops the request is stored in the COM file. Additionally, there is no need to implement error handling on the client side except if the communication file is full (see Note below).
-- Cons: The performance response time per request is at the very least `copilot.cft.timerwaitcftcata` seconds, where the maximum time could be `copilot.cft.timerwaitcftcata` multiplied by the `copilot.cft.nbwaitcftcata` value.
+* Pros: There is no effect on persistence; if {{< TransferCFT/headerfootervariableshflongproductname >}} stops the request is stored in the COM file. Additionally, there is no need to implement error handling on the client side except if the communication file is full (see Note below).
+* Cons: The performance response time per request is at the very least `copilot.cft.timerwaitcftcata` seconds, where the maximum time could be `copilot.cft.timerwaitcftcata` multiplied by the `copilot.cft.nbwaitcftcata` value.
 
 > **Note**
 >
@@ -35,8 +35,8 @@ Regardless of the mode you select, COM FILE or [COM TCP](../../../synch_comm_tc
 
 ### COM TCP
 
-- Pros: Performance is improved due to a faster request response time (under ideal conditions less than 1 second, however the actual time depends on the Transfer CFT process load, as opposed to `copilot.cft.timerwaitcftcata` seconds at the very least if you are using COM FILE).
-- Cons: There is an effect on persistence - if {{< TransferCFT/headerfootervariableshflongproductname >}} stops the request is not recorded. Additionally, error handling must be implemented on the client.
+* Pros: Performance is improved due to a faster request response time (under ideal conditions less than 1 second, however the actual time depends on the Transfer CFT process load, as opposed to `copilot.cft.timerwaitcftcata` seconds at the very least if you are using COM FILE).
+* Cons: There is an effect on persistence - if {{< TransferCFT/headerfootervariableshflongproductname >}} stops the request is not recorded. Additionally, error handling must be implemented on the client.
 
 ## Customize the Transfer CFT COM configuration
 
@@ -64,15 +64,15 @@ The following procedure is based on using the SoapUI tool. The exact steps may v
 
 1. Start SoapUI.
 1. From the File menu, select New SOAP Project to create a project:
-    -   Project Name: Transfer_CFT
-    -   Initial WSDL: &lt;CFTINSTALLDIR>\\home\\distrib\\copilot\\wsdl\\copilotcft.wsdl
+    *   Project Name: Transfer_CFT
+    *   Initial WSDL: &lt;CFTINSTALLDIR>\\home\\distrib\\copilot\\wsdl\\copilotcft.wsdl
 1. Select and expand the service to use, for example:
-    -   XFER_CMD_SEND_FILE to send a file, or
-    -   XFER_CAT_SELECT to monitor a transfer request
+    *   XFER_CMD_SEND_FILE to send a file, or
+    *   XFER_CAT_SELECT to monitor a transfer request
 1. Enter the Copilot server URL in the request window: &lt;host>:&lt;copilot server port>
 1. Modify the request as needed. See also:
-    -   [Perform a send file request](../example_send_request)
-    -   [Perform a catalog search request](../example_search_catalog)
+    *   [Perform a send file request](../example_send_request)
+    *   [Perform a catalog search request](../example_search_catalog)
 1. Submit the request.
 1. Check the result. See [successful or unsuccessful responses.](../example_send_request)
 

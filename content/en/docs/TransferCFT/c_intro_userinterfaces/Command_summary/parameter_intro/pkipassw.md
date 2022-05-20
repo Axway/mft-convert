@@ -13,9 +13,9 @@ weight: 2630
 The encryption password of the private key in the local certificate
 base. There are two ways to specify the password, by either:
 
-- Value:
+* Value:
     The value assigned to the parameter is used directly as a password.
-- Reference
+* Reference
     to a file: The value assigned to the parameter is the name of a file,
     the first record of which contains the password. As such, the file name
     must be prefixed with an #&#124;@, PKIPASSW=#myfile for example, where the password

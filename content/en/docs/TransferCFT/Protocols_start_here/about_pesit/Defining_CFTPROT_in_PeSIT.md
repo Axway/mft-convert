@@ -17,9 +17,9 @@ partner.
 Alternatively, when a parameter is non-negotiable,
 the server partner must either:
 
-- Submit to the decision
+* Submit to the decision
     of the Transfer CFT having initiated the connection
-- If the parameter
+* If the parameter
     value is not acceptable, refuse the connection request with RCONNECT or
     ABORT FPDU
 
@@ -88,13 +88,13 @@ The SROUT parameter defines the authorized transfer direction
 when the Transfer CFT initiates the protocol connection. The possible values
 for this parameter are as follows:
 
-- SENDER: only send
+* SENDER: only send
     transfers are authorized
-- RECEIVER: only
+* RECEIVER: only
     receive transfers are authorized
-- BOTH: the transfer
+* BOTH: the transfer
     direction is unrestricted
-- NONE: no transfer
+* NONE: no transfer
     is possible
 
 Likewise, the SRIN parameter defines the authorized transfer
@@ -109,15 +109,15 @@ maximum authorized compression for file transmission and reception respectively.
 The value specified for each of these parameters is the arithmetic sum
 of one or more desired types of compression:
 
-- 01: compression
+* 01: compression
     of a character string "space" EBCDIC, PeSIT E,  PeSIT
     E CFT/CFT
-- 02: horizontal
+* 02: horizontal
     compression
-- 04:
+* 04:
     compression of characters, PeSIT E,  PeSIT
     E CFT/CFT
-- 08: vertical compression
+* 08: vertical compression
 
 <span id="Synchronization_options"></span>
 
@@ -144,16 +144,16 @@ of data obtained after compression.
 The interval between synchronization points must be selected taking
 the following factors into account:
 
-- Exchange of synchronization
+* Exchange of synchronization
     points: a small interval penalizes performance
-- Spacing of synchronization
+* Spacing of synchronization
     points: a large interval penalizes restarts
-- Spacing of synchronization
+* Spacing of synchronization
     points assumes a large "buffering" capability, since this parameter
     is related to the acknowledgement anticipation
     window (see below) and consequently to the availability of memory
     resources
-- Synchronization
+* Synchronization
     point can only be set between file articles, even if segmentation has
     taken place
 
@@ -243,13 +243,13 @@ Three parameters are used to manage and optimize the filling of an NSDU,
 Network Service Data Unit, or an FPDU, File Protocol Data Unit, in the
 file data exchange phase:
 
-- CONCAT
+* CONCAT
     parameter specifies whether several FPDUs can be concatenated in the same
     NSDU
-- MULTART
+* MULTART
     parameter is option used to group several records of the file sent in
     the same FPDU; this is then referred to as a multi-article FPDU
-- SEGMENT
+* SEGMENT
     parameter is the option used to segment file articles into two or more
     FPDUs
 
@@ -259,10 +259,10 @@ restrictions as regards a transfer, whatever their value.
 These three parameters cannot be transported by the PeSIT protocol and
 consequently cannot be negotiated with the remote partner.
 
-- In
+* In
     sender mode, it is necessary to know whether the partner supports
     the required options.
-- In
+* In
     receiver mode, Transfer CFT ignores the value of these parameters
     and equally accepts concatenated, segmented or multi-article FPDUs.
 
@@ -285,20 +285,20 @@ To meet this requirement, the PeSIT standard defines two messages in
 the pre-connection phase. The first message, sent by the requesting partner,
 consists of 24 bytes, split into three blocks of 8 bytes:
 
-- bytes 1 to 8: protocol
+* bytes 1 to 8: protocol
     used
-- bytes 9 to 16:
+* bytes 9 to 16:
     requester identification
-- bytes 17 to 24:
+* bytes 17 to 24:
     requester password
 
 Transfer CFT documents these blocks on the basis of the following values:
 
-- bytes 1 to 8: standard
+* bytes 1 to 8: standard
     string
-- bytes 9 to 16:
+* bytes 9 to 16:
     value of the CFTPART NSPART parameter
-- bytes 17 to 24:
+* bytes 17 to 24:
     value of the CFTPART NSPASSW parameter
 
 The second message is sent by the server partner by way of an acknowledgement
@@ -306,12 +306,12 @@ The second message is sent by the server partner by way of an acknowledgement
 
 #### PeSIT E CFT/CFT
 
-- In requester mode, the pre-connection phase is
+* In requester mode, the pre-connection phase is
     mandatory. In
     PeSIT E CFT profile, the SSERV parameter is used to particularize
     this string.
 
-- In server mode, Transfer CFT waits for a preconnection
+* In server mode, Transfer CFT waits for a preconnection
     message prior to any connection.
 
 #### PeSIT E
@@ -319,9 +319,9 @@ The second message is sent by the server partner by way of an acknowledgement
 Use of the SSERV parameter, unless otherwise specified, the SSERV parameter can only be set to two
 values with PROF=ANY:
 
-- SSERV=PESIT default
+* SSERV=PESIT default
     value
-- SSERV=GSIT special
+* SSERV=GSIT special
     value
 
 In all cases, the SSERV value is only applied when Transfer CFT is the
@@ -367,10 +367,10 @@ concerned do not all use Transfer CFT.
 >
 >  
 
-- When Transfer CFT
+* When Transfer CFT
     is the server, it adapts dynamically to the mode required by the requester
     and the LOGON parameter is ignored.
-- When Transfer CFT
+* When Transfer CFT
     is the requester and LOGON is set to NO, the SSERV parameter is applied
     even if there is no pre-connection message for TCP/IP. The mode is different
     if SSERV=GSIT, as explained in the previous paragraph.
@@ -401,7 +401,7 @@ Assembler/Disassembler),
 certain parameter setting restrictions have to be taken into account at
 the level of the CFTPROT command:
 
-- The absence of
+* The absence of
     a reliable data link layer requires the two partners to check the integrity
     of the exchanged NSDUs  
     For this purpose, an error detection polynomial CRC (Cyclic Redundancy
@@ -414,7 +414,7 @@ the level of the CFTPROT command:
 
 <!-- -->
 
-- The implementation
+* The implementation
     of the transmission error detection mechanism inhibits the FPDU concatenation
     operation.  
     Each NSDU only transports one FPDU, which improves the efficiency of
@@ -423,7 +423,7 @@ the level of the CFTPROT command:
 
 <!-- -->
 
-- Performance capabilities
+* Performance capabilities
     are not, however, penalized as multi-article FPDUs can be formed (MULTART
     = YES).  
     While the segmentation is certainly less efficient when concatenation
@@ -431,7 +431,7 @@ the level of the CFTPROT command:
 
 <!-- -->
 
-- The CRC length
+* The CRC length
     (2 bytes) must be taken into account in calculating the maximum size of
     NSDUs (SRUSIZE and RRUSIZE parameters).  
     If the length of an article to be sent (after compression if required)
@@ -440,7 +440,7 @@ the level of the CFTPROT command:
 
 <!-- -->
 
-- The only dynamic
+* The only dynamic
     resynchronization case possible between two Transfer CFTs is in
     the event of detecting a CRC error.  
     If CRC is used, it is recommended to specify RESYNC = YES to

@@ -6,9 +6,9 @@ weight: 310
 
 We recommended that you use the HTTP Bearer as opposed to Basic method for the following reasons:
 
-- You user/password is not exposed.
-- If the token is compromised, you can revoke the token using either the UI (My Access Token) or REST API. Note though that a token is just as sensitive as a user/password, you must store it in a protected manner.
-- If am.type=passport and the PassPort server is down, you can still execute REST API requests.
+* You user/password is not exposed.
+* If the token is compromised, you can revoke the token using either the UI (My Access Token) or REST API. Note though that a token is just as sensitive as a user/password, you must store it in a protected manner.
+* If am.type=passport and the PassPort server is down, you can still execute REST API requests.
 
 ## Bearer authentication
 
@@ -58,8 +58,8 @@ For other authentication methods, such as PassPort and LDAP, no check is made. Y
 
 You can use the following UCONF parameters to manage this option:
 
-- `copilot.general.login_failures_fname`: A file that stores data shared between Transfer CFT and Copilot.
-- `copilot.general.max_login_failures`: An integer that sets the maximum number of login failures for a user (default is 3, and 0 disables this option).
+* `copilot.general.login_failures_fname`: A file that stores data shared between Transfer CFT and Copilot.
+* `copilot.general.max_login_failures`: An integer that sets the maximum number of login failures for a user (default is 3, and 0 disables this option).
 
 > **Note**
 >
@@ -69,6 +69,6 @@ When the maximum number of login failures is reached, the user account is locked
 
 ****Platform specifics****
 
-- On IBM i systems, there is no action if the password is incorrect as the system offers methods that you can rely on to avoid brute force attacks (the system value is [QMAXSIGN](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/rzarl/rzarlmaxsgn.htm)).
-- On z/OS systems, only the inherent system protection is available (refer to the RACF suboperand [REVOKE](https://www.ibm.com/support/knowledgecenter/SSLTBW_2.3.0/com.ibm.zos.v2r3.icha700/setrpw.htm) for the PASSWORD option).
-- On OpenVMS systems, only existing system protection is available.
+* On IBM i systems, there is no action if the password is incorrect as the system offers methods that you can rely on to avoid brute force attacks (the system value is [QMAXSIGN](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/rzarl/rzarlmaxsgn.htm)).
+* On z/OS systems, only the inherent system protection is available (refer to the RACF suboperand [REVOKE](https://www.ibm.com/support/knowledgecenter/SSLTBW_2.3.0/com.ibm.zos.v2r3.icha700/setrpw.htm) for the PASSWORD option).
+* On OpenVMS systems, only existing system protection is available.

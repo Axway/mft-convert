@@ -4,13 +4,13 @@ linkTitle: "Certificates - PKICER"
 weight: 220
 ---This section describes how to:
 
-- Import,
+* Import,
     delete or update a root or intermediate certificate authority in the local
     database
-- Import,
+* Import,
     delete or update a user certificate (with or without the associated private
     key) in the local database
-- Import
+* Import
     the private key associated with a user certificate
 
 Users with several certificates signed by different authorities

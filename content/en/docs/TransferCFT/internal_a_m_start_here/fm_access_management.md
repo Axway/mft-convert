@@ -25,7 +25,7 @@ See also, {{< TransferCFT/suitevariablesFlowManager  >}} *Security Guide &gt;* [
 
 ****Limitations****
 
-- {{< TransferCFT/headerfootervariableshflongproductname >}} ROLES are stored on {{< TransferCFT/headerfootervariableshflongproductname >}} in upper case. This means that if you create roles **XXX** and **Xxx** on {{< TransferCFT/suitevariablesFlowManager >}}, there is only one ROLE in {{< TransferCFT/headerfootervariableshflongproductname >}}, which is `ID=XXX`.
+* {{< TransferCFT/headerfootervariableshflongproductname >}} ROLES are stored on {{< TransferCFT/headerfootervariableshflongproductname >}} in upper case. This means that if you create roles **XXX** and **Xxx** on {{< TransferCFT/suitevariablesFlowManager >}}, there is only one ROLE in {{< TransferCFT/headerfootervariableshflongproductname >}}, which is `ID=XXX`.
 
 <span id="Using"></span>
 
@@ -115,14 +115,14 @@ PART=="PARIS" && ID=="IDFDEF"
 
 Comparison operators include:
 
-- == : equals
-- != : not equal
-- ~= : matches (use \* and ? for jokers)
-- /= : not matching (use \* and ? for jokers)
-- &lt; : inferior to
-- &gt; : superior to
-- &lt;= : inferior or equal to
-- &gt;= :superior or equal to
+* == : equals
+* != : not equal
+* ~= : matches (use \* and ? for jokers)
+* /= : not matching (use \* and ? for jokers)
+* &lt; : inferior to
+* &gt; : superior to
+* &lt;= : inferior or equal to
+* &gt;= :superior or equal to
 
 ### Resource properties in privileges
 
@@ -193,18 +193,18 @@ As an Administrator, you want to authorize a user to work only with a given part
 
 This user can perform the following operations only with an IDF named "MYIDF" and the PART named "MYPART":
 
-- View transfers (LISTCAT and DISPLAY)
-- Create transfers
-- Delete transfers
-- Cancel transfers
-- Resume transfers
-- Execute transfers
+* View transfers (LISTCAT and DISPLAY)
+* Create transfers
+* Delete transfers
+* Cancel transfers
+* Resume transfers
+* Execute transfers
 
 In this use case, you assign the user a role that references a privilege having these characteristics:
 
-- RESOURCE = 'TRANSFER',
-- ACTIONS = ( ‘VIEW’, ‘CREATE’, ‘DELETE’, ‘CANCEL', 'RESUME', ‘EXECUTE’ ),
-- CONDITION = ' IDF=="MYIDF" && PART=="MYPART" '
+* RESOURCE = 'TRANSFER',
+* ACTIONS = ( ‘VIEW’, ‘CREATE’, ‘DELETE’, ‘CANCEL', 'RESUME', ‘EXECUTE’ ),
+* CONDITION = ' IDF=="MYIDF" && PART=="MYPART" '
 
 The following is an example of the {{< TransferCFT/suitevariablesTransferCFTName  >}} configuration for this use case, where the ROLE must exist in {{< TransferCFT/suitevariablesFlowManager  >}}, and be available for required users:
 
@@ -271,9 +271,9 @@ As an administrator, you want to assign a classic 'Administrator' role to a user
 
 In this use case, you assign the user role that refers to a privilege having these characteristics:
 
-- RESOURCE = SERVICE:UI,
-- ACTIONS = ( 'CONNECT' ),
-- CONDITION = ' GROUP=="PRODUCTION" && ID~=''CFT-PROD-ITEM\*'' '
+* RESOURCE = SERVICE:UI,
+* ACTIONS = ( 'CONNECT' ),
+* CONDITION = ' GROUP=="PRODUCTION" && ID~=''CFT-PROD-ITEM\*'' '
 
 A user with this privilege can only connect to a Transfer CFT server whose UCONF `cft.instance_group` value is set to PRODUCTION, and whose `cft.instance_id` value begins with CFT-PROD-ITEM.
 

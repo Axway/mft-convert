@@ -15,9 +15,9 @@ weight: 1130
 
 File sharing option:
 
-- SHR: Shared access, which means that
+* SHR: Shared access, which means that
     a file can be transferred at the same time for two partners.
-- CHECK:
+* CHECK:
     If the file is modified during a transfer, the transfer is aborted.
 
 > **Note**
@@ -41,10 +41,10 @@ File sharing option:
 Presence check indicator of the receiver file used to determine the
 action of the {{< TransferCFT/axwayvariablesComponentShortName  >}}:
 
-- NEW: The file must be created by Transfer
+* NEW: The file must be created by Transfer
     CFT. The transfer is refused if this file already exists
-- OLD: The file must already exist.
-- BOTH: If the file does not exist, it
+* OLD: The file must already exist.
+* BOTH: If the file does not exist, it
     is created.
 
 <span id="fdisp_CFTSEND"></span>

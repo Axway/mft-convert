@@ -14,8 +14,8 @@ provides examples of filenames, and file naming conventions.
 
 The following characters are system-restricted characters:
 
-- UNIX: /\*? $()
-- Windows: /\\:\*?"&lt;&gt;
+* UNIX: /\*? $()
+* Windows: /\\:\*?"&lt;&gt;
 
 > **Note**
 >
@@ -25,30 +25,30 @@ The following characters are system-restricted characters:
 
 The fname is a complete physical filename. It can either:
 
-- Be created dynamically
+* Be created dynamically
     from symbolic variables, or
-- Correspond to the
+* Correspond to the
     name of a version file
 
 ## Using symbolic variables
 
 The following variables can be used to form the FNAME character string:
 
-- &FDATE,
+* &FDATE,
     &FTIME, &FYEAR, &FMONTH, &FDAY
-- &SPART,
+* &SPART,
     &RPART, &PART, &NPART, &GROUP
-- &SUSER,
+* &SUSER,
     &RUSER
-- &SAPPL,
+* &SAPPL,
     &RAPPL
-- &IDF,
+* &IDF,
     &PARM, &IDA
-- &NIDF,
+* &NIDF,
     &IDTU
-- &BDATE,
+* &BDATE,
     &BTIME, &BYEAR, &BMONTH, &BDAY
-- &NFNAME,
+* &NFNAME,
     &NFVER (see details
     below)
 
@@ -96,7 +96,7 @@ as shown in the following table.
 
 
 \(1\) the version number may be 0 or
-- n and the FNAMEABS parameter must be set to YES. A GDG file is rotated
+* n and the FNAMEABS parameter must be set to YES. A GDG file is rotated
 at the end of the job.
 
 ****z/OS****
@@ -139,9 +139,9 @@ FNAME={dirname &#124; mask}
 The name specified can be a generic file name or a directory name. It
 can include:
 
-- Specific symbolic
+* Specific symbolic
     variables, such as &PART and &IDF
-- The \* and ? wildcard
+* The \* and ? wildcard
     characters
 
 This mode is used, for example, to send the list of a local directory
@@ -161,9 +161,9 @@ The name specified can be a generic file name or a directory name.
 
 It can include:
 
-- Specific symbolic
+* Specific symbolic
     variables, such as &PART and &IDF
-- The \* and ? wildcard
+* The \* and ? wildcard
     characters
 
 The directory name represents any structure specific to the environment
@@ -220,9 +220,9 @@ a set of files with the same IDF in send mode](../../../concepts/transfer_comman
 
 Additionally, when sending a group of files:
 
-- You can specify
+* You can specify
     a list of directories to be sent in the indirection file. The copy/concatenation
     mechanism works in the same way for each directory as for the other generic
     send modes.
-- Do not mix files
+* Do not mix files
     and directories in the same indirection file.

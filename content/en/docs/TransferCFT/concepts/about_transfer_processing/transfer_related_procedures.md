@@ -7,9 +7,9 @@ terminating procedures if a transfer error occurs. A transfer error is
 defined as a problem leading to the Transfer CFT discontinuing the transfer.
 If this occurs, Transfer CFT can initiate one of the two procedures:
 
-- [End-of-transfer
+* [End-of-transfer
     procedure](#End-of-transfer)
-- [Backup
+* [Backup
     procedure](#Backup_procedures)
 
 These procedures are define by a command parameter,
@@ -28,15 +28,15 @@ commands.
 Depending on the transfer direction, send or receive, these parameters
 define the names of the procedures executed:
 
-- At the end of a
+* At the end of a
     file transfer
-- At the end of a
+* At the end of a
     message transfer
-- On receiving an
+* On receiving an
     acknowledgement following the sending of a file
-- On receiving an
+* On receiving an
     acknowledgement following the sending of a message
-- Following a transfer
+* Following a transfer
     error
 
 You can use [symbolic
@@ -79,14 +79,14 @@ A transfer error is defined as a problem leading to the Transfer CFT discontinui
 the transfer. The transfer may have begun or not. This applies to the
 following types of transfers:
 
-- Whose activation
+* Whose activation
     time slot is expired
-- Which is interrupted,
+* Which is interrupted,
     in the ****H**** state (except for particular
     cases, see the Transfer CFT *[Codes,
     Diagnostics and Messages](../../../troubleshoot_intro/messages_and_error_codes_start_here)*) or ****K****
     state
-- Which is refused
+* Which is refused
     by the partner, for example, if the password is incorrect
 
 Under these circumstances, Transfer CFT triggers the execution
@@ -132,10 +132,10 @@ This command applies to transfers to a single partner and also to transfers
 via a broadcasting list. In the latter case, you can use the CFTDEST object
 to define the end of transfer submit mode. Submit either:
 
-- A single end of
+* A single end of
     transfer procedure when all transfers have been completed for the list
     of partners, or
-- An end of transfer
+* An end of transfer
     procedure for each terminated transfer
 
 You can use this command to restore the transfer context and consequently

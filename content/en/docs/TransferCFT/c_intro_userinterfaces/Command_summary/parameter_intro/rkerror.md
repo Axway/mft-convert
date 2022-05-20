@@ -13,9 +13,9 @@ weight: 2950
 **A**ction to be taken if a transfer
 aborts due to the receiving file creation error (server mode):
 
-- ****KEEP****:
+* ****KEEP****:
     the transfer remains in the catalog
-- ****DELETE****:
+* ****DELETE****:
     the transfer is removed from the catalog
 
 If the RKERROR parameter is also set in the CFTRECV command, the CFTRECV

@@ -4,11 +4,11 @@ linkTitle: "Certificate concepts"
 weight: 180
 ---This topic describes the following certificate principles:
 
-- [Establishing
+* [Establishing
     a trust relationship](#Establishing_a_trust_relationship)
-- [CA
+* [CA
     hierarchy](#CA_hierarchy)
-- [Certificate
+* [Certificate
     syntax and formats](#Certificate_syntax_and_formats)
 
 <span id="Establishing_a_trust_relationship"></span>
@@ -77,9 +77,9 @@ ends at the root CA.
 A certificate chain traces a path of certificates from a branch to the
 root of the hierarchy. A certificate chain is formed that way:
 
-- Each certificate
+* Each certificate
     is followed by the certificate of its issuer
-- Each certificate
+* Each certificate
     contains the name (DN) of that certificate's issuer, which is the same
     as the subject name of the next certificate in the chain
 
@@ -213,11 +213,11 @@ A commonly used file extension is pem.
 
 TLS certificates require the following key usages:
 
-- A TLS CA certificate must have the **Certificate sign** key usage
-- A TLS server certificate must have the **Key encipherment** key usage
-- A TLS client certificate must have the **Digital signature** key usage
+* A TLS CA certificate must have the **Certificate sign** key usage
+* A TLS server certificate must have the **Key encipherment** key usage
+* A TLS client certificate must have the **Digital signature** key usage
 
 Where:
 
-- If a certificate does not have a key usage, it is assumed that ALL key usage are applicable
-- Some ciphers, such as Diffie-Hellman, require **Key agreement** for key usage
+* If a certificate does not have a key usage, it is assumed that ALL key usage are applicable
+* Some ciphers, such as Diffie-Hellman, require **Key agreement** for key usage

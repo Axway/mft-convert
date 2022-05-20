@@ -8,9 +8,9 @@ weight: 230
 
 1. Stop Transfer CFT and Copilot if running.
 1. Ensure that all UCONF values used to identify a Transfer CFT instance are defined. These parameters include:
-    -   cft.full_hostname
-    -   cft.instance_id
-    -   cft.instance_group
+    *   cft.full_hostname
+    *   cft.instance_id
+    *   cft.instance_group
 
       
     Use the format:  
@@ -30,10 +30,10 @@ The manual procedure consists of the following steps, which are detailed below:
 
 Use the {{< TransferCFT/suitevariablesCentralGovernanceName  >}} installation values for the following UCONF settings. {{< TransferCFT/suitevariablesTransferCFTName  >}} uses these values to identify {{< TransferCFT/suitevariablesCentralGovernanceName  >}}.
 
-- cg.host
-- cg.port
-- cg.mutual_auth_port
-- cg.shared_secret
+* cg.host
+* cg.port
+* cg.mutual_auth_port
+* cg.shared_secret
 
 Use the format:
 

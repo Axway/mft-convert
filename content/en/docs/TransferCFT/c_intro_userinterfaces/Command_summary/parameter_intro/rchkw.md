@@ -14,9 +14,9 @@ weight: 2810
 The maximum number of synchronization points, not acquitted, that are
 authorized by the receiver and negotiated during connection phase.
 
-- 0: there is no wait for acquittal
-- 1: means that a transfer is in half-duplex
-- 3: default
+* 0: there is no wait for acquittal
+* 1: means that a transfer is in half-duplex
+* 3: default
 
  
 

@@ -15,11 +15,11 @@ weight: 1320
 
 Record format of the receiver (local) file:
 
-- F:
+* F:
     fixed
-- V:
+* V:
     variable
-- U:
+* U:
     undefined
 
 The possible values for each system are indicated in the corresponding

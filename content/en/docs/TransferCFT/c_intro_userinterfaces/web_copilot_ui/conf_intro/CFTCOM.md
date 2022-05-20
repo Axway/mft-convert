@@ -8,9 +8,9 @@ command to define the communication media used by Transfer CFT.
 ****Related
 topics****
 
-- Command syntax
+* Command syntax
     [CFTCOM](../../../command_summary#CFTCOM)
-- Object concepts
+* Object concepts
     [About the
     communication media](../../../../admin_intro/admin_config_commands/communication_media_concepts)
 
@@ -20,8 +20,8 @@ communication media concepts](../../../../admin_intro/admin_config_commands/comm
 As described in the [CFTCOM
 concepts: Start here](../../../../admin_intro/admin_config_commands/communication_media_concepts), you can set the communication medium to:
 
-- [File](#TYPE=FILE)
-- [TCP/IP](#TYPE=TCPIP)
+* [File](#TYPE=FILE)
+* [TCP/IP](#TYPE=TCPIP)
 
 First define the TYPE, and then define the corresponding communication media parameters.
 

@@ -12,18 +12,18 @@ The Transfer CFT service called (CFTI, CFTU or CFTC) executes the request, eithe
 
 The client application receives from Transfer CFT:
 
-- A return code
+* A return code
 
 <!-- -->
 
-- The requested data, if applicable
+* The requested data, if applicable
 
 ## Prerequisites
 
 You require the ICC and GMAKE utilities for IBM i platforms:
 
-- gmake: GNU compiler (make)
-- icc: Intel C/C++ compiler (calls ILE)
+* gmake: GNU compiler (make)
+* icc: Intel C/C++ compiler (calls ILE)
 
 ## Call from a COBOL/ILE or RPG/ILE program
 
@@ -47,11 +47,11 @@ All COBOL sample files are available in CFTPGM/CFTSRC. However, you should not d
 
 Refer to the programming examples, RPG COPY clauses, and procedures, which are supplied in the Transfer CFT library CFTPGM/CFTSRC (CPYRPGCILE, CPYRPGIILE, CPYRPGCIL4, CPYRPGIIL4):
 
-- TCFTI2_RPG (API structure V24)
-- TCFTU_RP1 (API asynchronous)
-- TCFTU_RP2 (API synchronous)
-- I_TCFTI_RP (executes CFTI or CFTIX functions)
-- I_TCFTU_RP (executes CFTU function), etc.
+* TCFTI2_RPG (API structure V24)
+* TCFTU_RP1 (API asynchronous)
+* TCFTU_RP2 (API synchronous)
+* I_TCFTI_RP (executes CFTI or CFTIX functions)
+* I_TCFTU_RP (executes CFTU function), etc.
 
 ## Creating an API application
 
@@ -61,11 +61,11 @@ The `TCPPARAM` configuration sample is located in `CFTPROD/UTIN`.
 
 The `<installdir>/runtime/src/capi `subdirectory contains the:
 
-- Sample source module,
+* Sample source module,
     called `apixmp1.c,` which interacts with {{< TransferCFT/axwayvariablesComponentShortName >}}. This program
     reads the {{< TransferCFT/axwayvariablesComponentShortName >}} catalog and displays its contents in part or in
     full, depending on the restrictions set in the command line.
-- `makefile`
+* `makefile`
     compilation procedure, which uses the` apixmp1.c `sample source module
     to generate the APIXMPI executable file.
 

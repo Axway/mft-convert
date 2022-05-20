@@ -15,10 +15,10 @@ weight: 310
 When the type is set to CRON, Transfer CFT sends a notification to reload the
 enabled CRONJOBs. This command is used when a CFTCRON has been modified by:
 
-- Inserting a new cronjob (with
+* Inserting a new cronjob (with
     a CRONTAB value that matches the CRONTABS list)
-- Deleting a new cronjob
-- Modifying a cronjob
+* Deleting a new cronjob
+* Modifying a cronjob
 
 Messages are then displayed in the log ([CFTI36I](../../../troubleshoot_intro/messages_and_error_codes_start_here/cfti_messages) and [CFTI37I](../../../troubleshoot_intro/messages_and_error_codes_start_here/cfti_messages)).
 

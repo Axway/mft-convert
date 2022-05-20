@@ -15,13 +15,13 @@ The following steps require that you have Microsoft Visual Studio (VS) and a com
 1. From the Windows Start menu, select **All programs > Axway software > [Transfer CFT name] > Transfer CFT > Command Prompt**.  
     This opens a command window, which executes profile.bat.
 1. In the same command window, initialize the VS environment by executing the appropriate vcvarsall.bat based on your system architecture.
-    -   Windows 32 bits: `<ProgramFiles>\<VS directory>\VC\vcvarsall.bat x86`
-    -   Windows 64 bits: `<ProgramFiles>\<VS directory>\VC\vcvarsall.bat amd64`
-    -   Windows Itanium: `<ProgramFiles>\<VS directory>\VC\vcvarsall.bat ia64`
+    *   Windows 32 bits: `<ProgramFiles>\<VS directory>\VC\vcvarsall.bat x86`
+    *   Windows 64 bits: `<ProgramFiles>\<VS directory>\VC\vcvarsall.bat amd64`
+    *   Windows Itanium: `<ProgramFiles>\<VS directory>\VC\vcvarsall.bat ia64`
 1. To set the CPU environment variable enter the following command based on your Transfer CFT architecture.
-    -   Windows 32 bits:     `set CPU=X86`
-    -   Windows 64 bits:     `set CPU=AMD64`
-    -   Windows Itanium: ` set CPU=IA64`
+    *   Windows 32 bits:     `set CPU=X86`
+    *   Windows 64 bits:     `set CPU=AMD64`
+    *   Windows Itanium: ` set CPU=IA64`
 1. Go to the directory containing the C source files and makefile:
 1. Enter the command:
 
@@ -29,11 +29,11 @@ The following steps require that you have Microsoft Visual Studio (VS) and a com
 
 The `nmake `command generates the following as either 32-bit or 64-bit executable programs, depending on the Transfer CFT architecture. The current directory contains the generated object files and executable programs:
 
-- api2xmp1.exe
-- api2xmp2.exe
-- apisampl.exe
-- tcftsyn.exe
-- utisyn.exe
+* api2xmp1.exe
+* api2xmp2.exe
+* apisampl.exe
+* tcftsyn.exe
+* utisyn.exe
 
 > **Note**
 >

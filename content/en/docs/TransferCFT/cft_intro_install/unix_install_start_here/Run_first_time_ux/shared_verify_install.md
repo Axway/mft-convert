@@ -15,8 +15,8 @@ When you install Transfer CFT, the `home` directory is created and populated und
 
 During the installation, the Transfer CFT installer creates two files in the installation directory that are working files for the installer. Do not modify these files unless instructed to do so by Axway. While they are not used for Transfer CFT operations, they are necessary for installer functions such as upgrades.
 
-- .rundir
-- .transfer_cft.properties
+* .rundir
+* .transfer_cft.properties
 
 ## Standalone installations
 
@@ -68,9 +68,9 @@ To start Transfer CFT from the {{< TransferCFT/suitevariablesCentralGovernanceNa
 
 The log page is displayed where you can:
 
-- Click Refresh anytime to update the log entries.
-- Sort the entries by newest or oldest.
-- Filter the entries, saving filters for future use.
+* Click Refresh anytime to update the log entries.
+* Sort the entries by newest or oldest.
+* Filter the entries, saving filters for future use.
 
 > **Note**
 >

@@ -58,6 +58,6 @@ weight: 190
 
 ****Related topics****
 
-- [Multi-node commands](../multi_node_commands)
-- [Managing multi-node]()
-- [UCONF: Protocols and networks](../../admin_intro/uconf/uconf_protocols_and_networks)
+* [Multi-node commands](../multi_node_commands)
+* [Managing multi-node]()
+* [UCONF: Protocols and networks](../../admin_intro/uconf/uconf_protocols_and_networks)

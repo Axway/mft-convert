@@ -8,9 +8,9 @@ weight: 180
 
 When installing a Transfer CFT multi-node architecture in Windows, the user performing the installation must:
 
-- Be a domain user who is part of the Administrators group.
-- Be the same user for all machines.
-- Have all rights (create/modify/delete) to the shared disk on all machines when {{< TransferCFT/axwayvariablesComponentLongName >}} is installed in a multi-host architecture.
+* Be a domain user who is part of the Administrators group.
+* Be the same user for all machines.
+* Have all rights (create/modify/delete) to the shared disk on all machines when {{< TransferCFT/axwayvariablesComponentLongName >}} is installed in a multi-host architecture.
 
 > **Note**
 >
@@ -20,15 +20,15 @@ When installing a Transfer CFT multi-node architecture in Windows, the user perf
 
 A cluster installation of Transfer CFT with multi-node (HA):
 
-- Install Transfer CFT and enable the multi-node architecture.
-- Installation procedure must be executed on each host:
-    -   The first host installation sets the Shared directory, the &lt;Transfer_CFT Shared> directory and all of the Transfer CFT configurations.
-    -   During each hosts installation (meaning additional nodes), you are prompted to specify the shared directory.
-- Transfer CFT binaries are installed on several hosts and runtime files are installed on a shared file system.
-- Only runtime files are shared.
-- At any given time:
-    -   One or several hosts are active.
-    -   All Transfer CFT runtime environments (Transfer CFT nodes) are running.
+* Install Transfer CFT and enable the multi-node architecture.
+* Installation procedure must be executed on each host:
+    *   The first host installation sets the Shared directory, the &lt;Transfer_CFT Shared> directory and all of the Transfer CFT configurations.
+    *   During each hosts installation (meaning additional nodes), you are prompted to specify the shared directory.
+* Transfer CFT binaries are installed on several hosts and runtime files are installed on a shared file system.
+* Only runtime files are shared.
+* At any given time:
+    *   One or several hosts are active.
+    *   All Transfer CFT runtime environments (Transfer CFT nodes) are running.
 
 > **Note**
 >
@@ -60,8 +60,8 @@ The path and name of the local directory where you want to install the first clu
 
 You can use a single key for a multi-node installation, as either:
 
-- The hostname must not be defined for the key, or
-- The hostname defined for the key matches the hostname of one of the hosts that composes the multi-node instance
+* The hostname must not be defined for the key, or
+* The hostname defined for the key matches the hostname of one of the hosts that composes the multi-node instance
 
 Additionally, the key must have the cluster option.
 
@@ -100,8 +100,8 @@ This section describes the differences when installing using a silent file for a
 
 If the silent file architecture is either first_host or additional_host, there are two important parameters:
 
-- multinode_hostname
-- multinode_host_address
+* multinode_hostname
+* multinode_host_address
 
 By default, these 2 attributes are automatically completed if they are not specified in the silent file.
 

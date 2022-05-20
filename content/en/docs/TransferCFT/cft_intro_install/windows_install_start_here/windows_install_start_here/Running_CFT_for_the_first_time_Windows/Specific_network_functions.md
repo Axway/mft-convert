@@ -32,14 +32,14 @@ This file is made up of lines using the same syntax, each
 of which corresponds to one function: typenet&lt;parameter>=value,
 where:
 
-- typenet:
+* typenet:
     is an element taking on one of the following values:
-    -   TCP:
+    *   TCP:
         A TCP/IP network process parameter
-    -   &lt;parameter>: An element containing the value of one of the specific parameters indicated
+    *   &lt;parameter>: An element containing the value of one of the specific parameters indicated
         in this documentation. For more information see Environment
         Variables
-    -   value: An element that takes on a value belonging to the parameter stated
+    *   value: An element that takes on a value belonging to the parameter stated
         in field and according to the documentation
 
 ****Comments****

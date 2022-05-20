@@ -5,20 +5,20 @@ weight: 270
 ---Unified configuration, or UCONF, settings and default values are listed in tables
 and grouped into the following categories:
 
-- [Identifier parameters](#Identifi)
-- [Instance
+* [Identifier parameters](#Identifi)
+* [Instance
     parameters](#Instance)
-- [Packaging parameters](#Packagin)
-- [Work environment
+* [Packaging parameters](#Packagin)
+* [Work environment
     parameters](#Work)
-- [Common parameters](#Common)
-- [Trace parameters](#Trace)
-- [{{< TransferCFT/axwayvariablesComponentShortName >}}
+* [Common parameters](#Common)
+* [Trace parameters](#Trace)
+* [{{< TransferCFT/axwayvariablesComponentShortName >}}
     probe configuration](#Transfer2)
-- [Add a character set: transcoding](#Add)
-- [Accounting records](#Statisti)
-- [Compatibility](#Compatib)
-- [Deactivate the default IDF](#Deactivate_idf)
+* [Add a character set: transcoding](#Add)
+* [Accounting records](#Statisti)
+* [Compatibility](#Compatib)
+* [Deactivate the default IDF](#Deactivate_idf)
 
 <span id="Identifi"></span>
 
@@ -255,8 +255,8 @@ See also, [Purging the catalog](../../admin_commands_intro/purge_catalog), Trans
 
 This parameter lets you use the SEND or RECV command without requiring an [IDF](../../../c_intro_userinterfaces/command_summary/parameter_intro/idf). This means that if you do not define a transfer file identifier, a default value (CFTPART IDF) is used. Exceptions:
 
-- For a SEND command the IDFDEF is used if  available, before searching for the CFTPART value.
-- For a RECV command with an asterisk "\*" the sender provides the IDF.
+* For a SEND command the IDFDEF is used if  available, before searching for the CFTPART value.
+* For a RECV command with an asterisk "\*" the sender provides the IDF.
 
 
 | Parameter  | Default  | Description  |

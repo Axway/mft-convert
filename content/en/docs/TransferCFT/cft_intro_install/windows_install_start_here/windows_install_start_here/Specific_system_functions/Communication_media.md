@@ -4,11 +4,11 @@ linkTitle: "Communication media"
 weight: 250
 ----   [About
     the communication media](#About_the_communication_media)
-- [Defining
+* [Defining
     the CFT user name](#Defining_the_CFT_user_name)
-- [Adjusting
+* [Adjusting
     the time and changing the date](#Adjusting_the_time_and_changing_the_date)
-- [CFTUTIL
+* [CFTUTIL
     shutdown timeout](#CFTUTIL_shutdown_timeout)
 
 <span id="About_the_communication_media"></span>
@@ -17,8 +17,8 @@ weight: 250
 
 Functionally, Transfer CFT is made up of two parts:
 
-- The transfer monitor
-- The user interface(s)
+* The transfer monitor
+* The user interface(s)
 
 Transfer CFT uses a communication medium so that requests coming from
 the user interface can be communicated to the monitor section.

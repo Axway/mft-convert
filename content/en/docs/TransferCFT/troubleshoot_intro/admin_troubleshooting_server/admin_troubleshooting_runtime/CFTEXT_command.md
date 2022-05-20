@@ -9,11 +9,11 @@ the data of these files.
 The resulting configuration
 file is then submitted to CFTUTIL to:
 
-- Rebuild a lost
+* Rebuild a lost
     or damaged configuration
-- Facilitate the
+* Facilitate the
     exporting of a {{< TransferCFT/axwayvariablesComponentLongName >}} configuration to another computer
-- Upgrade the Transfer
+* Upgrade the Transfer
     CFT software when such an upgrade incorporates a file structure modification
 
 The configuration command text generated is written to the CFTUTIL output

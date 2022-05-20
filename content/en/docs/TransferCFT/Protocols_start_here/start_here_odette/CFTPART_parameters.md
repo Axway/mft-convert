@@ -7,8 +7,8 @@ weight: 160
 The NSPART and NRPART parameters are used to describe these partners.
 The required syntax for these parameters is as follows:
 
-- The value of these
+* The value of these
     fields must
     begin with the letter ‘O’
-- The maximum size
+* The maximum size
     of these fields is 25 characters, including the character ‘O’

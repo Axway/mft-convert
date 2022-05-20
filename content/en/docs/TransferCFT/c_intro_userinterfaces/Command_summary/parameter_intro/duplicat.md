@@ -14,16 +14,16 @@ In *requester* mode, if the transfer is sent using synchronous API, the [DACTION
 
 This field may contain a list of symbolic variables separated by a period ".". Possible variables include:
 
-- PART
-- IDF
-- DIRECT
-- MODE
-- SAPPL / RAPPL
-- IDA
-- SUSER / RUSER
-- FNAME / NFNAME
-- SYSDATE / SYSTIME
-- PARM
+* PART
+* IDF
+* DIRECT
+* MODE
+* SAPPL / RAPPL
+* IDA
+* SUSER / RUSER
+* FNAME / NFNAME
+* SYSDATE / SYSTIME
+* PARM
 
 You cannot use IDT or IDTU as symbolic variables for DUPLICAT. Duplicate verifications are performed before writing to the catalog (when DACTION=ERROR), but the IDT and IDTU are inserted when the transfer is written to the catalog (after the verification), therefore these variables cannot be used as selection criteria in DUPLICAT.
 

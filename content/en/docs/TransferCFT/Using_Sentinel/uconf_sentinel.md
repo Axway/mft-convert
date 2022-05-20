@@ -4,16 +4,16 @@ linkTitle: "UCONF: Sentinel options"
 weight: 240
 ---This section describes how to configure the Sentinel monitoring agent, which is part of Transfer CFT, using the following groups of UCONF parameters:
 
-- sentinel.trkxxxxx: These parameters correspond to the trkxxxxx parameter described in the [Sentinel Universal Agent User Guide]() .
-- sentinel.xfb.xxxx: These parameters indicate how the Sentinel monitoring agent is used in Transfer CFT.
-- Additional uconf values are related to the communication between the Sentinel monitoring agent and Sentinel
-    -   ssl.ciphersuites
-    -   ssl.version_min
-    -   ssl.extension.enable_sni
-    -   cft.ipv6.disable_connect
-    -   See [UCONF parameters](../../admin_intro/uconf/uconf_directory) for parameter details.
-- sentinel.trktname: The path to the overflow file, where the maximum number of messages that the overflow file can store is equal to sentinel.xfb.buffer_size (not sentinel.trktmaxmsg).
-- `sentinel.trktmaxmsg`: *Obsolete*. The maximum number of messages in the `sentinel.trktname` overflow file is defined by the sentinel.xfb.buffer_size.
+* sentinel.trkxxxxx: These parameters correspond to the trkxxxxx parameter described in the [Sentinel Universal Agent User Guide]() .
+* sentinel.xfb.xxxx: These parameters indicate how the Sentinel monitoring agent is used in Transfer CFT.
+* Additional uconf values are related to the communication between the Sentinel monitoring agent and Sentinel
+    *   ssl.ciphersuites
+    *   ssl.version_min
+    *   ssl.extension.enable_sni
+    *   cft.ipv6.disable_connect
+    *   See [UCONF parameters](../../admin_intro/uconf/uconf_directory) for parameter details.
+* sentinel.trktname: The path to the overflow file, where the maximum number of messages that the overflow file can store is equal to sentinel.xfb.buffer_size (not sentinel.trktmaxmsg).
+* `sentinel.trktmaxmsg`: *Obsolete*. The maximum number of messages in the `sentinel.trktname` overflow file is defined by the sentinel.xfb.buffer_size.
 
 ## Overflow file
 
@@ -21,10 +21,10 @@ You can define an overflow file to store Sentinel events if the Sentinel server 
 
 Use the following uconf parameters to configure the name and size of the overflow file:
 
-- sentinel.trktname: The path to the overflow file.
-- sentinel.xfb.buffer_size: The maximum number of messages that the overflow file can store. Once the maximum value is reached, messages are no longer sent to Sentinel and:
-    -   If `sentinel.xfb.shut` is set to any value other than 0, Transfer CFT stops.
-    -   If `sentinel.xfb.shut` is set to 0, Transfer CFT continues to run.
+* sentinel.trktname: The path to the overflow file.
+* sentinel.xfb.buffer_size: The maximum number of messages that the overflow file can store. Once the maximum value is reached, messages are no longer sent to Sentinel and:
+    *   If `sentinel.xfb.shut` is set to any value other than 0, Transfer CFT stops.
+    *   If `sentinel.xfb.shut` is set to 0, Transfer CFT continues to run.
 
 > **Note**
 >
@@ -96,21 +96,21 @@ The following table lists the parameters that you can set in the unified configu
 
 The mode that Transfer CFT uses to send messages to the Sentinel Server. The possible values of this parameter include:
 
-- Immediat: When a connection to the Sentinel Server is established, Transfer CFT sends the messages that are saved in the overload file; it then sends new messages arriving from the application. If a connection does not exist, it attempts a connection to the Sentinel Server upon reception of each new message from the application.  
+* Immediat: When a connection to the Sentinel Server is established, Transfer CFT sends the messages that are saved in the overload file; it then sends new messages arriving from the application. If a connection does not exist, it attempts a connection to the Sentinel Server upon reception of each new message from the application.  
     For MVS, the messages in the overflow file are not automatically sent on connection.
 
 <!-- -->
 
-- Differ: Transfer CFT saves incoming messages in the overflow file.
-- Retry: (default mode) Behaves as in the immediate mode (above), except that if the connection to the Sentinel Server fails, the application repeats connection attempts every `n` minutes. To configure the retry period set the UCONF sentinel.TRKTCONNRETRY parameter.
+* Differ: Transfer CFT saves incoming messages in the overflow file.
+* Retry: (default mode) Behaves as in the immediate mode (above), except that if the connection to the Sentinel Server fails, the application repeats connection attempts every `n` minutes. To configure the retry period set the UCONF sentinel.TRKTCONNRETRY parameter.
 
 ## Sentinel EventTime
 
 By default, the data sent to Sentinel as the EventTime has the format HH:MM:SS. To add milliseconds to the format, HH:MM:SS.sss, set the Transfer CFT UCONF `cft.cftlog.time_precision` parameter, where:
 
-- 1 (default): the time in CFTLOG displays in seconds
-- 10: the time in CFTLOG displays in tenths of seconds
-- 100: the time in CFTLOG displays in hundredths of seconds
+* 1 (default): the time in CFTLOG displays in seconds
+* 10: the time in CFTLOG displays in tenths of seconds
+* 100: the time in CFTLOG displays in hundredths of seconds
 
 If the` cft.cftlog.time_precision` value is greater than 1, the Transfer CFT EventTime message sent to Sentinel has the HH:MM:SS.dh0 format.
 
@@ -120,9 +120,9 @@ If the` cft.cftlog.time_precision` value is greater than 1, the Transfer CFT Ev
 uconfset id=cft.cftlog.time_precision, value=10
 ```
 
-- 1 (default): the time in CFTLOG displays in seconds
-- 10: the time in CFTLOG displays in tenths of seconds
-- 100: the time in CFTLOG displays in hundredths of seconds
+* 1 (default): the time in CFTLOG displays in seconds
+* 10: the time in CFTLOG displays in tenths of seconds
+* 100: the time in CFTLOG displays in hundredths of seconds
 
 If the` cft.cftlog.time_precision` value is greater than 9, the Transfer CFT EventTime message sent to Sentinel has the HH:MM:SS.dh0 format.
 

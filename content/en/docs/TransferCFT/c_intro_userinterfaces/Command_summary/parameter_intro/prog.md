@@ -18,11 +18,11 @@ transfer CFT product and linked with the user program.
 To facilitate identification of the associated modules, the following
 module names are recommended:
 
-- ****CFTEXA****
+* ****CFTEXA****
     for a directory type EXIT
-- ****CFTEXE****
+* ****CFTEXE****
     for an end-of-transfer type EXIT
-- ****CFTEXF****
+* ****CFTEXF****
     for a file type EXIT
 
 If you define more than one EXIT, you can add two characters to the

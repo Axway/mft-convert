@@ -4,9 +4,9 @@ linkTitle: "Troubleshoot Secure Relay "
 weight: 270
 ---Should you incur an issue, you can begin by checking for information in the following files:
 
-- Secure Relay Master Agent log file: secure_relay.ma.log_fname = C:\\cft35\\runtime\\log\\xsrMaster.log
-- Secure Relay Router Agent log file: located by default in the &lt;install_dir>/SecureRelayRA/log/router.log
-- Transfer CFT log messages: check for the messages CFTS63F and CFTS64I, which provide information about the SecureRelay status
+* Secure Relay Master Agent log file: secure_relay.ma.log_fname = C:\\cft35\\runtime\\log\\xsrMaster.log
+* Secure Relay Router Agent log file: located by default in the &lt;install_dir>/SecureRelayRA/log/router.log
+* Transfer CFT log messages: check for the messages CFTS63F and CFTS64I, which provide information about the SecureRelay status
 
 You can refer to the [Secure Relay documentation](https://docs.axway.com/bundle/SecureRelay_271_AdministratorsGuide_allOS_en_HTML5/page/Content/AxwayStartPageRA_admin.htm) for additional information.
 
@@ -83,9 +83,9 @@ Perform the following commands for the indicated product:
 ### Secure Relay Master Agent on Transfer CFT
 
 1. Check the location and name of the certificates and encryption file in the following uconf parameters:
-    -   secure_relay.ma.ca_cert_fname
-    -   secure_relay.ma.cert_fname
-    -   secure_relay.ma.cert_password_fname
+    *   secure_relay.ma.ca_cert_fname
+    *   secure_relay.ma.cert_fname
+    *   secure_relay.ma.cert_password_fname
 1. Replace certificates as needed.
 1. Set the uconf parameters listed above so that they point to the new certificates.
 1. Rename or remove the old file that the secure_relay.ma.cert_password_fname parameter referenced.

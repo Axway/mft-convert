@@ -19,9 +19,9 @@ Final validity date for the transfer.
 
 Define the date as:
 
-- Explicit: Enter the absolute
+* Explicit: Enter the absolute
     date using the format YYYYMMDD (year, month, day).
-- Relative: Enter a value, preceded by the plus sign (`+`), that is
+* Relative: Enter a value, preceded by the plus sign (`+`), that is
     relative to the date the command is taken into account. The value is
     expressed in days.
 
@@ -47,22 +47,22 @@ delayed transfers.
 
 Define the date as:
 
-- Explicit: Enter the absolute
+* Explicit: Enter the absolute
     date using the format YYYYMMDD (year, month, day).
-- Relative: Enter a value preceded by the plus sign (`+`), which is
+* Relative: Enter a value preceded by the plus sign (`+`), which is
     relative to the date the command is taken into account. The value is
     expressed in days.
 
 The default value is assigned by the Transfer CFT depending on the transfer
 context:
 
-- If MAXTIME is greater
+* If MAXTIME is greater
     than MINTIME,  
     MAXDATE = MINDATE.
-- If MAXTIME is less
+* If MAXTIME is less
     than MINTIME,  
     MAXDATE = MINDATE+1.
-- If MAXTIME is omitted,  
+* If MAXTIME is omitted,  
     MAXDATE = 99991231.
 
 ****Example****

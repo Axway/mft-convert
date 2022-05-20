@@ -26,9 +26,9 @@ The {{< TransferCFT/axwayvariablesComponentShortName  >}} object for broadcastin
 collection operations. The list of partners can be described in one of
 the following ways:
 
-- Explicitly using
+* Explicitly using
     a list type parameter
-- Using a file in
+* Using a file in
     which the list is saved
 
 These two methods are mutually exclusive. A partner that you include
@@ -36,9 +36,9 @@ in a list cannot itself be a broadcasting list.
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} creates the following items in the catalog:
 
-- A generic entry
+* A generic entry
     associated with the transfer command
-- An entry for each
+* An entry for each
     partner in the list
 
 > **Note**
@@ -53,25 +53,25 @@ in a list cannot itself be a broadcasting list.
 The CFTDEST object is used to specify a pseudo partner that references
 a list of partners, in order to perform the following in a single command:
 
-- file (or message)
+* file (or message)
     broadcasting to several partners
 
 The broadcasting may be activated:
 
-- by a local SEND
+* by a local SEND
     command
-- or by a SEND command
+* or by a SEND command
     from a remote partner, the local monitor acting as an intermediate site
-- or file (or message)
+* or file (or message)
     collection from several partners
 
 The collection is activated by a local RECV command
 
 This list of partners may be described:
 
-- either explicitly,
+* either explicitly,
     using the PART parameter
-- or in a file in
+* or in a file in
     which this list is saved, the name of the file being defined by the FNAME
     parameter
 
@@ -83,10 +83,10 @@ recursive partners are not permitted.
 
 The records created in the catalog are:
 
-- on the one hand,
+* on the one hand,
     the record associated with the SEND or RECV command (transferred to this
     pseudo partner)
-- and on the other,
+* and on the other,
     the records associated with the transfers to each partner in the list
 
 When a catalog entry is generated, the number of available entries in
@@ -103,17 +103,17 @@ the SEND or RECV command then changes to the T state.
 An end-of-transfer procedure can then be executed, provided it has been
 defined:
 
-- in the EXEC parameter
+* in the EXEC parameter
     of the SEND or RECV which initiated the transfer
-- or (if this EXEC
+* or (if this EXEC
     parameter is not defined) in the EXECSF parameter (for broadcasting) or
     EXECRF (for collection) of the associated CFTPARM command
 
 The CFTDEST EXEC parameter indicates the procedure submit mode:
 
-- when all transfers
+* when all transfers
     are terminated (default value)
-- at the end of each
+* at the end of each
     transfer plus when all transfers are terminated
 
 If an incident occurs during a transfer corresponding to one of the

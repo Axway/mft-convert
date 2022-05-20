@@ -73,9 +73,9 @@ NODE S L 2 \*99 STRING LIST max_length=1 max_entries=99
 
 By default, the data sent to Sentinel as the EventTime has the format HH:MM:SS. To add milliseconds to the format, HH:MM:SS.sss, set the Transfer CFT UCONF `cft.cftlog.time_precision` parameter, where:
 
-- 1 (default): the time in CFTLOG displays in seconds
-- 10: the time in CFTLOG displays in tenths of seconds
-- 100: the time in CFTLOG displays in hundredths of seconds
+* 1 (default): the time in CFTLOG displays in seconds
+* 10: the time in CFTLOG displays in tenths of seconds
+* 100: the time in CFTLOG displays in hundredths of seconds
 
 If the` cft.cftlog.time_precision` value is greater than 1, the Transfer CFT EventTime message sent to Sentinel has the HH:MM:SS.dh0 format.
 

@@ -8,11 +8,11 @@ The installation procedure creates the environment in which {{< TransferCFT/axwa
 
 There are two types of installation:
 
-- Initial product installation: This procedure generates a full environment, comprising a standard directory structure. When the installation terminates correctly, a procedure is used to generate configuration files that enable you to perform a test loop-back transfer.
+* Initial product installation: This procedure generates a full environment, comprising a standard directory structure. When the installation terminates correctly, a procedure is used to generate configuration files that enable you to perform a test loop-back transfer.
 
 <!-- -->
 
-- Upgrade: This installation procedure renames the previous {{< TransferCFT/axwayvariablesComponentShortName >}} subdirectories and generates a new standard installation directory structure.
+* Upgrade: This installation procedure renames the previous {{< TransferCFT/axwayvariablesComponentShortName >}} subdirectories and generates a new standard installation directory structure.
 
 See the [Product license key](../../preinstallation#Product) section for information on the license key and the end user license.
 
@@ -27,10 +27,10 @@ To prepare for the installation procedure:
     `Password`:
 
 1. Access the directory where you uploaded the zipped installation kit files. The `Transfer_CFT_{{< TransferCFT/axwayvariablesReleaseNumber >}}_Install_vms-ia64_<BN>.zip` file contains the following archive files:
-    -   cft036.a
-    -   cft036.b
-    -   cft036.c
-    -   cft036.d
+    *   cft036.a
+    *   cft036.b
+    *   cft036.c
+    *   cft036.d
 
 1. Unzip the file: `unzip Transfer_CFT_{{< TransferCFT/axwayvariablesReleaseNumber >}}_Install_vms-ia64_<BN>.zip`
 

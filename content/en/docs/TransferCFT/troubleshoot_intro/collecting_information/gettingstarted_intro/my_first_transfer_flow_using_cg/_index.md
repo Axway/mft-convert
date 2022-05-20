@@ -6,11 +6,11 @@ weight: 260
 
 ## Learn how to...
 
-- [Create applications to use in flows](app_first_transfer_flow_using_cg)
-- [Create and deploy a basic flow](simple_first_transfer_flow_using_cg)
-- [Create a flow that sends multiple files](multi_file_first_transfer_flow_using_cg)
-- [Create an implicit mode flow](implicit_first_transfer_flow_using_cg)
-- [Perform broadcast and collect operations](broadcast_first_transfer_flow_using_cg)
+* [Create applications to use in flows](app_first_transfer_flow_using_cg)
+* [Create and deploy a basic flow](simple_first_transfer_flow_using_cg)
+* [Create a flow that sends multiple files](multi_file_first_transfer_flow_using_cg)
+* [Create an implicit mode flow](implicit_first_transfer_flow_using_cg)
+* [Perform broadcast and collect operations](broadcast_first_transfer_flow_using_cg)
 
 > **Note**
 >
@@ -19,14 +19,14 @@ weight: 260
 
 ## What you will need
 
-- A running {{< TransferCFT/suitevariablesCentralGovernanceName >}} system
-- Three started {{< TransferCFT/axwayvariablesComponentShortName >}}s that are registered with {{< TransferCFT/PrimaryCGorUM >}}
-- Three files for exchanges. After creating the files, name them: SALES_report, DAILY_news, and INVENTORY
+* A running {{< TransferCFT/suitevariablesCentralGovernanceName >}} system
+* Three started {{< TransferCFT/axwayvariablesComponentShortName >}}s that are registered with {{< TransferCFT/PrimaryCGorUM >}}
+* Three files for exchanges. After creating the files, name them: SALES_report, DAILY_news, and INVENTORY
 
 <!-- -->
 
-- Appropriate rights in {{< TransferCFT/PrimaryCGorUM >}} for creating flows - refer to the {{< TransferCFT/PrimaryCGorUM >}} **User's Guide** for more information on user rights
-- Familiarize yourself with the two user interfaces as described in the [Getting started overview](../)
+* Appropriate rights in {{< TransferCFT/PrimaryCGorUM >}} for creating flows - refer to the {{< TransferCFT/PrimaryCGorUM >}} **User's Guide** for more information on user rights
+* Familiarize yourself with the two user interfaces as described in the [Getting started overview](../)
 
 ## Goal
 
@@ -173,5 +173,5 @@ Collecting files is the inverse of using a broadcast list. In the collect transf
 
 Once you understand the basic modes and concepts described in this section, you can add processing, symbolic variables, scripts and more to your transfers using other {{< TransferCFT/axwayvariablesComponentShortName  >}} options and features. See the dedicated sections in this document for details on customizing your transfer flows. A good place to start is [Transfer Concepts](../../../../concepts/transfer_command_overview), which presents high-level transfer processing concepts, transfer mode details, and procedural topics.
 
-- For more information on {{< TransferCFT/suitevariablesCentralGovernanceName >}}, screen details, checking product status, and so on, please refer to the {{< TransferCFT/suitevariablesCentralGovernanceName >}} {{< TransferCFT/suitevariablesDocTypeUser >}}.
-- For a complete listing of Source and Target parameters, refer to the Transfer CFT to {{< TransferCFT/PrimaryCGorUM >}} parameter mapping available in the **Central Governance* {{< TransferCFT/suitevariablesDocTypeUser >}}*.
+* For more information on {{< TransferCFT/suitevariablesCentralGovernanceName >}}, screen details, checking product status, and so on, please refer to the {{< TransferCFT/suitevariablesCentralGovernanceName >}} {{< TransferCFT/suitevariablesDocTypeUser >}}.
+* For a complete listing of Source and Target parameters, refer to the Transfer CFT to {{< TransferCFT/PrimaryCGorUM >}} parameter mapping available in the **Central Governance* {{< TransferCFT/suitevariablesDocTypeUser >}}*.

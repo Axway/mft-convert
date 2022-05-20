@@ -12,15 +12,15 @@ In a single system environment, you can take an independent ASP offline independ
 
 You can use the following commands to manage IASP:
 
-- To start or stop an IASP, use the command:  
+* To start or stop an IASP, use the command:  
     ```
     WRKDEVD
     ```
-- To activate an environment, use the command:  
+* To activate an environment, use the command:  
     ```
     SETASPGRP (ex: ‘SETASPGRP ASPGRP(IASP1)’)
     ```
-- To disable an environment, use the command:  
+* To disable an environment, use the command:  
     ```
     SETASPGRP ASPGRP(\*NONE)
     ```
@@ -32,8 +32,8 @@ For Transfer CFT to be able to access the files located on an Independent ASP (w
 1. Connect to your system.
 1. Start the IASP.
 1. Before starting Transfer CFT, use the `EDTLIB `command to add the following three libraries:
-    -   CFTPGM: Contains the Transfer CFT programs
-    -   CFTPROD: Contains the Transfer CFT configuration
-    -   CFTSBSLIB: An additional library in the ASP that contains your SBS
+    *   CFTPGM: Contains the Transfer CFT programs
+    *   CFTPROD: Contains the Transfer CFT configuration
+    *   CFTSBSLIB: An additional library in the ASP that contains your SBS
 1. Use the `SETASPGRP `command to enable your IASP.
 1. Use the `CFTSTART `command to start Transfer CFT.

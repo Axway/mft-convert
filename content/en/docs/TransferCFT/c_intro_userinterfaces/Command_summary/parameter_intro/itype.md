@@ -16,10 +16,10 @@ system dependant.
 
 Certificate types are:
 
-- All
+* All
     : the certificate is not checked
-- User: User certificate
-- Root: Root authority certificate
-- Inter: Intermediate authority certificate
+* User: User certificate
+* Root: Root authority certificate
+* Inter: Intermediate authority certificate
 
 [Return to Command index](../../)

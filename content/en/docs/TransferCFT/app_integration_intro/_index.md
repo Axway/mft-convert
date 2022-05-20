@@ -16,18 +16,18 @@ weight: 140
 that create application services.
 Each of these services is described in the following sections:
 
-- REST APIs
-- Web services
-- JPI
-- Transfer services
-- Synchronous communication
-- Catalog querying services
-- Delivered API templates described per operating system
-- Services in C
-- Services in COBOL
+* REST APIs
+* Web services
+* JPI
+* Transfer services
+* Synchronous communication
+* Catalog querying services
+* Delivered API templates described per operating system
+* Services in C
+* Services in COBOL
 
 [Managing exits](managing_exits)
-- Provides the information about exit
+* Provides the information about exit
 task concepts, exit
 task architecture, types of exits and how to implement.
 

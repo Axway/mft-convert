@@ -6,8 +6,8 @@ weight: 200
 
 ## Prerequisites
 
-- Download the installation package you want to downgrade to, noting that you can only downgrade to a version from which you have previously upgraded. For example, if you upgraded from version 3.4 directly to 3.8, you can only downgrade to version 3.4 and not to an intermediary version 3.6.
-- You must have already upgraded from {{< TransferCFT/headerfootervariableshflongproductname >}} 3.4 or higher to {{< TransferCFT/headerfootervariableshflongproductname >}} {{< TransferCFT/axwayvariablesReleaseNumber >}}
+* Download the installation package you want to downgrade to, noting that you can only downgrade to a version from which you have previously upgraded. For example, if you upgraded from version 3.4 directly to 3.8, you can only downgrade to version 3.4 and not to an intermediary version 3.6.
+* You must have already upgraded from {{< TransferCFT/headerfootervariableshflongproductname >}} 3.4 or higher to {{< TransferCFT/headerfootervariableshflongproductname >}} {{< TransferCFT/axwayvariablesReleaseNumber >}}
 
 > **Note**
 >

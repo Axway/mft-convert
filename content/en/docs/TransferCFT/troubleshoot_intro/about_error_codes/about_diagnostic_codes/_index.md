@@ -8,7 +8,7 @@ weight: 280
 
 {{< TransferCFT/axwayvariablesComponentLongName  >}} provides three types of diagnostic codes, DIAGI, DIAGP, and DIAGC, that are intended to help you understand encountered issues.
 
-- DIAGI codes provide internal error information for both local and remote problems. If the code is specific to a protocol, this
+* DIAGI codes provide internal error information for both local and remote problems. If the code is specific to a protocol, this
     is indicated in the code.
-- DIAGP codes add protocol diagnostics concerning the error.
-- DIAGC codes are complementary diagnostics that provide additional information. DIAGC codes are stored in the catalog record as a string (255 characters) that is accessible using the &diagc symbolic variable. These codes also sometimes displays in log messages.
+* DIAGP codes add protocol diagnostics concerning the error.
+* DIAGC codes are complementary diagnostics that provide additional information. DIAGC codes are stored in the catalog record as a string (255 characters) that is accessible using the &diagc symbolic variable. These codes also sometimes displays in log messages.

@@ -5,10 +5,10 @@ weight: 210
 ---This section describes the following two types of transfer functions, which you can perform in
 requester mode:
 
-- [Broadcast](#Broadcasting_mode):
+* [Broadcast](#Broadcasting_mode):
     Send one or more files or messages to several partners by activating a
     SEND command
-- [Collect](#Collecting):
+* [Collect](#Collecting):
     Receive one or more files or messages from several partners by activating
     a single RECV command
 
@@ -60,9 +60,9 @@ To broadcast a file called X, with N partners, a SEND
 PART=DEST, IDF=ID_EM, FNAME=X command generates N+1 transfer entries in
 the catalog that corresponds to:
 
-- An entry for each
+* An entry for each
     effective transfer (i.e. N entries)
-- And a generic virtual
+* And a generic virtual
     entry, which never leads to an effective transfer, used locally for broadcasting
     management
 
@@ -85,18 +85,18 @@ To broadcast a group of P files if N partners are involved, a SEND PART =
 DEST, IDF = ID_EM, FNAME = &lt;file_symb>GROUP command generates N (P+1) +1 transfer
 entries in the catalog corresponding to:
 
-- An entry for each
+* An entry for each
     effective transfer (i.e. N\*P entries)
-- A generic virtual
+* A generic virtual
     entry which never leads to an effective transfer, used locally for broadcasting
     management
-- Where &lt;file_symb> is the OS appropriate symbol (# or @)
+* Where &lt;file_symb> is the OS appropriate symbol (# or @)
 
 This virtual transfer is identified by a ****DIAGP****
 code equal to ****DIFFUS****, on querying
 the catalog.
 
-- And a generic virtual
+* And a generic virtual
     entry per partner used locally for the management of the group of files
     sent for the partner in question (i.e. N generic entries)
 
@@ -106,10 +106,10 @@ on querying the catalog.
 The associated post processing procedure is activated in this
 case:
 
-- For each end of
+* For each end of
     transfer, of all the files of the group, the "LIST_FI" entry
     changes to the T state
-- On completion of
+* On completion of
     broadcasting, when all the partners have received all the files, the DIFFUS
     entry changes to the T or X state
 
@@ -195,9 +195,9 @@ RECV PART=GROUP, IDF=IDF1,...
 
 The list of partners can be described in one of two ways:
 
-- Explicitly by defining
+* Explicitly by defining
     the PART parameter.
-- Using a file in
+* Using a file in
     which this list is saved. The name of this file is defined in the FNAME
     parameter.
 

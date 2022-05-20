@@ -6,15 +6,15 @@ weight: 160
 
 This chapter describes how to operate Transfer CFT, and is comprised of the following sections:
 
-- [Predefined commands](operating_cft/predefined_commands)
-- [CFTUTIL commands](operating_cft/submit_cftutil_commands)
-- [Source files interpretation](operating_cft/interpret_source_member)
-- [Start/stop the UI server](start_copilot_server)
-- [Run Transfer CFT](operating_cft/running_transfer_cft) jobs:
-    -   [Query Transfer CFT messages]()
-    -   [Start Transfer CFT](operating_cft/start_cft)
-    -   [Submit a transfer command](submit_transfer_command)
-- [Transfer CFT shutdown](operating_cft/shut_cft)
+* [Predefined commands](operating_cft/predefined_commands)
+* [CFTUTIL commands](operating_cft/submit_cftutil_commands)
+* [Source files interpretation](operating_cft/interpret_source_member)
+* [Start/stop the UI server](start_copilot_server)
+* [Run Transfer CFT](operating_cft/running_transfer_cft) jobs:
+    *   [Query Transfer CFT messages]()
+    *   [Start Transfer CFT](operating_cft/start_cft)
+    *   [Submit a transfer command](submit_transfer_command)
+* [Transfer CFT shutdown](operating_cft/shut_cft)
 
 <span id="Transfer"></span>
 
@@ -22,8 +22,8 @@ This chapter describes how to operate Transfer CFT, and is comprised of the foll
 
 Other than during installation, which runs the Transfer CFT manager automatically, you can enter one of the following commands to start the manager:
 
-- `CFT`
-- `CALL CFTMENU`
+* `CFT`
+* `CALL CFTMENU`
 
 ## Create Transfer CFT system object
 

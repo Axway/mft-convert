@@ -22,10 +22,10 @@ For V24: `CFTT57I &str transfer started   <IDTU=&idtu PART=&part IDF=&idf IDT=&i
 
 Certain auto-documented messages, for example CFTA01I, CFTA02W, CFTA03E, CFTA04F, are not fully detailed as they are considered self-explanatory. The CFTAnnx messages refer to the acceleration feature on all platforms that support acceleration.
 
-- CFTA01, CFTLOG_SYS_INFOR "CFTA01I &str"
-- CFTA02, CFTLOG_SYS_WARNI "CFTA02W &str"
-- CFTA03, CFTLOG_SYS_ERROR "CFTA03E &str"
-- CFTA04, CFTLOG_SYS_FATAL "CFTA04F &str"
+* CFTA01, CFTLOG_SYS_INFOR "CFTA01I &str"
+* CFTA02, CFTLOG_SYS_WARNI "CFTA02W &str"
+* CFTA03, CFTLOG_SYS_ERROR "CFTA03E &str"
+* CFTA04, CFTLOG_SYS_FATAL "CFTA04F &str"
 
  
 

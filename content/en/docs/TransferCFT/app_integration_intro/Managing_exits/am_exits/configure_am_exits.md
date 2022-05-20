@@ -28,8 +28,8 @@ Configure the AM exit using the parameters in the following table.
 >
 > When the AM exit is enabled these conditions apply:
 
-- uconf:am.exit.check_login=No: the native authentication procedure is still performed
-- uconf:am.exit.check_permissions=No: all privileges are granted for the current user
+* uconf:am.exit.check_login=No: the native authentication procedure is still performed
+* uconf:am.exit.check_permissions=No: all privileges are granted for the current user
 
 Set the type parameter: `am.type = exit`
 
@@ -51,10 +51,10 @@ Set the type parameter: `am.type = exit`
 
 This section presents parameters that you may need to set if you are creating an EXIT based on the ` examldap.c` sample. The `examldap.c` sample is built with the OpenLDAP library, which Axway does not deliver. To use, compile this library and add it to the LD_LIBRARY_PATH.
 
-- am.exit.custom.ldap_base: The top level of the LDAP directory tree is the base, referred to as the "base DN". Enter the base (DN) to authenticate on the connected LDAP server, which defines which LDAP tree node to use as the root node. Example: `dc=example,dc=com`
-- am.exit.custom.ldap_login_dn_format: The user DN format used to search for a user DN on the LDAP server.  
+* am.exit.custom.ldap_base: The top level of the LDAP directory tree is the base, referred to as the "base DN". Enter the base (DN) to authenticate on the connected LDAP server, which defines which LDAP tree node to use as the root node. Example: `dc=example,dc=com`
+* am.exit.custom.ldap_login_dn_format: The user DN format used to search for a user DN on the LDAP server.  
     For example, if a user is identified by cn=theUser,ou=people,dc=example,dc=com, set `am.exit.custom.ldap_login_dn_format` to `"cn=%s,ou=people,dc=example,dc=com"`
-- am.exit.custom.ldap_get_roles_filter: The filter used to retrieve the groups that a given user belongs to.  
+* am.exit.custom.ldap_get_roles_filter: The filter used to retrieve the groups that a given user belongs to.  
     For example, if the filter `"(&(objectClass=group)(member=cn=theuser,ou=people,dc=example,dc=com))"` returns the list of groups for the user "theUser", set `am.exit.custom.ldap_get_roles_filter` to `"(&(objectClass=group)(member=cn=%s,ou=people,dc=example,dc=com))"`
 
 ****Related topics****

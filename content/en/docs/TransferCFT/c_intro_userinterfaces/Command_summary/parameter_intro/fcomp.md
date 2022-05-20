@@ -12,6 +12,6 @@ weight: 1100
 
 Defines the data compression in the receiver's logical file.
 
-- 0: no compression
+* 0: no compression
 
 [Return to Command index](../../)

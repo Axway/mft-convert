@@ -49,10 +49,10 @@ of the idfdef, idf1, idf2, idf3 type from the partner.
 
 Where the fil21 file contains:
 
-- idfdef
-- idf1
-- idf2
-- idf3
+* idfdef
+* idf1
+* idf2
+* idf3
 
 Please refer to [Create
 authorized/unauthorized identifiers list](../../../../concepts/cft_configuration_concepts_start_here/authorization_list_concepts) for an example of how to define a list of unauthorized (excluded) IDFs.

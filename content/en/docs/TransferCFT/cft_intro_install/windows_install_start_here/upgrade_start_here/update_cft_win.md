@@ -18,8 +18,8 @@ You can easily perform {{< TransferCFT/suitevariablesTransferCFTName  >}} update
 
 Limitations:
 
-- You cannot remove SP or patches via the {{< TransferCFT/suitevariablesCentralGovernanceName >}} interface.
-- You cannot update {{< TransferCFT/axwayvariablesComponentLongName >}}s installed in multi-node/multi-hosts from {{< TransferCFT/PrimaryCGorUM >}}.
+* You cannot remove SP or patches via the {{< TransferCFT/suitevariablesCentralGovernanceName >}} interface.
+* You cannot update {{< TransferCFT/axwayvariablesComponentLongName >}}s installed in multi-node/multi-hosts from {{< TransferCFT/PrimaryCGorUM >}}.
 
 ## Windows users
 

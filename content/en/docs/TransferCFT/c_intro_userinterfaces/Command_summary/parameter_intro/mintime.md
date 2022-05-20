@@ -21,8 +21,8 @@ the first day (MINDATE).
 
 Define the time as:
 
-- Explicit: Enter an absolute time for the transfer command using the format HHMMSSCC (hours, minutes, seconds, and hundredths of a second).
-- Relative: Enter a value, preceded by the plus sign (`+`), that is relative to the time the transfer command is taken into
+* Explicit: Enter an absolute time for the transfer command using the format HHMMSSCC (hours, minutes, seconds, and hundredths of a second).
+* Relative: Enter a value, preceded by the plus sign (`+`), that is relative to the time the transfer command is taken into
     account. The value is in minutes with a maximum increment of `+1439` minutes (23 hours and 59 minutes).
 
 ****Example****

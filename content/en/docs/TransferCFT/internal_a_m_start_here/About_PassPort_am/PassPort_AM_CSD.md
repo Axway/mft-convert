@@ -27,6 +27,6 @@ AM documentation available at [support.axway.com]().
 
 ****Related topics****
 
-- [About PassPort AM](../)
-- [Configuring PassPort AM](../configure_passport_am)
-- [Configuring PassPort AM SSL]()
+* [About PassPort AM](../)
+* [Configuring PassPort AM](../configure_passport_am)
+* [Configuring PassPort AM SSL]()

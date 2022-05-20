@@ -19,9 +19,9 @@ Minimum, or initial, transfer validity date.
 
 Define the date as:
 
-- Explicit: Enter the absolute
+* Explicit: Enter the absolute
     date using the format YYYYMMDD (year, month, day).
-- Relative: Enter a value, preceded by the plus sign (`+`), that is  relative to the date the command is taken into account. The value is
+* Relative: Enter a value, preceded by the plus sign (`+`), that is  relative to the date the command is taken into account. The value is
     expressed in days.
 
 ****Example****

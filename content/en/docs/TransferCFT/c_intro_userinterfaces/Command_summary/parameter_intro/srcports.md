@@ -16,7 +16,7 @@ A list of local ports that can contain up to 16 instances of str15. Use this pa
 
 Outgoing port definitions are:
 
-- Default (5000 - 65535)
+* Default (5000 - 65535)
 
 ****Examples****
 

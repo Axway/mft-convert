@@ -158,8 +158,8 @@ All nodes hosted locally are re-started by the node manager.
 
 The `add_host` command adds a new host entry in the configuration. The following UCONF parameters are set:
 
-- `cft.multi_node.hostnames`
-- `cft.multi_node.hostnames.<hostname>.host = <host_address>`
+* `cft.multi_node.hostnames`
+* `cft.multi_node.hostnames.<hostname>.host = <host_address>`
 
 **Syntax**
 
@@ -227,9 +227,9 @@ The `enable_node` command enables the specified node. The node state is set from
 
 The `disable_node` command disables the specified node. The parameter uconf:cft.multi_node.nodes.&lt;node_id>.disabling is set to Yes.
 
-- The node unregisters its listening points from the connection dispatcher so that it does not received incoming requests.
-- Outgoing requests coming from APIs are no longer dispatched to this node.
-- Once the catalog related to the node is empty, the node state is set to DISABLED and the node stops.
+* The node unregisters its listening points from the connection dispatcher so that it does not received incoming requests.
+* Outgoing requests coming from APIs are no longer dispatched to this node.
+* Once the catalog related to the node is empty, the node state is set to DISABLED and the node stops.
 
 **Syntax**
 
@@ -249,9 +249,9 @@ The `cftping `command checks the status of one or all enabled nodes. By default 
 
 Return values:
 
-- 0: all enabled nodes are stopped
-- 1: all enabled nodes are running
-- 2: not all enabled nodes are running
+* 0: all enabled nodes are stopped
+* 1: all enabled nodes are running
+* 2: not all enabled nodes are running
 
 **Syntax**
 

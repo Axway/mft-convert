@@ -18,7 +18,7 @@ If you are not familiar with the installation procedure, you may want to first r
 1. Load the profile and stop both Transfer CFT and Copilot before applying the update.
 1. Use the `install `command plus the `<pathname>` to install the service pack. If the pathname is not the same as the existing installation though, the process fails.
 
-- Example  
+* Example  
     The following example demonstrates a Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber >}} SP4 installation over an existing product installed in `/home/cftuser/CFT33x`.
 
 > **Note**

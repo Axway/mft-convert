@@ -8,8 +8,8 @@ On a Guardian platform, {{< TransferCFT/axwayvariablesComponentLongName  >}} API
 
 A Transfer CFT can be assigned up to nine servers that are named using the convention $xxAPn, where:
 
-- $xx: is the {{< TransferCFT/axwayvariablesComponentLongName >}} prefix selected at installation
-- n: is a number between 1 and 9
+* $xx: is the {{< TransferCFT/axwayvariablesComponentLongName >}} prefix selected at installation
+* n: is a number between 1 and 9
 
 These servers use a standard inter-process message exchange mechanism.
 
@@ -31,14 +31,14 @@ API02 $xxAP1 SRVEND
 
 The message structures are described in DDL and C language:
 
-- The C files is derived from the DDL file
-- Both the DDL and C header files are located in `$volume.<subvolume>IH`
-- Except for the Guardian-specific message number at the beginning of the structure, the message information is the same as for other platforms
+* The C files is derived from the DDL file
+* Both the DDL and C header files are located in `$volume.<subvolume>IH`
+* Except for the Guardian-specific message number at the beginning of the structure, the message information is the same as for other platforms
 
 ## Installation files
 
 The following files are part of the installation:
 
-- APIDDL: The DDL file describing the message structure
-- APIC: The C header file resulting from the APIDDL compilation
-- API01, API02: The sample C programs
+* APIDDL: The DDL file describing the message structure
+* APIC: The C header file resulting from the APIDDL compilation
+* API01, API02: The sample C programs

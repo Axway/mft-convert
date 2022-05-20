@@ -6,10 +6,10 @@ weight: 150
 or the sending of messages, with a partners. The
 records of these transfer commands specify the:
 
-- Filename or message
+* Filename or message
     text
-- Transfer characteristics
-- Partner
+* Transfer characteristics
+* Partner
 
 All transfer requests, either SEND or RECV, are recorded and saved in
 the Transfer CFT transfer CATALOG.
@@ -17,12 +17,12 @@ the Transfer CFT transfer CATALOG.
 A catalog record, known as a **catalog
 entry**, is identified by the:
 
-- Transfer direction:
+* Transfer direction:
     Send or Receive
-- Type of object
+* Type of object
     transferred: File, Message, or Reply
-- Partner name: PART
-- Transfer identifier:
+* Partner name: PART
+* Transfer identifier:
     IDT
 
 All the information required for the correct execution of the transfer

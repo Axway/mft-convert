@@ -10,9 +10,9 @@ weight: 180
 
 Installation requirements include:
 
-- IA64: approximately 665,000 blocks of free disk space
-- At least 3,400 free global pages and two global sections to use {{< TransferCFT/axwayvariablesComponentShortName >}}
-- At least 400 free global pages and two global sections to use Copilot
+* IA64: approximately 665,000 blocks of free disk space
+* At least 3,400 free global pages and two global sections to use {{< TransferCFT/axwayvariablesComponentShortName >}}
+* At least 400 free global pages and two global sections to use Copilot
 
 These values are sufficient if all {{< TransferCFT/axwayvariablesComponentShortName  >}} users belong to the same group, in UIC terms. Otherwise, multiply these values by the number of different user groups to calculate the total system requirement.
 
@@ -22,10 +22,10 @@ The privileges, identifiers and quotas required to execute {{< TransferCFT/axway
 
 ## Requirements for uploading the installation kit
 
-- An installed FTP server on the OpenVMS system
-- An FTP user with rights to upload files
-- A connection between the local machine and the OpenVMS system
-- Alternatively, use the binary mode to transfer the zip file
+* An installed FTP server on the OpenVMS system
+* An FTP user with rights to upload files
+* A connection between the local machine and the OpenVMS system
+* Alternatively, use the binary mode to transfer the zip file
 
 ### Defaults and system values
 
@@ -53,29 +53,29 @@ The following table lists the ports and their uses with {{< TransferCFT/axwayvar
 
 You need to apply a valid license key to Transfer CFT in the following situations:
 
-- You perform an initial Transfer CFT installation.
-- To replace an expired license key, typically after a year.
-- A hardware upgrade can change the CPU ID (CPU serial number); if so, you must reapply the license.
+* You perform an initial Transfer CFT installation.
+* To replace an expired license key, typically after a year.
+* A hardware upgrade can change the CPU ID (CPU serial number); if so, you must reapply the license.
 
 ### Obtain a license key
 
 1. Install {{< TransferCFT/axwayvariablesComponentShortName >}}. You can install {{< TransferCFT/axwayvariablesComponentShortName >}} without a license key, and enter the key later.
 1. After completing the installation, or for an existing installation, use the command **`cftutil about`** to retrieve your system information.
 1. Contact the Axway Fulfillment team at the appropriate email address to obtain a key.
-    -   For a US key, contact: `fulfillment@us.axway.com`
-    -   For an EMEA or APAC key, contact: `product.key@axway.com`
+    *   For a US key, contact: `fulfillment@us.axway.com`
+    *   For an EMEA or APAC key, contact: `product.key@axway.com`
 1. Apply the license key(s) that you received from the Axway Fulfillment team as follows:
-    -   Enter the key in the default file: CFT_SCEN:CFT.KEY.
+    *   Enter the key in the default file: CFT_SCEN:CFT.KEY.
 
 ### Apply a license key
 
 Apply the license key(s) that you received from the Axway Fulfillment team as follows:
 
-- Enter the key in the default file: CFT_SCEN:CFT.KEY.
+* Enter the key in the default file: CFT_SCEN:CFT.KEY.
 
 Transfer CFT allows you to use a single key for a multi-node installation. To use a single key for multiple hosts, either:
 
-- The hostname must not be defined for the key, or
-- The hostname defined for the key matches the hostname of one of the hosts that composes the multi-node instance
+* The hostname must not be defined for the key, or
+* The hostname defined for the key matches the hostname of one of the hosts that composes the multi-node instance
 
 Additionally, the key must have the cluster option.

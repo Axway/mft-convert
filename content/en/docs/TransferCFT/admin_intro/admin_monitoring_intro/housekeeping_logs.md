@@ -34,11 +34,11 @@ To create a custom log rotation procedure, you can use the sample file `rotate.c
 
 You can manage the switch procedure using various methods that include, but not limited to, the following:
 
-- File naming: Creates a log file each day using the same file name with a timestamp extension. Existing files are not removed.
+* File naming: Creates a log file each day using the same file name with a timestamp extension. Existing files are not removed.
 
 <!-- -->
 
-- Archiving: Transfer CFT log files are stored in the runtime directory, log file names are cftlog-&lt;timestamp> where timestamp is the date and time the switch procedure switch.cmd is triggered by {{< TransferCFT/axwayvariablesComponentShortName >}}.
+* Archiving: Transfer CFT log files are stored in the runtime directory, log file names are cftlog-&lt;timestamp> where timestamp is the date and time the switch procedure switch.cmd is triggered by {{< TransferCFT/axwayvariablesComponentShortName >}}.
 
 > **Note**
 >
@@ -54,21 +54,21 @@ SWITCH TYPE=LOG
 
 A file can automatically be switched to another file by means of one of 4 events:
 
-- a daily schedule
+* a daily schedule
     set by the SWITCH parameter
 
-- the number of records
+* the number of records
     written in the current log file exceeds the limit set by the MAXREC parameter
     or, depending on the OS, the file is full
 
-- {{< TransferCFT/axwayvariablesComponentShortName >}} is
+* {{< TransferCFT/axwayvariablesComponentShortName >}} is
     shut down via the SHUT command  
 
     > **Note**
     >
     > To customize the switch that occurs when Transfer CFT shuts down, modify the UCONF parameter cft.cftlog.switch_on_stop=YES (the default value is NO).
 
-- {{< TransferCFT/axwayvariablesComponentShortName >}} is
+* {{< TransferCFT/axwayvariablesComponentShortName >}} is
     activated
 
 #### Limit entries in the log
@@ -87,13 +87,13 @@ UCONFSET id=sentinel.xfb.log,value=F
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} can filter log messages according to predefined filters to exclude certain types of messages. To create a filter, customize the following uconf parameters to create the required filter pattern with one or more of the following characteristics:
 
-- cft.server.log.exclude_filters = ID1 ID2 ID3
-    -   Space separated list of filter identifiers
-    -   Only the log filters in the list are activated
-- cft.server.log.exclude_filters.ID.pattern=
-    -   The pattern matches a Log messages that is to be excluded from all logs (log output, log file and Sentinel)
-- cft.server.log.exclude_filters.ID.comment=
-    -   A free field that you can use to describe the filter
+* cft.server.log.exclude_filters = ID1 ID2 ID3
+    *   Space separated list of filter identifiers
+    *   Only the log filters in the list are activated
+* cft.server.log.exclude_filters.ID.pattern=
+    *   The pattern matches a Log messages that is to be excluded from all logs (log output, log file and Sentinel)
+* cft.server.log.exclude_filters.ID.comment=
+    *   A free field that you can use to describe the filter
 
 **Example**
 
@@ -138,9 +138,9 @@ uconfset id=cft.cftlog.switch_on_stop, value=No
 
 This results in the switch being executed automatically every night at midnight, giving you a single daily log file (unless you execute another switch command), where:
 
-- The `cftlog` file in the `$CFTDIRLOG `folder (runtime/log) that has no extension is the current day's log.
-- The` cftlog.n` is the log file corresponding to the current day *- n* days. For example, if today is Sunday, `cftlog.2` would be Friday's log file.
-- There are a total of 7 log files in the folder, one for each day, as the `backup_count` value is 6 (6 backups plus 1 current).
+* The `cftlog` file in the `$CFTDIRLOG `folder (runtime/log) that has no extension is the current day's log.
+* The` cftlog.n` is the log file corresponding to the current day *- n* days. For example, if today is Sunday, `cftlog.2` would be Friday's log file.
+* There are a total of 7 log files in the folder, one for each day, as the `backup_count` value is 6 (6 backups plus 1 current).
 
 ## Configure log to switch only when the current file is full
 

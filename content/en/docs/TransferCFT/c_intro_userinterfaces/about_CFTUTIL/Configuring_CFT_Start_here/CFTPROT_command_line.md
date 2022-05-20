@@ -10,9 +10,9 @@ cannot be more than one CFTPROT object per CFTNET object.
 ****Related
 topics****
 
-- Command syntax
+* Command syntax
     [CFTPROT](../../../command_summary#CFTPROT)
-- Object concepts
+* Object concepts
     [Transfer protocols](../../../../admin_intro/admin_config_commands/transfer_protocol_concepts)
 
  
@@ -50,9 +50,9 @@ transfer protocol.
 This command is used to specify the values on which the Transfer CFT is based
 during protocol negotiations concerning:
 
-- Credit
-- Data compression
-- Special logic
+* Credit
+* Data compression
+* Special logic
 
 The "Credit" value designates the maximum number of data packets
 which the sender can send, before the server needs to acknowledge their
@@ -93,11 +93,11 @@ protocol.
 
 In PeSIT, the user can specify parameters controlling the:
 
-- mechanisms associated
+* mechanisms associated
     with the synchronization points
-- format of messages
-- compression algorithms
-- CRC calculation
+* format of messages
+* compression algorithms
+* CRC calculation
 
 > **Note**
 >
@@ -151,9 +151,9 @@ the use of each of these variants, refer to the Transfer CFT [Protocols](../../.
 The CFTPROT object accepts the optional SSL parameter. For the declared
 protocol, it sets the:
 
-- Default security
+* Default security
     profile in requester mode
-- Security profile
+* Security profile
     in server mode
 
 If the SSL parameter is set in a CFTPROT object, transport security
@@ -186,9 +186,9 @@ CFTPROT
 
 Description: Use the CFTPROT object to set:
 
-- Default
+* Default
     security profile in requester mode
-- Security
+* Security
     profile in server mode
 
 

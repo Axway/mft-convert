@@ -10,10 +10,10 @@ Serialization of transfer requests is based on a combination of the request's ID
 
 Additional serialization rules:
 
-- Un-serialized transfers do not have an impact on serialized transfers.
-- Serialization takes priority over the [MINDATE](../../c_intro_userinterfaces/command_summary/parameter_intro/mindate)/[MINTIME](../../c_intro_userinterfaces/command_summary/parameter_intro/mintime) parameters.
-- A failed transfer blocks following transfers.
-- Deleting a transfer in the catalog triggers the next waiting transfer in the list.
+* Un-serialized transfers do not have an impact on serialized transfers.
+* Serialization takes priority over the [MINDATE](../../c_intro_userinterfaces/command_summary/parameter_intro/mindate)/[MINTIME](../../c_intro_userinterfaces/command_summary/parameter_intro/mintime) parameters.
+* A failed transfer blocks following transfers.
+* Deleting a transfer in the catalog triggers the next waiting transfer in the list.
 
 <span id="Using"></span>
 
@@ -82,8 +82,8 @@ CFTR12I END [for transfer C] Treated for USER <my user> <PART=PARIS IDF=BIN >
 
 In this example, serialized transfers between a Transfer CFT and a remote PeSIT application must be acknowledged in order to reach the DONE (X) phase.
 
-- The first transfer recorded in the catalog executes first, in this example transfer A.
-- The DONE (X) phase is reached once transfer A is acknowledged.
+* The first transfer recorded in the catalog executes first, in this example transfer A.
+* The DONE (X) phase is reached once transfer A is acknowledged.
 
 ```
 SEND PART=RS43, IDF=BIN, SERIAL=X, IDA=A, ACKSTATE=REQUIRE

@@ -5,17 +5,17 @@ weight: 340
 ---This topic describes the functions in an exit task and the parameters
 involved. It is comprised of the following sections:
 
-- [Initialization
+* [Initialization
     function](#Initialization_Function)
-- [User
+* [User
     function](#User_function_s_)
-- [Interface
+* [Interface
     files](#Interface_Files)
 
 A file exit task comprises the following two modules:
 
-- {{< TransferCFT/axwayvariablesComponentShortName >}} interface
-- User program
+* {{< TransferCFT/axwayvariablesComponentShortName >}} interface
+* User program
 
 The interface is written in C language. The main entry point of the
 EXIT task, the main function in C language, is located in the interface.
@@ -30,19 +30,19 @@ of link editing forms an EXIT task.
 
 You must define two types of functions in your programs:
 
-- An initialization
+* An initialization
     function: **exfini**
-- One or more functions
+* One or more functions
     that will be referred to as: **EXFxmp1**
 
 A file type EXIT task:
 
-- Calls the main
+* Calls the main
     entry point (interface code) on activating the task
-- Calls the initialization
+* Calls the initialization
     function **exfini** at the beginning of a transfer whose identifier
     (idf) is linked to the EXIT task
-- Calls the user
+* Calls the user
     function **EXFxmp1** whenever the user wants to take control
 
 <span id="Initialization_Function"></span>
@@ -57,8 +57,8 @@ function to be called if you want to take control at one stage at least.
 
 ****Restrictions****
 
-- You cannot change a user function during the transfer.
-- The initialization function cannot be written in COBOL since its main
+* You cannot change a user function during the transfer.
+* The initialization function cannot be written in COBOL since its main
     purpose is to indicate the address of a user function. You must use a
     language such as C language or Assembler.
 

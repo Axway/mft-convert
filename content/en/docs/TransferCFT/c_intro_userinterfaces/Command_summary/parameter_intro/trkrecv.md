@@ -16,12 +16,12 @@ value is not defined.
 
 Select one of the following options:
 
-- ****NO****
+* ****NO****
     (default value): the monitor never sends Tracked Instances to Sentinel.
-- ****ALL****:
+* ****ALL****:
     for each step of each transfer process, the monitor sends a Tracked Instance
     to Sentinel.
-- ****SUMMARY****:
+* ****SUMMARY****:
     for both the initial step and the final step of each transfer process,
     the monitor sends a Tracked Instance to Sentinel.
 

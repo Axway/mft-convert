@@ -8,8 +8,8 @@ weight: 150
 
 Once you install the product, the following subdirectories are available:
 
-- Bin: Contains the installation procedures. This directory is unique to Axway. This directory also contains trace files after installation.
-- Install: Contains the Transfer CFT product and the configuration file for silent installation.
+* Bin: Contains the installation procedures. This directory is unique to Axway. This directory also contains trace files after installation.
+* Install: Contains the Transfer CFT product and the configuration file for silent installation.
 
 
 | File Name  | Description  |
@@ -26,7 +26,7 @@ Once you install the product, the following subdirectories are available:
 >
 > The act of installing Transfer CFT creates a distribution environment that contains product binaries and templates. Do no store any personal files in this environment, or modify existing files in this environment, as they are erased during updates.
 
-- EULA.html: License agreement (html format)
-- EULA.txt: License agreement (text format)
-- setup.sh: Installation script for UNIX/Linux
-- setup.bat: Installation script for Windows
+* EULA.html: License agreement (html format)
+* EULA.txt: License agreement (text format)
+* setup.sh: Installation script for UNIX/Linux
+* setup.bat: Installation script for Windows

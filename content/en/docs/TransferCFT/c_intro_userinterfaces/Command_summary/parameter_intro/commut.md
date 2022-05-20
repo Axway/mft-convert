@@ -16,11 +16,11 @@ forward site, and indicates the type of switching supported for this partner.
 
 The following types are possible:
 
-- YES: Enables the "store and forward" switching.
-- SERVER: Indicates "VAN server switching".
-- NO: Switching
+* YES: Enables the "store and forward" switching.
+* SERVER: Indicates "VAN server switching".
+* NO: Switching
     is refused for this partner.
-- PART: The store
+* PART: The store
     and forward mode is forced in server mode if the recipient specified in
     the IPART parameter is not the final receiver.
 

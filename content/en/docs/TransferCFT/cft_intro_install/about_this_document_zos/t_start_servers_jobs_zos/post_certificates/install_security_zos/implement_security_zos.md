@@ -6,11 +6,11 @@ weight: 300
 
 This section describes how to customize and implement the Transfer CFT z/OS security by:
 
-- Creating Profiles for Transfer CFT Objects (H84SAFDF)
-- Authorizing Access to Transfer CFT Objects (H85SAFPR)
-- Creating the DEFAULT CFTAPPL (H88PARM)
-- Protecting Transfer CFT Files (H89SAFAS)
-- Authorizing Transfer CFT Users (H89SAFAU)
+* Creating Profiles for Transfer CFT Objects (H84SAFDF)
+* Authorizing Access to Transfer CFT Objects (H85SAFPR)
+* Creating the DEFAULT CFTAPPL (H88PARM)
+* Protecting Transfer CFT Files (H89SAFAS)
+* Authorizing Transfer CFT Users (H89SAFAU)
 
 ## Customize and implement Transfer CFT z/OS security
 
@@ -46,16 +46,16 @@ If required, update the CFTENV member:
 
 Use this job to provide a model for the commands to be executed to allow:
 
-- A user to update the Transfer CFT configuration (example: CFTSEND command)
+* A user to update the Transfer CFT configuration (example: CFTSEND command)
 
 <!-- -->
 
-- A user to submit transfer requests  (example: SEND command)
+* A user to submit transfer requests  (example: SEND command)
 
 <!-- -->
 
-- A transfer owner to send or receive a file (example: APPL object)
+* A transfer owner to send or receive a file (example: APPL object)
 
 <!-- -->
 
-- Users to be associated with a group so that they can be granted Transfer CFT file access rights
+* Users to be associated with a group so that they can be granted Transfer CFT file access rights

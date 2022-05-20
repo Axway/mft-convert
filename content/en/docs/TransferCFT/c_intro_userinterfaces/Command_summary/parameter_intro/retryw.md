@@ -12,9 +12,9 @@ weight: 2920
 
 The time interval (in minutes) between reconnection attempts.
 
-- ****1****
+* ****1****
     : default value
-- any other value
+* any other value
     from ****0**** to ****32767****
 
 When specifying multiple hosts in CFTTCP and PROTs/SAPs in CFTPART, Transfer CFT first retries the host and then the PROT/SAP.
@@ -33,13 +33,13 @@ CFTPART ... PROT = ( 'PROT1',
 
 The retry order is as follows:
 
-- IP1 SAP1 PROT1 (first host, first protocol)
-- IP1 SAP1 PROT1 (retry)
-- IP2 SAP1 PROT1 (second host, first protocol)
-- IP2 SAP1 PROT1 (retry)
-- IP1 SAP2 PROT2 (first host, second protocol)
-- IP1 SAP2 PROT2 (retry)
-- IP2 SAP2 PROT2 (second host, second protocol)
-- IP2 SAP2 PROT2 (retry)
+* IP1 SAP1 PROT1 (first host, first protocol)
+* IP1 SAP1 PROT1 (retry)
+* IP2 SAP1 PROT1 (second host, first protocol)
+* IP2 SAP1 PROT1 (retry)
+* IP1 SAP2 PROT2 (first host, second protocol)
+* IP1 SAP2 PROT2 (retry)
+* IP2 SAP2 PROT2 (second host, second protocol)
+* IP2 SAP2 PROT2 (retry)
 
 [Return to Command index](../../)

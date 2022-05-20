@@ -6,11 +6,11 @@ weight: 270
 
 To broadcast a file from a store and forward site:
 
-- The initial sender must define a virtual partner with an ID that corresponds to the CFTDEST ID command managed on the store and forward site. Set the CFTPART's OMINTIME and OMAXTIME to zero to force routing to the intermediate partner (IPART). The SEND PART=ID, ... command sends the file to broadcast.
-- You must have a CFTDEST command with the ID set to the network name of the broadcasting list indicated by the initial partner (SEND PART=ID).
-- You can use FOR=COMMUT as described in the [FOR](../../../c_intro_userinterfaces/command_summary/parameter_intro/for) parameter.
-- The final receivers know the initial file sender and the store and forward partner (relay).
-- The CFTPART connections must comply with network nodes.
+* The initial sender must define a virtual partner with an ID that corresponds to the CFTDEST ID command managed on the store and forward site. Set the CFTPART's OMINTIME and OMAXTIME to zero to force routing to the intermediate partner (IPART). The SEND PART=ID, ... command sends the file to broadcast.
+* You must have a CFTDEST command with the ID set to the network name of the broadcasting list indicated by the initial partner (SEND PART=ID).
+* You can use FOR=COMMUT as described in the [FOR](../../../c_intro_userinterfaces/command_summary/parameter_intro/for) parameter.
+* The final receivers know the initial file sender and the store and forward partner (relay).
+* The CFTPART connections must comply with network nodes.
 
 #### Processing performed
 
@@ -97,8 +97,8 @@ To acknowledge a store and forward file (or message) transfer, the final partner
 
 To acknowledge a broadcasting list, the following conditions are then required to route the acknowledgement to the initial partner:
 
-- The connections established between partners must be complied with at each of the network nodes (CFTPART ID =...),
-- At the store and forward node, all the catalog records corresponding to the previously performed broadcasting, are present,
-- At the store and forward node, all the catalog records corresponding to the previously performed broadcasting, indicate that the receiving partners have correctly received the file or message (SFT transfer state).
+* The connections established between partners must be complied with at each of the network nodes (CFTPART ID =...),
+* At the store and forward node, all the catalog records corresponding to the previously performed broadcasting, are present,
+* At the store and forward node, all the catalog records corresponding to the previously performed broadcasting, indicate that the receiving partners have correctly received the file or message (SFT transfer state).
 
 If these conditions are fulfilled, the initial sender of the file (or message) receives a single acknowledgement message. The message comes arbitrarily from one of the final partners (the last one to have sent a REPLY message).

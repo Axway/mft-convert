@@ -8,12 +8,12 @@ weight: 420
 
 Use the CFTRECV object to:
 
-- Find the name and
+* Find the name and
     local physical characteristics of the file to receive
-- List actions to
+* List actions to
     perform locally during and after the transfer (translation, compression,
     call to a user EXIT, an end-of-transfer procedure, etc.)
-- View authorized
+* View authorized
     time slot and default user associated with the transfers
 
 There is no limit on the number of CFTRECV objects that you can create.
@@ -21,9 +21,9 @@ There is no limit on the number of CFTRECV objects that you can create.
 ********Related
 topics********
 
-- Command syntax
+* Command syntax
     [CFTRECV](../../../command_summary#CFTRECV)
-- Object concepts
+* Object concepts
     Default receive templates
 
 <span id="About_the_ongoing_CFTSEND_object"></span>
@@ -32,14 +32,14 @@ topics********
 
 Use the CFTSEND object to specify:
 
-- The name and local
+* The name and local
     physical characteristics of the file to send
-- The network characteristics
+* The network characteristics
     of the file to send to the partner
-- The actions to
+* The actions to
     perform locally during and after a transfer (translation, compression,
     call to a user EXIT, an end-of-transfer procedure...)
-- An authorized time
+* An authorized time
     slot and default user associated with the transfers
 
 There is no limit to the number of CFTSEND objects that you can create.

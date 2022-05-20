@@ -6,11 +6,11 @@ weight: 210
 
 The following additional topics describe how to configure Transfer CFT to use Secure Relay for exchanges.
 
-- [Secure Relay in a standalone architecture](cft_sr_configuration)
-- [Secure Relay in a multi-node architecture](cft_sr_conf_multinode)
-- [Configuring SSL termination for exchanges](sr_ssl)
-- [UCONF parameters for Secure Relay](sr_parameters)
-- [Troubleshoot Secure Relay](sr_troubleshooting)
+* [Secure Relay in a standalone architecture](cft_sr_configuration)
+* [Secure Relay in a multi-node architecture](cft_sr_conf_multinode)
+* [Configuring SSL termination for exchanges](sr_ssl)
+* [UCONF parameters for Secure Relay](sr_parameters)
+* [Troubleshoot Secure Relay](sr_troubleshooting)
 
 > **Note**
 >
@@ -46,10 +46,10 @@ You can install {{< TransferCFT/axwayvariablesComponentLongName  >}} in an activ
 
 ## Prerequisites
 
-- The {{< TransferCFT/axwayvariablesComponentShortName >}} license key must include the Secure Relay option.
-- Ensure that you have Java JRE 8 installed (Java 1.8.0 u272 or higher).
-- Check that the Master Agent and Router Agent are using the same version of Java.
-- Prior to setting up Secure Relay to {{< TransferCFT/axwayvariablesComponentShortName >}} interoperability, you should already have installed Secure Relay 2.7.4. Refer to the Secure Relay documentation available at {{< TransferCFT/axwayvariablesCompanyName >}} Support at [https://support.axway.com](https://support.axway.com/) and on the Axway [documentation portal](https://docs.axway.com/).
+* The {{< TransferCFT/axwayvariablesComponentShortName >}} license key must include the Secure Relay option.
+* Ensure that you have Java JRE 8 installed (Java 1.8.0 u272 or higher).
+* Check that the Master Agent and Router Agent are using the same version of Java.
+* Prior to setting up Secure Relay to {{< TransferCFT/axwayvariablesComponentShortName >}} interoperability, you should already have installed Secure Relay 2.7.4. Refer to the Secure Relay documentation available at {{< TransferCFT/axwayvariablesCompanyName >}} Support at [https://support.axway.com](https://support.axway.com/) and on the Axway [documentation portal](https://docs.axway.com/).
 
 ## Certificates
 
@@ -61,7 +61,7 @@ Transfer CFT 3.6 and higher delivers an embedded Secure Relay MA 2.7.4. You mus
 
 ## Limitations
 
-- SecureRelay is not operational with the {{< TransferCFT/axwayvariablesComponentShortName >}} acceleration option.
-- Secure Relay only supports TLSV1COMP as the SSL version when using Router Agent SSL termination.
-- When using Secure Relay with Transfer CFT for SFTP exchanges, SSH termination is not supported.
-- Transfer CFT cannot perform exchanges using Router Agent SSL termination if the Secure Relay FIPS mode is enabled. However, you can perform end-to-end SSL exchanges with the FIPS mode enabled as described in [Configure exchanges that use SSL](sr_ssl) > *How to enable Secure Relay FIPS mode*.
+* SecureRelay is not operational with the {{< TransferCFT/axwayvariablesComponentShortName >}} acceleration option.
+* Secure Relay only supports TLSV1COMP as the SSL version when using Router Agent SSL termination.
+* When using Secure Relay with Transfer CFT for SFTP exchanges, SSH termination is not supported.
+* Transfer CFT cannot perform exchanges using Router Agent SSL termination if the Secure Relay FIPS mode is enabled. However, you can perform end-to-end SSL exchanges with the FIPS mode enabled as described in [Configure exchanges that use SSL](sr_ssl) > *How to enable Secure Relay FIPS mode*.

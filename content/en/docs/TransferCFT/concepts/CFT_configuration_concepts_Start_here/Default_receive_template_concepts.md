@@ -17,9 +17,9 @@ the default CFTRECV object](#About_the_default_CFTRECV_object)
 ****Related
 topics****
 
-- Command syntax
+* Command syntax
     [CFTRECV](../../../c_intro_userinterfaces/command_summary#CFTRECV)
-- Parameter list
+* Parameter list
     [CFTRECV](../../../c_intro_userinterfaces/web_copilot_ui/flow_def_intro/cftrecv)
 
 <span id="Receive_file_parameter_summary"></span>
@@ -30,48 +30,48 @@ This section lists the parameters and syntax that you use to create
 a receive file transfer using the command line interface. Certain
 parameters can be classified into categories:
 
-- identification
+* identification
     parameters
 
 <!-- -->
 
-- general: ID,
+* general: ID,
     USERID, GROUPID
-- specific to
+* specific to
     the PeSIT protocol (PeSIT D CFT profile or PeSIT E): RUSER, SUSER
 
 <!-- -->
 
-- protection of the
+* protection of the
     parameters set: FORCE
-- free parameters
+* free parameters
     set locally by the {{< TransferCFT/axwayvariablesComponentShortName >}} user: COMMENT, OPERMSG, DELETE, NOTIFY
-- execution control
+* execution control
     parameters:
 
 <!-- -->
 
-- general: PRI
-- user: EXEC,
+* general: PRI
+* user: EXEC,
     EXIT
-- cycle management:
+* cycle management:
     MINDATE, CYCTIME
 
 <!-- -->
 
-- data processing
+* data processing
     parameters: NCOMP, XLATE, FCODE
-- file parameters
+* file parameters
     (general):
 
 <!-- -->
 
-- file management:
+* file management:
     FACTION, FDISP
-- physical name:
+* physical name:
     FNAME, WFNAME  
     physical characteristics (global file): FSPACE, FORG, FTYPE
-- physical characteristics
+* physical characteristics
     (records) : FRECFM, FLRECL, FBLKSIZE, FKEYLEN, FKEYPOS
 
 *Use of parameters defining file characteristics:*
@@ -118,12 +118,12 @@ between the RECV file command and {{< TransferCFT/axwayvariablesComponentShortNa
 
 Use the Initial CFTRECV object to:
 
-- Give the default
+* Give the default
     name and local physical characteristics of the file to receive
-- Define the default
+* Define the default
     actions to perform locally during and after the transfer (translation,
     compression, call to a user EXIT, an end-of-transfer procedure...)
-- Authorize the default
+* Authorize the default
     time slot and default user associated with the transfers
 
 There is no limit on the number of CFTRECV objects that you can create
@@ -152,68 +152,68 @@ or last position.
 
 The CFTRECV command is used to specify, for each model file (IDF):
 
-- the name and the
+* the name and the
     physical characteristics (for example: format and record length) of the
     receiver file
-- the actions to
+* the actions to
     be performed locally such as:
 
 <!-- -->
 
-- call of a user-written
+* call of a user-written
     "file EXIT" task during the transfer
-- actions performed
+* actions performed
     by the monitor on the receiver file at the beginning of transfer
-- data translation
+* data translation
     during reception
-- call to a procedure
+* call to a procedure
     to be executed on completion of the transfer, and so on
 
 <!-- -->
 
-- miscellaneous parameters
+* miscellaneous parameters
     controlling the execution of transfers, such as:
 
 <!-- -->
 
-- authorized
+* authorized
     time slot
-- default user
+* default user
     identifier associated with transfers
 
 The receiver file name and physical characteristics parameters are taken
 into account at each new receive transfer, at the start of the transfer.
 If {{< TransferCFT/axwayvariablesComponentShortName  >}} is creating a new receiver file:
 
-- these parameters,
+* these parameters,
     if explicitly defined, take precedence over the values extracted (or deduced)
     from the protocol messages received
-- however, if the
+* however, if the
     receive transfer is initiated by a local RECV command, any explicitly
     defined parameters accompanying this command *take precedence over the
     parameters of the CFTRECV command* if the value of the FORCE parameter
     is FORCE = NO (for all the parameters common to both commands, CFTRECV
     only supplies the default values to RECV)
-- *they
+* *they
     are not taken into account* if defined in the CFTRECV command and if
     the value of the FORCE parameter is FORCE = YES
 
 The following precedence rule applies globally:
 
-- If FORCE = NO,
+* If FORCE = NO,
     the parameters of RECV take precedence over those of CFTRECV
-- If FORCE = YES,
+* If FORCE = YES,
     the parameters of CFTRECV take precedence over those of RECV  
     These parameters themselves take precedence over the protocol values
     received which themselves take precedence over any default file characteristics
     provided for within some systems, independently of the {{< TransferCFT/axwayvariablesComponentShortName >}} parameter
     setting.
-- Where an already
+* Where an already
     existing file is reused to receive the data of a new transfer, it is generally
     not possible to take new file characteristics into account: {{< TransferCFT/axwayvariablesComponentShortName >}}’s
     "standard" behavior then simply involves checking that the new
     values are compatible with the existing ones.
-- If data is stored
+* If data is stored
     in an already existing "envelope" (for example, when Transfer
     CFT adds a new member to an already existing partitioned file), this corresponds
     to an intermediate case between the two previous ones. New values may

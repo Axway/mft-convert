@@ -6,8 +6,8 @@ weight: 260
 
 When loading the profile, the files that are loaded depend on if you are using Batch or PowerShell:
 
-- profile.bat: only .bat files are loaded
-- profile.ps1: only .ps1 files are loaded
+* profile.bat: only .bat files are loaded
+* profile.ps1: only .ps1 files are loaded
 
 > **Note**
 >

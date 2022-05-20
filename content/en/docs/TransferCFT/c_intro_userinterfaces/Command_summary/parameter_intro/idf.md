@@ -34,9 +34,9 @@ Specify a list of up to 200 model file identifiers.
 The value associated with each of these ****idfs****
 can be:
 
-- an explicit file
+* an explicit file
     identifier
-- a mask
+* a mask
 
 <span id="idf_CFTETB"></span>
 
@@ -53,10 +53,10 @@ the card is suitable for all model files.
 *In requester mode*, the parameter
 card consists of either:
 
-- a
+* a
     CFTETB description, where the IDF equals the model file identifier of
     the transfer request, or
-- the
+* the
     description CFTETB IDF = ‘ ’ if the above description does not exist
 
 *In server mode*, the description CFTETB
@@ -99,16 +99,16 @@ on receiving an NIDF that is more than 8 characters long.
 
 This parameter can be used in:
 
-- server mode (sender
+* server mode (sender
     or receiver)
-- receiver requester
+* receiver requester
     following the activation of a RECV IDF=&lt;mask> command
 
 The value of this parameter may be:
 
-- explicit: the authorized
+* explicit: the authorized
     character string must then not be more than 8 characters long
-- obtained from one
+* obtained from one
     or more "substrings" of the symbolic variable &NIDF (corresponding
     to the NIDF received), the character string must not be more than 64 characters
     long. See the definition of a "substring" of a [symbolic variable](../../symbolic_variables).

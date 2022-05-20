@@ -12,8 +12,8 @@ A timer, which is set in the CFTPROT command RTO parameter, is triggered for eac
 
 240 RTO can have one of two causes:
 
-- Network issues (MTU, Maximum Transmission Unit, or congestion)
-- Abnormal termination or high CPU usage
+* Network issues (MTU, Maximum Transmission Unit, or congestion)
+* Abnormal termination or high CPU usage
 
 It is important to diagnose the root cause, as the solution may depend on the cause.
 
@@ -31,8 +31,8 @@ ping <remote address> -l 1472 -f
 
 Where:
 
-- -l: Sets the size in bytes (1500 - 28)
-- -f: Sets the *Do not fragment option*
+* -l: Sets the size in bytes (1500 - 28)
+* -f: Sets the *Do not fragment option*
 
 Reducing the RUSIZE can avoid this root cause. However this should be fixed by setting properly the network environment.
 
@@ -44,8 +44,8 @@ Therefore, if the transfer in 240 RTO status is restarted on a new session, the 
 
 The solution:
 
-- Set CNXINOUT=1 for this partner
-- Set SCHKW/RCHKW=1 to simulate a half duplex communication
+* Set CNXINOUT=1 for this partner
+* Set SCHKW/RCHKW=1 to simulate a half duplex communication
 
 ### Abnormal termination or hanging task
 
@@ -69,9 +69,9 @@ The solution may be a mix of system tuning and Transfer CFT configuration tuning
 
 Transfer CFT parameters that may increase CPU usage are:
 
-- MAXTRANS/MAXTASK (CFTPARM)
-- WAITTASK (CFTPARM): recommended value 1441 on all platforms and 5 on z/OS
-- WSCAN/UPDAT (CFTCAT)
-- WSCAN (CFTCOM)
-- Processing scripts (pre-processing, postprocessing scripts) overload
-- CFTCRON
+* MAXTRANS/MAXTASK (CFTPARM)
+* WAITTASK (CFTPARM): recommended value 1441 on all platforms and 5 on z/OS
+* WSCAN/UPDAT (CFTCAT)
+* WSCAN (CFTCOM)
+* Processing scripts (pre-processing, postprocessing scripts) overload
+* CFTCRON

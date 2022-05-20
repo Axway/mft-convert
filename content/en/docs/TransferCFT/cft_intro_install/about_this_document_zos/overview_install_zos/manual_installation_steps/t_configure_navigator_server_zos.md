@@ -16,4 +16,4 @@ The COPA020 JCL must be submitted in order to take into account the configuratio
 
 ****Related topics****
 
-- [Step 3. Customize the z/OS installation](../../zos_auto_install_a05all/t_customize_install_zos)
+* [Step 3. Customize the z/OS installation](../../zos_auto_install_a05all/t_customize_install_zos)

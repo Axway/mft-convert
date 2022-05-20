@@ -8,15 +8,15 @@ weight: 170
 
 ****{{< TransferCFT/axwayvariablesComponentLongName  >}} prerequisites****
 
-- An installed Transfer CFT version 3.6 or higher on a compatible platform.
-- Transfer CFT and Copilot services are stopped.
+* An installed Transfer CFT version 3.6 or higher on a compatible platform.
+* Transfer CFT and Copilot services are stopped.
 
 ****{{< TransferCFT/suitevariablesFlowManager  >}} **prerequisites******
 
-- The shared secret that the Flow Manager administrator generated. Refer to the [Flow Manager User Guide](https://docs.axway.com/bundle/FlowManager_20_allOS_en_HTML5/page/flow_manager_user_guide.html) for details.
-- If you are implementing a SaaS cloud Flow Manager, you additionally require:
-    -   A Flow Manager Agent capable of interconnecting Flow Manager and your {{< TransferCFT/axwayvariablesComponentLongName >}} instance. Refer to the [Flow Manager User Guide](https://docs.axway.com/bundle/FlowManager_20_allOS_en_HTML5/page/user_guide.html) for details.
-    -   Access to an on-demand Flow Manager SaaS environment.
+* The shared secret that the Flow Manager administrator generated. Refer to the [Flow Manager User Guide](https://docs.axway.com/bundle/FlowManager_20_allOS_en_HTML5/page/flow_manager_user_guide.html) for details.
+* If you are implementing a SaaS cloud Flow Manager, you additionally require:
+    *   A Flow Manager Agent capable of interconnecting Flow Manager and your {{< TransferCFT/axwayvariablesComponentLongName >}} instance. Refer to the [Flow Manager User Guide](https://docs.axway.com/bundle/FlowManager_20_allOS_en_HTML5/page/user_guide.html) for details.
+    *   Access to an on-demand Flow Manager SaaS environment.
 
 ## Automatically activate connectivity
 
@@ -34,8 +34,8 @@ All commands in this section are performed using CFTUTIL unless stated otherwise
 
 Set the parameters used to identify a Transfer CFT instance. Follow these guidelines, otherwise the registration will fail:
 
-- The length of the `cft.instance_id` value is limited to 24 characters.
-- The address set in `cft.full_hostname` must be reachable from {{< TransferCFT/suitevariablesFlowManager >}} or a Flow Manager Agent (for a SaaS deployment).
+* The length of the `cft.instance_id` value is limited to 24 characters.
+* The address set in `cft.full_hostname` must be reachable from {{< TransferCFT/suitevariablesFlowManager >}} or a Flow Manager Agent (for a SaaS deployment).
 
 ```
 uconfset id=cft.instance_id, value=<cft_id>

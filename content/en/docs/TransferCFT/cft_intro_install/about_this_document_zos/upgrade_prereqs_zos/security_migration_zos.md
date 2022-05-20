@@ -24,11 +24,11 @@ There was no profile for the resource/action SERVICE: CFTSRV, STARTUP so to ensu
 
 ## Limitations
 
-- Issue when creating transfers via the user interface when using resource APPL.\* as the former habilitation.
-- **Show my privileges** does not accurately display privileges.
-- You can no longer use the FNAME as a criteria to characterize the TRANSFER resource. This can result in regressions on SEND-type transfers. You may need to revise the PERMIT (RACF) definitions for the TRANSFER profile.
-- Some issues with MESSAGE resource being confused with the TRANSFER resource.
-- You must define a new GENERAL RESOURCE PROFILE UI to manage access to the Transfer CFT user interface, connecting authorized users or groups to this profile.
-- You must define a FILE GENERAL RESOURCE PROFILE used with the CREATE/DELETE parameter files with the CFTFILE command.
-- The same FILE resource in access (READ) allows to limit the access to the directories via the UI.
-- For the copilot.rootdirs definition, the asterisk '\*' character must be unique and in the last position.
+* Issue when creating transfers via the user interface when using resource APPL.\* as the former habilitation.
+* **Show my privileges** does not accurately display privileges.
+* You can no longer use the FNAME as a criteria to characterize the TRANSFER resource. This can result in regressions on SEND-type transfers. You may need to revise the PERMIT (RACF) definitions for the TRANSFER profile.
+* Some issues with MESSAGE resource being confused with the TRANSFER resource.
+* You must define a new GENERAL RESOURCE PROFILE UI to manage access to the Transfer CFT user interface, connecting authorized users or groups to this profile.
+* You must define a FILE GENERAL RESOURCE PROFILE used with the CREATE/DELETE parameter files with the CFTFILE command.
+* The same FILE resource in access (READ) allows to limit the access to the directories via the UI.
+* For the copilot.rootdirs definition, the asterisk '\*' character must be unique and in the last position.

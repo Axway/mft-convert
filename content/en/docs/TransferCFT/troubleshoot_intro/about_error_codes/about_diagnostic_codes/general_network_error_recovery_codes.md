@@ -9,9 +9,9 @@ One value can correspond to two causes, depending on whether the source
 of the error is at the local or remote end; "L" is indicated
 in case of ambiguity:
 
-- L=1:
+* L=1:
     local
-- L=0:
+* L=0:
     remote
 
 ![](/Images/TransferCFT/temp_network.png)

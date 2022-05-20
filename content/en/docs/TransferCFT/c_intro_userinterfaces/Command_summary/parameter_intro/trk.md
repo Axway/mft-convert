@@ -19,15 +19,15 @@ transfers in the form of tracked instances.
 
 The possible values of this parameter include:
 
-- NO: The
+* NO: The
     monitor never sends tracked instances to Sentinel
-- ALL:
+* ALL:
     For each step of each transfer process, the monitor sends a tracked instance
     to Sentinel
-- SUMMARY:
+* SUMMARY:
     For both the initial step and the final step of each transfer process,
     the monitor sends a tracked instance to Sentinel
-- UNDEFINED: The
+* UNDEFINED: The
     tracking options are defined in the TRK parameter of the CFTPART command
 
 <span id="trk_CFTPART"></span>
@@ -41,15 +41,15 @@ Specification of how much detail {{< TransferCFT/axwayvariablesComponentShortNam
 with a partner. {{< TransferCFT/axwayvariablesComponentShortName  >}} sends detail about the transfers in the form of tracked
 instances. The possible values of this parameter include:
 
-- NO: The monitor
+* NO: The monitor
     never sends tracked instances to Sentinel
-- ALL: For each
+* ALL: For each
     step of each transfer process, the monitor sends a tracked instance to
     Sentinel
-- SUMMARY: For both
+* SUMMARY: For both
     the initial step and the final step of each transfer process, the monitor
     sends a tracked instance to Sentinel
-- UNDEFINED: The
+* UNDEFINED: The
     tracking options are defined in the TRK parameter of the CFTPART command
 
 [Return to Command index](../../)

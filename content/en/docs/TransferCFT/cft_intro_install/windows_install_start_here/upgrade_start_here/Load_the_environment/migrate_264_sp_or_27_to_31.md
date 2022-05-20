@@ -51,11 +51,11 @@ You can migrate the PARM, PART, IDF, other static configuration objects and UCON
 
 1. Create a new PKI internal datafile using the command PKIUTIL PKIFILE. Replace &lt;pki_database_filename> with the OS appropriate value:
 
-- UNIX: `$CFTPKU`
+* UNIX: `$CFTPKU`
 
 <!-- -->
 
-- Windows: The absolute path value for the CFTPKU environment variable:  
+* Windows: The absolute path value for the CFTPKU environment variable:  
     `PKIUTIL PKIFILE fname=<pki_database_filename>, mode='CREATE’`
 
 1. Import your PKI certificates into the new Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion >}} using the command PKIUTIL. Replace the &lt;script_filename> with the new script file path:  
@@ -90,11 +90,11 @@ Windows: `PKIUTIL #pki-extract.conf`
 
 1. Import the catalog using the command CFTMI. Replace the &lt;catalog_filename_new_installation> with the corresponding environment variable:
 
-- UNIX: _CFTCATA
+* UNIX: _CFTCATA
 
 <!-- -->
 
-- Windows: $CFTCATA
+* Windows: $CFTCATA
 
 ****Example****
 
@@ -121,11 +121,11 @@ CFTMI MIGR type=CAT, direct=TOCAT, ifname=catalog_output.xml, ofname=<catalog_fi
 
 1. Import the communication media file using command CFTMI. Replace the `<com_filename_new_installation>` with the corresponding environment variable:
 
-- UNIX: `_CFTCOM`
+* UNIX: `_CFTCOM`
 
 <!-- -->
 
-- Windows: `$CFTCOM`
+* Windows: `$CFTCOM`
 
 ****Example****
 

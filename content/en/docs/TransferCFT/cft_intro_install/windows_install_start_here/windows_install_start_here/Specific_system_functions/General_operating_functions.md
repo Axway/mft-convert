@@ -4,7 +4,7 @@ linkTitle: "General operating functions"
 weight: 240
 ----   [Logical
     file names](#Logical_file_names)
-- [Using
+* [Using
     a definition file](#Using%20a%20definition%20file)
 
 <span id="Logical_file_names"></span>
@@ -15,9 +15,9 @@ Transfer CFT can use logical file names in order to designate the physical
 files and, if necessary, to state the characteristics of these files.
 There are two methods of doing this:
 
-- Using the operating
+* Using the operating
     system environment
-- Using a file to
+* Using a file to
     describe the logical names
 
 Users can choose one or other of these two methods. For the same Transfer
@@ -34,11 +34,11 @@ Transfer CFT.
 If not, one of the following three operations needs to be performed
 before operating Transfer CFT:
 
-- The CONFIG command
+* The CONFIG command
     of CFTUTIL
-- Sufficient screen
+* Sufficient screen
     parameter setting in the Copilot interface
-- Transfer CFT API
+* Transfer CFT API
     COM command
 
 ## Logical working files

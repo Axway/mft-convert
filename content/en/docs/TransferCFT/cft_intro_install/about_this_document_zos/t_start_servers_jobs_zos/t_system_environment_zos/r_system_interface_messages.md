@@ -4,11 +4,11 @@ linkTitle: "System interface messages"
 weight: 270
 ---The Transfer CFT system interfaces generate z/OS operator messages that display on the system console, and appear when:
 
-- A severe error is detected by a system function
+* A severe error is detected by a system function
 
 <!-- -->
 
-- Or the corresponding SGTRACE trace is active
+* Or the corresponding SGTRACE trace is active
 
 > **Note**
 >
@@ -18,19 +18,19 @@ weight: 270
 
 The messages have the following format:
 
-- 4 letters corresponding to the system interface
+* 4 letters corresponding to the system interface
 
 <!-- -->
 
-- 2 digits to number the messages
+* 2 digits to number the messages
 
 <!-- -->
 
-- 1 classification letter
+* 1 classification letter
 
 <!-- -->
 
-- The message text
+* The message text
 
 ****Transfer CFT z/OS system interface messages****
 

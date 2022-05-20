@@ -11,39 +11,39 @@ When sending files:
 Free parameters
 for the {{< TransferCFT/axwayvariablesComponentShortName  >}} user, such as adding comments to the transfer:
 
-- Sent to the
+* Sent to the
     receiver
-- Local parameters
+* Local parameters
 
 Execution control
 parameters, such as specify the scheduling time for a transfer:
 
-- General
-- User
-- Schedule management
+* General
+* User
+* Schedule management
 
 <!-- -->
 
-- Data processing
+* Data processing
     parameters
 
 Parameters associated
 with the file sent, for example the file name:
 
-- File management
-- Physical name
-- Physical characteristics
+* File management
+* Physical name
+* Physical characteristics
     (whole file)
-- Physical characteristics
+* Physical characteristics
     (records)
 
 File parameters
 for the partner, for example the remote file name:
 
-- Physical name
-- Physical characteristics
+* Physical name
+* Physical characteristics
     (whole file)
-- Physical characteristics
+* Physical characteristics
     (records)
 
 ## Sending messages

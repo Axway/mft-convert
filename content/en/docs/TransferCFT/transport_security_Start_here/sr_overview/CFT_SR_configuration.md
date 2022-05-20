@@ -6,20 +6,20 @@ weight: 230
 
 Step overview:
 
-- Install 1 or more Secure Relay Router Agents
-- Configure Secure Relay
-- Enable Secure Relay and configure Java
-- Configure additional Transfer CFT objects
-    -   Network object CFTNET
-    -   Protocol object CFTPROT
-    -   Partner object CFTPART and CFTTCP
+* Install 1 or more Secure Relay Router Agents
+* Configure Secure Relay
+* Enable Secure Relay and configure Java
+* Configure additional Transfer CFT objects
+    *   Network object CFTNET
+    *   Protocol object CFTPROT
+    *   Partner object CFTPART and CFTTCP
 
 ## Secure Relay Router Agent installation
 
 Follow the installation instructions provided in the [Secure Relay RA Installation Guide](https://docs.axway.com/bundle/SecureRelay_271_InstallationGuide_allOS_en_PDF/resource/SecureRelayRA_InstallationGuide_allOS_en_PDF.pdf). During installation, it is essential that you configure the Router Agent CA and user certificate as follows to enable secure communication between the Master Agent and Router Agent:
 
-- `<CACertificate>CA_for_RA.der</CACertificate>`
-- `<UserCertificate>USER_for_RA.p12</UserCertificate>`
+* `<CACertificate>CA_for_RA.der</CACertificate>`
+* `<UserCertificate>USER_for_RA.p12</UserCertificate>`
 
 You need these values when you configure the Master Agent in the {{< TransferCFT/axwayvariablesComponentLongName  >}} configuration, where the user certificate that you use must be signed by `CA_for_RA`. You should use the same CA and USER certificate as for the Master Agent.
 
@@ -59,9 +59,9 @@ secure_relay.ra.1.outcall_network_interface =
 
 Configure the following UCONF parameters to enable the Master Agent communication with the Router Agent:
 
-- `secure_relay.ma.ca_cert_fname = <must be the same as the CA_for_RA.der value>`
-- `secure_relay.ma.cert_fname = <must be a P12 user certificate that is signed by the CA_for_RA.der>`
-- `secure_relay.ma.cert_password = <user certificate password>`
+* `secure_relay.ma.ca_cert_fname = <must be the same as the CA_for_RA.der value>`
+* `secure_relay.ma.cert_fname = <must be a P12 user certificate that is signed by the CA_for_RA.der>`
+* `secure_relay.ma.cert_password = <user certificate password>`
 
 ## Enable Secure Relay and configure the Java
 
@@ -81,11 +81,11 @@ In {{< TransferCFT/axwayvariablesComponentLongName  >}} from the CFTUTIL prompt
 ### Createa CFTNET object
 
 1. Create a CFTNET object where:
-    -   TYPE= TCP
-    -   protocol value = SR
+    *   TYPE= TCP
+    *   protocol value = SR
 1. Define the mandatory parameters RECALLHOST and SSLTERM.
-    -   RECALLHOST: The host address on which the Master Agent calls Transfer CFT when Secure Relay receives an incoming call. If Transfer CFT and the Master Agent run of the same host, use the loopback network interface (for example, 127.0.0.1) instead of the public network interface. When using Secure Relay, the HOST parameter designates the network interface that is used on the Router Agent side.
-    -   SSLTERM: Set this Boolean to YES to enable SSL termination.
+    *   RECALLHOST: The host address on which the Master Agent calls Transfer CFT when Secure Relay receives an incoming call. If Transfer CFT and the Master Agent run of the same host, use the loopback network interface (for example, 127.0.0.1) instead of the public network interface. When using Secure Relay, the HOST parameter designates the network interface that is used on the Router Agent side.
+    *   SSLTERM: Set this Boolean to YES to enable SSL termination.
 1. If there is existing CFTNET object(s), the class parameter must be different.
 
 ****Example****
@@ -104,8 +104,8 @@ RECALLHOST = 127.0.0.1, /\*network_interface_used_by_Transfer_CFT\*/
 
 This section describes the CFTPROT object, and how various parameters are related to enabling secure data transmission using Secure Relay.
 
-- CFTPROT is related to the CFTNET object through the NET parameter.
-- The SAP parameter is the listening port that is used on the RA side (using the CFTNET HOST parameter as the network interface).
+* CFTPROT is related to the CFTNET object through the NET parameter.
+* The SAP parameter is the listening port that is used on the RA side (using the CFTNET HOST parameter as the network interface).
 
 ****Example****
 

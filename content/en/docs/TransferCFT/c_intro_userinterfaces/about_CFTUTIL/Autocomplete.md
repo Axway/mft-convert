@@ -4,9 +4,9 @@ linkTitle: "How to use autocomplete"
 weight: 160
 ---{{< TransferCFT/suitevariablesTransferCFTName  >}} offers several commands and options that enable you to work more quickly and efficiently. The following sections describe:
 
-- [Using autocompletion](#Using)
-- [Using the `check `command](#Using2)
-- [Using the previous/next shortcut](#Previous)
+* [Using autocompletion](#Using)
+* [Using the `check `command](#Using2)
+* [Using the previous/next shortcut](#Previous)
 
 <span id="Using"></span>
 
@@ -16,9 +16,9 @@ weight: 160
 
 To simplify the use of Transfer CFT commands, you can use the bash autocompletion feature when working in interactive mode. Bash autocompletion is valid for `CFTUTIL`, `PKIUTIL`, and the `cft` commands. This feature intuitively provides commands and available parameters along with a brief description. Additionally, for certain parameters Bash autocompletion proposes a list of possible parameter values, either static or dynamic, depending on the parameter.
 
-- [Keyboard shortcuts](#Special)
-    -   [Use the Bash autocompletion keys](#Auto-com)
-    -   [UCONF parameter specifics](#UCONF%C2%A0pa)
+* [Keyboard shortcuts](#Special)
+    *   [Use the Bash autocompletion keys](#Auto-com)
+    *   [UCONF parameter specifics](#UCONF%C2%A0pa)
 
 > **Note**
 >
@@ -59,17 +59,17 @@ You can use the **Tab** and **Shift + Tab** keys to display and scroll through a
 
 ![](/Images/TransferCFT/Auto_completion_in_CFTUTIL.png)
 
-- Press **Tab** again to display the next available command, RECV. The command list displays commands in order of importance and typical usage. Continue to press **Tab** until the command that you want displays. To reverse the order, use **Shift** + **Tab**.
+* Press **Tab** again to display the next available command, RECV. The command list displays commands in order of importance and typical usage. Continue to press **Tab** until the command that you want displays. To reverse the order, use **Shift** + **Tab**.
 
 ![](/Images/TransferCFT/Auto_completion_in_CFTUTIL_1.png)
 
-- Once you have selected a command press **Space** to validate the selection.
-- Next, press **Tab** to display the first parameter for that command. Use the same method as for the command - **Tab**, **Shift** + **Tab** , or the initial characters.
-- If the parameter description is prefaced by an asterisk (\*), the parameter is mandatory. After selecting the parameter, type the equal sign (=) to continue.
+* Once you have selected a command press **Space** to validate the selection.
+* Next, press **Tab** to display the first parameter for that command. Use the same method as for the command - **Tab**, **Shift** + **Tab** , or the initial characters.
+* If the parameter description is prefaced by an asterisk (\*), the parameter is mandatory. After selecting the parameter, type the equal sign (=) to continue.
 
 ![](/Images/TransferCFT/Auto_completion_in_CFTUTIL_2.png)
 
-- Once you have selected a parameter value type a comma (,) to valid your choice and go to the next parameter. If there are no additional parameters, press Enter to execute the command.
+* Once you have selected a parameter value type a comma (,) to valid your choice and go to the next parameter. If there are no additional parameters, press Enter to execute the command.
 
 ![](/Images/TransferCFT/Auto_completion_in_CFTUTIL_3.png)
 
@@ -79,8 +79,8 @@ You can use the **Tab** and **Shift + Tab** keys to display and scroll through a
 
 To display UCONF parameters, from `ID=` the autocomplete works by completing categories until the period (.) separator is reached.
 
-- For example, cft.multi_node.cftcom.dispatcher_policy is comprised of 4 categories (cft, multi_node, cftcom, and dispatcher_policy).
-- Once the ID is complete, a space is appended to the parameter name to indicate the end of the parameter.
+* For example, cft.multi_node.cftcom.dispatcher_policy is comprised of 4 categories (cft, multi_node, cftcom, and dispatcher_policy).
+* Once the ID is complete, a space is appended to the parameter name to indicate the end of the parameter.
 
 ![](/Images/TransferCFT/Auto_completion_in_CFTUTIL_4.png)
 
@@ -98,28 +98,28 @@ CHECK CONTENT=<u>BRIEF</u>&#124;FULL, FOUT=FileName
 
 The `CHECK CONTENT=BRIEF` (default) command verifies that:
 
-- All the referenced objects exist
-- Each CFTPART has an associated CFTTCP
-- There is at least one CFTPARM
-- The used certificates have not expired
+* All the referenced objects exist
+* Each CFTPART has an associated CFTTCP
+* There is at least one CFTPARM
+* The used certificates have not expired
 
 Any encountered errors are displayed in the console, and we highly recommend that you fix them before starting Transfer CFT.
 
 The `CHECK CONTENT=FULL, FOUT=FileName` command also checks that:
 
-- All objects are used
-- No CRONTAB is empty
-- Each CFTPROT is used by at least one CFTPART
-- There is just one CFTPARM
+* All objects are used
+* No CRONTAB is empty
+* Each CFTPROT is used by at least one CFTPART
+* There is just one CFTPARM
 
 Where:
 
-- The FOUT option sends the `check `results to a file instead of displaying in the console.
+* The FOUT option sends the `check `results to a file instead of displaying in the console.
 
 You can use the `check`command with `cftinit `and `cftupdate `using the following syntax:
 
-- `cftinit -check file`
-- `cftupdate -check file`
+* `cftinit -check file`
+* `cftupdate -check file`
 
 Here, the `-check` option is equivalent to running `CFTUTIL CHECK `at the end of a successful cftinit or cftupdate .
 

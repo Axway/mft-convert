@@ -76,9 +76,9 @@ The EREGEX examples describe how to create multiple exclusions using the `INCLU
 
 In this example, the following files are not sent from the specified folder – that is, the following files are excluded:
 
-- out\*.ffs_lock
-- out\*.jbase_header
-- out\*.ffs_db
+* out\*.ffs_lock
+* out\*.jbase_header
+* out\*.ffs_db
 
 ```
 CFTFOLDER ID = 'E',
@@ -123,8 +123,8 @@ EXCLUDEFILTER='(^ca$&#124;^cb$)'
 
 Create a filter that includes all .jpg files that are:
 
-- A word (at least one other word character)
-- Followed by four-digit number
+* A word (at least one other word character)
+* Followed by four-digit number
 
 For example, the following filter would include IMGP0122.jpg.
 

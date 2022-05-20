@@ -5,8 +5,8 @@ weight: 140
 ---The configuration auditing feature enables Transfer CFT to track configuration changes and send this information to the Sentinel
 server. The configuration change can be:
 
-- Deleting, modifying, or creating a CFTxxx object (PART, or PART database)
-- Creating or deleting
+* Deleting, modifying, or creating a CFTxxx object (PART, or PART database)
+* Creating or deleting
     a CFTFILE object (PARM, PART, CAT, LOG…)
 
 > **Note**
@@ -36,9 +36,9 @@ value=yes
 Message Track is an XML XFBLog message
 containing:
 
-- Ident attribute
-- Return message attribute
-- Sentinel.xfb.audit
+* Ident attribute
+* Return message attribute
+* Sentinel.xfb.audit
 
 ****Example****
 
@@ -91,5 +91,5 @@ CFTUTIL uconfset id=sentinel.xfb.log, value=' '
 
 ****Related topics****
 
-- UCONF: [unified configuration](../../../admin_intro/uconf)
-- [XFBTransfer]()
+* UCONF: [unified configuration](../../../admin_intro/uconf)
+* [XFBTransfer]()

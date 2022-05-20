@@ -5,10 +5,10 @@ weight: 300
 ---This topic describes how to delete records which have exceeded the retention
 time in the catalog. Transfer CFT provides the following purge options:
 
-- [Startup configuration purge](#Startup)
-- [Periodic purge](#Periodic)
-- [Dynamic catalog purge](#Dynamic)
-- [Compatibility](#Compatib)
+* [Startup configuration purge](#Startup)
+* [Periodic purge](#Periodic)
+* [Dynamic catalog purge](#Dynamic)
+* [Compatibility](#Compatib)
 
 ********Syntax********
 
@@ -25,9 +25,9 @@ time in the catalog. Transfer CFT provides the following purge options:
 
 You can configure a catalog purge to occur on Transfer CFT start up. The following [unified configuration](../../uconf/uconf_parameters) options are available:
 
-- Purge before starting transfers uconf
-- Start purging when Transfer CFT is running in the background
-- Disable purge at startup
+* Purge before starting transfers uconf
+* Start purging when Transfer CFT is running in the background
+* Disable purge at startup
 
 <span id="Periodic"></span>
 
@@ -73,7 +73,7 @@ CFTUTIL uconfset id=cft.purge.periodicity,value=120M
 
 To define a periodic purge every 30 minutes, where transfers in Hold are kept for two days, configure as follows.
 
-- To keep X and T states transfers for 30 minutes:
+* To keep X and T states transfers for 30 minutes:
 
 ```
 CFTUTIL uconfset id=cft.purge.rx,value=30M
@@ -82,20 +82,20 @@ CFTUTIL uconfset id=cft.purge.rt,value=30M
 CFTUTIL uconfset id=cft.purge.st,value=30M
 ```
 
-- To keep H state transfers for 2 days:
+* To keep H state transfers for 2 days:
 
 ```
 CFTUTIL uconfset id=cft.purge.rh,value=2D
 CFTUTIL uconfset id=cft.purge.sh,value=2D
 ```
 
-- To schedule a periodic purge every 30 minutes:
+* To schedule a periodic purge every 30 minutes:
 
 ```
 CFTUTIL uconfset id=cft.purge.periodicity,value=30M
 ```
 
-- To apply the dynamic configuration parameters change:
+* To apply the dynamic configuration parameters change:
 
 ```
 CFTUTIL reconfig type=UCONF
@@ -108,18 +108,18 @@ You can use the [unified configuration](../../uconf/uconf_parameters) parameters
 
 For each of the following, enter an integer value for the amount of time. If you enter the default value of -1, the CFTCAT configuration value is used.
 
-- cft.purge.rx = requester state X
-- cft.purge.sx = server state X
-- cft.purge.rt = requester sate T
-- cft.purge.st = server state T
-- cft.purge.rh = requester sate H
-- cft.purge.sh = server state H
+* cft.purge.rx = requester state X
+* cft.purge.sx = server state X
+* cft.purge.rt = requester sate T
+* cft.purge.st = server state T
+* cft.purge.rh = requester sate H
+* cft.purge.sh = server state H
 
 Where the state is:
 
-- H: Hold
-- T: Terminated
-- X: Executed
+* H: Hold
+* T: Terminated
+* X: Executed
 
 <span id="Compatib"></span>
 
@@ -127,8 +127,8 @@ Where the state is:
 
 The parameters listed above have a different meaning according to their value, either:
 
-- Setting the parameter value to -1 indicates that the value is ignored, and the CFTCAT setting is used.
-- Setting the parameter value to a lone integer, or an integer followed by the letter “D” specifies an amount of time in days. Setting the value to an integer followed by the letter “H” or “M” specifies an amount of time in hours or minutes. In each case, the value is converted to the corresponding amount of minutes, and the purge is calculated to within a minute.
+* Setting the parameter value to -1 indicates that the value is ignored, and the CFTCAT setting is used.
+* Setting the parameter value to a lone integer, or an integer followed by the letter “D” specifies an amount of time in days. Setting the value to an integer followed by the letter “H” or “M” specifies an amount of time in hours or minutes. In each case, the value is converted to the corresponding amount of minutes, and the purge is calculated to within a minute.
 
 ****Example****
 

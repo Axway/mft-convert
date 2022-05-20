@@ -8,9 +8,9 @@ operations using the CFTDEST object.
 ****Related
 topics****
 
-- Command syntax
+* Command syntax
     [CFTDEST](../../../command_summary#CFTDEST)
-- Object concepts
+* Object concepts
     [Defining
     broadcasting lists]()
 

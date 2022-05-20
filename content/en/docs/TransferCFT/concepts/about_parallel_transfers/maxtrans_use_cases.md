@@ -4,9 +4,9 @@ linkTitle: "Client and server recommendations"
 weight: 230
 ---This section provides recommendations and examples based on:
 
-- [Client mode outgoing transfers](#Client)
-- [Server mode incoming transfers](#Server)
-- [Impact on scheduling (reschedule a transfer)](#Impact)
+* [Client mode outgoing transfers](#Client)
+* [Server mode incoming transfers](#Server)
+* [Impact on scheduling (reschedule a transfer)](#Impact)
 
 <span id="Client"></span>
 
@@ -55,9 +55,9 @@ You may want to use a high DISCTD to keep the session active when you have a lot
 
 Determine the typical daily peak number of incoming and outgoing transfers in parallel, where we assume that most transfers in client mode are outgoing.
 
-- If the value is less than 999 (the MAXTRANS max value), for example 600, then set the MAXTRANS and MAXCNX to the value you determined as the peak; the same value for each (you would set the value to 600).
-- If the value is between 999 and 2000, for example 1200, then you should set MAXTRANS to 999 and MAXCNX to 1200.
-- If the value exceeds 2000, for example 3000, set MAXTRANS to 999 and MAXCNX to 2000.
+* If the value is less than 999 (the MAXTRANS max value), for example 600, then set the MAXTRANS and MAXCNX to the value you determined as the peak; the same value for each (you would set the value to 600).
+* If the value is between 999 and 2000, for example 1200, then you should set MAXTRANS to 999 and MAXCNX to 1200.
+* If the value exceeds 2000, for example 3000, set MAXTRANS to 999 and MAXCNX to 2000.
 
 <span id="Server"></span>
 
@@ -77,9 +77,9 @@ When you have a lot of different partners, in general you may want to set DISCTS
 
 In a situation where all sessions are active, and no additional sessions are available:
 
-- All additional incoming connection are rejected
-- A new connection can be established when at least one transfer completes and the session has closed
-- In this particular scenario where all sessions are active, setting DISTCS to a high value negatively impacts performance due to the effect on latency
+* All additional incoming connection are rejected
+* A new connection can be established when at least one transfer completes and the session has closed
+* In this particular scenario where all sessions are active, setting DISTCS to a high value negatively impacts performance due to the effect on latency
 
 > **Note**
 >
@@ -96,9 +96,9 @@ For each small transfer the time to establish a session may be equivalent to the
 
 Determine the typical daily peak incoming and outgoing rate where we assume that most connections are incoming connections.
 
-- If the value is less than 999, for example 500, (the MAXTRANS max value) then set the MAXTRANS and MAXCNX to the value you determined as the peak (in this case 500).
-- If the value is between 999 and 2000, for example 1200, then you should set MAXTRANS to 999 and MAXCNX to 999.
-- If the value exceeds 2000, for example. 3000, set MAXTRANS to 999 and MAXCNX to 999.
+* If the value is less than 999, for example 500, (the MAXTRANS max value) then set the MAXTRANS and MAXCNX to the value you determined as the peak (in this case 500).
+* If the value is between 999 and 2000, for example 1200, then you should set MAXTRANS to 999 and MAXCNX to 999.
+* If the value exceeds 2000, for example. 3000, set MAXTRANS to 999 and MAXCNX to 999.
 
 <span id="Impact"></span>
 
@@ -159,5 +159,5 @@ In most setups we recommend that you modify the CNXOUT default setting. Keeping 
 
 ****Related topics****
 
-- [About parallel transfers](../)
-- [FAQ and troubleshooting](../faq)
+* [About parallel transfers](../)
+* [FAQ and troubleshooting](../faq)

@@ -49,9 +49,9 @@ The child transfers A0000003 through n are completed, and A0000002 now is in the
 
 The following rules apply to the above generic/child phase processing:
 
-- If a generic transfer is waiting for a child, its phasestep is Hold if no child in the current phase is in error, otherwise it is Keep.
-- If a generic transfer needs to run a preprocessing script, it does this prior to generating its children.
-- If a generic transfer needs to run a post-processing script, it waits for every child to finish their script first.
-- If a generic transfer needs to run a acknowledgement script, it waits for every child to finish their script first.
+* If a generic transfer is waiting for a child, its phasestep is Hold if no child in the current phase is in error, otherwise it is Keep.
+* If a generic transfer needs to run a preprocessing script, it does this prior to generating its children.
+* If a generic transfer needs to run a post-processing script, it waits for every child to finish their script first.
+* If a generic transfer needs to run a acknowledgement script, it waits for every child to finish their script first.
 
 You can set the policies defining which transfer executes the script using the execution parameters described in [Processing execution policy](../../about_transfer_processing/processing_exec_policy).

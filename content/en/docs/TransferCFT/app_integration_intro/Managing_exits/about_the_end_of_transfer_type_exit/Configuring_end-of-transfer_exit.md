@@ -6,13 +6,13 @@ weight: 370
 type exit. Before you submit this EXIT, you must customize the following
 {{< TransferCFT/axwayvariablesComponentShortName  >}} objects:
 
-- [Defining
+* [Defining
     the CFTEXIT object](#Defining_the_CFTEXIT_object): to describe the EXIT environment and how this
     EXIT is activated
 
 <!-- -->
 
-- [Defining
+* [Defining
     the CFTPARM object](#Defining_the_CFTPARM_object): to indicate the CFTEXIT object identifier
 
 Each CFTEXIT object corresponds to an EXIT task. The number of EXIT

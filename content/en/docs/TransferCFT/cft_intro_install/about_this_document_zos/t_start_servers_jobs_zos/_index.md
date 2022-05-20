@@ -4,8 +4,8 @@ linkTitle: "Post-installation"
 weight: 170
 ---This section presents JCL examples that you can use to create the JOBs necessary to run Transfer CFT. All of the JCLs are located in the **target.INSTALL** library.
 
-- [Starting Transfer CFT JOB CFTMAIN](#Starting%20the%20CFTMAIN%20example)
-- [Transfer CFT user interface server commands](#Transfer%20CFT%20user%20interface%20server)
+* [Starting Transfer CFT JOB CFTMAIN](#Starting%20the%20CFTMAIN%20example)
+* [Transfer CFT user interface server commands](#Transfer%20CFT%20user%20interface%20server)
 
 > **Note**
 >

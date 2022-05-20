@@ -6,7 +6,7 @@ weight: 370
 command to define a network access resource. The available CFTNET network
 is:
 
-- [TCI/IP](#Defining_TCP_IP__command_line_)
+* [TCI/IP](#Defining_TCP_IP__command_line_)
 
 The example below is not an actual Transfer CFT command. It lists the
 parameters which are common to all the network access methods.
@@ -17,9 +17,9 @@ resources topics.
 ****Related
 topics****
 
-- Command syntax
+* Command syntax
     [CFTNET](../../../command_summary#CFTNET)
-- Object concepts
+* Object concepts
     [Network resources
     concepts](../../../../admin_intro/admin_config_commands/network_resource_concepts)
 
@@ -98,9 +98,9 @@ Access to a telecommunications network via another network, remote access,
  is defined
 by a:
 
-- CFTNET object describing
+* CFTNET object describing
     access to the first network via a local resource
-- CFTNET object describing
+* CFTNET object describing
     access to the second network via a remote resource - in this case, a proxy
 
 The CFTNET object parameters vary, depending on whether the resource

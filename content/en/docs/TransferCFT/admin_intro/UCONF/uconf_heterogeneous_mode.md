@@ -21,6 +21,6 @@ To force heterogeneous mode:
 
 ****Related topics****
 
-- [Sending a group of files](../../../concepts/send_command/send_group_of_files_cl)
-- Environmental variables
-- [File management functions (Windows)](../../../cft_intro_install/windows_install_start_here/windows_install_start_here/specific_system_functions/file_management_functions)
+* [Sending a group of files](../../../concepts/send_command/send_group_of_files_cl)
+* Environmental variables
+* [File management functions (Windows)](../../../cft_intro_install/windows_install_start_here/windows_install_start_here/specific_system_functions/file_management_functions)

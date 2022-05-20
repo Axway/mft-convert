@@ -154,12 +154,12 @@ Migrate PARM, PART, IDF, other static configuration objects and UCONF parameters
 
 1. Load former Transfer CFT 3.0.1 or 3.1.2 environment.
 1. Export all communication media files (cftcom and cftcomXX, where XX is the node number with range from 00 to &lt;number of nodes - 1>) using the command CFTMI. For each communication media file.
-    -   Enter: `CFTMI MIGR type=COM, direct=FROMCOM, ifname=<com_filename_for_node_manager_on_former_cft>, ofname=com_output.xml`
-    -   For each node, enter: `CFTMI MIGR type=COM, direct=FROMCOM, ifname=<com_filename_for_node_<node>_on_former_cft>, ofname=com_output_<node>.xml`
+    *   Enter: `CFTMI MIGR type=COM, direct=FROMCOM, ifname=<com_filename_for_node_manager_on_former_cft>, ofname=com_output.xml`
+    *   For each node, enter: `CFTMI MIGR type=COM, direct=FROMCOM, ifname=<com_filename_for_node_<node>_on_former_cft>, ofname=com_output_<node>.xml`
 1. Load Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion >}} environment.
 1. Import all communication media files using command CFTMI for each of them. Use the same node number on both &lt;node> on command.
-    -   Enter: `CFTMI MIGR type=COM, direct=TOCOM, ifname=com_ouput.xml, ofname=<com_filename_for_node_manager_on_new_cft> `
-    -   For each node, enter: `CFTMI MIGR type=COM, direct=TOCOM, ifname=com_ouput_<node>.xml, ofname=<com_filename_for_node_<node>_on_new_cft> `
+    *   Enter: `CFTMI MIGR type=COM, direct=TOCOM, ifname=com_ouput.xml, ofname=<com_filename_for_node_manager_on_new_cft> `
+    *   For each node, enter: `CFTMI MIGR type=COM, direct=TOCOM, ifname=com_ouput_<node>.xml, ofname=<com_filename_for_node_<node>_on_new_cft> `
 
 ## Single-node to multi-node architecture migration
 

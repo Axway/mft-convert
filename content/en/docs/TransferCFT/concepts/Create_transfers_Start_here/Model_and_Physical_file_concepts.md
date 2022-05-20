@@ -10,13 +10,13 @@ Physical Files.
 For each transfer, the Transfer
 CFT can operate in one of four modes:
 
-- In
+* In
     requester mode: it is then the initiator of the transfer
 
 In PeSIT protocol, the initiator of a network connection
 keeps the requester role, for the transfer(s) performed over this connection.
 
-- In
+* In
     server mode: it accepts transfer requests
 
 In PeSIT protocol, it is also the acceptor of the incoming
@@ -25,26 +25,26 @@ connection.
 A Transfer
 CFT can perform four roles:
 
-- Sender requester
-- Receiver requester
-- Sender server
-- Receiver server
+* Sender requester
+* Receiver requester
+* Sender server
+* Receiver server
 
 According to the protocol used, two transfer modes can be managed:
 
-- Transfers between
+* Transfers between
     a sender/requester monitor and a receiver/server monitor: sender/requester
     transfer or write transfer, for all protocols
-- Transfers between
+* Transfers between
     a receiver/requester monitor and a sender/server monitor: receiver/requester
     transfer or read transfer
 
 This second mode can only be used in the following protocols:
 
-- PeSIT D EXTERN
+* PeSIT D EXTERN
     profile
-- PeSIT D CFT profile
-- PeSIT E
+* PeSIT D CFT profile
+* PeSIT E
 
 Each of these modes applied to a file transfer is represented in the
 following figure.
@@ -94,7 +94,7 @@ send transmission is activated by a SEND transfer command.
 
 The following commands are associated with this command:
 
-- A CFTSEND parameter
+* A CFTSEND parameter
     setting command with an identifier equal to the IDF defined in the SEND
     transfer command
 
@@ -104,7 +104,7 @@ take priority over those defined in the SEND command (FORCE parameter
 In this case, a message informs the user that his command has been partially
 taken into account.
 
-- Or, if no CFTSEND
+* Or, if no CFTSEND
     command has been defined, the CFTSEND ID=&lt;*default*&gt; command,
     where &lt;*default*&gt; is the default value defined in the DEFAULT
     parameter of CFTPARM
@@ -147,10 +147,10 @@ The environment for implementing a read transfer is as follows :
 reception is activated by a RECV transfer command. The following commands
 are associated with this command:
 
-- A CFTRECV parameter
+* A CFTRECV parameter
     setting command with an identifier equal to the model file identifier
     defined in RECV (IDF)
-- If no CFTRECV command
+* If no CFTRECV command
     has been defined, the command CFTRECV ID = &lt;*default*&gt;, where
     &lt;*default*&gt; is the default value defined in the DEFAULT parameter
     of CFTPARM
@@ -163,7 +163,7 @@ in *Partner*).
 characteristics associated with this request may be managed in two ways,
 according to operating constraints:
 
-- Either using a
+* Either using a
     locked-for-sending command previously saved in the server catalog
 
 This mode is activated by the transfer command SEND STATE=HOLD, the
@@ -172,10 +172,10 @@ of the corresponding catalog entry).
 
 The following are associated with this command in local mode:
 
-- A CFTSEND parameter
+* A CFTSEND parameter
     setting command with an identifier equal to the model file identifier
     defined in SEND (IDF)
-- Or, if no CFTSEND
+* Or, if no CFTSEND
     command has been defined, the CFTSEND ID = &lt;*default*&gt; command,
     where &lt;*default*&gt; is the default value defined in the DEFAULT
     parameter of CFTPARM
@@ -183,7 +183,7 @@ The following are associated with this command in local mode:
 This transmission relates to the partner (REQUESTER) indicated in the
 PART parameter (see *Parameter setting example* in *Partner*).
 
-- Or using an "implicit
+* Or using an "implicit
     send" defined by a parameter setting command CFTSEND IMPL = YES
 
 This implicit mode is used to send in server mode any authorized file
@@ -193,9 +193,9 @@ The default setting of a CFTSEND command is explicit (IMPL = NO).
 
 On receiving a transfer request, the monitor:
 
-- First selects the
+* First selects the
     locked for sending commands (if any)
-- And then the implicit
+* And then the implicit
     send commands
 
 The following figures summarize the mechanisms
@@ -274,12 +274,12 @@ at the server end.
 To facilitate the use of the facility, the monitor provides the possibility
 of:
 
-- Receiving all the
+* Receiving all the
     files with the same IDF in locked for sending mode at the server level
     with ONE command at the receiver/requester end
-- Sending several
+* Sending several
     files with the same IDF with ONE command
-- Listing a remote
+* Listing a remote
     directory
 
 #### Receiving a Set of Files with the Same IDF in Receiver/Requester Mode
@@ -335,10 +335,10 @@ used are described in the *Sending of a group of files topic*.
 To list a remote directory, a receiver/requester transfer must be implemented
 with the following definitions:
 
-- On the server side,
+* On the server side,
     open mode send  
     (CFTSEND IMPL = YES, FNAME = &NFNAME)
-- On the receiver
+* On the receiver
     side, physical location, NFNAME parameter in the RECV command, by entering
     the name of a remote directory (*dirname*) or a generic name, or
     mask, using wildcard characters (*mask*)  
@@ -363,7 +363,7 @@ associated with the text file type on your system.
 {{< TransferCFT/axwayvariablesComponentShortName  >}} provides the possibility of activating the following
 at the requester end:
 
-- The reception of
+* The reception of
     a physical file identified by a *generic IDF* partially defined using
     a character string and a wildcard character at the end of this string
 
@@ -373,10 +373,10 @@ at the requester end:
 > this manual it is generically designated by the character ‘\*’. Such an
 > IDF value is called a mask and is referred to as &lt;mask>.
 
-- *Selective
+* *Selective
     receptions* of several physical files associated with generic IDFs
     identified using a mask
-- *Global
+* *Global
     receptions* of IDFs of value not specified by the requester. This possibility
     is the generalization of a partially specified IDF. The value used for
     this IDF is, for all the systems, the character ‘\*’ (the character indicated
@@ -434,10 +434,10 @@ An example of this mechanism is displayed in the figure. In this example,
 the names of the files received are defined using the following symbolic
 variables:
 
-- &IDT which
+* &IDT which
     is used to recover the identifier associated with the transfer in process
     for a given partner
-- &IDF which
+* &IDF which
     is used to recover the IDF sent by the server during a transfer
 
 **Example of selective reception using a

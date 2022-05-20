@@ -11,12 +11,12 @@ coding volume.
 
 The transfer services functions:
 
-- Check the validity
+* Check the validity
     of the command name
-- Analyze the syntax
+* Analyze the syntax
     of the command parameters, if the function using the syntax analyzer is
     used
-- Place the command
+* Place the command
     in the {{< TransferCFT/axwayvariablesComponentShortName >}} communication medium
 
 The processing performed by {{< TransferCFT/axwayvariablesComponentShortName  >}} is totally asynchronous.

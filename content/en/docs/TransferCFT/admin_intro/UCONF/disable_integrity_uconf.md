@@ -10,10 +10,10 @@ Integrity control is activated by default `(-`[](../../../c_intro_userinterfaces
 
 Unix syntax:
 
-- `cftruntime <cft-install-dir> <cft-runtime-dir> [-profile&#124;-n <name> --uconf --mac=no`
-- `cftruntime <cft-install-dir> <cft-runtime-dir> [-profile&#124;-n <name> --inst --mac=no`
+* `cftruntime <cft-install-dir> <cft-runtime-dir> [-profile&#124;-n <name> --uconf --mac=no`
+* `cftruntime <cft-install-dir> <cft-runtime-dir> [-profile&#124;-n <name> --inst --mac=no`
 
 Windows syntax:
 
-- `cftruntime <cft-install-dir> <cft-runtime-dir> [-profile&#124;-n <name> -uconf -mac=no`
-- `cftruntime <cft-install-dir> <cft-runtime-dir> [-profile&#124;-n <name> -inst -mac=no`
+* `cftruntime <cft-install-dir> <cft-runtime-dir> [-profile&#124;-n <name> -uconf -mac=no`
+* `cftruntime <cft-install-dir> <cft-runtime-dir> [-profile&#124;-n <name> -inst -mac=no`

@@ -4,9 +4,9 @@ linkTitle: "Stage After a synchronization point"
 weight: 430
 ---The value of the synchronization point designates:
 
-- For the sender, the position of
+* For the sender, the position of
     the last record read in the file
-- For the receiver, the position of the next record to be written
+* For the receiver, the position of the next record to be written
 
 For the receiver, a file type
 EXIT (DIRECT = R) with file accessing managed by the user, the

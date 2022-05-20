@@ -21,20 +21,20 @@ E CFT/CFT****
 The identifier of the application sending the. Depending on the protocol
 profile, it is:
 
-- an
+* an
     eight-character string for PeSIT D CFT, PeSIT E, PeSIT SIT
-- a 48-character
+* a 48-character
     string for PeSIT E CFT/CFT
 
 This parameter value is case sensitive in CFTUTIL commands if you enclose the value in " " quotes.
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} does not check:
 
-- The relevance as
+* The relevance as
     regards the protocol to be used for the transfer. If the protocol used
     is PeSIT D Extern profile, or ODETTE,
     this parameter is not sent.
-- The maximum size
+* The maximum size
     permitted by the protocol. Only a check relative to the maximum size of
     48 characters is performed.
 

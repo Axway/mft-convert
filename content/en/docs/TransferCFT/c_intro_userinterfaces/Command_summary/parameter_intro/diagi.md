@@ -12,8 +12,8 @@ weight: 670
 
 Internal diagnostic code. Use the following values to define the diagi catalog transfer field display:
 
-- DIAGI=0: select transfers that have a DIAGI=0
-- DIAGI=ERROR: select transfers that have a DIAGI other than 0
-- DIAGI=\*: select all transfers (default value)
+* DIAGI=0: select transfers that have a DIAGI=0
+* DIAGI=ERROR: select transfers that have a DIAGI other than 0
+* DIAGI=\*: select all transfers (default value)
 
 [Return to Command index](../../)

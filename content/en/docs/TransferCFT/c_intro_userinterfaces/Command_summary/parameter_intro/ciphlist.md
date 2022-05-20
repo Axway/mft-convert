@@ -14,9 +14,9 @@ List of the algorithms supported.
 
 Each value defines three algorithms:
 
-- Authentication algorithm
-- Encryption algorithm
-- Sealing algorithm
+* Authentication algorithm
+* Encryption algorithm
+* Sealing algorithm
 
 ****Server****
 

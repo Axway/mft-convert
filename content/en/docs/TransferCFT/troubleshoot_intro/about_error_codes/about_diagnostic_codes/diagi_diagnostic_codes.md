@@ -24,32 +24,32 @@ The Event column explains the
 possible cause of the transfer error. Brief information on the type of error which caused
 the transfer failure:
 
-- SYS: System error
-- NET: Error detected
+* SYS: System error
+* NET: Error detected
     by the network layers ({{< TransferCFT/axwayvariablesComponentShortName >}} layers, manufacturer or network layers)
-- PROT: Fault
+* PROT: Fault
     detected by the file transfer protocol
-- FILE: Transferred
+* FILE: Transferred
     file access error returned by the operating system
-- DATA: Error
+* DATA: Error
     accessing {{< TransferCFT/axwayvariablesComponentShortName >}} basic data: parameter, partners, catalog, communication,
     log, statistics and secondary indirection files (lists of partners, files,
     and so on)
-- PARAM: Transfer
+* PARAM: Transfer
     execution error following a parameter setting error
-- AUTH: Transfer
+* AUTH: Transfer
     denied following an authorization check by {{< TransferCFT/axwayvariablesComponentShortName >}}
-- OVER: The
+* OVER: The
     transfer cannot be executed because the monitor's resources are saturated
     or a parameter setting limit has been exceeded
-- OUT: The transfer
+* OUT: The transfer
     request is aborted after the maximum number of retries
-- USER: The
+* USER: The
     transfer is interrupted following an action by the operator
 
 <!-- -->
 
-- SSL: Incident
+* SSL: Incident
     detected by the secured protocol SSL 
 
 <span id="Behavior_column_in_diagnostic_codes"></span>
@@ -60,9 +60,9 @@ The **Consequence** column provides
 information on the {{< TransferCFT/axwayvariablesComponentShortName  >}} behavior following a transfer failure.
 The resulting status of the transfer D, H or K:
 
-- D: the transfer
+* D: the transfer
     can still be executed using the RESTART, NEXT, RETRY or COMMUT mechanisms
-- H or K: the transfer
+* H or K: the transfer
     is aborted, the error procedure
 
 ****Further transfer attempts****
@@ -70,23 +70,23 @@ The resulting status of the transfer D, H or K:
 For the D status, the following are possible to execute
 the transaction:
 
-- RESTART: the transfer
+* RESTART: the transfer
     has been interrupted. The monitor waits for a period fixed by the WSCAN
     parameter (CFTCAT command) before trying to restart the transfer with
     the same access data. It increments the restart counter for the protocol,
     the counter limit being determined by the RESTART parameter (CFTPROT command).
-- NEXT: the transfer
+* NEXT: the transfer
     has been interrupted. The monitor waits for a period fixed by the WSCAN
     parameter (CFTCAT command) before trying to restart the transfer with
     the same access data. It does not increment the restart counter. There
     is therefore no limit to the number of retries following this error.
-- RETRY: the transfer
+* RETRY: the transfer
     has been interrupted. Transfer CFT waits for a period fixed by the RETRY\*
     parameters before trying to restart the transfer, without changing the
     partner access data (same protocol, same network address. It increments
     the retry counter specific to the partner access data, the counter limit
     being determined by the RETRYM parameter (CFTnetwork command).
-- COMMUT (switching):
+* COMMUT (switching):
     the transfer has been interrupted. The monitor waits for a period fixed
     by the WSCAN parameter (CFTCAT command) before trying to restart the transfer.
     It ignores the transfer access data and tries a "switching"
@@ -104,11 +104,11 @@ the transaction:
 
 In the case of an H or K status the transfer is aborted, the error procedure can be executed:
 
-- ABORT: the transfer
+* ABORT: the transfer
     is aborted
-- Execution
+* Execution
     of the error procedure if the transfer switches to the K or H status:
-    -   EXECE: the procedure is executed. This is the procedure
+    *   EXECE: the procedure is executed. This is the procedure
         defined by CFTPARM EXEC\*E parameters. If these parameters are not set,
         the procedure is not executed.
 

@@ -18,15 +18,15 @@ Click to access the [Transfer CFT API Swagger](http://apidocs.axway.com/swagger
 
 You can perform the following operations using REST API:
 
-- Create transfers using an HTTP POST request.
-    -   The PART and IDF parameters are mandatory.
-    -   Other optional parameters can be given.
-- Modify existing transfers using HTTP PUT request.
-    -   The IDTU is mandatory.
-- View transfer catalog records using HTTP GET request.
-    -   You can retrieve a single transfer using the IDTU field.
-    -   You can also retrieve a list of transfers in a set and a limit of the number of transfers.
-- Delete a transfer using HTTP DELETE request, to remove a transfer based on its IDTU.
+* Create transfers using an HTTP POST request.
+    *   The PART and IDF parameters are mandatory.
+    *   Other optional parameters can be given.
+* Modify existing transfers using HTTP PUT request.
+    *   The IDTU is mandatory.
+* View transfer catalog records using HTTP GET request.
+    *   You can retrieve a single transfer using the IDTU field.
+    *   You can also retrieve a list of transfers in a set and a limit of the number of transfers.
+* Delete a transfer using HTTP DELETE request, to remove a transfer based on its IDTU.
 
 ## REST API operation examples
 
@@ -69,10 +69,10 @@ curl -k -H "Content-Type: application/json" -H "Authorization: Bearer eyJhbGnMQd
 
 When set to:
 
-- -1: The timeout is infinite for the request.
-- 0: No timeout is set for the request. The result is sent ASAP.
-- Any other value: This value is used as a maximum retry timeout for the request.
-- If this parameter is not set, the `copilot.restapi.com.retry_timeout` UCONF parameter is used.
+* -1: The timeout is infinite for the request.
+* 0: No timeout is set for the request. The result is sent ASAP.
+* Any other value: This value is used as a maximum retry timeout for the request.
+* If this parameter is not set, the `copilot.restapi.com.retry_timeout` UCONF parameter is used.
 
 ### PUT updates a transfer identified by its IDTU
 

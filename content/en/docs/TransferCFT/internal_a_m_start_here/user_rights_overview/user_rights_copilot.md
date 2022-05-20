@@ -31,11 +31,11 @@ When set to YES, user authentication is controlled by the system where Transfer 
 
 When createprocessasuser is set to YES, you must perform the OS specific tasks as described in the appropriate Installation Guide.
 
-- Refer to the {{< TransferCFT/suitevariablesTransferCFTName >}} {{< TransferCFT/axwayvariablesComponentVersion >}} *Installation Guide Unix> Unix operations > Using system users* for detailed instructions.
-- Refer to the {{< TransferCFT/suitevariablesTransferCFTName >}}{{< TransferCFT/axwayvariablesComponentVersion >}} *Installation Guide Windows > Windows operations > Using system users* for detailed instructions.
+* Refer to the {{< TransferCFT/suitevariablesTransferCFTName >}} {{< TransferCFT/axwayvariablesComponentVersion >}} *Installation Guide Unix> Unix operations > Using system users* for detailed instructions.
+* Refer to the {{< TransferCFT/suitevariablesTransferCFTName >}}{{< TransferCFT/axwayvariablesComponentVersion >}} *Installation Guide Windows > Windows operations > Using system users* for detailed instructions.
 
 ****Related topics****
 
-- [About system users](../)
-- [User rights use case scenarios](../user_rights_security_scenarios)
-- [Recommendations and troubleshooting](../user_rights_tips)
+* [About system users](../)
+* [User rights use case scenarios](../user_rights_security_scenarios)
+* [Recommendations and troubleshooting](../user_rights_tips)

@@ -8,20 +8,20 @@ a transfer. There are two ways to generate a translation table, either using the
 ****Related
 topics****
 
-- Command syntax
+* Command syntax
     [CFTXLATE](../../../command_summary#CFTXLATE)
-- Object concepts
+* Object concepts
     [Conversion
     tables](../../../../concepts/transfer_command_overview/using_transcoding/translation_table_concepts)
 
 Use this object to define translation tables between 2
 alphabets for:
 
-- Transfer
+* Transfer
     direction
-- File
+* File
     data code type (FCODE: ASCII or EBCDIC)
-- Data
+* Data
     network code type (NCODE: ASCII or EBCDIC)
 
 

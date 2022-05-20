@@ -50,12 +50,12 @@ Use the following CFTFOLDER parameters to configure folder monitoring for each 
 >
 > \*You cannot use the following characters in the SCANDIR or WORKDIR definition. Additionally you cannot use a comma (,) in the CFTFOLDER SCANDIR or WORKDIR definition.
 
-- {{< TransferCFT/PrimaryForunix >}} /
-- For {{< TransferCFT/PrimaryforWindows >}} \\ / : \* ? " &lt; > &#124;
+* {{< TransferCFT/PrimaryForunix >}} /
+* For {{< TransferCFT/PrimaryforWindows >}} \\ / : \* ? " &lt; > &#124;
 
 ****Related topics****
 
-- [Introduction to folder monitoring](../../../../app_integration_intro/intro_folder_monitor)
-- [Deprecated folder monitoring (UCONF)](../../../../app_integration_intro/intro_folder_monitor/folder_monitor_uconf)
-- [Migrate to CFTFOLDER folder monitoring](../../../../app_integration_intro/intro_folder_monitor/migrate_uconf_cftfolder)
-- [Create inclusion and exclusion filters](../../../../app_integration_intro/intro_folder_monitor/folder_customize)
+* [Introduction to folder monitoring](../../../../app_integration_intro/intro_folder_monitor)
+* [Deprecated folder monitoring (UCONF)](../../../../app_integration_intro/intro_folder_monitor/folder_monitor_uconf)
+* [Migrate to CFTFOLDER folder monitoring](../../../../app_integration_intro/intro_folder_monitor/migrate_uconf_cftfolder)
+* [Create inclusion and exclusion filters](../../../../app_integration_intro/intro_folder_monitor/folder_customize)

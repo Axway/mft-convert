@@ -13,11 +13,11 @@ V &#124; U}]****
 
 Output record format:
 
-- F:
+* F:
     fixed
-- V:
+* V:
     variable
-- U:
+* U:
     undefined
 
 The possible values for each system are indicated in the corresponding

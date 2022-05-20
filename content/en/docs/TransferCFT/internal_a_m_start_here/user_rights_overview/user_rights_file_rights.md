@@ -12,12 +12,12 @@ Before setting user rights, you must define special rights for the account on wh
 
 The following conventions apply to the table below describing permissions to act on files:
 
-- Transfer CFT user: This is the account that started Transfer CFT.
+* Transfer CFT user: This is the account that started Transfer CFT.
 
-- USERID, and optionally GROUPID : This is the account that owns the transfer.
+* USERID, and optionally GROUPID : This is the account that owns the transfer.
 
-    -   Requester mode (SEND, RECV commands) is the account that executes the command.
-    -   Server mode (Send and Receive templates) represents the value specified in USERID parameter.
+    *   Requester mode (SEND, RECV commands) is the account that executes the command.
+    *   Server mode (Send and Receive templates) represents the value specified in USERID parameter.
 
     > **Note**
     >
@@ -42,13 +42,13 @@ When you set USERCTRL to YES, the Transfer CFT server can access transferred fil
 
 Use the following OS-specific information to customize users.
 
-- [UNIX tasks](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_unix_en_PDF/resource/TransferCFT_InstallationGuide_unix_en.pdf) - Regardless of the USERCTRL setting, if cft.server.exec_as_user is set to YES you must perform the tasks described in the UNIX *Using system users (USERCTRL)* section.
-- [Windows tasks](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_windows_en_PDF/resource/TransferCFT_InstallationGuide_windows_en.pdf)
-- [z/OS tasks](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_mvs_en_PDF/resource/TransferCFT_InstallationGuide_mvs_en.pdf) - APF allows an installation to identify system or user programs that can use sensitive system functions. If the system does not have APF (Authorized Program Facility), the USERCTRL has no effect on the file actions. All file actions are done by the account that started Transfer CFT. To enable user control for file actions you require APF.
+* [UNIX tasks](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_unix_en_PDF/resource/TransferCFT_InstallationGuide_unix_en.pdf) - Regardless of the USERCTRL setting, if cft.server.exec_as_user is set to YES you must perform the tasks described in the UNIX *Using system users (USERCTRL)* section.
+* [Windows tasks](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_windows_en_PDF/resource/TransferCFT_InstallationGuide_windows_en.pdf)
+* [z/OS tasks](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_mvs_en_PDF/resource/TransferCFT_InstallationGuide_mvs_en.pdf) - APF allows an installation to identify system or user programs that can use sensitive system functions. If the system does not have APF (Authorized Program Facility), the USERCTRL has no effect on the file actions. All file actions are done by the account that started Transfer CFT. To enable user control for file actions you require APF.
 
 <!-- -->
 
-- IBM i - There are no specific tasks to enable system users on an IBM i platform.
+* IBM i - There are no specific tasks to enable system users on an IBM i platform.
 
 <span id="Set2"></span>
 
@@ -71,6 +71,6 @@ To enable this feature:
 
 ****Related topics****
 
-- [About system users](../)
-- [User rights use case scenarios](../user_rights_security_scenarios)
-- [Recommendations and troubleshooting](../user_rights_tips)
+* [About system users](../)
+* [User rights use case scenarios](../user_rights_security_scenarios)
+* [Recommendations and troubleshooting](../user_rights_tips)

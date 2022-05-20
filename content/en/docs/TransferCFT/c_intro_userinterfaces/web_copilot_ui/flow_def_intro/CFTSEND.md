@@ -8,9 +8,9 @@ template. Use this command to SEND a file or files to a partner.
 ****Related
 topics****
 
-- Command syntax
+* Command syntax
     [CFTSEND](../../../command_summary#CFTSEND)
-- Object concepts
+* Object concepts
     [Default
     send templates](../../../../concepts/cft_configuration_concepts_start_here/default_send_template_concepts)
 
@@ -122,13 +122,13 @@ FNAME = ’JSTATI’     /\* called ... \*/
 
 Only used if:
 
-- The value of the
+* The value of the
     transfer IDF is SNDIMPL
-- Transfer CFT responds
+* Transfer CFT responds
     to a send request from the partner, where Transfer CFT is the sender server
-- There is no SEND
+* There is no SEND
     request for this IDF pending in the catalog
-- An implicit send
+* An implicit send
     mechanism is involved where IMPL = YES
 
 ### Default description of the model file

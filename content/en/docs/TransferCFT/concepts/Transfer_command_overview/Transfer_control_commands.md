@@ -6,15 +6,15 @@ weight: 160
 to more information on these commands. The transfer control commands can
 be used to:
 
-- Interrupt a transfer
+* Interrupt a transfer
     in process
-- Activate or reactivate
+* Activate or reactivate
     a suspended or held transfer
-- Delete a transfer
+* Delete a transfer
     request
-- Submit, or resubmit,
+* Submit, or resubmit,
     an end-of-transfer procedure where the transfer in the T state
-- Declare that the
+* Declare that the
     processing following a transfer is completed
 
 The following table describes the commands associated with these actions.

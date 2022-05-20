@@ -18,8 +18,8 @@ messages are also written in the log file. This is a subset of the {{< TransferC
 defined by the algebraic sum of the values indicated in the following
 table, where:
 
-- Operating: Includes all messages related to transfers and CRON jobs.
-- System: Includes all internal messages, such as Transfer CFT start, stop, catalog, tasks, multi-node, and so on.
+* Operating: Includes all messages related to transfers and CRON jobs.
+* System: Includes all internal messages, such as Transfer CFT start, stop, catalog, tasks, multi-node, and so on.
 
 
 | Value  | Message category  | Type  |

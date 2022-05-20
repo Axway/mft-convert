@@ -47,11 +47,11 @@ PART=="PARIS" && ID=="IDFDEF"
 
 Comparison operators include:
 
-- == : equals
-- != : not equal
-- ~= : matches (use \* and ? for jokers)
-- /= : not matching (use \* and ? for jokers)
-- &lt; : inferior to
-- &gt; : superior to
-- &lt;= : inferior or equal to
-- &gt;= :superior or equal to
+* == : equals
+* != : not equal
+* ~= : matches (use \* and ? for jokers)
+* /= : not matching (use \* and ? for jokers)
+* &lt; : inferior to
+* &gt; : superior to
+* &lt;= : inferior or equal to
+* &gt;= :superior or equal to

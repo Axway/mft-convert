@@ -58,9 +58,9 @@ standardized PI codes and Transfer CFT defined values.
 
 In this table:
 
-- T: defined by Transfer
+* T: defined by Transfer
     CFT during transfer
-- (/): not used by
+* (/): not used by
     Transfer CFT
-- (-): PI not supported
+* (-): PI not supported
     by this version of the protocol

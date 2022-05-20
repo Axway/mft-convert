@@ -15,11 +15,11 @@ weight: 760
 The new syntax is listed here. For continued compatibility, you can still use
 the 2.4.x syntax.
 
--  
+*  
     dnuser=’ (“string1“ Op “string2“)’  
     Where the remote certificate DN must contain string1 Op string2, and Op
     is a OR/OU binary operator or AND/ET binary operator
--  dnuser=’ ( “string1“ Op ! “string2“)’   
+*  dnuser=’ ( “string1“ Op ! “string2“)’   
     Where the remote certificate DN must contain string1 Op NOT(string2), and
     Op is a  OR/OU binary operator or AND/ET binary operator.
 

@@ -12,13 +12,13 @@ The **Decision rules** section explains which characters indicate that it is a T
 
 A batch procedure can contain a reference to Transfer CFT variables. The character used to indicate a variable is:
 
-- &
-    -   OSS script
-    -   Example: &FNAME
-- ^
-    -   The same character as in the previous Tandem version
-    -   TACL procedure
-    -   Example: ^FNAME
+* &
+    *   OSS script
+    *   Example: &FNAME
+* ^
+    *   The same character as in the previous Tandem version
+    *   TACL procedure
+    *   Example: ^FNAME
 
 Refer to *Transfer CFT User Guide* for a complete list of Transfer CFT variables.
 
@@ -28,39 +28,39 @@ Refer to *Transfer CFT User Guide* for a complete list of Transfer CFT variable
 
 If the first line of the skeleton procedure begins with one of the following characters, it is a TACL procedure.
 
-- ==
-- ?
-- #FRAME
-- #PUSH
+* ==
+* ?
+* #FRAME
+* #PUSH
 
 The characters following the initial " == " either set certain information for the TACL procedure or determine if the procedure is sent to the NetBatch interface for processing.
 
-- == CFT^BT^FORCE^TACL ==
-    -   A direct TACL procedure execution
-    -   This execution type performed by default
-    -   This parameter is kept to ensure compatibility with existing batch procedures
-- <span id="CFT^BT^FORCE^ZBAT"></span>== CFT^BT^FORCE^ZBAT ==
-    -   Use NetBatch Interface
-    -   To specify a given environment, you can declare it in the first line of the actual procedure. Add the following optional values in the first line of the skeleton procedure, in the order listed. If no values are declared, the [UCONF](#UCONF) default values are used.
+* == CFT^BT^FORCE^TACL ==
+    *   A direct TACL procedure execution
+    *   This execution type performed by default
+    *   This parameter is kept to ensure compatibility with existing batch procedures
+* <span id="CFT^BT^FORCE^ZBAT"></span>== CFT^BT^FORCE^ZBAT ==
+    *   Use NetBatch Interface
+    *   To specify a given environment, you can declare it in the first line of the actual procedure. Add the following optional values in the first line of the skeleton procedure, in the order listed. If no values are declared, the [UCONF](#UCONF) default values are used.
         -   NetBatch process
         -   Job name
         -   Attachment-set
-    -   For each field add a delimiter such as a colon (:), comma (,), or equal sign (=) followed by the parameter's value
+    *   For each field add a delimiter such as a colon (:), comma (,), or equal sign (=) followed by the parameter's value
 
 **Example**
 
 ` == CFT^BT^FORCE^ZBAT : $ZBA1 , JOBNAME , SETNAME ==`
 
-- NetBatch Process = $ZBA1
-- Job name = JOBNAME
-- Attachment Set = SETNAME
+* NetBatch Process = $ZBA1
+* Job name = JOBNAME
+* Attachment Set = SETNAME
 
 ### Processing
 
 1. Regardless of if the procedure is OSS or native, {{< TransferCFT/axwayvariablesComponentLongName >}} creates a temporary file with the following locations and naming conventions:
 
-- OSS: The same as on {{< TransferCFT/axwayvariablesComponentLongName >}} Unix: /tmp/CFTxxxx  
-- Native: On the {{< TransferCFT/axwayvariablesComponentLongName >}} default [subvolume](#subvolumeUD): CTMPnnnn
+* OSS: The same as on {{< TransferCFT/axwayvariablesComponentLongName >}} Unix: /tmp/CFTxxxx  
+* Native: On the {{< TransferCFT/axwayvariablesComponentLongName >}} default [subvolume](#subvolumeUD): CTMPnnnn
 
 `2> filenames $DATA14.CFT32BUD.*`
 
@@ -72,20 +72,20 @@ The characters following the initial " == " either set certain information for t
 
 Depending on the type of procedure, {{< TransferCFT/axwayvariablesComponentLongName  >}}:
 
-- Starts the script (OSS)
-- Starts the TACL direct processing
-- Puts the temporary file in NetBatch for execution
+* Starts the script (OSS)
+* Starts the TACL direct processing
+* Puts the temporary file in NetBatch for execution
 
 ### Delete temporary files
 
 The started procedure MUST delete the temporary files, regardless of the environment.
 
-- OSS
-    -   rm $0
-    -   rm $0.err
-- NATIVE
-    -   #PURGE [#IN]
-    -   The same BTPURGE procedure as in the previous version is delivered and can be executed:
+* OSS
+    *   rm $0
+    *   rm $0.err
+* NATIVE
+    *   #PURGE [#IN]
+    *   The same BTPURGE procedure as in the previous version is delivered and can be executed:
 
 <span id="UCONF"></span>
 

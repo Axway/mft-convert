@@ -286,13 +286,13 @@ environment and to control the monitor and associated transfers.
 
 The types of compression are:
 
-- ****01****:
+* ****01****:
     compression of a string of characters (compression of blank characters)
-- ****02****:
+* ****02****:
     horizontal compression (repetitive characters are deleted in the record)
-- ****04****:
+* ****04****:
     compression of characters (each alphanumeric character is compressed)
-- ****08****:
+* ****08****:
     vertical compression (only the characters which are different from the
     previous record are transferred)
 
@@ -360,14 +360,14 @@ with the aim of masking the meaning of data.
 
 There are two main systems:
 
-- Shared-key or symmetric
+* Shared-key or symmetric
     systems for which the ciphering and deciphering keys are the same; see
     [DES](#DES__IBM_Data_Encryption_Standard__) (IBM Data Encryption
      Standard)
 
 <!-- -->
 
-- Dual-key or asymmetric
+* Dual-key or asymmetric
     systems for which the ciphering and deciphering keys are different; see [RSA](#RSA__Rivest_Shamir_Adelman__) (Rivest Shamir Adelman)
 
 <span id="Cycle"></span>
@@ -588,7 +588,6 @@ File containing all messages recording monitor activity related events
 
 <span id="Mailbox"></span>
 
-#### 
 
 <span id="Message"></span>
 
@@ -993,28 +992,28 @@ the number of concurrent transfers allowed and the timeslot or period
 
 Transfers can be set to one of six states.
 
-- ****C****:
+* ****C****:
     The transfer is in progress (****C****urrent).
 
 <!-- -->
 
-- ****D****:
+* ****D****:
     The transfer is available (at ****D****isposal)
     and will be triggered automatically as soon as the {{< TransferCFT/axwayvariablesComponentShortName >}} resources
     and partner access authorizations allow it.
-- ****H****:
+* ****H****:
     The transfer is pending (on ****H****old)
     on the initiative of the transfer requester, an operator (HALT command)
     or the monitor subsequent to an incident. The transfer can be resumed
     by the operator or the remote partner.
-- ****K****:
+* ****K****:
     The transfer is pending (****K****ept)
     on the initiative of the transfer requester, an operator (KEEP command)
     or the monitor subsequent to an incident. The transfer can only be resumed
     by the operator.
-- ****T****:
+* ****T****:
     The transfer has successfully ****T****erminated.
-- ****X****:
+* ****X****:
     All end of transfer operations have been successfully e****X****ecuted
     and the monitor has been notified via the END command.
 

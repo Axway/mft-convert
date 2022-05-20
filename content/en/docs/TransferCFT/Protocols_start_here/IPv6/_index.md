@@ -47,8 +47,8 @@ While you can configure the two IPv6 UCONF parameters independently, it is recom
 
 Independently of the configuration that applies to all TCP related services in Transfer CFT, two new names can be used for the CFTNET [host](../../c_intro_userinterfaces/command_summary/parameter_intro/host) attribute. These host names, IN6ADDR_ANY and IN4ADDR_ANY can be used in the place of INADDR_ANY. These names indicate the listening point for all protocols for the defined CFTNET as:
 
-- IN6ADDR_ANY: listens for any IPv6 address
-- IN4ADDR_ANY: listens for any IPV4 address
+* IN6ADDR_ANY: listens for any IPv6 address
+* IN4ADDR_ANY: listens for any IPV4 address
 
 Depending on the OS, using IN6ADDR_ANY can allow listening for both IPv4 and IPv6 connections, or for only IPv6 connections. See the hybrid dual-stack section below for details.
 
@@ -60,8 +60,8 @@ Modern hybrid dual-stack IPv6/IPv4 implementations allow application programs to
 
 For IPv6 sockets that are created for:
 
-- Outgoing connections (client side): the IPv4 address must be supplied in this special format
-- Accepting connections (server side): IPv4 addresses returned by the system are returned in this special format
+* Outgoing connections (client side): the IPv4 address must be supplied in this special format
+* Accepting connections (server side): IPv4 addresses returned by the system are returned in this special format
 
 This type of IPv6 socket, which can be used for either IPv6 or IPv4 connections, is called a hybrid socket.
 
@@ -69,8 +69,8 @@ The IEEE-POSIX-1003.1-2004 specifications assume that hybrid sockets are availab
 
 In the current version of Transfer CFT, this option is not changed by the software. As a result, IPv6 listening sockets operate with the default value assigned by the system. This difference leads to two different behaviors for Transfer CFT server programs using an IPv6 socket when listening for incoming connections:
 
-- If the OS implements a hybrid dual-stack and provides the IPv6_V6ONLY socket option, and if the default system value for the IPv6_V6ONLY option is zero, then the Transfer CFT server programs listening on an IPv6 socket will receive both IPv6 and IPv4 incoming connections.
-- Otherwise, Transfer CFT server programs listening on an IPv6 socket will only receive IPv6 connections.
+* If the OS implements a hybrid dual-stack and provides the IPv6_V6ONLY socket option, and if the default system value for the IPv6_V6ONLY option is zero, then the Transfer CFT server programs listening on an IPv6 socket will receive both IPv6 and IPv4 incoming connections.
+* Otherwise, Transfer CFT server programs listening on an IPv6 socket will only receive IPv6 connections.
 
 <span id="Regulati"></span>
 
@@ -111,11 +111,11 @@ Enable IPv6
 
 Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion  >}} code changes are based on the following documentation:
 
-- RFC 3493 *Basic Socket Interface Extensions for IPv6*
-- IEEE-1003.1-2004 *System Interfaces*
+* RFC 3493 *Basic Socket Interface Extensions for IPv6*
+* IEEE-1003.1-2004 *System Interfaces*
 
 ****Related topics****
 
-- [Command guide (CFTNET)](../../c_intro_userinterfaces/command_summary)
-- [Unified configuration (CFTUTIL)](../../admin_intro/uconf/uconf_w_cftutil)
-- [Unified configuration (GUI)](../../admin_intro/uconf/uconf_userinterface)
+* [Command guide (CFTNET)](../../c_intro_userinterfaces/command_summary)
+* [Unified configuration (CFTUTIL)](../../admin_intro/uconf/uconf_w_cftutil)
+* [Unified configuration (GUI)](../../admin_intro/uconf/uconf_userinterface)

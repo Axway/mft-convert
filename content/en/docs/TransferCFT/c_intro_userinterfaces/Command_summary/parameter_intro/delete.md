@@ -23,9 +23,9 @@ are deleted.
 
 Select one of the following:
 
-- NO:
+* NO:
     (default value)
-- YES:
+* YES:
     (automatic deletion)
 
 [Return to Command index](../../)

@@ -8,8 +8,8 @@ The standard {{< TransferCFT/axwayvariablesComponentShortName  >}} environment c
 
 In the supplied CFTLOGIN.COM procedure in the full installation, each directory is redefined with a logical name. Likewise, symbols enable you to navigate from one directory to another.
 
-- The CFTLOGIN.COM procedure is located in the d$cft_run:[profile].
-- The d$cft_run:[profile]CFTLOGIN.COM procedure is used to ensure compatibility with previous versions of Transfer CFT.
+* The CFTLOGIN.COM procedure is located in the d$cft_run:[profile].
+* The d$cft_run:[profile]CFTLOGIN.COM procedure is used to ensure compatibility with previous versions of Transfer CFT.
 
 To simplify reading, the logical name is used in this guide.
 

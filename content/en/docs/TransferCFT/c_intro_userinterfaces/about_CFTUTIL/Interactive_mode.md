@@ -16,7 +16,7 @@ screen by default, or to a file. For more information see the CONFIG command.
 
 In this syntax:
 
-- ‘file_symb’ designates a character specific to
+* ‘file_symb’ designates a character specific to
     each environment. Refer to the Transfer CFT Operating Guide that corresponds
     to your OS:
 
@@ -27,9 +27,9 @@ In this syntax:
 | UNIX |  @ |
 
 
-- file_in is a file
+* file_in is a file
     containing the Transfer CFT commands
-- file_out is a file
+* file_out is a file
     into which the results of the commands are written
 
 Specifying parameters is optional, the default values are the
@@ -41,17 +41,17 @@ relative to the current directory.
 
 On all systems:
 
-- CFTUTIL standard
+* CFTUTIL standard
     input and standard output are equivalent to:
-    -   CFTUTIL ‘file_symb’
+    *   CFTUTIL ‘file_symb’
         CFTIN CFTOUT
-- CFTIN and CFTOUT
+* CFTIN and CFTOUT
     are reserved words corresponding to the standard input and output
-- Standard input
+* Standard input
     and output to a file: CFTUTIL ‘file_symb’ CFTIN file_out
-- File input and
+* File input and
     standard output: CFTUTIL ‘file_symb’ file_in CFTOUT
-- File input, file
+* File input, file
     output: CFTUTIL ‘file_symb’ file_in file_out
 
 #### CONFIG TYPE=...,FNAME=...

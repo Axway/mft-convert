@@ -8,15 +8,15 @@ weight: 170
 
 ## Limitations
 
-- Available on Linux x86-64 and Windows x86-64 exclusively.
-- Does not support FACTION=RETRYRENAME.
-- The following parameter settings are ignored: WFNAME, FACTION=ERASE or RENAME (S3 creates its own version of the file)
-- You cannot access a file on S3 storage from the Transfer CFT Copilot UI.
-- Folder monitoring is not supported with Amazon S3 Storage.
-- Transfer CFT Windows presently only supports HTTP proxies (not HTTPS proxies).
-- When writing a file to S3 storage with PACING, the partner-negotiated value of the RPACING and SPACING parameters, the following restrictions apply:
-    -   The minimum negotiated value must be 5120 KiB (5 MiB).
-    -   The maximum size of the transferred file is proportional to the negotiated value of PACING, which is approximately 335 GB (~ 320 GiB). This is calculated by PACING KiB upload x 10,000 parts = 32,767 KiB (where 32,767 \*1024 = 33,553,408 bytes).
+* Available on Linux x86-64 and Windows x86-64 exclusively.
+* Does not support FACTION=RETRYRENAME.
+* The following parameter settings are ignored: WFNAME, FACTION=ERASE or RENAME (S3 creates its own version of the file)
+* You cannot access a file on S3 storage from the Transfer CFT Copilot UI.
+* Folder monitoring is not supported with Amazon S3 Storage.
+* Transfer CFT Windows presently only supports HTTP proxies (not HTTPS proxies).
+* When writing a file to S3 storage with PACING, the partner-negotiated value of the RPACING and SPACING parameters, the following restrictions apply:
+    *   The minimum negotiated value must be 5120 KiB (5 MiB).
+    *   The maximum size of the transferred file is proportional to the negotiated value of PACING, which is approximately 335 GB (~ 320 GiB). This is calculated by PACING KiB upload x 10,000 parts = 32,767 KiB (where 32,767 \*1024 = 33,553,408 bytes).
 
 ## Setup procedure
 
@@ -163,17 +163,17 @@ Transfer CFT can write objects to the Ceph Storage Cluster using the [Ceph Obje
 
 To use the Ceph Storage Cluster via its S3 API, follow the S3 storage instructions on this page. Additionally, when implementing:
 
-- Use the `s3://http[s]://endpoint[:port]/bucket` format for the workingdir.
+* Use the `s3://http[s]://endpoint[:port]/bucket` format for the workingdir.
 
     Example: `s3://http://radosgw_address.net:7480/my_bucket`, where 7480 is the CivetWeb default port on which the Ceph Object Gateway is running.
 
-- You can change the port and the SSL enabled option for the Ceph configuration.
+* You can change the port and the SSL enabled option for the Ceph configuration.
 
-- Create the credentials, and add the access key and secret access key to the UCONF `aws.credentials.<storage_account>` parameters.
+* Create the credentials, and add the access key and secret access key to the UCONF `aws.credentials.<storage_account>` parameters.
 
 More information:
 
-- AWS4 signature, available as of Jewel v10, must be supported by Ceph. We used Luminous v12 for testing purposes. Please refer to [ACTIVE RELEASES](https://docs.ceph.com/docs/master/releases/#active-releases).
+* AWS4 signature, available as of Jewel v10, must be supported by Ceph. We used Luminous v12 for testing purposes. Please refer to [ACTIVE RELEASES](https://docs.ceph.com/docs/master/releases/#active-releases).
 
 ## Use case examples
 
@@ -257,16 +257,16 @@ This section provides information on how to troubleshoot errors that you may enc
 
 This error may occur for one of the following reasons:
 
-- The connection to the Amazon server is firewalled, or the DNS is misconfigured.
+* The connection to the Amazon server is firewalled, or the DNS is misconfigured.
 
 <!-- -->
 
-- Ensure that the server can access the Amazon server and can resolve the address. For instance, ping the server to verify:
+* Ensure that the server can access the Amazon server and can resolve the address. For instance, ping the server to verify:
 
 <!-- -->
 
-- On Linux, the SSL certificates auto-detection failed. Use the UCONF `ssl.certificates.ca_cert_bundle` parameter to point to current certificates.
-- The region is invalid for the bucket. Ensure that the `workingdir `parameter of the send/recv command is valid.
+* On Linux, the SSL certificates auto-detection failed. Use the UCONF `ssl.certificates.ca_cert_bundle` parameter to point to current certificates.
+* The region is invalid for the bucket. Ensure that the `workingdir `parameter of the send/recv command is valid.
 
 ****CFTF30W AWS S3 error (13/HTTP 403): Permission denied - No response body****
 

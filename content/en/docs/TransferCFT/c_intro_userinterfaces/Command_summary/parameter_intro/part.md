@@ -43,11 +43,11 @@ Identifier of the partner(s) for the selected transfers.
 
 The value of this parameter can be:
 
-- ****An identifier****: the selection only relates
+* ****An identifier****: the selection only relates
     to the transfers performed with this partner
-- ****A mask****: the selection relates to the
+* ****A mask****: the selection relates to the
     transfers with the partners whose identifier corresponds to this mask
-- ****Omitted****: the selection relates to all
+* ****Omitted****: the selection relates to all
     partners. This option is the same as the option PART = \*
 
 If the NPART parameter is defined, the PART parameter is ignored.
@@ -65,7 +65,7 @@ the user can define this parameter using the symbolic variable PART=&PART.
 
 This identifier designates:
 
-- either a partner described by the command:
+* either a partner described by the command:
     
 | CFTPART | ID = &lt;PART parameter value&gt;, ... |   |
 | --- | --- | --- |
@@ -73,7 +73,7 @@ This identifier designates:
 
 <!-- -->
 
-- or a list of partners described by
+* or a list of partners described by
     the command:
     
 | CFTDEST | ID = &lt;PART parameter value&gt;, |   |
@@ -109,9 +109,9 @@ Partner identifier.
 
 The associated value of this parameter can be:
 
-- An
+* An
     identifier: the command only concerns transfers with this partner site
-- A mask:
+* A mask:
     the command concerns transfers with partner sites, for which the identifiers
     correspond to this mask
 

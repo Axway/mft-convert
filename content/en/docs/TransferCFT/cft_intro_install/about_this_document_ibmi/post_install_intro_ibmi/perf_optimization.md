@@ -31,8 +31,8 @@ To determine the maximum active (Max Act) values, use the following formula:
 
 Where:
 
-- 16 = any basic {{< TransferCFT/axwayvariablesComponentLongName >}} task
-- SSLMTASK = maximum number of SSL tasks
-- MAXTASK = maximum number of CFTFIL tasks
+* 16 = any basic {{< TransferCFT/axwayvariablesComponentLongName >}} task
+* SSLMTASK = maximum number of SSL tasks
+* MAXTASK = maximum number of CFTFIL tasks
 
 If you are using multinode, multiply the sum by the total number of nodes.

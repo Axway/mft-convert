@@ -5,16 +5,16 @@ weight: 270
 ---This section begins with this topic
 which provides the information about:
 
-- [Exit
+* [Exit
     task concepts](#Exit_task_concepts)
-- [Exit
+* [Exit
     task architecture](#Exit_task_architecture)
 
 A CFTEXIT object describes
 the environment and activation of an exit
 task. Each CFTEXIT object has an associated exit task. You can activate an exit task using:
 
-- [Command
+* [Command
     line operations](../../c_intro_userinterfaces/web_copilot_ui/flow_def_intro/cftexit) for the CFTEXIT object
 
 <span id="About_the_CFTEXIT_object"></span>
@@ -26,20 +26,20 @@ You can define as many CFTEXIT objects as needed.
 There is an EXIT task for each
 CFTEXIT object as described below:
 
-- File type: Performed
+* File type: Performed
     at various stages in the transfer of a file
-- Directory type:
+* Directory type:
     Performed during the protocol connection phase
-- End-of-transfer:
+* End-of-transfer:
     Performed at the end of a transfer
-- Beginning-of-transfer: Performed at the start of a transfer
+* Beginning-of-transfer: Performed at the start of a transfer
 
 The maximum number of EXIT tasks which are active simultaneously depends
 on the operating system.
 
-- z/OS (MVS): 99
-- Windows: 128
-- UNIX: 15
+* z/OS (MVS): 99
+* Windows: 128
+* UNIX: 15
 
 <span id="Exit_task_concepts"></span>
 
@@ -58,13 +58,13 @@ Beginning and end of transfer tasks, which are prior to or upon completion of a 
 The directory EXIT
 task:
 
-- In
+* In
     server mode, it can replace the standard checks performed by Transfer
     CFT when a remote partner requests a session to be set up
 
 <!-- -->
 
-- In
+* In
     requester mode, it can provide all the parameters required to set
     up a connection with a remote partner
 
@@ -81,9 +81,9 @@ be initiated for a given transfer request.
 
 The exit list is a file exit task that was written by Axway. It enables the following:
 
-- Remote partners
+* Remote partners
     to query the {{< TransferCFT/axwayvariablesComponentShortName >}} catalog of a central site or server
-- The catalog to
+* The catalog to
     be queried
 
 <span id="Exit_task_architecture"></span>
@@ -102,17 +102,17 @@ After the event in question has been checked, the task is not de-activated
 but stays loaded in memory. It remains active for a time that is defined
 by the EXIT type, such as:
 
-- Throughout the
+* Throughout the
     {{< TransferCFT/axwayvariablesComponentShortName >}} activity period for the Directory EXIT tasks
-- For an EXIT task
+* For an EXIT task
     maximum inactivity time, only for File and End-of-transfer exits
 
 An EXIT task consists of:
 
-- An interface supplied
+* An interface supplied
     with {{< TransferCFT/axwayvariablesComponentShortName >}}, providing functions for communicating with the Transfer
     CFT
-- A user program,
+* A user program,
     communicating with the interface
 
 The interface communicates with the {{< TransferCFT/axwayvariablesComponentShortName  >}} through a semaphore. A semaphore is an entity

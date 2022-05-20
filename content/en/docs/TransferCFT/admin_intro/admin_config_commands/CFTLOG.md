@@ -11,9 +11,9 @@ a specific parameter for more information.
 Related
 topics
 
-- Command syntax
+* Command syntax
     [CFTLOG](../../../c_intro_userinterfaces/command_summary#CFTLOG)
-- Object concepts
+* Object concepts
     [Log parameters]()
 
 

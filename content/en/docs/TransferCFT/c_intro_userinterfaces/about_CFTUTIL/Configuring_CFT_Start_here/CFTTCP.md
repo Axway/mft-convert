@@ -8,7 +8,7 @@ for a given type of network.
 ****Related
 topics****
 
-- [CFTTCP syntax](../../../command_summary#CFTTCP)
+* [CFTTCP syntax](../../../command_summary#CFTTCP)
 
 
 | Parameter  | Description  |
@@ -40,8 +40,8 @@ Each partner can only have one CFTTCP object.
 
 In DELETE mode, the following parameters must be defined:
 
-- ID parameter
-- CLASS parameter
+* ID parameter
+* CLASS parameter
     if its value is not the default value 1
 
 Only the parameters specific to the CFTTCP object are described. The
@@ -91,7 +91,7 @@ the mnemonic SUN3.
 The intervals between connection attempts, or retries,
 are calculated by the following algorithm:
 
-- 4 retries
+* 4 retries
     at 2-minute intervals
-- 2 retries
+* 2 retries
     at 4-minute intervals

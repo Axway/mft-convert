@@ -16,11 +16,11 @@ For Sentinel documentation, go to{{< TransferCFT/axwayvariablesCompanyName  >}} 
 
 To use Sentinel to monitor Transfer CFT you require the following components:
 
-- A database
-- Transfer CFT
-- Sentinel and, optionally, Sentinel MonitoringPlus
-- Universal Agent used for end-to-end application monitoring and Heartbeat functionality (*optional*)
-- Event Router (*optional but recommended*)
+* A database
+* Transfer CFT
+* Sentinel and, optionally, Sentinel MonitoringPlus
+* Universal Agent used for end-to-end application monitoring and Heartbeat functionality (*optional*)
+* Event Router (*optional but recommended*)
 
 You can install all components on the same machine or on different machines, and use the same or different platforms. When installed on the same machine, you can configure either a single or multiple users to access the components. Additionally when installed on the same machine, you can use the same database for the Composer and Sentinel server.
 
@@ -34,8 +34,8 @@ In the Server environment, the Acquisition Server contains Tracked Objects. A Tr
 
 For Transfer CFT monitoring, Sentinel uses the following Tracked Objects (TO):
 
-- [XFBTransfer](intro_sentinel)
-- [XFBLog](xfblog)
+* [XFBTransfer](intro_sentinel)
+* [XFBLog](xfblog)
 
 ## Requests
 
@@ -46,13 +46,13 @@ Sentinel uses sets of executable SQL instructions known as ****Requests**** to r
 You can use a set of predefined [Requests](xfbtransfer_request)
 to:
 
-- Globally monitor
+* Globally monitor
     all transfers
-- Monitor specific
+* Monitor specific
     transfers
-- Monitor specific
+* Monitor specific
     steps in the transfer process
-- Identify the sources
+* Identify the sources
     of transfer errors
 
 You can set Sentinel to repeatedly execute requests. This

@@ -22,18 +22,18 @@ your problem, or by searching for a solution in the Knowledge Database.
 If you still need to contact Support, have the following information available
 if possible:
 
-- Product version
-- Operating system
-- cft_support (see [Support tools](#))
+* Product version
+* Operating system
+* cft_support (see [Support tools](#))
 
 To submit a Support request, you can do the following:
 
-- Submit and track
+* Submit and track
     your request through the Axway Support Web site [support.axway.com](https://support.axway.com/).
-- Each time you submit a support request, that request is assigned a unique
+* Each time you submit a support request, that request is assigned a unique
     number. Use this specific number when you contact Customer
     Support concerning that case.
-- You must have a user account to submit a Support request.
+* You must have a user account to submit a Support request.
 
 ## Using cft_support
 
@@ -55,11 +55,11 @@ In command line, enter: `cft_support collect` `[options]`
 
 Options:
 
-- --help: Display this help and exit.
-- --cat-filter: Filter the CFTUTIL LISTCAT output. See [LISTCAT](../../c_intro_userinterfaces/about_cftutil/monitoring_cftutil_intro/listcat_command), or enter `CFTUTIL HELP CMD=LISTCAT`, to view available parameters.
-- --cat-debug-filter: Filter the CFTUTIL LISTCAT CONTENT=DEBUG output. This option overrides `--cat-filter.`
-- --no-core-analysis-gdb: Do not use gdb to analyze the cores. *Unix only*
-- --no-core-analysis-dbx: Do not use dbx to analyze the cores. *Unix only*
+* --help: Display this help and exit.
+* --cat-filter: Filter the CFTUTIL LISTCAT output. See [LISTCAT](../../c_intro_userinterfaces/about_cftutil/monitoring_cftutil_intro/listcat_command), or enter `CFTUTIL HELP CMD=LISTCAT`, to view available parameters.
+* --cat-debug-filter: Filter the CFTUTIL LISTCAT CONTENT=DEBUG output. This option overrides `--cat-filter.`
+* --no-core-analysis-gdb: Do not use gdb to analyze the cores. *Unix only*
+* --no-core-analysis-dbx: Do not use dbx to analyze the cores. *Unix only*
 
 ****Examples****
 
@@ -87,8 +87,8 @@ The CFTSUPPORT command executes a program located in CFTPGM. This program genera
 
 Additionally, two options are available for CFTSUPPORT:
 
-- `CATFIL('IDTU=A0000001')`: Filters the CFTUTIL LISTCAT output.
-- `DBGCATFIL('IDTU=A0000002')`: Filters the CFTUTIL LISTCAT CONTENT=DEBUG output.
+* `CATFIL('IDTU=A0000001')`: Filters the CFTUTIL LISTCAT output.
+* `DBGCATFIL('IDTU=A0000002')`: Filters the CFTUTIL LISTCAT CONTENT=DEBUG output.
 
 ****Example****
 

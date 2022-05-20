@@ -30,12 +30,12 @@ The SFTP keys are referenced in the PKI database as a `Keys `identifier.
 
 You can import the following formats in the PKI database:
 
-- Raw DER format
-- PEM format for RSA private and public key, beginning with “BEGIN RSA PRIVATE KEY” or “BEGIN RSA PUBLIC KEY”, or X.509 public key, beginning with “BEGIN PUBLIC KEY”
-- Encrypted PEM format for RSA private key (PKCS #5), beginning with "BEGIN RSA PRIVATE KEY " and "Proc-Type: 4,ENCRYPTED"
-- PKCS8 format, beginning with “BEGIN PRIVATE KEY” or “BEGIN ENCRYPTED PRIVATE KEY”
-- SSH2 format, beginning with “BEGIN SSH2 PUBLIC KEY”
-- ssh-rsa format, beginning with “ssh-rsa”
+* Raw DER format
+* PEM format for RSA private and public key, beginning with “BEGIN RSA PRIVATE KEY” or “BEGIN RSA PUBLIC KEY”, or X.509 public key, beginning with “BEGIN PUBLIC KEY”
+* Encrypted PEM format for RSA private key (PKCS #5), beginning with "BEGIN RSA PRIVATE KEY " and "Proc-Type: 4,ENCRYPTED"
+* PKCS8 format, beginning with “BEGIN PRIVATE KEY” or “BEGIN ENCRYPTED PRIVATE KEY”
+* SSH2 format, beginning with “BEGIN SSH2 PUBLIC KEY”
+* ssh-rsa format, beginning with “ssh-rsa”
 
 > **Note**
 >
@@ -43,9 +43,9 @@ You can import the following formats in the PKI database:
 
 ****Restrictions****
 
-- Transfer CFT does not support keys that contain comments, regardless of if you are directly referencing or importing them.
-- Transfer CFT does not support private keys with passphrases.
-- Transfer CFT supports the RSA digital signature algorithm; however, ECDSA and DSA are not supported.
+* Transfer CFT does not support keys that contain comments, regardless of if you are directly referencing or importing them.
+* Transfer CFT does not support private keys with passphrases.
+* Transfer CFT supports the RSA digital signature algorithm; however, ECDSA and DSA are not supported.
 
 ### PKIKEY command parameters
 

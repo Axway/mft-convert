@@ -39,14 +39,14 @@ specific criteria.
 
 Where:
 
-- rc is the return
+* rc is the return
     code (int)
-- verb is the command
+* verb is the command
     that you want to process (char \*)
-- ptr contains the
+* ptr contains the
     address of an internal control block (char \*) completed on return of an
     OPEN service call. It must be provided and defined to call other functions
-- param points to
+* param points to
     the parameters specific to each function
 
 The available verbs are listed in the following table.

@@ -19,9 +19,9 @@ another.
 
 The following illustration features 3 Transfer CFTs, where the protocol may be the same or different between relay points:
 
-- Source [Initial Sender A]
-- Relay [Store and Forward B]
-- Target [Final Receiver C]
+* Source [Initial Sender A]
+* Relay [Store and Forward B]
+* Target [Final Receiver C]
 
 **Routing a transfer via a relay**
 
@@ -29,11 +29,11 @@ The following illustration features 3 Transfer CFTs, where the protocol may be t
 
 ## Restrictions
 
-- You cannot use a distribution list on the relay site when using {{< TransferCFT/suitevariablesFlowManager >}} or {{< TransferCFT/suitevariablesCentralGovernanceName >}}.
+* You cannot use a distribution list on the relay site when using {{< TransferCFT/suitevariablesFlowManager >}} or {{< TransferCFT/suitevariablesCentralGovernanceName >}}.
 
 <!-- -->
 
-- {{< TransferCFT/axwayvariablesComponentLongName >}} store and forward mode is only possible from a requester/sender (write transfers only, not read).
+* {{< TransferCFT/axwayvariablesComponentLongName >}} store and forward mode is only possible from a requester/sender (write transfers only, not read).
 
 ## Store and forward mode protocols
 
@@ -42,8 +42,8 @@ in the transfer, the initial sender and final receiver of the transfer.
 
 {{< TransferCFT/axwayvariablesComponentLongName  >}} supports the following protocols for store and forward operations:
 
-- PeSIT
-- Odette (OFTP)
+* PeSIT
+* Odette (OFTP)
 
 For these protocols, the objects transferred can be files or messages,
 in write mode only, for sender requester mode.
@@ -82,7 +82,7 @@ the {{< TransferCFT/axwayvariablesComponentShortName  >}} on the store and forwa
 
 There are two ways for the sender to initiate a store and forward transfer:
 
-- Define the final partner in the sender's configuration and use only the partner in the SEND command. Using this method, the final partner definition includes both the relay  (IPART) and has the OMINTIME and OMAXTIME values set to 0.  
+* Define the final partner in the sender's configuration and use only the partner in the SEND command. Using this method, the final partner definition includes both the relay  (IPART) and has the OMINTIME and OMAXTIME values set to 0.  
 
     `cftpart id=<FINAL PARTNER>,  ipart=<RELAY>, omintime=0, omaxtime=0,...`
 
@@ -90,11 +90,11 @@ There are two ways for the sender to initiate a store and forward transfer:
 
 <!-- -->
 
-- Do not define the final partner in the sender's configuration. Using this method, you declare the final partner (ID) and the relay (IPART) when you execute the SEND command.
+* Do not define the final partner in the sender's configuration. Using this method, you declare the final partner (ID) and the relay (IPART) when you execute the SEND command.
 
 <!-- -->
 
-- `send part=<FINAL PARTNER>, ipart=<RELAY>,...`
+* `send part=<FINAL PARTNER>, ipart=<RELAY>,...`
 
 <span id="Store_and_forward_sites"></span>
 
@@ -106,17 +106,17 @@ This section details the processing steps as described above in *Setting the COM
 
 The following actions apply to the store and forward site:
 
-- During the file transfer (forwarding), Transfer CFT does not
+* During the file transfer (forwarding), Transfer CFT does not
     activate an end of transfer procedure or an error procedure.
-- If the transfer IDF is set to the value COMMUT, there must be a command CFTRECV ID =
+* If the transfer IDF is set to the value COMMUT, there must be a command CFTRECV ID =
     COMMUT defined on this site. The transfer is then
     saved in the catalog with the IDF = COMMUT file identifier.
-- When forwarding the file, the compression factor may be transformed
+* When forwarding the file, the compression factor may be transformed
     as a function of the parameter settings of the parties (sender, store
     and forward site, receiver) according to the values of the RCOMP/SCOMP
     parameters of the corresponding CFTPROT commands. However, no translation is
     performed.
-- The file created on the store and forward site is "temporary"
+* The file created on the store and forward site is "temporary"
     and is automatically deleted by Transfer CFT once it has been correctly
     sent to the next recipient (or to the next intermediate computer if applicable).
 
@@ -124,20 +124,20 @@ The following actions apply to the store and forward site:
 
 The following actions apply to the final recipient site:
 
-- Transfer CFT receives the following application parameters,
+* Transfer CFT receives the following application parameters,
     conveyed without modification from the initial sender:
-    -   PARM, SUSER, RUSER,
+    *   PARM, SUSER, RUSER,
         SAPPL, RAPPL
-    -   IDT
-    -   Received file characteristics
+    *   IDT
+    *   Received file characteristics
         (NTYPE, NBLKSIZE, NLRECL, for example)
-    -   File date and time
+    *   File date and time
         (FDATE, FTIME without the hundredths of seconds)
-- The physical file name on the receiving site can be specified by the
+* The physical file name on the receiving site can be specified by the
     initial sender, through the SEND PART = C, NFNAME = filename command,
     if the recipient in question accepts open mode operation. The store and
     forward site is not involved in this mechanism.
-- Once the file or message is received, an acknowledgement message
+* Once the file or message is received, an acknowledgement message
     (SEND TYPE = REPLY) can be sent to the initial sender.
 
 #### On the initial sender and final receiver
@@ -195,17 +195,17 @@ the file available to the final receiver (SEND command ... , STATE = HOLD).
 
 The final receiver takes the file:
 
-- Either after sending
+* Either after sending
     the CD in ODETTE protocol
-- Or through a receive
+* Or through a receive
     command (RECV) for other protocols
 
 If the final recipient requests the reception of the file, the following
 must be indicated as a partner in the RECV command:
 
-- The store and forward
+* The store and forward
     site in ODETTE protocol
-- The initial sender
+* The initial sender
     in PeSIT protocol
 
 The difference lies in the type of protocols.
@@ -222,11 +222,11 @@ This section describes how to use a partner broadcasting list with store and for
 
 To broadcast a file from a store and forward site:
 
-- The initial sender must define a virtual partner with an ID that corresponds to the CFTDEST ID command managed on the store and forward site. Set the CFTPART's OMINTIME and OMAXTIME to zero to force routing to the intermediate partner (IPART). The SEND PART=ID, ... command sends the file to broadcast.
-- You must have a CFTDEST command with the ID set to the network name of the broadcasting list indicated by the initial partner (SEND PART=ID).
-- You can use FOR=COMMUT as described in the [FOR](../../../c_intro_userinterfaces/command_summary/parameter_intro/for) parameter.
-- The final receivers know the initial file sender and the store and forward partner (relay).
-- The CFTPART connections must comply with network nodes.
+* The initial sender must define a virtual partner with an ID that corresponds to the CFTDEST ID command managed on the store and forward site. Set the CFTPART's OMINTIME and OMAXTIME to zero to force routing to the intermediate partner (IPART). The SEND PART=ID, ... command sends the file to broadcast.
+* You must have a CFTDEST command with the ID set to the network name of the broadcasting list indicated by the initial partner (SEND PART=ID).
+* You can use FOR=COMMUT as described in the [FOR](../../../c_intro_userinterfaces/command_summary/parameter_intro/for) parameter.
+* The final receivers know the initial file sender and the store and forward partner (relay).
+* The CFTPART connections must comply with network nodes.
 
 ### Processing performed
 
@@ -313,8 +313,8 @@ To acknowledge a store and forward file (or message) transfer, the final partner
 
 To acknowledge a broadcasting list, the following conditions are then required to route the acknowledgement to the initial partner:
 
-- The connections established between partners must be complied with at each of the network nodes (CFTPART ID =...),
-- At the store and forward node, all the catalog records corresponding to the previously performed broadcasting, are present,
-- At the store and forward node, all the catalog records corresponding to the previously performed broadcasting, indicate that the receiving partners have correctly received the file or message (SFT transfer state).
+* The connections established between partners must be complied with at each of the network nodes (CFTPART ID =...),
+* At the store and forward node, all the catalog records corresponding to the previously performed broadcasting, are present,
+* At the store and forward node, all the catalog records corresponding to the previously performed broadcasting, indicate that the receiving partners have correctly received the file or message (SFT transfer state).
 
 If these conditions are fulfilled, the initial sender of the file (or message) receives a single acknowledgement message. The message comes arbitrarily from one of the final partners (the last one to have sent a REPLY message).

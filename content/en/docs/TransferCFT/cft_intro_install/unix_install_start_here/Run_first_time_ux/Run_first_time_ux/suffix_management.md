@@ -8,9 +8,9 @@ to determine the action to be taken. However, Transfer CFT also features a mecha
 which enables Transfer CFT to determine the type
 of file processed from the file name. This topic describes:
 
-- [Defining suffixes](#Defining)
-    -   [Enabling suffix management](#Enabling)
-- [Separating file name extensions](#Separati)
+* [Defining suffixes](#Defining)
+    *   [Enabling suffix management](#Enabling)
+* [Separating file name extensions](#Separati)
 
 <span id="Defining"></span>
 
@@ -29,26 +29,26 @@ the form: &lt;suffix>=&lt;FTYPE>
 
 Where:
 
-- The length of the
+* The length of the
     suffix is less than or equal to eight characters
-- [FTYPE](../../../../../c_intro_userinterfaces/command_summary/parameter_intro/ftype)
+* [FTYPE](../../../../../c_intro_userinterfaces/command_summary/parameter_intro/ftype)
     is one of the file types recognized by Transfer CFT
 
 Furthermore, the lines making up the *suffixes.def* file must comply
 with the following rules:
 
-- There can be only
+* There can be only
     one suffix definition per line
-- Suffixes can be
+* Suffixes can be
     defined with *wildcard* characters, which define either any character
     (?) or any character string (**\***)
-- The suffix definitions
+* The suffix definitions
     are case-sensitive but the types are not. Type **t** is, therefore,
     identical to type **T**, but the suffix **.txt** is different from
     the suffix **.TXT**
-- Empty lines and
+* Empty lines and
     lines containing only spaces are ignored
-- Comments can be
+* Comments can be
     inserted in this file using the # character  
     Any text situated between a # character and the end of the line will
     be considered to be a comment
@@ -79,8 +79,8 @@ Transfer CFT provides a parameter option that allows the user to the separate th
 
 In Transfer CFT the name of a file is referred to as ROOT or FROOT, and the file extension (suffix) is FSUF or SUF. So for example, if you have a file called ****sample.txt**** and in Transfer CFT you define ****FROOT=sample.txt****, then in standard functioning:
 
-- In Unix the FSUF is empty
-- In Windows the FSUF is ****txt****
+* In Unix the FSUF is empty
+* In Windows the FSUF is ****txt****
 
 To enable the option to separate the file name and extension in Unix, set the following UCONF value to `yes`:
 

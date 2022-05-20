@@ -98,11 +98,11 @@ the CFTPARM, CFTLOG cards, and so on).
 
 > **Note**
 
-- If no file name
+* If no file name
     is passed as a parameter, the program requests one or more file names.
-- If no name is supplied,
+* If no name is supplied,
     the program stops.
-- When you run `cftinit`, it creates the catalog and communication files. You can modify the default sizes of these files to suit your requirements by updating the uconf values for `cft.cftcat.default_size` and `cft.cftcom.default_size` (these values are expressed as a number of records).
+* When you run `cftinit`, it creates the catalog and communication files. You can modify the default sizes of these files to suit your requirements by updating the uconf values for `cft.cftcat.default_size` and `cft.cftcom.default_size` (these values are expressed as a number of records).
 
 <span id="cftupdate"></span>
 
@@ -116,9 +116,9 @@ The *cftupdate* utility is used to update the configuration.
 
 > **Note**
 
-- You can only update
+* You can only update
     the CFTPART, CFTxxx (for the networks), CFTSEND cards, and so on
-- This command should
+* This command should
     be considered to be an alias of CFTUTIL @&lt;filename> for each file
     name passed as a parameter in the command line
 
@@ -193,11 +193,11 @@ is used) or on all existing groups.
 Various options can be used to make it easier to enter information or
 allow you to work in batch mode:
 
-- -G &lt;group>: ASCII name of the user group
-- -p &lt;passwd>: Password required to access this group
-- -g &lt;GID>: Numeric identifier of the group. If it is set to AUTO, the GID is generated
+* -G &lt;group>: ASCII name of the user group
+* -p &lt;passwd>: Password required to access this group
+* -g &lt;GID>: Numeric identifier of the group. If it is set to AUTO, the GID is generated
     automatically
-- -u &lt;usr1,usr2>: List of existing users, separated by a comma
+* -u &lt;usr1,usr2>: List of existing users, separated by a comma
 
 <span id="xfbadmusr1"></span>
 
@@ -243,14 +243,14 @@ is used) or on all existing users.
 You can use the following options to make it easier to enter information,
 or to work in batch mode:
 
-- ****-l
+* ****-l
     &lt; login >****: Login name
-- ****-p
+* ****-p
     &lt; passwd >****: Password
-- ****-u
+* ****-u
     &lt; UID >****: User identifier - When set to AUTO, a UID is generated
     automatically
-- ****-g
+* ****-g
     &lt; GID >****: Group identifier - When set to AUTO, the GID is
     generated automatically
 
@@ -289,15 +289,15 @@ The *xvi* utility is used to update a conversion table.
 
 The following options can be used with *xvi*:
 
-- -d: displays an existing, valid &lt;table>
+* -d: displays an existing, valid &lt;table>
     in ASCII
-- -a: creates a &lt;table> to convert
+* -a: creates a &lt;table> to convert
     ASCII to EBCDIC; this table is identical to the one accessed via the Transfer
     CFT CFTXLATE command (if &lt;table> exists, it is overwritten)
-- -e: creates a &lt;table> to convert
+* -e: creates a &lt;table> to convert
     EBCDIC to ASCII; this table is identical to the one accessed via the Transfer
     CFT CFTXLATE command (if &lt;table> exists, it is overwritten)
-- -l:
+* -l:
     creates a &lt;table> from an ASCII &lt;file>; the file generally
     used is the file produced after running option -d (if &lt;table> exists,
     it is overwritten)
@@ -314,9 +314,9 @@ To perform a conversion using the ISO 8859-1
 ASCII character set, run the CFTXLATE command with the
 following external conversion tables:
 
-- atoe:
+* atoe:
     ISO 8859-1 ASCII to EBCDIC
-- etoa:
+* etoa:
     EBCDIC to ISO 8859-1 ASCII
 
 You can use the [xvi](#xvi) utility, described above,

@@ -10,8 +10,8 @@ The following parameters manage SSL and TLS versions in Transfer CFT:
 
 VERSION: This CFTSSL object parameter sets the SSL version, where:
 
-- TLSV1 and TLSV1COMP values correspond to TLS version 1.2, 1.1, 1.0.
-- SSLV3 and SSLV3COMP values correspond to SSL version 3.0.
+* TLSV1 and TLSV1COMP values correspond to TLS version 1.2, 1.1, 1.0.
+* SSLV3 and SSLV3COMP values correspond to SSL version 3.0.
 
 cft.ssl_version_min: This UCONF parameter sets the minimum SSL version that Transfer CFT will accept when communicating with another partner (as either client or server).
 
@@ -53,9 +53,9 @@ In both the current and previous version, downgrade to the same cipher suite if 
 
 This section describes how to specify the minimum SSL/TLS protocol version using the following parameters:
 
-- ssl.version_min
-- cft.ssl.version_min
-- copilot.ssl.version_min
+* ssl.version_min
+* cft.ssl.version_min
+* copilot.ssl.version_min
 
 It is important to note that the Transfer CFT SSL/TLS implementation allows a fallback to SSL 3.0. This means that even if you configure TLS 1.x in the security profile (the `version `parameter in CFTSSL), if the remote partner only supports SSL 3.0 your exchanges with this partner will occur using the SSL 3.0 protocol. This behavior offers backward compatibility with SSL 3.0 to allow for interoperability with legacy systems.
 

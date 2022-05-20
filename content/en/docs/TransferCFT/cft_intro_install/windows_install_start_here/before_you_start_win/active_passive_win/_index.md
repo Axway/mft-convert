@@ -10,16 +10,16 @@ weight: 190
 
 A cluster installation of Transfer CFT without multi-node is an active/passive installation as described below:
 
-- Install Transfer CFT using the Cluster installation architecture of the Installer and disable the multi-node architecture.
-- Installation procedure must be executed on each host:
-    -   The first host installation
-    -   Additional hosts installation
-- Transfer CFT binaries are installed on several hosts and runtime files are installed on a shared file system.
-- Only runtime files are shared.
-- You must configure the cluster after installation but before you can use the cluster. The procedure for cluster configuration varies depending on the platform on which the cluster is installed.
-- At any given time:
-    -   Only one host is active
-    -   Only one Transfer CFT runtime environment is running on the active host
+* Install Transfer CFT using the Cluster installation architecture of the Installer and disable the multi-node architecture.
+* Installation procedure must be executed on each host:
+    *   The first host installation
+    *   Additional hosts installation
+* Transfer CFT binaries are installed on several hosts and runtime files are installed on a shared file system.
+* Only runtime files are shared.
+* You must configure the cluster after installation but before you can use the cluster. The procedure for cluster configuration varies depending on the platform on which the cluster is installed.
+* At any given time:
+    *   Only one host is active
+    *   Only one Transfer CFT runtime environment is running on the active host
 
 > **Note**
 >
@@ -47,8 +47,8 @@ The path and name of the local directory where you want to install the first clu
 
 You can use a single key for a multi-node installation, as either:
 
-- The hostname must not be defined for the key, or
-- The hostname defined for the key matches the hostname of one of the hosts that composes the multi-node instance
+* The hostname must not be defined for the key, or
+* The hostname defined for the key matches the hostname of one of the hosts that composes the multi-node instance
 
 Additionally, the key must have the cluster option.
 

@@ -21,8 +21,8 @@ If during installation you created both the distribution environment and the Tra
 
 This procedure:
 
-- Creates a Transfer CFT instance run-time environment
-- Copies certain Transfer CFT distribution environment elements to the target environment
+* Creates a Transfer CFT instance run-time environment
+* Copies certain Transfer CFT distribution environment elements to the target environment
 
 After creating the target environment, leave the distribution environment in its original state. You should now work exclusively in the target environment.
 

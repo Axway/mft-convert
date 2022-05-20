@@ -10,15 +10,15 @@ weight: 1040
 
 Type of shutdown:
 
-- YES: Immediate shutdown of {{< TransferCFT/axwayvariablesComponentShortName >}}.
+* YES: Immediate shutdown of {{< TransferCFT/axwayvariablesComponentShortName >}}.
     All the transfers in process are interrupted and change
     to the D state. No pending transfer is activated.
 
 <!-- -->
 
-- NO: {{< TransferCFT/axwayvariablesComponentShortName >}} completes all the transfers
+* NO: {{< TransferCFT/axwayvariablesComponentShortName >}} completes all the transfers
     in process and shuts down. No new transfer is initialized.
-- KILL: Immediate {{< TransferCFT/axwayvariablesComponentShortName >}} shutdown occurs
+* KILL: Immediate {{< TransferCFT/axwayvariablesComponentShortName >}} shutdown occurs
     but without updating the transfer states.
 
 [Return to Command index](../../)

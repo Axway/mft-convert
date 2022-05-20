@@ -12,19 +12,19 @@ is started.
 
 Server mode:
 
-- The user will have
+* The user will have
     control if the identifier of the communication protocol to be used is
     psithd or psithe
-- The user will not
+* The user will not
     have control for the ODETTE protocol identifier. Dynamic partner creation
     applies to the psithd protocol identifier
 
 Requester mode, if the partner is:
 
-- Known to Transfer
+* Known to Transfer
     CFT, the user will have control if the associated CFTPART card contains
     the psithd or psithe protocol identifier
-- Not known to Transfer
+* Not known to Transfer
     CFT, the user will have control, the communication protocol (which can
     be modified) will have psithd as identifier
 

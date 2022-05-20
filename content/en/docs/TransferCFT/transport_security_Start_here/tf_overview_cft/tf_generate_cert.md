@@ -8,22 +8,22 @@ To generate certificates, for example using the XCA utility (X Certificate and K
 
 1. Create a ****New database****.
 
-    -   Enter a password to protect the database that contains your certificate.
+    *   Enter a password to protect the database that contains your certificate.
 
     ![Certificate and key management screen shot](/Images/TransferCFT/XCA_db_tab.png)
 
 1. Select the ****Certificates**** tab.
-    -   Select: ****New Certificate****
+    *   Select: ****New Certificate****
 
 1. Select the ****Source**** tab.
-    -   In the ****Signature algorithm**** field, select ****MD5****.
+    *   In the ****Signature algorithm**** field, select ****MD5****.
 
 1. Select the ****Subject**** tab.
-    -   Complete the fields for your certificate.
+    *   Complete the fields for your certificate.
 
     <!-- -->
 
-    -   Click ****Generate a new key****.
+    *   Click ****Generate a new key****.
         -   Enter a key name
         -   Select 1024 bit as the key size
         -   Select Keytype
@@ -31,24 +31,24 @@ To generate certificates, for example using the XCA utility (X Certificate and K
 
 1. In the ****Extensions**** tab:
 
-    -   In "Type": select End Entity
+    *   In "Type": select End Entity
 
     <!-- -->
 
-    -   Select "Subject Key Identifier"
+    *   Select "Subject Key Identifier"
 
     <!-- -->
 
-    -   Select the expiry date of your certificates
+    *   Select the expiry date of your certificates
 
     <!-- -->
 
-    -   Inform: "Subject alternative Name"
+    *   Inform: "Subject alternative Name"
 
     ![Create certificate screen with selected Extension tab](/Images/TransferCFT/XCA_tab.png)
 
 1. In the ****Key Usage**** tab:
-    -   In "Key Usage", select :
+    *   In "Key Usage", select :
         -   Digital Signature
 
         <!-- -->
@@ -65,7 +65,7 @@ To generate certificates, for example using the XCA utility (X Certificate and K
 
     <!-- -->
 
-    -   In "Extended Key usage", select:
+    *   In "Extended Key usage", select:
         -   E-mail Protection
 
 1. Click  ****OK**** to generate the certificate.
@@ -74,18 +74,18 @@ To generate certificates, for example using the XCA utility (X Certificate and K
 
 1. In ****Certificates**** tab, select the certificate you want to export.
 1. Select Export.
-    -   In Export Format: choose "PEM" for export PUBLIC CERTIFICATE.
+    *   In Export Format: choose "PEM" for export PUBLIC CERTIFICATE.
 
     <!-- -->
 
-    -   Click ****OK**** .
+    *   Click ****OK**** .
 
     <!-- -->
 
-    -   Select Export.
+    *   Select Export.
 1. Select the certificate you want to export (filename).
-    -   In Export Format: choose "PKCS #12" for export PRIVATE CERTIFICATE
-    -   Click ****OK**** .
+    *   In Export Format: choose "PKCS #12" for export PRIVATE CERTIFICATE
+    *   Click ****OK**** .
 1. Enter a password to protect your private certificates.
 
 ## How to generate a certificate with OpenSSL

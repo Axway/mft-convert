@@ -15,11 +15,11 @@ based on the concept of an NIDF network identifier conveyed over the network.
 This topic describes the model file identifier, IDF, processes in the
 following states:
 
-- Sender requester
-- Receiver server
-- Receiver requester
-- Sender server
-- Receiver/Requester
+* Sender requester
+* Receiver server
+* Receiver requester
+* Sender server
+* Receiver/Requester
     in selective-receive mode
 
 This mechanism, for establishing an IDF, is based on the principle described
@@ -34,11 +34,11 @@ in the figure below.
 The correspondence between the locally known IDF and the NIDF sent or
 received can be established:
 
-- In the SEND or
+* In the SEND or
     RECV transfer command through the use of the NIDF parameter
-- In the CFTIDF object
+* In the CFTIDF object
     for a given partner and direction of transfer
-- At the level of
+* At the level of
     the server, in the CFTPROT object, the local server IDF being able to
     be deduced from the NIDF received
 
@@ -46,10 +46,10 @@ The mechanisms used to establish the NIDF/IDF correspondence are described
 according to the function provided by {{< TransferCFT/axwayvariablesComponentShortName  >}} and *in
 the order of priority* in which they are implemented:
 
-- Sender/requester
-- Receiver/server
-- Receiver/requester
-- Sender/server
+* Sender/requester
+* Receiver/server
+* Receiver/requester
+* Sender/server
 
 <span id="Sender_requester"></span>
 
@@ -263,9 +263,9 @@ if the NIDF parameter was defined in the RECV command.
 The server unlocks the sending of the files defined in the SEND STATE
 = HOLD commands having:
 
-- An NIDF parameter
+* An NIDF parameter
     value corresponding to the generic IDF mask requested
-- Or, if this NIDF
+* Or, if this NIDF
     parameter is not defined, an IDF value corresponding to this mask
 
 The value of the NIDF received by the receiver/requester on this reception,

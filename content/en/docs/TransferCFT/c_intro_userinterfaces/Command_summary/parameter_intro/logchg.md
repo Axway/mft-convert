@@ -11,10 +11,10 @@ weight: 1830
 
 Log configuration changes:
 
-- none - no logging
+* none - no logging
     is performed
-- static - only the
+* static - only the
     static configuration is logged
-- dynamic - only
+* dynamic - only
     the dynamic configuration is logged
-- all - log all changes
+* all - log all changes

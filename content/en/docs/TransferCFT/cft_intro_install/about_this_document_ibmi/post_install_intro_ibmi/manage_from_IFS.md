@@ -16,10 +16,10 @@ weight: 200
     ```
 1. You can then use standard Transfer CFT programs, such as:
 
-- CFTSTART: Start Transfer CFT
-- CFTSTOP: Stop Transfer CFT
-- COPSTART: Start UI Server
-- COPSTOP: Stop UI Server
-- CFTUTIL
-- PKIUTIL
-- Etc.
+* CFTSTART: Start Transfer CFT
+* CFTSTOP: Stop Transfer CFT
+* COPSTART: Start UI Server
+* COPSTOP: Stop UI Server
+* CFTUTIL
+* PKIUTIL
+* Etc.

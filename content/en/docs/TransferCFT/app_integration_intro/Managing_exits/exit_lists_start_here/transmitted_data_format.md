@@ -20,11 +20,11 @@ RECV STATE = CDHKTX
 
 Where:
 
-- PARM: General
+* PARM: General
     parameters
-- LRECL: The length
+* LRECL: The length
     of the records sent
-- FORMAT: Indicates the file format of the communication area.
+* FORMAT: Indicates the file format of the communication area.
 
 ## Format of sent records
 
@@ -34,8 +34,8 @@ Indicates the file format of the communication area, where values are <u>1</u>, 
 
 Displays using the same format as in {{< TransferCFT/headerfootervariableshflongproductname  >}} 3.5 and lower.
 
-- Format V23: The record is truncated if LRECL&lt;503 or padded with spaces if LRECL>503.
-- Format V24: The record is truncated if LRECL&lt;1569 or padded with spaces if LRECL>1569.
+* Format V23: The record is truncated if LRECL&lt;503 or padded with spaces if LRECL>503.
+* Format V24: The record is truncated if LRECL&lt;1569 or padded with spaces if LRECL>1569.
 
 
 | Type  | V24 length  | V23 length  | Description  |
@@ -121,32 +121,32 @@ Each field is separated by a tab.
 If **LRECL>4096** or **LRECL&lt;109**, the record length is
 forced to 503.
 
-- The unused *Cata* field is forced blank or to
+* The unused *Cata* field is forced blank or to
     0, in the case of a length.  
     The record is truncated if LRECL&lt;503 or padded with spaces if LRECL>503
     (LRECL is a PARM parameter).
-- The **User parameter** field corresponds to the PARM parameter of
+* The **User parameter** field corresponds to the PARM parameter of
     the CFTSEND or SEND command.
-- The **Send user** field corresponds to the SUSER parameter of the
+* The **Send user** field corresponds to the SUSER parameter of the
     CFTSEND or SEND command.
-- The **Receive user** field corresponds to the RUSER parameter of
+* The **Receive user** field corresponds to the RUSER parameter of
     the CFTSEND or SEND command.
-- The **Local user parameter** field corresponds to the COMMENT parameter
+* The **Local user parameter** field corresponds to the COMMENT parameter
     of the CFTSEND or SEND command for a send transaction or the COMMENT parameter
     of the CFTRECV or RECV command for a receive transaction.
 
 The **Send partner** (SPART) field contains:
 
-- For a send, the
+* For a send, the
     local partner, the PART parameter of the CFTPARM object
-- For a receive,
+* For a receive,
     the partner identifier, the ID parameter of the CFTPART object
 
 The **Receive partner** (RPART) field contains:
 
-- For a receive,
+* For a receive,
     the local partner, the PART parameter of the CFTPARM object
-- For a send, the
+* For a send, the
     partner identifier, the ID parameter of the CFTPART object
 
 The commands have the same syntax as CFTUTIL:
@@ -157,13 +157,13 @@ Comment \*/
 
 The commands are processed as follows:
 
-- If the criteria
+* If the criteria
     file is not found, the exit-list generates a file opening error
-- The criteria file
+* The criteria file
     must contain at least one SEND command or one RECV command
-- All the commands
+* All the commands
     present must include at least one parameter
-- The absence of
+* The absence of
     a SEND or RECV command implicitly means **no selection**. In the absence
     of a SEND command, no send transfer (SFD, SFH records, etc.) is selected.
     In the absence of a RECV command, no receive transfer (RFD, RFH records,
@@ -182,9 +182,9 @@ significant items such as the filename, which depends on the selected version.
 
 629 is the minimum length. If n&lt;629 or n>4096, the default value 1569 is used.
 
-- SEND = selection
+* SEND = selection
     criteria for send transfers
-- RECV = selection
+* RECV = selection
     criteria for received transfers:
-    -   STATE: transfer
+    *   STATE: transfer
         status

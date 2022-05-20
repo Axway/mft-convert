@@ -21,7 +21,7 @@ Before installing or upgrading, make sure you have obtained a license for {{< Tr
 
 For information on applying a license key post installation, or if you have a problem with your license key, refer to the appropriate Troubleshooting topic.
 
-- [Windows: Applying a license key](license_key_win)
+* [Windows: Applying a license key](license_key_win)
      
 
 ### Multi-node license keys
@@ -34,16 +34,16 @@ For information on applying a license key post installation, or if you have a pr
 
 You can use a single key for a multi-node installation, as either:
 
-- The hostname must not be defined for the key, or
-- The hostname defined for the key matches the hostname of one of the hosts that composes the multi-node instance
+* The hostname must not be defined for the key, or
+* The hostname defined for the key matches the hostname of one of the hosts that composes the multi-node instance
 
 Additionally, the key must have the cluster option.
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} in a multi-node architecture requires a shared file system for use of a multi-node architecture on several hosts (active/active). Additionally, the system must be configured prior to the multi-node installation, and the shared disk ready when starting the Copilot server.
 
-- *Windows only*: You must map the shared disk to a drive letter.
-- *Windows only*: The Copilot Service Mode cannot be started as the LocalSystem account.
-- *Windows only*: If you are running Copilot in Service Mode, you must set up a dependency with the shared disk's service for multi-node.
+* *Windows only*: You must map the shared disk to a drive letter.
+* *Windows only*: The Copilot Service Mode cannot be started as the LocalSystem account.
+* *Windows only*: If you are running Copilot in Service Mode, you must set up a dependency with the shared disk's service for multi-node.
 
 ## End User License Agreement
 
@@ -55,12 +55,12 @@ Verify that you can access Axway support at [support.axway.com](https://support.
 
 Log in to download or access:
 
-- The product installation package
-- Your product license key
-- Product documentation
-- Product updates, including patches and service packs
-- Product announcements
-- Axway Supported Platforms Guide
-- The case center, to open a new case or to track opened cases
+* The product installation package
+* Your product license key
+* Product documentation
+* Product updates, including patches and service packs
+* Product announcements
+* Axway Supported Platforms Guide
+* The case center, to open a new case or to track opened cases
 
 You can also access other resources, such as articles in the Knowledge Base, the Axway User Forum, and documentation for all Axway products.

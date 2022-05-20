@@ -13,9 +13,9 @@ weight: 1820
 
 Use of the pre-connection phase. Available only in requester mode.
 
-- Yes: the pre-connection phase
+* Yes: the pre-connection phase
     is used. The requester sends a message.
-- No: This phase is not used. No message
+* No: This phase is not used. No message
     is sent.
 
 [Return to Command index](../../)

@@ -4,9 +4,9 @@ linkTitle: "Build the Transfer CFT environment"
 weight: 220
 ---After installation, you must configure Transfer CFT to declare the:
 
-- Network environment
-- Partners with which you wish to perform transfers
-- Actions to trigger for each event
+* Network environment
+* Partners with which you wish to perform transfers
+* Actions to trigger for each event
 
 ****Mandatory files****
 
@@ -16,9 +16,9 @@ Transfer CFT behavior is determined by the contents of two indexed files, the PA
 
 Optional environment files include:
 
-- COMMUNICATION: required to use file-based communication
-- LOG: used to record all Transfer CFT events
-- ACCOUNT: used to record all information concerning terminated transfers
+* COMMUNICATION: required to use file-based communication
+* LOG: used to record all Transfer CFT events
+* ACCOUNT: used to record all information concerning terminated transfers
 
 For more information, refer to the Transfer CFT 3.0.1 User's guide or online help.
 
@@ -26,8 +26,8 @@ For more information, refer to the Transfer CFT 3.0.1 User's guide or online hel
 
 The CFT_SCEN: directory contains a set of basic Transfer CFT configuration files.
 
-- ****cft-tcp.conf****: File containing the sample partners’ configuration
-- ****cft-tcp-part.conf****: File containing the sample configuration
+* ****cft-tcp.conf****: File containing the sample partners’ configuration
+* ****cft-tcp-part.conf****: File containing the sample configuration
 
 To configure Transfer CFT, you must create your own configuration file. For more information, refer to the Transfer CFT online documentation.
 

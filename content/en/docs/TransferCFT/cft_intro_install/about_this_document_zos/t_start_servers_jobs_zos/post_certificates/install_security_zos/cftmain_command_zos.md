@@ -4,15 +4,15 @@ linkTitle: "CFTMAIN controlled commands"
 weight: 360
 ---This section lists the Transfer CFT z/OS CFTUTIL commands, and additional object and class information for:
 
-- Users with all rights except for the ALL_CAT object
+* Users with all rights except for the ALL_CAT object
 
 <!-- -->
 
-- Users with all rights to the ALL_CAT object
+* Users with all rights to the ALL_CAT object
 
 <!-- -->
 
-- Users with all rights
+* Users with all rights
 
 ## User with all right except for the ALL_CAT object
 

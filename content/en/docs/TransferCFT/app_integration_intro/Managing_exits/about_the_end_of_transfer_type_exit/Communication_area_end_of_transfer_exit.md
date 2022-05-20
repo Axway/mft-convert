@@ -6,19 +6,19 @@ weight: 350
 communication area contains the fields which are described in the tables
 below:
 
-- [General
+* [General
     information](#General_information_fields)
-- [Local
+* [Local
     file information](#Local_file_information_fields)
-- [Network
+* [Network
     file information](#Network_file_information)
-- [Transfer
+* [Transfer
     information](#Transfer_information)
-- [Information
+* [Information
     returned by the user (in update mode)](#Information_returned_by_the_user)
-- [Information
+* [Information
     input/returned by the user](#Information_input_returned_by_the_user)
-- [Additional
+* [Additional
     information](#Additional_information)
 
 The following tables list all the fields of the communication structure.
@@ -112,21 +112,21 @@ PeSIT only
 
 Profile:
 
-- D: PESIT
+* D: PESIT
     E (DMZ)
-- C: PESIT
+* C: PESIT
     D CFT
-- S: PESIT
+* S: PESIT
     D SIT
-- A: PESIT
+* A: PESIT
     E
 
 prottyp
 
 Protocol type:
 
-- P: PeSIT
-- O: ODETTE
+* P: PeSIT
+* O: ODETTE
 
 rappl
 

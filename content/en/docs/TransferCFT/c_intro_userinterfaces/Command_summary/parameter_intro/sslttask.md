@@ -18,10 +18,10 @@ value), additional sessions are evenly distributed between all SSL tasks.
 
 The following values are supported:
 
-- ****1****
+* ****1****
     to ****64****
     for all operating systems other than Windows
-- ****1****
+* ****1****
     to ****1000**** for Windows
 
 [Return to Command index](../../)

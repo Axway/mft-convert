@@ -17,11 +17,11 @@ not have a defined [trk](../trk) value.
 
 Select one of the following options:
 
-- ****NO****: the monitor never sends Tracked
+* ****NO****: the monitor never sends Tracked
     Instances to Sentinel. Default value.
-- ****ALL****: for each step of each transfer
+* ****ALL****: for each step of each transfer
     process, the monitor sends a Tracked Instance to Sentinel.
-- ****SUMMARY****: for both the initial step and
+* ****SUMMARY****: for both the initial step and
     the final step of each transfer process, the monitor sends a Tracked Instance
     to Sentinel.
 

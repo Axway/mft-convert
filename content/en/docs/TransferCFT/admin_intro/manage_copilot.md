@@ -217,19 +217,19 @@ Use these parameter to configure the REST API server. See also [Transfer CFT RES
 
 This section describes how to install the certificates that are required to enable:
 
-- Transfer CFT UI (web browser-based)
-- REST API  
+* Transfer CFT UI (web browser-based)
+* REST API  
 
 The basic steps are:
 
-- Install a certificate on the server side
-- Install a certificate on the client side
-- Connect to Copilot using an SSL connection
+* Install a certificate on the server side
+* Install a certificate on the client side
+* Connect to Copilot using an SSL connection
 
 ### Operating system specific limitations
 
-- For z/OS, certificates can be USS or sequential files.
-- For IBM i (OS/400), certificates must be native files if you have enabled the REST API interface. If only Copilot is enabled, IFS files are supported (as in the previous version).
+* For z/OS, certificates can be USS or sequential files.
+* For IBM i (OS/400), certificates must be native files if you have enabled the REST API interface. If only Copilot is enabled, IFS files are supported (as in the previous version).
 
 <span id="Install"></span>
 

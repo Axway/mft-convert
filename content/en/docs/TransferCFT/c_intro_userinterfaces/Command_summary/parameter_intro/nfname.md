@@ -23,14 +23,14 @@ file with versions.
 
 The file is transferred providing the following conditions are met:
 
-- The
+* The
     receiver partner authorizes the sender site (requester or server) to set
     the physical name of the file to be received (this name is defined from
     parameter settings such as FNAME=&NFNAME)
-- The
+* The
     file designated by NFNAME exists
-- The receiver partner must support the use of PI37 as a network identifier, for example in Axway Gateway and SecureTransport
-- The maximum length is 512 when PeSIT PROF=ANY, however this value it truncated to 80 characters when PeSIT PROF=CFT
+* The receiver partner must support the use of PI37 as a network identifier, for example in Axway Gateway and SecureTransport
+* The maximum length is 512 when PeSIT PROF=ANY, however this value it truncated to 80 characters when PeSIT PROF=CFT
 
 #### CFTRECV, RECV
 
@@ -48,11 +48,11 @@ file with versions.
 
 The file is transferred providing the following conditions are met:
 
-- The
+* The
     sender partner authorizes the receiver site (requester or server) to set
     the physical name of the file to be sent (this name is defined from
     parameter settings such as FNAME=&NFNAME)
-- On z/OS system, the
+* On z/OS system, the
     version number of the GDG file corresponds to the version number of the
     receiver file + 1
 
@@ -66,18 +66,18 @@ parameter settings such as FNAME=&NFNAME).
 
 The following variables may be used to form the NFNAME character string:
 
-- &FDATE,
+* &FDATE,
     &FTIME, &FYEAR, &FMONTH, &FDAY
-- &SPART,
+* &SPART,
     &RPART, &PART, &NPART, &GROUP
-- &SUSER,
+* &SUSER,
     &RUSER
-- &SAPPL,
+* &SAPPL,
     &RAPPL
-- &IDF,
+* &IDF,
     &PARM, &IDA
-- &NIDF
-- &BDATE,
+* &NIDF
+* &BDATE,
     &BTIME, &BYEAR, &BMONTH, &BDAY
 
 The ‘&’ character here replaces the char_symb character specific

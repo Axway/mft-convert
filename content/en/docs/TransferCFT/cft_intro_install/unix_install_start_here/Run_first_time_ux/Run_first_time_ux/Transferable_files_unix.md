@@ -6,10 +6,10 @@ weight: 320
 topic describes the Transfer
 CFT parameters that are specific to UNIX concerning the characteristics of a transferable file.
 
-- Characteristics of files automatically detected (or not) on transmission
-- FTYPE and FCODE values implicitly
+* Characteristics of files automatically detected (or not) on transmission
+* FTYPE and FCODE values implicitly
     associated during transmission
-- FTYPE and FRECFM values on receipt
+* FTYPE and FRECFM values on receipt
 
 #### Characteristics of files automatically detected on transmission
 
@@ -63,9 +63,9 @@ FTYPE = J refers to stream text. The stream text type allows sending a text file
 These values are either given explicitly in the CFTRECV command or deduced
 from the protocol values received.
 
-- On request Transfer CFT performs an access control on the files transferred.
+* On request Transfer CFT performs an access control on the files transferred.
     It determines, for example, if the initiator of the send request has read
     access rights on the file to be sent.
-- On receipt, Transfer CFT creates the file if it does not exist.
-- The organization, FORG, of the files sent or received by Transfer CFT
+* On receipt, Transfer CFT creates the file if it does not exist.
+* The organization, FORG, of the files sent or received by Transfer CFT
     is sequential.

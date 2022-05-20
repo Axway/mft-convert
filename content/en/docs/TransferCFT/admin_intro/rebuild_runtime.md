@@ -16,12 +16,12 @@ weight: 170
 
 Where:
 
-- -p --profile : Regenerates the profile file
-- -n &lt;name> : Regenerates the profile file with &lt;name> of your choice
-- --uconf: Regenerates the uconf file.
-- -h --help: Displays this help.
-- --runtime: Creates a new runtime environment.
-- --inst: Creates an initial runtime environment, only when run by the Synchrony Installer.
+* -p --profile : Regenerates the profile file
+* -n &lt;name> : Regenerates the profile file with &lt;name> of your choice
+* --uconf: Regenerates the uconf file.
+* -h --help: Displays this help.
+* --runtime: Creates a new runtime environment.
+* --inst: Creates an initial runtime environment, only when run by the Synchrony Installer.
 
 ******Example******
 
@@ -37,15 +37,15 @@ cftruntime --uconf /home/Transfer_CFT/home /home/Transfer_CFT/runtime
 
 Where:
 
-- cft-install-dir: Is the full Transfer CFT install path and must exist.
-- cft-runtime-dir: Is the full Transfer CFT runtime path and does not exist.
+* cft-install-dir: Is the full Transfer CFT install path and must exist.
+* cft-runtime-dir: Is the full Transfer CFT runtime path and does not exist.
 
 Usage:
 
-- -profile: Creates a new profile.bat and backs up the old one.
-- -name: Creates a new profile with the &lt;name> of your choice.
-- -uconf: Regenerates the uconf file.
-- -inst: Creates the initial runtime environment, which is used exclusively by the Installer.
+* -profile: Creates a new profile.bat and backs up the old one.
+* -name: Creates a new profile with the &lt;name> of your choice.
+* -uconf: Regenerates the uconf file.
+* -inst: Creates the initial runtime environment, which is used exclusively by the Installer.
 
 > **Note**
 >
@@ -73,10 +73,10 @@ To disable integrity control for the UCONF dictionary, add the `-mac=no` paramet
 
 Unix syntax:
 
-- `cftruntime <cft-install-dir> <cft-runtime-dir> [-profile&#124;-n <name> --uconf --mac=no`
-- `cftruntime <cft-install-dir> <cft-runtime-dir> [-profile&#124;-n <name> --inst --mac=no`
+* `cftruntime <cft-install-dir> <cft-runtime-dir> [-profile&#124;-n <name> --uconf --mac=no`
+* `cftruntime <cft-install-dir> <cft-runtime-dir> [-profile&#124;-n <name> --inst --mac=no`
 
 Windows syntax:
 
-- `cftruntime <cft-install-dir> <cft-runtime-dir> [-profile&#124;-n <name> -uconf -mac=no`
-- `cftruntime <cft-install-dir> <cft-runtime-dir> [-profile&#124;-n <name> -inst -mac=no`
+* `cftruntime <cft-install-dir> <cft-runtime-dir> [-profile&#124;-n <name> -uconf -mac=no`
+* `cftruntime <cft-install-dir> <cft-runtime-dir> [-profile&#124;-n <name> -inst -mac=no`

@@ -29,7 +29,7 @@ USING <verb>
 
 Where:
 
-- CFTx indicates:
+* CFTx indicates:
 
 > -   CFTI:
 >     {{< TransferCFT/axwayvariablesComponentShortName >}} catalog querying services
@@ -41,12 +41,12 @@ Where:
 > -   CFTC:
 >     transfer services without syntax analysis
 
-- &lt;verb> is the  command
+* &lt;verb> is the  command
     you want to process
-- &lt;blk> is the internal control block
-- &lt; is a character string of
+* &lt;blk> is the internal control block
+* &lt; is a character string of
     variable length that contains the function parameters>param
-- &lt;rc> is the return code
+* &lt;rc> is the return code
 
 The variables described in this documentation are defined in the ****cftapi.cop**** file supplied in the library
 of delivered modules. The programming example and the corresponding COPY

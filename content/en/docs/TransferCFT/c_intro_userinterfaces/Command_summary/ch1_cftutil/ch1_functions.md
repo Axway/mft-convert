@@ -4,8 +4,8 @@ linkTitle: "Functions"
 weight: 210
 ---The function expression syntax is modeled on the following, while still respecting basic command rules:
 
-- A unique keyword that identifies the function (id_func). This keyword is always preceded by the character _ (underscore).
-- Two invariable identifier parameters: PARM and RC. The PARM parameter specifies the function call, and RC provides an execution report.
+* A unique keyword that identifies the function (id_func). This keyword is always preceded by the character _ (underscore).
+* Two invariable identifier parameters: PARM and RC. The PARM parameter specifies the function call, and RC provides an execution report.
 
 ```
 <id_func> PARM = ([<value>,] \* <value>), RC = <value>
@@ -26,7 +26,7 @@ PRINT MSG = CHAIN​​,
 
 #### Parameters
 
-- STR: Character string to be displayed. If the string contains blanks it must be enclosed in quotes. The string may contain a variable reference between two % characters (percent sign).
+* STR: Character string to be displayed. If the string contains blanks it must be enclosed in quotes. The string may contain a variable reference between two % characters (percent sign).
 
 #### Example
 
@@ -39,11 +39,11 @@ CHAR name = CHAINE, size = 16, init = 'ABCDEF'
 
 General functions include:
 
-- _Rand: Returns a random number
-- _MemSet: Initializes data
-- _MemCpy: Copies data
-- _StrCpy: Recopies the CHAR variable
-- _StrCmp: Compares the CHAR variables
+* _Rand: Returns a random number
+* _MemSet: Initializes data
+* _MemCpy: Copies data
+* _StrCpy: Recopies the CHAR variable
+* _StrCmp: Compares the CHAR variables
 
 ### Function _RAND
 
@@ -57,9 +57,9 @@ _RAND PARM = (VAR, Valmin, ValMax)
 
 #### Parameters
 
-- VAR: The name of a variable of type LONG which will be stored in the random number.
-- ValMin: The lower limit for the generated random number.
-- ValMax: The upper limit of the generated random number.
+* VAR: The name of a variable of type LONG which will be stored in the random number.
+* ValMin: The lower limit for the generated random number.
+* ValMax: The upper limit of the generated random number.
 
 #### Examples
 
@@ -83,9 +83,9 @@ _MEMSET PARM = (VAR, CODE, LG)
 
 Enter the parameter value in upper case.
 
-- VAR: The name of the CHAR type variable that is filled.
-- CODE: ASCII code of the fill character
-- LG: Fill length.
+* VAR: The name of the CHAR type variable that is filled.
+* CODE: ASCII code of the fill character
+* LG: Fill length.
 
 #### Examples
 
@@ -108,9 +108,9 @@ _MEMCPY PARM = (VAR, STR, LG)
 
 Enter the parameter value in upper case.
 
-- VAR: The name of the CHAR variable destination.
-- STR: The name of a variable of type CHAR source.
-- LG: The number of characters that are recopied.
+* VAR: The name of the CHAR variable destination.
+* STR: The name of a variable of type CHAR source.
+* LG: The number of characters that are recopied.
 
 #### Example
 
@@ -133,8 +133,8 @@ STR = CHAIN,
 
 #### Parameters
 
-- VAR: The name of the CHAR variable that is copied to the string STR. Check that the length of VAR is greater than the STR.
-- STR: Character string to be copied to the variable VAR.
+* VAR: The name of the CHAR variable that is copied to the string STR. Check that the length of VAR is greater than the STR.
+* STR: Character string to be copied to the variable VAR.
 
 #### Example
 
@@ -158,9 +158,9 @@ RC = CMP
 
 #### Parameters
 
-- VAR1: The name of the first CHAR variable to compare.
-- VAR2: The name of the second CHAR variable to compare.
-- CMP: Name variable of type LONG which will store the result of the comparison of VAR1 VAR2 with. If the strings are identical CMP = 0 if the strings are different CMP = 1.
+* VAR1: The name of the first CHAR variable to compare.
+* VAR2: The name of the second CHAR variable to compare.
+* CMP: Name variable of type LONG which will store the result of the comparison of VAR1 VAR2 with. If the strings are identical CMP = 0 if the strings are different CMP = 1.
 
 #### Example
 

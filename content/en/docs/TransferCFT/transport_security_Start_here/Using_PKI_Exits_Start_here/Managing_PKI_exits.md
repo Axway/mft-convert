@@ -6,21 +6,21 @@ weight: 210
 PKI exits work in Transfer CFT transport security. PKI processes and concepts
 include:
 
-- [PKI
+* [PKI
     exit fields](#PKI_exit_fields)
-- [Creating
+* [Creating
     an SSL task](#Creating_an_SSL_task)
-- [Terminating
+* [Terminating
     an SSL task](#Terminating_an_SSL_task)
-- [Opening
+* [Opening
     an SSL task](#Opening_an_SSL_task)
-- [Sending
+* [Sending
     a CA list](#Getting_a_CA_list_to_be_sent)
-    -   [Getting
+    *   [Getting
         a certificate to be sent](#Getting_a_certificate_to_be_sent)
-    -   [Checking
+    *   [Checking
         a received certificate](#Checking_a_received_certificate)
-- [Encrypting with the private
+* [Encrypting with the private
     key](#Encrypting_with_the_private_key)
 
 An exit is a point in a software program at
@@ -55,9 +55,9 @@ The cftpkie function is systematically called in the StartTask
 phase. According to the Transfer CFT configuration and operating system,
 an SSL task:
 
-- Manages one or
+* Manages one or
     more sessions (SSLMTASK and SSLTTASK parameters)
-- Can be executed
+* Can be executed
     and then stopped by the monitor (SSLWTASK parameter)
 
 Each SSL task created generates a call to the cftpkie function,
@@ -205,24 +205,24 @@ session. It is enhanced as the handshake phase progresses.
 
 It also contains:
 
-- Two SSL task references
+* Two SSL task references
     (long integer); one of the references (unique) is supplied by Transfer
     CFT; the other is returned by the cftpkie function in the StartTask
     phase
-- Two SSL session
+* Two SSL session
     references (long integer); one of the references (unique for a given task)
     is supplied by Transfer CFT; the other is returned by the cftpkie
     function in the StartHandshake phase
-- A public area available
+* A public area available
     to the cftpkie function; this area (4 KB) is unique for all the
     contexts of the same task; this area is not modified by Transfer CFT between
     two calls to the cftpkie function, even for two different contexts;
     two SSL tasks do not point to the same public area
-- A private area
+* A private area
     available to the cftpkie function; this area is private to a context;
     its size is returned by the cftpkie function in the StartTask
     phase
-- 64-byte global
+* 64-byte global
     area available to the cftpkie function; this area is sent in the
     other Transfer CFT exit communication structures (file, directory and
     end of transfer exits); the contents of this area must be set when returned

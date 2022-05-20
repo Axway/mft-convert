@@ -20,18 +20,18 @@ Once the catalog exceeds the minimum alert level, it can be expanded to the amou
 
 If you defined a limit for catalog alerts, TLVCLEAR, once the usage surpasses the allotted value one of the following occurs:
 
-- The catalog is expanded and a message sent to the log, but no script is executed
-- The catalog is expanded, a message is sent to the log, and the TLVCEXEC script executes.
+* The catalog is expanded and a message sent to the log, but no script is executed
+* The catalog is expanded, a message is sent to the log, and the TLVCEXEC script executes.
 
 #### Steps
 
 To enable the auto-expand option, with {{< TransferCFT/axwayvariablesComponentShortName  >}} running:
 
 1. Set the uconf values for:
-    -   `cft.cftcat.auto_expand_percent `
-    -   `cft.cftcat.auto_expand_max_size`
+    *   `cft.cftcat.auto_expand_percent `
+    *   `cft.cftcat.auto_expand_max_size`
 1. To activate the new values, run the command: CFTUTIL reconfig type = uconf
-    -   If {{< TransferCFT/axwayvariablesComponentShortName >}} is stopped when setting uconf values, you do not need to execute the reconfig command.
+    *   If {{< TransferCFT/axwayvariablesComponentShortName >}} is stopped when setting uconf values, you do not need to execute the reconfig command.
 
 
 | Parameter  | Default  | Description  |
@@ -42,21 +42,21 @@ To enable the auto-expand option, with {{< TransferCFT/axwayvariablesComponentSh
 
 Related parameters:
 
-- TLVCLEAR: Level below which the alert stops.
-- TLVCEXEC: Batch to execute when the alert ends.
-- TLVWRATE: The minimum amount of time, in seconds, to wait before resending an alert.
-- TLVWEXEC: Batch to execute when CFTCAT/TLVWARN is reached.
-- TLVWARN: Catalog usage limit before issuing an alert. When this limit is reached, the CFTCAT/TLVWEXEC is executed.
+* TLVCLEAR: Level below which the alert stops.
+* TLVCEXEC: Batch to execute when the alert ends.
+* TLVWRATE: The minimum amount of time, in seconds, to wait before resending an alert.
+* TLVWEXEC: Batch to execute when CFTCAT/TLVWARN is reached.
+* TLVWARN: Catalog usage limit before issuing an alert. When this limit is reached, the CFTCAT/TLVWEXEC is executed.
 
 ****Example****
 
 The example is based on the following settings:
 
-- catalog size = 100
-- cft.cftcat.auto_expand_percent = 20
-- cft.cftcat.auto_expand_max_size = 140
-- TLVCLEAR = 70
-- TLVWARN = 80
+* catalog size = 100
+* cft.cftcat.auto_expand_percent = 20
+* cft.cftcat.auto_expand_max_size = 140
+* TLVCLEAR = 70
+* TLVWARN = 80
 
 When you reach the TLVWARN (level=80%), the following messages are sent to the log:
 
@@ -132,9 +132,9 @@ The second letter refers to the state (CFTSTATE).
 
 **Normal mode**
 
-- \(H\) Transfer phase and hold phasestep, or Transfer phase and kill phasestep
-- \(T\) Ack phase and all phasesteps
-- \(X\) Done phase and Done phasestep
+* \(H\) Transfer phase and hold phasestep, or Transfer phase and kill phasestep
+* \(T\) Ack phase and all phasesteps
+* \(X\) Done phase and Done phasestep
 
 > **Note**
 >
@@ -142,9 +142,9 @@ The second letter refers to the state (CFTSTATE).
 
 **Compatibility mode**
 
-- \(H\) Hold, keep, or preprocessing status
-- \(T\) Completed status
-- \(X\) Executed status
+* \(H\) Hold, keep, or preprocessing status
+* \(T\) Completed status
+* \(X\) Executed status
 
 #### Purge using UCONF settings
 
@@ -239,8 +239,8 @@ CFTSEND ID=CLEANUP,FNAME=<FILENAME>,FACTION=DELETE
 
 If you would additionally like to delete the catalog records, as well as the file after it's transfer (defined according to the transfer state).
 
-- The FDELETE option removes the file once the catalog record is deleted.
-- You can use the DELETE=YES option in conjunction with FDELETE to remove both the file and the record.
+* The FDELETE option removes the file once the catalog record is deleted.
+* You can use the DELETE=YES option in conjunction with FDELETE to remove both the file and the record.
 
 For example, to remove both the file and the record when sending a file.
 

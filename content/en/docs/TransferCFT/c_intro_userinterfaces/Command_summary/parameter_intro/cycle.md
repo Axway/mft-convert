@@ -18,9 +18,9 @@ expressed in minutes, days, or months as defined in the [tcycle](../tcycle) fiel
 
 Enter one of the following values:
 
-- 0
+* 0
     (default value)
-- any other value
+* any other value
     from 0 to 32767
 
 #### CFTPROT

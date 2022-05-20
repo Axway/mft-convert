@@ -13,9 +13,9 @@ weight: 2130
 The ncharset is the destination file encoding that is used on a file
 to encode or decode network data.
 
-- On the sender side, fcharset is used to read a file. You then use the ncharset to encode this into network data when sending a file.
+* On the sender side, fcharset is used to read a file. You then use the ncharset to encode this into network data when sending a file.
     &lt;/li>
-- On the receiver side, fcharset is the local file encoding used to write a file that has this type of encoding. The ncharset is used to decode network data when receiving a file.
+* On the receiver side, fcharset is the local file encoding used to write a file that has this type of encoding. The ncharset is used to decode network data when receiving a file.
     &lt;/li>
 
 **Example 1**

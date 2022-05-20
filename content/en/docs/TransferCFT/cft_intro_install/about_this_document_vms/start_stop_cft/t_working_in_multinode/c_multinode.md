@@ -9,9 +9,9 @@ To summarize, when a fail over occurs the external Transfer CFT is oblivious to 
 
 Multi-node benefits include:
 
-- Horizontal scalability: increased transfer flow capacity
-- High availability: active/active including patch management on an active cluster, and automatic node restart after fail over
-- Traffic management: balancing load between nodes through an external load balancer or DNS
+* Horizontal scalability: increased transfer flow capacity
+* High availability: active/active including patch management on an active cluster, and automatic node restart after fail over
+* Traffic management: balancing load between nodes through an external load balancer or DNS
 
 > **Note**
 >
@@ -21,8 +21,8 @@ Multi-node benefits include:
 
 Transfer CFT in multi-node architecture requires:
 
-- One key per node must have the cluster option, and if there is more than one host you require at least one valid key per host
-- A shared file system for use of a multi-node architecture on several hosts. Additionally, the system must be configured prior to the multi-node installation and the shared disk ready when starting the Transfer CFT Copilot server.
+* One key per node must have the cluster option, and if there is more than one host you require at least one valid key per host
+* A shared file system for use of a multi-node architecture on several hosts. Additionally, the system must be configured prior to the multi-node installation and the shared disk ready when starting the Transfer CFT Copilot server.
 
 ## Architecture
 
@@ -44,10 +44,10 @@ A shared file system is a file system resource that is shared by several hosts.
 
 ### General architectural overview
 
-- Transfer CFT provides a ****node manager**** per host that monitors every node and checks that its nodes are active. If a node goes down, the node manager detects the inactivity and takes over that node's activity.
-- In addition to the node manager Transfer CFT provides a ****connection dispatcher**** that listens on the Transfer CFT server port, and monitors incoming traffic.
-- For multiple nodes to be able to access the same files, using the same set configuration, the system requires the use of a shared file system. The shared disk provides communication, configuration, partners, data flows, internal datafiles and nodes.
-- Incoming flow passes by a load balancer. Note that the exiting flow does not pass through an external load balancer.
+* Transfer CFT provides a ****node manager**** per host that monitors every node and checks that its nodes are active. If a node goes down, the node manager detects the inactivity and takes over that node's activity.
+* In addition to the node manager Transfer CFT provides a ****connection dispatcher**** that listens on the Transfer CFT server port, and monitors incoming traffic.
+* For multiple nodes to be able to access the same files, using the same set configuration, the system requires the use of a shared file system. The shared disk provides communication, configuration, partners, data flows, internal datafiles and nodes.
+* Incoming flow passes by a load balancer. Note that the exiting flow does not pass through an external load balancer.
 
 ## Architectural component details
 
@@ -77,26 +77,26 @@ All runtime data are stored on a shared file system.
 
 The following internal datafiles are shared between nodes:
 
-- Parameter internal datafile (CFTPARM)
-- Partners internal datafile (CFTPART)
-- PKI base (CFTPKU)
-- Main communication media file (CFTCOM)
-- Unified Configuration (UCONF)
+* Parameter internal datafile (CFTPARM)
+* Partners internal datafile (CFTPART)
+* PKI base (CFTPKU)
+* Main communication media file (CFTCOM)
+* Unified Configuration (UCONF)
 
 The following internal datafiles are node specific, and the filename is flagged by the node identifier:
 
-- Catalog (cftcata00, cftcata01,...) located in &lt;cft_runtime_dir>/data
-- Communication media file (cftcom00, cftcom01,...) located in &lt;cft_runtime_dir>/data
-- Log files (cftlog00, cftlog01,...) located in &lt;cft_runtime_dir>/log
-- Output file (cft00.out, cft01.out,...) located in &lt;cft_runtime_dir>/run
-- Account file (cftaccnt00, cftaccnt01,...) located in &lt;cft_runtime_dir>/accnt
+* Catalog (cftcata00, cftcata01,...) located in &lt;cft_runtime_dir>/data
+* Communication media file (cftcom00, cftcom01,...) located in &lt;cft_runtime_dir>/data
+* Log files (cftlog00, cftlog01,...) located in &lt;cft_runtime_dir>/log
+* Output file (cft00.out, cft01.out,...) located in &lt;cft_runtime_dir>/run
+* Account file (cftaccnt00, cftaccnt01,...) located in &lt;cft_runtime_dir>/accnt
 
 ## Node recovery overview
 
 There are two possibilities when a node manager detects a node failure:
 
-- If it is a local node fail over, the node manager automatically attempts to restart the node on the local server.
-- If it is a remote node fail over, the node manager waits for the remote node manager to restart the node. If the remote node manager does not restart the node  before the timeout, the local node manager will restart the node on the local server.
+* If it is a local node fail over, the node manager automatically attempts to restart the node on the local server.
+* If it is a remote node fail over, the node manager waits for the remote node manager to restart the node. If the remote node manager does not restart the node  before the timeout, the local node manager will restart the node on the local server.
 
 After the node is restarted, whether local or remote, it will complete all transfer requests that were active when the failure occurred.
 
@@ -110,9 +110,9 @@ When a node receives an incoming request - a transfer receive, restart, acknowle
 
 Possible scenarios include:
 
-- If another node has the catalog record, the node retrieves it and perform the transfer.
-- If no nodes have the record, an error is returned.
-- If any one of the nodes does not respond, the requesting node continues to retry all nodes until the session's timeout. Once the timeout is reached, the node ends the connection. After this, the remote partner retries the request according to its retry parameters.
+* If another node has the catalog record, the node retrieves it and perform the transfer.
+* If no nodes have the record, an error is returned.
+* If any one of the nodes does not respond, the requesting node continues to retry all nodes until the session's timeout. Once the timeout is reached, the node ends the connection. After this, the remote partner retries the request according to its retry parameters.
 
 In the case of node failure during the transfer recovery process, the catalog record is locked in both catalogs until both nodes are available for recovery.
 
@@ -120,8 +120,8 @@ In the case of node failure during the transfer recovery process, the catalog re
 
 The synchronous communication media is not available in multi-node environment. If a synchronous communication media is enabled when the multi-node architecture is enabled, the Transfer CFT will not be able to start. Additionally note the following restrictions:
 
-- Transfer acceleration is not available in server mode.
-- Bandwidth control is calculated by node.
-- Accounting statistics are generated by node.
-- Nodes are not automatically re-balanced when a host is recovered after a failure.
-- Duplicate file detection is not supported.
+* Transfer acceleration is not available in server mode.
+* Bandwidth control is calculated by node.
+* Accounting statistics are generated by node.
+* Nodes are not automatically re-balanced when a host is recovered after a failure.
+* Duplicate file detection is not supported.

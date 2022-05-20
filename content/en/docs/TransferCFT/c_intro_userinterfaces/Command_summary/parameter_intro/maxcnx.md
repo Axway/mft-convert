@@ -14,11 +14,11 @@ weight: 1890
 The maximum number of simultaneous connections that {{< TransferCFT/axwayvariablesComponentShortName  >}} accepts
 to establish on a given network resource.
 
-- Enter
+* Enter
     a value between 0 and 2 times the MAXTRANS
     value
-- Recommended value is the same as the MAXTRANS value
-- Default = 384
+* Recommended value is the same as the MAXTRANS value
+* Default = 384
 
 > **Note**
 >

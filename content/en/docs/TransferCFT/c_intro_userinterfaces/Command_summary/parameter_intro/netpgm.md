@@ -13,7 +13,7 @@ weight: 2190
 Name of the executable file initializing the resource. Used by some
 UNIX systems.
 
-- Value = ****string
+* Value = ****string
     32****
 
  

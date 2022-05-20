@@ -4,9 +4,9 @@ linkTitle: "Specific z/OS exits in Transfer CFT"
 weight: 290
 ---This section describes exits in Transfer CFT z/OS, and includes information about:
 
-- Exit lists
-- File-type Exits
-- Calling APIs in Exits
+* Exit lists
+* File-type Exits
+* Calling APIs in Exits
 
 ## Exit lists
 
@@ -22,42 +22,42 @@ This section provides additional information required to construct exits under z
 
 Transfer CFT provides the following types exits:
 
-- Directory (\*)=A
-- File (\*)=F
-- Beginning-of-transfer (\*)=B
+* Directory (\*)=A
+* File (\*)=F
+* Beginning-of-transfer (\*)=B
 
 <!-- -->
 
-- End-of-transfer (\*)=E
+* End-of-transfer (\*)=E
 
 (\*) In the following descriptions, the ‘\*’ character refers to the four exits, and is replaced with one of the four characters (A, E, F, or B) as applicable.
 
 An exit is a program comprising 3 parts:
 
-- The exit monitor, which is delivered with Transfer CFT
+* The exit monitor, which is delivered with Transfer CFT
 
 <!-- -->
 
-- The ‘EX\*INI’ program
+* The ‘EX\*INI’ program
 
 <!-- -->
 
-- The main program whose address is returned by the EX\*INI program
+* The main program whose address is returned by the EX\*INI program
 
 The ‘EX\*INI’ program and the main program are written by the Transfer CFT user, and then LINK EDITED with the exit server.
 
 The 'EX\*INI' INIT function name is determined by the exit type:
 
-- EXAINI: directory type
+* EXAINI: directory type
 
 <!-- -->
 
-- EXFINI: file type
-- EXBINI: beginning-of-transfer type
+* EXFINI: file type
+* EXBINI: beginning-of-transfer type
 
 <!-- -->
 
-- EXEINI: end of transfer type
+* EXEINI: end of transfer type
 
 The exit program is dynamically loaded by Transfer CFT on the first request. It is executed in the same way as an OS monitor. You may write the programs in ASSEMBLER 370, IBM C or COBOL, *or* C and COBOL together.
 
@@ -73,19 +73,19 @@ Exits are called in problem mode and with a user key. They have the same privile
 
 The SGTRACE 512 debug option allows you to obtain the following information in the SGTRACE file, before each call to the processing function:
 
-- ‘EX\*3RUN-PARM1-5’: 5 words in hexadecimal characters:
+* ‘EX\*3RUN-PARM1-5’: 5 words in hexadecimal characters:
 
 <!-- -->
 
-- Word 1:  processing address
+* Word 1:  processing address
 
 <!-- -->
 
-- Words 2 to 5: addresses of the 4 received parameters
+* Words 2 to 5: addresses of the 4 received parameters
 
 <!-- -->
 
-- ‘EX\*3RUN-DUMPCTX: 32 or nnn bytes in hexadecimal characters
+* ‘EX\*3RUN-DUMPCTX: 32 or nnn bytes in hexadecimal characters
 
 The first 32 bytes (SGTRACE=512) or the whole parameter field (SGTRACE=544) submitted to the exit are listed. If an ABEND occurs during the exit, the Transfer CFT error processing function takes control. A brief diagnosis of the error is displayed on the z/OS console.
 
@@ -105,12 +105,12 @@ SGAB09E: TASK-AC =CFTEXInn , KCB =xx , PRV =xx ,SGSAVE =xxSAVE = Saveaddr MODULE
 
 Additionally, the following are valid for the example:
 
-- The Transfer CFT internal trace is edited in the SGSTAE file
-- A dump is made, depending on the MAXDUMP value
-- If Transfer CFT detects a lack of response from the exit, then the transfer is placed in the HOLD status
+* The Transfer CFT internal trace is edited in the SGSTAE file
+* A dump is made, depending on the MAXDUMP value
+* If Transfer CFT detects a lack of response from the exit, then the transfer is placed in the HOLD status
 
 For an exit in COBOL or C, the diagnostics are also available in the 'CEEDUMP' file.
 
 ****Related topics****
 
-- [Managing exits]()
+* [Managing exits]()

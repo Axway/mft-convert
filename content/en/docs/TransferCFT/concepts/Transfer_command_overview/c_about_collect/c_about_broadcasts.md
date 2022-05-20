@@ -44,24 +44,24 @@ following figure.*
 To broadcast a file from a store and forward site, the following conditions
 are then required and sufficient:
 
-- the initial sender
+* the initial sender
     defines a virtual partner with an ID corresponding to the ID of the CFTDEST
     command managed on the store and forward site. The values of the OMINTIME
     and OMAXTIME parameters of the CFTPART command are set to zero to force
     the routing of transfers to the store and forward site (intermediate partner
     IPART : ID_B). A file to be broadcast from the store and forward site
     is sent by the command SEND PART=ID_CD ...
-- the store and forward
+* the store and forward
     node must have a CFTDEST command, the identifier of which (ID=ID_CD) is
     the network name of the broadcasting list indicated by the initial partner
     (SEND PART=ID_CD)
-- the CFTDEST object
+* the CFTDEST object
     must comply with the syntax imposed by {{< TransferCFT/axwayvariablesComponentShortName >}} ([FOR](../../../../c_intro_userinterfaces/command_summary/parameter_intro/for)=COMMUT
     parameter).
-- the final receivers
+* the final receivers
     C and D know the initial sender of the file (CFTPART ID=ID_A,...) and
     the store and forward partner B
-- the connections
+* the connections
     established between partners must be complied with at each of the network
     nodes (CFTPART ID=...)
 
@@ -131,13 +131,13 @@ IPART=B).
 To acknowledge a broadcasting list, the following conditions are then
 required to route the acknowledgement to the initial partner:
 
-- the connections
+* the connections
     established between partners must be complied with at each of the network
     nodes (CFTPART ID =...)
-- at the store and
+* at the store and
     forward node, all the catalog records corresponding to the previously
     performed broadcasting, are present
-- at the store and
+* at the store and
     forward node, all the catalog records corresponding to the previously
     performed broadcasting, indicate that the receiving partners have correctly
     received the file or message (SFT transfer state)

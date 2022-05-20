@@ -18,18 +18,18 @@ You can use {{< TransferCFT/suitevariablesFlowManager  >}} or Central Governance
 
 ### Additional documentation
 
-- Axway Supported Platforms
-- {{< TransferCFT/suitevariablesFlowManager >}} documentation
-- {{< TransferCFT/suitevariablesCentralGovernanceName >}} documentation
+* Axway Supported Platforms
+* {{< TransferCFT/suitevariablesFlowManager >}} documentation
+* {{< TransferCFT/suitevariablesCentralGovernanceName >}} documentation
 
 ## Governance exchanges
 
 The following types of exchanges occur between {{< TransferCFT/suitevariablesCentralGovernanceName  >}} or {{< TransferCFT/suitevariablesFlowManager  >}} and the managed Transfer CFTs:
 
-- Flow management
-- Certificate management
-- Configuration management
-- Update management
+* Flow management
+* Certificate management
+* Configuration management
+* Update management
 
 See [Exchanges with Central Governance](../cg_postregister) for more information.
 
@@ -37,13 +37,13 @@ See [Exchanges with Central Governance](../cg_postregister) for more information
 
 Begin by planning your MFT architecture and deployment strategy. After installing {{< TransferCFT/suitevariablesCentralGovernanceName  >}} or {{< TransferCFT/suitevariablesFlowManager  >}}, the following steps occur:
 
-- In the {{< TransferCFT/axwayvariablesComponentLongName >}} installation select the Central Governance connectivity option
-- After installing, start the Transfer CFT Copilot server (the Transfer CFT server can be running, but this is optional)
-- Registration occurs automatically on Copilot start up
-- From {{< TransferCFT/suitevariablesCentralGovernanceName >}} or {{< TransferCFT/suitevariablesFlowManager >}} start the Transfer CFT(s)
-- If you migrated or upgraded, you may want to reference the following sections:
-    -   [Manually activate Central Governance connectivity](../register_cg)
-    -   Parameter mapping between products
+* In the {{< TransferCFT/axwayvariablesComponentLongName >}} installation select the Central Governance connectivity option
+* After installing, start the Transfer CFT Copilot server (the Transfer CFT server can be running, but this is optional)
+* Registration occurs automatically on Copilot start up
+* From {{< TransferCFT/suitevariablesCentralGovernanceName >}} or {{< TransferCFT/suitevariablesFlowManager >}} start the Transfer CFT(s)
+* If you migrated or upgraded, you may want to reference the following sections:
+    *   [Manually activate Central Governance connectivity](../register_cg)
+    *   Parameter mapping between products
 
 <span id="Feature"></span>
 
@@ -83,5 +83,5 @@ Transfer CFTs running under {{< TransferCFT/suitevariablesCentralGovernanceName 
 
 Legacy flows refer to former flow definitions available in migrated {{< TransferCFT/axwayvariablesComponentLongName  >}} systems. Central Governance or {{< TransferCFT/suitevariablesFlowManager  >}} can manage the following use cases:
 
-- Via the Central Governance or {{< TransferCFT/suitevariablesFlowManager >}} user interface, you can add and manage partners, and use send and receive templates for a given Transfer CFT.
-- You can migrate Transfer CFT flow definitions to the Central Governance or {{< TransferCFT/suitevariablesFlowManager >}} flow-management process.
+* Via the Central Governance or {{< TransferCFT/suitevariablesFlowManager >}} user interface, you can add and manage partners, and use send and receive templates for a given Transfer CFT.
+* You can migrate Transfer CFT flow definitions to the Central Governance or {{< TransferCFT/suitevariablesFlowManager >}} flow-management process.

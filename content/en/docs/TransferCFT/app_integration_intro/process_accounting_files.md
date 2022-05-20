@@ -10,9 +10,9 @@ weight: 240
 
 {{< TransferCFT/suitevariablesTransferCFTName  >}} provides an include file, `cftcnt.h`, that provides the account file record structure to be used by the program. Depending on the operating system, the file is located in:
 
-- UNIX, Windows, HP NonStop, and IBM i (IFS): &lt;installdir>/home/inc
-- z/OS: Distrib..H (CFTCNT)
-- Openvms: D$CFT_INST:[INC]
+* UNIX, Windows, HP NonStop, and IBM i (IFS): &lt;installdir>/home/inc
+* z/OS: Distrib..H (CFTCNT)
+* Openvms: D$CFT_INST:[INC]
 
 ### Source samples
 
@@ -44,10 +44,10 @@ To generate a sample file for example on UNIX:
 
 The EXACCT executable file is automatically stored in:
 
-- UNIX, HP NonStop, IBM i (IFS): &lt;installdir>/runtime/bin/EXACCT &lt;account file name>
-- Windows: &lt;installdir>\\runtime\\bin\\EXACCT &lt;account file name>
-- OpenVMS: d$cft_run:[bin]
-- IBM i (OS/400): CFTPGM library
+* UNIX, HP NonStop, IBM i (IFS): &lt;installdir>/runtime/bin/EXACCT &lt;account file name>
+* Windows: &lt;installdir>\\runtime\\bin\\EXACCT &lt;account file name>
+* OpenVMS: d$cft_run:[bin]
+* IBM i (OS/400): CFTPGM library
 
 objects are created
 

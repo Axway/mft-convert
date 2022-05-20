@@ -6,7 +6,7 @@ weight: 260
 
 ## Error code categories
 
-- [Diagnostic codes](about_diagnostic_codes)
-- [PKIUTIL utility codes](pkiutil_error_codes)
-- [CFTUTIL utility codes](cftutil_utility_messages)
-- [Synchronous communication error codes](synch_comm_return_codes)
+* [Diagnostic codes](about_diagnostic_codes)
+* [PKIUTIL utility codes](pkiutil_error_codes)
+* [CFTUTIL utility codes](cftutil_utility_messages)
+* [Synchronous communication error codes](synch_comm_return_codes)

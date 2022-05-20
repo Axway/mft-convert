@@ -12,7 +12,7 @@ weight: 1960
 
 The maximum authorized number of transfers in parallel. When using multi node, this is the number of transfers per node.
 
-- 1 to **1000** for all operating systems (256 default)
+* 1 to **1000** for all operating systems (256 default)
 
 This value sets the physical limit for the product independently of
 the limit set by the software key.

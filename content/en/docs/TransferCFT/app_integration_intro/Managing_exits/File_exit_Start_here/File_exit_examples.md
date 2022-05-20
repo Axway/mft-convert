@@ -114,13 +114,13 @@ to select one of the functions in the exfini initialization function.
 
 The EXFxmp1 user functions:
 
-- Take charge of
+* Take charge of
     file-access
-- Take control at
+* Take control at
     each step
-- Send 50 records
+* Send 50 records
     ("!!!!! AZERTYUIOP !!!!!...") of 80 bytes
-- Interrupt the
+* Interrupt the
     transfer (ret1 = 9) after 4 consecutive transfers
 
 The EXIT task is deactivated after 5 minutes inactivity (WAITTASK =
@@ -130,11 +130,11 @@ task).
 
 The EXFxmp2 user function:
 
-- Does not take charge
+* Does not take charge
     of file access
-- Sends the EXFXMP1.C
+* Sends the EXFXMP1.C
     file (in the active directory)
-- Replaces the first
+* Replaces the first
     byte of each non empty record with the ‘?’ character
 
 This sample is delivered with the {{< TransferCFT/axwayvariablesComponentShortName  >}} product.

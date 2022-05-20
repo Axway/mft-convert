@@ -8,14 +8,14 @@ Transfer CFT implements Google Cloud Storage services using the C++ Client Libra
 
 ## Limitations
 
-- Available on Linux-x86-64 and Windows operating systems.
-- Available for PeSIT and SFTP transfers exclusively.
-- Does not support FACTION=RETRYRENAME.
-- The FACTION=ERASE parameter setting is ignored.
-- Folder monitoring is not supported with Google Cloud Storage.
-- You cannot access a file on GCS from the Transfer CFT graphical user interface.
-- When writing a file to GCS, the file will be sent in parts at each checkpoint (see PACING). Each part is the FNAME suffixed with the extension ".part%d" where "%d" is a number that identifies the part. At the end of the transfer, all parts are concatenated.
-- The CFTTFIL task performs synchronous requests to Google Cloud. To perform parallel transfers, it is recommended that you increase the CFTPARM MAXTASK parameter and set CFTPARM TRANTASK to 1.
+* Available on Linux-x86-64 and Windows operating systems.
+* Available for PeSIT and SFTP transfers exclusively.
+* Does not support FACTION=RETRYRENAME.
+* The FACTION=ERASE parameter setting is ignored.
+* Folder monitoring is not supported with Google Cloud Storage.
+* You cannot access a file on GCS from the Transfer CFT graphical user interface.
+* When writing a file to GCS, the file will be sent in parts at each checkpoint (see PACING). Each part is the FNAME suffixed with the extension ".part%d" where "%d" is a number that identifies the part. At the end of the transfer, all parts are concatenated.
+* The CFTTFIL task performs synchronous requests to Google Cloud. To perform parallel transfers, it is recommended that you increase the CFTPARM MAXTASK parameter and set CFTPARM TRANTASK to 1.
 
 <span id="Set"></span>
 
@@ -108,16 +108,16 @@ When an issue occurs with Google Cloud Storage, a message displays in the CFTLOG
 
 If your credentials were not found:
 
-- Log: `CFTF30W GCS error: 2(UNKNOWN) - Could not automatically determine credentials. `
-- DIAGC:` 'GCS error: 2(UNKNOWN) - Could not automatically determine credentials. `
+* Log: `CFTF30W GCS error: 2(UNKNOWN) - Could not automatically determine credentials. `
+* DIAGC:` 'GCS error: 2(UNKNOWN) - Could not automatically determine credentials. `
 
 <!-- -->
 
-- Please refer to the Google Cloud [Application Default Credentials](https://cloud.google.com/docs/authentication/production) documentation.
+* Please refer to the Google Cloud [Application Default Credentials](https://cloud.google.com/docs/authentication/production) documentation.
 
 If a file is not available on Google Cloud Storage to SEND:
 
-- DIAGC: `'GCS error: 2 (No such file or directory) - 5(NOT_FOUND) - No such object: my-bucket/FTEST'`
+* DIAGC: `'GCS error: 2 (No such file or directory) - 5(NOT_FOUND) - No such object: my-bucket/FTEST'`
 
 ### GCS CLI
 

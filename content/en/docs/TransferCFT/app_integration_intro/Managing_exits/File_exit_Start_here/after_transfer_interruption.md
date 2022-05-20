@@ -4,11 +4,11 @@ linkTitle: "Stage After a transfer interruption"
 weight: 380
 ---This event occurs if there is a:
 
-- Mains supply cut
+* Mains supply cut
     or protocol fault
-- Request by one
+* Request by one
     of the partners (HALT or KEEP command)
-- Request by the
+* Request by the
     user function during one of the previous stages (ret1 = 9)
 
 If the user function manages file accessing, it must de-allocate the

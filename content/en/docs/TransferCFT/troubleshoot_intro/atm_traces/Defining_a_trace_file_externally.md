@@ -67,9 +67,9 @@ that do not allow dynamic file definition.
 This command, which is associated with a unique identifier, performs
 the following tasks:
 
-- Defines and describes
+* Defines and describes
     the conditions for starting and selecting traced data
-- Associates a file
+* Associates a file
     identifier, already defined by the SETTRC command, with this trace which
     designated the file in which the traces will be stored
 
@@ -111,11 +111,11 @@ This parameter is only relevant if the parameter **START = CFT**.
 The chosen value is a mask (logical OR) combination of the desired values.
 These values are:
 
-- 1: Trace of the
+* 1: Trace of the
     request field passed by Transfer CFT to the exit executive
-- 2: Trace of the
+* 2: Trace of the
     user work field
-- 4: Trace of the
+* 4: Trace of the
     data field
 
 <span id="Using_the_stop_trace_command"></span><span id="About_the_STOPTRC_command"></span>
@@ -191,13 +191,13 @@ it with empty useable content.
 
 Type of operation to be carried out on the file:
 
-- CREATE: Create
+* CREATE: Create
     and initialize a trace file that does not yet exist.  
     If the file already exists, this operation is refused
-- REPLACE: Reinitialize
+* REPLACE: Reinitialize
     an existing trace file.  
     If the file does not already exist, it is created
-- DELETE: Delete
+* DELETE: Delete
     a trace file
 
 `TRCFNAM = filename`
@@ -208,9 +208,9 @@ Name of the trace file.
 
 Type of trace file for which an operation is requested:
 
-- STANDARD: Sequential
+* STANDARD: Sequential
     file (fixed record size)
-- CIRCULAR: Direct
+* CIRCULAR: Direct
     file (fixed record size)
 
 `[TRCLREC = {0   &#124; 1024 &#124; n}]`
@@ -219,9 +219,9 @@ Size of records contained in the trace file.
 
 This parameter is:
 
-- Mandatory when
+* Mandatory when
     TRCFTYP = CIRCULAR, with a default value of 0
-- Optional when TRCFTYP
+* Optional when TRCFTYP
     = STANDARD with a default value of 1024
 
 `[TRCNREC = n]`
@@ -230,9 +230,9 @@ Number of useable records contained in the direct file.
 
 This parameter is:
 
-- Mandatory when
+* Mandatory when
     **TRCFTYP = CIRCULAR**
-- Not applicable
+* Not applicable
     when **TRCFTYP = STANDARD**
 
 `TYPE = TRACE`
@@ -243,9 +243,9 @@ Operation on a trace file.
 
 The SETTRC command:
 
-- Defines and describes
+* Defines and describes
     a trace file, which can be available to store captured information
-- Associates an identifier
+* Associates an identifier
     with this file and description, which allows it to be identified uniquely,
     if the user wishes to distribute several trace types into several different
     files
@@ -270,11 +270,11 @@ descriptor defined by this set of parameters.
 Operation to be performed on the ‘‘trace file" entry designated
 by the ID parameter:
 
-- CREATE: Create
+* CREATE: Create
     an entry, and possibly the file
-- REPLACE: Replace
+* REPLACE: Replace
     the file with another one for the same entry
-- CLOSE: Delete an
+* CLOSE: Delete an
     entry, the file will then be closed
 
 Where **MODE = CLOSE**, only the **ID** parameter is useful.
@@ -289,10 +289,10 @@ Character string maximum length: 64 characters.
 
 Trace file type:
 
-- STANDARD: Sequential
+* STANDARD: Sequential
     file written in "extend".  
     The new records are written after the old ones
-- CIRCULAR: Direct
+* CIRCULAR: Direct
     access file, with a set number of fixed-length records.  
     This file is accessed through a circular up-date, the new records overwriting
     the old ones
@@ -303,11 +303,11 @@ Length of trace file’s physical records.
 
 This parameter is:
 
-- Mandatory if TRCFTYP
+* Mandatory if TRCFTYP
     = CIRCULAR  
     Concatenation and segmentation algorithms make it possible to manage
     the real - essentially variable - size of data to be written to this file
-- Optional if TRCFTYP
+* Optional if TRCFTYP
     = STANDARD (sequential file, with fixed-size records)
 
 `[TRCNREC = n]`
@@ -316,7 +316,7 @@ Number of trace file records.
 
 This parameter is:
 
-- Mandatory if TRCFTYP
+* Mandatory if TRCFTYP
     = CIRCULAR
-- Not applicable
+* Not applicable
     if TRCFTYP = STANDARD

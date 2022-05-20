@@ -6,16 +6,16 @@ weight: 240
 
 This page describes how to configure Transfer CFT in a multi-node architecture to use Secure Relays:
 
-- Install {{< TransferCFT/axwayvariablesComponentLongName >}} in a multi-node, multi-host architecture
-- Install 2 or more SecureRelay Router Agents (use the same CA and USER certificate as the Master Agent)
-- Enable Secure Relay and configure Java
-- Set the listening ports
-- Configure additional {{< TransferCFT/axwayvariablesComponentLongName >}} objects
-    -   Network object CFTNET
-    -   Protocol object CFTPROT
-    -   Partner object CFTPART and CFTTCP
-- Install and configure a load balancer (to use for incoming connections)
-- Example architectures schema
+* Install {{< TransferCFT/axwayvariablesComponentLongName >}} in a multi-node, multi-host architecture
+* Install 2 or more SecureRelay Router Agents (use the same CA and USER certificate as the Master Agent)
+* Enable Secure Relay and configure Java
+* Set the listening ports
+* Configure additional {{< TransferCFT/axwayvariablesComponentLongName >}} objects
+    *   Network object CFTNET
+    *   Protocol object CFTPROT
+    *   Partner object CFTPART and CFTTCP
+* Install and configure a load balancer (to use for incoming connections)
+* Example architectures schema
 
 ## Prerequisites
 
@@ -25,8 +25,8 @@ Follow the server-side load balancer instructions to install and configure the 
 
 Follow the installation instructions provided in the [Secure Relay RA Installation Guide](https://docs.axway.com/bundle/SecureRelay_271_InstallationGuide_allOS_en_PDF/resource/SecureRelayRA_InstallationGuide_allOS_en_PDF.pdf). During installation, it is essential that you configure the Router Agent CA and user certificate as follows to enable secure communication between the Master Agent and Router Agent:
 
-- `<CACertificate>CA_for_RA.der</CACertificate>`
-- `<UserCertificate>USER_for_RA.p12</UserCertificate>`
+* `<CACertificate>CA_for_RA.der</CACertificate>`
+* `<UserCertificate>USER_for_RA.p12</UserCertificate>`
 
 You need these values when you configure the Master Agent in the {{< TransferCFT/axwayvariablesComponentLongName  >}} configuration, where the user certificate that you use must be signed by `CA_for_RA`. You should use the same CA and USER certificate as for the Master Agent.
 
@@ -66,9 +66,9 @@ secure_relay.ra.1.outcall_network_interface =
 
 Configure the following UCONF parameters to enable the Master Agent communication with the Router Agent:
 
-- `secure_relay.ma.ca_cert_fname = <must be the same as the CA_for_RA.der value>`
-- `secure_relay.ma.cert_fname = <must be a P12 user certificate that is signed by the CA_for_RA.der>`
-- `secure_relay.ma.cert_password = <user certificate password>`
+* `secure_relay.ma.ca_cert_fname = <must be the same as the CA_for_RA.der value>`
+* `secure_relay.ma.cert_fname = <must be a P12 user certificate that is signed by the CA_for_RA.der>`
+* `secure_relay.ma.cert_password = <user certificate password>`
 
 ## Enable Secure Relay and configure the Java
 
@@ -106,9 +106,9 @@ In the scenario above if 4 nodes are configured in {{< TransferCFT/axwayvariable
 
 Additionally, for each node the comm_port also increments. That is, the `secure_relay.ra.N.comm_port` parameter, where N is an index.
 
-- N = 0: first RA
-- N =1: second RA
-- N = 2: third RA
+* N = 0: first RA
+* N =1: second RA
+* N = 2: third RA
 
 However, when you define the `secure_relay.ra.N.admin_port  `value, where N is an index, the value does not increment according to the number of nodes.
 
@@ -121,12 +121,12 @@ If a multi-node {{< TransferCFT/axwayvariablesComponentLongName  >}} has 4 nodes
 ### Create a CFTNET object
 
 1. Create a CFTNET object where:
-    -   TYPE = TCP
-    -   PROTOCOL = SR
+    *   TYPE = TCP
+    *   PROTOCOL = SR
 1. Define the RECALLHOST, HOST, and SSLTERM parameters.
-    -   RECALLHOST (mandatory): The host address on which the Master Agent calls Transfer CFT when Secure Relay receives an incoming call. If Transfer CFT and the Master Agent run of the same host, use the loopback network interface (for example, 127.0.0.1) instead of the public network interface.
-    -   HOST: Designates the network interface that is used on the Router Agent side. We recommend setting this to INADDR_ANY.
-    -   SSLTERM: Set this Boolean to YES to enable SSL termination.
+    *   RECALLHOST (mandatory): The host address on which the Master Agent calls Transfer CFT when Secure Relay receives an incoming call. If Transfer CFT and the Master Agent run of the same host, use the loopback network interface (for example, 127.0.0.1) instead of the public network interface.
+    *   HOST: Designates the network interface that is used on the Router Agent side. We recommend setting this to INADDR_ANY.
+    *   SSLTERM: Set this Boolean to YES to enable SSL termination.
 1. If there are existing CFTNET object(s), the class parameter must be different.
 
 ****Example****
@@ -154,8 +154,8 @@ MODE = 'REPLACE'
 
 This section describes the CFTPROT object, and how various parameters are related to enabling secure data transmission using Secure Relay.
 
-- CFTPROT is related to the CFTNET object through the NET parameter.
-- The SAP parameter is the listening port that is used on the RA side (using the CFTNET HOST parameter as the network interface).  
+* CFTPROT is related to the CFTNET object through the NET parameter.
+* The SAP parameter is the listening port that is used on the RA side (using the CFTNET HOST parameter as the network interface).  
     This value automatically increments by one per node, where the range is &lt;number of nodes>-1. Therefore, be certain that you do not use the ports in this range for another protocol.
 
 ****Example****

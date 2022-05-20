@@ -14,17 +14,17 @@ Additionally, when these programs create a file dynamically they grant all users
 
 In a live environment, the security manager can modify:
 
-- Program usage rights
-- User profile usage rights
-- Update rights for Transfer CFT service files (PARM, PART, CAT, COM, and optionally LOG and ACCNT files)
-- Update rights for source members, such as:
-- Source files that can be interpreted (particularly the configuration source file)
-- Source files to be submitted by Transfer CFT at the end of the transfer
+* Program usage rights
+* User profile usage rights
+* Update rights for Transfer CFT service files (PARM, PART, CAT, COM, and optionally LOG and ACCNT files)
+* Update rights for source members, such as:
+* Source files that can be interpreted (particularly the configuration source file)
+* Source files to be submitted by Transfer CFT at the end of the transfer
 
 The method used to address security issues for specific rights depends on the:
 
-- Number and diversity of the user profiles concerned by file transfers
-- Required level of data protection, since most constraints when using the product are associated with data confidentiality issues
+* Number and diversity of the user profiles concerned by file transfers
+* Required level of data protection, since most constraints when using the product are associated with data confidentiality issues
 
 There are no preset security rules, as Transfer CFT security issues are closely associated with the administration of the system on which Transfer CFT is installed.
 
@@ -45,8 +45,8 @@ The profile used to install the product must be in the \*SECOFR class.
 
 The APP1 user has the following special authorities:
 
-- \*JOBCTL
-- \*SPLCTL
+* \*JOBCTL
+* \*SPLCTL
 
 ****Example****
 

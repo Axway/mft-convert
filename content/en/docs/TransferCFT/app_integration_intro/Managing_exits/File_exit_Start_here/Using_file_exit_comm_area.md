@@ -4,31 +4,31 @@ linkTitle: "Using the communication structure"
 weight: 370
 ---The following topics describe the stages in a file transfer. These are:
 
-- [Before
+* [Before
     the file is allocated](#Before_the_File_is_Allocated)
-- [Before
+* [Before
     the file is opened](#Before_the_File_is_Opened)
-- [Before
+* [Before
     the start of the transfer](#Before_the_Start_of_the_Transfer)
-- [Before
+* [Before
     a record is sent or after it is received](#Before_a_Record_is_Sent_or_After_it_is_Received)
-- Before
+* Before
     repositioning
-- After
+* After
     a synchronization point
-- Before
+* Before
     the end of the file
-- Before
+* Before
     the file is closed
-- Before
+* Before
     the end of the transfer
-- After
+* After
     a transfer interruption
 
 Each stage is explained in a table as follows:
 
-- Fields to define - the first table indicates the fields that you must update
-- Field values - the second table indicates the
+* Fields to define - the first table indicates the fields that you must update
+* Field values - the second table indicates the
     values for each field of the communication area as seen from the sender
     or the receiver side before and after the call.  
 
@@ -417,12 +417,12 @@ handing back control to {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 At this stage (DATA_TYP) and before the record is sent or after it is
 received, the user function can perform the following operations:
 
-- Modify the record
+* Modify the record
     sent or to be sent
-- Insert one or more
+* Insert one or more
     records
-- Delete the record
-- Set the "END
+* Delete the record
+* Set the "END
     of FILE" event
 
 ### Fields to define

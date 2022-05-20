@@ -4,10 +4,10 @@ linkTitle: "Management utilities"
 weight: 280
 ---This topic describes the following management utilities:
 
-- [cftinit](#cftinit)
-- [cft start](#cftstart)
-- [cft stop](#cftstop)
-- [cftupdate](#cftupdate)
+* [cftinit](#cftinit)
+* [cft start](#cftstart)
+* [cft stop](#cftstop)
+* [cftupdate](#cftupdate)
 
 ## Management utilities descriptions
 
@@ -43,11 +43,11 @@ cftinit partners.cft the_rest.cft
 >
 >  
 
-- If no file name
+* If no file name
     is passed as a parameter, the program requests one or more file names
-- If no name is supplied,
+* If no name is supplied,
     the program stops
-- When you run `cftinit`, it creates the catalog and communication files. You can modify the default sizes of these files to suit your requirements by updating the uconf values for `cft.cftcat.default_size` and `cft.cftcom.default_size` (these values are expressed as a number of records).
+* When you run `cftinit`, it creates the catalog and communication files. You can modify the default sizes of these files to suit your requirements by updating the uconf values for `cft.cftcat.default_size` and `cft.cftcom.default_size` (these values are expressed as a number of records).
 
 <span id="cftstart"></span>
 
@@ -151,8 +151,8 @@ The `cftupdate` utility is used to update the configuration.
 >
 >  
 
-- You can only update
+* You can only update
     the CFTPART, CFTxxx (for the networks), CFTSEND cards, and so on.
-- This command should
+* This command should
     be considered to be an alias of CFTUTIL #&lt;filename> for each file
     name passed as a parameter in the command line.

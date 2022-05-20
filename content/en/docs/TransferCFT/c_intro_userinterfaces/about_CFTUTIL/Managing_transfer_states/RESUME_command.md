@@ -8,9 +8,9 @@ that has a *hold* phasestep, and has a diagnostic codes other than zero.
 
 The **requester** may either:
 
-- Restart the receive
+* Restart the receive
     operation, or
-- Start a new receive
+* Start a new receive
     operation
 
 Description:

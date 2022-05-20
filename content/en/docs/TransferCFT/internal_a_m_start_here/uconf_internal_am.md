@@ -30,15 +30,15 @@ Prior to {{< TransferCFT/axwayvariablesComponentLongName  >}} 3.8, internal acce
 
 The predefined roles privileges include:
 
-- **Administrator**: Full user access
-- **Helpdesk**: View the catalog and log
-- **Partner Manager**: Manage partners
-- **Designer**: Manage application flows
-- **Application**: Applications can request and manage transfers, and view the catalog
+* **Administrator**: Full user access
+* **Helpdesk**: View the catalog and log
+* **Partner Manager**: Manage partners
+* **Designer**: Manage application flows
+* **Application**: Applications can request and manage transfers, and view the catalog
 
 <!-- -->
 
-- **Custom**: Create new custom roles
+* **Custom**: Create new custom roles
 
 Please refer to the [*Transfer CFT *{{< TransferCFT/axwayvariablesReleaseNumber  >}} *Security Guide*](https://docs.axway.com/bundle/TransferCFT_36_SecurityGuide_allOS_en_HTML5/page/Content/security_guide/predefined_privileges.htm) for a complete list of privileges and roles. Log in is required. See also , which describes use cases and their configuration.
 
@@ -91,8 +91,8 @@ The following step overview was tested on a Windows operating system. You should
 
 <!-- -->
 
-- *Optionally* if you re activating internal mode from {{< TransferCFT/PrimaryCGorUM >}} or {{< TransferCFT/suitevariablesFlowManager >}}.
-- It is important that you perform this command *after* performing the previous steps.
+* *Optionally* if you re activating internal mode from {{< TransferCFT/PrimaryCGorUM >}} or {{< TransferCFT/suitevariablesFlowManager >}}.
+* It is important that you perform this command *after* performing the previous steps.
 
 ## Creating, modifying, and mapping roles
 
@@ -122,8 +122,8 @@ In the {{< TransferCFT/suitevariablesTransferCFTName  >}} user interface, access
 
 The {{< TransferCFT/axwayvariablesComponentLongName  >}} CFTROLE object is mapped to a user group using either:
 
-- `CFTROLE ID=<name of user group>`
-- ` CFTROLE ID= <name>, ALIASES=<name of user group>`
+* `CFTROLE ID=<name of user group>`
+* ` CFTROLE ID= <name>, ALIASES=<name of user group>`
 
 <span id="Mapping"></span>
 
@@ -171,9 +171,9 @@ Here, the new HELPDESK and APPLICATION roles override the predefined HELPDESK an
 
 This section describes three configuration scenarios when using [internal access management](#) with roles and privileges. Use cases include:
 
-- Predefined roles and privileges without the CFTPRIV and CFTROLE objects
-- Customized roles and privileges with the CFTPRIV and CFTROLE objects
-- Mixed-use of both predefined and custom CFTPRIV and CFTROLE objects
+* Predefined roles and privileges without the CFTPRIV and CFTROLE objects
+* Customized roles and privileges with the CFTPRIV and CFTROLE objects
+* Mixed-use of both predefined and custom CFTPRIV and CFTROLE objects
 
 In each scenario, there is a **user1** that belongs to **group1** and a **user2** that belongs to **group2**.
 
@@ -223,8 +223,8 @@ ROLE TRANSFER CFT PARTNERMANAGER
 
 **Results**
 
-- User1 has the custom Transfer CFT Administrator role defined in CFTROLE id='TRANSFER CFT ADMINISTRATOR',aliases=group1
-- User2 has the custom Transfer CFT Application role defined in CFTROLE id='TRANSFER CFT APPLICATION',aliases=group2
+* User1 has the custom Transfer CFT Administrator role defined in CFTROLE id='TRANSFER CFT ADMINISTRATOR',aliases=group1
+* User2 has the custom Transfer CFT Application role defined in CFTROLE id='TRANSFER CFT APPLICATION',aliases=group2
 
 ****Example 2: Use only predefined roles and privileges****
 
@@ -261,8 +261,8 @@ CFTU24W LISTPARM _ Warning ( Parameters no record selected / file empty)
 
 **Results**
 
-- User1 has the predefined Transfer CFT Administrator role
-- User2 has the predefined Transfer CFT Application role
+* User1 has the predefined Transfer CFT Administrator role
+* User2 has the predefined Transfer CFT Application role
 
 ****Example 3: Uses both predefined and customized CFTPRIV and CFTROLE objects****
 
@@ -312,5 +312,5 @@ ROLE TRANSFER CFT PARTNERMANAGER
 
 **Results**
 
-- User1 has the predefined Transfer CFT Administrator role
-- User2 has the custom Transfer CFT Application role defined in CFTROLE id='TRANSFER CFT APPLICATION',aliases=group2
+* User1 has the predefined Transfer CFT Administrator role
+* User2 has the custom Transfer CFT Application role defined in CFTROLE id='TRANSFER CFT APPLICATION',aliases=group2

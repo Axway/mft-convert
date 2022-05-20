@@ -18,11 +18,11 @@ You cannot use Transfer CFT Guardian 2.3.2 CFTUTIL commands with Transfer CFT {
 
 Three types of commands are available in the installed volume.&lt;subvolume>IX:
 
-- CFT: management commands to control the Transfer CFT product
-- CFTUTIL: the command line interface for Transfer CFT
-- CFTUTLX: the command line interface for Transfer CFT with INLINE parameters
-- PKIUTIL: the command line interface to manage the local PKI
-- PROFILE: customized file for accessing the other commands
+* CFT: management commands to control the Transfer CFT product
+* CFTUTIL: the command line interface for Transfer CFT
+* CFTUTLX: the command line interface for Transfer CFT with INLINE parameters
+* PKIUTIL: the command line interface to manage the local PKI
+* PROFILE: customized file for accessing the other commands
 
 A description of these commands is provided in *Transfer CFT {{< TransferCFT/PrimaryTransferCFTversionlong  >}} Users Guide.*
 
@@ -120,9 +120,9 @@ This generates a type 101 Guardian unstructured file.
 
 **Example**
 
-- In the following example, the variable “CFT^UTLOUT” is set before using CFTUTIL.
-- The command is launched.
-- The content of the file is then listed, and the variable is unset.
+* In the following example, the variable “CFT^UTLOUT” is set before using CFTUTIL.
+* The command is launched.
+* The content of the file is then listed, and the variable is unset.
 
 ```
 $SAS51 FORD36IX 3> push CFT^UTLOUT

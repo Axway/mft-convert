@@ -14,15 +14,15 @@ in store and forward mode transfer type
 Several partners
 via a direct connection, where the transfer type can be:
 
-- Broadcasting: for sending
+* Broadcasting: for sending
     (SEND command)
-- Collecting: for receiving (RECV command)
+* Collecting: for receiving (RECV command)
 
 Send transfers (SEND command) can also:
 
-- Combine store and
+* Combine store and
     forward and broadcasting
-- Activate broadcasting
+* Activate broadcasting
     on a store and forward site
 
 ### Direct transfer - partner recognition
@@ -30,9 +30,9 @@ Send transfers (SEND command) can also:
 The {{< TransferCFT/axwayvariablesComponentShortName  >}} mechanisms to be used to connect a requester to a server
 are:
 
-- Network and protocol
+* Network and protocol
     connection
-- Application connection -
+* Application connection -
     the SAP
 
 The {{< TransferCFT/axwayvariablesComponentShortName  >}} reciprocal recognition mechanism is then defined.
@@ -41,10 +41,10 @@ This mechanism is based on the names of each of the parties involved.
 To optimize use of the parameter setting possibilities, the following
 is indicated:
 
-- The {{< TransferCFT/axwayvariablesComponentShortName >}}
+* The {{< TransferCFT/axwayvariablesComponentShortName >}}
     parameters defining the names of the parties involved
-- The recognition
+* The recognition
     mechanism itself, based on the network names
-- In
+* In
     generic examples that display the various parameter settings possible
     for using this mechanism

@@ -6,10 +6,10 @@ weight: 170
 requester mode or server mode, as mentioned in the [Introduction](). This section describes the transfer steps
 in relation to each mode.
 
-- In
+* In
     requester mode, Transfer CFT initiates the connection with the partner
     following a local request.
-- In
+* In
     server mode, Transfer CFT replies to an incoming connection, re-sent
     by the system communication layers.
 

@@ -9,10 +9,10 @@ associated with the selected transfers, recorded in the Transfer CFT catalog.
 Depending on the value of the CONTENT parameter, the information is
 displayed in the form of:
 
-- Lists in which
+* Lists in which
     only the most important features of transfers appear CONTENT = BRIEF default
     value
-- Pages in which
+* Pages in which
     all the features of transfers appear CONTENT = FULL
 
 See also, [LISTCAT - Brief/Full catalog listings](../brief_catalog_listing).
@@ -23,17 +23,17 @@ and so on, is written on the standard output of the task.
 
 This command is used to display output for:
 
-- Static transfer
+* Static transfer
     information associated with the parameters of the SEND and RECV commands
-- Dynamic transfer
+* Dynamic transfer
     information such as the:
 
 <!-- -->
 
-- Transfer status
-- Number of items
+* Transfer status
+* Number of items
     transferred
-- Compression
+* Compression
     factor, etc.
 
 The command parameters are selection criteria. See also, LISTCAT/DISPLAY - Statistical variables.

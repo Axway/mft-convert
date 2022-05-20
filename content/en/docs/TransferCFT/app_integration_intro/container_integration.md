@@ -26,9 +26,9 @@ Definitions are provided by Kubernetes at: [https://kubernetes.io/docs/concepts]
 
 Your producer/consumer application integration with Transfer CFT is based on:
 
-- File storage: Where and how files transferred by Transfer CFT are shared with the application
-- Transfer triggering: How the application triggers a transfer request
-- Post-processing: How Transfer CFT handles post-processing
+* File storage: Where and how files transferred by Transfer CFT are shared with the application
+* Transfer triggering: How the application triggers a transfer request
+* Post-processing: How Transfer CFT handles post-processing
 
 ### File storage
 
@@ -54,8 +54,8 @@ The application and {{< TransferCFT/suitevariablesTransferCFTName  >}} run on di
 
 The application and {{< TransferCFT/suitevariablesTransferCFTName  >}} run on different nodes both of which support the **ReadWriteMany** access mode, where:
 
-- The Transfer CFT data resides on a persistent volume that can be a shared volume (Ceph, GlusterFS, NFS, ...).
-- The data produced and consumed by the application resides on a persistent volume that can be a shared volume (Ceph, GlusterFS, NFS, ...) or cloud storage (AWS S3, GCS). In this implementation, you configure the cloud storage at the flow deployment level, not in the product deployment.
+* The Transfer CFT data resides on a persistent volume that can be a shared volume (Ceph, GlusterFS, NFS, ...).
+* The data produced and consumed by the application resides on a persistent volume that can be a shared volume (Ceph, GlusterFS, NFS, ...) or cloud storage (AWS S3, GCS). In this implementation, you configure the cloud storage at the flow deployment level, not in the product deployment.
 
 ********Two pods two nodes architecture                    ![](/Images/TransferCFT/pod3.png)********
 
@@ -75,14 +75,14 @@ The application and {{< TransferCFT/suitevariablesTransferCFTName  >}} run on di
 
 In a standard environment, on bare metal, or virtual machines, an application can trigger transfers using the following methods:
 
-- Batch mode (CFTUTIL)
-- REST API
-- Folder monitoring
+* Batch mode (CFTUTIL)
+* REST API
+* Folder monitoring
 
 When using a container environment however, you cannot use batch mode since Transfer CFT is isolated in a container. Available methods include:
 
-- REST API
-- Folder monitoring
+* REST API
+* Folder monitoring
 
 ****Application invokes Transfer CFT REST APIs            ![](/Images/TransferCFT/trigger_restapi.png)****
 
@@ -98,9 +98,9 @@ When using a container environment however, you cannot use batch mode since Tran
 
 The application and Transfer CFT run in different containers. Therefore, for post-processing Transfer CFT can interact with the application by:
 
-- Invoking the application’s REST API using the cURL command in the post-processing script
-- Invoking a Kubernetes job using the Kubernetes API in the post-processing script
-- Storing a file in a directory monitored by the application
+* Invoking the application’s REST API using the cURL command in the post-processing script
+* Invoking a Kubernetes job using the Kubernetes API in the post-processing script
+* Storing a file in a directory monitored by the application
 
 ****Transfer CFT notifies the application using REST API          ![](/Images/TransferCFT/cft_container_app_post_processing.png)****
 

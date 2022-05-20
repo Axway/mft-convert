@@ -83,9 +83,9 @@ Use the [content](../../../c_intro_userinterfaces/command_summary/parameter_intr
 
 Where:
 
-- EXTRACT: Output suitable to enter in CFTUTIL
-- DEBUG: Additional information
-- PROPS: Property-like output
+* EXTRACT: Output suitable to enter in CFTUTIL
+* DEBUG: Additional information
+* PROPS: Property-like output
 
 ****Example 5****
 

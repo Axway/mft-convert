@@ -20,9 +20,9 @@ The network data code to use for sending transfers.
 Although there is no default value for this field, for each transfer
 it can implicitly take one of the following values:
 
-- BINARY
+* BINARY
     if FCODE=BINARY
-- ASCII
+* ASCII
     or EBCDIC, depending on the partner
     computer code deduced from the SYST
     field
@@ -32,14 +32,14 @@ determines the translation performed during a send transfer.
 
 The following values explicitly or implicitly determine the action:
 
-- If FCODE or NCODE
+* If FCODE or NCODE
     is equal to BINARY, no translation is performed
-- If not (the local
+* If not (the local
     data and the on-line data being assumed to be coded in ASCII or EBCDIC):
-- If NCODE is
+* If NCODE is
     equal to FCODE, ASCII/ASCII or EBCDIC/EBCDIC translation can only be performed
     with an external translation table (see the use of the XLATE parameter)
-- If NCODE is
+* If NCODE is
     not FCODE, ASCII/EBCDIC or EBCDIC/ASCII translation is always performed,
     whether by means of an external translation table or the {{< TransferCFT/axwayvariablesComponentShortName >}}
     internal translation table
@@ -54,14 +54,14 @@ The network data code for sending transfers. The default ' ' indicates BINARY (n
 
 The following values explicitly or implicitly determine the action:
 
-- If FCODE or NCODE
+* If FCODE or NCODE
     is equal to BINARY, no translation is performed
-- If NCODE is equal to FCODE, no ASCII/ASCII or EBCDIC/EBCDIC translation is performed
-- If NCODE is not equal FCODE **and FTYPE = T, X, O or J**, ASCII/EBCDIC or EBCDIC/ASCII translation is performed using either an external translation table or the internal Transfer CFT translation table
-    -   FTYPE = T (End of Line CRLF on Windows, LF on Unix)
-    -   FTYPE = X (End of line = LF)
-    -   FTYPE = O (End of line = CRLF)
-    -   FTYPE = J (Stream Text)
+* If NCODE is equal to FCODE, no ASCII/ASCII or EBCDIC/EBCDIC translation is performed
+* If NCODE is not equal FCODE **and FTYPE = T, X, O or J**, ASCII/EBCDIC or EBCDIC/ASCII translation is performed using either an external translation table or the internal Transfer CFT translation table
+    *   FTYPE = T (End of Line CRLF on Windows, LF on Unix)
+    *   FTYPE = X (End of line = LF)
+    *   FTYPE = O (End of line = CRLF)
+    *   FTYPE = J (Stream Text)
 
 Regardless of the FTYPE, when using SFTP, the end-of-line in the received file is Text type (CRLF on Windows, and LF on Unix).
 
@@ -78,14 +78,14 @@ The network data code when receiving transfers. The default ' ' indicates BINARY
 
 The following values explicitly or implicitly determine the action:
 
-- If FCODE or NCODE
+* If FCODE or NCODE
     is equal to BINARY, no translation is performed
-- If NCODE is equal to FCODE, no ASCII/ASCII or EBCDIC/EBCDIC translation is performed
-- If NCODE is not equal FCODE **and FTYPE = T, X, O or J**, ASCII/EBCDIC or EBCDIC/ASCII translation is performed using either an external translation table or the internal Transfer CFT translation table
-    -   FTYPE = T (End of Line CRLF on Windows, LF on Unix)
-    -   FTYPE = X (End of line = LF)
-    -   FTYPE = O (End of line = CRLF)
-    -   FTYPE = J (Stream Text)
+* If NCODE is equal to FCODE, no ASCII/ASCII or EBCDIC/EBCDIC translation is performed
+* If NCODE is not equal FCODE **and FTYPE = T, X, O or J**, ASCII/EBCDIC or EBCDIC/ASCII translation is performed using either an external translation table or the internal Transfer CFT translation table
+    *   FTYPE = T (End of Line CRLF on Windows, LF on Unix)
+    *   FTYPE = X (End of line = LF)
+    *   FTYPE = O (End of line = CRLF)
+    *   FTYPE = J (Stream Text)
 
 Regardless of the FTYPE, when using SFTP, the end-of-line in the received file is Text type (CRLF on Windows, and LF on Unix).
 
@@ -99,7 +99,7 @@ Code of data sent over the network.
 
 About translation during a transfer:
 
-- If a data translation must be performed, the translation table defined
+* If a data translation must be performed, the translation table defined
     by CFTXLATE will be used. For the sender, the translation is done from
     FCODE to NCODE, and for the receiver from NCODE to FCODE.
 

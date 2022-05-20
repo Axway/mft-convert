@@ -4,8 +4,8 @@ linkTitle: "Solaris: Customize the kernel"
 weight: 220
 ---This topic describes how to customize Solaris for {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
-- About resource controls
-- Selecting a project
+* About resource controls
+* Selecting a project
 
 <span id="Solaris_10"></span>
 

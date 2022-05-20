@@ -9,11 +9,11 @@ concerning correctly terminated transfers (T or X state).
 
 Two recording modes are available:
 
-- Recording data
+* Recording data
     in {{< TransferCFT/axwayvariablesComponentShortName >}} files. When the primary file is full, {{< TransferCFT/axwayvariablesComponentShortName >}}
     switches to an alternate file. This mode is available on all operating
     systems.
-- Recording data
+* Recording data
     in the files of the operating system accounting utility.
 
 To activate
@@ -23,7 +23,7 @@ object.
 ****Related
 topics****
 
-- Object concepts
+* Object concepts
     [How to define transfer
     accounting records](../../../../admin_intro/admin_config_commands/cftaccnt_concepts)
 

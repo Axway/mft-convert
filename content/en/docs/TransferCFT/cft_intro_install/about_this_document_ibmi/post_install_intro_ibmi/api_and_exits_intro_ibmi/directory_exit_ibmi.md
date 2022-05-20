@@ -25,24 +25,24 @@ your text editor (EDTF for example) as follows.
 
 You require the ICC and GMAKE utilities for IBM i platforms:
 
-- gmake: GNU compiler (make)
-- icc: Intel C/C++ compiler (calls ILE)
+* gmake: GNU compiler (make)
+* icc: Intel C/C++ compiler (calls ILE)
 
 ## Application components
 
 The *`<installdir>/runtime/src/exit/`* subdirectory contains several sample source
 modules. This program is used to check the following:
 
-- Activation
+* Activation
     of a transfer to a partner known to the directory EXIT but not to Transfer
     CFT
-- Activation
+* Activation
     of a transfer to a partner not known to either {{< TransferCFT/axwayvariablesComponentShortName >}} or the directory
     EXIT
 
 The *`<installdir>/lib`* subdirectory contains:
 
-- The` libcftexa.a`
+* The` libcftexa.a`
     module required to use the {{< TransferCFT/axwayvariablesComponentShortName >}} directory EXITs
 
 ## Generating the exit

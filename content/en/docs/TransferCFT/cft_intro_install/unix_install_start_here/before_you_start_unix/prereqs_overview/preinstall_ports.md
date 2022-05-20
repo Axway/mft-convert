@@ -28,9 +28,9 @@ The Internet Assigned Numbers Authority (IANA) reserves the TCP ports 1761-1768 
 
 Legend:
 
-- PeSIT (PESITANY protocol): PeSIT in plain text
-- SSL: PeSIT protocol over SSL/TLS
-- COMS: Synchronous transfers
-- Copilot: Provides access to {{< TransferCFT/axwayvariablesComponentShortName >}} UI server from an Internet browser
-- Copilot for {{< TransferCFT/suitevariablesCentralGovernanceName >}}: Provides secure access for{{< TransferCFT/PrimaryCGorUM >}} (mutual authentication)
-- {{< TransferCFT/PrimaryCGorUM >}}: Used to connect to Central Governance
+* PeSIT (PESITANY protocol): PeSIT in plain text
+* SSL: PeSIT protocol over SSL/TLS
+* COMS: Synchronous transfers
+* Copilot: Provides access to {{< TransferCFT/axwayvariablesComponentShortName >}} UI server from an Internet browser
+* Copilot for {{< TransferCFT/suitevariablesCentralGovernanceName >}}: Provides secure access for{{< TransferCFT/PrimaryCGorUM >}} (mutual authentication)
+* {{< TransferCFT/PrimaryCGorUM >}}: Used to connect to Central Governance

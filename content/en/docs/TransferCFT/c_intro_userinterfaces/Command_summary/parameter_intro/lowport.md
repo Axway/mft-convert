@@ -16,11 +16,11 @@ TCP/IP only.
 
 Defines the lower limit for the range of outgoing ports (value included).
 
-- Possible
+* Possible
     values: 0 to 65535  
     Selecting 0 enables the system
     to select the outgoing port number
-- Default
+* Default
     value is 5000
 
 #### CONFIG  TYPE=COM, MEDIACOM=TCPIP

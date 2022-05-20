@@ -34,14 +34,14 @@ To analyze an SSL frame, read the first 6 bytes:
 
 Where:
 
-- Content Type: determines the nature of the frame (0x: hexadecimal):
-    -   0x14 change_cipher_specs
-    -   0x15 alert
-    -   0x16 handshake
-    -   0x17 Application_Data
-- Version: Determines the version of SSL used.
-- Fragment length: specifies the length of the fragment.
-- Message Type: Determines the type of message.
+* Content Type: determines the nature of the frame (0x: hexadecimal):
+    *   0x14 change_cipher_specs
+    *   0x15 alert
+    *   0x16 handshake
+    *   0x17 Application_Data
+* Version: Determines the version of SSL used.
+* Fragment length: specifies the length of the fragment.
+* Message Type: Determines the type of message.
 
 ### Handshake frame alert
 
@@ -67,8 +67,8 @@ Where:
 
 This section presents two scenarios for establishing a session between client and server:
 
-- Double authentication: the server requires the client to identify.
-- Simple Authentication: server authentication only.
+* Double authentication: the server requires the client to identify.
+* Simple Authentication: server authentication only.
 
 ### Double Authentication
 

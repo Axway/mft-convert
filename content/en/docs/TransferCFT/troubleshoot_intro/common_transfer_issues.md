@@ -12,9 +12,9 @@ weight: 230
 
 The network link can break  during the connection phase or the transfer phase. If it occurs while trying to connect to the remote partner, remember that a remote partner is defined by 2 objects:
 
-- CFTPART: Provides the SAP (Service Access Point) corresponding to the remote listening port (in TCP) (this name refers to the OSI naming for a network endpoint whatever the network protocol).
+* CFTPART: Provides the SAP (Service Access Point) corresponding to the remote listening port (in TCP) (this name refers to the OSI naming for a network endpoint whatever the network protocol).
 
-- CFTTCP: As TCP is the main network protocol used in Transfer CFT, it provides the HOST (numeric address or domain name).
+* CFTTCP: As TCP is the main network protocol used in Transfer CFT, it provides the HOST (numeric address or domain name).
 
  Most issues come from an unreachable address or port. To solve or avoid these issues:
 
@@ -53,7 +53,7 @@ The network link can break  during the connection phase or the transfer phase. 
 
 Authentication implies having certificates and private keys. In Transfer CFT, these can be stored either in the local PKI database (CFT PKI) or in the PassPort PKI (PassPort PKI):
 
-- Local PKI database
+* Local PKI database
 
     In a Transfer CFT local PKI database, the private key is encrypted  by the PKIUTIL PKICER command (such as PKICER). the pkipassw parameter in the PKICER command is used to encrypt the private key in the local database  
     PKIUTIL PKICER ID=user1,iname=cert1.der,ikname=cert1k.der,pkipassw=&lt;password> .  
@@ -61,7 +61,7 @@ Authentication implies having certificates and private keys. In Transfer CFT, th
 
 <!-- -->
 
-- PassPort PKI
+* PassPort PKI
 
     The private key is stored in an entity and can be accessed, using the PASSW parameter. This parameter is the password of for the CFTSSL object and allows Transfer CFT to access the private key.  
     For more information on other common SSL errors, see [Troubleshoot security errors](../admin_troubleshooting_server/troubleshoot_security).
@@ -70,21 +70,21 @@ Authentication implies having certificates and private keys. In Transfer CFT, th
 
 When the network session is opened and if a secured connection is required (SSL handshake), you may have a protocol session. During the protocol exchange:
 
-- Connection
+* Connection
 
-- Select File
+* Select File
 
-- Open File
+* Open File
 
-- Data Transfer
+* Data Transfer
 
-- End of Data transfer
+* End of Data transfer
 
-- Close file
+* Close file
 
-- Deselect File
+* Deselect File
 
-- Disconnect
+* Disconnect
 
 Information and data are exchanged during these phases. If an error occurs, a 230 diagnostic is generated and the diagnostic protocol provides more information on the cause of the protocol error.  
 To find the cause of the error, it is highly recommended that you use the CFTATM traces with protocol trace on the server and on the client.

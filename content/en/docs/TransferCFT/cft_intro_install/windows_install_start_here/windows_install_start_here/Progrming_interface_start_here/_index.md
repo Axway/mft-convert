@@ -6,19 +6,19 @@ weight: 230
 Windows Application Programming Interfaces, and introduces concepts
 including:
 
-- [Product
+* [Product
     tool kit](#Product_toolkit)
-- [Before
+* [Before
     developing your first CFT API application](#Before_developing_your_first_CFT_API_application)
-- [Design
+* [Design
     constraints](#Design_constraints)
-- [Coding
+* [Coding
     constraints](#Coding_constraints)
-- [Compilation
+* [Compilation
     constraints](#Compilation_constraints)
-- [Linking
+* [Linking
     constraints](#Linking_constraints)
-- [Execution
+* [Execution
     constraints](#Execution_constraints)
 
 After installation, the` runtime\src` directory contains the API sources developed in C, Visual Basic, or DELPHI (capi, delphi, vb subfolders).
@@ -43,9 +43,9 @@ Before beginning to write {{< TransferCFT/axwayvariablesComponentShortName  >}} 
     APIs,.](../../../about_this_document_zos/using_apis)
 1. Familiarize yourself with the
     sample source files.
-    -   C: ..\\CFT\\API\\C\\SRC\\APISAMPL.C 
-    -   Delphi: ..\\CFT\\API\\DELPHI\\SAMPLE\\CFTAPIDP.DPR 
-    -   Visual Basic: ..\\CFT\\API\\VBASIC\\SAMPLE\\CFTAPIVB.VBP
+    *   C: ..\\CFT\\API\\C\\SRC\\APISAMPL.C 
+    *   Delphi: ..\\CFT\\API\\DELPHI\\SAMPLE\\CFTAPIDP.DPR 
+    *   Visual Basic: ..\\CFT\\API\\VBASIC\\SAMPLE\\CFTAPIVB.VBP
 1. Copy
     APISAMPL, CFTAPIDP or CFTAPIVB in the {{< TransferCFT/axwayvariablesComponentShortName >}} folder.
 1. Start
@@ -80,14 +80,14 @@ made by an application must be made in the same thread.
 
 A {{< TransferCFT/axwayvariablesComponentShortName  >}} API application must comply with two requirements:
 
-- When the application
+* When the application
     starts, but before a {{< TransferCFT/axwayvariablesComponentShortName >}} API is called, the {{< TransferCFT/axwayvariablesComponentShortName >}} API
     initialization function must be called in:
-- Visual Basic:
+* Visual Basic:
     Cft_Api_Open (ByVal Version As String) As Integer
-- C++ or Delphi:
+* C++ or Delphi:
     CftInitialize of prototype BOOL CftInitialize (void)
-- When the application
+* When the application
     terminates, it must inform {{< TransferCFT/axwayvariablesComponentShortName >}} that it is stopping by calling
     the CftUninitialize function with the following prototype: BOOL
     CftUninitialize ( void )
@@ -101,25 +101,25 @@ If they are successful, both functions return TRUE.
 The apicft.lib dynamic library and APISAMPL.C sample are compiled with
 the following options:
 
-- Standard mandatory
+* Standard mandatory
     C option:
-- Zp1 /\* Structures
+* Zp1 /\* Structures
     and structure fields aligned on byte boundaries \*/
 
 <!-- -->
 
-- Options specific
+* Options specific
     to WIN32:
 
 <!-- -->
 
-- D_X86=1 /\*
+* D_X86=1 /\*
     Machine code generation for Intel x 86 processors \*/
-- DWIN32 /\* Win
+* DWIN32 /\* Win
     32 application \*/
-- D_MT /\* Multi-thread
+* D_MT /\* Multi-thread
     application \*/
-- G3 /\* Machine
+* G3 /\* Machine
     code generation compatible with 386 processors and compatibles \*/
 
 <span id="Linking_constraints"></span>
@@ -136,8 +136,8 @@ options.
 In addition to any application libraries, the key libraries required
 to build a {{< TransferCFT/axwayvariablesComponentShortName  >}} API application are as follows:
 
-- APICFT.LIB
-- CFTSCP3.LIB
+* APICFT.LIB
+* CFTSCP3.LIB
 
 <span id="Execution_constraints"></span>
 
@@ -146,15 +146,15 @@ to build a {{< TransferCFT/axwayvariablesComponentShortName  >}} API application
 To execute an application using {{< TransferCFT/axwayvariablesComponentShortName  >}}, APIs
 need the following files:
 
-- Necessary dynamic
+* Necessary dynamic
     libraries:
-    -   apicft.dll
-    -   cftscp3.dll
-- Additional dynamic
+    *   apicft.dll
+    *   cftscp3.dll
+* Additional dynamic
     libraries for Visual Basic:  
-    -   cftvb.dll
-- Other files:
-    -   profile
+    *   cftvb.dll
+* Other files:
+    *   profile
 
 These files  must
 be installed with the application executables in C or DELPHI on the Windows

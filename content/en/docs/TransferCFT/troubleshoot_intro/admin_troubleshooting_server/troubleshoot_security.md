@@ -194,18 +194,18 @@ In {{< TransferCFT/suitevariablesTransferCFTName  >}} 3.1.3 and lower, you can p
 
 Given the differences in certificate verification described above, you could encounter issues when performing SSL transfers between, for example {{< TransferCFT/suitevariablesTransferCFTName  >}} 3.1.3 and {{< TransferCFT/suitevariablesTransferCFTName  >}} 3.4, depending on your configuration. This section presents an example of two Transfer CFTs where:
 
-- CFT1: is server and is a {{< TransferCFT/suitevariablesTransferCFTName >}} 3.1.3
-- CFT2: is client and is a {{< TransferCFT/suitevariablesTransferCFTName >}} 3.4
+* CFT1: is server and is a {{< TransferCFT/suitevariablesTransferCFTName >}} 3.1.3
+* CFT2: is client and is a {{< TransferCFT/suitevariablesTransferCFTName >}} 3.4
 
 ****Example****
 
-- CFT1: The server authenticates itself using the user certificate A. The certificate A is signed by the intermediate certificate B, which is signed by C. CFT1 imported the A certificate as the user and the B certificate as the root in its local database, meaning that the C certificate is not in the local database.
-- CFT2: The client imported the B certificate as a root locally, the SSL config direct= client, rootcid=B.
+* CFT1: The server authenticates itself using the user certificate A. The certificate A is signed by the intermediate certificate B, which is signed by C. CFT1 imported the A certificate as the user and the B certificate as the root in its local database, meaning that the C certificate is not in the local database.
+* CFT2: The client imported the B certificate as a root locally, the SSL config direct= client, rootcid=B.
 
 ****Results****
 
-- During a simple authentication, CFT1 sends the A/B certificate chain, which CFT2 refuses because it is not complete (CFT2 requires the entire certificate chain).
-- An error occurs: `SSL Handshake local error [HANDSHAKE_FAILURE] CR = 48 (Unknown CA: certificate verify failed)`
+* During a simple authentication, CFT1 sends the A/B certificate chain, which CFT2 refuses because it is not complete (CFT2 requires the entire certificate chain).
+* An error occurs: `SSL Handshake local error [HANDSHAKE_FAILURE] CR = 48 (Unknown CA: certificate verify failed)`
 
 ****Workaround****
 
@@ -249,33 +249,33 @@ Major version l Minor version Fragment length Type message
 
 Where:
 
-- Content Type: determines the nature of the frame (0x: hexadecimal):
-    -   0x14 change_cipher_specs
-    -   0x15 alert
-    -   0x16 handshake
-    -   0x17 Application_Data
-- Version: Determines the version of SSL used.
-- Fragment length: specifies the length of the fragment.
-- Message Type: Determines the type of message.
+* Content Type: determines the nature of the frame (0x: hexadecimal):
+    *   0x14 change_cipher_specs
+    *   0x15 alert
+    *   0x16 handshake
+    *   0x17 Application_Data
+* Version: Determines the version of SSL used.
+* Fragment length: specifies the length of the fragment.
+* Message Type: Determines the type of message.
 
 ### Handshake frame alert
 
-- 0x01 client_hello 0x01 warning
-- 0x02 server_hello 0x02 fatal
-- 0x0B certificate
-- 0x0C server_key_exchange
-- 0x0D certificate_request
-- 0x0E server_hello_done
-- 0x0F certificate_verify
-- 0x10 client_key_exchange
-- 0x14 finished
+* 0x01 client_hello 0x01 warning
+* 0x02 server_hello 0x02 fatal
+* 0x0B certificate
+* 0x0C server_key_exchange
+* 0x0D certificate_request
+* 0x0E server_hello_done
+* 0x0F certificate_verify
+* 0x10 client_key_exchange
+* 0x14 finished
 
 ## Authentication types
 
 This section presents two scenarios for establishing a session between client and server:
 
-- Double authentication: the server requires the client to identify.
-- Simple Authentication: server authentication only.
+* Double authentication: the server requires the client to identify.
+* Simple Authentication: server authentication only.
 
 ### Double Authentication
 
@@ -286,10 +286,10 @@ This section presents two scenarios for establishing a session between client an
 1. CFTY02Z>&gt; CTX = 200003 ndata () _ 47 RECEIVED FROM HANDSHAKE DATA NETWORK
 1. CFTY02Z>&gt; CTX = 200003 ndata () _ DATA RECEIVED FROM HANDSHAKE 1458 NETWORK
 
-- 0B => message Certificate
-- The client receives the certificate sent by the server and verifies the authenticity of the certificate:
-- FTY21I CTX = 200003 Remote Server Certificate Accepted rootID = ROOTCA
-- => The client has accepted the server certificate
+* 0B => message Certificate
+* The client receives the certificate sent by the server and verifies the authenticity of the certificate:
+* FTY21I CTX = 200003 Remote Server Certificate Accepted rootID = ROOTCA
+* => The client has accepted the server certificate
 
 CFTY02Z>&gt; CTX = 200003 ndata () _ 60 RECEIVED FROM HANDSHAKE DATA NETWORK
 
@@ -301,15 +301,15 @@ CFTY02Z>&gt; CTX = 200003 300A0603 55040813 03696466 310E300C> 0 ... U. ... idf1
 
 CFTY02Z>&gt; CTX = 200003 06035504 78776179 0A130541> .. U. ... Axway &lt;
 
-- 16030100 370D:
-- = 0D> receipt of the client's message Certificate_Request.
+* 16030100 370D:
+* = 0D> receipt of the client's message Certificate_Request.
 
 CFTY02Z>&gt; CTX ndata = 200003 () 9 _ RECEIVED FROM HANDSHAKE DATA NETWORK
 
 CFTY02Z>&gt; CTX = 040E0000 16030100 200 003 00 &gt;.........&lt;
 
-- 16030100 040E:
-- 0E => receiving the message Server_hello_done
+* 16030100 040E:
+* 0E => receiving the message Server_hello_done
 
 CFTY23I CTX Client certificate ID = 200003 USER = = rootID ROOTCA
 
@@ -353,12 +353,12 @@ CFTY02Z>&gt; CTX = 200003 SSLact () _ 6 SENDING DATA HANDSHAKE
 
 CFTY02Z>&gt; CTX = 14030100 200 003 0101 &gt;......&lt;
 
-- The header is: 14030100 0101
-- 14: change_cipher_specs
-- 0301: Version SSL 3.1
-- 00 01: Length of the message (always 1 byte).
-- 01: it was only one type of message.
-- The client informs the server that it will switch to encrypted.
+* The header is: 14030100 0101
+* 14: change_cipher_specs
+* 0301: Version SSL 3.1
+* 00 01: Length of the message (always 1 byte).
+* 01: it was only one type of message.
+* The client informs the server that it will switch to encrypted.
 
 CFTY02Z>&gt; CTX = 200003 SSLact () _ 53 HANDSHAKE SENDING DATA
 

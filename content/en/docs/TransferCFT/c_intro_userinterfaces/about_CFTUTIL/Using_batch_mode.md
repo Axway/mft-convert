@@ -6,14 +6,14 @@ weight: 150
 the Transfer CFT working environment and set up Transfer CFT application
 parameters. You use it to:
 
-- Create and delete parameter, partner, catalog, log and account files
+* Create and delete parameter, partner, catalog, log and account files
 
 <!-- -->
 
-- Add or modify parameters
-- Display parameter,
+* Add or modify parameters
+* Display parameter,
     partner, catalog, log and account files
-- Send commands
+* Send commands
     to Transfer CFT
 
 In batch mode, CFTUTIL reads the Transfer CFT
@@ -35,32 +35,32 @@ Transfer CFT *Operating Guide* that corresponds to your OS.
 
 The available batch mode commands are:
 
-- SEND
-- RECV
-- HALT
-- KEEP
-- START
-- RESUME
-- DELETE
-- END
-- SWITCH
-- SHUT
-- ACT
-- CLEARCMD
-- DELETE
-- END
-- HALT
-- INACT
-- KEEP
-- KSTATE
-- MQUERY
-- PURGE
-- RECV
-- RESUME
-- SEND  
-- SHUT  
-- START   
-- SUBMIT  
-- SWITCH
-- TURN
-- WLOG
+* SEND
+* RECV
+* HALT
+* KEEP
+* START
+* RESUME
+* DELETE
+* END
+* SWITCH
+* SHUT
+* ACT
+* CLEARCMD
+* DELETE
+* END
+* HALT
+* INACT
+* KEEP
+* KSTATE
+* MQUERY
+* PURGE
+* RECV
+* RESUME
+* SEND  
+* SHUT  
+* START   
+* SUBMIT  
+* SWITCH
+* TURN
+* WLOG

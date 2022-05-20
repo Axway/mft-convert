@@ -14,9 +14,9 @@ PeSIT, OS**
 
 File record format defined in protocol terms:
 
-- ****F****: fixed
-- ****V****: variable
-- ****U****: undefined
+* ****F****: fixed
+* ****V****: variable
+* ****U****: undefined
 
 
 | PeSIT D EXTERN profile<br /> PeSIT ANY profile<br /> PeSIT E | In PeSIT protocol with the EXTERN profile, the value NFRECFM = U is not known in protocol terms and is changed by the {{< TransferCFT/axwayvariablesComponentShortName  >}} to NFRECFM = V. This value (U) is sent with no modification in PeSIT D CFT profile or in PeSIT E from {{< TransferCFT/axwayvariablesComponentShortName  >}} to {{< TransferCFT/axwayvariablesComponentShortName  >}}. |

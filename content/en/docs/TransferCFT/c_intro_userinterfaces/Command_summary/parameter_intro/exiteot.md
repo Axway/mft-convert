@@ -18,17 +18,17 @@ use must point to a CFTEXIT object.
 You can use a symbolic variable as the identifier of an end of transfer
 EXIT:
 
-- EXITEOT = (&NPART,
+* EXITEOT = (&NPART,
     &PART, &IDF &GROUP or &IDA), where NPART is the network
     name of the remote partner (only the first eight characters are taken
     into account).
-- PART is the local
+* PART is the local
     partner identifier
-- IDF is the file
+* IDF is the file
     or message identifier
-- GROUP designates
+* GROUP designates
     the partner group
-- IDA is the local
+* IDA is the local
     application identifier
 
 [Return to Command index](../../)

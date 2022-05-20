@@ -274,12 +274,12 @@ These codes are specific to the ODETTE protocol and correspond to the
 The values of these codes consist of the diagnostic code (two digits)
 to which the {{< TransferCFT/axwayvariablesComponentShortName  >}} adds 100 or 200 depending on the protocol phase concerned.
 
-- Values between 100 and 199 correspond to the "SFNA" (Start
+* Values between 100 and 199 correspond to the "SFNA" (Start
     File Negative Answer) and "EFNA" (End File Negative Answer)
     protocol messages.
-- Values between 200 and 299 correspond to the "ESID" (End Session
+* Values between 200 and 299 correspond to the "ESID" (End Session
     IDentification) protocol message.
-- This code forms the "NNN NNNN"-type DIAGP protocol diagnostic
+* This code forms the "NNN NNNN"-type DIAGP protocol diagnostic
     code. Values are expressed in decimal.
 
 

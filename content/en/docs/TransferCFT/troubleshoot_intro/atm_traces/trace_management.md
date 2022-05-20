@@ -4,17 +4,17 @@ linkTitle: "Trace management concepts"
 weight: 290
 ---ATM trace management is comprised of two stages:
 
-- Collect information,
+* Collect information,
     or trace acquisition, in Transfer CFT
-- Examine the information, outside Transfer CFT
+* Examine the information, outside Transfer CFT
 
 Only the collection stage is covered in this section. The Transfer CFT support staff is responsible for interpreting the information.
 
 The following sections describe:
 
-- How to define a trace
+* How to define a trace
     , either before starting up Transfer CFT or during operations
-- How to start/stop
+* How to start/stop
     data collection with application events linked to transfers
 
 <span id="Information_Collection"></span>
@@ -24,9 +24,9 @@ The following sections describe:
 Trace implementation involves these
 operations:
 
-- Defining
+* Defining
     the trace files
-- Controlling the traces, for example:
+* Controlling the traces, for example:
     activate, close files, or shutdown of the process
 
 <span id="Defining_trace_files"></span>
@@ -35,9 +35,9 @@ operations:
 
 You can activate one or more trace acquisition processes to supply one or more trace files. Additionally, you can define the trace file using one of two methods:
 
-- CFTUTIL - use the CFTTRACE command, which is taken into account
+* CFTUTIL - use the CFTTRACE command, which is taken into account
     when Transfer CFT is started
-- CFTTRACE utility - use the SETTRC command, dynamically sending to the Transfer CFT communication medium. You can perform the SETTRC command before starting Transfer
+* CFTTRACE utility - use the SETTRC command, dynamically sending to the Transfer CFT communication medium. You can perform the SETTRC command before starting Transfer
     CFT.
 
 The word *process* is not used here as a synonym for task. There is at
@@ -61,9 +61,9 @@ process.
 
 To start information collection:
 
-- When Transfer CFT starts up,
+* When Transfer CFT starts up,
     enter the CFTTRACE START parameter (START=CFT).
-- During Transfer CFT operations,
+* During Transfer CFT operations,
     enter a STARTTRC command.
 
 Information collection is managed by a trace server
@@ -80,18 +80,18 @@ or system resources), messages are purely and simply lost.
 
 Trace mechanisms include the following features:
 
-- You can make traces
+* You can make traces
     started at the same time as Transfer CFT co-exist with other traces,
     triggered during Transfer CFT operations, for the same trace file or for
     different trace files.
-- You can create
+* You can create
     a trace file with the CFTTRACE command, without having to synchronize
     collection with Transfer CFT start-up. To do this, set the START
     parameter to DELAYED.
-- If a STARTTRC
+* If a STARTTRC
     command is entered before the corresponding file has been defined, it
     is simply rejected and is without effect.
-- Whether there are
+* Whether there are
     one or more CFTTRACE commands, a single task ensures that all the
     trace files are filled.
 
@@ -105,8 +105,8 @@ vector.
 
 Note:
 
-- You can restart the process with STARTTRC; it is possible to use new initialization parameters.
-- If the same information
+* You can restart the process with STARTTRC; it is possible to use new initialization parameters.
+* If the same information
     is requested in several different traces and only one of these traces
     is shutdown, then the information is still traced (according to the
     definitions of the other traces still active).

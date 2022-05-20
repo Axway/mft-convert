@@ -19,9 +19,9 @@ issue alerts when a critical CAT threshold is reached based on a percentage of t
 This
 alert generates 2 actions:
 
-- Sends a message
+* Sends a message
     to the LOG
-- Executes a batch
+* Executes a batch
     to react to the alert (when CFTCAT/[TLVWARN](../tlvwarn) is reached)
 
 > **Note**
@@ -39,9 +39,9 @@ issue alerts when a critical COM threshold is reached based on a percentage of t
 This
 alert generates 2 actions:
 
-- Sends a message
+* Sends a message
     to the LOG
-- Executes a batch
+* Executes a batch
     to react to the alert (when CFTCOM/[TLVWARN](../tlvwarn) is reached)
 
 > **Note**

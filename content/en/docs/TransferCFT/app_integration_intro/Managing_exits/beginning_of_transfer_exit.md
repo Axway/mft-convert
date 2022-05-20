@@ -14,12 +14,12 @@ type exit, EXITBOT. This EXIT task lets you set the IDF to use, and is executed 
 Before you submit this EXIT, you must customize the following
 {{< TransferCFT/axwayvariablesComponentShortName  >}} objects:
 
-- CFTEXIT: This describes the EXIT environment and how this
+* CFTEXIT: This describes the EXIT environment and how this
     EXIT is activated.
 
 <!-- -->
 
-- CFTPARM: This indicates the CFTEXIT object identifier.
+* CFTPARM: This indicates the CFTEXIT object identifier.
 
 Each CFTEXIT object corresponds to an EXIT task. The number of EXIT
 tasks of all types simultaneously active is limited to a number depending

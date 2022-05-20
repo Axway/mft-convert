@@ -24,9 +24,9 @@ the partner supports the block size concept.
 
 Enter one of the following values:
 
-- the
+* the
     value of fblksize (see the z/OS (MVS)-specific
     tab)
-- a value from 0 to 65535
+* a value from 0 to 65535
 
 [Return to Command index](../../)

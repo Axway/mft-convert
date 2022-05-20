@@ -57,10 +57,10 @@ If an error occurred while running Transfer CFT in Central Governance, you may 
 
 Some corrective actions may be operating system specific, so you may also want to refer to:
 
-- Windows
+* Windows
     operations in the {{< TransferCFT/suitevariablesTransferCFTName >}} {{< TransferCFT/axwayvariablesComponentVersion >}} {{< TransferCFT/suitevariablesDocTypeUser >}}
-- UNIX
+* UNIX
     operations in the {{< TransferCFT/suitevariablesTransferCFTName >}} {{< TransferCFT/axwayvariablesComponentVersion >}} {{< TransferCFT/suitevariablesDocTypeUser >}}
-- {{< TransferCFT/suitevariablesTransferCFTName >}} {{< TransferCFT/axwayvariablesComponentVersion >}} z/OS Installation and Operation Guide
-- {{< TransferCFT/suitevariablesTransferCFTName >}} {{< TransferCFT/axwayvariablesComponentVersion >}} OpenVMS Installation and Operation Guide
-- {{< TransferCFT/suitevariablesTransferCFTName >}} {{< TransferCFT/axwayvariablesComponentVersion >}} IBM i Installation and Operation Guide
+* {{< TransferCFT/suitevariablesTransferCFTName >}} {{< TransferCFT/axwayvariablesComponentVersion >}} z/OS Installation and Operation Guide
+* {{< TransferCFT/suitevariablesTransferCFTName >}} {{< TransferCFT/axwayvariablesComponentVersion >}} OpenVMS Installation and Operation Guide
+* {{< TransferCFT/suitevariablesTransferCFTName >}} {{< TransferCFT/axwayvariablesComponentVersion >}} IBM i Installation and Operation Guide

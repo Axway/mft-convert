@@ -4,11 +4,11 @@ linkTitle: "Deprecated folder monitoring (UCONF)"
 weight: 220
 ---This section provides a description of how to use Transfer CFT UCONF values to manage folder monitoring. This method is no longer recommended; you should use the CFTFOLDER object method.
 
-- [Configure folder monitoring using UCONF](#Configur)
-- [How {{< TransferCFT/axwayvariablesComponentShortName >}} handles monitored files](#How2)
-- [Modify and apply configuration changes](#Modifying_existing_configuration)
-- [Directory configuration examples](#Director)
-- [File-system event monitoring](#File-sys)
+* [Configure folder monitoring using UCONF](#Configur)
+* [How {{< TransferCFT/axwayvariablesComponentShortName >}} handles monitored files](#How2)
+* [Modify and apply configuration changes](#Modifying_existing_configuration)
+* [Directory configuration examples](#Director)
+* [File-system event monitoring](#File-sys)
 
 > **Note**
 >
@@ -23,31 +23,31 @@ For each monitored directory you must provide a unique name to identify the set 
 ### Step overview
 
 1. Activate the folder monitoring option.
-    -   Set uconf parameter folder_monitoring.enable to Yes.
+    *   Set uconf parameter folder_monitoring.enable to Yes.
 1. Declare your logical directories to monitor.
-    -   Add to your uconf parameter folder_monitoring.folders 1 logical name by root directory you want to monitor.
+    *   Add to your uconf parameter folder_monitoring.folders 1 logical name by root directory you want to monitor.
 1. For each logical directory defined, configure the specific options you want to use for each:
-    -   File management method
+    *   File management method
 
     <!-- -->
 
-    -   Used sub-directories
+    *   Used sub-directories
 
     <!-- -->
 
-    -   Set the IDF
+    *   Set the IDF
 
     <!-- -->
 
-    -   Set the partner name
+    *   Set the partner name
 
     <!-- -->
 
-    -   Define the delay to take into account the file
+    *   Define the delay to take into account the file
 
     <!-- -->
 
-    -   Define other uconf Folder Monitoring parameters (described in the following sections)
+    *   Define other uconf Folder Monitoring parameters (described in the following sections)
 
 <span id="Monitori"></span>
 
@@ -88,8 +88,8 @@ Use the following UCONF parameters to configure folder monitoring for each dire
 >
 > \*You cannot use the following characters in the SCANDIR or WORKDIR definition. Additionally you cannot use a comma (,) in the CFTFOLDER SCANDIR or WORKDIR definition.
 
-- {{< TransferCFT/PrimaryForunix >}} /
-- For {{< TransferCFT/PrimaryforWindows >}} \\ / : \* ? " &lt; > &#124;
+* {{< TransferCFT/PrimaryForunix >}} /
+* For {{< TransferCFT/PrimaryforWindows >}} \\ / : \* ? " &lt; > &#124;
 
 ******Comment\*\*\***: You can use CFTUTIL to create the list of folders &lt;logical_names>. When using CFTUTIL, be careful to correctly enter the command. For example, where FM1, FM2 and FM3 are 3 logical folders to be managed by {{< TransferCFT/axwayvariablesComponentShortName  >}}, enter:****
 
@@ -101,16 +101,16 @@ This section describes how the various file monitoring parameters work.
 
 ### Parameter settings and actions
 
-- The delay between scans of a given directory is defined by its interval parameter value.
-- By default the ENABLESUBDIR [enable_subdir] parameter is set to YES, and the directory and all its sub-directories are scanned.
-- For each file detected, the name is checked against the configured parameters values in the include and exclude file filters. Files that match the combined criteria are monitored, all others are ignored.
+* The delay between scans of a given directory is defined by its interval parameter value.
+* By default the ENABLESUBDIR [enable_subdir] parameter is set to YES, and the directory and all its sub-directories are scanned.
+* For each file detected, the name is checked against the configured parameters values in the include and exclude file filters. Files that match the combined criteria are monitored, all others are ignored.
 
 For a file to become a candidate to be submitted, the following conditions must be met:
 
-- File size: If these values are configured, the following rules apply.
-    -   FILESIZEMIN [file_size_min]: The current size must not be less than this value.
-    -   FILESIZEMAX [file_size_max]: The current size must not be greater than this value.
-- The last modification time and duration must not have changed within a number of seconds as defined in the FILEIDLEDELAY [file_idle_delay] parameter value.
+* File size: If these values are configured, the following rules apply.
+    *   FILESIZEMIN [file_size_min]: The current size must not be less than this value.
+    *   FILESIZEMAX [file_size_max]: The current size must not be greater than this value.
+* The last modification time and duration must not have changed within a number of seconds as defined in the FILEIDLEDELAY [file_idle_delay] parameter value.
 
 <span id="Modifying_existing_configuration"></span>
 
@@ -166,8 +166,8 @@ CFTUTIL uconfset id=folder_monitoring.folders , value= 'A B C'
 
 The first directory presents the simplest possible configuration, leaving most parameters set to their default values.
 
-- All of the files in the directory sub-tree are candidates for the SEND submission.
-- The files are sent to a given partner, newyork, using an IDF name of IDFA.
+* All of the files in the directory sub-tree are candidates for the SEND submission.
+* The files are sent to a given partner, newyork, using an IDF name of IDFA.
 
 The following commands create the configuration defined for directory A.
 
@@ -191,9 +191,9 @@ CFTUTIL uconfset id=folder_monitoring.folders.A.idf , value='IDFA'
 
 For the second directory, directory B, we want to:
 
-- Be able to send files to the following partners, newyork, berlin, london, rome, brussels, and paris.
-- Use the id given as the IDF, in this example TXT.
-- Send only files suffixed by .txt.
+* Be able to send files to the following partners, newyork, berlin, london, rome, brussels, and paris.
+* Use the id given as the IDF, in this example TXT.
+* Send only files suffixed by .txt.
 
 The following commands create the required directory B configuration.
 
@@ -226,13 +226,13 @@ The files to be sent must be moved to the directory that corresponds to the dest
 
 For the third directory, directory C, we want to:
 
-- Be able to send files to multiple partners, newyork and paris.
-- Use idf1, idf2, or idf3 as the newyork partner IDF.
-- Use idfa, idfb, idfc, or idfd as the paris partner IDF.
-- Not send files suffixed by .tmp.
-- Automatically move the files to be sent to the scan_dir, so the file_idle_delay parameter value is set to zero.
-- Submit files within a delay of approximately 10 seconds (interval).
-- Limit the number of send submissions per interval to 4 (file_count).
+* Be able to send files to multiple partners, newyork and paris.
+* Use idf1, idf2, or idf3 as the newyork partner IDF.
+* Use idfa, idfb, idfc, or idfd as the paris partner IDF.
+* Not send files suffixed by .tmp.
+* Automatically move the files to be sent to the scan_dir, so the file_idle_delay parameter value is set to zero.
+* Submit files within a delay of approximately 10 seconds (interval).
+* Limit the number of send submissions per interval to 4 (file_count).
 
 The following commands create the described directory C configuration.
 
@@ -295,14 +295,14 @@ CFTUTIL uconfset id=folder_monitoring.folders.MyFolder.use_file_system_events, 
 
 This feature can be resource intensive for Transfer CFT and the system in general in the following situations:
 
-- You have a large number of directories and sub-directories monitored using file-system events.
-- The activity in terms of file additions, removals, changes of files in those directories is high.
+* You have a large number of directories and sub-directories monitored using file-system events.
+* The activity in terms of file additions, removals, changes of files in those directories is high.
 
 We recommended that you only use file-system event monitoring when immediate attention by Transfer CFT is a functional requirement.
 
 ****Related topics****
 
-- [Introduction to folder monitoring](../)
-- [Folder monitoring CFTFOLDER](../../../c_intro_userinterfaces/web_copilot_ui/flow_def_intro/cftfolder)
-- [Migrate to CFTFOLDER folder monitoring](../migrate_uconf_cftfolder)
-- [Create inclusion and exclusion filters](../folder_customize)
+* [Introduction to folder monitoring](../)
+* [Folder monitoring CFTFOLDER](../../../c_intro_userinterfaces/web_copilot_ui/flow_def_intro/cftfolder)
+* [Migrate to CFTFOLDER folder monitoring](../migrate_uconf_cftfolder)
+* [Create inclusion and exclusion filters](../folder_customize)

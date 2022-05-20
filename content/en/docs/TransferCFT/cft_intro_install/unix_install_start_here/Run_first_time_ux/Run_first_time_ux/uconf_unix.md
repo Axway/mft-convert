@@ -4,10 +4,10 @@ linkTitle: "UNIX specific uconf settings "
 weight: 290
 ---This topic describes the unified configuration values to define for the following Unix options in {{< TransferCFT/axwayvariablesComponentShortName  >}}:
 
-- [Command line history: enable readline](#Command)
-- [System user: define CFTSU](#System)
-- [Separating filenames from the file extension](#Separat)
-- [General Unix-specific parameters](#UNIX)
+* [Command line history: enable readline](#Command)
+* [System user: define CFTSU](#System)
+* [Separating filenames from the file extension](#Separat)
+* [General Unix-specific parameters](#UNIX)
 
 <span id="Command"></span>
 

@@ -4,21 +4,21 @@ linkTitle: "Defining user rights "
 weight: 230
 ---Before you can start {{< TransferCFT/axwayvariablesComponentShortName  >}} from the {{< TransferCFT/axwayvariablesComponentShortName  >}} Copilot server, the Copilot server must be started. Additionally you will need rights to log on to this server. The overall process requires that you:
 
-- [Define rights before starting the {{< TransferCFT/axwayvariablesComponentShortName >}} Copilot server](#Define_rights_before_starting_Transfer_CFT)
-- [Define rights before starting {{< TransferCFT/axwayvariablesComponentShortName >}}](#Define_rights_before_starting_Transfer_CFT)
-- [Define a domain user](#Define%20domain%20user)
-- [Define folder rights](#Define)
-- [Define system user access](#Define2)
+* [Define rights before starting the {{< TransferCFT/axwayvariablesComponentShortName >}} Copilot server](#Define_rights_before_starting_Transfer_CFT)
+* [Define rights before starting {{< TransferCFT/axwayvariablesComponentShortName >}}](#Define_rights_before_starting_Transfer_CFT)
+* [Define a domain user](#Define%20domain%20user)
+* [Define folder rights](#Define)
+* [Define system user access](#Define2)
 
 To start the {{< TransferCFT/axwayvariablesComponentShortName  >}} Copilot server you must give each Windows user read/write rights for the {{< TransferCFT/axwayvariablesComponentShortName  >}} installation folder.
 
 You can opt to control the file-access permissions and the batch execution environment by setting the UCONF copilot.misc.createprocessasuser identifier as follows:
 
-- no: Any user who logs on the {{< TransferCFT/axwayvariablesComponentShortName >}} UI server will have their processes identified as the user who started the {{< TransferCFT/axwayvariablesComponentShortName >}} Copilot server.
+* no: Any user who logs on the {{< TransferCFT/axwayvariablesComponentShortName >}} UI server will have their processes identified as the user who started the {{< TransferCFT/axwayvariablesComponentShortName >}} Copilot server.
 
 <!-- -->
 
-- yes: Any user who logs on the {{< TransferCFT/axwayvariablesComponentShortName >}} UI server will have their processes identified as their own.
+* yes: Any user who logs on the {{< TransferCFT/axwayvariablesComponentShortName >}} UI server will have their processes identified as their own.
 
 
 | copilot.misc.createprocessasuser  | PassPort AM<br/> status | Rights to define  |
@@ -76,9 +76,9 @@ If you are working in service mode, you must have Log on as a service authority.
 
 If copilot.misc.createprocessasuser=yes in UCONF , or Createprocessasuser=yes in [MISC], the user starting the {{< TransferCFT/axwayvariablesComponentShortName  >}} Copilot server must do the following tasks to allow other users to log on. Additionally, those users must exist in the Windows system users list.
 
-- Adjust memory quotas for a process
-- Simulate a client after authentication (only on Windows 2008)
-- Replace a process level token
+* Adjust memory quotas for a process
+* Simulate a client after authentication (only on Windows 2008)
+* Replace a process level token
 
 ### Procedure
 
@@ -100,8 +100,8 @@ If PassPort AM is active (am.type=PassPort in UCONF), the user must exist both i
 
 If copilot.misc.createprocessasuser=no in UCONF, all system users have the right to log on.
 
-- PassPort AM is activated
-- If PassPort AM is active (am.type=PassPort in [UCONF](../../../../../admin_intro/uconf/uconf_parameters)), you must be a defined PassPort AM user to log on.
+* PassPort AM is activated
+* If PassPort AM is active (am.type=PassPort in [UCONF](../../../../../admin_intro/uconf/uconf_parameters)), you must be a defined PassPort AM user to log on.
 
 > **Note**
 >

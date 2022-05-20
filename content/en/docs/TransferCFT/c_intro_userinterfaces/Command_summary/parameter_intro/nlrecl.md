@@ -15,9 +15,9 @@ weight: 2250
 
 For records of:
 
-- fixed
+* fixed
     format (FRECFM = F) : size in bytes of the records of the receiver file
-- variable
+* variable
     format (FRECFM = V) : maximum size in bytes of the records
 
 When a file is sent, any record sent whose size is GREATER than the
@@ -27,11 +27,11 @@ For records of fixed format (FRECFM=F), if the size of the records to
 be sent is LESS than the value of NLRECL, these records are padded up
 to the value of NLRECL:
 
-- By
+* By
     binary zeros (x00) when the local data is declared as binary FCODE = BINARY
-- By
+* By
     spaces when the local data are declared as alphanumeric with:
-- CODE = ASCII:
+* CODE = ASCII:
     the space character is then equal to x‘20’
 
 ODETTE: For the ODETTE protocol, refer to the {{< TransferCFT/axwayvariablesComponentShortName  >}} Protocol

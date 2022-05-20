@@ -15,11 +15,11 @@ Transfer direction that applies to the table.
 
 The possible values are:
 
-- ****BOTH**** - Both send and receive transfers
+* ****BOTH**** - Both send and receive transfers
     are taken into account (default, except for CFTETB)
-- ****RECV**** - Limits the action to receive
+* ****RECV**** - Limits the action to receive
     transfers
-- ****SEND**** - Limits the action to send transfers
+* ****SEND**** - Limits the action to send transfers
 
 #### DISPLAY, CFTAPPL, RESUME
 

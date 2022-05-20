@@ -4,11 +4,11 @@ linkTitle: "Security services "
 weight: 150
 ---Transfer CFT offers different types of security services in order to secure communication, protect data, and control user access:
 
-- Transport security
-- Access management
-- DMZ enabled communication
-- File encryption at rest
-- SFTP
+* Transport security
+* Access management
+* DMZ enabled communication
+* File encryption at rest
+* SFTP
 
 After configuring the security system, you define the users and the
 actions that they can make on the various {{< TransferCFT/axwayvariablesComponentShortName  >}} objects. These definitions apply to objects declared within the operating

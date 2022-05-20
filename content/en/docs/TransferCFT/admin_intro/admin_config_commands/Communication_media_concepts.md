@@ -8,9 +8,9 @@ You can define as many CFTCOM objects as needed.
 Related
 topics
 
-- Command syntax
+* Command syntax
     [CFTCOM](../../../c_intro_userinterfaces/command_summary#CFTCOM)
-- Parameter list
+* Parameter list
     [CFTCOM](../../../c_intro_userinterfaces/web_copilot_ui/conf_intro/cftcom)
 
 <span id="About"></span>
@@ -21,7 +21,7 @@ The CFTCOM command enables {{< TransferCFT/axwayvariablesComponentShortName  >}}
 applications. Depending on the system, you can use one or more
 of the following media:
 
-- One or more shared
+* One or more shared
     files (set TYPE = FILE). Requests are entered in a file or files that Transfer CFT periodically
     scans. The presence of {{< TransferCFT/axwayvariablesComponentShortName >}} is not required to deposit requests unless
     such requests saturate the file. A CFTCOM command then defines a communication
@@ -29,7 +29,7 @@ of the following media:
 
 <!-- -->
 
-- A synchronous communication
+* A synchronous communication
     medium supported by the TCP/IP network (set TYPE= TCPIP)(for remote usage, use REST API)
 
 <span id="About_Service_Files_Medium"></span><span id="CFT_service_file_media"></span><span id="CFT_monitor_media"></span>
@@ -52,11 +52,11 @@ media by type of object and parameter****
 
 ### Communication media characteristics
 
-- For file communication:
+* For file communication:
 
 <!-- -->
 
-- The {{< TransferCFT/axwayvariablesComponentShortName >}} can be inactive at the time
+* The {{< TransferCFT/axwayvariablesComponentShortName >}} can be inactive at the time
     the commands assigned to it are issued, to the limit of the file size.
     Commands are taken into account at the time the {{< TransferCFT/axwayvariablesComponentShortName >}} is activated,
     if a CFTCOM command relative to this communication file has been defined.
@@ -64,9 +64,9 @@ media by type of object and parameter****
 
 <!-- -->
 
-- For TCP synchronous
+* For TCP synchronous
     mediums:
-    -   Communication is only possible if the Transfer
+    *   Communication is only possible if the Transfer
         CFT is present.
         To retrieve the IDT and the IDTU values of the transfer, you can use the
         variables %_CAT_IDT% and %_CAT_IDTU%.

@@ -15,9 +15,9 @@ In this case, the ID and ROOTCID parameters have the same value.
 
 This parameter is mandatory for:
 
-- DELETE: deletion of a certificate
+* DELETE: deletion of a certificate
     from the database, and
-- REPLACE: update of a certificate, modes
+* REPLACE: update of a certificate, modes
 
 It indicates
 the identifier of the certificate authority to be deleted or updated.

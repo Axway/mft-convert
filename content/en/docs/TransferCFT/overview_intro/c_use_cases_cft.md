@@ -4,10 +4,10 @@ linkTitle: "Implementation architectures"
 weight: 110
 ---This section describes the general types of implementation when using {{< TransferCFT/axwayvariablesComponentShortName  >}}, either with multiple {{< TransferCFT/axwayvariablesComponentShortName  >}}s or in conjunction with other {{< TransferCFT/axwayvariablesCompanyName  >}} products.
 
-- Distributed A2A transfer exchanges
-- Centralized A2A transfer exchanges
-- B2B Internet-based transfer
-- Human file transfer
+* Distributed A2A transfer exchanges
+* Centralized A2A transfer exchanges
+* B2B Internet-based transfer
+* Human file transfer
 
 ## Distributed A2A transfer exchanges
 
@@ -15,8 +15,8 @@ A distributed exchange implementation is ideal for implementing back-end applica
 
 Use cases include:
 
-- Multi-site integration
-- Application integration
+* Multi-site integration
+* Application integration
 
 ## Centralized A2A transfer exchanges
 
@@ -26,8 +26,8 @@ implementation typically meets the needs of the store-to-corporate use case when
 
 Use cases include:
 
-- Multi-site integration
-- Application integration
+* Multi-site integration
+* Application integration
 
 ## B2B Internet-based transfer implementation
 

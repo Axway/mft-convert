@@ -8,9 +8,9 @@ CFTEXIT command, used to start an EXIT task.
 ********Related
 topics********
 
-- Command syntax
+* Command syntax
     [CFTEXIT](../../../command_summary#CFTEXIT)
-- Object concepts
+* Object concepts
     [Managing exits](../../../../app_integration_intro/managing_exits)
 
 

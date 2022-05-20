@@ -14,9 +14,9 @@ does the CFTPARM object work?](#How_does_the_CFTPARM_object_work_)
 Related
 topics
 
-- Command syntax
+* Command syntax
     [CFTPARM](../../../c_intro_userinterfaces/command_summary#CFTPARM)
-- Parameter list
+* Parameter list
     [CFTPARM](../../../c_intro_userinterfaces/web_copilot_ui/conf_intro/cftparm)
 
 <span id="What_is_the_CFTPARM_object_"></span>
@@ -25,9 +25,9 @@ topics
 
 The CFTPARM object defines general parameters that:
 
-- Specify the parameters
+* Specify the parameters
     that control {{< TransferCFT/axwayvariablesComponentShortName >}} operations globally
-- Select the other
+* Select the other
     parameter setting commands that are taken into account during execution
 
 You can create several CFTPARM objects, but you can only select a single
@@ -39,11 +39,11 @@ you have modified that specific PARM.
 
 The parameters that define the {{< TransferCFT/axwayvariablesComponentShortName  >}} environment are:
 
-- Sizing constants
-- File location
-- End-of-transfer
+* Sizing constants
+* File location
+* End-of-transfer
     actions
-- Product activation
+* Product activation
     key
 
 The CFTPARM is an initial configuration object. These parameters are
@@ -78,9 +78,9 @@ particular, to reference the other configuration objects.
 This is accomplished through the use of the
 same value for the:
 
-- Identifier
+* Identifier
     of the referenced command, the ID parameter
-- CFTPARM
+* CFTPARM
     parameter referencing this command
 
 The value of the CAT parameter, CFTPARM object, for example, designates

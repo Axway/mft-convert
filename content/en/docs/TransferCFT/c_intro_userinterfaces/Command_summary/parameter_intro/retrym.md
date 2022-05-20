@@ -13,8 +13,8 @@ weight: 2900
 
 Use this field to specify the maximum number of reconnection attempts.
 
-- 12 (default value)
-- any
+* 12 (default value)
+* any
     other value from 0 to 32767
 
 If you enter 0 and if the initial connection fails, no further reconnection
@@ -38,14 +38,14 @@ CFTPART ... PROT = ( 'PROT1',
 
 The retry order is as follows:
 
-- IP1 SAP1 PROT1 (first host, first protocol)
-- IP1 SAP1 PROT1 (retry)
-- IP2 SAP1 PROT1 (second host, first protocol)
-- IP2 SAP1 PROT1 (retry)
-- IP1 SAP2 PROT2 (first host, second protocol)
-- IP1 SAP2 PROT2 (retry)
-- IP2 SAP2 PROT2 (second host, second protocol)
-- IP2 SAP2 PROT2 (retry)
+* IP1 SAP1 PROT1 (first host, first protocol)
+* IP1 SAP1 PROT1 (retry)
+* IP2 SAP1 PROT1 (second host, first protocol)
+* IP2 SAP1 PROT1 (retry)
+* IP1 SAP2 PROT2 (first host, second protocol)
+* IP1 SAP2 PROT2 (retry)
+* IP2 SAP2 PROT2 (second host, second protocol)
+* IP2 SAP2 PROT2 (retry)
 
  
 

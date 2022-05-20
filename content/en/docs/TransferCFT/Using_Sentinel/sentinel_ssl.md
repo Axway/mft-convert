@@ -10,9 +10,9 @@ You require the root certificate of the Sentinel sever. See the *Axway Sentinel 
 
 To manage the SSL session, ensure that the values in the following Transfer CFT UCONF parameters match those defined for the Sentinel server or Event Router:
 
-- ssl.ciphersuites
-- ssl.version_min
-- ssl.extension.enable_sni
+* ssl.ciphersuites
+* ssl.version_min
+* ssl.extension.enable_sni
 
 ## Procedure
 

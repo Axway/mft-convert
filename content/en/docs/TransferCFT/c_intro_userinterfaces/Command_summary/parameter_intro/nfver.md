@@ -17,9 +17,9 @@ Version number of the file sent, in the case of a GDG file.
 
 The values represent the following:
 
-- 0: version 0 of
+* 0: version 0 of
     the file (default)
-- n: version -n of
+* n: version -n of
     the file
 
 ****Case 2****: NFVER is used alone

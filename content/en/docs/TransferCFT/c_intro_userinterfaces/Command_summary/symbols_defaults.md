@@ -6,11 +6,11 @@ weight: 140
 page describes the symbols, default values, and variables used by Transfer
 CFT that are specific to each operating system and comprises:
 
-- Specific
+* Specific
     symbols
-- Default
+* Default
     files used by CFTUTIL
-- Setting the {{< TransferCFT/axwayvariablesComponentLongName >}} profile file
+* Setting the {{< TransferCFT/axwayvariablesComponentLongName >}} profile file
 
 ## Specific symbols
 
@@ -46,8 +46,8 @@ In order to run {{< TransferCFT/axwayvariablesComponentLongName  >}} components,
 
 You can regenerate the profile after executing the profile from the runtime directory as follows:
 
-- Unix: cftruntime -p $CFTDIRINSTALL $CFTDIRRUNTIME
-- Windows: cftruntime %CFTDIRINSTALL% %CFTDIRRUNTIME% -profile
+* Unix: cftruntime -p $CFTDIRINSTALL $CFTDIRRUNTIME
+* Windows: cftruntime %CFTDIRINSTALL% %CFTDIRRUNTIME% -profile
 
 For other platforms, please refer to the operating specific installation guide.
 

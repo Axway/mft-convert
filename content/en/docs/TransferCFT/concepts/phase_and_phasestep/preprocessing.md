@@ -15,30 +15,30 @@ As the preprocessing phase did not exist in versions prior to {{< TransferCFT/ax
 
 During this phase, the phase step can be:
 
-- \(H\) Hold: waiting for an incoming receive to start the preprocessing or a start command
-- \(D\) Disposable: scheduled to start
-- \(C\) Current: processing running, waiting for a CFTUTIL end with istate=no
-- \(K\) Keep: processing failed or stopped
+* \(H\) Hold: waiting for an incoming receive to start the preprocessing or a start command
+* \(D\) Disposable: scheduled to start
+* \(C\) Current: processing running, waiting for a CFTUTIL end with istate=no
+* \(K\) Keep: processing failed or stopped
 
 ## State and prestate dependent actions
 
 The following preprocessing actions occur according to the status of the prestate and state. For each of the following cases, set ****PREEXEC**** to an existing script.
 
-- Immediate preprocessing then send
-    -   PRESTATE =  DISP 
-    -   STATE = DISP 
-- Hold... waits for a start or receive, then preprocesses, and sends
-    -   PRESTATE= HOLD
-    -   STATE = DISP
-- Immediate preprocessing then Hold...waits for a receive or start, and then sends
-    -   PRESTATE= DISP
-    -   STATE = HOLD
-- Hold ... waits for a receive command, preprocesses, and then sends or
-- Hold... waits for start command, preprocesses, repeats Hold ... waits for receive or start then sends
-    -   PRESTATE= HOLD
-    -   STATE = HOLD
-- Preprocessing then send on receive
-    -   IMPL=YES
+* Immediate preprocessing then send
+    *   PRESTATE =  DISP 
+    *   STATE = DISP 
+* Hold... waits for a start or receive, then preprocesses, and sends
+    *   PRESTATE= HOLD
+    *   STATE = DISP
+* Immediate preprocessing then Hold...waits for a receive or start, and then sends
+    *   PRESTATE= DISP
+    *   STATE = HOLD
+* Hold ... waits for a receive command, preprocesses, and then sends or
+* Hold... waits for start command, preprocesses, repeats Hold ... waits for receive or start then sends
+    *   PRESTATE= HOLD
+    *   STATE = HOLD
+* Preprocessing then send on receive
+    *   IMPL=YES
 
 > **Note**
 >

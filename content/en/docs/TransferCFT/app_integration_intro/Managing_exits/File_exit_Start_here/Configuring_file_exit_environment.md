@@ -6,11 +6,11 @@ weight: 330
 type exit**. Before you submit an exit, you must customize the following
 {{< TransferCFT/axwayvariablesComponentShortName  >}} objects:
 
-- CFTSEND: to define
+* CFTSEND: to define
     the parameters associated with the EXIT on sending the file
-- CFTTRECV: to define
+* CFTTRECV: to define
     the parameters associated with the EXIT on receiving the file
-- CFTEXIT: to describe
+* CFTEXIT: to describe
     the EXIT environment and how this EXIT is activated
 
 <span id="Defining_the_CFTSEND_CFTRECV_objects"></span>
@@ -62,6 +62,6 @@ TYPE = FILE,
 
 ****Related topics****
 
-- [CFTSEND](../../../../concepts/cft_configuration_concepts_start_here/default_send_template_concepts)
-- [CFTRECV](../../../../concepts/cft_configuration_concepts_start_here/default_receive_template_concepts)
-- [CFTEXIT](../../../../c_intro_userinterfaces/web_copilot_ui/flow_def_intro/cftexit)
+* [CFTSEND](../../../../concepts/cft_configuration_concepts_start_here/default_send_template_concepts)
+* [CFTRECV](../../../../concepts/cft_configuration_concepts_start_here/default_receive_template_concepts)
+* [CFTEXIT](../../../../c_intro_userinterfaces/web_copilot_ui/flow_def_intro/cftexit)

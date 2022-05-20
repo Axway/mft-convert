@@ -5,18 +5,18 @@ weight: 270
 ---The COPYFILE command is used
 to copy a sequential file performing the following operations:
 
-- Compression/decompression: the compressed file must always have a
+* Compression/decompression: the compressed file must always have a
     variable format
 
 <!-- -->
 
-- ASCII/EBCDIC translation
+* ASCII/EBCDIC translation
     and vice versa: the translation is performed with Transfer CFT’s
     internal tables
 
 <!-- -->
 
-- Record format or
+* Record format or
     file type modification
 
 Use the COPYFILE command to copy a sequential file. The COPYFILE command enables a file to compressed offline, before being

@@ -6,8 +6,8 @@ weight: 340
 
 Transcoding is the conversion of one type of encoding to another. With Transfer CFT there are two ways to transcode:
 
-- Basic transcoding (FCODE/NCODE) uses a translation table between 2 computers that use a different alphabet. Each table consists of a file containing a unique 256-character record, where each character defines the correspondence between two alphabets via its position and value.
-- Extended transcoding (FCHARSET/NCHARSET) uses iconv libraries to convert one character encoding to another.
+* Basic transcoding (FCODE/NCODE) uses a translation table between 2 computers that use a different alphabet. Each table consists of a file containing a unique 256-character record, where each character defines the correspondence between two alphabets via its position and value.
+* Extended transcoding (FCHARSET/NCHARSET) uses iconv libraries to convert one character encoding to another.
 
 You can use either a CFTXLATE table or extended transcoding to implement transcoding with {{< TransferCFT/axwayvariablesComponentLongName  >}}, but you can not use both methods simultaneously.
 
@@ -24,12 +24,12 @@ tables, two for each transfer direction. These tables are bijective and correspo
 
 Use the CFTXLATE object to define translation tables between 2 alphabets. A definition includes:
 
-- Transfer direction (DIRECT: SEND, RECV, or BOTH)
-- File data code
+* Transfer direction (DIRECT: SEND, RECV, or BOTH)
+* File data code
     type (FCODE: ASCII or EBCDIC)
-- Data network
+* Data network
     code type (NCODE: ASCII or EBCDIC)
-- Translation table file name (FNAME)
+* Translation table file name (FNAME)
 
 See <a href="translation_table_concepts" class="MCXref xref">Define translation
 tables</a> for step instructions.
@@ -45,9 +45,9 @@ Typical transcoding, using either XLATE or internal transcoding (ASCII/EBCDIC/BI
 The FCHARSET parameter defines the local file encoding, and the NCHARSET
 parameter defines the remote and network data encoding. These parameters, FCHARSET and NCHARSET, are available for the following objects:
 
-- SEND/RECV
-- CFTSEND/CFTRECV
-- CFTPART
-- CFTPROT
+* SEND/RECV
+* CFTSEND/CFTRECV
+* CFTPART
+* CFTPROT
 
 See [Using extended character sets](use_extended_character_sets) for step instructions.

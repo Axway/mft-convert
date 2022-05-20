@@ -26,8 +26,8 @@ and equal to NM_MAX_CLASS.
 
 Recommended maximum values are:
 
-- Windows NT - 64
-- UNIX - 8
-- MVS - 32
+* Windows NT - 64
+* UNIX - 8
+* MVS - 32
 
 [Return to Command index](../../)

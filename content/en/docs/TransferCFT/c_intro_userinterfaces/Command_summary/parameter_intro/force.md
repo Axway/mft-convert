@@ -14,12 +14,12 @@ Determines the priority with which
 the parameters set in CFTRECV are taken into account relative to the parameters
 set in an associated RECV command.
 
-- NO: The parameters specified in the
+* NO: The parameters specified in the
     RECV command take priority over the parameters defined in the associated
     CFTRECV object. Thus, if a parameter is not explicitly defined in a RECV
     command but is in a CFTRECV object, the value defined in the CFTRECV object
     is taken into account.
-- YES: The parameters specified in CFTRECV
+* YES: The parameters specified in CFTRECV
     take priority over the parameters defined in an associated RECV command.
     Thus, if a parameter is not explicitly defined in a CFTRECV object but
     is in a RECV command or if the value defined in CFTRECV is the default
@@ -35,7 +35,7 @@ Determines the priority with which
 the parameters set in CFTSEND are taken into account relative to the parameters
 set in an associated SEND command.
 
-- NO: The parameters specified in the
+* NO: The parameters specified in the
     SEND command take priority over the parameters defined in the associated
     CFTSEND command. Thus, if a parameter is not explicitly defined in a SEND
     command but is in a CFTSEND command, the value defined in the CFTSEND
@@ -43,7 +43,7 @@ set in an associated SEND command.
 
 <!-- -->
 
-- YES: The parameters specified in CFTSEND
+* YES: The parameters specified in CFTSEND
     take priority over the parameters defined in an associated SEND command.
     Therefore, if a parameter is not explicitly defined in the CFTSEND object
     but is in a SEND command or if the value defined in CFTSEND is the default
@@ -97,13 +97,13 @@ or CFTSEND object with parameter FORCE set to YES.
 Indicates whether a request, that was not executed during its time slot,
 has been restarted:
 
-- NO:
+* NO:
     no action is taken (default value)
-- YES:
+* YES:
     the request is restarted immediately if you have either a:
-    -   Diagnostic
+    *   Diagnostic
         code diagi 302
-    -   Cyclic request
+    *   Cyclic request
         in the D state
 
 The maximum execution time for a restarted request is 23595999.

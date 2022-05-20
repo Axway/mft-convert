@@ -54,9 +54,9 @@ Additionally, the Transfer CFT {{< TransferCFT/suitevariablesDocTypeUser  >}} e
 
 ## Search tips
 
-- Use filters to narrow searches.
-- Put words in quotes “like this” for exact matches of phrases.
-- Log in with your Axway ID to access documents that are not available for public users.
+* Use filters to narrow searches.
+* Put words in quotes “like this” for exact matches of phrases.
+* Log in with your Axway ID to access documents that are not available for public users.
 
 ## Documentation
 

@@ -6,22 +6,22 @@ weight: 260
 
 This executable file retrieves system information, for example information needed to request a key. To use `cfttell`:
 
-- Navigate to the` <CFTDIRINSTALL>/bin` directory
-- Run cfttell
+* Navigate to the` <CFTDIRINSTALL>/bin` directory
+* Run cfttell
 
 Options:
 
-- -l, -L each bit of information is displayed on a new line, this is the default option
-- -s, -S values are listed on a single line, separated by spaces using the format key=value, this option is valid for target, version, and uid.
-- -h display this help
+* -l, -L each bit of information is displayed on a new line, this is the default option
+* -s, -S values are listed on a single line, separated by spaces using the format key=value, this option is valid for target, version, and uid.
+* -h display this help
 
 Keys:
 
-- TARGET: lists the target platform
-- VERSION: returns the Transfer CFT version if Transfer CFT is installed
-- HOSTINFO: lists the OS, Transfer CFT version, and related host and machine details
-- UID: Generates a unique id.
-- HOSTINFO: Display information used in key generation.
+* TARGET: lists the target platform
+* VERSION: returns the Transfer CFT version if Transfer CFT is installed
+* HOSTINFO: lists the OS, Transfer CFT version, and related host and machine details
+* UID: Generates a unique id.
+* HOSTINFO: Display information used in key generation.
 
 ****Examples****
 

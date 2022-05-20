@@ -16,5 +16,5 @@ You can now operate your Transfer CFT instance with the `CFT` user.
 
 After executing the installation, the following objects are created in the CFTPROD library:
 
-- Files: CAT, COM, LOG, ALOG, ACCNT, AACCNT
-- System objects: CFTJOBQ, CFTJOBD, CFTSBS, CFTCLS, CFTOUTQ
+* Files: CAT, COM, LOG, ALOG, ACCNT, AACCNT
+* System objects: CFTJOBQ, CFTJOBD, CFTSBS, CFTCLS, CFTOUTQ

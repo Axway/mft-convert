@@ -28,11 +28,11 @@ cycle of delayed transfers.
 
 If the interval is expressed in:
 
-- days or months
+* days or months
     (tcycle = day or tycycle
     = month), the default value is cyctime
     = mintime.
-- minutes (tycycle
+* minutes (tycycle
     = min), the default value is cyctime
     = mintime + tcycle \* cycle.
 

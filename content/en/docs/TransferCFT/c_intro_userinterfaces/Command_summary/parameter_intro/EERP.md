@@ -14,16 +14,16 @@ message informs the file sender that the data sent arrived correctly.
 
 The first version of the protocol (1986) specifies that:
 
-- the ORIGINATOR
+* the ORIGINATOR
     protocol field corresponds to the file sender
-- the DESTINATOR
+* the DESTINATOR
     protocol field corresponds to the file receiver
 
 The second version (1991) specifies that:
 
-- the ORIGINATOR
+* the ORIGINATOR
     protocol field corresponds to the EERP sender (i.e. the file receiver)
-- the DESTINATOR
+* the DESTINATOR
     protocol field corresponds to the EERP receiver (i.e. the file sender)
 
 > **Note**

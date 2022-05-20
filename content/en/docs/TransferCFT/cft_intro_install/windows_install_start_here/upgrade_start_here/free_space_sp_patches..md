@@ -15,14 +15,14 @@ Use the purge command followed by the appropriate options to removed accumulated
 
 `purge [-h &#124; --help] &#124; [-k &#124; --keep] [number]  [-p &#124; --pretend]`
 
-- UNIX:` purge.sh`
-- Windows: `purge64.exe `or `purge32.exe` (from a command line window)  
+* UNIX:` purge.sh`
+* Windows: `purge64.exe `or `purge32.exe` (from a command line window)  
 
 Where:  
 
-- [-h &#124; --help]: Displays the command help.  
-- [-k &#124; --keep] [number]: Specifies the number of updates that should be kept.
-- [-p &#124; --pretend]: Previews the action to be done.  
+* [-h &#124; --help]: Displays the command help.  
+* [-k &#124; --keep] [number]: Specifies the number of updates that should be kept.
+* [-p &#124; --pretend]: Previews the action to be done.  
 
 ****Examples  
 ****
@@ -41,7 +41,7 @@ Remove all backups, meaning that you cannot remove the current patch or SP.
 
 &lt;Options> include:
 
-- [-d &#124; --debug]: Generates debug information in the log file.
+* [-d &#124; --debug]: Generates debug information in the log file.
 
 ****Example****
 

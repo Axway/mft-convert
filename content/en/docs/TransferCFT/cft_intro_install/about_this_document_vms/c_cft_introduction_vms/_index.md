@@ -6,8 +6,8 @@ weight: 170
 
 Before you start the installation, you should:
 
-- Download the installation package from {{< TransferCFT/axwayvariablesCompanyName >}} Sphere.
-- Unzip the package.
+* Download the installation package from {{< TransferCFT/axwayvariablesCompanyName >}} Sphere.
+* Unzip the package.
 
 ## Installation package contents
 
@@ -17,10 +17,10 @@ The installation package is a zip archive. You should unzip it on the OpenVMS ma
 
 The installer is used to install, configure, update and uninstall Transfer CFT, which is part of the Axway 5 Suite. You can run the following installation modes:
 
-- Install
-- Configure
-- Update
-- Uninstall
+* Install
+* Configure
+* Update
+* Uninstall
 
 ## Installation modes
 
@@ -30,5 +30,5 @@ Use the standard `SYS$UPDATE:VMSINSTAL` procedure to install the product.
 
 Once you install a product, the following sub-directories are installed.
 
-- [.CFT.HOME] contents files of the product.
-- [.CFT.RUNTIME] contents mainly configuration files and executables.
+* [.CFT.HOME] contents files of the product.
+* [.CFT.RUNTIME] contents mainly configuration files and executables.

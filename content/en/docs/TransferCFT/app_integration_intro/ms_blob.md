@@ -46,8 +46,8 @@ espect the same behavior than the classic functionnally with classic files syste
 
 The UCONF parameter cft.dirdepth impacts the behavior:
 
-- yes (default value), CFT + Group of files take all subdirectories in the transfer operation
-- no , CFT + Group of files don't take subdirectories in the transfer operation
+* yes (default value), CFT + Group of files take all subdirectories in the transfer operation
+* no , CFT + Group of files don't take subdirectories in the transfer operation
 
 ### The Transfer CFT stores a received file on Microsoft ABS
 

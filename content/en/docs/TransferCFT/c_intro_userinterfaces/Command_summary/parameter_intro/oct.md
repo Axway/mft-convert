@@ -12,9 +12,9 @@ weight: 2430
 
 Type of output file data compression:
 
-- C: {{< TransferCFT/axwayvariablesComponentShortName >}}
+* C: {{< TransferCFT/axwayvariablesComponentShortName >}}
     to {{< TransferCFT/axwayvariablesComponentShortName >}} compression
-- H: PeSIT non-SIT
+* H: PeSIT non-SIT
     compression
 
 This parameter is only meaningful if the value of OCOMP is not 0. The

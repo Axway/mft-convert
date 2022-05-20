@@ -17,9 +17,9 @@ issue alerts when a critical CAT fill threshold is reached based on a percentage
 This
 alert generates 2 actions:
 
-- Sends a message
+* Sends a message
     to the LOG
-- Executes
+* Executes
     a batch to react to the alert, the [TLVWEXEC](#)
     parameter
 
@@ -38,9 +38,9 @@ issue alerts when a critical COM fill threshold is reached based on a percentage
 This
 alert generates 2 actions:
 
-- Sends a message
+* Sends a message
     to the LOG
-- Executes
+* Executes
     a batch to react to the alert, the [TLVWEXEC](#)
     parameter
 

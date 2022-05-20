@@ -4,9 +4,9 @@ linkTitle: "Switching procedure"
 weight: 260
 ----   [About
     the switching procedure](#About_the_switching_procedure)
-- [Switching
+* [Switching
     log files](#Switching_log_procedure)
-- [Switching
+* [Switching
     accounting files](#Switching_accounting_files)
 
 <span id="About_the_switching_procedure"></span>
@@ -15,10 +15,10 @@ weight: 260
 
 Transfer CFT maintains activity traces in primary and alternate files:
 
-- Transfer events
+* Transfer events
     are stored in two log files, to which the CFTLOG and CFTLOGA environment
     variables point respectively
-- Accounting data
+* Accounting data
     concerning successful transfers is stored in two accounting files, to
     which the CFTACNT and CFTACNTA environment variables point respectively
 
@@ -27,16 +27,16 @@ The switching principle is described in [Housekeeping for logs](../../../../../a
 Switching between the primary and alternate files is configured by the
 operator when Transfer CFT is configured. It requires the following definitions:
 
-- The time at which
+* The time at which
     switching is to take place each day  
     This switching time is entered using the SWITCH command
-- The switching procedure,
+* The switching procedure,
     using the EXEC command; this procedure, written in the shell, controls
     the switching operation
 
 The SWITCH and EXEC commands must be added as follows:
 
-- To switch log files,
+* To switch log files,
     the following declaration is used in the CFTLOG section:
 
 ```
@@ -48,7 +48,7 @@ SWITCH = 2359, /\* Switching time      \*/
 EXEC = 'switch.cmd' /\* Switching procedure      \*/
 ```
 
-- To switch accounting
+* To switch accounting
     files, the following declaration is used in the CFTACNT section:
 
 ```
@@ -111,18 +111,18 @@ rm $0
 
 The effects of each line in the procedure are as follows:
 
-- #!/bin/sh
+* #!/bin/sh
 
 Use of the BOURNE shell is systematically forced;
 even if it is not essential for this example, it is a good safety measure
 
-- filename=`cft2unix
+* filename=`cft2unix
     &FLOG`
-- The Transfer
+* The Transfer
     CFT FLOG symbolic variable is used to retrieve the name of the log file
     to which the CFTLOG environment variable points (Transfer CFT symbolic
     variables are described in the *Transfer CFT Concepts guide*)
-- The cft2unix
+* The cft2unix
     utility is provided in the &lt;installdir>/bin directory. It receives the physical
     name of a file if &flog contains a Transfer CFT logical name. Otherwise,
     it returns the name passed as a parameter  
@@ -135,26 +135,26 @@ variable.
 The name of the log file is then stored in the *filename* variable
 (*cft_log* for example)
 
-- mv ${filename}
+* mv ${filename}
     ${filename}_sav
-- The log file
+* The log file
     to which *filename* points is copied to a new file and given the
     *_sav* extension (*cft_log* becomes *cft_log_sav* for example)
 
 <!-- -->
 
-- CFTUTIL CFTFILE
+* CFTUTIL CFTFILE
     TYPE=LOG, FNAME=$filename
 
 <!-- -->
 
-- The initial
+* The initial
     log file is recreated. Do not forget that the log file concerned must
     be empty, so that Transfer CFT can use it for switching
 
 <!-- -->
 
-- rm $0
+* rm $0
 
 The temporary file is deleted (*see the section Transfer
 CFT and Temporary Files*).

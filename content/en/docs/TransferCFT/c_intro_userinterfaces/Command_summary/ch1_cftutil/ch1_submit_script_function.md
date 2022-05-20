@@ -15,10 +15,10 @@ RC = lrc
 
 #### Parameters
 
-- FILENAME: Character set is the name of the command file to execute.
-- String1:
-- String2:
-- lrc name of a long integer variable that receives return code execution.
+* FILENAME: Character set is the name of the command file to execute.
+* String1:
+* String2:
+* lrc name of a long integer variable that receives return code execution.
 
 #### Examples
 

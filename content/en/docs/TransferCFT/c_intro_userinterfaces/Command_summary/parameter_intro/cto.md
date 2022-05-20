@@ -15,11 +15,11 @@ Minimum duration (in minutes) of the session, Cycle Time Out.
 At the end of a transfer, the wait timeout for a new transfer is recalculated
 depending on:
 
-- the time (hour) for opening the session
-- the current time
-- the wait delay before disconnection (DISCTS for
+* the time (hour) for opening the session
+* the current time
+* the wait delay before disconnection (DISCTS for
     the protocol)
-- the duration of the session (CTO)
+* the duration of the session (CTO)
 
 The session is liberated if no transfer was initiated by the remote
 partner during the indicated duration.

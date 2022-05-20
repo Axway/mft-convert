@@ -8,18 +8,18 @@ Where:
 
 `EXEC = '_NONE_'`
 
-- Disables the EXECSF procedure for a CFTSEND or SEND file.
-- Disables the EXECSM procedure for a SEND message or reply.
-- Disables the EXECRF procedure for a CFTRECV or RECV file.
+* Disables the EXECSF procedure for a CFTSEND or SEND file.
+* Disables the EXECSM procedure for a SEND message or reply.
+* Disables the EXECRF procedure for a CFTRECV or RECV file.
 
 `EXECE = '_NONE_'`
 
-- Disables the EXECSE for a CFTSEND or SEND file.
-- Disables the EXECSE for a SEND message or reply.
-- Disables the EXECRE for a CFTRECV or RECV file.
+* Disables the EXECSE for a CFTSEND or SEND file.
+* Disables the EXECSE for a SEND message or reply.
+* Disables the EXECRE for a CFTRECV or RECV file.
 
 `AKCEXEC = '_NONE_'`
 
-- Disables the EXECSFA procedure for a CFTSEND or SEND file.
+* Disables the EXECSFA procedure for a CFTSEND or SEND file.
 
 See also, the SEND and RECV commands.

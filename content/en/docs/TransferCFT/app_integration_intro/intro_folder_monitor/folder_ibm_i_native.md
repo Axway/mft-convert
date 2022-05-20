@@ -8,16 +8,16 @@ weight: 200
 
 Native file monitoring supports:
 
-- All filtering methods are supported - STRJCMP, WILDMAT, REGEXP.
-- The file method with a file having the same name as the scanned file, which is created in the Working library. This file has a unique member called ****met**** that hosts metadata.
-- The move method with or without timestamps.
-- The RENAMEMETHOD parameter's TIMESTAMP option (MOVE method). However, due to file name limitation the timestamp is shorter than as described in [CFTFOLDER](../../../c_intro_userinterfaces/web_copilot_ui/flow_def_intro/cftfolder).
+* All filtering methods are supported - STRJCMP, WILDMAT, REGEXP.
+* The file method with a file having the same name as the scanned file, which is created in the Working library. This file has a unique member called ****met**** that hosts metadata.
+* The move method with or without timestamps.
+* The RENAMEMETHOD parameter's TIMESTAMP option (MOVE method). However, due to file name limitation the timestamp is shorter than as described in [CFTFOLDER](../../../c_intro_userinterfaces/web_copilot_ui/flow_def_intro/cftfolder).
 
 ## Limitations
 
-- You can only transfer native files between libraries. Transfer CFT does not monitor any other object (e.g. program, data area,...).
-- Since there is no directory structure in libraries, you cannot set the IDF and PART to be named after directories as described in the CFTFOLDER object. (You must explicitly define these parameters for each CFTFOLDER object dedicated to native file monitoring.)
-- You can only transfer single member files. If a file contains several members, only the first member is transferred.
+* You can only transfer native files between libraries. Transfer CFT does not monitor any other object (e.g. program, data area,...).
+* Since there is no directory structure in libraries, you cannot set the IDF and PART to be named after directories as described in the CFTFOLDER object. (You must explicitly define these parameters for each CFTFOLDER object dedicated to native file monitoring.)
+* You can only transfer single member files. If a file contains several members, only the first member is transferred.
 
 ## Procedure
 

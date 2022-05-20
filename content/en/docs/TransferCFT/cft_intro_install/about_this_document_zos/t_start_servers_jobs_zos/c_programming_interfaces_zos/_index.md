@@ -10,15 +10,15 @@ Transfer CFT APIs are described in the sub-book [Using APIs](../../using_apis). 
 
 Transfer CFT APIs use the DLL mode exclusively, with samples located in the following libraries:
 
-- cftv2.SAMPLEA for Assembler
-- cftv2.SAMPLEC for C
-- cftv2.SAMPLEO for COBOL
+* cftv2.SAMPLEA for Assembler
+* cftv2.SAMPLEC for C
+* cftv2.SAMPLEO for COBOL
 
 The programs are compiled with the main options:
 
-- RENT, GOFF, LIST(133) for Assembler
-- DLL, LONGNAME, RENT for C
-- DLL, RENT for COBOL NODYNAM
+* RENT, GOFF, LIST(133) for Assembler
+* DLL, LONGNAME, RENT for C
+* DLL, RENT for COBOL NODYNAM
 
 To LINK-EDIT a program that uses Transfer CFT services, you must import references called by the Transfer CFT user. Additionally, you require a JOBLIB/STEPLIB containing the LOAD-MODULE CFTDAPI and CFTDSCP for execution.
 
@@ -28,29 +28,29 @@ The usable imports list is defined in member distlib.CNTL(LINKAPID).
 
 Samples are located in the CFTV2.SAMPLEA, SAMPLEO, or SAMPLEC files.
 
-- Assembler
-    -   AAPIDLL: Uses CFTAI CFTAC
-    -   AAPIUST: Selection area description ’macro’, catalog returned, and so on
-- COBOL NODYNAM
-    -   OAPIC: Uses CFTC
-    -   OAPII: Uses CFTI
-    -   OAPIW: Deposit a request (using CFTU) and wait for the result (CFTI)
-    -   OAPIX: Uses cftaix
-    -   OAPISYN: Deposit of requests (VIA synchronous API, or communication)
-- Cobol Copybook
-    -   OAPICST: Constants and common descriptions
-    -   OAPIINF: Structure returned by function GETXINFO
-    -   OAPIMSG: Structure of the message returned by cftau
-- OAPIUST: Global Copy book
-    -   OAPISL: Selection area description (for compatibility)
-    -   OAPICA: catalog area description returned (for compatibility)
-    -   OAPICX: catalog area description returned by cftaix API (for compatibility)
-- OAPI24: Global Copy book - equivalent to OAPIUST (long fields)
-    -   OAPISL4 : Selection area description (long fields)
-    -   OAPICA4 : catalog area description returned (long fields)
-    -   OAPICX4 : catalog area description returned by cftaix API (long fields)
-- Cobol Copybook API 2
-    -   OCFTAPI2
+* Assembler
+    *   AAPIDLL: Uses CFTAI CFTAC
+    *   AAPIUST: Selection area description ’macro’, catalog returned, and so on
+* COBOL NODYNAM
+    *   OAPIC: Uses CFTC
+    *   OAPII: Uses CFTI
+    *   OAPIW: Deposit a request (using CFTU) and wait for the result (CFTI)
+    *   OAPIX: Uses cftaix
+    *   OAPISYN: Deposit of requests (VIA synchronous API, or communication)
+* Cobol Copybook
+    *   OAPICST: Constants and common descriptions
+    *   OAPIINF: Structure returned by function GETXINFO
+    *   OAPIMSG: Structure of the message returned by cftau
+* OAPIUST: Global Copy book
+    *   OAPISL: Selection area description (for compatibility)
+    *   OAPICA: catalog area description returned (for compatibility)
+    *   OAPICX: catalog area description returned by cftaix API (for compatibility)
+* OAPI24: Global Copy book - equivalent to OAPIUST (long fields)
+    *   OAPISL4 : Selection area description (long fields)
+    *   OAPICA4 : catalog area description returned (long fields)
+    *   OAPICX4 : catalog area description returned by cftaix API (long fields)
+* Cobol Copybook API 2
+    *   OCFTAPI2
 
 ### COBOL API subroutines called in static mode
 
@@ -87,11 +87,11 @@ In this case cftu, cfti, and cftc are defined as pointer functions (see OCFTAPD2
 >
 > If the pointers are not initialized by OAPIFC an abend 0C1 occurs.
 
-- Delivered samples:  
+* Delivered samples:  
     OAPIWS, OAPIIS, OAPICS, OPAIXS, OAPI2AS, OAPI2BS
-- Compilation options:  
+* Compilation options:  
     CBL DYNAM,RENT,DATA(31),NODLL,PGMNAME(LONGMIXED)
-- Link-edit model:  
+* Link-edit model:  
     Example OAPIWS sample:  
     INCLUDE USER(OAPIWS)  
     MODE AMODE(31)  
@@ -105,39 +105,39 @@ In this case cftu, cfti, and cftc are defined as pointer functions (see OCFTAPD2
 
 #### C
 
-- CAPIX: uses cftaix
+* CAPIX: uses cftaix
 
 <!-- -->
 
-- CAPII: use cfti
+* CAPII: use cfti
 
 <!-- -->
 
-- CAPIW: Deposit of a request and wait for the result
+* CAPIW: Deposit of a request and wait for the result
 
 <!-- -->
 
-- CAPIC: Uses CFTAI CFTAC CFTAU
+* CAPIC: Uses CFTAI CFTAC CFTAU
 
 <!-- -->
 
-- CAPISYN: Deposit of requests (VIA synchronous API, or communication file)
+* CAPISYN: Deposit of requests (VIA synchronous API, or communication file)
 
 #### C Headers – API-C
 
-- CFTAPI (CAPIUST): Selection area description, returned catalog area description, and so on
+* CFTAPI (CAPIUST): Selection area description, returned catalog area description, and so on
 
 <!-- -->
 
-- CFTD: Base API-C constants and type definitions 
+* CFTD: Base API-C constants and type definitions 
 
 <!-- -->
 
-- XTYPE
+* XTYPE
 
 #### C Headers – API2-C
 
-- CFTAPI2 (CAPI2UST): Base2 API-C constants and type definitions.
+* CFTAPI2 (CAPI2UST): Base2 API-C constants and type definitions.
 
 The compile, link-edit, and run JCLs for these samples can be found in the CFTV2.INSTALL file and are called I91APICP, I92APILK and I93APIRN. The compile JOB must be customized to reflect your environment.
 

@@ -11,11 +11,11 @@ is referred to as a **dynamic partner**.
 {{< TransferCFT/axwayvariablesComponentShortName  >}} can accept connections from a correspondent not defined
 in advance by:
 
-- Using the mechanism
+* Using the mechanism
     for dynamic creation of a partner from a model partner
-- Generating the
+* Generating the
     partner’s characteristics in a directory type EXIT task
-- Combining the 2
+* Combining the 2
     mechanisms described above
 
 ## Creating a partner from a model
@@ -38,11 +38,11 @@ the routing and switching mechanism.
 As far as parameter settings are concerned, the user sets up the mechanism
 by:
 
-- Adding the DYNAM
+* Adding the DYNAM
     parameter to the corresponding to the CFTPROT object
-- Creating the definition
+* Creating the definition
     of the model partner CFTPART
-- Creating a network
+* Creating a network
     resource (CFTxxx) associated with the model partner
 
 The DYNAM parameter gives the identifier of the model partner and, by
@@ -116,7 +116,7 @@ exist.
 
 The dynamic partner can receive the file put on hold, either by:
 
-- Presenting itself
+* Presenting itself
     under this name, or this network identifier
-- Using an identifier
+* Using an identifier
     conversion (network, local) provided by a directory type EXIT task

@@ -45,8 +45,8 @@ Refer to *Transport security in CFTSSL* for details on how to specify the cipher
 
 This section describes how to specify the cipher suites for governance or when Transfer CFT is acting as an API server:
 
-- ssl.ciphersuites
-- copilot.ssl.sslciphersuites
+* ssl.ciphersuites
+* copilot.ssl.sslciphersuites
 
 **Procedure**
 

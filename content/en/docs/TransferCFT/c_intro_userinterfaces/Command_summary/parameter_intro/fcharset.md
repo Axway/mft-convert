@@ -12,8 +12,8 @@ weight: 1070
 
 Defines the local file encoding.  
 
-- On the sender side, fcharset is used to read a file. You then use the ncharset to encode this into network data when sending a file.
-- On the receiver side, fcharset is the local file encoding used to write a file that has this type of encoding. The ncharset is used to decode network data when receiving a file.
+* On the sender side, fcharset is used to read a file. You then use the ncharset to encode this into network data when sending a file.
+* On the receiver side, fcharset is the local file encoding used to write a file that has this type of encoding. The ncharset is used to decode network data when receiving a file.
 
 **Example 1**
 

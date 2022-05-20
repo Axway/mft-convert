@@ -13,10 +13,10 @@ weight: 2010
 Action to do in the parameter or partner database. This parameter applies
 to all commands that affect {{< TransferCFT/axwayvariablesComponentShortName  >}} databases. Possible values:
 
-- REPLACE
+* REPLACE
     (Default value)
-- CREATE
-- DELETE
+* CREATE
+* DELETE
 
 > **Note**
 >
@@ -28,8 +28,8 @@ to all commands that affect {{< TransferCFT/axwayvariablesComponentShortName  >}
 
 ****[MODE = { ANY &#124; COLUMN &#124; LINE } ]****
 
-- ANY / COLUMN: Displays in a column format
-- Line: Displays in a more horizontal and spaced format
+* ANY / COLUMN: Displays in a column format
+* Line: Displays in a more horizontal and spaced format
 
 **** ****
 
@@ -38,10 +38,10 @@ to all commands that affect {{< TransferCFT/axwayvariablesComponentShortName  >}
 ****[MODE = { START &#124; CREATE &#124; ACT &#124; INACT }
 ]****
 
-- INACT: temporarily stops automated calls to a given site
-- ACT: reactivates automated calls after the INACT command
-- START: manually triggers a single connection for changing direction
-- CREATE: triggers an automatic, cyclic TURN
+* INACT: temporarily stops automated calls to a given site
+* ACT: reactivates automated calls after the INACT command
+* START: manually triggers a single connection for changing direction
+* CREATE: triggers an automatic, cyclic TURN
 
 #### INACT, ACT
 
@@ -50,9 +50,9 @@ to all commands that affect {{< TransferCFT/axwayvariablesComponentShortName  >}
 
 Mode to be reactivated:
 
-- BOTH
-- REQUESTER
-- SERVER
+* BOTH
+* REQUESTER
+* SERVER
 
 You can use the shortcuts B, R, and S in place of the keywords.
 
@@ -64,11 +64,11 @@ You can use the shortcuts B, R, and S in place of the keywords.
 
 The CFTPART command’s STATE parameter is set to:
 
-- ACTIVEBOTH after
+* ACTIVEBOTH after
     execution of ACT MODE=BOTH
-- ACTIVESERV after
+* ACTIVESERV after
     execution of ACT MODE=REQUESTER
-- ACTIVEREQ after
+* ACTIVEREQ after
     execution of ACT MODE=SERVER
 
 #### PKIENTITY
@@ -77,9 +77,9 @@ The CFTPART command’s STATE parameter is set to:
 
 Action to do in the PKI database. Possible values:
 
-- REPLACE
+* REPLACE
     (Default)
-- CREATE
-- DELETE
+* CREATE
+* DELETE
 
 [Return to Command index](../../)

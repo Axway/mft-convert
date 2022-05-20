@@ -49,5 +49,3 @@ uconfset id=copilot.nt.service_name, value=CFT_Copilot36
 uconfset id=copilot.nt.service_mode, value=yes
 ```
 <span id="Service"></span>
-
-## 

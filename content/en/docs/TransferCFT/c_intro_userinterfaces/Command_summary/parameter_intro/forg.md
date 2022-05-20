@@ -15,11 +15,11 @@ weight: 1250
 
 Organization of the file to be transferred:
 
-- SEQ:
+* SEQ:
     sequential
-- INDEXED:
+* INDEXED:
     indexed
-- DIRECT:
+* DIRECT:
     direct access (relative)
 
 With certain operating systems, the sequential reception mechanism may

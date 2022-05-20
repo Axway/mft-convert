@@ -4,9 +4,9 @@ linkTitle: "Bandwidth use cases"
 weight: 220
 ---This topic presents three bandwidth scenarios, with suggested unified configuration (UCONF) setting required to implement each of the following use cases:
 
-- [Limiting overall bandwidth](#Limit)
-- [Prioritizing data transfer](#Prioriti)
-- [Controlling the bandwidth depending on the profile](#Control)
+* [Limiting overall bandwidth](#Limit)
+* [Prioritizing data transfer](#Prioriti)
+* [Controlling the bandwidth depending on the profile](#Control)
 
 <span id="Limit"></span>
 
@@ -57,8 +57,6 @@ CFTRECV id=PROF3, COS=3,…
 ```
 <span id="Prioriti"></span>
 
-## 
-
 ****Related topics****
 
-- [Managing bandwidth control](../t_bandwidth)
+* [Managing bandwidth control](../t_bandwidth)

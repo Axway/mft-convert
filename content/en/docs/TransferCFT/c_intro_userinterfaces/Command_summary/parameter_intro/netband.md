@@ -14,9 +14,9 @@ The outgoing port range is controlled by the CFTNET object SRCPORTS
 parameter. There is a maximum of 16 port ranges that can be defined for
 this parameter. Selects the outgoing port range:·
 
-- 1 selects the first
+* 1 selects the first
     range if any (Default)
-- n selects the nth
+* n selects the nth
     range, if that range exists, or the last range
 
 If NETBAND is larger than the number of defined ranges, the last range is used.

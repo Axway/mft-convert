@@ -10,8 +10,8 @@ for developing exits.
 
 The following source examples are supplied in the toolkit:
 
-- File exit
-- Directory EXIT
+* File exit
+* Directory EXIT
 
 ## Development environment compilers
 
@@ -43,16 +43,16 @@ user. See Using exits.
 
 This section describes:
 
-- The different types of exits:
-- File exits
-- Exit list
-- Directory exits
+* The different types of exits:
+* File exits
+* Exit list
+* Directory exits
 
 <!-- -->
 
-- How to proceed
+* How to proceed
     when developing an exit
-- How to define Transfer
+* How to define Transfer
     CFT parameters so that it will take account of the different types of
     exits
 
@@ -75,18 +75,18 @@ in the Transfer CFT parameterization.
 The way the EXIT functions depends on the NSPART and NSPASSW parameters
 in the CFTPART command:
 
-- If these parameters
+* If these parameters
     contain any text strings, these strings will be used when the connection
     is made.
-- If these parameters
+* If these parameters
     contain the string of "\*" (excluding the quotation marks), NSPART
     and NSPASSW are entered from a dialog box when the first connection is
     made to the partner.
-- If these parameters
+* If these parameters
     contain the string of "\*\*" (excluding the quotation marks),
     NSPART and NSPASSW are entered from a dialog box every time a connection
     is made to the partner.
-- NSPART and NSPASSW
+* NSPART and NSPASSW
     may contain different strings; so if NSPART is entered and NSPASSW = \*\*,
     then only the password will be requested each time a connection is made
     to the partner.  

@@ -4,12 +4,12 @@ linkTitle: "Commands and management"
 weight: 180
 ---This topic describes how to mange {{< TransferCFT/axwayvariablesComponentShortName  >}} nodes, and related actions such as:
 
-- [Initialize internal data files](#Initiali)
-- [Start and stop the cluster](#Start)
-- [Check the status](#Check)
-- [Manage hosts](#Manage)
-- [Manage nodes](#Manage2)
-- [Rebalance the cluster after a host failure](#Rebalanc)
+* [Initialize internal data files](#Initiali)
+* [Start and stop the cluster](#Start)
+* [Check the status](#Check)
+* [Manage hosts](#Manage)
+* [Manage nodes](#Manage2)
+* [Rebalance the cluster after a host failure](#Rebalanc)
 
 <span id="Initiali"></span>
 
@@ -25,8 +25,8 @@ The cftinit command initializes internal data files. If no option is specified, 
 
 ****Options****
 
-- -c &#124;-common: only common internal data files are initialized (PARM, PART, main COM)
-- -n &#124;-node: only node-specific internal data files are initialized (CATALOG, secondary COM, LOG)
+* -c &#124;-common: only common internal data files are initialized (PARM, PART, main COM)
+* -n &#124;-node: only node-specific internal data files are initialized (CATALOG, secondary COM, LOG)
 
 ****Usage****
 
@@ -201,8 +201,8 @@ cft restart –ln
 ### Stop the {{< TransferCFT/suitevariablesTransferCFTName  >}} cluster
 
 1. On the first host:
-    -   To stop all nodes, run: `cft stop`
-    -   To stop the node manager, run: `copstop`
+    *   To stop all nodes, run: `cft stop`
+    *   To stop the node manager, run: `copstop`
 1. On each additional host, stop the node manager. Run: `copstop`
 
 ### Start the {{< TransferCFT/suitevariablesTransferCFTName  >}} cluster
@@ -258,9 +258,9 @@ The `cftping `command checks the status of one or all enabled nodes. By default,
 
 Return values:
 
-- 0: all enabled nodes are stopped
-- 1: all enabled nodes are running
-- 2: not all enabled nodes are running
+* 0: all enabled nodes are stopped
+* 1: all enabled nodes are running
+* 2: not all enabled nodes are running
 
 ****Syntax****
 
@@ -268,10 +268,10 @@ Return values:
 
 ****Options****
 
-- `-n&#124;-node <node_id>`: checks the status of the node &lt;node_id>
-- `-v`: verbose mode
-- `-p`: shows PID (Process IDs) of all CFTMAIN processes
-- `-h`: shows the help
+* `-n&#124;-node <node_id>`: checks the status of the node &lt;node_id>
+* `-v`: verbose mode
+* `-p`: shows PID (Process IDs) of all CFTMAIN processes
+* `-h`: shows the help
 
 ### Check the log and transfers' status
 
@@ -330,8 +330,8 @@ For specifics on adding a host on z/OS platforms, please see [Managing multi-no
 >
 > The cft add_host command automatically sets the following UCONF parameters:
 
-- `cft.multi_node.hostnames`
-- `cft.multi_node.hostnames.<hostname>.host = <host_address>`
+* `cft.multi_node.hostnames`
+* `cft.multi_node.hostnames.<hostname>.host = <host_address>`
 
 ### Remove a host
 
@@ -398,9 +398,9 @@ cft enable_node -n -<node_id>
 
 The cft disable_node command disables the node identified by the highest node id in the {{< TransferCFT/axwayvariablesComponentShortName  >}} cluster and only that node.
 
-- The node un-registers its listening points from the connection dispatcher so that it no longer receives incoming requests.
-- Outgoing requests coming from APIs are no longer dispatched to this node.
-- Once the catalog related to the node is empty, the node state is set to DISABLED and the node stops.
+* The node un-registers its listening points from the connection dispatcher so that it no longer receives incoming requests.
+* Outgoing requests coming from APIs are no longer dispatched to this node.
+* Once the catalog related to the node is empty, the node state is set to DISABLED and the node stops.
 
 ****Syntax****
 

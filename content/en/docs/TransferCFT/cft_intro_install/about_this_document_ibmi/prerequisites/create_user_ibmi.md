@@ -6,8 +6,8 @@ weight: 200
 
 Prior to installation, ensure the following:
 
-- The **CFTINST** user who performs the Transfer CFT installation and applies Service Packs must have the following special authorities: \*JOBCTL, \*SPLCTL and \*ALLOBJ.
-- The **CFT** user who manages and uses Transfer CFT must have the following special authorities: \*JOBCTL and \*SPLCTL.
+* The **CFTINST** user who performs the Transfer CFT installation and applies Service Packs must have the following special authorities: \*JOBCTL, \*SPLCTL and \*ALLOBJ.
+* The **CFT** user who manages and uses Transfer CFT must have the following special authorities: \*JOBCTL and \*SPLCTL.
 
 Please note that these users must exist prior to the Transfer CFT installation. If it is not the case, you can proceed as follows:
 

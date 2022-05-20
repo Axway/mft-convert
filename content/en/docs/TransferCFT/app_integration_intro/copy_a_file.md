@@ -50,8 +50,8 @@ CFTUTIL send part=COPY_DST, nfname='destination_file_name', parm='source_file_na
 
 Where:
 
-- parm: The name of the file to be copied
-- nfname: The name of the destination file
+* parm: The name of the file to be copied
+* nfname: The name of the destination file
 
 This creates an empty file that is transferred from COPY_SRC to COPY_DST. The empty file is then used to create the catalog record.
 
@@ -77,18 +77,18 @@ The same concepts apply for all OS, but there is a different syntax depending on
 
 **OpenVMS**
 
-- exec/copyfile-snd.pro
-- exec/copyfile-rcv.pro
+* exec/copyfile-snd.pro
+* exec/copyfile-rcv.pro
 
 **z/OS**
 
-- ..EXEC(COPYFILS)
-- ..EXEC(COPYFILR)
+* ..EXEC(COPYFILS)
+* ..EXEC(COPYFILR)
 
 **IBM i**
 
-- CFTPROD/CPYFILE(CPYFSND)
-- CFTPROD/CPYFILE(CPYFRCV)
+* CFTPROD/CPYFILE(CPYFSND)
+* CFTPROD/CPYFILE(CPYFRCV)
 
 ### Copied file transfer details
 
@@ -102,6 +102,6 @@ When you view the transfer record for a copied file, either in the catalog or in
 
 The copy command used in the sample script is a system copy command that you can modify to better accommodate your needs. The commands are operating system dependent, as listed here:
 
-- Unix: `cp`
-- Windows and OpenVMS: `copy `
-- IBM i and z/OS : `CFTUTIL/COPYFILE` command (valid for sequential or HFS files on z/OS systems)
+* Unix: `cp`
+* Windows and OpenVMS: `copy `
+* IBM i and z/OS : `CFTUTIL/COPYFILE` command (valid for sequential or HFS files on z/OS systems)

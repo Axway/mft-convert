@@ -5,12 +5,12 @@ weight: 190
 ---You can use the FNAME parameter in a SEND command, when prefixed with the &lt;file_symb>
 indirection character, to trigger SEND operations that correspond to:
 
-- A list of file names in an indirection file (SEND FNAME = #LIST for example) in heterogeneous mode only
-- A series of files indicated by a generic name (SEND
+* A list of file names in an indirection file (SEND FNAME = #LIST for example) in heterogeneous mode only
+* A series of files indicated by a generic name (SEND
     FNAME = #FIL\* for example) or a directory name (SEND FNAME = #DIRECTORY\\\*)
-    -   In homogeneous mode
-    -   In heterogeneous mode
-    -   Using a file name filter
+    *   In homogeneous mode
+    *   In heterogeneous mode
+    *   Using a file name filter
 
 > **Note**
 >
@@ -32,21 +32,21 @@ Additionally, the UCONF `cft.dirdepth` =`yes ` setting indicates that subdirecto
 
 You can use a list of file names to send a group of files using the indirection file structure as follows:
 
-- A record can contain
+* A record can contain
     only one file name
-- A file name must
+* A file name must
     begin in the first column
-- The file can contain
+* The file can contain
     empty records
-- The file name cannot contain an asterisk (\*)
+* The file name cannot contain an asterisk (\*)
 
 #### Example
 
 For a file called REPORTS containing the following list:
 
-- file1
-- file2
-- file3
+* file1
+* file2
+* file3
 
 ****Windows****
 
@@ -69,23 +69,23 @@ The files file1, file2 and file3 will be sent.
 If there are N files to be sent, a SEND IDF = ID_EM, FNAME = #GROUP (or @GROUP)
 ... command generates N+1 transfer entries in the catalog, as follows:
 
-- One entry for each
+* One entry for each
     file transfer (that is N entries)
-- A generic (virtual)
+* A generic (virtual)
     entry, which never triggers an actual transfer but is used locally to
     manage the group of files to be sent
-    -   This virtual transfer is identified by a DIAGP code set to LIST_FI,
+    *   This virtual transfer is identified by a DIAGP code set to LIST_FI,
         when the catalog is queried. Its state is immediately set to ****K****
         in the catalog.
-    -   The generic entry is set to the ****T****
+    *   The generic entry is set to the ****T****
         or **X** state when all transfers have been set to ******T****** state (or **X** depending on the mode).
-    -   The post-processing procedure is activated when all files in
+    *   The post-processing procedure is activated when all files in
         the group have been transferred (LIST_FI entry set to the ****T****
         or **X** state, depending on the mode).
-    -   If the group file does not exist or cannot be opened, the generic entry
+    *   If the group file does not exist or cannot be opened, the generic entry
         remains set to the ****K**** state and
         error message CFTT34E is returned.
-    -   If one of the files in the group cannot be sent (for example an unknown file), the other transfers are not affected,
+    *   If one of the files in the group cannot be sent (for example an unknown file), the other transfers are not affected,
         but the generic entry for the group is not set to the **T** state (or **X** depending on the mode).
 
 > **Note**
@@ -94,8 +94,8 @@ If there are N files to be sent, a SEND IDF = ID_EM, FNAME = #GROUP (or @GROUP)
 
 For the receiver:
 
-- A catalog entry is created for each file received
-- The name of each file can be specified using the
+* A catalog entry is created for each file received
+* The name of each file can be specified using the
     &FPATH, &FROOT and &FSUF symbolic variables
 
 > **Note**
@@ -113,7 +113,7 @@ For example:
 1. CRTLIB MYSEND
 1. CRTPF FILE(MYSEND/REPORTS) RCDLEN(92) FILETYPE(\*DATA)
 1. EDTF FILE(MYSEND/REPORTS)
-    -   Add the list of files to transfer:
+    *   Add the list of files to transfer:
         -   MYSEND/FILE1
         -   MYSEND/FILE2
         -   MYSEND/FILE3
@@ -131,13 +131,13 @@ SEND FNAME=#*mask* or SEND FNAME=#*dirname*
 
 Where the FNAME parameter is set to one of the following values:
 
-- A directory name,
+* A directory name,
     *dirname*, in which
     case all files accessible in the directory are to be sent
-- A generic name,
+* A generic name,
     *mask,* including wildcard characters,
     in which case only the selected files are to be sent
-- A directory name
+* A directory name
     and a generic file name, in which case only the files selected in the
     directory are to be sent
 
@@ -158,9 +158,9 @@ system. This transfer procedure concatenates at the site sending the group of fi
 
 Mandatory parameters for homogeneous sends include:
 
-- WFNAME: Determines transmission and reception in homogeneous sends, because
+* WFNAME: Determines transmission and reception in homogeneous sends, because
     the file resulting from the concatenation is the file that is sent.
-- SYST: Defined for a remote partner, where the default value is the local operating system. Homogeneous transfers are only possible when CFTPART command's SYST value is the same as the local operating system.
+* SYST: Defined for a remote partner, where the default value is the local operating system. Homogeneous transfers are only possible when CFTPART command's SYST value is the same as the local operating system.
 
 
 | Platform  | UNIX-like environment  | Native  |
@@ -234,21 +234,21 @@ that must be specified in the WFNAME parameter of the send command.
 On the sender side, two entries are
 created in the catalog:
 
-- A generic entry
+* A generic entry
     (LIST_FI) with the following attributes:
-    -   FNAME =
+    *   FNAME =
         {dirname &#124; mask}
-    -   and WFNAME
+    *   and WFNAME
         = temp-filename
 
 Its state is immediately set to K, once it has been created in the catalog.
 This entry is set to the T (or X) state when all transfers have been set to T (or X depending on the compatibility mode).
 
-- A transfer entry
+* A transfer entry
     with the following attributes:
-    -   FNAME =
+    *   FNAME =
         temp-filename
-    -   WFNAME
+    *   WFNAME
         = {dirname &#124; mask}
 
 On the receiver side, a single transfer
@@ -279,9 +279,9 @@ send command, it is ignored.
 
 The sender creates the following entries:
 
-- One transfer entry
+* One transfer entry
     for each file selected after analyzing the generic request
-- A generic entry
+* A generic entry
     identified by the DIAGP code set to LIST_FI. Once it has been created
     in the catalog, its state is immediately set to K. The state is changed
     to T (or X) when all related transfers are set to T (or X, depending on the compatibility mode).
@@ -333,8 +333,8 @@ You  can use the CFTSEND [FILTER](../../../c_intro_userinterfaces/command_summ
 
 For example, create a filter that includes all .jpg files that are:
 
-- A word (at least one other word character)
-- Followed by four-digit number
+* A word (at least one other word character)
+* Followed by four-digit number
 
 #### Heterogeneous mode
 
@@ -431,8 +431,8 @@ To avoid this you can use the CFTPARM parameter SNDINDFILEERR to define the poli
 
 Parameter values:
 
-- CONTINUE (default): Keep the existing behavior, which creates as many transfer requests as there are lines in the input file.
-- ABORT: If the input file line is not a file, this gives the current transfer the status K diagi 132 diagp SNDINDFI, the generic transfer status is K diagi 200, and no other child requests are created.
+* CONTINUE (default): Keep the existing behavior, which creates as many transfer requests as there are lines in the input file.
+* ABORT: If the input file line is not a file, this gives the current transfer the status K diagi 132 diagp SNDINDFI, the generic transfer status is K diagi 200, and no other child requests are created.
 
 ****Catalog details****
 

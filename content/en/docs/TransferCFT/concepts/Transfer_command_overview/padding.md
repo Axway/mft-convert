@@ -30,15 +30,15 @@ When using a variable format, FPAD and NPAD define the character to use to unpad
 
 This parameter defines the padding character at the file level.
 
-- Fixed format: Specifies the character to use for padding using FPAD at file level. If FPAD is not set, the padding character depends on the FCODE used. When FCODE=ASCII it is an ASCII space, FCODE=EBCDIC it is an EBCDIC space, and FCODE=BINARY it is a binary zero.
-- Variable format: Defines the character to use to unpad the record. If FPAD is not set, the record is unchanged.
+* Fixed format: Specifies the character to use for padding using FPAD at file level. If FPAD is not set, the padding character depends on the FCODE used. When FCODE=ASCII it is an ASCII space, FCODE=EBCDIC it is an EBCDIC space, and FCODE=BINARY it is a binary zero.
+* Variable format: Defines the character to use to unpad the record. If FPAD is not set, the record is unchanged.
 
 `NPAD = character`
 
 This parameter defines the padding character at the network level.
 
-- Fixed format: Pads the record with this character up to the size defined by NLRECL. If NPAD is not set, the padding character depends on the FCODE used. When FCODE=ASCII it is an ASCII space, FCODE=EBCDIC it is an EBCDIC space, and FCODE=BINARY it is a binary zero
-- Variable format: Defines the character used to unpad the record. If NPAD is not set, the record is unchanged.
+* Fixed format: Pads the record with this character up to the size defined by NLRECL. If NPAD is not set, the padding character depends on the FCODE used. When FCODE=ASCII it is an ASCII space, FCODE=EBCDIC it is an EBCDIC space, and FCODE=BINARY it is a binary zero
+* Variable format: Defines the character used to unpad the record. If NPAD is not set, the record is unchanged.
 
 > **Note**
 >

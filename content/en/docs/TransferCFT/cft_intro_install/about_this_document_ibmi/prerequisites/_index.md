@@ -4,8 +4,8 @@ linkTitle: "Prerequisites"
 weight: 140
 ---This section describes the prerequisites for Transfer CFT {{< TransferCFT/PrimaryTransferCFTversion  >}} IBM i and covers:
 
-- Hardware environment
-- Software environment
+* Hardware environment
+* Software environment
 
 ## Hardware prerequisites
 
@@ -17,17 +17,17 @@ For performance reasons, you are advised to configure a storage pool size of at 
 
 You must ensure that the:
 
-- Disk space used to restore the Transfer CFT objects is approximately 250 MB, excluding files to be transferred.
-- Total disk space used on the system still allows acceptable performance levels to be maintained (&lt; 80%).
+* Disk space used to restore the Transfer CFT objects is approximately 250 MB, excluding files to be transferred.
+* Total disk space used on the system still allows acceptable performance levels to be maintained (&lt; 80%).
 
 ## Software environment
 
 This section describes the Transfer CFT {{< TransferCFT/PrimaryTransferCFTversion  >}} IBM i software environment:
 
-- Transfer CFT IBM i {{< TransferCFT/PrimaryTransferCFTversion >}} supports V7R2 (7.2) and higher.
-- The file management mechanism uses the standard OS database management system and IFS (Integrated File System). The Transfer CFT IBM i Manager uses the PDM (Program Development manager) and SEU (Source Entry Utility).
-- The Transfer CFT IBM i Manager uses the UIM (User Interface Manager) V7R2 and higher.
-- The Transfer CFT APIs only support an ILE environment.
+* Transfer CFT IBM i {{< TransferCFT/PrimaryTransferCFTversion >}} supports V7R2 (7.2) and higher.
+* The file management mechanism uses the standard OS database management system and IFS (Integrated File System). The Transfer CFT IBM i Manager uses the PDM (Program Development manager) and SEU (Source Entry Utility).
+* The Transfer CFT IBM i Manager uses the UIM (User Interface Manager) V7R2 and higher.
+* The Transfer CFT APIs only support an ILE environment.
 
 ## Java
 

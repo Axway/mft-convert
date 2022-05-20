@@ -8,14 +8,14 @@ weight: 440
 
 Use the CFTSEND object to specify:
 
-- The name and local
+* The name and local
     physical characteristics of the file to send
-- The network characteristics
+* The network characteristics
     of the file to send to the partner
-- The actions to
+* The actions to
     perform locally during and after a transfer (translation, compression,
     call to a user EXIT, an end-of-transfer procedure...)
-- An authorized time
+* An authorized time
     slot and default user associated with the transfers
 
 There is no limit to the number of CFTSEND objects that you can create.
@@ -31,5 +31,5 @@ The parameters are described in the CFTSEND and CFTRECV object topics.
 ****Related
 topics****
 
-- Command syntax
+* Command syntax
     [CFTSEND](../../../command_summary#CFTSEND)

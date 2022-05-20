@@ -4,13 +4,13 @@ linkTitle: "Post installation"
 weight: 190
 ---After installing Transfer CFT, but before starting Transfer CFT and the Copilot server, you may need to perform the following tasks:
 
-- [Perform an update](#updates)
-- [Create a basic configuration](#Creating_a_basic_configuration)
+* [Perform an update](#updates)
+* [Create a basic configuration](#Creating_a_basic_configuration)
 
 Otherwise you can go to:
 
-- [Start the Transfer CFT Copilot server](#Start)
-- [Start Transfer CFT](#Start2)
+* [Start the Transfer CFT Copilot server](#Start)
+* [Start Transfer CFT](#Start2)
 
 For information on user rights, refer to the topic [Defining user rights UNIX](../../../unix_install_start_here/run_first_time_ux/run_first_time_ux/user_rights_and_interface_unix).
 
@@ -22,8 +22,8 @@ When you install Transfer CFT, the `home` directory is created and populated und
 
 During the installation, the Transfer CFT installer creates two files in the installation directory that are working files for the installer. Do not modify these files unless instructed to do so by Axway. While they are not used for Transfer CFT operations, they are necessary for installer functions such as upgrades.
 
-- .rundir
-- .transfer_cft.properties
+* .rundir
+* .transfer_cft.properties
 
 ## Standalone installations
 
@@ -49,8 +49,8 @@ if you did not do so during the installation process. If you started Transfer CF
 To add environment variables to your Transfer CFT profile
 edit the following script:
 
-- Windows: ` <CFTDIRRUNTIME>\profile.bat`
-- UNIX: `./<CFTDIRRUNTIME>/profile`
+* Windows: ` <CFTDIRRUNTIME>\profile.bat`
+* UNIX: `./<CFTDIRRUNTIME>/profile`
 
 ### UCONF
 
@@ -90,7 +90,7 @@ file, the variable `<$CFTKEY>` represents the `cft.key` file.
 Check the values, especially the key value, hostname, and port for TCP,
 in the following file:
 
-- Windows and UNIX: `<CFTRUNTIME>/conf/cft-tcp.conf  `
+* Windows and UNIX: `<CFTRUNTIME>/conf/cft-tcp.conf  `
 
 Start the Transfer CFT profile and, to create the Transfer CFT
 internal datafile and update the basic configuration, execute:
@@ -170,11 +170,11 @@ cft start
 
 Since you can start or restart a registered {{< TransferCFT/axwayvariablesComponentLongName  >}} from {{< TransferCFT/PrimaryCGorUM  >}}, when using service mode you must set the **CFT UI service** account so that it can start the **CFT service**. Therefore, perform one of the following two tasks:
 
-- Add the account to the CFT server's **Local Administrator Group**, or
-- Provide the rights to start the Transfer CFT Service as a non Local Admin user:
-    -   Use a Sysinternals utility such as Process Explorer to change Windows service permissions. Run Process Explorer as administrator and locate the CFT service (CFTSRVLD.exe) process.
-    -   Open the process properties and click the **Services** tab. Click the **Permissions** button and add the user or group in the opened window. Then select the permissions that you want to assign (Full Control) and click **OK** to save.
-    -   ![](/Images/TransferCFT/services_rights.png)
+* Add the account to the CFT server's **Local Administrator Group**, or
+* Provide the rights to start the Transfer CFT Service as a non Local Admin user:
+    *   Use a Sysinternals utility such as Process Explorer to change Windows service permissions. Run Process Explorer as administrator and locate the CFT service (CFTSRVLD.exe) process.
+    *   Open the process properties and click the **Services** tab. Click the **Permissions** button and add the user or group in the opened window. Then select the permissions that you want to assign (Full Control) and click **OK** to save.
+    *   ![](/Images/TransferCFT/services_rights.png)
 
 ## Register with {{< TransferCFT/PrimaryCGorUM  >}}
 

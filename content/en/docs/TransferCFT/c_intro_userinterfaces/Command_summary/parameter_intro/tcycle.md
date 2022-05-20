@@ -12,11 +12,11 @@ weight: 3500
 
 Transfer cycle period unit. This unit can be:
 
-- DAY:
+* DAY:
     day
-- MIN:
+* MIN:
     minute
-- MONTH:
+* MONTH:
     month
 
 [Return to Command index](../../)

@@ -8,12 +8,12 @@ weight: 170
 
 This section introduces prerequisite information as well as installation and information on operating Transfer CFT in Windows.
 
-- [Operating the product](running_cft_for_the_first_time_windows)
-- [Specific system
+* [Operating the product](running_cft_for_the_first_time_windows)
+* [Specific system
     functions](specific_system_functions)
-- Programming
+* Programming
     interfaces
-- {{< TransferCFT/axwayvariablesComponentShortName >}}
+* {{< TransferCFT/axwayvariablesComponentShortName >}}
     client/server architecture
 
 The information in the Windows operations section

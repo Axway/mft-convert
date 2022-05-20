@@ -10,9 +10,9 @@ by columns or by lines depending on the selected mode.
 Display uses an external
 XML file that lists and describes the format for customized models. This means the Display command can call an XML document as a fmodel parameter.
 
-- In column mode, an adjustable title bar is displayed at the top of
+* In column mode, an adjustable title bar is displayed at the top of
     the catalog content to improve readability.
-- In line mode, every line is presented horizontally
+* In line mode, every line is presented horizontally
     in the form FIELD_NAME = FIELD_VALUE.
 
 Several customizing options are
@@ -34,15 +34,15 @@ See also, LISTCAT/DISPLAY - Statistical variables.
 
 The XML formatting must comply with certain conventions:
 
-- The file must begin with the header: &lt;?xml content='ascii'?>
-- Every tag &lt;tag> must be closed &lt;/tag>
-- Using a tag in the format &lt;tag/> is accepted but not recommended and should be empty
+* The file must begin with the header: &lt;?xml content='ascii'?>
+* Every tag &lt;tag> must be closed &lt;/tag>
+* Using a tag in the format &lt;tag/> is accepted but not recommended and should be empty
 
 For more information, refer to an XML standards reference such as <http://www.w3.org/TR/REC-xml/>. Additionally, you can reference the sample template delivered with your Transfer CFT, which is located in the OS-specific distribution package:
 
-- UNIX, Windows: DSPCNF.XML in runtime/conf
-- z/OS (MVS): distlib.XMLLIB(DSPCNF) and instance.XMLLIB(DSPCNF)
-- IBM i (OS/400): CFTPGM1/DSPCNF
+* UNIX, Windows: DSPCNF.XML in runtime/conf
+* z/OS (MVS): distlib.XMLLIB(DSPCNF) and instance.XMLLIB(DSPCNF)
+* IBM i (OS/400): CFTPGM1/DSPCNF
 
 ****Details****
 

@@ -31,9 +31,9 @@ Specify the last day to activate the cycle of delayed transfers.
 
 If the interval is expressed in:
 
-- Days or months
+* Days or months
     (TCYCLE = DAY or TCYCLE = MONTH), the default value is: CYCDATE = MINDATE + TCYCLE \* CYCLE
-- Minutes (TCYCLE
+* Minutes (TCYCLE
     = MIN), the default value is: CYCDATE = MINDATE
 
  

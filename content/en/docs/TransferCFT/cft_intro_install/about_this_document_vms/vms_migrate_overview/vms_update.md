@@ -4,10 +4,10 @@ linkTitle: "Update"
 weight: 220
 ---This section describes how to perform the following Transfer CFT tasks in an OpenVMS environment:
 
-- [Apply a service pack](#Apply)
-- [Remove a service pack](#Remove)
-- [Apply a patch](#Apply2)
-- [Remove a patch](#Remove2)
+* [Apply a service pack](#Apply)
+* [Remove a service pack](#Remove)
+* [Apply a patch](#Apply2)
+* [Remove a patch](#Remove2)
 
 <span id="Apply"></span>
 

@@ -5,9 +5,9 @@ weight: 360
 ---<span id="About_the_Functions"></span>This topic describes the directory exit task components and functions.
 A directory EXIT task comprises two modules:
 
-- The interface supplied
+* The interface supplied
     with {{< TransferCFT/axwayvariablesComponentShortName >}}
-- The user program
+* The user program
 
 The interface is written in C language. The main entry point of the
 EXIT task, the principle function in C language, is located in the interface.
@@ -22,16 +22,16 @@ an EXIT task.
 
 You must define two types of functions in your programs:
 
-- An initialization
+* An initialization
     function **exaini**
-- One or more functions
+* One or more functions
     that will be referred to as **usrfct**
 
 A directory EXIT task:
 
-- Calls the main
+* Calls the main
     entry point, interface code, on activating the task
-- Calls the initialization
+* Calls the initialization
     function **exaini** function in server mode, when a connection is indicated,
     or in requester mode, when a connection request is made. If this function
     returns a 0 code, the ****usrfct**** function

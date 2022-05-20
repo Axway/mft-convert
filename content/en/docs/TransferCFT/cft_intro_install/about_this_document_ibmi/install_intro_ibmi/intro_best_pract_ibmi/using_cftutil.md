@@ -8,7 +8,7 @@ The Transfer CFT utility CFTUTIL can accept line-mode commands. Enter the comma
 
 ****Examples****
 
-- In an {{< TransferCFT/PrimaryForOS400 >}} command line, enter the command CFTUTIL and press ENTER.
+* In an {{< TransferCFT/PrimaryForOS400 >}} command line, enter the command CFTUTIL and press ENTER.
 
     Enter the selection or command at the prompt.
 
@@ -17,12 +17,12 @@ The Transfer CFT utility CFTUTIL can accept line-mode commands. Enter the comma
      > CFTUTIL
     ```
 
-- Enter the command `LISTCAT `and press ENTER to confirm.
+* Enter the command `LISTCAT `and press ENTER to confirm.
     ```
     1:Input : > LISTCAT
     ```
 
-- Enter the command` /end `and press ENTER to exit CFTUTIL.
+* Enter the command` /end `and press ENTER to exit CFTUTIL.
     ```
     1:Input : > /END
     ```

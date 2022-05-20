@@ -4,10 +4,10 @@ linkTitle: "XFBTransfer system attributes"
 weight: 220
 ---This section provides information on the following attributes:
 
-- [Monitoring errors](#Monitori)
-- [Monitoring tracked-event messages](#Monitori2)
-- [Monitoring processing cycles](#Monitori3)
-- [List of Sentinel states](#List)
+* [Monitoring errors](#Monitori)
+* [Monitoring tracked-event messages](#Monitori2)
+* [Monitoring processing cycles](#Monitori3)
+* [List of Sentinel states](#List)
 
 <span id="Monitori"></span>
 
@@ -55,13 +55,13 @@ weight: 220
 
 Although each transfer occurs between only two transfer partners, each transfer partner plays two roles:
 
-- Sender or Receiver  (the file is sent or received)
-- Requester or Server (the transfer request is sent or received)
+* Sender or Receiver  (the file is sent or received)
+* Requester or Server (the transfer request is sent or received)
 
 For a given transfer, only the following combinations of partner roles are possible:
 
-- Sender/Requester and Receiver/Server (the partner that sent the file requested the transfer)
-- Receiver/Requester and Sender/Server the partner that received the file requested the transfer)
+* Sender/Requester and Receiver/Server (the partner that sent the file requested the transfer)
+* Receiver/Requester and Sender/Server the partner that received the file requested the transfer)
 
 In the XFBTransfer Tracked Object, the Attributes ‘Direction” and “IsServer” reflect these roles (see below).
 

@@ -51,7 +51,7 @@ diagnostic codes.](../../../troubleshoot_intro/about_error_codes/about_diagnosti
 
 This field specifies the name of the Partner requesting the connection:
 
-- Establishing the
+* Establishing the
     protocol connection (FPDU CONNECT)
 
 Format: 16 characters.
@@ -66,16 +66,16 @@ the local Transfer CFT with a search criterion for the remote user definition
 in the PARTNERS file, the equivalent to the remote partner (NRPART) parameter of
 the partner object (CFTPART).
 
-- Creating a file
+* Creating a file
     (FPDU CREATE)
 
 Format: 24 characters
 
-- bytes 1 to
+* bytes 1 to
     8: sending the application name
-- bytes 9 to
+* bytes 9 to
     16: sending the user name
-- bytes 17 to
+* bytes 17 to
     24: free field
 
 In requester mode, the
@@ -89,20 +89,20 @@ CFT recovers the PI 3 code in order to be able to define the &SAPPL
 and &SUSER symbolic variables. The free field is not used by
 Transfer CFT.
 
-- Selecting a file
+* Selecting a file
     (FPDU SELECT)
 
 As the PeSIT protocol imposes no constraints as to the contents
 of this PI code, Transfer CFT does not define or use it.
 
-- Sending a message
+* Sending a message
     (SEND TYPE = MESSAGE, ...)
 
 The PI 3 code contains the same value as the one conveyed
 by the protocol connection request (FPDU CONNECT) previously required
 to send this message.
 
-- Sending an acknowledgement
+* Sending an acknowledgement
     (SEND TYPE = REPLY, ...)
 
 The PI 3 code contains the value of the PI 4 code conveyed
@@ -115,7 +115,7 @@ by the file creation request (FPDU CREATE) whose receipt is acknowledged.
 This field specifies the name of the connection server partner. It takes
 various formats depending on the PeSIT service used.
 
-- Establishing the
+* Establishing the
     protocol connection (FPDU CONNECT)
 
 Format: 16 characters
@@ -128,15 +128,15 @@ CFT does not process this field. Logically, it is defined by the specific
 network identification of the local site relative to the requester Partner
 (the local partner (NSPART) parameter of the partner object (CFTPART)).
 
-- Creating a file (FPDU CREATE)
+* Creating a file (FPDU CREATE)
 
 Format: 24 characters
 
-- bytes 1 to
+* bytes 1 to
     8: receiver application name
-- bytes 9 to
+* bytes 9 to
     16: receiver user name
-- bytes 17 to
+* bytes 17 to
     24: free field
 
 In requester mode, the first two
@@ -150,17 +150,17 @@ the PI 3 code in order to be able to define the &RAPPL and
 &RUSER symbolic variables. The free field is not used by Transfer
 CFT.
 
-- Selecting a file (FPDU SELECT)
+* Selecting a file (FPDU SELECT)
 
 As the PeSIT protocol imposes no constraints as to the contents of this
 PI code, Transfer CFT does not define or use it.
 
-- Sending a message (SEND TYPE = MESSAGE, ...)
+* Sending a message (SEND TYPE = MESSAGE, ...)
 
 The PI 4 code contains the same value as the one conveyed by the protocol
 connection request (FPDU CONNECT) previously required to send this message.
 
-- Sending an acknowledgement (SEND TYPE = REPLY, ...)
+* Sending an acknowledgement (SEND TYPE = REPLY, ...)
 
 The PI 4 code contains the value of the PI 3 code conveyed by the file
 creation request (FPDU CREATE) whose receipt is acknowledged.
@@ -169,10 +169,10 @@ creation request (FPDU CREATE) whose receipt is acknowledged.
 
 ### PI 05 Access control
 
-- Format: 16 characters
-- Bytes 1 to 8: partner
+* Format: 16 characters
+* Bytes 1 to 8: partner
     password
-- Bytes 9 to 16:
+* Bytes 9 to 16:
     the partner's new password
 
 This parameter is exchanged at the time the protocol connection is established.
@@ -300,28 +300,28 @@ or acknowledgement, Transfer CFT does not define or use this field.
 This parameter indicates that a transfer is a new occurrence of a transfer
 which has already been attempted.
 
-- In
+* In
     requester mode, Transfer CFT manages this field internally,
     according to the transfer characteristic (new or restarted).
-- In server mode, if the remote Partner
+* In server mode, if the remote Partner
     indicates a restart, the search criteria for a catalog entry relative
     to the network values received are as follows:
 
 <!-- -->
 
-- File type (PI 11)
-- File identifier
+* File type (PI 11)
+* File identifier
     (PI 12)
-- Transfer identifier
+* Transfer identifier
     (PI 13)
-- Connect Partner
+* Connect Partner
     (PI 3 of FPDU CONNECT)
 
 <!-- -->
 
-- Initial sender
+* Initial sender
     name (PI 61)
-- Final receiver
+* Final receiver
     name (PI 62)
 
 If no catalog entry corresponds to the restart request, Transfer CFT
@@ -355,11 +355,11 @@ commands (for a write transfer). In {{< TransferCFT/PrimaryCGorUM  >}}, use the 
 As PeSIT only recognizes three priority levels, the following conversions
 are performed:
 
-- PRI > 128    
+* PRI > 128    
     PI 17 = 0 (high)
-- PRI = 128    
+* PRI = 128    
     PI 17 = 1 (medium)
-- PRI &lt; 128    
+* PRI &lt; 128    
     PI 17 = 2 (low)
 
 In server mode, the PI 17 value is
@@ -406,8 +406,8 @@ of the file data.
 The use of zero, one or several of the following compression
 techniques may be negotiated:
 
-- horizontal compression
-- vertical compression
+* horizontal compression
+* vertical compression
 
 In sending mode, Transfer CFT defines this field using the result
 of a logical AND between the compression levels specified by the SCOMP
@@ -489,11 +489,11 @@ This parameter specifies the file article format. It is defined using
 the NRECFM parameter of the SEND command, or specify the **Record format** in the send template (CFTSEND).  
 The following conversions are performed:
 
-- NRECFM = F    
+* NRECFM = F    
     PI 31 = 0x00 (fixed)
-- NRECFM = V    
+* NRECFM = V    
     PI 31 = 0x80 (variable)
-- NRECFM = U    
+* NRECFM = U    
     PI 31 = 0x80 (variable)
 
 <span id="PI_32_Article_length"></span>
@@ -670,8 +670,8 @@ See the [xlate](../../../c_intro_userinterfaces/command_summary/parameter_intro/
 
 Format:
 
-- 254 characters for Transfer CFT to a non-Transfer CFT.
-- 512 characters when transferring between two Transfer CFTs.
+* 254 characters for Transfer CFT to a non-Transfer CFT.
+* 512 characters when transferring between two Transfer CFTs.
 
 This parameter allows a message to be conveyed from one user to another
 in the free field of the PeSIT service primitives. No control concerning

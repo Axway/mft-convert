@@ -14,11 +14,11 @@ below}****
 Defines the destination of the operator
 messages selected according to the value of the OPERMSG parameter as follows:
 
-- All
+* All
     log file messages if defined in the CFTLOG object
-- For
+* For
     all transfer messages with the IDF if defined in CFTSEND or CFTRECV
-- For
+* For
     all messages from a transfer that was requested with the command if used
     in SEND or RECV
 
@@ -26,19 +26,19 @@ The value of this parameter is a left aligned 8-character string.
 
 The destination of these messages may be, according to the system:
 
-- the
+* the
     {{< TransferCFT/axwayvariablesComponentShortName >}} "submitter" corresponding to the standard
     output associated with the {{< TransferCFT/axwayvariablesComponentShortName >}} (the submittal screen,
     for example)  
     The value of the NOTIFY parameter must be then be set to ‘ ’ (8 blank
     characters)
-- an
+* an
     operator console  
     The NOTIFY parameter value must begin by the 2 characters OP
 
 <!-- -->
 
-- a computer
+* a computer
     user  
     The value of the NOTIFY parameter indicates the user system identifier
     according to the format "xxxxxxxx"
@@ -46,9 +46,9 @@ The destination of these messages may be, according to the system:
 The following table indicates the possible recipients for each system
 involved:
 
-- YES indicates that the corresponding
+* YES indicates that the corresponding
     recipient type exists
-- NO indicates the corresponding recipient
+* NO indicates the corresponding recipient
     type does not exist
 
 

@@ -26,7 +26,7 @@ Transfer CFT traces are managed by the ****A****dvanced
 
 ATM is a problem resolution assistance tool that is used:
 
-- To save the information
+* To save the information
     exchanged at the {{< TransferCFT/axwayvariablesComponentLongName >}} level, in one or more dedicated files
 
 The information traced relates to protocol information
@@ -34,7 +34,7 @@ The information traced relates to protocol information
 CFT internal information (exchanges between Transfer CFT internal components
 or between Transfer CFT tasks).
 
-- To retrieve and
+* To retrieve and
     interpret previously saved information, through an off-line analysis program
 
 Users are only concerned by ATM in that they may need to initiate tracing,

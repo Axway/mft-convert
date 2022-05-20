@@ -12,8 +12,8 @@ weight: 210
 
 Perform the following steps to configure the Transfer CFT `systemd `service to start via {{< TransferCFT/PrimaryCGorUM  >}} or Copilot, where:
 
-- The {{< TransferCFT/axwayvariablesComponentLongName >}} systemd service is called: **`cft`**
-- The command to start this service is: `sudo systemctl start cft`
+* The {{< TransferCFT/axwayvariablesComponentLongName >}} systemd service is called: **`cft`**
+* The command to start this service is: `sudo systemctl start cft`
 
 1. Authorize the {{< TransferCFT/axwayvariablesComponentLongName >}} user to start the service without requiring a password. On Ubuntu/Debian, use the `visudo `command to add a file called `cft `to `/etc/sudoers.d/`:
 1. Then add the following line:
@@ -24,8 +24,8 @@ Perform the following steps to configure the Transfer CFT `systemd `service to 
 
 Configure support for the `systemd `service to apply updates via Central Governance, where:
 
-- The systemd service created for {{< TransferCFT/axwayvariablesComponentLongName >}} is called: `cft`
-- The systemd service created for Copilot is called: `cftcopilot`
+* The systemd service created for {{< TransferCFT/axwayvariablesComponentLongName >}} is called: `cft`
+* The systemd service created for Copilot is called: `cftcopilot`
 
 Authorize the user that operates {{< TransferCFT/axwayvariablesComponentLongName  >}} to start and stop both services without requiring a password.
 

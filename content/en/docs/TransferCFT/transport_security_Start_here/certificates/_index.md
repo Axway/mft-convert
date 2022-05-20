@@ -5,9 +5,9 @@ weight: 160
 ---<span id="What_you_will_find_in_this_book"></span>This topic
 describes security certificates, and the following security concepts:
 
-- [Overview
+* [Overview
     of certificate standards](#Overview_of_Certificate_Standards)
-- [Database
+* [Database
     protection](#Database_protection)
 
 ## Central Governance certificate management
@@ -66,15 +66,15 @@ For example, this could be a typical DN for a Axway employee:
 The abbreviations before each equal sign in this example have the following
 meanings:
 
-- `uid`:
+* `uid`:
     User ID
-- `e`:
+* `e`:
     Mail address
-- `cn`:The
+* `cn`:The
     user's common name
-- `o`:
+* `o`:
     Organization
-- `c`:
+* `c`:
     Country
 
 DNs may include a variety of other name/value pairs. They are used to
@@ -111,9 +111,9 @@ signature section as described below.
 
 The signature provides the following information:
 
-- The cryptographic
+* The cryptographic
     algorithm or cipher used by the issuing CA to create its own digital signature
-- The CA's digital
+* The CA's digital
     signature obtained by hashing all of the data in the certificate together
     and encrypting it with the CA's private key
 

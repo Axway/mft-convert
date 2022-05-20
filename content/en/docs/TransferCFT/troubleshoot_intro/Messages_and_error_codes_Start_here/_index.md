@@ -35,9 +35,9 @@ CFTXXX: fixed text message <variables>
 
 ****CFTLOG FORMAT=[V23,V24]****
 
-- For V23: CFTT57I
+* For V23: CFTT57I
     PART=&part IDF=&idf IDT=&idt &str transfer started
-- For V24: CFTT57I
+* For V24: CFTT57I
     &str transfer started   &lt;IDTU=&idtu
     PART=&part IDF=&idf IDT=&idt>
 
@@ -55,9 +55,9 @@ The {{< TransferCFT/axwayvariablesComponentShortName  >}} messages use the forma
 
 Where:
 
-- x: message source
-- nn: sequence number
-- s: message severity
+* x: message source
+* nn: sequence number
+* s: message severity
 
 ### Message source
 
@@ -101,8 +101,8 @@ The severity code is described in the following table.
 
 Transfer CFT messages belong to either a system or operating category:
 
-- Operating: Includes all messages related to transfers and CRON jobs.
-- System: Includes all internal messages, such as Transfer CFT start, stop, catalog, tasks, multi-node, and so on.
+* Operating: Includes all messages related to transfers and CRON jobs.
+* System: Includes all internal messages, such as Transfer CFT start, stop, catalog, tasks, multi-node, and so on.
 
 This applies to messages sent to the user defined in the notify parameter in CFTLOG object.
 

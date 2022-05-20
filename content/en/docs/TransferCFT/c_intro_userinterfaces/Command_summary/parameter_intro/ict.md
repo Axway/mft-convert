@@ -8,9 +8,9 @@ weight: 1500
 
 Type of input file data compression:
 
-- C: {{< TransferCFT/axwayvariablesComponentShortName >}} to {{< TransferCFT/axwayvariablesComponentShortName >}}
+* C: {{< TransferCFT/axwayvariablesComponentShortName >}} to {{< TransferCFT/axwayvariablesComponentShortName >}}
     compression
-- H: PeSIT non-SIT
+* H: PeSIT non-SIT
     compression
 
 This parameter is only meaningful if the value of ICOMP is not 0. The

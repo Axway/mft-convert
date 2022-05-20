@@ -11,13 +11,13 @@ files in the */tmp* directory depending on the script run.
 There are four types of temporary files corresponding to different types
 of actions:
 
-- */tmp/cftlo\**
+* */tmp/cftlo\**
     files are produced during the log switching procedure
-- */tmp/cftcn\**
+* */tmp/cftcn\**
     files are produced when the accounting feature is enabled
-- */tmp/cftsu\**
+* */tmp/cftsu\**
     files are produced when end of transfer procedures are run
-- */tmp/cftsu\*.err*
+* */tmp/cftsu\*.err*
     files correspond to the results of commands in the *cftsu\** files
 
 ### Deleting temporary files

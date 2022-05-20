@@ -18,9 +18,9 @@ To configure a {{< TransferCFT/suitevariablesTransferCFTName  >}} SFTP client:
 
 Use the following parameters to define the client's SFTP protocol:
 
-- TYPE: SFTP
-- SSH: Link to the CFTSSH object (DIRECT=CLIENT)
-- NET: link to the CFTNET 
+* TYPE: SFTP
+* SSH: Link to the CFTSSH object (DIRECT=CLIENT)
+* NET: link to the CFTNET 
 
 ****Example****
 
@@ -57,10 +57,10 @@ PKIKEYGEN id=MY_KEY, keylen=2048
 Use CFTSSH to define a SSH profile in Transfer CFT. The CFTSSH definition contains the SSH parameter connection for SFTP in client mode. For more information, see [Define CFTSSH](../../../c_intro_userinterfaces/web_copilot_ui/cftssl/cftssh)
 (SFTP).
 
-- ID: Identifier of the object
-- DIRECT=CLIENT
-- SRVPUBKEY=Identifier of the key used to authenticate the server. If this is not set, there is no authentication control.
-- CLIPRIVKEY: Key Id of the client private key to use with key authentication or two-factor (dual) authentication.
+* ID: Identifier of the object
+* DIRECT=CLIENT
+* SRVPUBKEY=Identifier of the key used to authenticate the server. If this is not set, there is no authentication control.
+* CLIPRIVKEY: Key Id of the client private key to use with key authentication or two-factor (dual) authentication.
 
 ****Example****
 
@@ -78,10 +78,10 @@ CFTSSH id = SSH_DEFAULT,
 
 A CFTPART object represents an application with one SFTP user per application (CFTPART = one application). To define a CFTPART object in client mode using SFTP:
 
-- NSPART: Corresponds to your client login
-- SAP: The remote SFTP server port
-- HOST:The remote SFPT server host
-- PROT: Refers to the SFTP protocol
+* NSPART: Corresponds to your client login
+* SAP: The remote SFTP server port
+* HOST:The remote SFPT server host
+* PROT: Refers to the SFTP protocol
 
 ## Set the type of authentication
 
@@ -93,11 +93,11 @@ Select the type of authentication to use from the options listed in this section
 
 Use  one of the following methods to configure the client password:
 
-- Clear text: When NSPASSW=&lt;the user password>, the client password is in clear text.
+* Clear text: When NSPASSW=&lt;the user password>, the client password is in clear text.
 
 <!-- -->
 
-- Uconf definition: When NSPASSW=_AUTH_, authentication is specified in `uconf:cft.server.authentication_method `is used.
+* Uconf definition: When NSPASSW=_AUTH_, authentication is specified in `uconf:cft.server.authentication_method `is used.
 
 > **Note**
 >
@@ -126,12 +126,12 @@ CFTTCP id = USER1,
 
 To configure how the client sends the key (CFTSSH):
 
-- Identifier: CLIPRIVKEY refers to an identifier in the local PKI database.
+* Identifier: CLIPRIVKEY refers to an identifier in the local PKI database.
 
 This is how the client decides the CLIPRIVKEY to use for the SSH profile:
 
-- To use a specific SSH profile, you must define it in CFTPART 
-- If you do not define a specific SSH profile, then the client will use the one defined by default in CFTPROT 
+* To use a specific SSH profile, you must define it in CFTPART 
+* If you do not define a specific SSH profile, then the client will use the one defined by default in CFTPROT 
 
 This example illustrates a specific SSH profile (SSH_USER2 below).
 
@@ -158,12 +158,12 @@ CFTSSH id = SSH_USER2,
 
 When using **password and key** two-factor (dual) authentication:
 
-- NSPASSW: Use one of the methods to configure how the client sends its password, as described [here.](#Password)
-- CLIPRIVKEY: Use this to configure how the client sends its key, as described [here.](#Key)
+* NSPASSW: Use one of the methods to configure how the client sends its password, as described [here.](#Password)
+* CLIPRIVKEY: Use this to configure how the client sends its key, as described [here.](#Key)
 
 <!-- -->
 
-- ```
+* ```
     CFTPART id = USER3,
 
     > ssh = USER3,
@@ -191,21 +191,21 @@ When using **password and key** two-factor (dual) authentication:
 
 The character conversion in text mode can be done at the requester or server level, either in a send or receive command. You can configure the conversion using FCHARSET/NCHARSET or FCODE/NCODE, where transcoding is performed if FCODE differs from NCODE, or if FCHARSET differs from NCHARSET. The FCHARSET/NCHARSET parameters, however, take precedence over FCODE/NCODE if both are defined. Additionally:
 
-- The charset and transferred file code are exchanged between the requester and server for two Transfer CFTs.
-- A transfer restart is forbidden if the FCHARSET/NCHARSET conversion is done at the server level.
-- The NCODE parameter is available in CFTRECV as with CFTSEND.
+* The charset and transferred file code are exchanged between the requester and server for two Transfer CFTs.
+* A transfer restart is forbidden if the FCHARSET/NCHARSET conversion is done at the server level.
+* The NCODE parameter is available in CFTRECV as with CFTSEND.
 
 ****SFTP versions****
 
-- SFTP 3 and lower: There is no flag to open a file in text mode, so the text mode is selected through the IDF's FTYPE parameter. The newline conversion can be specified on the client side.
-- SFTP 4 and higher: The client indicates if the transfer is done in binary or text mode. This overrides the IDF's FTYPE parameter. The newline conversion is done on the client side to accommodate the server requirement.
+* SFTP 3 and lower: There is no flag to open a file in text mode, so the text mode is selected through the IDF's FTYPE parameter. The newline conversion can be specified on the client side.
+* SFTP 4 and higher: The client indicates if the transfer is done in binary or text mode. This overrides the IDF's FTYPE parameter. The newline conversion is done on the client side to accommodate the server requirement.
 
 ## Restart a transfer
 
 Since transfers are activated by the client, a restart will only work from the client side.
 
-- There is only one entry in the catalog for the transfer. Use the file name to identify the transfer identifier during the restart.
-- When a send is restarted by the client, {{< TransferCFT/axwayvariablesComponentLongName >}} checks that the file is still available on the server. Therefore a restart is only possible when the transfer is configured in Open Mode.
+* There is only one entry in the catalog for the transfer. Use the file name to identify the transfer identifier during the restart.
+* When a send is restarted by the client, {{< TransferCFT/axwayvariablesComponentLongName >}} checks that the file is still available on the server. Therefore a restart is only possible when the transfer is configured in Open Mode.
 
 ****Related topics****
 

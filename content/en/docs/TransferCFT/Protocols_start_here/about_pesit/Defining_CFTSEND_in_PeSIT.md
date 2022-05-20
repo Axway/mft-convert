@@ -15,16 +15,16 @@ This topic presents the CFTSEND
 object parameters that are affected by the PeSIT protocol. These parameters
 are:
 
-- The partner [identification parameters](#Identification_parameters)
-- The [data
+* The partner [identification parameters](#Identification_parameters)
+* The [data
     processing parameters](#Data_processing_parameters)
-- The [file
+* The [file
     network characteristics](#File_network_characteristics)
-- A free parameter
+* A free parameter
     for the [Transfer CFT user](#User_parameter)
-- [An
+* [An
     execution control parameter](#Execution_control_parameter)
-- [Parameter
+* [Parameter
     values for negotiated functional levels](#Parameter_values_for_negotiated_functional_levels)
 
 <span id="Identification_parameters"></span>
@@ -88,30 +88,30 @@ capabilities. The values sent must be valid for the receiving partner.
 
 The following characteristics can be sent by the PeSIT protocol:
 
-- FDATE/FTIME:
+* FDATE/FTIME:
     date and time attached to the file,
-- NCODE:
+* NCODE:
     code of data sent
-- NFNAME:
+* NFNAME:
     filename on receiver site (transmission in open mode)
-- NIDF:
+* NIDF:
     file network identifier
-- NLRECL:
+* NLRECL:
     size of receiver file records
-- NORG:
+* NORG:
     file organization
-- NRECFM:
+* NRECFM:
     file record format (fixed, variable)
-- NSPACE:
+* NSPACE:
     file size
 
 #### PeSIT E
 
 The E version of the PeSIT protocol introduced the following characteristics:
 
-- NKEYLEN:
+* NKEYLEN:
     length of the access key to an indexed file
-- NKEYPOS:
+* NKEYPOS:
     location, relative to the start of the article, of the file access key
 
 The NKEYLEN and NKEYPOS parameters are sent but not used by Transfer
@@ -125,13 +125,13 @@ variables which can be used: &FKEYLEN and &FKEYPOS.
 Transfer CFT specific extensions must be implemented to send the following
 characteristics to the partner. The partner must hence be a Transfer CFT:
 
-- NBLKSIZE:
+* NBLKSIZE:
     file block size
-- NIDF:
+* NIDF:
     extended to 32 characters for PeSIT E CFT/CFT
-- NRECFM:
+* NRECFM:
     file record format, either fixed, variable, or indefinite
-- NTYPE:
+* NTYPE:
     file type
 
 <span id="User_parameter"></span>
@@ -153,11 +153,11 @@ from a protocol standpoint to the remote partner. Given that PeSIT only
 recognizes three priority levels, the value sent to the partner will be
 converted as follows:
 
-- PRI > 128: high
+* PRI > 128: high
     priority
-- PRI = 128: average
+* PRI = 128: average
     priority
-- PRI &lt; 128: low
+* PRI &lt; 128: low
     priority
 
 <span id="Parameter_values_for_negotiated_functional_levels"></span>
@@ -191,10 +191,10 @@ to the functional levels negotiated for the protocol.
 | SUSER  | string8  | string32 |
 
 
-- X:  parameter
+* X:  parameter
     used without restriction for protocol exchanges.
-- "-":  parameter
+* "-":  parameter
     not used by the protocol.
-- (3): this parameter is conveyed
+* (3): this parameter is conveyed
     by the protocol but the associated semantics (not specified by PeSIT)
     of the open mode is specific to Transfer CFT.

@@ -31,9 +31,9 @@ The PKIKEY command is similar to the PKICER command. Parameters include:
 
 ### Restrictions
 
-- Transfer CFT does not support keys that contain comments, regardless of if you are directly referencing or importing them.
-- Transfer CFT does not support private keys with passphrases.
-- Transfer CFT supports the RSA digital signature algorithm; however, ECDSA and DSA are not supported.
+* Transfer CFT does not support keys that contain comments, regardless of if you are directly referencing or importing them.
+* Transfer CFT does not support private keys with passphrases.
+* Transfer CFT supports the RSA digital signature algorithm; however, ECDSA and DSA are not supported.
 
 ## Example uses
 

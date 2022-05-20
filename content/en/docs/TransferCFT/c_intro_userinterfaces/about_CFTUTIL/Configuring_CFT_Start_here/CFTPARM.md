@@ -15,17 +15,17 @@ Transport Security: Start here](../../../../transport_security_start_here/config
 ****Related
 topics****
 
-- Command syntax
+* Command syntax
     [CFTPARM](../../../command_summary#CFTPARM)
-- Object concepts
+* Object concepts
     [General parameters
     definition](../../../../admin_intro/admin_config_commands/cftparm_general_parameters)
 
 Use this command to:
 
-- Specify
+* Specify
     the parameters which control overall Transfer CFT operations
-- Select
+* Select
     the other parameter setting commands which should be taken into account
     during execution
 

@@ -4,19 +4,19 @@ linkTitle: "Requester transfer"
 weight: 180
 ---A requester transfer involves the following steps:
 
-- [Registering
+* [Registering
     the request](#Registering_the_request)
-- [Activating
+* [Activating
     the transfer](#Activating_a_transfer)
-- [Connecting
+* [Connecting
     to the network](#Connecting_to_the_network)
-- [Exchanging
+* [Exchanging
     protocol information](#Exchanging_protocol_information)
-- [Creating
+* [Creating
     the file](#Creating_the_file)
-- [Transferring
+* [Transferring
     data](#Transferring_data)
-- [Disconnecting](#Disconnecting)
+* [Disconnecting](#Disconnecting)
 
 <span id="Registering_the_request"></span>
 
@@ -25,16 +25,16 @@ weight: 180
 Transfer CFT executes the transfer commands that are saved
 in the catalog. It sends and receives the files through the commands:
 
-- SEND TYPE = FILE
+* SEND TYPE = FILE
     for sending
-- RECV TYPE = FILE
+* RECV TYPE = FILE
     for receiving
 
 It sends messages through the commands:
 
-- SEND TYPE = MESSAGE
+* SEND TYPE = MESSAGE
     for a simple message
-- SEND TYPE = REPLY
+* SEND TYPE = REPLY
     for a reply to a previous transfer type message
 
 In the catalog, a transfer request made with the parameter STATE=HOLD
@@ -59,28 +59,28 @@ setting, and selects the exchange protocol in the CFTPROT object.
 
 The transfer may be held if, for example:
 
-- Partner access
+* Partner access
     is inhibited by time slots, parameters of the \*MINTIME/\*MAXTIME type in
     the commands CFTPART, etc.
-- The maximum number
+* The maximum number
     of simultaneous transfers is exceeded
 
 In these cases, the entries remain in the D state.
 
 The transfer may be aborted if:
 
-- The file to be
+* The file to be
     sent is not present, or the receiving file does not exist as required
     by the parameter setting (FDISP, FACTION parameters)
-- The IDF is refused
+* The IDF is refused
     for this transfer in the CFTAUTH object
-- The partner is
+* The partner is
     not defined
 
 Particular case: the EXITs and directory allow a partner
 description to be dynamically complemented or created.
 
-- The IDF or file
+* The IDF or file
     is not authorized for the user
 
 The security system is activated and does not provide the required authorizations.
@@ -118,14 +118,14 @@ of messages in accordance with the chosen protocol, forming the protocol
 reciprocal recognition and parameter negotiation phase, during which the
 transfer may fail, in particular if:
 
-- The partner detects
+* The partner detects
     a problem during the recognition phase, name and password verification
-- The partner refuses
+* The partner refuses
     the transfer as it is not within the authorized time slot
-- The associated
+* The associated
     operating parameters or protocols are incompatible (no protocol unit reciprocal
     recognition or negotiation impossible)
-- A directory type
+* A directory type
     EXIT generates a refusal
 
 In these cases, the catalog entry changes to the H or K state, according
@@ -139,27 +139,27 @@ according to the protocol. See [Protocols.](../../../protocols_start_here)
 Once the partner is recognized and the protocol is defined, the type
 of transfer is determined:
 
-- File send or receive,
+* File send or receive,
     and the file is designated
-- Message send
+* Message send
 
 The transfer may fail locally if:
 
-- The file to
+* The file to
     be sent is not known or protected
-- There is an
+* There is an
     inconsistency between the parameter setting of the CFTSEND command and
     the file to be sent (FORG incorrect, for example)
-- There is an
+* There is an
     inconsistency between the parameter setting of the CFTRECV command and
     the file to be received. FDISP = NEW and the file already exists, for
     example
-- The file is
+* The file is
     not authorized for the user, operating security system parameter setting
 
 The transfer may fail remotely if:
 
-- The transfer
+* The transfer
     of such a file is not authorized by the partner
 
 In these cases, the corresponding catalog entry changes to the H or
@@ -176,9 +176,9 @@ and compression functions.
 
 The file type EXIT allows the user to:
 
-- Handle the data
+* Handle the data
     at any time during the transfer
-- Initiate transfer
+* Initiate transfer
     refusals
 
 <span id="Disconnecting"></span>

@@ -4,16 +4,16 @@ linkTitle: "System services functions"
 weight: 220
 ---System services functions include:
 
-- _Date: Returns the current date.
-- _Time: Returns the current time.
-- _lTime: Returns the current time as along integer.
-- _DatTim: Returns the date and the current time.
-- _SmSleep: Standby current process
-- _Job: Returns the name of current process
-- _User: Returns the user name.
-- _DtSplit: Breaks down a timestamp to a date and a time.
-- _DtDiff: Calculates the difference in hundredths of a second between two date/times.
-- _DtAdd: Adds seconds to a date/time.
+* _Date: Returns the current date.
+* _Time: Returns the current time.
+* _lTime: Returns the current time as along integer.
+* _DatTim: Returns the date and the current time.
+* _SmSleep: Standby current process
+* _Job: Returns the name of current process
+* _User: Returns the user name.
+* _DtSplit: Breaks down a timestamp to a date and a time.
+* _DtDiff: Calculates the difference in hundredths of a second between two date/times.
+* _DtAdd: Adds seconds to a date/time.
 
 ## Using the system services functions
 
@@ -30,8 +30,8 @@ _Date PARM = VDATE,
 
 #### Values
 
-- VDATE: Name of a variable of type CHAR, minimum length 8, which receives in return the current system date. Enter the value in upper case.
-- lrc: Name of a long integer variable that receives in return a code execution.
+* VDATE: Name of a variable of type CHAR, minimum length 8, which receives in return the current system date. Enter the value in upper case.
+* lrc: Name of a long integer variable that receives in return a code execution.
 
 #### Features
 
@@ -62,8 +62,8 @@ _Time PARM = VTIME,
 
 #### Values
 
-- VTIME: The name of a CHAR variable, minimum length 8, which receives in return the current system time. Enter the value in upper case.
-- lrc: The name of a long integer variable that receives return code execution.
+* VTIME: The name of a CHAR variable, minimum length 8, which receives in return the current system time. Enter the value in upper case.
+* lrc: The name of a long integer variable that receives return code execution.
 
 #### Features
 
@@ -94,8 +94,8 @@ _DatTim PARM = VDATTIM,
 
 #### Values
 
-- VDATTIM: The name of the CHAR variable, minimum length 16, which receives the date and return the current system time. Enter the value in upper case.
-- lrc: Name of a long integer variable that receives return code execution.
+* VDATTIM: The name of the CHAR variable, minimum length 16, which receives the date and return the current system time. Enter the value in upper case.
+* lrc: Name of a long integer variable that receives return code execution.
 
 #### Features
 
@@ -126,9 +126,9 @@ The _DtSplit function breaks a datetime string into an YYYYMMDDHHMMSS date and h
 
 #### Parameters
 
-- Date_time: The name of the CHAR variable, having a minimum length of 16, which contains a date-time value that is the concatenation of a date and time format YYYYMMDDHHMMSS.
-- Date: The name of the CHAR variable, having a length of 8, that returns the date.
-- Time: The name of the CHAR variable, having a length of 8, that receives an hour.
+* Date_time: The name of the CHAR variable, having a minimum length of 16, which contains a date-time value that is the concatenation of a date and time format YYYYMMDDHHMMSS.
+* Date: The name of the CHAR variable, having a length of 8, that returns the date.
+* Time: The name of the CHAR variable, having a length of 8, that receives an hour.
 
 #### Example
 
@@ -155,9 +155,9 @@ _DtMerge DATIME = date_time,
 
 #### Values
 
-- Date_time: The name of a the CHAR variable, minimum length 16, which will be stored in the result of the concatenation of the variable date and time format variable YYYYMMDDHHMMSS.
-- Date: The CHAR variable, length 8, that contains a date in YYYYMMDD format.
-- Time: The CHAR variable, having a length of 8, that contains a time format HHMMSSCC.
+* Date_time: The name of a the CHAR variable, minimum length 16, which will be stored in the result of the concatenation of the variable date and time format variable YYYYMMDDHHMMSS.
+* Date: The CHAR variable, length 8, that contains a date in YYYYMMDD format.
+* Time: The CHAR variable, having a length of 8, that contains a time format HHMMSSCC.
 
 #### Example
 
@@ -183,9 +183,9 @@ SEC = second
 
 #### Values
 
-- Date_hour_src: The name of a CHAR type variable having a minimum length of 16, which contains a date-time value that is a concatenation of a date and time format: YYYYMMDDHHMMSS.
-- Date_hour_dest: name of a variable of type CHAR, minimum length 16, which will be stored in the new date-time destination.
-- Second: name of a variable of type LONG which contains the number of seconds to add to the date-time source.
+* Date_hour_src: The name of a CHAR type variable having a minimum length of 16, which contains a date-time value that is a concatenation of a date and time format: YYYYMMDDHHMMSS.
+* Date_hour_dest: name of a variable of type CHAR, minimum length 16, which will be stored in the new date-time destination.
+* Second: name of a variable of type LONG which contains the number of seconds to add to the date-time source.
 
 #### Example
 
@@ -212,9 +212,9 @@ SEC = hundredth_of_seconds
 
 #### Values
 
-- date_time1: name of a variable of type CHAR, minimum length 16, which contains a date-time value that is the concatenation of a date and time format YYYYMMDDHHMMSS.
-- date_time2: name of a variable of type CHAR, minimum length 16, which contains a date-time value that is the concatenation of a date and time format YYYYMMDDHHMMSS.
-- hundredth_of_seconds: name of a variable of type LONG which will be stored in the difference-date-time1 date_heure2. This difference is calculated in hundredth of seconds.
+* date_time1: name of a variable of type CHAR, minimum length 16, which contains a date-time value that is the concatenation of a date and time format YYYYMMDDHHMMSS.
+* date_time2: name of a variable of type CHAR, minimum length 16, which contains a date-time value that is the concatenation of a date and time format YYYYMMDDHHMMSS.
+* hundredth_of_seconds: name of a variable of type LONG which will be stored in the difference-date-time1 date_heure2. This difference is calculated in hundredth of seconds.
 
 #### Examples
 
@@ -243,8 +243,8 @@ RC = lrc
 
 #### Values
 
-- VUSER: name of a variable of type CHAR, minimum length 15, which receives in return the current user name. Enter the value in upper case.
-- lrc: name of a long integer variable that receives return code execution.
+* VUSER: name of a variable of type CHAR, minimum length 15, which receives in return the current user name. Enter the value in upper case.
+* lrc: name of a long integer variable that receives return code execution.
 
 #### Features
 
@@ -276,8 +276,8 @@ RC = lrc
 
 #### Values
 
-- VJOB: The name of a CHAR variable, which receives the process name. There is a minimum length of 15. Enter the value in upper case.
-- lrc: The name of a long integer variable that receives the return code execution.
+* VJOB: The name of a CHAR variable, which receives the process name. There is a minimum length of 15. Enter the value in upper case.
+* lrc: The name of a long integer variable that receives the return code execution.
 
 #### Features
 
@@ -305,8 +305,8 @@ RC = lrc
 
 #### Values
 
-- vsleep: The explicit standby time value.
-- lrc: The name of a long integer variable that receives return code execution.
+* vsleep: The explicit standby time value.
+* lrc: The name of a long integer variable that receives return code execution.
 
 #### Features
 

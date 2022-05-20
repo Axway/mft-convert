@@ -5,9 +5,9 @@ weight: 150
 ---****Related
 topics****
 
-- Command syntax
+* Command syntax
     [CFTIDF](../../../c_intro_userinterfaces/command_summary#CFTIDF)
-- Object concepts
+* Object concepts
     <a href="#" class="selected">Template to virtual file
     association</a>
 

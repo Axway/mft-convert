@@ -10,9 +10,9 @@ Schedules the post-processing exec file processing time.
 
 You can express the time value:
 
-- Explicitly
+* Explicitly
     as an absolute time.
-- In
+* In
     the command, relative to the time the command is taken into
     account.
 

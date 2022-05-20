@@ -25,21 +25,21 @@ The media interfacing
 with those used by the Transfer CFT. The data associated with
 these media is used by CFTUTIL to:
 
-- Configure
+* Configure
     and query the Transfer CFT parameters with the option TYPE =PARM
-- Configure
+* Configure
     and query the partners managed by the Transfer CFT with the option
     TYPE = PART
-- Query the
+* Query the
     catalog used by the Transfer CFT with the option TYPE = CAT
-- Communicate
+* Communicate
     with the Transfer CFT with the option TYPE = COM, through
     the communication media managed by the Transfer CFT
 
 The media specific
 to CFTUTIL used to:
 
-- Send the
+* Send the
     commands to be processed (by CFTUTIL) with the option TYPE = INPUT
 
 For TYPE = PARM, TYPE = PART, and TYPE = CAT, the associated media can
@@ -56,13 +56,13 @@ CFTUTIL commands are read in the new input medium mentioned.
 For TYPE = COM and depending on the system involved, the associated
 media can be:
 
-- A file
-- TCPIP communication
+* A file
+* TCPIP communication
 
 For a communication medium based on TCP/IP the media can be:
 
-- Host name
-- Configuration file
+* Host name
+* Configuration file
     name
 
 If this file does not exist or does not have the correct syntax, you are notified only during the processing of the first transfer request.

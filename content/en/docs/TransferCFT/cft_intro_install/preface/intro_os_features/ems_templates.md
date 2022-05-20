@@ -46,15 +46,15 @@ The following table shows the relationship between the event, the subject, and t
 
 The CFTLOG object defines the Transfer CFT log file declarations. The name of the destination is provided in the fname parameter, which can be:
 
-- A file: The files are created using a CFTUTIL command, as described in Transfer CFT Environment.
-- Collector: Specifies the name of the collector to which log messages are written.
+* A file: The files are created using a CFTUTIL command, as described in Transfer CFT Environment.
+* Collector: Specifies the name of the collector to which log messages are written.
 
 You can use the NOTIFY parameter of the CFTLOG object to combine the two destinations so that they refer to a Collector.
 
-- NOTIFY: Name of the collector.
-- OPERMSG: Allows you to filter the type of messages to be sent.
-    -   This number is the sum of the values that correspond to the types of messages you want to filter
-    -   For example, Operating error messages=16, System error messages=32, Operating fatal error messages=64, System fatal error messages=128 giving a total of 240
+* NOTIFY: Name of the collector.
+* OPERMSG: Allows you to filter the type of messages to be sent.
+    *   This number is the sum of the values that correspond to the types of messages you want to filter
+    *   For example, Operating error messages=16, System error messages=32, Operating fatal error messages=64, System fatal error messages=128 giving a total of 240
 
 > **Note**
 >
@@ -79,8 +79,8 @@ opermsg= 240,
 
 The CFTACCNT object defines the destinations for the statistical data concerning terminated transfers (accounting messages). The possible destinations provided in the fname parameter are:
 
-- A file: The files are created using a CFTUTIL command as described in Transfer CFT Environment.
-- Collector: Specifies the name of the collector to which account messages are written.
+* A file: The files are created using a CFTUTIL command as described in Transfer CFT Environment.
+* Collector: Specifies the name of the collector to which account messages are written.
 
 Once defined, you can activate and link the object to the CFTPARM as shown in the following example.
 

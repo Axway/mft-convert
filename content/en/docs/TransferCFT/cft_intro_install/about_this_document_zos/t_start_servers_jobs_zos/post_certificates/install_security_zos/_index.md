@@ -10,11 +10,11 @@ When installing Transfer CFT, all procedures that update RACF must be performed 
 
 Transfer CFT software can be installed with or without the security system. In all cases, you must follow the installation procedure indicated in the Transfer CFT z/OS Installation and Operations Guide. The security system is intended to be installed on systems already running Transfer CFT. It is installed in several steps; each represents control levels with increasing severity.
 
-- Level 0: Transfer CFT without security
+* Level 0: Transfer CFT without security
 
 <!-- -->
 
-- Level 1: Transfer CFT with security controlling configuration files and transfers
+* Level 1: Transfer CFT with security controlling configuration files and transfers
 
 Level 2: corresponds to level 1 with an additional program-based control of accesses to CFT files (PADS) (USERCTRL=YES)
 
@@ -32,25 +32,25 @@ CFTUTIL UCONFSET id=am.type, value=internal
 
 The security system uses a general resource class, safcftcl. It is created using the H81SACDT (or H81SAFCD and H82SAFRT) job, which is adapted from the samples provided in the SYS1.SAMPLIB RACTABLE member.
 
-- H81SACDT / H81SAFCD: Creates a RACF class (to adapt to requirements) H81SACDT is based on the RACF dynamic class definition. H81SAFCD is the former linked class table.
+* H81SACDT / H81SAFCD: Creates a RACF class (to adapt to requirements) H81SACDT is based on the RACF dynamic class definition. H81SAFCD is the former linked class table.
 
 <!-- -->
 
-- H82SAFRT: Creates a router table (to adapt to requirements), and is only required with H81SAFCD.
+* H82SAFRT: Creates a router table (to adapt to requirements), and is only required with H81SAFCD.
 
 <!-- -->
 
-- MVS IPL: Applies RACF classes, needed only with the H81SAFCD JOB.
+* MVS IPL: Applies RACF classes, needed only with the H81SAFCD JOB.
 
 #### Creating RACF groups and users
 
-- H83SAFDA: Creates groups and users
+* H83SAFDA: Creates groups and users
 
 Once the H83SAFDA job is adapted, use this job to create groups and the Transfer CFT administrator (admcft) responsible for installing the security system. This user must be able to create and manage general resource profiles for the Transfer CFT class (safcftcl), and perform all installation-related procedures (file creation rights).
 
 #### Modify the existing configuration
 
-- A00CUSTO: Customizes installation files  
+* A00CUSTO: Customizes installation files  
       
     After adapting the security system values in the A03PARM member, you must execute the A00CUSTO job again.
 

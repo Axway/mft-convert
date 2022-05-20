@@ -6,10 +6,10 @@ weight: 330
 
 The templates titles are listed in the following tables according to OS and language. In the **Template** column, you can click the template link to view the sample template as a text file.
 
-- All platform C language templates
-- Specific z/OS templates
-- OpenVMS templates
-- IBM i templates
+* All platform C language templates
+* Specific z/OS templates
+* OpenVMS templates
+* IBM i templates
 
 ## All platform C language templates
 

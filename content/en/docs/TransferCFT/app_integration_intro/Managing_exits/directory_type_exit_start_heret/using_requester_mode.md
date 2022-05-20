@@ -12,10 +12,10 @@ attempts (retries) or store and forward operations.
 
 If the partner is:
 
-- Known to Transfer
+* Known to Transfer
     CFT: the communication structure fields indicate the values of the CFTPART
     and CFTTCP corresponding to the partner
-- Not known to Transfer
+* Not known to Transfer
     CFT: the only fields containing valid data are the general information
     fields and the fields contained in the following table (partner information
     fields)
@@ -67,11 +67,11 @@ If the partner is:
 When {{< TransferCFT/axwayvariablesComponentShortName  >}} does not know the partner, the following fields are
 empty:
 
-- ipart: intermediate
+* ipart: intermediate
     partner local identifier
-- sap: remote Sap
+* sap: remote Sap
     (Service Access Point)
-- addr: remote partner
+* addr: remote partner
     address
 
 The ****ret1**** return code field must
@@ -108,11 +108,11 @@ During network and protocol connection attempts, the fields that can
 be modified and whose values are kept relative to the last call of the
 user function are:
 
-- part: partner local
+* part: partner local
     identifier
-- idprot: protocol
+* idprot: protocol
     identifier
-- nrpart: remote
+* nrpart: remote
     partner name
 
 Users can query an electronic directory (X500, DNS, ...) or their own

@@ -18,18 +18,18 @@ Wizard.
 
 The CFTFILE command affects the following files:
 
-- PARAMETER - containing
+* PARAMETER - containing
     the Transfer CFT general parameters where TYPE = PARM (or PARAM)
-- PARTNER - containing
+* PARTNER - containing
     the descriptions of the characteristics of partners where TYPE = PART
-- CATALOG - containing
+* CATALOG - containing
     the control information associated with transfers where TYPE = CAT
-- STATISTICS - containing
+* STATISTICS - containing
     the information relative to terminated transfers where TYPE = ACCNT
-- LOG - used to record
+* LOG - used to record
     messages associated with the execution of transfers and CFT operations
     where TYPE = LOG
-- COMMUNICATION -
+* COMMUNICATION -
     used to enter transfer requests and Transfer CFT management comm where
     TYPE = COM
 

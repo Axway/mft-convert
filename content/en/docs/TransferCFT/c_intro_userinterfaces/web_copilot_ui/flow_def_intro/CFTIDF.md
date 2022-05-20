@@ -8,9 +8,9 @@ between the local IDF and the NIDF sent or received.
 ****Related
 topics****
 
-- Command syntax
+* Command syntax
     [CFTIDF](../../../command_summary#CFTIDF)
-- Object concepts
+* Object concepts
     [Template
     to virtual file association](../../../../concepts/cft_configuration_concepts_start_here/network_file_identifier_concepts)
 

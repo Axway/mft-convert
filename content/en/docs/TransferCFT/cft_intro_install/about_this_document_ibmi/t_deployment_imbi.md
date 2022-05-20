@@ -36,7 +36,7 @@ Perform the following steps:
     ```
 1. Install a Transfer CFT 3.2.4 with Central Governance (you must use this command for all iSeries Transfer CFT deployments).
 
-- See the example and options described in the INSTALL section and customize to suit your business needs. Details on [Silent installation](../install_intro_ibmi/perform_auto_installation).
+* See the example and options described in the INSTALL section and customize to suit your business needs. Details on [Silent installation](../install_intro_ibmi/perform_auto_installation).
 
 > **Note**
 >
@@ -48,17 +48,17 @@ Perform the following steps:
 
 In this procedure, you must first create a SAVF file that contains all of your necessary configurations for your deployment including:
 
-- Static configuration, such as protocols (CFTPROT), networks (CFTNET), UCONF parameters, and so on
-- Partners (CFTPART, CFTTCP)
+* Static configuration, such as protocols (CFTPROT), networks (CFTNET), UCONF parameters, and so on
+* Partners (CFTPART, CFTTCP)
 
 > **Note**
 >
 > If you create partners to export, DO NOT use the NSPART parameter in the CFTPART definition. The target Transfer CFT instead uses the CFTPARM PART/NPART values.
 
-- Flows (CFTSEND and CFTRECV)
-- SSL certificates
-- Processing scripts and EXITs
-- Additional Axway components that you use with Transfer CFT such as Sentinel, PassPort, etc.
+* Flows (CFTSEND and CFTRECV)
+* SSL certificates
+* Processing scripts and EXITs
+* Additional Axway components that you use with Transfer CFT such as Sentinel, PassPort, etc.
 
 ### Procedure
 
@@ -123,5 +123,5 @@ On the other machines, where you want to deploy {{< TransferCFT/suitevariablesTr
 
 ## Limitations
 
-- Transfer CFT Express Package does not support cluster mode installations.
-- Transfer CFT Express Package cannot embed a Transfer CFT upgrade pack.
+* Transfer CFT Express Package does not support cluster mode installations.
+* Transfer CFT Express Package cannot embed a Transfer CFT upgrade pack.

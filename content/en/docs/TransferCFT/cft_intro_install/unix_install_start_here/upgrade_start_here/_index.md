@@ -18,9 +18,9 @@ As of {{< TransferCFT/axwayvariablesComponentLongName  >}} 3.4, Axway simplifies
 
 Upgrading, as compared to migration, has the following advantages:
 
-- Allows you to update in the same location
-- You can perform this automatically using the Installer, and you can revert to previous state if needed
-- Scripts and APIs remain intact and only require a recompilation for the APIs
+* Allows you to update in the same location
+* You can perform this automatically using the Installer, and you can revert to previous state if needed
+* Scripts and APIs remain intact and only require a recompilation for the APIs
 
 > **Note**
 >
@@ -62,11 +62,11 @@ Central governance allows you to update to the latest Transfer CFT Service Pack 
 
 Important information before performing an upgrade or install auto-import procedure:
 
-- You must update your {{< TransferCFT/axwayvariablesComponentShortName >}} to the most recent service pack version.
-- For {{< TransferCFT/axwayvariablesComponentLongName >}} versions lower than 3.4, upgrade the {{< TransferCFT/axwayvariablesCompanyName >}} Installer to {{< TransferCFT/PrimaryInstallerversion >}} (or higher) prior to upgrading your {{< TransferCFT/axwayvariablesComponentShortName >}} {{< TransferCFT/PrimaryTransferCFTversionlong >}}.
-- If needed, you can uninstall an Upgrade. Doing so rolls back to the previous version before the upgrade, but all transfers and configuration modifications that were performed since the upgrade are lost.
-- Backup {{< TransferCFT/axwayvariablesComponentShortName >}} before beginning an upgrade or migration procedure.
-- Before beginning the upgrade or migration procedure stop the existing version of Transfer CFT and the UI server.
+* You must update your {{< TransferCFT/axwayvariablesComponentShortName >}} to the most recent service pack version.
+* For {{< TransferCFT/axwayvariablesComponentLongName >}} versions lower than 3.4, upgrade the {{< TransferCFT/axwayvariablesCompanyName >}} Installer to {{< TransferCFT/PrimaryInstallerversion >}} (or higher) prior to upgrading your {{< TransferCFT/axwayvariablesComponentShortName >}} {{< TransferCFT/PrimaryTransferCFTversionlong >}}.
+* If needed, you can uninstall an Upgrade. Doing so rolls back to the previous version before the upgrade, but all transfers and configuration modifications that were performed since the upgrade are lost.
+* Backup {{< TransferCFT/axwayvariablesComponentShortName >}} before beginning an upgrade or migration procedure.
+* Before beginning the upgrade or migration procedure stop the existing version of Transfer CFT and the UI server.
 
 ### More information
 

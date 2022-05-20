@@ -64,17 +64,17 @@ The following table describes the file type according to the FRECFM and FTYPE pa
 
 During receive operations, {{< TransferCFT/axwayvariablesComponentShortName  >}} can generate successive file versions according to the file name syntax associated with the CFTRECV command.
 
-- &lt;filename>.&lt;ext> or &lt;filename>.&lt;ext>;  
+* &lt;filename>.&lt;ext> or &lt;filename>.&lt;ext>;  
     The transfer might be refused, depending on the CFTRECV command FACTION and FDISP parameters. The file envelope is reused if available or deleted and then recreated.
 
 <!-- -->
 
-- &lt;filename>.&lt;ext>;n   
+* &lt;filename>.&lt;ext>;n   
     The file is created with the requested version number. If it already exists in a later version, the transfer is refused. If it exists in the same version, the transfer might be refused, depending on the CFTRECV command FACTION and FDISP parameters. The file envelope is reused or deleted and then recreated.
 
 <!-- -->
 
-- &lt;filename>.&lt;ext>;+1   
+* &lt;filename>.&lt;ext>;+1   
     If the file does not exist, it is created with version ;1. Otherwise, it is created with a version that is greater than the most recent file version available. The transfer may be refused, depending on the CFTRECV command FACTION and FDISP parameters. If the transfer is successful, a new version is systematically created.
 
 > **Note**

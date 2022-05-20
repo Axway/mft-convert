@@ -8,9 +8,9 @@ weight: 260
 ****Related
 topics****
 
-- Command syntax
+* Command syntax
     [CFTNET](../../../c_intro_userinterfaces/command_summary#CFTNET)
-- Parameter list
+* Parameter list
     [CFTNET](../../../c_intro_userinterfaces/web_copilot_ui/conf_intro/cftnet)
 
 <span id="What_is_a_local_network_resource_"></span>
@@ -19,28 +19,28 @@ topics****
 
 The local network resources object:
 
-- Defines a network
+* Defines a network
     resource which, for the {{< TransferCFT/axwayvariablesComponentShortName >}}, is an entity through which connections
     can be established
-- Supplies the Transfer
+* Supplies the Transfer
     CFT with a number of items of information which are required to access
     the network of the type indicated, TCP/IP and so on, through
     a resource
 
 This object includes:
 
-- Parameters used
+* Parameters used
     to manage the {{< TransferCFT/axwayvariablesComponentShortName >}} internal facilities: control of connection
     establishing mechanisms for example
-- Parameters describing
+* Parameters describing
     the network environment characteristics defined by the local operating
     system
-- Parameters used
+* Parameters used
     to establish connections between:
-    -   System
+    *   System
         parameters which can make reference to one or more system software components
         (drivers used at card level, and so on)
-    -   Transfer
+    *   Transfer
         CFT
 
 When, for a given system or for a given type of network, the environment
@@ -75,13 +75,13 @@ indicated.
 The CFTNET objects define the network parameters for partners in a given
 group. This information includes:
 
-- Network
+* Network
     location of the {{< TransferCFT/axwayvariablesComponentShortName >}} partner
-- Time slots
+* Time slots
     for calls on the network
-- Connection
+* Connection
     retry mechanisms
-- Maximum number
+* Maximum number
     of connections with each partner
 
 <span id="Defining_a_network_and_protocol_environment"></span>
@@ -93,7 +93,7 @@ with the following definitions and links.
 
 These links enable relationships between:
 
-- The resources
+* The resources
     which can be used by {{< TransferCFT/axwayvariablesComponentShortName >}}
 
 Each of these resources is defined by a CFTNET command.
@@ -102,9 +102,9 @@ defined for the NET parameters.
 
 A resource is characterized by:
 
-- Type of
+* Type of
     network accessed
-- The protocols
+* The protocols
     which can be used by the PROT
     parameter of the CFTPARM object
 
@@ -113,7 +113,7 @@ Each of these protocols is defined by a CFTPROT object.
 A CFTPROT object references a class of resources designated
 by an identifier NET parameter.
 
-- The network
+* The network
     description used to connect to a given partner
 
 This description is defined in the CFTTCP object,
@@ -124,5 +124,5 @@ and protocol characteristics used to perform a transfer to a given partner.
 These characteristics are referenced in the CFTPART
 object such that:
 
-- PROT
+* PROT
     parameter references the CFTPROT used

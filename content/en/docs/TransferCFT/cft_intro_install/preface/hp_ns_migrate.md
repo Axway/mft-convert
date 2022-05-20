@@ -4,8 +4,8 @@ linkTitle: "Migrate or upgrade Transfer CFT"
 weight: 220
 ---This chapter is designed to assist administrators or users who are tasked with upgrading or migrating from an existing Transfer CFT version to Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}}.
 
-- [Migrate](#Migrate): Use this procedure to migrate an existing Transfer CFT 2.3.2 installation
-- [Upgrade](#Upgrade): Use this procedure to automatically upgrade an existing Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber >}}
+* [Migrate](#Migrate): Use this procedure to migrate an existing Transfer CFT 2.3.2 installation
+* [Upgrade](#Upgrade): Use this procedure to automatically upgrade an existing Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber >}}
 
 <span id="Importan"></span>
 
@@ -13,10 +13,10 @@ weight: 220
 
 Before performing a migration or upgrade procedure, you must:
 
-- Update your Transfer CFT to the most recent service pack version.
-- Back up Transfer CFT.
-- Set the Transfer CFT profile.
-- Stop the existing version of Transfer CFT and the UI server.
+* Update your Transfer CFT to the most recent service pack version.
+* Back up Transfer CFT.
+* Set the Transfer CFT profile.
+* Stop the existing version of Transfer CFT and the UI server.
 
 > **Note**
 >
@@ -28,9 +28,9 @@ Before performing a migration or upgrade procedure, you must:
 
 This section describes how to migrate the following elements:
 
-- Partner file
-- Parameter file
-- Client exits and applications
+* Partner file
+* Parameter file
+* Client exits and applications
 
 Before performing a migration be certain to review the section [Important information](#Importan).
 
@@ -108,22 +108,22 @@ NONSTOP^PLIST^TEMP^FILE         $DATA00.montemp.PTMPLIST
 
 #### Equivalents in Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}}
 
-- <span id="CFTWRK"></span>CFTWRK:
+* <span id="CFTWRK"></span>CFTWRK:
     [cft.guardian.cftwrk](../intro_os_features/hp_ns_batch#cft.guardian.cftwrk)
-- <span id="CPU"></span>CPU: [cft.guardian.processor](../intro_os_features/hp_ns_batch#cft.guardian.processor)
-- <span id="TERM"></span>TERM: [cft.guardian.hometerm](../intro_os_features/hp_ns_batch#cft.guardian.hometerm)
-- <span id="CPUBACKUP"></span>CPUBACKUP: [cft.guardian.backup_processor](../intro_os_features/hp_ns_batch#cft.guardian.backup_processor)
-- <span id="PN"></span>PN: [cft.guardian.process_name_prefix](../intro_os_features/hp_ns_batch#cft.guardian.process_name_prefix)
-- <span id="PRI"></span>PRI: [cft.guardian.priority](../intro_os_features/hp_ns_batch#cft.guardian.priority)
-- <span id="CFTTERM"></span>CFTTERM is no longer supported.
-- <span id="parameters"></span>CFTDEF:
-    -   Most parameters have become environment variables that are accessible under OSS.
-    -   <span id="CFGSYS"></span>CFGSYS is deprecated.
-    -   <span id="TRKCNF"></span>TRKCNF is replaced by the Sentinel configuration in UCONF.
-    -   <span id="CFTXFB"></span>CFTXFB is deprecated.
-- <span id="MANAGER"></span>MANAGER: TACL is the default manager.
-- <span id="NB"></span>NB-ATTACH-SET: [cft.guardian.netbatch.attachment_set](../intro_os_features/hp_ns_batch#cft.guardian.netbatch.attachment_set).
-- <span id="X25PARAM"></span>X25PARAM is not supported.
+* <span id="CPU"></span>CPU: [cft.guardian.processor](../intro_os_features/hp_ns_batch#cft.guardian.processor)
+* <span id="TERM"></span>TERM: [cft.guardian.hometerm](../intro_os_features/hp_ns_batch#cft.guardian.hometerm)
+* <span id="CPUBACKUP"></span>CPUBACKUP: [cft.guardian.backup_processor](../intro_os_features/hp_ns_batch#cft.guardian.backup_processor)
+* <span id="PN"></span>PN: [cft.guardian.process_name_prefix](../intro_os_features/hp_ns_batch#cft.guardian.process_name_prefix)
+* <span id="PRI"></span>PRI: [cft.guardian.priority](../intro_os_features/hp_ns_batch#cft.guardian.priority)
+* <span id="CFTTERM"></span>CFTTERM is no longer supported.
+* <span id="parameters"></span>CFTDEF:
+    *   Most parameters have become environment variables that are accessible under OSS.
+    *   <span id="CFGSYS"></span>CFGSYS is deprecated.
+    *   <span id="TRKCNF"></span>TRKCNF is replaced by the Sentinel configuration in UCONF.
+    *   <span id="CFTXFB"></span>CFTXFB is deprecated.
+* <span id="MANAGER"></span>MANAGER: TACL is the default manager.
+* <span id="NB"></span>NB-ATTACH-SET: [cft.guardian.netbatch.attachment_set](../intro_os_features/hp_ns_batch#cft.guardian.netbatch.attachment_set).
+* <span id="X25PARAM"></span>X25PARAM is not supported.
 
 <span id="Upgrade"></span>
 
@@ -159,9 +159,9 @@ The auto-import directory contains the following:
 
 The following rules apply to migrating client exits and client applications:
 
-- The use of client exits and applications have not changed, but you must recompile the client programs to take into account the new data structure.
-- The new data structures are described in a DDL format, have the same name as in version 2.3.2, and are located in $volume.&lt;subversion>IH.
+* The use of client exits and applications have not changed, but you must recompile the client programs to take into account the new data structure.
+* The new data structures are described in a DDL format, have the same name as in version 2.3.2, and are located in $volume.&lt;subversion>IH.
 
 <!-- -->
 
-- Additionally, the C language definition derived from the DDL definition is also part of the packaging.
+* Additionally, the C language definition derived from the DDL definition is also part of the packaging.

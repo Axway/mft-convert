@@ -8,9 +8,9 @@ weight: 320
 
 CFTUTIL, the command line interface for Transfer CFT, is able to translate Transfer CFT parameter setting commands and operating commands and can be activated in the following operational modes:
 
-- Batch
-- Command
-- Interactive
+* Batch
+* Command
+* Interactive
 
 ### Batch mode
 
@@ -74,11 +74,11 @@ File-based communication is the default communication mode. In the configuration
 
 By default, CFTUTIL dialogs with {{< TransferCFT/axwayvariablesComponentShortName  >}} using the CFTCOM communication file. There are two ways to change the communication file:
 
-- CFTUTIL CONFIG command
+* CFTUTIL CONFIG command
 
 <!-- -->
 
-- CFTCOM logical name
+* CFTCOM logical name
 
 ### CFTUTIL CONFIG command
 
@@ -97,9 +97,9 @@ CFTU00I CONFIG   _ Correct (type=com,mediacom=file,fname=my_file)
 2:[CFU]
 ```
 
-- If you perform this operation, ****the configuration is lost**** when you exit the CFTUTIL utility. You must redo this operation each time that you use CFTUTIL.
-- You cannot implement communications using another file in line command mode using this method.
-- In batch mode, you must specify this command on the first line of the file so that subsequent commands are deposited in the new communication medium.
+* If you perform this operation, ****the configuration is lost**** when you exit the CFTUTIL utility. You must redo this operation each time that you use CFTUTIL.
+* You cannot implement communications using another file in line command mode using this method.
+* In batch mode, you must specify this command on the first line of the file so that subsequent commands are deposited in the new communication medium.
 
 ### CFTCOM logical name
 
@@ -135,11 +135,11 @@ rc = cftau("COM","F=my_file");
 
 Communication file users must have read and write access rights for the file. If users belong to:
 
-- The same group, file protection must be: S:RWED,O:RWED,G:RWE,W:
+* The same group, file protection must be: S:RWED,O:RWED,G:RWE,W:
 
 <!-- -->
 
-- Different groups, file protection must be: S:RWED,O:RWED,G:RWE,W:RWE
+* Different groups, file protection must be: S:RWED,O:RWED,G:RWE,W:RWE
 
 You can also grant write access rights to authorized users only using ACLs on the file.
 

@@ -4,8 +4,8 @@ linkTitle: "Apply a license key"
 weight: 170
 ---You need to apply a valid license key to Transfer CFT in the following situations:
 
-- When you perform an initial Transfer CFT installation.
-- To replace an expired license key (typically after a year).
+* When you perform an initial Transfer CFT installation.
+* To replace an expired license key (typically after a year).
 
 ## Obtain a license key
 
@@ -18,8 +18,8 @@ weight: 170
     > on which Transfer CFT is installed.
 
 1. Contact the Axway Fulfillment team at the appropriate email address to obtain a valid key.
-    -   For a US key, contact: `fulfillment@us.axway.com`
-    -   For an EMEA or APAC key, contact: `product.key@axway.com`
+    *   For a US key, contact: `fulfillment@us.axway.com`
+    *   For an EMEA or APAC key, contact: `product.key@axway.com`
 
 1. Provide the hostname and system information for the installed or updated Transfer CFT.
 
@@ -27,8 +27,8 @@ weight: 170
 
 To apply the license key, enter the Transfer CFT key in the indirection file, which is referred to in the CFTPARM KEY parameter. The file is located at `<installation_directory>/runtime/conf/cft.key` .
 
-- The file can contain one or multiple license keys, but it must have one key per line.
-- On start up the first valid key is used.
+* The file can contain one or multiple license keys, but it must have one key per line.
+* On start up the first valid key is used.
 
 > **Note**
 >

@@ -23,13 +23,13 @@ changing to the H or K state.
 
 This name may include the following symbolic variables:
 
-- &IDF, &PARM
-- &PART, &RPART,
+* &IDF, &PARM
+* &PART, &RPART,
     &SPART, &GROUP
-- &RUSER, &SUSER
-- &RAPPL, &SAPPL
-- &DIAGI, &DIAGP
-- &NIDF
+* &RUSER, &SUSER
+* &RAPPL, &SAPPL
+* &DIAGI, &DIAGP
+* &NIDF
 
 The character ‘&’ designates the char_symb character defined in
 the {{< TransferCFT/axwayvariablesComponentShortName  >}} *Operations Guide* corresponding to your OS. 

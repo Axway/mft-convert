@@ -21,5 +21,5 @@ CFTT60I PART= &part IDF=
 
 ****Related topics****
 
-- [Messages
+* [Messages
     and error codes](../../../../troubleshoot_intro/messages_and_error_codes_start_here)

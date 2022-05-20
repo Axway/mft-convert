@@ -31,15 +31,15 @@ Copy the exec scripts to &lt;new_Transfer CFT_{{< TransferCFT/axwayvariablesComp
 You must manually migrate UCONF parameters for versions prior to {{< TransferCFT/axwayvariablesComponentShortName  >}} 2.5.1. The UCONF configuration
 replaces the following configuration files:
 
-- Sentinel configuration
+* Sentinel configuration
     file (trkapi.cfg, trkapi.conf, and so on...)  
     The parameters in the Sentinel file are integrated
     in UCONF as sentinel.FORMER-PARAMETER-NAME. For example, TRKTNAME becomes
     sentinel.TRKTNAME.
-- Copilot ini file
+* Copilot ini file
     (copconf.ini)  
     This file no longer exists. All former Copilot parameters are named `copilot.SECTION.PARAMETER-NAME` in the UCONF interface. For example, the parameter ServerPort, located in the general section, is now `copilot.general.serverport`.
-- The profile file, formerly ENV_CFT or cft.ini, now
+* The profile file, formerly ENV_CFT or cft.ini, now
     uses UCONF to set the environment variables.
 
 ## Post upgrade

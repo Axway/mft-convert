@@ -8,12 +8,12 @@ weight: 250
 
 The following best practices may help you avoid or correct user rights issues. Deviating from these recommendation may lead to unexpected user rights, or errors in the log.
 
-- Respect the appropriate case (upper/lower) for user names and passwords, and use all upper case for OpenVMS.
-- The am.type is set by default to enable {{< TransferCFT/PrimaryCGorUM >}}. Modifying this value effects user rights and access from {{< TransferCFT/suitevariablesCentralGovernanceName >}}.
-- Changing the domain may affect your ability to log in on the Transfer CFT client.
-- If you modify the createprocessasuser parameter setting, you must restart Copilot for the parameter change to be taken into account.
-- The am.passport.superuser can perform any superuser activity. From {{< TransferCFT/suitevariablesCentralGovernanceName >}} there is no check on the superuser; this user has all access regardless of the {{< TransferCFT/suitevariablesCentralGovernanceName >}} roles and privileges.
-- When USERCTRL is set to YES and if the [USERID](../../../c_intro_userinterfaces/command_summary/parameter_intro/userid) parameter is not set, then the file transfer owner (when receiving) or file reader (when sending) is the user that started {{< TransferCFT/axwayvariablesComponentLongName >}}.
+* Respect the appropriate case (upper/lower) for user names and passwords, and use all upper case for OpenVMS.
+* The am.type is set by default to enable {{< TransferCFT/PrimaryCGorUM >}}. Modifying this value effects user rights and access from {{< TransferCFT/suitevariablesCentralGovernanceName >}}.
+* Changing the domain may affect your ability to log in on the Transfer CFT client.
+* If you modify the createprocessasuser parameter setting, you must restart Copilot for the parameter change to be taken into account.
+* The am.passport.superuser can perform any superuser activity. From {{< TransferCFT/suitevariablesCentralGovernanceName >}} there is no check on the superuser; this user has all access regardless of the {{< TransferCFT/suitevariablesCentralGovernanceName >}} roles and privileges.
+* When USERCTRL is set to YES and if the [USERID](../../../c_intro_userinterfaces/command_summary/parameter_intro/userid) parameter is not set, then the file transfer owner (when receiving) or file reader (when sending) is the user that started {{< TransferCFT/axwayvariablesComponentLongName >}}.
 
 ## Troubleshooting user rights issues
 
@@ -25,8 +25,8 @@ In the {{< TransferCFT/PrimaryCGorUM  >}} interface, select **Products**. Select
 
 If there is no information available in the {{< TransferCFT/suitevariablesCentralGovernanceName  >}} logs for the Transfer CFT, next check the following:
 
-- {{< TransferCFT/axwayvariablesComponentLongName >}} logs
-- {{< TransferCFT/axwayvariablesComponentLongName >}} trace files located in the `<installation directory>Transfer_CFT\runtime\run`
+* {{< TransferCFT/axwayvariablesComponentLongName >}} logs
+* {{< TransferCFT/axwayvariablesComponentLongName >}} trace files located in the `<installation directory>Transfer_CFT\runtime\run`
 
 ### Check user definitions in {{< TransferCFT/suitevariablesCentralGovernanceName  >}}
 
@@ -60,20 +60,20 @@ To fix the issue, delete the persistent cache files (CFTAM and CFTAM.idx) and re
 
 For more information, see the following platform specific guides for the appropriate OS:
 
-- UNIX - [Running Transfer CFT for the first time UNIX]()
-    -   [Defining user rights](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/user_rights_and_interface_unix)
-    -   [Declaring additional users](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/declaring_additional_users)
-    -   [UNIX system users](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/t_adding_system_user_unix)
-    -   [License keys and authorizations](../../../cft_intro_install/unix_install_start_here/before_you_start_unix/prereqs_overview)
-- {{< TransferCFT/PrimaryforWindows >}} - [Running Transfer CFT for the first time Windows](../../../cft_intro_install/windows_install_start_here/windows_install_start_here/running_cft_for_the_first_time_windows)
-    -   [Windows user rights](../../../cft_intro_install/windows_install_start_here/windows_install_start_here/running_cft_for_the_first_time_windows/user_rights_and_interface_win)
-    -   [Windows system users](../../../cft_intro_install/windows_install_start_here/windows_install_start_here/running_cft_for_the_first_time_windows/add_system_user_windows)
-    -   [License keys and authorizations](../../../cft_intro_install/windows_install_start_here/before_you_start_win/prereqs_overview)
-- z/OS - [Installation and Operation Guide](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_mvs_en_PDF/resource/TransferCFT_InstallationGuide_mvs_en.pdf)
-- IBM i - [Installation and Operation Guide](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_os400_en_PDF/resource/TransferCFT_InstallationGuide_os400_en.pdf)
-- OpenVMS - [Installation and Operation Guide](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_vms_en_PDF/resource/TransferCFT_InstallationGuide_vms_en.pdf)
+* UNIX - [Running Transfer CFT for the first time UNIX]()
+    *   [Defining user rights](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/user_rights_and_interface_unix)
+    *   [Declaring additional users](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/declaring_additional_users)
+    *   [UNIX system users](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/t_adding_system_user_unix)
+    *   [License keys and authorizations](../../../cft_intro_install/unix_install_start_here/before_you_start_unix/prereqs_overview)
+* {{< TransferCFT/PrimaryforWindows >}} - [Running Transfer CFT for the first time Windows](../../../cft_intro_install/windows_install_start_here/windows_install_start_here/running_cft_for_the_first_time_windows)
+    *   [Windows user rights](../../../cft_intro_install/windows_install_start_here/windows_install_start_here/running_cft_for_the_first_time_windows/user_rights_and_interface_win)
+    *   [Windows system users](../../../cft_intro_install/windows_install_start_here/windows_install_start_here/running_cft_for_the_first_time_windows/add_system_user_windows)
+    *   [License keys and authorizations](../../../cft_intro_install/windows_install_start_here/before_you_start_win/prereqs_overview)
+* z/OS - [Installation and Operation Guide](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_mvs_en_PDF/resource/TransferCFT_InstallationGuide_mvs_en.pdf)
+* IBM i - [Installation and Operation Guide](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_os400_en_PDF/resource/TransferCFT_InstallationGuide_os400_en.pdf)
+* OpenVMS - [Installation and Operation Guide](https://docs.axway.com/bundle/TransferCFT_38_InstallationGuide_vms_en_PDF/resource/TransferCFT_InstallationGuide_vms_en.pdf)
 
 ****Related topics****
 
-- [About system users](../)
-- [User rights use case scenarios](../user_rights_security_scenarios)
+* [About system users](../)
+* [User rights use case scenarios](../user_rights_security_scenarios)

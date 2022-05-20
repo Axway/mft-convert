@@ -7,9 +7,9 @@ characteristics. Use this command to describe partner characteristics.
 
 See also:
 
-- Command syntax
+* Command syntax
     [CFTPART](../../../command_summary#CFTPART)
-- Object concepts
+* Object concepts
     [Defining partners]()
 
 

@@ -10,17 +10,17 @@ this example, you should have already customized this file using the method desc
 
 The *&lt;installdir>/runtime/src/capi* subdirectory contains the:
 
-- Sample source module,
+* Sample source module,
     called *apixmp1.c*, which interacts with {{< TransferCFT/axwayvariablesComponentShortName >}}. This program
     reads the {{< TransferCFT/axwayvariablesComponentShortName >}} catalog and displays its contents in part or in
     full, depending on the restrictions set in the command line
-- *makefile*
+* *makefile*
     compilation procedure, which uses the *apixmp1.c* sample source module
     to generate the APIXMPI executable file
 
 The *&lt;installdir>/lib* subdirectory contains the:
 
-- *libcftapi.a*
+* *libcftapi.a*
     module required to use {{< TransferCFT/axwayvariablesComponentShortName >}} APIs
 
 To generate the *APIXMP1* sample program, proceed as follows.

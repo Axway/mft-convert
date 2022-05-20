@@ -13,9 +13,9 @@ weight: 1420
 
 Displays help information:
 
-- FIELDS: Output all the fields name available
+* FIELDS: Output all the fields name available
     for display model creation
-- MODELS: Output all the models available
+* MODELS: Output all the models available
     in the current model file
 
 [Return to Command index](../../)

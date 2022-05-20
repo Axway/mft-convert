@@ -6,20 +6,20 @@ weight: 130
 Transfer CFT. This topic begins
 with an overview of the OFTP file transfer protocol describing:
 
-- OFTP
+* OFTP
     (Odette) features
-- Network
+* Network
     message structure
 
 This section is comprised of the topics listed in the table below, which
 describe the following OFTP (ODETTE) functions in Transfer CFT and how
 to configure them:
 
-- File transmission
+* File transmission
     and reception
-- Transfer restart
-- Data compression
-- Change direction (CD)
+* Transfer restart
+* Data compression
+* Change direction (CD)
 
 
 | Topic  | Describes...  |
@@ -52,15 +52,15 @@ procedures.
 
 The general characteristics of the OFTP (ODETTE) protocol are as follows:
 
-- Two-way exchanges:
+* Two-way exchanges:
     transmission and reception
-- Transfer retry
+* Transfer retry
     in the event of an incident
-- Data compression,
+* Data compression,
     character compression
-- Change direction
+* Change direction
     possibility between partners
-- File reception
+* File reception
     acknowledgement possibility
 
 ### Specific features
@@ -68,21 +68,21 @@ The general characteristics of the OFTP (ODETTE) protocol are as follows:
 The particular characteristics of the OFTP (ODETTE) protocol are as
 follows:
 
-- Only files supported
+* Only files supported
     by the protocol have a sequential organization
-- Sent files are
+* Sent files are
     identified by their name and the transfer date and time
-- The protocol supports
+* The protocol supports
     four record formats:
-    -   F
+    *   F
         for fixed format: all the file records have the same size
-    -   V
+    *   V
         for variable format: the file records have a variable length
-    -   U
+    *   U
         for unstructured format: the entire file is considered as a single
         character string. In this file format, the concept of record length
         does not exist
-    -   T
+    *   T
         for text format: a text file is defined as a sequence of ASCII characters
         containing no control characters, except for CR/LF characters delimiting
         records
@@ -90,12 +90,12 @@ follows:
 These format concepts, in the protocol meaning of the term, correspond
 to:
 
-- Various files types
+* Various files types
     NTYPE
-- Record lengths
+* Record lengths
     NLRECL
-- File formats NRECFM
-- Data codes NCODE
+* File formats NRECFM
+* Data codes NCODE
 
 <span id="Network_message_structure"></span>
 

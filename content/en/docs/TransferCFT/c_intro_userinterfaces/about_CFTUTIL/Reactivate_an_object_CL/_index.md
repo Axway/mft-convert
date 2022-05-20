@@ -5,10 +5,10 @@ weight: 240
 ---This topic describes the ACT command and its parameters. You can use
 the ACT command to reactivate:
 
-- One or more partners (CFTPART)
-- Sentinel notifications
-- CRON object (CFTCRON)
-- Folder object (CFTFOLDER)
+* One or more partners (CFTPART)
+* Sentinel notifications
+* CRON object (CFTCRON)
+* Folder object (CFTFOLDER)
 
 ****Command guide: [ACT](../../command_summary#ACT)****
 
@@ -34,8 +34,8 @@ ACT TYPE=PART,ID=<CFTPART_ID>,MODE=<mode>
 
 Where:
 
-- CFTPART_ID is the identifier for the partner to activate. To activate several partners with a single command, use wildcard characters or meta characters
-- Mode is the mode to be activated, with values: "BOTH" , "B", "REQUESTER", "R" , "SERVER", "S"
+* CFTPART_ID is the identifier for the partner to activate. To activate several partners with a single command, use wildcard characters or meta characters
+* Mode is the mode to be activated, with values: "BOTH" , "B", "REQUESTER", "R" , "SERVER", "S"
 
 ****Example****
 
@@ -59,9 +59,9 @@ provided or modified by a directory EXIT.
 When a partner is reactivated, transfer requests that were suspended
 by the INACT command:
 
-- Are restarted automatically
+* Are restarted automatically
     in requester mode (diagnostics code 430)
-- Must be restarted
+* Must be restarted
     with the START command in all other cases
 
 ### Activate Sentinel notifications

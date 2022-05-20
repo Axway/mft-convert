@@ -36,15 +36,15 @@ To apply a service pack:
 1. Restore the SAVF to a temporary library, add it to your library list, and then launch the `UPDCFT `command.
 1. Complete the required fields:
 
-- In the first field, enter your program library.
+* In the first field, enter your program library.
 
-- In the second field, enter your production library.
+* In the second field, enter your production library.
 
-- In the third field, enter the name of the SAVF where the backup of your current version is stored.
+* In the third field, enter the name of the SAVF where the backup of your current version is stored.
 
-- **The SAVF must be in your production library. If there is no SAVF, it is created.**
+* **The SAVF must be in your production library. If there is no SAVF, it is created.**
 
-- Press Enter to continue.
+* Press Enter to continue.
 
     Use the `CFTUTIL ABOUT` command to check the service pack level.
 
@@ -69,8 +69,8 @@ When you install a service pack, the contents of the home directory are updated,
 1. Restore the SAVF to a temporary library, add it to the top of your library list, and then launch the `PTCCFT `command.
 1. Complete the required fields:
 
-- In the first field, enter your CFT program library.
-- In the second field, enter the name of the SAVF where the backup of current
+* In the first field, enter your CFT program library.
+* In the second field, enter the name of the SAVF where the backup of current
 
 Module versions impacted by the patch are stored. If the SAVF does not exist, it is created; if it exists, it is cleared.
 

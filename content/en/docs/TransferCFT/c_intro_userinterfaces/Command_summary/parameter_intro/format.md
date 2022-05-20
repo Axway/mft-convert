@@ -15,9 +15,9 @@ weight: 1260
 
 Optional parameter. Indicates the format for log messages.
 
-- ****V23**** (Default value): The Identifier’s
+* ****V23**** (Default value): The Identifier’s
     length is truncated to 8 characters.
-- ****V24****: The complete Identifier is displayed.
+* ****V24****: The complete Identifier is displayed.
     The length of the Identifier can be up to 32 characters. Some messages
     related to a transfer includes the IDTU (Local transfer counter identifier)
     value.
@@ -33,8 +33,8 @@ Optional parameter. The FORMAT parameter indicates whether the former
 record structure should be used (V23 values for compatibility reasons)
 or if the new structure is to be applied (V24 values).
 
-- ****V23**** (Default value)
-- V24
+* ****V23**** (Default value)
+* V24
 
 <span id="format_CFTEXIT"></span>
 

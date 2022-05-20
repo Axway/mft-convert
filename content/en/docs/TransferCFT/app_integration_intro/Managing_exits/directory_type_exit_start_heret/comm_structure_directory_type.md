@@ -24,9 +24,9 @@ follows:
 
 Depending on the programming language used, the structure chosen is:
 
-- exausC if the
+* exausC if the
     user program is written in C language
-- exausO to provide
+* exausO to provide
     an interface with a user program written in COBOL
 
 The exausC and the exausO structures are described in exfus.h that is

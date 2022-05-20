@@ -16,13 +16,13 @@ and server modes are determined by a security profile.
 
 A security profile monitors the:
 
-- Required authentication
+* Required authentication
     mode: simple (server only) or mutual (server and client) authentication
-- Authentication,
+* Authentication,
     encryption and sealing algorithms to be used
-- Certificate to
+* Certificate to
     be sent for local authentication and the RSA authentication algorithm
-- Checks to be performed
+* Checks to be performed
     on the remote certificate for remote authentication and the RSA authentication
     algorithm
 

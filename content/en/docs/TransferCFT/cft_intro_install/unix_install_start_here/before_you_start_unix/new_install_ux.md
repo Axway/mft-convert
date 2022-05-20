@@ -53,8 +53,8 @@ If you do not enclose this value in "", the string is interpreted as: `CryptoKey
 >
 > \*This host address defines:
 
-- The unconf `sentinel.trkproductipaddr `parameter, which is the host address that identifies this host
-- The host address used to connect this Transfer CFT Copilot server
+* The unconf `sentinel.trkproductipaddr `parameter, which is the host address that identifies this host
+* The host address used to connect this Transfer CFT Copilot server
 
 ****Security configuration parameters****
 
@@ -164,9 +164,9 @@ If you do not enclose this value in "", the string is interpreted as: `CryptoKey
 
 The passwords used in the `initialize.properties` file are encrypted in the original file when you run the installation builder. You can then use the original file as a template for future installations. Impacted passwords are prefaced by &lt;CFT_PASSWORD>, and include the following:
 
-- CryptoKey_Password
-- UI_DefaultUser_Password
-- CFT_ServicePassword
-- CFTUI_ServicePassword
-- RESTAPI_Cert_Pass
-- CG_SharedSecret
+* CryptoKey_Password
+* UI_DefaultUser_Password
+* CFT_ServicePassword
+* CFTUI_ServicePassword
+* RESTAPI_Cert_Pass
+* CG_SharedSecret

@@ -14,22 +14,22 @@ under the following circumstances:
 
 If you are in the preprocessing phase and a script exists:
 
-- It is in the **H** state or **K** state as a result of a preprocessing error
-- If there is no END command with ISTATE=N
-- If it is in the **D** state and is waiting for the scheduled time
+* It is in the **H** state or **K** state as a result of a preprocessing error
+* If there is no END command with ISTATE=N
+* If it is in the **D** state and is waiting for the scheduled time
 
 Transfer phase:
 
-- If it is in the
+* If it is in the
     ****H**** HOLD state or ****K****
     KEEP state as a result of a transfer error, or an operator command (HALT,
     KEEP, or SEND STATE = HOLD, and so on).
-- If it is in the
+* If it is in the
     ****D**** DISP state, but Transfer CFT
     does not have the resources required to activate it.
-    -   Or if the transfer
+    *   Or if the transfer
         cannot be activated at that time because there is a MINTIME or MINDATE requirement.
-    -   Or if Transfer CFT is already processing
+    *   Or if Transfer CFT is already processing
         MAXTRANS active transfers.
 
 The sequencing of Transfer CFT transfers in REQUESTER mode, in which
@@ -57,17 +57,17 @@ be activated.
 If a transfer does not fit the inactive state criteria, the transfer
 is set to active. Active transfers are executed if resources are available, otherwise they are placed in a queue for execution. Parameters that affect scheduling are, in order:
 
-- Priority (PRI)
-- The scheduled time and date (MINTIME/MINDATE)
-- Request time
+* Priority (PRI)
+* The scheduled time and date (MINTIME/MINDATE)
+* Request time
 
 ### Partner states
 
 A partner can have one of the following three states:
 
-- Ready
-- State-locked
-- Time-locked
+* Ready
+* State-locked
+* Time-locked
 
 #### Ready partners
 
@@ -155,9 +155,9 @@ In addition to the call
 limitation, which can be imposed on partners, the user can also define time slots for activating a given transfer.
 This section describes delayed transfers and how to define these:
 
-- In the description
+* In the description
     of the model type to be sent or received: CFTSEND and CFTRECV objects
-- In the transfer
+* In the transfer
     request: SEND and RECV
 
 A request made before the time slot for activating the transfer will
@@ -173,15 +173,15 @@ and MAXTIME/MAXDATE parameters of the CFTSEND/SEND, CFTRECV/RECV commands.
 
 The values of these parameters can be defined either:
 
-- Explicitly
-- Relatively
-    -   Relatively indicates that the calculation is performed at the time the request is entered in the
+* Explicitly
+* Relatively
+    *   Relatively indicates that the calculation is performed at the time the request is entered in the
         catalog.
-    -   A relative value for each of these parameters is defined using the following
+    *   A relative value for each of these parameters is defined using the following
         syntax:  
                   parameter = + &lt;relative
         value>
-    -   The ****+**** sign indicates that the
+    *   The ****+**** sign indicates that the
         value is a relative value. If the parameter is the "time"
         type, the value is expressed in minutes, and must not exceed 24 (hours)
         less one minute, in other words, the value 1439. If the parameter is
@@ -262,16 +262,16 @@ The transfer can be activated between December 24, 2015 at 10 pm and December
 Default value
 of:
 
-- MINDATE: current
+* MINDATE: current
     date
 
-- MAXDATE:
+* MAXDATE:
 
-    -   If MAXTIME
+    *   If MAXTIME
         is greater than MINTIME : MINDATE
-    -   If MAXTIME
+    *   If MAXTIME
         is less than MINTIME : MINDATE + 1
-    -   If MAXTIME
+    *   If MAXTIME
         is not defined: 99991231
 
 ### Example 5

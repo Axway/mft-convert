@@ -8,10 +8,10 @@ weight: 100
 
 Application integration refers to the transfer of files between applications that produce and consume files. To achieve application to application integration, data flows may specify:
 
-- How the source application indicates that a file is ready for transfer and how the file transfer agent picks up the file from the source application
-- How the target application is notified that the file has arrived and how the file transfer agent delivers the file to the destination application
-- The level of security to apply
-- Additional actions to launch depending on transfer status, acknowledgement, exceptions, and so on
+* How the source application indicates that a file is ready for transfer and how the file transfer agent picks up the file from the source application
+* How the target application is notified that the file has arrived and how the file transfer agent delivers the file to the destination application
+* The level of security to apply
+* Additional actions to launch depending on transfer status, acknowledgement, exceptions, and so on
 
 ## Multi-site integration
 

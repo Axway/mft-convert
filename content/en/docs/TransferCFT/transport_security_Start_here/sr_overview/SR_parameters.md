@@ -40,9 +40,9 @@ As you can have several Router Agents working with a Master Agent, the UCONF Ro
 
 In the Secure Relay parameters table below:
 
-- The letter N is used in parameter names.
-- Parameters that appear in Master Agent configuration file are displayed in bold.
-- For an array, use the notation format ****secure_relay.ra.N.parameter****, where N is between 0 and number of routers – 1.
+* The letter N is used in parameter names.
+* Parameters that appear in Master Agent configuration file are displayed in bold.
+* For an array, use the notation format ****secure_relay.ra.N.parameter****, where N is between 0 and number of routers – 1.
 
 
 | Parameter | Type | Default | Comment |

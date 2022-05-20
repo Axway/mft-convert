@@ -16,10 +16,10 @@ value from ****1**** to ****32767**** seconds.
 
 Default values per operating system:
 
-- 60: Windows, OpenVMS
-- 100: UNIX
-- 600: z/OS (MVS)
-- 1000: OS/400 (IBM i)
+* 60: Windows, OpenVMS
+* 100: UNIX
+* 600: z/OS (MVS)
+* 1000: OS/400 (IBM i)
 
 This parameter is used for a synchronous exchange of requests between
 two monitor tasks during the initialization phase. After ****waitresp****

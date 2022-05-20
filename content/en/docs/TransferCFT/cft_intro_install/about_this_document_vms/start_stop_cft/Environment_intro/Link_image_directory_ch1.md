@@ -25,8 +25,8 @@ This directory contains program samples in C that describe how to use {{< Transf
 
 There are two logical names:
 
-- CFT_EXIT, which points to D$CFT_RUN:[SRC] directory
-- CFT_API, which points to D$CFT_RUN:[SRC] directory
+* CFT_EXIT, which points to D$CFT_RUN:[SRC] directory
+* CFT_API, which points to D$CFT_RUN:[SRC] directory
 
 This directory is comprised of two subdirectories, CAPI and EXIT, as described in the next sections.
 

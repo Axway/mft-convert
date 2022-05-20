@@ -16,24 +16,24 @@ The Transfer CFT is distributed as a zip file from Axway Website. Use the VMSINS
 
 Use the following list to prepare for installation.
 
-- Check software licenses for installation
-- Verify that the zip file is available.
-- If installing from an alternate software source, verify that the software zip file is accessible.
-- Verify the license keys for each of the hostnames are received.
+* Check software licenses for installation
+* Verify that the zip file is available.
+* If installing from an alternate software source, verify that the software zip file is accessible.
+* Verify the license keys for each of the hostnames are received.
 
 #### Database
 
-- Verify that the Database server is available.
-- Verify the number of connections, and how many are dedicated Axway connections?
+* Verify that the Database server is available.
+* Verify the number of connections, and how many are dedicated Axway connections?
 
 #### User accounts and permissions
 
-- Verify that user accounts have been created and username/password are known.
-- Are the appropriate permissions in place?
+* Verify that user accounts have been created and username/password are known.
+* Are the appropriate permissions in place?
 
 #### Server access and connectivity
 
-- Check that you can log in as system administrator.
+* Check that you can log in as system administrator.
 
 ## End User License Agreement
 

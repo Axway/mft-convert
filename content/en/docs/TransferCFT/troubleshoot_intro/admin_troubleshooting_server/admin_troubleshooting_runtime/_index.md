@@ -4,12 +4,12 @@ linkTitle: "Troubleshoot the Transfer CFT runtime"
 weight: 280
 ---Runtime issues can include the following for the server, Copilot, CFTUTIL and other system services:
 
-- Abend
-- Performance
-- Start disk space, multi-node issues, restart
-- Unexpected shut down, such as when the catalog is full
-- System freezes or infinite looping
-- Service pack issues (applying or removing), also for migrating issues, updates
+* Abend
+* Performance
+* Start disk space, multi-node issues, restart
+* Unexpected shut down, such as when the catalog is full
+* System freezes or infinite looping
+* Service pack issues (applying or removing), also for migrating issues, updates
 
 ## Common causes
 
@@ -32,19 +32,19 @@ weight: 280
 
 ### Disk check
 
-- No space left on the device
-    -   Free space
-    -   Check Sentinel connectivity an{{< TransferCFT/axwayvariablesComponentShortName >}}d verify the size of the runtime/data/trkapi.buf file, which may be voluminous
-- Check for problematic file transfers and output, and clean
-- Check to see if traces are set, which may lead to multiple large files in the "run" directory
-- Check to see if you have enabled dynamic catalog resizing
+* No space left on the device
+    *   Free space
+    *   Check Sentinel connectivity an{{< TransferCFT/axwayvariablesComponentShortName >}}d verify the size of the runtime/data/trkapi.buf file, which may be voluminous
+* Check for problematic file transfers and output, and clean
+* Check to see if traces are set, which may lead to multiple large files in the "run" directory
+* Check to see if you have enabled dynamic catalog resizing
 
 ### Catalog check
 
 When the catalog is full stops and you cannot restart it without a correction action to reduce the size of the catalog. Note that this does not necessarily mean that the disk is full.
 
-- See the [Catalog housekeeping](../../../admin_intro/admin_monitoring_intro/housekeeping_catalog) section
-- Backup your catalog and export the existing catalog
+* See the [Catalog housekeeping](../../../admin_intro/admin_monitoring_intro/housekeeping_catalog) section
+* Backup your catalog and export the existing catalog
 
 ### Export the full catalog
 
@@ -62,10 +62,10 @@ Use the command: cftmi
 
 These corrective measures are often system dependent.
 
-- Perform basic tests such as pinging the address, and telnet (to check the port)
+* Perform basic tests such as pinging the address, and telnet (to check the port)
 
 ### Check additional products
 
-- Check if another product is consuming all of the CPU/memory
-- Check {{< TransferCFT/PrimaryCGorUM >}} interoperability, such as the {{< TransferCFT/PrimarySentinel >}} database
-- Scripts or end-of-transfer procedures may indirectly
+* Check if another product is consuming all of the CPU/memory
+* Check {{< TransferCFT/PrimaryCGorUM >}} interoperability, such as the {{< TransferCFT/PrimarySentinel >}} database
+* Scripts or end-of-transfer procedures may indirectly

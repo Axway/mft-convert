@@ -4,12 +4,12 @@ linkTitle: "Mapping Transfer CFT and Sentinel states"
 weight: 250
 ---You can use the ****Mapping states**** table to find equivalent states and phases as described below.
 
-- Phase: The phase indicates where you are in your transfer.
-- Phasestep: Within each phase there is a phase step, which is either a process or a step.
-- Diag: Diagnostic codes provide a explanation of the source of the error detected or the refusal.
-- {{< TransferCFT/axwayvariablesComponentShortName >}} state: The {{< TransferCFT/axwayvariablesComponentShortName >}} status as displayed in the catalog.
-- Compatibility state: The {{< TransferCFT/axwayvariablesComponentShortName >}} status as displayed in the catalog when using the backward compatibility mode.
-- Sentinel state: The state attribute identifies the step of the transfer process.
+* Phase: The phase indicates where you are in your transfer.
+* Phasestep: Within each phase there is a phase step, which is either a process or a step.
+* Diag: Diagnostic codes provide a explanation of the source of the error detected or the refusal.
+* {{< TransferCFT/axwayvariablesComponentShortName >}} state: The {{< TransferCFT/axwayvariablesComponentShortName >}} status as displayed in the catalog.
+* Compatibility state: The {{< TransferCFT/axwayvariablesComponentShortName >}} status as displayed in the catalog when using the backward compatibility mode.
+* Sentinel state: The state attribute identifies the step of the transfer process.
 
 For details on Sentinel states, see [XFBTransfer Tracked Objects]().
 

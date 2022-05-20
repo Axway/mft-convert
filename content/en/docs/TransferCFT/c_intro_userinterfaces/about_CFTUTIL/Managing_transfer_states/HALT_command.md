@@ -8,9 +8,9 @@ with the partners selected.
 The transfers halted are set to the H phasestep in the catalog. They can
 be reactivated:
 
-- By an operator
+* By an operator
     START command
-- On receiving a
+* On receiving a
     transfer reactivation request from the partner
 
 See also [LISTCAT.](../../monitoring_cftutil_intro/listcat_command)

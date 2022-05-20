@@ -99,8 +99,8 @@ CFTSSH ID = 'SSH_DEFAULT',
 
 This example demonstrates an SSH default profile with server key authentication (SRVPUBKEY is defined) and client key authentication (CLIPRIVKEY is defined).
 
-- The server public key is referenced by the SRVPUBKEY parameter (SSH_PUB_KEY). The SRVPUBKEY value is a key identifier that corresponds to a key stored in the local PKI database.
-- The client private key is referenced by the CLIPRIVKEY parameter (SSH_PRIV_KEY in this example). The CLIPRIVKEY value is a key identifier that corresponds to a key stored in the local PKI database.
+* The server public key is referenced by the SRVPUBKEY parameter (SSH_PUB_KEY). The SRVPUBKEY value is a key identifier that corresponds to a key stored in the local PKI database.
+* The client private key is referenced by the CLIPRIVKEY parameter (SSH_PRIV_KEY in this example). The CLIPRIVKEY value is a key identifier that corresponds to a key stored in the local PKI database.
 
 ```
 CFTSSH ID = 'SSH_DEFAULT',

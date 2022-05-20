@@ -4,8 +4,8 @@ linkTitle: "Shared file systems"
 weight: 210
 ---This section provides general information concerning the prerequisites for shared file systems for the following types of files used with {{< TransferCFT/suitevariablesTransferCFTName  >}} in a UNIX environment.
 
-- Transfer CFT data files: This refers to all files managed by {{< TransferCFT/suitevariablesTransferCFTName >}} other than transferable application files (including database files), which are stored in the {{< TransferCFT/suitevariablesTransferCFTName >}} runtime directory.
-- Transferable application files: This refers to the files transferred by Transfer CFT.
+* Transfer CFT data files: This refers to all files managed by {{< TransferCFT/suitevariablesTransferCFTName >}} other than transferable application files (including database files), which are stored in the {{< TransferCFT/suitevariablesTransferCFTName >}} runtime directory.
+* Transferable application files: This refers to the files transferred by Transfer CFT.
 
 ## Standalone installation
 

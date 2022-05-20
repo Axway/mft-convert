@@ -6,7 +6,7 @@ weight: 230
 
 ****Limitation****
 
-- When using a group of files in homogeneous mode, you cannot use post-transfer file renaming.
+* When using a group of files in homogeneous mode, you cannot use post-transfer file renaming.
 
 ## How to configure
 
@@ -55,12 +55,12 @@ If you have several transfers with RETRYRENAME set for the same FNAME in a singl
 
 This example combines the use of the serialization with the rename/retry mechanism to ensure a spooling of file transfers without overwriting an un-consumed file at the destination.
 
-- Our user defines a transfer flow, for example `DailyReport,`based on a transfer state (acknowledgement) using the serialization option.
-- Several applications generate files that use the same flow, `DailyReport`; these file transfer requests are queued.
-- The source Transfer CFT for the flow executes the first file transfer request, `Report1`.  
-- The target Transfer CFT receives `Report1`.
-- Post-processing makes the file available to a target application, and immediately sends an acknowledgment to the source. This enables the next file transfer in the queue to be executed.
-- Upon receiving the acknowledgement, the source Transfer CFT executes the next transfer request. However:
+* Our user defines a transfer flow, for example `DailyReport,`based on a transfer state (acknowledgement) using the serialization option.
+* Several applications generate files that use the same flow, `DailyReport`; these file transfer requests are queued.
+* The source Transfer CFT for the flow executes the first file transfer request, `Report1`.  
+* The target Transfer CFT receives `Report1`.
+* Post-processing makes the file available to a target application, and immediately sends an acknowledgment to the source. This enables the next file transfer in the queue to be executed.
+* Upon receiving the acknowledgement, the source Transfer CFT executes the next transfer request. However:
 
 > -   If the file no longer exists on the target (it was consumed by a target application), the cycle repeats as above.
 >
@@ -136,10 +136,10 @@ send part=paris, idf=dailyreport, ida=report3
 
 Error and information messages include the following:
 
-- [CFTF32E](../../troubleshoot_intro/messages_and_error_codes_start_here/cftf_messages#CFTF32E): PART=&part IDF=&idf IDT=&idt _ Maximum number of rename retries reached
-- [CFTF34E](../../troubleshoot_intro/messages_and_error_codes_start_here/cftf_messages#CFTF34E): PART=&part IDF=&idf IDT=&idt _ WFNAME=&wfname not found
-- [CFTF35W](../../troubleshoot_intro/messages_and_error_codes_start_here/cftf_messages#CFTF35W) PART=&part IDF=&idf IDT=&idt Rename to FNAME=&fname failed, will be retried at &datetime
+* [CFTF32E](../../troubleshoot_intro/messages_and_error_codes_start_here/cftf_messages#CFTF32E): PART=&part IDF=&idf IDT=&idt _ Maximum number of rename retries reached
+* [CFTF34E](../../troubleshoot_intro/messages_and_error_codes_start_here/cftf_messages#CFTF34E): PART=&part IDF=&idf IDT=&idt _ WFNAME=&wfname not found
+* [CFTF35W](../../troubleshoot_intro/messages_and_error_codes_start_here/cftf_messages#CFTF35W) PART=&part IDF=&idf IDT=&idt Rename to FNAME=&fname failed, will be retried at &datetime
 
 Diagnostic code values related to RETRYRENAME include:
 
-- [diagi=156](../../troubleshoot_intro/about_error_codes/about_diagnostic_codes/diagi_diagnostic_codes) / diagc=RETRYRENAME
+* [diagi=156](../../troubleshoot_intro/about_error_codes/about_diagnostic_codes/diagi_diagnostic_codes) / diagc=RETRYRENAME

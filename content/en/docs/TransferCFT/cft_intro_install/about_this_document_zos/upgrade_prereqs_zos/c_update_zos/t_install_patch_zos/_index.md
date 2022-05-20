@@ -8,10 +8,10 @@ This section describes how to install a patch or service pack on your z/OS Trans
 
 Information includes:
 
-- [Install update libraries (PTF)](#Install%20update%20libraries%20(PTF))
-- [Transfer the PTF file to the host machine](#Transfer%20the%20PTF%20file%20to%20the%20host%20machine)
-- [Integrate PTF elements using A13PTFLD](#Integrate%20PTF%20elements%C2%A0using%20A13PTFLD) 
-- [Apply a PTF using A13PTFLK](#Apply%20a%20PTF%C2%A0using%20A13PTFLK) 
+* [Install update libraries (PTF)](#Install%20update%20libraries%20(PTF))
+* [Transfer the PTF file to the host machine](#Transfer%20the%20PTF%20file%20to%20the%20host%20machine)
+* [Integrate PTF elements using A13PTFLD](#Integrate%20PTF%20elements%C2%A0using%20A13PTFLD) 
+* [Apply a PTF using A13PTFLK](#Apply%20a%20PTF%C2%A0using%20A13PTFLK) 
 
 <span id="Install update libraries (PTF)"></span>
 
@@ -68,15 +68,15 @@ put c:\\mycftpatchs\\patch_from Axway support website 'distlib.UPLIB(CFxxxxxx)'
 
 Where:
 
-- xxxxxx identifies the PTF number
+* xxxxxx identifies the PTF number
 
 <!-- -->
 
-- distlib indicates the distribution environment
+* distlib indicates the distribution environment
 
 <!-- -->
 
-- distlib.UPLIB library is created during the product installation
+* distlib.UPLIB library is created during the product installation
 
 <span id="Retrieve file using FTP A13PTFFT"></span>
 
@@ -156,15 +156,15 @@ Before submitting the JOB, specify the LINK EDIT identifier in the EXEC card:
 
 Where:
 
-- xxxxxx: patch identifier
+* xxxxxx: patch identifier
 
 This JOB runs in several phases:
 
-- Backup of LOAD libraries, of which one of the qualifiers is the PTF identifier
+* Backup of LOAD libraries, of which one of the qualifiers is the PTF identifier
 
 <!-- -->
 
-- LINK-EDIT
+* LINK-EDIT
 
 > **Note**
 >
@@ -192,9 +192,9 @@ When you apply a patch to the Transfer CFT Copilot server, the update is not aut
 
 The following three JCLs mange the PTFs for Copilot:
 
-- A13UCOPA: Saves all files (\*) and PTF application (in a sequential file)
-- A13UCOPD: Deletes the save file that is associated with a PTF application
-- A13UCOPR: Restores files from the save file
+* A13UCOPA: Saves all files (\*) and PTF application (in a sequential file)
+* A13UCOPD: Deletes the save file that is associated with a PTF application
+* A13UCOPR: Restores files from the save file
 
 > **Note**
 >
@@ -230,4 +230,4 @@ If ID='NONE', this JCL is not submitted.
 
 ****Related topics****
 
-- [About migrating Transfer CFT z/OS]()
+* [About migrating Transfer CFT z/OS]()

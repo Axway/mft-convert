@@ -35,12 +35,12 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 
 **UCONF flags legend**
 
-- EXPERT: Extra care must be taken; only advanced users should change this value.
-- RECONFIG: Can be changed dynamically with a CFTUTIL RECONFIG type=UCONF, and a notification is displayed in the LOG.
-- IRECONFIG: Can be changed dynamically with a CFTUTIL RECONFIG type=UCONF, but no notification is displayed in the LOG.
-- RUNTIME MUTABLE READ_ONLY: Cannot be changed by a user.
-- EXPERIMENTAL: Unsupported feature.
-- OBSOLETE: No longer used.
+* EXPERT: Extra care must be taken; only advanced users should change this value.
+* RECONFIG: Can be changed dynamically with a CFTUTIL RECONFIG type=UCONF, and a notification is displayed in the LOG.
+* IRECONFIG: Can be changed dynamically with a CFTUTIL RECONFIG type=UCONF, but no notification is displayed in the LOG.
+* RUNTIME MUTABLE READ_ONLY: Cannot be changed by a user.
+* EXPERIMENTAL: Unsupported feature.
+* OBSOLETE: No longer used.
 
 > **Note**
 >

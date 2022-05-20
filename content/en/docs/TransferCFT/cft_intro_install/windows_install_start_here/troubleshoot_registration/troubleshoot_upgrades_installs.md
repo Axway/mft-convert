@@ -16,16 +16,16 @@ If an issue occurs while performing an installation or an upgrade, check for err
 
 ### Copilot doesn't start
 
-- Check that the port is not already used by another application.
-- Close all active sessions, use the syntax: `copstop -f`
-- Check that there are no orphan "`cop*`" processes. If there are, manually kill these processes.
+* Check that the port is not already used by another application.
+* Close all active sessions, use the syntax: `copstop -f`
+* Check that there are no orphan "`cop*`" processes. If there are, manually kill these processes.
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} server
 
 ### Cannot start my {{< TransferCFT/axwayvariablesComponentShortName  >}}
 
-- Check your {{< TransferCFT/axwayvariablesComponentShortName >}} log in Central Governance.
-- From the local {{< TransferCFT/axwayvariablesComponentShortName >}} runtime, try to manually start the server. If you cannot manually start the server, refer to *[Support tools](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/Troubleshooting/support_tools.htm)* in the {{< TransferCFT/axwayvariablesComponentLongName >}}{{< TransferCFT/suitevariablesDocTypeUser >}}.
+* Check your {{< TransferCFT/axwayvariablesComponentShortName >}} log in Central Governance.
+* From the local {{< TransferCFT/axwayvariablesComponentShortName >}} runtime, try to manually start the server. If you cannot manually start the server, refer to *[Support tools](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/Troubleshooting/support_tools.htm)* in the {{< TransferCFT/axwayvariablesComponentLongName >}}{{< TransferCFT/suitevariablesDocTypeUser >}}.
 
 ### Runtime directory error
 

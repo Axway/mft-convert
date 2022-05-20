@@ -15,8 +15,8 @@ weight: 1220
 
 Name of the statistical file. This name can be a:
 
-- physical name
-- logical name
+* physical name
+* logical name
 
 <span id="fname_CFTAUTH"></span>
 
@@ -33,18 +33,18 @@ the list of model file identifiers.
 The number of identifiers in this list is not limited. Build the file
 using the following rules:
 
-- a record of this
+* a record of this
     file can only contain one ****idf****
-- the size of the
+* the size of the
     record is limited to 80 characters
-- an ****idf****
+* an ****idf****
     must start in the first column and only the first 32 characters of the
     record are taken into account
-- characters after
+* characters after
     the 32nd character are ignored
-- the identifier
+* the identifier
     can be entered in upper or lower case
-- the file can contain
+* the file can contain
     records of zero length
 
 You cannot complete this field if you have selected the ****idf****
@@ -59,8 +59,8 @@ button in the old Transfer CFT UI.
 
 Catalog file name. Service files, such as Catalog and Log. This name can be:
 
-- a physical filename
-- a logical name
+* a physical filename
+* a logical name
 
 <span id="fname_CFTCOM"></span>
 
@@ -70,7 +70,6 @@ Catalog file name. Service files, such as Catalog and Log. This name can be:
 
 <span id="fname_CFTFILE"></span>
 
-#### 
 
 <span id="fname_COPYFILE"></span>
 
@@ -99,19 +98,19 @@ are not served.
 
 To build this file, the following rules must be followed:
 
-- A record of this
+* A record of this
     file can only contain one partner identifier
-- The size of a record
+* The size of a record
     is limited to 80 characters
-- A partner identifier
+* A partner identifier
     must begin in the first column and only the first 32 characters of the
     record are taken into account
-- Any characters
+* Any characters
     after column 32 are ignored and considered to be a comment
-- An identifier may
+* An identifier may
     be entered in either upper case or lower case letters (it is converted
     into upper case letters)
-- The file may contain
+* The file may contain
     records of zero length
 
 File example:
@@ -123,23 +122,23 @@ File example:
 If FOR=COMMUT (broadcasting by a intermediate
 site):
 
-- The symbolic variable &SPART, network identifier of the sender partner,
+* The symbolic variable &SPART, network identifier of the sender partner,
     may be used in forming the name of the file (FNAME parameter value). This
     makes it possible to make a distinction between the lists defined for
     the various originating sites.
 
 The following symbolic variables can be used:
 
-- &FDATE, &FTIME,
+* &FDATE, &FTIME,
     &FYEAR, &FMONTH, &FDAY
-- &PART, &RPART,
+* &PART, &RPART,
     &SPART, &NPART, &GROUP
-- &SUSER, &RUSER
-- &SAPPL, &RAPPL
-- &IDF, &PARM,
+* &SUSER, &RUSER
+* &SAPPL, &RAPPL
+* &IDF, &PARM,
     &IDA
-- &NIDF
-- &NFNAME, &NFVER
+* &NIDF
+* &NFNAME, &NFVER
 
 <span id="fname_CFTRECV"></span>
 
@@ -160,8 +159,8 @@ defined in the RECV command or in the CFTRECV object, though preferably in CFTRE
 
 You can define the filename either in the:
 
-- Receive command, or
-- The CFTRECV
+* Receive command, or
+* The CFTRECV
     object (recommended)
 
 
@@ -191,26 +190,26 @@ In  this example, the `user1 `and `files` folders are created if they did not a
 
 The filename may:
 
-- Be assigned dynamically
+* Be assigned dynamically
     using symbolic variables
-- Correspond to the
+* Correspond to the
     name of a file with versions (GDG for instance) *z/OS only*
 
 *****Using symbolic variables*****
 
 The following variables may be used to form the FNAME character string:
 
-- &BDATE, &BTIME, &BYEAR, &BMONTH, &BDAY
-- &FDATE, &FTIME, &FYEAR, &FMONTH, &FDAY
-- &SYSD,&SYST,&QQ,&SYSQQ
-- &HOME,&USERID
-- &SPART, &RPART, &PART, &IPART, &NPART, &GROUP,&NRPART,&NSPART
-- &SUSER, &RUSER
-- &SAPPL, &RAPPL
-- &IDF, &PARM, &IDA,&PI99
-- &NIDF, &IDTU, &IDT,&PIDTU
-- &NFNAME,&FROOT,&FSUF,&FPATH,&FUNITC,&FUNIT,&SFNAME
-- &NCHARSET,&FCHARSET
+* &BDATE, &BTIME, &BYEAR, &BMONTH, &BDAY
+* &FDATE, &FTIME, &FYEAR, &FMONTH, &FDAY
+* &SYSD,&SYST,&QQ,&SYSQQ
+* &HOME,&USERID
+* &SPART, &RPART, &PART, &IPART, &NPART, &GROUP,&NRPART,&NSPART
+* &SUSER, &RUSER
+* &SAPPL, &RAPPL
+* &IDF, &PARM, &IDA,&PI99
+* &NIDF, &IDTU, &IDT,&PIDTU
+* &NFNAME,&FROOT,&FSUF,&FPATH,&FUNITC,&FUNIT,&SFNAME
+* &NCHARSET,&FCHARSET
 
 The ‘&’ character here replaces the char_symb character specific
 to each operating system. Refer to the {{< TransferCFT/axwayvariablesComponentShortName  >}} *Operations Guide*

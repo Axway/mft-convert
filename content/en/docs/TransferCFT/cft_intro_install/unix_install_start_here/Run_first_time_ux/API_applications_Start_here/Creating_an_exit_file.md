@@ -11,30 +11,30 @@ CFT for the First Time*]().
 
 The *&lt;installdir>/runtime/src/exit/* subdirectory contains:
 
-- A sample source
+* A sample source
     module, called *exfxmp1.c*, with its associated include file *exfus.h*
-- This program
+* This program
     demonstrates the various user functions:
-- ALLOC_TYP:
+* ALLOC_TYP:
     the EXIT allocates the file
-- OPEN_TYP: the
+* OPEN_TYP: the
     EXIT opens the file
-- DATA_TYP: the
+* DATA_TYP: the
     EXIT writes or reads the file
 
 <!-- -->
 
-- And so on
+* And so on
 
 <!-- -->
 
-- The *mk_cftexitf*
+* The *mk_cftexitf*
     compilation procedure, which uses *exfxmp2.c* to generate the *CFTEXITF*
     program
 
 The *&lt;installdir>/lib* subdirectory contains the:
 
-- *libcftexf.a*
+* *libcftexf.a*
     module; this library allows you to use the {{< TransferCFT/axwayvariablesComponentShortName >}} file EXITs
 
 To generate the sample CFTEXITF application, proceed as follows:

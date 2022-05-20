@@ -12,21 +12,21 @@ See [Use processing scripts](../../../../concepts/about_transfer_processing/proc
 
 This section describes the CRON related commands and parameters.
 
-- CFTPARM: Each CRONJOB is associated with a CFTPARM via a CRONTABS parameter (environment definition):
-    -   The CRONTABS parameter of the CFTPARM object refers to the CRONTAB parameter of the CFTCRON objects.
-    -   You can have a CRONTAB with the same value for different CFTCRON objects (in the example below, note that CRON1 and CRON4 refer to the same CRONTAB).
-    -   **Example**
-- RECONFIG TYPE=CRON
-    -   This sends a notification to Transfer CFT
+* CFTPARM: Each CRONJOB is associated with a CFTPARM via a CRONTABS parameter (environment definition):
+    *   The CRONTABS parameter of the CFTPARM object refers to the CRONTAB parameter of the CFTCRON objects.
+    *   You can have a CRONTAB with the same value for different CFTCRON objects (in the example below, note that CRON1 and CRON4 refer to the same CRONTAB).
+    *   **Example**
+* RECONFIG TYPE=CRON
+    *   This sends a notification to Transfer CFT
         to reload the enabled CRONJOBs. You use this command after modifying a CFTCRON (when either inserting or deleting).
-    -   The RECONFIG command does not reload CFTPARM. If
+    *   The RECONFIG command does not reload CFTPARM. If
         you modify the CFTPARM CRONTABS then you must restart Transfer CFT.
-- MQUERY name=CRON
-    -   Displays the log, which gives the current status of
+* MQUERY name=CRON
+    *   Displays the log, which gives the current status of
         the enabled cronjobs.
-- ACT/INACT type=CRON
-    -   To activate CRON4 in the previous example:
-    -   To inactivate CRON1, enter:
+* ACT/INACT type=CRON
+    *   To activate CRON4 in the previous example:
+    *   To inactivate CRON1, enter:
 
 For CFTCRON command parameter details, see the [Command reference](../../../command_summary).
 &lt;/p>
@@ -60,11 +60,11 @@ time='m=\*/10'
 The time syntax is case sensitive. For example, a lower case m defines
 minutes, while an upper case M defines months.
 
-- Bold characters
+* Bold characters
     are terminators
-- Italic characters
+* Italic characters
     are grammar rule non-terminators
-- A, b, c are integers
+* A, b, c are integers
 
 
 | Rule | Syntax | Alternate syntax |
@@ -115,13 +115,13 @@ minutes, while an upper case M defines months.
 
 The possible cronjob messages are:
 
-- CFTI36I &str:
+* CFTI36I &str:
     Information Message about cronjobs load
-- CFTI38E &str:
+* CFTI38E &str:
     Error Message about cronjobs load
-- CFTS37I &str:
+* CFTS37I &str:
     Information Message about cronjob submit
-- CFTS39E &str:
+* CFTS39E &str:
     Error Message about cronjob submit
 
 ## CRONJOB symbolic variables
@@ -149,4 +149,4 @@ procedure. Define these using the EXEC parameter of the CFTCRON command.
 ****Related
 topics****
 
-- Command syntax **** [CFTCRON](../../../command_summary#CFTCRON)
+* Command syntax **** [CFTCRON](../../../command_summary#CFTCRON)

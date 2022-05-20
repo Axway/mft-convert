@@ -4,9 +4,9 @@ linkTitle: "Post-registration operations "
 weight: 190
 ---In addition to registration, there are other types of recurring exchanges that occur between {{< TransferCFT/axwayvariablesComponentShortName  >}} and {{< TransferCFT/PrimaryCGorUM  >}} or {{< TransferCFT/suitevariablesFlowManager  >}}.
 
-- Configuration and flow deployment
-- SSL certificate renewal
-- Product updates
+* Configuration and flow deployment
+* SSL certificate renewal
+* Product updates
 
 ## Configuration and flow deployment
 

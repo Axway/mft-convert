@@ -14,11 +14,11 @@ weight: 2090
 Name of the component to be queried.
 This parameter can be set to:
 
-- ****CAT****: query of the catalog cache
-- ****COMMAND****: query of the command cache
-- CRON
-- DMZ
-- STAT
+* ****CAT****: query of the catalog cache
+* ****COMMAND****: query of the command cache
+* CRON
+* DMZ
+* STAT
 
 <span id="name_CFTCOM"></span>
 

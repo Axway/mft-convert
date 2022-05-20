@@ -39,15 +39,15 @@ USING     <verb>       <blk>    
 
 Where:
 
-- &lt;verb> is
+* &lt;verb> is
     the command that you want to process
-- &lt;blk> is
+* &lt;blk> is
     a **{{< TransferCFT/axwayvariablesComponentShortName >}} specific field that
     must not be changed by the application**
-- &lt;param> is
+* &lt;param> is
     a character string of variable length that contains the command parameters.
     The end of the field is defined by a character initially set to low-value
-- &lt;rc> is the
+* &lt;rc> is the
     return code
 
 The available &lt;verbs> are listed in the following table.

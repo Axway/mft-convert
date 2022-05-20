@@ -13,20 +13,20 @@ to the CONTENT and NPART selection parameters.
 The following is indicated at the end of the display of the characteristics
 of the selected catalog entries:
 
-- The number of entries
+* The number of entries
     whose characteristics are displayed (n)
-- The total number
+* The total number
     of entries recorded in the catalog at the time the LISTCAT command is
     processed (p)
-- The number of catalog
+* The number of catalog
     entries still free (q) and the percentage of space still free (r%)
 
 This information is displayed in the following form:
 
-- n records selected
-- p records in catalog
+* n records selected
+* p records in catalog
     file
-- q records free
+* q records free
     (r%)
 
 ## Parameter descriptions

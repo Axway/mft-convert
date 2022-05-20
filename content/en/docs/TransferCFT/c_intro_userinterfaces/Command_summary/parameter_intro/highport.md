@@ -14,9 +14,9 @@ This parameter is obsolete for this command.
 
 Defines the upper limit for the range of outgoing ports (value included).
 
-- Possible
+* Possible
     values: 1 to 65535
-- Default
+* Default
     value is 65535.
 
 #### CONFIG, TYPE=COM, MEDIACOM=TCPIP

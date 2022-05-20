@@ -4,10 +4,10 @@ linkTitle: "Internal commands"
 weight: 200
 ---The following sections describe the available internal commands. These internal commands are divided into four categories:
 
-- Data processing: These commands are used to define and manipulate data (Assignments, Operations).
-- Control interpretation: When inserted in the source text, these commands control its progress.
-- Functions: Functions are commands that apply directly to the operating system, such as allocating a file. The syntax of a function expression, while respecting the general rules, is based on a single model. See [Functions](../ch1_functions).
-- Utilities: The utility commands are high-level commands that use an internal sequence of functions, for example, displaying the contents of a file.
+* Data processing: These commands are used to define and manipulate data (Assignments, Operations).
+* Control interpretation: When inserted in the source text, these commands control its progress.
+* Functions: Functions are commands that apply directly to the operating system, such as allocating a file. The syntax of a function expression, while respecting the general rules, is based on a single model. See [Functions](../ch1_functions).
+* Utilities: The utility commands are high-level commands that use an internal sequence of functions, for example, displaying the contents of a file.
 
 When describing a command in the following sections, the mandatory parameters appear in bold, and parameters in normal font are optional.
 
@@ -43,17 +43,17 @@ CHAR NAME = NAME,
 
 ### Parameters
 
-- NAME: This parameter specifies the name assigned to the data.
-- VALUE: This setting provided the initial value of the data. If the variable is numeric it is a number, if the variable is a CHAR is a string that can be in quotes.
-- SIZE: This parameter indicates  the size only for the data type CHAR.
+* NAME: This parameter specifies the name assigned to the data.
+* VALUE: This setting provided the initial value of the data. If the variable is numeric it is a number, if the variable is a CHAR is a string that can be in quotes.
+* SIZE: This parameter indicates  the size only for the data type CHAR.
 
 ### Features
 
 Variable names are not case sensitive, and you cannot the characters . (dot) and [ (left bracket) in a name. This restriction comes from redefined data notation (see REDEFINE command) or the principle of substitution data.
 
-- The initial default values ​​(in the absence of parameter INIT) types INT and LONG are 0.
-- For the data type CHAR, the size must be less than or equal to 256 to be initialized. This limitation comes from the size of the INIT parameter .
-- The size of the NAME parameter is limited to 26 characters.
+* The initial default values ​​(in the absence of parameter INIT) types INT and LONG are 0.
+* For the data type CHAR, the size must be less than or equal to 256 to be initialized. This limitation comes from the size of the INIT parameter .
+* The size of the NAME parameter is limited to 26 characters.
 
 ### Examples
 
@@ -85,14 +85,14 @@ LONG    name = LONG1
 
 A predefined variable is a variable whose value is defined when loaded. These variables can be used without prior notification,and begin with the "_" character. The following variable is predefined:
 
-- _CMDRET: This variable stores the return code from the last command.
+* _CMDRET: This variable stores the return code from the last command.
 
 ## Using data
 
 There are two ways to use data, either by:
 
-- Substitution
-- Setting the data
+* Substitution
+* Setting the data
 
 ### Parameter
 
@@ -124,8 +124,8 @@ id_cmd NAME = keyword,
 
 ### Parameters
 
-- NAME: This parameter specifies the name of the data.
-- VALUE: This parameter specifies a value acted on according to the command (assignment, operation).
+* NAME: This parameter specifies the name of the data.
+* VALUE: This parameter specifies a value acted on according to the command (assignment, operation).
 
 ### Command _MOV
 

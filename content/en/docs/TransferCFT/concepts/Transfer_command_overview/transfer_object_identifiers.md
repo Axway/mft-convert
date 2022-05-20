@@ -10,13 +10,13 @@ When a transfer occurs, it is labeled with an identifier. There are
 four types of identifiers that can correspond with a transfer, as described
 below.
 
-- Model
+* Model
     file identifier
-- Message
+* Message
     identifier
-- Transfer
+* Transfer
     identifier
-- Catalog
+* Catalog
     identifier
 
 <span id="Model_files__IDF"></span>
@@ -41,9 +41,9 @@ An identifier corresponds to each flow definition. In the absence of this flow i
 
 The default command is the command whose file identifier corresponds either to the:
 
-- CFTPART
+* CFTPART
     IDF = parameter
-- Or, if the above
+* Or, if the above
     parameter is not included, to the CFTPARM DEFAULT
     = parameter
 
@@ -78,11 +78,11 @@ is guaranteed between two {{< TransferCFT/axwayvariablesComponentShortName  >}}s
 
 For each of the following states there are certain actions that you can perform, as described in [Processing commands: general usage](../../about_transfer_processing/proc_commands).
 
-- D - Available
-- C - In process
-- H - Hold
-- K - Keep
-- T - Terminated
-- X - Executed
+* D - Available
+* C - In process
+* H - Hold
+* K - Keep
+* T - Terminated
+* X - Executed
 
 For more information, see [Transfer states](../delayed_transfers).

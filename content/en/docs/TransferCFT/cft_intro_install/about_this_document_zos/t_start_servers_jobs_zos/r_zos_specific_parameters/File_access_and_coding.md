@@ -6,12 +6,12 @@ weight: 280
 
 This section describes file properties and how to code Transfer CFT filenames.
 
-- [File access overview](#File%20access%20overview)
-- [About coding filenames](#Coding%20file%20names%20zOS)
-- [Filename forms](#Filename)
-- [Code filenames with DDNAME ](#Coding%20filenames%20with%20DDNAME)
-- [Coding PDS filenames](#Coding%20PDS%20filenames)
-- [Code GDG filenames](#Coding%20GDG%20filenames)
+* [File access overview](#File%20access%20overview)
+* [About coding filenames](#Coding%20file%20names%20zOS)
+* [Filename forms](#Filename)
+* [Code filenames with DDNAME ](#Coding%20filenames%20with%20DDNAME)
+* [Coding PDS filenames](#Coding%20PDS%20filenames)
+* [Code GDG filenames](#Coding%20GDG%20filenames)
 
 <span id="File access overview"></span>
 
@@ -19,26 +19,26 @@ This section describes file properties and how to code Transfer CFT filenames.
 
 Transfer CFT z/OS has read or write access to the following files:
 
-- Disk sequential files
-- Multi-volume disk sequential files
-- PDS files
-- Files in GENERATION DATA GROUP (GDG)
-- VSAM KSDS files
-- VSAM ESDS files
-- HFS hierarchical files
+* Disk sequential files
+* Multi-volume disk sequential files
+* PDS files
+* Files in GENERATION DATA GROUP (GDG)
+* VSAM KSDS files
+* VSAM ESDS files
+* HFS hierarchical files
 
 Transfer CFT z/OS creates, deletes, and renames the following files by calling IDCAMS:
 
-- VSAM KSDS files
-- VSAM ESDS files
+* VSAM KSDS files
+* VSAM ESDS files
 
 Transfer CFT z/OS cannot transfer the following files:
 
-- VSAM RRDS files
-- VSAM LINEAR files
-- Concatenated files
-- Files on magnetic tapes
-- File for which the LRECL is higher than 32760 (lrecl=x)
+* VSAM RRDS files
+* VSAM LINEAR files
+* Concatenated files
+* Files on magnetic tapes
+* File for which the LRECL is higher than 32760 (lrecl=x)
 
 <span id="Coding file names zOS"></span>
 
@@ -52,14 +52,14 @@ FNAME=VOLUME%UNIT%NAME1.NAME2.NAMEX
 
 Where:
 
-- VOLUME has the following characteristics:
+* VOLUME has the following characteristics:
 
     > -   Indicates the name of the disk volume where the file will be created or searched
     > -   Is optional, but useful for requesting Transfer CFT to create a VSAM file or other file, except for SMS managed volumes
     > -   Corresponds to the VOLUME parameter of the DEFINE CLUSTER VSAM or VOL=SER= of the JCL
     > -   Should not be used with DF/SMS
 
-- UNIT has the following characteristics:
+* UNIT has the following characteristics:
 
 > -   Indicates the UNITNAME used
 >
@@ -75,7 +75,7 @@ Where:
 >
 > -   By default, the value SYSALLDA or the value imposed by your DYNALLOC EXIT will be used
 
-- NAME1.NAME2.NAMEx have the following characteristics:
+* NAME1.NAME2.NAMEx have the following characteristics:
 
 > -   Defines the filename
 >
@@ -107,9 +107,9 @@ FILENAME
 
 A filename can have different forms:
 
-- A DSNAME or a string coded in form ‘VOLUME%UNIT%DSNAME’ (VOLUME and UNIT are often optional).
-- A logical name, associated with a DD card [ JCL ] or with an ALLOC [ CLIST ].
-- PDS member name, which is also by completing with the member name between brackets.
+* A DSNAME or a string coded in form ‘VOLUME%UNIT%DSNAME’ (VOLUME and UNIT are often optional).
+* A logical name, associated with a DD card [ JCL ] or with an ALLOC [ CLIST ].
+* PDS member name, which is also by completing with the member name between brackets.
 
 ****Example ****
 
@@ -177,12 +177,12 @@ Transfer CFT z/OS allows limited coding of certain SMS parameters in the UNIT pa
 
 The following values allow you to:
 
-- &gt;STORCLA: specify a value for STORAGE-CLASS
+* &gt;STORCLA: specify a value for STORAGE-CLASS
 
 <!-- -->
 
-- &lt;DATACLA: specify a value for DATA CLASS
-- \*MGTCLAS: specify a value for MANAGEMENT CLASS
+* &lt;DATACLA: specify a value for DATA CLASS
+* \*MGTCLAS: specify a value for MANAGEMENT CLASS
 
 An alternate way to specify full-length DF/SMS parameters is described in [DF/SMS large file support](../t_dynamically_create_files).
 
@@ -207,21 +207,21 @@ FNAME=$CFTCAT
 
 Transfer CFT z/OS handles PDS files one member at a time. Transfer CFT z/OS processes PDS files:
 
-- Member by member in sequence
+* Member by member in sequence
 
 <!-- -->
 
-- By calling IEBCOPY UNLOAD
+* By calling IEBCOPY UNLOAD
 
 <!-- -->
 
-- For the entire PDS, by setting FNAME=#DSNAME or #DSNAME(\*)
+* For the entire PDS, by setting FNAME=#DSNAME or #DSNAME(\*)
 
 > **Note**
 >
 > The second syntax is recommended as it is the syntax to use for heterogeneous transfers.
 
-- For a selected subset of members, using the ’\*’ character to replace a character string or ’?’ to replace one character and by setting FNAME=#DSNAME(ME?BER\*)
+* For a selected subset of members, using the ’\*’ character to replace a character string or ’?’ to replace one character and by setting FNAME=#DSNAME(ME?BER\*)
 
 A PDS file is coded as:
 
@@ -231,7 +231,7 @@ FNAME=NAME1.NAMEX(MEMBER)
 
 Delivered template:
 
-- `..SAMPLE(CFTPDS)`
+* `..SAMPLE(CFTPDS)`
 
 <span id="Coding GDG filenames"></span>
 
@@ -251,11 +251,11 @@ FNAME=NAME1.NAMEX(+n)
 
 Delivered templates:
 
-- `..SAMPLE(CFTGDGS) (send GDG)`
-- `..SAMPLE(CFTGDGR) (receive GDG)`
+* `..SAMPLE(CFTGDGS) (send GDG)`
+* `..SAMPLE(CFTGDGR) (receive GDG)`
 
 ****Related topics****
 
-- [Delete rename and share files](../t_delete_and_rename_files_zos)
-- [Dynamically create files](../t_dynamically_create_files)
-- [HFS hierarchical files](../c_hfs_hierarchical_files_zos)
+* [Delete rename and share files](../t_delete_and_rename_files_zos)
+* [Dynamically create files](../t_dynamically_create_files)
+* [HFS hierarchical files](../c_hfs_hierarchical_files_zos)

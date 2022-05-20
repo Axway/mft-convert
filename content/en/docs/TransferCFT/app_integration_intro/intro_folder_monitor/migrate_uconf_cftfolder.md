@@ -6,8 +6,8 @@ weight: 210
 
 Reasons to switch to the CFTFOLDER method include:
 
-- Folder monitoring is easier to manage via the CFTFOLDER object
-- The UCONF method has a limitation on the number of logical folders that you can monitor
+* Folder monitoring is easier to manage via the CFTFOLDER object
+* The UCONF method has a limitation on the number of logical folders that you can monitor
 
 ## Procedure
 
@@ -40,8 +40,8 @@ Two actions are available, you can extract the folder definitions to migrate, or
 
 > **Note**
 
-- You must enter each option or argument separately.
-- The fname is ignored when using the purge command, or when using the (-s) simulation option.
+* You must enter each option or argument separately.
+* The fname is ignored when using the purge command, or when using the (-s) simulation option.
 
 ### How the migration utility works
 
@@ -64,8 +64,8 @@ The Transfer CFT purge utility performs the following steps:
 1. When folders in the list also exist as CFTFOLDER objects in the Transfer CFT configuration, and STATE=ACTIVE, these folders are targeted to be purged.
 1. At this point the purge is performed unless you have specified - s (simulate).
 
-- The purge removes all targeted folders from the folder_monitoring.folders listed in UCONF. As opposed to the migration, this action directly alters the UCONF configuration.
-- If you are using -s (simulate), the tool only displays folders targeted by the purge.
+* The purge removes all targeted folders from the folder_monitoring.folders listed in UCONF. As opposed to the migration, this action directly alters the UCONF configuration.
+* If you are using -s (simulate), the tool only displays folders targeted by the purge.
 
 ## Examples of how to use the migrate and purge commands
 
@@ -143,10 +143,10 @@ A prerequisite to performing a rollback is that you must have made a backup of t
 
 ### Limitations and notes
 
-- It is recommended, but you are not obliged, to purge the migrated UCONF folders. Therefore, if both CFTFOLDER and UCONF folders exists, the CFTFOLDER definitions takes precedence.
-- Case sensitivity: Unlike UCONF, CFTFOLDER identifiers are not case sensitive - for example, a folder called "SamPle" is migrated as SAMPLE.
-- Special characters: If folder names contain special characters (&”#{$€ …) or accents (éàù …), migration fails as the utility cannot read these. However, theses are correctly rewritten if they are part of the SCANDIR and WORKDIR parameters.
-- Folder name length: The length of the folder name in CFTFOLDER cannot exceed 32 characters. If a UCONF defined folder name is too long, it cannot be migrated.
+* It is recommended, but you are not obliged, to purge the migrated UCONF folders. Therefore, if both CFTFOLDER and UCONF folders exists, the CFTFOLDER definitions takes precedence.
+* Case sensitivity: Unlike UCONF, CFTFOLDER identifiers are not case sensitive - for example, a folder called "SamPle" is migrated as SAMPLE.
+* Special characters: If folder names contain special characters (&”#{$€ …) or accents (éàù …), migration fails as the utility cannot read these. However, theses are correctly rewritten if they are part of the SCANDIR and WORKDIR parameters.
+* Folder name length: The length of the folder name in CFTFOLDER cannot exceed 32 characters. If a UCONF defined folder name is too long, it cannot be migrated.
 
 Parameter mapping and descriptions
 
@@ -182,12 +182,12 @@ Parameter mapping and descriptions
 >
 > \*You cannot use the following characters in the SCANDIR or WORKDIR definition. Additionally you cannot use a comma (,) in the CFTFOLDER SCANDIR or WORKDIR definition.
 
-- {{< TransferCFT/PrimaryForunix >}} /
-- For {{< TransferCFT/PrimaryforWindows >}} \\ / : \* ? " &lt; > &#124;
+* {{< TransferCFT/PrimaryForunix >}} /
+* For {{< TransferCFT/PrimaryforWindows >}} \\ / : \* ? " &lt; > &#124;
 
 ****Related topics****
 
-- [Introduction to folder monitoring](../)
-- [Folder monitoring CFTFOLDER](../../../c_intro_userinterfaces/web_copilot_ui/flow_def_intro/cftfolder)
-- [Migrate to CFTFOLDER folder monitoring](#)
-- [Create inclusion and exclusion filters](../folder_customize)
+* [Introduction to folder monitoring](../)
+* [Folder monitoring CFTFOLDER](../../../c_intro_userinterfaces/web_copilot_ui/flow_def_intro/cftfolder)
+* [Migrate to CFTFOLDER folder monitoring](#)
+* [Create inclusion and exclusion filters](../folder_customize)

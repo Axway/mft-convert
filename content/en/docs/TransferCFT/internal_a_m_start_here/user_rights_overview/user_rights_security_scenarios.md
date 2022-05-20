@@ -8,12 +8,12 @@ For more information on roles and privileges in Central Governance, refer to the
 
 In this section:
 
-- User scenario with no security applied
-- [User types](#User): Describes the actions that example users can perform
-- [Use case 1](#Security): Security controlled by Central Governance roles
-- [Use case 2](#Security2): Security controlled by USERCTRL and file rights
-- [Use case 3](#Security3): Security controlled by copilot.misc.createprocessasuser
-- [Define additional user rights security option](#Define)
+* User scenario with no security applied
+* [User types](#User): Describes the actions that example users can perform
+* [Use case 1](#Security): Security controlled by Central Governance roles
+* [Use case 2](#Security2): Security controlled by USERCTRL and file rights
+* [Use case 3](#Security3): Security controlled by copilot.misc.createprocessasuser
+* [Define additional user rights security option](#Define)
 
 <span id="Use"></span>
 
@@ -60,45 +60,45 @@ In this security scenario, the central governance roles are the exclusive defini
 
 The help desk cannot monitor Transfer CFT through Central Governance if they have no other role assigned to them.
 
-- Perform monitoring: YES, but only via a Transfer CFT client (not using Central Governance visibility services)
-- Submit a transfer: NO
-- Connect to Transfer CFT UI: YES
-- Modify configuration: NO 
-- Start/stop Transfer CFT: NO
+* Perform monitoring: YES, but only via a Transfer CFT client (not using Central Governance visibility services)
+* Submit a transfer: NO
+* Connect to Transfer CFT UI: YES
+* Modify configuration: NO 
+* Start/stop Transfer CFT: NO
 
 #### Operator
 
-- Monitor: YES, but only using Central Governance
-- Transfer: NO
-- Connect to Transfer CFT UI: NO
-- Modify configuration: YES, but only through Central Governance
-- Start/stop Transfer CFT: YES
+* Monitor: YES, but only using Central Governance
+* Transfer: NO
+* Connect to Transfer CFT UI: NO
+* Modify configuration: YES, but only through Central Governance
+* Start/stop Transfer CFT: YES
 
 #### Partner Manager
 
-- Monitor: YES, but only through Central Governance
-- Transfer: NO
-- Connect to Transfer CFT UI: NO
-- Modify configuration: NO
-- Start/stop Transfer CFT: NO
+* Monitor: YES, but only through Central Governance
+* Transfer: NO
+* Connect to Transfer CFT UI: NO
+* Modify configuration: NO
+* Start/stop Transfer CFT: NO
 
 #### Flow Manager
 
-- Monitor: YES, but only by using Central Governance
-- Transfer: YES, can access and perform transfers using any user's working directory
-- Connect to Transfer CFT UI: YES
-- Modify configuration: YES, via Central Governance only
-- Start/stop Transfer CFT: NO
+* Monitor: YES, but only by using Central Governance
+* Transfer: YES, can access and perform transfers using any user's working directory
+* Connect to Transfer CFT UI: YES
+* Modify configuration: YES, via Central Governance only
+* Start/stop Transfer CFT: NO
 
 #### System Engineer (superuser)
 
 Using CFTUTIL this user can perform configuration actions and transfers, but cannot do anything from {{< TransferCFT/suitevariablesCentralGovernanceName  >}}.
 
-- Monitor: YES
-- Transfer: YES
-- Connect to Transfer CFT UI: NO
-- Modify configuration: YES
-- Start/stop Transfer CFT: YES, but only via CFTUTIL
+* Monitor: YES
+* Transfer: YES
+* Connect to Transfer CFT UI: NO
+* Modify configuration: YES
+* Start/stop Transfer CFT: YES, but only via CFTUTIL
 
 <span id="Security2"></span>
 
@@ -116,45 +116,45 @@ USERCTRL is set to YES and file rights are assigned to each specific type of use
 
 Help desk alone cannot monitor Transfer CFT through Central Governance if they have no other role assigned to them.
 
-- Perform monitoring: YES, but only via a Transfer CFT client (not using CG visibility services)
-- Submit a transfer: NO
-- Connect to Transfer CFT UI: YES
-- Modify configuration: NO 
-- Start/stop Transfer CFT: NO
+* Perform monitoring: YES, but only via a Transfer CFT client (not using CG visibility services)
+* Submit a transfer: NO
+* Connect to Transfer CFT UI: YES
+* Modify configuration: NO 
+* Start/stop Transfer CFT: NO
 
 #### Operator
 
-- Monitor: YES, but only through Central Governance
-- Transfer: NO
-- Connect to Transfer CFT UI: NO
-- Modify configuration: YES, but only through CG.
-- Start/stop Transfer CFT: YES
+* Monitor: YES, but only through Central Governance
+* Transfer: NO
+* Connect to Transfer CFT UI: NO
+* Modify configuration: YES, but only through CG.
+* Start/stop Transfer CFT: YES
 
 #### Partner Manager
 
-- Monitor: YES, but only via Central Governance
-- Transfer: NO
-- Connect to Transfer CFT UI: NO
-- Modify configuration: NO
-- Start/stop Transfer CFT: NO
+* Monitor: YES, but only via Central Governance
+* Transfer: NO
+* Connect to Transfer CFT UI: NO
+* Modify configuration: NO
+* Start/stop Transfer CFT: NO
 
 #### Flow Manager
 
-- Monitor: YES, via Central Governance only
-- Transfer: YES, but is limited to his own working directory
-- Connect to Transfer CFT UI: YES
-- Modify configuration: YES, via Central Governance only
-- Start/stop Transfer CFT: NO
+* Monitor: YES, via Central Governance only
+* Transfer: YES, but is limited to his own working directory
+* Connect to Transfer CFT UI: YES
+* Modify configuration: YES, via Central Governance only
+* Start/stop Transfer CFT: NO
 
 #### System Engineer (superuser)
 
 Using CFTUTIL this user can perform configuration actions and transfers, but cannot do anything from {{< TransferCFT/suitevariablesCentralGovernanceName  >}}.
 
-- Monitor: YES, but only using CFTUTIL
-- Transfer: NO, because he cannot access (no rights on) the user's working directories
-- Connect to Transfer CFT UI: NO
-- Modify configuration: YES
-- Start/stop Transfer CFT: YES, but only via CFTUTIL
+* Monitor: YES, but only using CFTUTIL
+* Transfer: NO, because he cannot access (no rights on) the user's working directories
+* Connect to Transfer CFT UI: NO
+* Modify configuration: YES
+* Start/stop Transfer CFT: YES, but only via CFTUTIL
 
 > **Note**
 >
@@ -166,52 +166,52 @@ Using CFTUTIL this user can perform configuration actions and transfers, but can
 
 On top of the previous security steps, additionally you have set copilot.misc.createprocessasuser to YES.
 
-- The log in connection is a system check and not a CG check
-- All actions on files that Copilot can access are performed on behalf of the user connected to Copilot
+* The log in connection is a system check and not a CG check
+* All actions on files that Copilot can access are performed on behalf of the user connected to Copilot
 
 #### Monitoring Assistant
 
 Help desk alone cannot monitor Transfer CFT through Central Governance if they have no other role assigned to them.
 
-- Perform monitoring: NO, this user is not defined on Machine1
-- Submit a transfer: NO
-- Connect to Transfer CFT UI: NO
-- Modify configuration: NO 
-- Start/stop Transfer CFT: NO
+* Perform monitoring: NO, this user is not defined on Machine1
+* Submit a transfer: NO
+* Connect to Transfer CFT UI: NO
+* Modify configuration: NO 
+* Start/stop Transfer CFT: NO
 
 #### Operator
 
-- Monitor: YES, through either Central Governance or Copilot
-- Transfer: NO
-- Connect to Transfer CFT UI: NO
-- Modify configuration: YES
-- Start/stop Transfer CFT: YES
+* Monitor: YES, through either Central Governance or Copilot
+* Transfer: NO
+* Connect to Transfer CFT UI: NO
+* Modify configuration: YES
+* Start/stop Transfer CFT: YES
 
 #### Partner Manager
 
-- Monitor: YES, but only through CG.
-- Transfer: NO
-- Connect to Transfer CFT UI: NO
-- Modify configuration: NO
-- Start/stop Transfer CFT: NO
+* Monitor: YES, but only through CG.
+* Transfer: NO
+* Connect to Transfer CFT UI: NO
+* Modify configuration: NO
+* Start/stop Transfer CFT: NO
 
 #### Flow Manager
 
-- Monitor: YES, via CG only.
-- Transfer: YES, but is limited to his own working directory.
-- Connect to Transfer CFT UI: YES
-- Modify configuration: YES, via CG only.
-- Start/stop Transfer CFT: NO
+* Monitor: YES, via CG only.
+* Transfer: YES, but is limited to his own working directory.
+* Connect to Transfer CFT UI: YES
+* Modify configuration: YES, via CG only.
+* Start/stop Transfer CFT: NO
 
 #### System Engineer (superuser)
 
 Using CFTUTIL this user can perform configuration actions and transfers, but cannot do anything from {{< TransferCFT/suitevariablesCentralGovernanceName  >}}.
 
-- Monitor: YES, but only using CFTUTIL 
-- Transfer: NO, because he cannot access (no rights on) the user's working directories
-- Connect to Transfer CFT UI: NO
-- Modify configuration: YES, using either CFTUTIL or Copilot
-- Start/stop Transfer CFT: YES
+* Monitor: YES, but only using CFTUTIL 
+* Transfer: NO, because he cannot access (no rights on) the user's working directories
+* Connect to Transfer CFT UI: NO
+* Modify configuration: YES, using either CFTUTIL or Copilot
+* Start/stop Transfer CFT: YES
 
 <span id="Define"></span>
 
@@ -219,10 +219,10 @@ Using CFTUTIL this user can perform configuration actions and transfers, but can
 
 This example describes how to add an additional user rights security restriction. The user in this case is not known on Central Governance, but has all rights on all files on the Transfer CFT system, runtime as well as working directories.
 
-- When am.passport.userctrl.check_permissions_on_transfer_execution=no, the default value, this user, who defined on the Machine1, can use CFTUTIL to perform a transfer even though not known on {{< TransferCFT/suitevariablesCentralGovernanceName >}}.
-- When am.passport.userctrl.check_permissions_on_transfer_execution=yes, this same user cannot perform transfers as he is not defined in {{< TransferCFT/suitevariablesCentralGovernanceName >}}.
+* When am.passport.userctrl.check_permissions_on_transfer_execution=no, the default value, this user, who defined on the Machine1, can use CFTUTIL to perform a transfer even though not known on {{< TransferCFT/suitevariablesCentralGovernanceName >}}.
+* When am.passport.userctrl.check_permissions_on_transfer_execution=yes, this same user cannot perform transfers as he is not defined in {{< TransferCFT/suitevariablesCentralGovernanceName >}}.
 
 ****Related topics****
 
-- [About system users](../)
-- [Recommendations and troubleshooting](../user_rights_tips)
+* [About system users](../)
+* [Recommendations and troubleshooting](../user_rights_tips)

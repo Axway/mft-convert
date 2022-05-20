@@ -16,10 +16,10 @@ the system.
 
 The possible values are:
 
-- FILE: file type communications
-- TCPIP: synchronous communications
+* FILE: file type communications
+* TCPIP: synchronous communications
     supported by TCP/IP
-- UNDF :
+* UNDF :
     communications medium is defined in the file that is declared in the
     FNAME parameter  
 

@@ -71,8 +71,8 @@ To create sample partners, enter the command:` $ cftinit cft_scen:cft-tcp-part.c
 
 The following procedure creates the sample partners:
 
-- loop transfer: partners Paris - New York
-- loop transfer using SSL: loopssl
+* loop transfer: partners Paris - New York
+* loop transfer using SSL: loopssl
 
 ```
 CFTU20I
@@ -106,8 +106,8 @@ The Transfer CFT environment is now built and ready for use.
 
 To begin submitting commands to Transfer CFT you can use:
 
-- CFTUTIL
-- Copilot
-- API programming interfaces
+* CFTUTIL
+* Copilot
+* API programming interfaces
 
 For more information, see *[communications]()*.

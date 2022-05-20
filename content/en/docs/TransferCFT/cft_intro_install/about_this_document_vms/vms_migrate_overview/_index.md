@@ -20,11 +20,11 @@ An update brings Transfer CFT up-to-date with a patch or service pack offering f
 
 The following methods are available for updating your Transfer CFT product version.
 
-- Upgrade (existing)
+* Upgrade (existing)
 
 <!-- -->
 
-- Manual migration
+* Manual migration
 
 ### About upgrades
 
@@ -34,15 +34,15 @@ For more information, go to [Manually upgrade a Transfer CFT 3.0.1 or 3.1.3 mult
 
 This mode has the following advantages:
 
-- Allows you to update in the same location
+* Allows you to update in the same location
 
 <!-- -->
 
-- You can perform this upgrade yet still revert to the previous state if needed
+* You can perform this upgrade yet still revert to the previous state if needed
 
 <!-- -->
 
-- Scripts and APIs remain intact and only require a recompilation for the APIs
+* Scripts and APIs remain intact and only require a recompilation for the APIs
 
 ### About migrations
 
@@ -50,11 +50,11 @@ A migration means that an initial Transfer CFT is installed in a directory that 
 
 This mode has the following advantages:
 
-- The new installation occurs in a new location, and the existing configuration in the existing Transfer CFT environment is not affected
+* The new installation occurs in a new location, and the existing configuration in the existing Transfer CFT environment is not affected
 
 <!-- -->
 
-- You can choose to use either of the versions, if needed, in case of an issue with one of the installations
+* You can choose to use either of the versions, if needed, in case of an issue with one of the installations
 
 > **Note**
 >
@@ -62,7 +62,7 @@ This mode has the following advantages:
 
 This mode has the following restriction:
 
-- You must copy scripts and APIs from the previous version to the new installation.
+* You must copy scripts and APIs from the previous version to the new installation.
 
 ### About manual migrations
 
@@ -75,11 +75,11 @@ The general procedure for migrating from a previous version of Transfer CFT to T
 
 This mode has the following advantages:
 
-- Because it is manual, you can customize as needed.
+* Because it is manual, you can customize as needed.
 
 <!-- -->
 
-- You can manually migrate from versions older than version 2.7.x.
+* You can manually migrate from versions older than version 2.7.x.
 
 ### Check product details
 

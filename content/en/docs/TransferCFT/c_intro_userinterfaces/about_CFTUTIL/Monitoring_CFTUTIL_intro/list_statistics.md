@@ -8,10 +8,10 @@ weight: 330
 
 You can use the following variables after performing a LISTCAT or DISPLAY command to show the selected statistical information. For example, LISTCAT_FREE displays the percentage of free records. Additionally, you can use a combination of these variables.
 
-- _LISTCAT_SELECTED: displays the selected record(s) from the LISTCAT command
-- _LISTCAT_CAT: displays the total number of records
-- _LISTCAT_FREE: displays the number of available records
-- _LISTCAT_FREE_P: displays the number of available records as a percentage of the total number of records
+* _LISTCAT_SELECTED: displays the selected record(s) from the LISTCAT command
+* _LISTCAT_CAT: displays the total number of records
+* _LISTCAT_FREE: displays the number of available records
+* _LISTCAT_FREE_P: displays the number of available records as a percentage of the total number of records
 
 **Example**
 
@@ -47,15 +47,15 @@ CFTU00I PRINT _ Correct (MSG='Percent free= 99')
 
 You can use the following variables after performing a LISTCOM command to display records. For example, LISTCOM_FREE displays the percentage of free records. Additionally, you can use a combination of these variables as with the LISTCAT variables above.
 
-- _LISTCOM_SELECTED: displays the selected records from the LISTCOM command
-- _LISTCOM_CLEARED: displays the cleared records from the LISTCOM command
+* _LISTCOM_SELECTED: displays the selected records from the LISTCOM command
+* _LISTCOM_CLEARED: displays the cleared records from the LISTCOM command
 
 ****Operating system specificities****
 
 Additional options in z/OS, IBM i, and OpenVMS environments include:
 
-- _LISTCOM_COM: displays the total number of records
-- _LISTCOM_FREE: displays the number of available records
+* _LISTCOM_COM: displays the total number of records
+* _LISTCOM_FREE: displays the number of available records
 
 On Windows, Unix, and HP NonStop environments these variables have no maximum value.
 

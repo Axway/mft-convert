@@ -4,9 +4,9 @@ linkTitle: "Use an internal trace (CFTUTIL command)"
 weight: 320
 ---Depending on how the trace is started, the file defined is available:
 
-- When Transfer CFT
+* When Transfer CFT
     starts up, with the possibility of tracing an initialization sequence
-- During Transfer
+* During Transfer
     CFT operations
 
 <span id="Trace_commands"></span><span id="Trace_parameter_setting_commands"></span>Trace parameter setting
@@ -95,11 +95,11 @@ defined by the set of parameters **TRCFNAM, TRCFTYP, TRCLREC, TRCNREC**.
 Operation to be performed on the ‘‘trace file" entry designated
 by the **ID** parameter:
 
-- CREATE: Create
+* CREATE: Create
     an entry
-- REPLACE: Replace
+* REPLACE: Replace
     an entry
-- DELETE: Delete
+* DELETE: Delete
     an entry
 
 Where **MODE=DELETE**, only the **ID** parameter is useful.
@@ -112,9 +112,9 @@ Where **MODE=DELETE**, only the **ID** parameter is useful.
 
 Starting the trace:
 
-- CFT: at Transfer
+* CFT: at Transfer
     CFT start-up
-- DELAYED: during
+* DELAYED: during
     Transfer CFT operations
 
 If **START = CFT**, a trace vector is created with the identifier
@@ -131,9 +131,9 @@ Character string maximum length: 64 characters.
 
 Trace file type:
 
-- STANDARD: sequential
+* STANDARD: sequential
     file written in extend. The new records are written after the old ones.
-- CIRCULAR: direct
+* CIRCULAR: direct
     access file, with a set number of fixed-length records. This file is accessed
     through a circular up-date, the new records over-writing the old ones
 
@@ -143,9 +143,9 @@ Trace file physical records (fixed) length.
 
 This parameter is:
 
-- Mandatory if TRCFTYP
+* Mandatory if TRCFTYP
     = CIRCULAR
-- Optional if TRCFTYP
+* Optional if TRCFTYP
     = STANDARD
 
 `[TRCNREC = n]`
@@ -163,11 +163,11 @@ This parameter is only relevant if the parameter **START = CFT**.
 The chosen value is a mask (logical OR) combination of the desired values.
 These values are:
 
-- 1: Trace of the
+* 1: Trace of the
     request field sent by Transfer CFT to the "EXIT" executive
-- 2: Trace of the
+* 2: Trace of the
     user work field
-- 4: Trace of the
+* 4: Trace of the
     data field
 
 <a href="#" class="selected">Back

@@ -4,11 +4,11 @@ linkTitle: "Transfer CFT to operator messages"
 weight: 270
 ---The CFTLOG command NOTIFY parameter is used to designate the operator where LOG messages are sent. These messages are processed differently, according to the syntax used for the NOTIFY parameter. Two possibilities are available, user name or hexadecimal value.
 
-- The NOTIFY parameter value is a user name. The messages intended for the operator are sent to all of the terminals on which the user is logged. Each message is displayed on the last line of the terminal. A new message overwrites the previous one. To stop receiving these messages on a particular terminal, enter the command: `$ set terminal/nobroadcast`
+* The NOTIFY parameter value is a user name. The messages intended for the operator are sent to all of the terminals on which the user is logged. Each message is displayed on the last line of the terminal. A new message overwrites the previous one. To stop receiving these messages on a particular terminal, enter the command: `$ set terminal/nobroadcast`
 
 To restart this message delivery, use the command:` $ set terminal/broadcast`
 
-- The NOTIFY parameter value has the OPnnnnnn format, where nnnnnn represents a string of six hexadecimal digits. The messages are sent to an operator terminal. This string determines the type of terminal to receive the messages. It corresponds to the OPC$B_MS_TARGET field of the SYS$SNDOPR system service request block. For more information, refer to the **OpenVMS System Services Reference Manual**.
+* The NOTIFY parameter value has the OPnnnnnn format, where nnnnnn represents a string of six hexadecimal digits. The messages are sent to an operator terminal. This string determines the type of terminal to receive the messages. It corresponds to the OPC$B_MS_TARGET field of the SYS$SNDOPR system service request block. For more information, refer to the **OpenVMS System Services Reference Manual**.
 
 To receive messages, enter the REPLY/ENABLE=XXX command, where XXX represents the selected operator class.
 

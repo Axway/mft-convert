@@ -15,11 +15,11 @@ To notify the end of the processing to Transfer CFT, the post processing script 
 
 During this phase, the phase step can be:
 
-- ExitEOT (E): trying to launch the ExitEOT or waiting that it give the hand back.
-- Hold (H): waiting for a start command.
-- Disposable (D): scheduled to start.
-- Current (C): processing running, waiting for a CFTUTIL end with istate=no
-- Keep (K): processing failed or stopped.
+* ExitEOT (E): trying to launch the ExitEOT or waiting that it give the hand back.
+* Hold (H): waiting for a start command.
+* Disposable (D): scheduled to start.
+* Current (C): processing running, waiting for a CFTUTIL end with istate=no
+* Keep (K): processing failed or stopped.
 
 If neither an EOT exit or other exec was specified, the transfer passes to the acknowledgment phase or the done phase.
 

@@ -28,10 +28,10 @@ Starting Copilot after installation begins the connection and registration proce
 
 ****1. Copilot connects to Central Governance or {{< TransferCFT/suitevariablesFlowManager  >}} and submits its registration.****
 
-- Copilot sends a registration request through a simple authenticated SSL connection and submits its registration. Copilot authenticates the Central Governance or {{< TransferCFT/suitevariablesFlowManager >}} server using the CA certificate pointing by the uconf:cg.ca_cert_id parameter. The registration request contains:
+* Copilot sends a registration request through a simple authenticated SSL connection and submits its registration. Copilot authenticates the Central Governance or {{< TransferCFT/suitevariablesFlowManager >}} server using the CA certificate pointing by the uconf:cg.ca_cert_id parameter. The registration request contains:
 
-    -   Information about the {{< TransferCFT/axwayvariablesComponentShortName >}} instance, including its instance name, host, port and version.
-    -   Two Certificate Signing Requests (CSRs) for {{< TransferCFT/PrimaryCGorUM >}} to process.
+    *   Information about the {{< TransferCFT/axwayvariablesComponentShortName >}} instance, including its instance name, host, port and version.
+    *   Two Certificate Signing Requests (CSRs) for {{< TransferCFT/PrimaryCGorUM >}} to process.
 
     > **Note**
     >
@@ -43,8 +43,8 @@ Central Governance or {{< TransferCFT/suitevariablesFlowManager  >}} processes t
 
 Both certificates are stored in the internal PKI base using the following identifiers:
 
-- &lt;uconf:cft.instance_id>_GOV for the governance certificate
-- &lt;uconf:cft.instance_id> for the business certificate
+* &lt;uconf:cft.instance_id>_GOV for the governance certificate
+* &lt;uconf:cft.instance_id> for the business certificate
 
 ****3. Copilot sends the first heartbeat over a mutual authenticated SSL connection.****
 
@@ -58,37 +58,37 @@ Registration completes with Transfer CFT appearing in the {{< TransferCFT/Primar
 
 During the registration process Central Governance or {{< TransferCFT/suitevariablesFlowManager  >}} receives the original Transfer CFT configuration and updates it so that Transfer CFT is configured to:
 
-- Connect to {{< TransferCFT/PrimaryCGorUM >}} using the Central Governance mutual authentication port
-- Use Central Governance for access management
-- Use Central Governance for transfer monitoring
-- Use its own internal PKI
+* Connect to {{< TransferCFT/PrimaryCGorUM >}} using the Central Governance mutual authentication port
+* Use Central Governance for access management
+* Use Central Governance for transfer monitoring
+* Use its own internal PKI
 
 These changes create two security profiles (CFTSSL) for Transfer CFT, one client and one server, named SSL_DEFAULT.
 
 Completing the registration process, {{< TransferCFT/PrimaryCGorUM  >}} or {{< TransferCFT/suitevariablesFlowManager  >}} gets the current configuration of {{< TransferCFT/axwayvariablesComponentShortName  >}} and changes it.
 
-- {{< TransferCFT/axwayvariablesComponentShortName >}} is configured to use the {{< TransferCFT/PrimaryCGorUM >}} {{< TransferCFT/suitevariablesPassPortName >}} service for access management.
-- {{< TransferCFT/axwayvariablesComponentShortName >}} is configured to use the {{< TransferCFT/PrimaryCGorUM >}} {{< TransferCFT/PrimarySentinel >}} for transfer monitoring. For Transfer CFT 3.2.2 and higher, a secured connection is used.
+* {{< TransferCFT/axwayvariablesComponentShortName >}} is configured to use the {{< TransferCFT/PrimaryCGorUM >}} {{< TransferCFT/suitevariablesPassPortName >}} service for access management.
+* {{< TransferCFT/axwayvariablesComponentShortName >}} is configured to use the {{< TransferCFT/PrimaryCGorUM >}} {{< TransferCFT/PrimarySentinel >}} for transfer monitoring. For Transfer CFT 3.2.2 and higher, a secured connection is used.
 
 These changes create two security profiles (CFTSSL) on the {{< TransferCFT/axwayvariablesComponentShortName  >}} (except when using a SAF-based PKI {{< TransferCFT/axwayvariablesComponentShortName  >}}). The profiles are named SSL_DEFAULT; one profile is of type client and one is of type server. Their SSL version is TLSV1COMP. The configured cipher list is CIPHLIST= ('53','47') for {{< TransferCFT/axwayvariablesComponentShortName  >}} 3.1.2 and 3.1.3. The values represent the following cipher suites:
 
 The values represent the following cipher suites:
 
-- 47: TLS_RSA_WITH_AES_128_CBC_SHA
-- 53: TLS_RSA_WITH_AES_256_CBC_SHA
+* 47: TLS_RSA_WITH_AES_128_CBC_SHA
+* 53: TLS_RSA_WITH_AES_256_CBC_SHA
 
 For Transfer CFT 3.2.2 and higher, the configured cipher list is CIPHLIST= ('49200', '49199', '49192', '49191', '157', '156', '61', '60', '53', '47'). The values represent the following cipher suites:
 
-- 49200: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
-- 49199: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-- 49192: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
-- 49191: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
-- 157: TLS_RSA_WITH_AES_256_GCM_SHA384
-- 156: TLS_RSA_WITH_AES_128_GCM_SHA256
-- 61: TLS_RSA_WITH_AES_256_CBC_SHA256
-- 60: TLS_RSA_WITH_AES_128_CBC_SHA256
-- 53: TLS_RSA_WITH_AES_256_CBC_SHA
-- 47: TLS_RSA_WITH_AES_128_CBC_SHA
+* 49200: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+* 49199: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+* 49192: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+* 49191: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+* 157: TLS_RSA_WITH_AES_256_GCM_SHA384
+* 156: TLS_RSA_WITH_AES_128_GCM_SHA256
+* 61: TLS_RSA_WITH_AES_256_CBC_SHA256
+* 60: TLS_RSA_WITH_AES_128_CBC_SHA256
+* 53: TLS_RSA_WITH_AES_256_CBC_SHA
+* 47: TLS_RSA_WITH_AES_128_CBC_SHA
 
 The client and server security profiles must be mutually authenticated. However, by default, a registered {{< TransferCFT/axwayvariablesComponentShortName  >}} does not have a protocol with a security profile. You must edit the {{< TransferCFT/axwayvariablesComponentShortName  >}} configuration to support protocols with mutual authentication.
 
@@ -140,9 +140,9 @@ For Transfer CFT to register successfully with Flow Manager, it must have at le
 
 The CFTNET objects are:
 
-- One pTCP, where ID = &lt;pTCP_ID> and CLASS=&lt;X> and the UCONF parameter acceleration.ptcp = &lt;pTCP_ID>
-- One  UDT, where ID = &lt;UDT_ID> and CLASS=&lt;Y> and the UCONF parameter acceleration.udt = &lt;UDT_ID>
-- One TCP, where ID=&lt;TCP_ID> and CLASS=&lt;Z>
+* One pTCP, where ID = &lt;pTCP_ID> and CLASS=&lt;X> and the UCONF parameter acceleration.ptcp = &lt;pTCP_ID>
+* One  UDT, where ID = &lt;UDT_ID> and CLASS=&lt;Y> and the UCONF parameter acceleration.udt = &lt;UDT_ID>
+* One TCP, where ID=&lt;TCP_ID> and CLASS=&lt;Z>
 
 Flow Manager does not manage additional CFTNET types; these are stored, without modification, on the Transfer CFT as retrieved on registration.
 

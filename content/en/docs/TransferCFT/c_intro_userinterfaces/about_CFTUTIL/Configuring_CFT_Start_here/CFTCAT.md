@@ -8,9 +8,9 @@ managed: file, scanning mode, retention time before purge, and so on.
 <span id="About_the_CFTCAT_Command"></span>The Catalog (CFTCAT) object is used to describe
 the Transfer CFT transfer catalog access for:
 
-- File
-- Scanning mode
-- Retention time,
+* File
+* Scanning mode
+* Retention time,
     before the purge, of associated information
 
 The catalog purge can be initiated at midnight (default value) or at
@@ -29,9 +29,9 @@ In the user interface, you can customize the catalog columns and filters. From t
 ****Related
 topics****
 
-- Command syntax
+* Command syntax
     [CFTCAT](../../../command_summary#CFTCAT)
-- Object concepts
+* Object concepts
     [Catalog attributes](../../../../admin_intro/admin_config_commands/catalog_parameter_concepts)
 
 
@@ -72,17 +72,17 @@ ST = 3,
 SX = 3
 ```
 
-- Non-terminated send requests (SH state) and interrupted receive
+* Non-terminated send requests (SH state) and interrupted receive
     transfers are automatically purged after seven days (RH state).
-- Terminated send transfer entries (ST state) and terminated receive
+* Terminated send transfer entries (ST state) and terminated receive
     transfer entries (RT state) are automatically purged after three days.
     The entries of terminated send transfers and receive transfers for which
     the end procedure was correctly executed, SX and RX state, are automatically
     purged after three days.
-- The UPDAT parameter is not mentioned; it takes the default value
+* The UPDAT parameter is not mentioned; it takes the default value
     1, which results in the catalog file being updated at each synchronization
     point of each transfer.
 
 ****Related topics****
 
-- [PURGE - Purging the catalog](../../../../admin_intro/admin_commands_intro/purge_catalog)
+* [PURGE - Purging the catalog](../../../../admin_intro/admin_commands_intro/purge_catalog)

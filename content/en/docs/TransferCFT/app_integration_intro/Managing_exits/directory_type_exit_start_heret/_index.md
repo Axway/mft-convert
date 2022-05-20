@@ -12,22 +12,22 @@ opened depending on the {{< TransferCFT/axwayvariablesComponentShortName  >}} pa
 
 Use a directory exit to:
 
-- Server mode -
+* Server mode -
     to replace the standard checks performed by {{< TransferCFT/axwayvariablesComponentShortName >}} when a remote
     partner requests a connection
-- Requester mode -
+* Requester mode -
     to provide, supplement or modify the parameters {{< TransferCFT/axwayvariablesComponentShortName >}} requires
     to establish network and protocol connections with a remote partner
 
 The directory exit parameters can include:
 
-- Network name
-- Password
-- Remote partner
+* Network name
+* Password
+* Remote partner
     address
-- Remote SAP - service
+* Remote SAP - service
     access point
-- Final protocol
+* Final protocol
     to be used
 
 The directory EXIT can only be called once during the protocol connection
@@ -46,10 +46,10 @@ time slots, and so on.
 
 You can:
 
-- Request Transfer
+* Request Transfer
     CFT to perform your own standard checks
-- Accept the call
-- Refuse the call
+* Accept the call
+* Refuse the call
 
 In this mode, regardless of the protocol used, the EXIT task takes control
 at each protocol connection, even in the case of a transfer sequence over
@@ -58,9 +58,9 @@ a protocol connection, the EXIT task does not take control.
 
 The EXIT can perform checks on a partner:
 
-- Known to Transfer
+* Known to Transfer
     CFT and defined in a CFTPART object
-- Unknown to Transfer
+* Unknown to Transfer
     CFT when there is no CFTPART object
 
 It can accept or refuse network and protocol connections.
@@ -74,11 +74,11 @@ the partner file to operate.
 
 In requester mode, you can:
 
-- Request Transfer
+* Request Transfer
     CFT to perform your standard checks before establishing connections
-- Accept to establish
+* Accept to establish
     connections
-- Refuse to establish
+* Refuse to establish
     connections
 
 The partner may be known, defined in a CFTPART object, or unknown to
@@ -95,12 +95,12 @@ protocols.
 
 The first protocol choice criterion is:
 
-- The partner is
+* The partner is
     known to {{< TransferCFT/axwayvariablesComponentShortName >}}: there is a CFTPART object corresponding to the
     partner. The first protocol of the CFTPART object containing an EXIT directory
     identifier is chosen. If no protocols of this command contain an EXIT
     directory identifier, the first protocol is chosen
-- The partner is
+* The partner is
     unknown to {{< TransferCFT/axwayvariablesComponentShortName >}}: there is no CFTPART object corresponding to the
     partner. The first protocol of the CFTPARM object that contains an EXIT
     directory identifier is chosen. If none of the protocols of this command

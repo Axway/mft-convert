@@ -26,4 +26,4 @@ a {{< TransferCFT/axwayvariablesComponentShortName  >}} log.
 
 ****Related topics****
 
-- [XFBLog Tracked Object](../xfblog)
+* [XFBLog Tracked Object](../xfblog)

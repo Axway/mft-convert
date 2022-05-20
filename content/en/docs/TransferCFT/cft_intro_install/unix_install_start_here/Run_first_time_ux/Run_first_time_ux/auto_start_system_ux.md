@@ -12,14 +12,14 @@ procedure to be temporarily suspended.
 
 The examples in this section assume the following:
 
-- Transfer CFT is
+* Transfer CFT is
     installed in the `cft `user account
-- Transfer CFT is
+* Transfer CFT is
     installed as standard in the `Axway/Transfer_CFT` directory for this account
-- In a multi-node environment, the {{< TransferCFT/headerfootervariableshflongproductname >}} runtime is located in `/mnt/axway/cft/runtime`
-- The `home `directory
+* In a multi-node environment, the {{< TransferCFT/headerfootervariableshflongproductname >}} runtime is located in `/mnt/axway/cft/runtime`
+* The `home `directory
     for this user is `/home/cft`
-- Transfer CFT is
+* Transfer CFT is
     correctly installed, configured, and manually tested before attempting any automatic
     activation procedure
 
@@ -138,9 +138,9 @@ the `syslogd()` system daemon must be running on your system. The
 system administrator can identify the
 specific Transfer CFT messages in the system log files at the:
 
-- Error level and the
+* Error level and the
     `local0` facility for error messages
-- Information level
+* Information level
     and the `local0` facility for a correct start
 
 ****Define the {{< TransferCFT/headerfootervariableshflongproductname  >}} service****
@@ -177,9 +177,9 @@ the `syslogd()` system daemon must be running on your system. The
 system administrator can identify the
 specific Transfer CFT messages in the system log files at the:
 
-- Error level and the
+* Error level and the
     `local0` facility for error messages
-- Information level
+* Information level
     and the `local0` facility for a correct start
 
 ****Define the {{< TransferCFT/headerfootervariableshflongproductname  >}} service****

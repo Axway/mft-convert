@@ -12,18 +12,18 @@ weight: 250
 
 The `d$cft_run:[src.exit]` subdirectory contains:
 
-- The `exfxmp1.c` sample source module with its associated `exfus.h` include file. This program
+* The `exfxmp1.c` sample source module with its associated `exfus.h` include file. This program
     demonstrates the various user functions:
-    -   ALLOC_TYP:
+    *   ALLOC_TYP:
         the EXIT allocates the file
-    -   OPEN_TYP: the
+    *   OPEN_TYP: the
         EXIT opens the file
-    -   DATA_TYP: the
+    *   DATA_TYP: the
         EXIT writes or reads the file, and so on
 
 <!-- -->
 
-- The `makefile_exit.com`
+* The `makefile_exit.com`
     compilation procedure, which uses `exfxmp2.c` to generate the CFTEXITF
     program
 

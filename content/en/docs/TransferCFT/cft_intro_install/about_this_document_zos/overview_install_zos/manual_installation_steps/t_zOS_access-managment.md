@@ -10,8 +10,8 @@ There are three methods available to define internal access management when usin
 
 The are two delivered JCLs, H81$AMIN and H81$AMSF, to use to implement internal access management.
 
-- H81$AMSF: This JCL activates access management for the group database for the SAF class method
-- H81$AMIN: This JCL activates access management for the group database for either the system or file method
+* H81$AMSF: This JCL activates access management for the group database for the SAF class method
+* H81$AMIN: This JCL activates access management for the group database for either the system or file method
 
 Alternatively, you can use UCONF to define the internal access management. See the Internal access management information in the Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion  >}} {{< TransferCFT/suitevariablesDocTypeUser  >}} for more information.
 

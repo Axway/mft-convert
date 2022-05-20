@@ -24,9 +24,9 @@ There are two steps to set up synchronous communication in Transfer CFT, configu
 
 Use the CFTCOM command to define the synchronous communication settings. In the {{< TransferCFT/suitevariablesCentralGovernanceName  >}} {{< TransferCFT/suitevariablesDocTypeUser  >}}, refer to **Transfer request mode &gt; synchronous**.
 
-- Port: Use the Transfer CFT server port that receives the client commands
-- Maximum connection: Set the number of incoming connections on the Transfer CFT server
-- Session timeout: Set the amount of time after which Transfer CFT disconnects the client connection
+* Port: Use the Transfer CFT server port that receives the client commands
+* Maximum connection: Set the number of incoming connections on the Transfer CFT server
+* Session timeout: Set the amount of time after which Transfer CFT disconnects the client connection
 
 **Example**
 
@@ -60,10 +60,10 @@ CONFIG TYPE=COM, MEDIACOM=TCPIP, FNAME=XHTTP://localhost:1765
 
 Use a configuration file to define the synchronous communication, where the file should contain at least the following elements:
 
-- # TCP/IP COMMUNICATION
-- TYPE =TCP
-- NAME =xhttp://localhost:1765
-- TIMEOUT = 600
+* # TCP/IP COMMUNICATION
+* TYPE =TCP
+* NAME =xhttp://localhost:1765
+* TIMEOUT = 600
 
 Start a CFTUTIL session and perform the following commands.
 

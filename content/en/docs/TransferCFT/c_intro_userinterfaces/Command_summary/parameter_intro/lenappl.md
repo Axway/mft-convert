@@ -20,9 +20,9 @@ Enter the identifier length to to be used when comparing the file/message
 identifier (idf or idm)
 with a CFTAPPL object identifier:
 
-- 32
+* 32
     (default value)
-- any
+* any
     value from 1 to 32
 
 [Return to Command index](../../)

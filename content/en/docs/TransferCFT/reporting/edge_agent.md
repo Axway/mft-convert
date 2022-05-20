@@ -4,8 +4,8 @@ linkTitle: "Implement the Edge Agent"
 weight: 200
 ---This page describes how to configure the Edge Agent for AMPLIFY MFT implementations and configure {{< TransferCFT/headerfootervariableshflongproductname  >}} for the following use cases:
 
-- Usage tracking only
-- Usage tracking and Sentinel monitoring
+* Usage tracking only
+* Usage tracking and Sentinel monitoring
 
 ********Usage tracking only********
 
@@ -43,9 +43,9 @@ In this use case, Transfer CFT sends the usage report directly to the Edge Agent
 
 Set the following `uconf `parameters to the Edge Agent values:
 
-- sentinel.trkipaddr: Edge Agent IP address
-- sentinel.trkipport: 8002 (by default, the non-SSL port for the Edge Agent)
-- sentinel.xfb.use_ssl: No
+* sentinel.trkipaddr: Edge Agent IP address
+* sentinel.trkipport: 8002 (by default, the non-SSL port for the Edge Agent)
+* sentinel.xfb.use_ssl: No
 
 ### Usage tracking with the Edge Agent and monitoring with Sentinel
 
@@ -57,8 +57,8 @@ You require an installed Sentinel and Event Router to implement this method. You
 
 Set the following uconf parameters to the Edge Agent values:
 
-- sentinel.trkipaddr: Event Router IP address
-- sentinel.trkipport: Event Router listening port
+* sentinel.trkipaddr: Event Router IP address
+* sentinel.trkipport: Event Router listening port
 
 #### On the Sentinel server
 

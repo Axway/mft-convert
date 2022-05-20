@@ -4,8 +4,8 @@ linkTitle: "Rollback upgrade and restore catalog"
 weight: 260
 ---## Prerequisites
 
-- You must have made a backup of the environment prior to the upgrade you are rolling back.
-- Upgraded from {{< TransferCFT/headerfootervariableshflongproductname >}} 3.4 or higher to {{< TransferCFT/headerfootervariableshflongproductname >}} {{< TransferCFT/axwayvariablesReleaseNumber >}}
+* You must have made a backup of the environment prior to the upgrade you are rolling back.
+* Upgraded from {{< TransferCFT/headerfootervariableshflongproductname >}} 3.4 or higher to {{< TransferCFT/headerfootervariableshflongproductname >}} {{< TransferCFT/axwayvariablesReleaseNumber >}}
 
 ## Procedure
 
@@ -58,6 +58,6 @@ The following procedure enables you to rollback to the previous state if you hav
 
 1. Use the A13RBACK
 1. Use the A13RBACK to restore the executable file library, USS Copilot and USS Secure Relay environment. This JCL executes the following three JCLs:
-    -   A13RSTOR: Restores the Transfer CFT Load library.
-    -   A13UCOPR: Restores the Transfer CFT USS Copilot environment.
-    -   A13UXSRR: Restores the Transfer CFT USS Secure Relay environment.
+    *   A13RSTOR: Restores the Transfer CFT Load library.
+    *   A13UCOPR: Restores the Transfer CFT USS Copilot environment.
+    *   A13UXSRR: Restores the Transfer CFT USS Secure Relay environment.
