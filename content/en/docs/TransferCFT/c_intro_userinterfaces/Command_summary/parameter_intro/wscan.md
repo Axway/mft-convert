@@ -14,8 +14,8 @@ weight: 3800
 Enter the frequency (in seconds) with which the {{< TransferCFT/axwayvariablesComponentShortName  >}} scans the communication
 file:
 
-- 60 (default value)
-- any
+* 60 (default value)
+* any
     other value
 
 <span id="wscan_CFTCAT"></span>
@@ -26,8 +26,8 @@ file:
 
 Enter the frequency (in minutes) with which Transfer CFT scans the catalog file when restarting a transfer:
 
-- 5 (default value)
-- 1 to 60
+* 5 (default value)
+* 1 to 60
 
 ****Behavior specifics****
 

@@ -12,5 +12,5 @@ Each transfer passes through different States during its execution, so Sentinel 
 
 The attributes contained in a tracked object fall into one of two categories:
 
-- System attributes that are common to most tracked objects. System attributes identify application and platform events and errors.
-- User attributes that are not common to all tracked objects. User attributes describe the application- or platform-specific properties of monitored events.
+* System attributes that are common to most tracked objects. System attributes identify application and platform events and errors.
+* User attributes that are not common to all tracked objects. User attributes describe the application- or platform-specific properties of monitored events.

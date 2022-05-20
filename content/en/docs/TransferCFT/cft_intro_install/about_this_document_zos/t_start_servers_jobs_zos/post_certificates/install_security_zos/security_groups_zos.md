@@ -52,8 +52,8 @@ EXIT programs are located in the library containing the CFTMAIN program.
 
 This group allows any user belonging to the group to edit all configuration objects protected by the safcftcl class profiles: 
 
-- SECINI, SECACT and SECOBJ file read access rights.
-- PARM, UCONF and PART file write access rights:
+* SECINI, SECACT and SECOBJ file read access rights.
+* PARM, UCONF and PART file write access rights:
 
 PERMIT ‘CFTV2.PARM’ ID(GRPAPRM)ACCES(UPDATE)  
 PERMIT ‘CFTV2.PART’ ID(GRPAPRM)ACCES(UPDATE)

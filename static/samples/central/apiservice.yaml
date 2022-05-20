@@ -9,8 +9,8 @@ metadata:
 attributes:
   createdBy: yaml
 tags:
-    - apisvc
-    - cli
-    - axway
+    * apisvc
+    * cli
+    * axway
 spec:
     description: api service 1 description

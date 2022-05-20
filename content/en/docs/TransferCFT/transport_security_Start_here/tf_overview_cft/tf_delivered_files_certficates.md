@@ -6,21 +6,21 @@ weight: 220
 
 Content described in this topic:
 
-- [Scripts](#Scripts)
-- [Trusted File configuration file](#Trusted)
-- [Encoding/decoding samples](#Sample)
-- [Sample certificates](#Sample)
-- [Trusted File messages](#Messages)
-- [Transcoding conversion tables](#Transcod)
+* [Scripts](#Scripts)
+* [Trusted File configuration file](#Trusted)
+* [Encoding/decoding samples](#Sample)
+* [Sample certificates](#Sample)
+* [Trusted File messages](#Messages)
+* [Transcoding conversion tables](#Transcod)
 
 Conventions for Transfer CFT with Trusted File content includes:
 
-- $CFTDIRRUNTIME variable
-    -   Unix: &lt;CFTDIRRUNTIME>
-    -   Windows: %CFTDIRRUNTIME%
-- $CFTDIRINSTAL variable
-    -   Unix: &lt;CFTDIRINSTALL>
-    -   Windows: %CFTDIRINSTALL%
+* $CFTDIRRUNTIME variable
+    *   Unix: &lt;CFTDIRRUNTIME>
+    *   Windows: %CFTDIRRUNTIME%
+* $CFTDIRINSTAL variable
+    *   Unix: &lt;CFTDIRINSTALL>
+    *   Windows: %CFTDIRINSTALL%
 
 <span id="Scripts"></span>
 
@@ -112,17 +112,17 @@ The following certificates are located in: &lt;CFTDIRRUNTIME>/conf/tf/.
 
 The following messages are used by Trusted File, and are located in: `$CFTDIRINSTALL/distrib/tf/english/`****.**** Each file contains a set of error message associated with the type of encoding used.
 
-- xasn.msg
-- xp3.msg
-- xpppki.msg
-- pgp.msg
-- smime.msg
-- xppadm.msg
-- xppconf.msg
-- xppgen.msg
-- xpp.msg
-- xppsrv.msg
-- xppwrap.msg
+* xasn.msg
+* xp3.msg
+* xpppki.msg
+* pgp.msg
+* smime.msg
+* xppadm.msg
+* xppconf.msg
+* xppgen.msg
+* xpp.msg
+* xppsrv.msg
+* xppwrap.msg
 
 Refer to the **Trusted File 3.6 Reference Guide** for details, available on [support.axway.com](https://support.axway.com/).
 

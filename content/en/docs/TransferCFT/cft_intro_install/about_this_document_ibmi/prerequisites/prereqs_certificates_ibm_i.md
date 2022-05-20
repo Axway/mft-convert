@@ -17,8 +17,8 @@ CRTPF FILE(YOURLIB/PEM_CERT) RCDLEN(1191)
 
 You can use FTP, for example, to then upload `2k_l1_user1_key.pem` to `YOURLIB/PEM_CERT`.
 
-- You must transfer PEM certificates in ASCII mode
-- All other certificates can be transferred in binary mode
+* You must transfer PEM certificates in ASCII mode
+* All other certificates can be transferred in binary mode
 
 > **Note**
 >

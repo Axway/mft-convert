@@ -4,23 +4,23 @@ linkTitle: "Conversion tables"
 weight: 210
 ---This section describes how to use a conversion table in Transfer CFT {{< TransferCFT/PrimaryForOS400  >}} in the following sections:
 
-- Using a conversion table
-- Configuration sample
+* Using a conversion table
+* Configuration sample
 
 ## Using conversion tables
 
 During Transfer CFT operations conversion problems may occur when:
 
-- A file to be transferred contains various special characters:  
+* A file to be transferred contains various special characters:  
           &#124;, !, \\, `, #, ~, [, ], ^, {, }, /, $ and £
 
 <!-- -->
 
-- The transfer is performed between two heterogeneous systems with different character sets (CCSID) and the default conversion fails.
+* The transfer is performed between two heterogeneous systems with different character sets (CCSID) and the default conversion fails.
 
 <!-- -->
 
-- The transfer is performed between international sites.
+* The transfer is performed between international sites.
 
 ### Default values
 
@@ -30,11 +30,11 @@ The default ASCII character set used by Transfer CFT is not fully compatible wit
 
 Consequently, two files supplied in the production library are used to enter and create a conversion table in Transfer CFT:
 
-- TABEBAS: file to be used to convert EBCDIC into ASCII (generally for send operations)
+* TABEBAS: file to be used to convert EBCDIC into ASCII (generally for send operations)
 
 <!-- -->
 
-- TABASEB: file to be used to convert ASCII into EBCDIC (generally for receive operations)
+* TABASEB: file to be used to convert ASCII into EBCDIC (generally for receive operations)
 
 These two files can be modified by DFU (Option 18 in PDM - Member Management).
 

@@ -22,10 +22,10 @@ CFT Production library . . . . . CFTPROD Name
 SAVF name of previous version . SPXSAV Name
 ```
 
-- Where:
-    -   Parameter 1: Name of your program library
-    -   Parameter 2: Name of your production library
-    -   Parameter 3: Name of the SAVF where you saved your previous library when you updated Transfer CFT
+* Where:
+    *   Parameter 1: Name of your program library
+    *   Parameter 2: Name of your production library
+    *   Parameter 3: Name of the SAVF where you saved your previous library when you updated Transfer CFT
 
 1. Press Enter. The patch or service pack is removed, and you are returned to the previous version.
 

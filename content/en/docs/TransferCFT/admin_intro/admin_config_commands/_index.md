@@ -21,40 +21,40 @@ weight: 200
 {{< TransferCFT/axwayvariablesComponentShortName  >}} medium refers to any data support or local communication
 means used by {{< TransferCFT/axwayvariablesComponentShortName  >}}. A distinction is made between the media:
 
-- Accessed by the
+* Accessed by the
     {{< TransferCFT/axwayvariablesComponentShortName >}}
-- Accessed by the
+* Accessed by the
     {{< TransferCFT/axwayvariablesComponentShortName >}} utility
-- Used by the interactive
+* Used by the interactive
     functions
-- Used by the programming
+* Used by the programming
     interface
 
 ### Definitions
 
 The following terms are used in this section:
 
-- PHYSICAL FILE which
+* PHYSICAL FILE which
     describes the name and physical location of a file type medium
-- If the file name
+* If the file name
     begins with a reserved character, designated by ****char-file**** - see the {{< TransferCFT/axwayvariablesComponentShortName >}}*Operations Guide* corresponding to your OS,
     this is a logical name interpreted by {{< TransferCFT/axwayvariablesComponentShortName >}}
-- CFTIN and CFTOUT
+* CFTIN and CFTOUT
     for standard task input/output
-- TCP synchronous
+* TCP synchronous
     medium to designate a communication channel
 
 The {{< TransferCFT/axwayvariablesComponentShortName  >}} medium names can be set up for the:
 
-- Programming interface
+* Programming interface
     (catalog name, communication medium name with the {{< TransferCFT/axwayvariablesComponentShortName >}}):
     by the OPEN and COM services
-- {{< TransferCFT/axwayvariablesComponentShortName >}}:
+* {{< TransferCFT/axwayvariablesComponentShortName >}}:
     CFTPARM, CFTCOM, CFTCAT, CFTLOG, CFTACCNT objects (the name of the Parameter
     file cannot be changed)
-- {{< TransferCFT/axwayvariablesComponentShortName >}} utility:
+* {{< TransferCFT/axwayvariablesComponentShortName >}} utility:
     CONFIG command
-- Interactive functions:
+* Interactive functions:
     the customization function is used to set the names of the Parameter,
     Partner, Catalog and Log files, and the {{< TransferCFT/axwayvariablesComponentShortName >}} communication medium
 
@@ -93,15 +93,15 @@ media by type of object and parameter****
 Depending on the system, {{< TransferCFT/axwayvariablesComponentShortName  >}} supports the following communication
 media:
 
-- Direct organization
+* Direct organization
     file (relative)
-- TCP synchronous
+* TCP synchronous
     medium
 
 For a communication medium based on TCP/IP:
 
-- Host name
-- Configuration file
+* Host name
+* Configuration file
     name
 
 Refer to the {{< TransferCFT/axwayvariablesComponentShortName  >}}*Operations Guide* corresponding
@@ -136,15 +136,15 @@ to your OS.
 Depending on the system, the {{< TransferCFT/axwayvariablesComponentShortName  >}} utility supports the following
 communication media:
 
-- Direct organization
+* Direct organization
     file (relative)
-- TCP synchronous
+* TCP synchronous
     medium
 
 For a communication medium based on TCP/IP:
 
-- Host name
-- Configuration file
+* Host name
+* Configuration file
     name
 
 <span id="Programming_interface_media"></span>
@@ -153,9 +153,9 @@ For a communication medium based on TCP/IP:
 
 The programming interface provides the following services:
 
-- Access to the transfer
+* Access to the transfer
     catalog
-- Dispatch of commands
+* Dispatch of commands
     to CFT
 
 The tables below list the media names by service for the COBOL and C
@@ -186,15 +186,15 @@ CATALOG file and COMMUNICATION medium, are defined in the {{< TransferCFT/axwayv
 Depending on the system, the programming interface supports the following
 communication media:
 
-- Direct organization
+* Direct organization
     file
-- TCP synchronous
+* TCP synchronous
     medium
 
 And in the case of a communication medium based on TCP/IP
 
-- Host name
-- Configuration file
+* Host name
+* Configuration file
     name
 
 Refer to the {{< TransferCFT/axwayvariablesComponentShortName  >}}*Operations Guide* corresponding to your
@@ -225,15 +225,15 @@ at the time the product is installed.
 Depending on the system, the interactive functions support the following
 communication media:
 
-- Direct organization
+* Direct organization
     file
-- TCP synchronous
+* TCP synchronous
     medium
 
 For a communication medium based on TCP/IP:
 
-- Host name
-- Configuration file
+* Host name
+* Configuration file
     name
 
 Refer to the {{< TransferCFT/axwayvariablesComponentShortName  >}}*Operations Guide* corresponding to your

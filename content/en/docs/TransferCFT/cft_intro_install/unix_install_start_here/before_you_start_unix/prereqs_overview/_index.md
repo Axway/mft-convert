@@ -23,7 +23,7 @@ Before installing or upgrading, make sure you have obtained a license for {{< Tr
 
 For information on applying a license key post installation, or if you have a problem with your license key, refer to the appropriate Troubleshooting topic.
 
-- [UNIX: Applying a license key](../../troubleshoot_registration/t_license_key_unix)
+* [UNIX: Applying a license key](../../troubleshoot_registration/t_license_key_unix)
 
 ### Multi-node license keys
 
@@ -35,8 +35,8 @@ For information on applying a license key post installation, or if you have a pr
 
 You can use a single key for a multi-node installation, as either:
 
-- The hostname must not be defined for the key, or
-- The hostname defined for the key matches the hostname of one of the hosts that composes the multi-node instance
+* The hostname must not be defined for the key, or
+* The hostname defined for the key matches the hostname of one of the hosts that composes the multi-node instance
 
 Additionally, the key must have the cluster option.
 
@@ -46,12 +46,12 @@ Verify that you can access Axway Support at [support.axway.com](https://support.
 
 Log in to download or access:
 
-- The product installation package
-- Your product license key
-- Product documentation
-- Product updates, including patches and service packs
-- Product announcements
-- Axway Supported Platforms Guide
-- The case center, to open a new case or to track opened cases
+* The product installation package
+* Your product license key
+* Product documentation
+* Product updates, including patches and service packs
+* Product announcements
+* Axway Supported Platforms Guide
+* The case center, to open a new case or to track opened cases
 
 You can also access other resources, such as articles in the Knowledge Base, the Axway User Forum, and documentation for all Axway products.

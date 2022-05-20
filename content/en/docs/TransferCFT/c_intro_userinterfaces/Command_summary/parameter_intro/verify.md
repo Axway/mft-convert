@@ -29,9 +29,9 @@ If VERIFY = 0 no verification is performed.
 ****[VERIFY = { NONE &#124; REQUIRED
 &#124; OPTIONAL } ]****
 
-- NONE: Only the server must be authenticated. 
-- REQUIRED: The server and the client must be authenticated.
-- OPTIONAL: Requests mutual authentication, but even if the client does not send a valid certificate the handshake is successful.
+* NONE: Only the server must be authenticated. 
+* REQUIRED: The server and the client must be authenticated.
+* OPTIONAL: Requests mutual authentication, but even if the client does not send a valid certificate the handshake is successful.
 
 #### CFTSSL DIRECT=CLIENT
 
@@ -40,9 +40,9 @@ The DIRECT=CLIENT VERIFY options are available as of {{< TransferCFT/axwayvaria
 ****[VERIFY = { <u>NONE</u> &#124; REQUIRED
 &#124; OPTIONAL &#124; ENFORCED } ]****
 
-- ENFORCED: Ensures client authentication with the server. During the handshake, if the server does not ask for the client certificate, then the transfer fails.
-- OPTIONAL and REQUIRED: The same as NONE (for backward compatibility), but should not be used.
-- NONE: Only the server must be authenticated.
+* ENFORCED: Ensures client authentication with the server. During the handshake, if the server does not ask for the client certificate, then the transfer fails.
+* OPTIONAL and REQUIRED: The same as NONE (for backward compatibility), but should not be used.
+* NONE: Only the server must be authenticated.
 
 **** ****
 

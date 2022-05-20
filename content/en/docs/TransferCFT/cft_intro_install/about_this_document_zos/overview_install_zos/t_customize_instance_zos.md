@@ -8,8 +8,8 @@ weight: 180
 
 ## Customize parameters in the JCL
 
-- [Set standard JCL parameters A03PARM](#Modifying_A03PARM)
-- [Configure the SGINSTAL using UCONF or A12OPTSP](#Selectin)
+* [Set standard JCL parameters A03PARM](#Modifying_A03PARM)
+* [Configure the SGINSTAL using UCONF or A12OPTSP](#Selectin)
 
 Execute the JOB:
 
@@ -20,9 +20,9 @@ Execute the JOB:
 
 When you modify the A03PARM member, respect the following keyword conventions:
 
-- Enter keywords in lower case
-- Enter keyword values between quotes ' '
-- Refer to the Keyword description table for details, and adapt bold parameters to suit your environment
+* Enter keywords in lower case
+* Enter keyword values between quotes ' '
+* Refer to the Keyword description table for details, and adapt bold parameters to suit your environment
 
 <span id="Modifying_A03PARM"></span>
 
@@ -77,9 +77,9 @@ The password is temporarily stored in the '`pswfname`' file, with the syntax `--
 >
 >  
 
-- A `..USER.LOAD` load is created during the installation.
-- If the Transfer CFT LOAD is an APF, the USER load must also be an APF.
-- Set `cftuload '&&TARGET".LOAD"'` to manage only one LOAD.
+* A `..USER.LOAD` load is created during the installation.
+* If the Transfer CFT LOAD is an APF, the USER load must also be an APF.
+* Set `cftuload '&&TARGET".LOAD"'` to manage only one LOAD.
 
 
 | Keyword  | Default  | Description  |

@@ -14,8 +14,8 @@ You use the following JCL and statements to create a filter directory.
 
 You will need to enter the directory name twice for the following:
 
-- STP001 - To create the directory
-- STP002 - To initialize the variable copilot.general.persistencedir
+* STP001 - To create the directory
+* STP002 - To initialize the variable copilot.general.persistencedir
 
 **Example**
 

@@ -19,16 +19,16 @@ performance but uses more memory.
 
 Default values:
 
-- UNIX, Windows: 4096
-- z/OS: 36608
-- IBM i: 32740
-- OpenVMS: 8100
+* UNIX, Windows: 4096
+* z/OS: 36608
+* IBM i: 32740
+* OpenVMS: 8100
 
 Range of values:
 
-- UNIX, Windows, z/OS, IBM i: 512
+* UNIX, Windows, z/OS, IBM i: 512
     to 65535
-- OpenVMS: 512 to 8180
+* OpenVMS: 512 to 8180
 
 If the BUFSIZE is lower than the RRUSIZE or SRUSIZE parameter values, Transfer CFT uses the RRUSIZE or SRUSIZE value rendering BUFSIZE redundant.
 

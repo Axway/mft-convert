@@ -14,8 +14,8 @@ weight: 170
 
 You can use a single key for a multi-node installation, as either:
 
-- The hostname must not be defined for the key, or
-- The hostname defined for the key matches the hostname of one of the hosts that composes the multi-node instance
+* The hostname must not be defined for the key, or
+* The hostname defined for the key matches the hostname of one of the hosts that composes the multi-node instance
 
 Additionally, the key must have the cluster option.
 
@@ -52,8 +52,8 @@ This section describes the differences when installing using a silent file for a
 
 If the silent file architecture is either first_host or additional_host, there are two important parameters:
 
-- multinode_hostname
-- multinode_host_address
+* multinode_hostname
+* multinode_host_address
 
 By default, these 2 attributes are automatically completed if they are not specified in the silent file.
 

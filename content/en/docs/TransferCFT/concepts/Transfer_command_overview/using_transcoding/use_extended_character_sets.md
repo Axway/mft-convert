@@ -24,9 +24,9 @@ In some cases you may want to disregard characters either in a file to be sent, 
 
 Depending on your operating system, note the following specific //IGNORE behavior:
 
-- Sun: converts the character to a question mark '?'
-- AIX and HPUX: converts the character to the substitute character (the control character 1A hex)
-- All other systems: no character substitution occurs
+* Sun: converts the character to a question mark '?'
+* AIX and HPUX: converts the character to the substitute character (the control character 1A hex)
+* All other systems: no character substitution occurs
 
 **Example 1**
 
@@ -71,13 +71,13 @@ The FCHARSET/NCHARSET values for a transfer are defined as follows:
 
 The following rules apply:
 
-- FCHARSET and NCHARSET
+* FCHARSET and NCHARSET
     can be set by independent sources, be that SEND, CFTSEND, CFTPART, or
     CFTPROT.
-- If one or both
+* If one or both
     of the FCHARSET and NCHARSET fields are empty, or set to NONE, the extended
     transcoding is disabled and the traditional transcoding applies.
-- If you use FCHARSET/NCHARSET, the FCODE/NCODE parameters are ignored.
+* If you use FCHARSET/NCHARSET, the FCODE/NCODE parameters are ignored.
 
 ### Considerations when choosing the file type
 
@@ -85,14 +85,14 @@ It is generally recommended that you use text files in the variable-length forma
 
 When using multibyte encoding for fixed or limited record size files, please pay attention to the following important considerations:
 
-- Shrinking a record
+* Shrinking a record
     can cause a fatal error if it occurs in the middle of a multibyte character.
-- Padding a record
+* Padding a record
     can cause a fatal error if the size to be padded is not a multiple of
     the pad character. The pad character is a blank for a text file, and a
     zero for binary files.
-- Errors when using binary files are more likely (with the exception of single-byte encoding).
-- When using FTYPE=J (stream text), an interrupted transfer restarts at the beginning of the transfer, not at the last synchronization point.
+* Errors when using binary files are more likely (with the exception of single-byte encoding).
+* When using FTYPE=J (stream text), an interrupted transfer restarts at the beginning of the transfer, not at the last synchronization point.
 
 <span id="CHARSET"></span>
 

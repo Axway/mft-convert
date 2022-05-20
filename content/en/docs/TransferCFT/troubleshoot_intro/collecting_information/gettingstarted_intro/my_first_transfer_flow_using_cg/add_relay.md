@@ -39,11 +39,11 @@ You will need to add a file locally for the transfer exchange and execute the SE
 
 1. Put a test file, for example ****SALES_report****, in the Store_66 {{< TransferCFT/axwayvariablesComponentShortName >}}` runtime/pub` folder.
 1. From the source {{< TransferCFT/axwayvariablesComponentShortName >}}, run the SEND command. Remember:
-    -   Replace `<instance_target>` with your Transfer CFT for the `MainOffice `target.
+    *   Replace `<instance_target>` with your Transfer CFT for the `MainOffice `target.
 
     <!-- -->
 
-    -   The flow ****Identifier**** field is equivalent to the {{< TransferCFT/axwayvariablesComponentShortName >}} IDF parameter.
+    *   The flow ****Identifier**** field is equivalent to the {{< TransferCFT/axwayvariablesComponentShortName >}} IDF parameter.
 
 ```
 CFTUTIL SEND part=<instance_target>, idf=flow22, fname=pub/SALES_report

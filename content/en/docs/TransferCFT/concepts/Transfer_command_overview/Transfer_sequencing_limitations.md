@@ -21,12 +21,12 @@ for incoming and outgoing calls.
 In requester mode, the following
 cases must be considered:
 
-- OMINTIME = OMAXTIME
+* OMINTIME = OMAXTIME
 
 This parameter setting is a device for setting the switching by the
 intermediate partner (IPART).
 
-- OMINTIME > OMAXTIME
+* OMINTIME > OMAXTIME
 
 The parameter setting defines a time slot spread over 2 days. Outgoing
 calls are authorized each day between OMINTIME and OMAXTIME the next day.
@@ -37,7 +37,7 @@ OMINTIME = 2200 and OMAXTIME = 0500.
 Outgoing calls authorized to the specified partner at night, between 10
 pm and 5 am.
 
-- OMINTIME &lt; OMAXTIME
+* OMINTIME &lt; OMAXTIME
 
 Outgoing calls are authorized each day between OMINTIME and OMAXTIME.
 
@@ -46,11 +46,11 @@ Outgoing calls are authorized each day between OMINTIME and OMAXTIME.
 In server mode, the following cases
 have to be considered:
 
-- IMINTIME > IMAXTIME
+* IMINTIME > IMAXTIME
 
 This parameter setting defines a time slot spread over two days. Incoming
 calls are authorized each day between IMINTIME and IMAXTIME the next day.
 
-- IMINTIME &lt; IMAXTIME
+* IMINTIME &lt; IMAXTIME
 
 Incoming calls are authorized each day between IMINTIME and IMAXTIME

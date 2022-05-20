@@ -4,10 +4,10 @@ linkTitle: "Transfer procedure"
 weight: 210
 ---This topic describes the following PeSIT transfer procedure processes and concepts:
 
-- [Establishing a connection](#Establishing_a_connection)
-- [Transfer concatenation](#Transfer_Concatenation)
-- [Transfer identifiers](#Transfer_Identifier)
-- [Transfer retries](#Transfer_Retries)
+* [Establishing a connection](#Establishing_a_connection)
+* [Transfer concatenation](#Transfer_Concatenation)
+* [Transfer identifiers](#Transfer_Identifier)
+* [Transfer retries](#Transfer_Retries)
 
 For a detailed example of the transfer settings for a server and requester site, see the Example of transfer parameters (PeSIT) topic.
 
@@ -17,9 +17,9 @@ For a detailed example of the transfer settings for a server and requester site,
 
 Following a transfer request, the requesting Transfer CFT:
 
-- Opens a network
+* Opens a network
     session
-- Sends a protocol
+* Sends a protocol
     connection frame
 
 At the server end, Transfer
@@ -155,16 +155,16 @@ For the two PeSIT partners in communication, the following common protocol
 information is used to uniquely identify a transfer and is consequently
 saved in the catalog with the associated context:
 
-- File type (PI 11)
-- File identifier
+* File type (PI 11)
+* File identifier
     (PI 12)
-- PeSIT transfer
+* PeSIT transfer
     identifier (PI 13)
 
 The following four modes should be distinguished when processing a retry
 request:
 
-- In requester/receiver
+* In requester/receiver
     mode, the retry request is of local origin.  
     Using the PART and IDT parameters of the START command, Transfer CFT
     looks for the transfer context in the catalog. It then actualizes PI 11,
@@ -172,7 +172,7 @@ request:
 
 <!-- -->
 
-- In server/sender
+* In server/sender
     mode, on receipt of an FPDU SELECT indicating a retry request, the
     associated PI 11, 12 and 13 fields serve as search criteria in the catalog.  
     If the context of the transfer to be restarted is not found, Transfer
@@ -182,7 +182,7 @@ request:
 
 <!-- -->
 
-- In requester/sender
+* In requester/sender
     mode, the retry request is of local origin  
     Using the PART and IDT parameters of the START command, Transfer CFT
     looks for the transfer context in the catalog. It then actualizes PI 11,
@@ -190,7 +190,7 @@ request:
 
 <!-- -->
 
-- In server/receiver
+* In server/receiver
     mode, on receipt of an FPDU CREATE indicating a retry request,
     the associated PI 11, 12 and 13 are searched for in the catalog.  
     If no corresponding transfer context is found, Transfer CFT sends a

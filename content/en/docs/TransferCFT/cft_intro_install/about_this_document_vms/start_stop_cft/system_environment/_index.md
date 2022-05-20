@@ -18,15 +18,15 @@ And
 
 Where:
 
-- &lt;node> is the node on which {{< TransferCFT/axwayvariablesComponentShortName >}} is executed
+* &lt;node> is the node on which {{< TransferCFT/axwayvariablesComponentShortName >}} is executed
 
 <!-- -->
 
-- CFT_process is the {{< TransferCFT/axwayvariablesComponentShortName >}} process name
+* CFT_process is the {{< TransferCFT/axwayvariablesComponentShortName >}} process name
 
 <!-- -->
 
-- XX is the group UIC number displayed in hexadecimal
+* XX is the group UIC number displayed in hexadecimal
 
 These files can only be accessed in read mode after you have shut down {{< TransferCFT/axwayvariablesComponentShortName  >}}. {{< TransferCFT/axwayvariablesComponentShortName  >}} creates a new version each time it is started. These files are very important for troubleshooting in the event of a problem. Keep them following an incident, so that you can provide this information to the Technical Support Team.
 
@@ -36,21 +36,21 @@ During normal operations, these files may accumulate each time {{< TransferCFT/a
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} processes inter-communicate using the shared memory and two global sections, which can be seen by all users in the same group. Each process using {{< TransferCFT/axwayvariablesComponentShortName  >}}-specific inter-process communication functions is automatically associated with these two global sections which are:
 
-- CFT_XX
+* CFT_XX
 
 <!-- -->
 
-- CFT3_XX
+* CFT3_XX
 
 Where XX represents the USER group number in hexadecimal.
 
 In the system, the corresponding parameters are as follows:
 
-- GBLPGFIL represents the number of global pages that can be created on the system
+* GBLPGFIL represents the number of global pages that can be created on the system
 
 <!-- -->
 
-- GBLSECTIONS represents the number of sections that can be created on the system
+* GBLSECTIONS represents the number of sections that can be created on the system
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} creates approximately 2,000 global pages and two global sections.
 

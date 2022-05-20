@@ -14,9 +14,9 @@ The principal reasons for this are:
 
 ****Consequently****
 
-- Due to reasons 1 and 2, the number of sessions is at least equal to the number of simultaneous transfers.
-- Due to reason 3, there can be intervals of time where sessions with no active transfer exists. Let's call such sessions "idle" sessions. This sometimes leads to a number of sessions greater than the number of transfers.
-- Due to reason 4, it is advisable to use sessions for more that a single transfer when possible. To enable this sort of reuse, sessions are not terminated immediately after a transfer ends but instead after a configurable delay. These idle sessions can then be reused for subsequent transfers. This can lead to a number of established sessions that is significantly larger than the number of active transfers when the number of idle sessions is high.
+* Due to reasons 1 and 2, the number of sessions is at least equal to the number of simultaneous transfers.
+* Due to reason 3, there can be intervals of time where sessions with no active transfer exists. Let's call such sessions "idle" sessions. This sometimes leads to a number of sessions greater than the number of transfers.
+* Due to reason 4, it is advisable to use sessions for more that a single transfer when possible. To enable this sort of reuse, sessions are not terminated immediately after a transfer ends but instead after a configurable delay. These idle sessions can then be reused for subsequent transfers. This can lead to a number of established sessions that is significantly larger than the number of active transfers when the number of idle sessions is high.
 
 When the network resource depletion prevention (NRDP) feature is enabled ([below](#How)), Transfer CFT detects the situations where existing idle sessions may prevent new transfers that require new sessions from being started. In such situations, as a precaution Transfer CFT gently closes these idle sessions in order to allow the new transfers to be started quickly.
 
@@ -44,15 +44,15 @@ And the corresponding catalog entry  would include the DIAGI=416 and DIAGP=MAXC
 
 The NRDP feature only applies to the TCP/IP network, and requires the configuration of a CFTNET object for a given class that allows OUTGOING, or both OUTGOING and INCOMING, connections where MAXCNX &gt;= MAXTRANS.
 
-- A MAXCNX value significantly larger than MAXTRANS can be advantageous, especially if the number of INCOMING connections is high.
-- A MAXCNX value 10% to 20% larger than MAXTRANS should be adequate in most situations.
+* A MAXCNX value significantly larger than MAXTRANS can be advantageous, especially if the number of INCOMING connections is high.
+* A MAXCNX value 10% to 20% larger than MAXTRANS should be adequate in most situations.
 
 ### Log messages
 
 The [related messages](../../../troubleshoot_intro/messages_and_error_codes_start_here/cftn_messages) only display in the log when the `cft.server.nrdp_enable=yes`.
 
-- `CFTN05I Network resource depletion prevention enabled for class %d`
-- `CFTN06I No network class suitable for resource depletion prevention activation`
+* `CFTN05I Network resource depletion prevention enabled for class %d`
+* `CFTN06I No network class suitable for resource depletion prevention activation`
 
 ### Calculating the threshold
 
@@ -64,9 +64,9 @@ Given the value of MAXTRANS and the MAXCNX for a selected CFTNET object, the thr
 
 This example uses the following values and shows the different outcomes with and without NRDP enabled. In this example, we have 10 new transfers to perform that require new sessions to be opened (for example, with partners that do not already have an established session).
 
-- `MAXCNX `= 450 and `MAXTRANS `= 400, therefore `THRESHOLD`=425
-- `NBCNX `is the current number of open sessions = 450
-- `NBTRANS `is the number of active transfers = 300
+* `MAXCNX `= 450 and `MAXTRANS `= 400, therefore `THRESHOLD`=425
+* `NBCNX `is the current number of open sessions = 450
+* `NBTRANS `is the number of active transfers = 300
 
 ****NRDP not enabled****
 

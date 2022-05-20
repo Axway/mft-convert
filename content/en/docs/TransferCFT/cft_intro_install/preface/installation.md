@@ -59,9 +59,9 @@ For a new installation, this directory should be empty or nonexistent. However, 
 
 You can use the following additional parameters:
 
-- `--cryptokey_password <password>`: the `cftcrypt `requires a password to generate an encryption key. You can either provide one using this parameter, or interactively enter it during the installation. Either way, the password is checked against the `cftcrypt `password acceptance criteria, and the installation cannot complete unless a valid password is provided.
-- `<guardian_installation_directory_prefix>` installs the Guardian specific files in its file system space. This parameter is *optional*. It is required only if you want to integrate Transfer CFT with Guardian procedures.
-- `--post_install_script <fullpathtopinstscript>` runs a shell script during the installation procedure after the product has been initialized.
+* `--cryptokey_password <password>`: the `cftcrypt `requires a password to generate an encryption key. You can either provide one using this parameter, or interactively enter it during the installation. Either way, the password is checked against the `cftcrypt `password acceptance criteria, and the installation cannot complete unless a valid password is provided.
+* `<guardian_installation_directory_prefix>` installs the Guardian specific files in its file system space. This parameter is *optional*. It is required only if you want to integrate Transfer CFT with Guardian procedures.
+* `--post_install_script <fullpathtopinstscript>` runs a shell script during the installation procedure after the product has been initialized.
 
 Enter:
 
@@ -93,13 +93,13 @@ The following command does the same as above, but additionally sets a password t
 
 The Transfer CFT installation procedure automatically performs the following:
 
-- Extracts the Transfer CFT package.
-- Creates a Transfer CFT runtime.
-- Initializes the sample configuration.
-- Creates the Transfer CFT database.
-- Creates a default user for Transfer CFT Copilot:
-    -   Login: **guest**
-    -   Password: **guest**
+* Extracts the Transfer CFT package.
+* Creates a Transfer CFT runtime.
+* Initializes the sample configuration.
+* Creates the Transfer CFT database.
+* Creates a default user for Transfer CFT Copilot:
+    *   Login: **guest**
+    *   Password: **guest**
 
 <span id="Guardian"></span>
 

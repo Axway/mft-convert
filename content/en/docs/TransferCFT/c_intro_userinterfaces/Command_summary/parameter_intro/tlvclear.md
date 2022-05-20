@@ -17,15 +17,15 @@ issue alerts when a critical CAT or COM threshold is reached.
 This
 alert generates 2 actions:
 
-- Sends a message
+* Sends a message
     to the LOG
-- Executes
+* Executes
     a batch to react to the alert, the [TLVWEXEC](../tlvcexec)
     parameter
 
 Default values:
 
-- CFTCAT: The default is equal to [TLVWARN](../tlvwarn) - 10.
-- CFTCOM FILE: The default is equal to [TLVWARN](../tlvwarn) - 20.
+* CFTCAT: The default is equal to [TLVWARN](../tlvwarn) - 10.
+* CFTCOM FILE: The default is equal to [TLVWARN](../tlvwarn) - 20.
 
 [Return to Command index](../../)

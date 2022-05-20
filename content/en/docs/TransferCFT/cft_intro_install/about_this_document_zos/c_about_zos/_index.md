@@ -12,8 +12,8 @@ The {{< TransferCFT/axwayvariablesComponentShortName  >}} Installation Guide pro
 
 The minimum z/OS version depends on the JES:
 
-- If you use the JES2 component, then you require z/OS 2.1 or higher
-- If you use the JES3 component, then you require z/OS 2.2 or higher
+* If you use the JES2 component, then you require z/OS 2.1 or higher
+* If you use the JES3 component, then you require z/OS 2.2 or higher
 
 <span id="Installation support format"></span>
 
@@ -33,8 +33,8 @@ There are three Transfer CFT packages available on the Axway support site - 2 pa
 
 Again, there are 2 product packaging formats in the **`Components\Transfer_CFT_V<version>_mvs\install`** directory:
 
-- `\adrdssu  `
-- `\xmit `
+* `\adrdssu  `
+* `\xmit `
 
 **<span id="kanchor13"></span>Installation directory contents**
 
@@ -52,25 +52,25 @@ Again, there are 2 product packaging formats in the **`Components\Transfer_CFT_V
 
 The Transfer CFT z/OS components include:
 
-- CFTUTIL: Batch program for processing the commands and parameters
-- CFTMAIN: File transfer server itself, which is comprised of:
-    -   CFTTPRO: File transfer protocols (PeSIT)
-    -   CFTTFIL: File manager
-    -   CFTTCP: TCP/IP network manager
-    -   CFTLOG: Log file manager
-    -   CFTTRK: Manages message tracking towards Sentinel
-    -   CFTTCOM: Command file manager
-    -   CFTTCOMS: Manages commands in synchronous mode
-    -   CFTOPER: Operator console interface
-    -   CFTTSSL: Partner and data ciphering authentication interface
-    -   CFTPRX: Proxy task
-    -   CFTAPI: Interface for user batch programming
-    -   CFTSFTP: Main SFTP task, with POSIX runtime option set to ON
-    -   Threads (BPXPTATT) are started one by one and are permanent (unlike TFIL tasks)
-- Other major components:
-    -   CFTPKI: Management utility for internal datafile security
-    -   CFTCOPL: Transfer CFT UI server
-    -   COPSTOP: Stops the Transfer CFT UI server
+* CFTUTIL: Batch program for processing the commands and parameters
+* CFTMAIN: File transfer server itself, which is comprised of:
+    *   CFTTPRO: File transfer protocols (PeSIT)
+    *   CFTTFIL: File manager
+    *   CFTTCP: TCP/IP network manager
+    *   CFTLOG: Log file manager
+    *   CFTTRK: Manages message tracking towards Sentinel
+    *   CFTTCOM: Command file manager
+    *   CFTTCOMS: Manages commands in synchronous mode
+    *   CFTOPER: Operator console interface
+    *   CFTTSSL: Partner and data ciphering authentication interface
+    *   CFTPRX: Proxy task
+    *   CFTAPI: Interface for user batch programming
+    *   CFTSFTP: Main SFTP task, with POSIX runtime option set to ON
+    *   Threads (BPXPTATT) are started one by one and are permanent (unlike TFIL tasks)
+* Other major components:
+    *   CFTPKI: Management utility for internal datafile security
+    *   CFTCOPL: Transfer CFT UI server
+    *   COPSTOP: Stops the Transfer CFT UI server
 
 <span id="Special"></span>
 
@@ -88,5 +88,5 @@ The Transfer CFT z/OS components include:
 
 ****Related topics****
 
-- [Prerequisites](r_prerequistes_zos)
-- [Installing Transfer CFT z/OS]()
+* [Prerequisites](r_prerequistes_zos)
+* [Installing Transfer CFT z/OS]()

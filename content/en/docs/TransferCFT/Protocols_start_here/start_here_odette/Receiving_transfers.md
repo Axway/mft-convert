@@ -11,13 +11,13 @@ that enable you to receive a request. The [previous
 topic](../submitting_a_transfer_request) describes the procedure that enables you to submit a transfer
 request. This topic is broken down into the following sections:
 
-- [About
+* [About
     CFTRECV](#About_CFTRECV)
-- [Receiving
+* [Receiving
     a file in text format](#Receiving_a_file_in_text_format)
-- [Defining
+* [Defining
     the receiving file format](#Defining_the_receiving_file_format)
-- [RECV
+* [RECV
     command](#RECV_command)
 
 <span id="About_CFTRECV"></span>
@@ -33,8 +33,8 @@ parameter are applied taking a network code equal to ASCII.
 
 Translation is carried out during transmission, if you set:
 
-- FCODE = EBCDIC
-- FCODE = ASCII
+* FCODE = EBCDIC
+* FCODE = ASCII
     and an external ASCII/ASCII translation table is defined
 
 There is no translation if FCODE = BINARY.
@@ -54,9 +54,9 @@ parameter to UNIX.
 The receiving Transfer CFT acts as if a UNIX partner is sending
 the file and sets the:
 
-- NCODE to ASCII
-- NRECFM to V
-- NLRECL to 2048
+* NCODE to ASCII
+* NRECFM to V
+* NLRECL to 2048
 
 Each record is delimited by the characters &lt;CR> and &lt;LF>.
 The size of the records is 2048 bytes, &lt;CR> and &lt;LF> not included.
@@ -96,13 +96,13 @@ The Transfer CFT monitor responds as if the file type set in the sending
 command was set to space, where the NTYPE is assumed to be blank. It sets
 the:
 
-- NCODE to ASCII
-- NRECFM to the value
+* NCODE to ASCII
+* NRECFM to the value
     of the format received (U, F or V)
-- NLRECL to the:
-- value received
+* NLRECL to the:
+* value received
     if NRECMF = F or V
-- negotiated
+* negotiated
     value of the network message size &lt;Rusize> if NRECFM = U
 
 You must specify the FCODE and FTYPE.
@@ -114,11 +114,11 @@ If the FRECFM and FLRECL parameters are not defined or imposed by type
 
 For a file in undefined format, if the FLRECL parameter is set to:
 
-- a value greater
+* a value greater
     than the negotiated value of the network message size &lt;Rusize>,
     the maximum effective length of the records managed by the monitor equals
     the value &lt;Rusize>
-- the &lt;Rusize>
+* the &lt;Rusize>
     or less, the maximum effective length of the records will be the one specified
 
 In all cases, the integrity of the undefined format file is kept: no
@@ -155,10 +155,10 @@ is executed.
 Once all the pending files have been received, Transfer CFT performs
 the following tasks:
 
-- The error procedure
+* The error procedure
     defined in the [EXECRE](../../../c_intro_userinterfaces/command_summary/parameter_intro/execre)
     parameter is executed
-- A new catalog entry
+* A new catalog entry
     is created, indicating that there are no more files to be received. This
     entry is set to the H state with a diagnostic DIAGP=NO_FILE.
 
@@ -169,11 +169,11 @@ NIDF.
 
 Note:
 
-- the FILE parameter
+* the FILE parameter
     is ignored and systematically set to the value ALL
-- the implicit send
+* the implicit send
     is not relevant
-- if there is an
+* if there is an
     error in a transfer before the data transfer phase (H state and diagi
     other than 0), the transfer stops  
     For the following connection, Transfer CFT activates the first waiting
@@ -182,7 +182,7 @@ Note:
 
 <!-- -->
 
-- if there is an
+* if there is an
     error during the data transfer phase and retrying is forbidden, the transfer
     (requester mode) is restarted from the beginning of the file
 

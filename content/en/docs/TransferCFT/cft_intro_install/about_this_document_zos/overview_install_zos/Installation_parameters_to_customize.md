@@ -38,4 +38,4 @@ Once the JOB is complete, update the A03PARM file in the target environment and 
 
 ****Related topics****
 
-- [Installation overview]()
+* [Installation overview]()

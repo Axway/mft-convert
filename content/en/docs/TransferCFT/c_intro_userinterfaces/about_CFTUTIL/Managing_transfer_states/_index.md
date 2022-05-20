@@ -52,8 +52,8 @@ To create a new transfer request filter or modify an existing filter:
 
 To display transfer request details:
 
-- Click any line to expand details that include the severity, timing, code, and message.
-- Click the IDTU to display the request details.
+* Click any line to expand details that include the severity, timing, code, and message.
+* Click the IDTU to display the request details.
 
 For details on the transfer states in Transfer CFT,
 refer to Transfer states
@@ -63,9 +63,9 @@ topic.
 
 Optionally you can select a **Layout** in the drop-down menu to use a customized column or filter display. To create a new layout:
 
-- Click the settings icon ![](/Images/TransferCFT/settings_icon.png)to open the column options. You can use the filter field to help you find fields more quickly.
-- Add or remove the filters you want to display in your page layout.
-- Click **Save as** and name the layout.
+* Click the settings icon ![](/Images/TransferCFT/settings_icon.png)to open the column options. You can use the filter field to help you find fields more quickly.
+* Add or remove the filters you want to display in your page layout.
+* Click **Save as** and name the layout.
 
 > **Note**
 >

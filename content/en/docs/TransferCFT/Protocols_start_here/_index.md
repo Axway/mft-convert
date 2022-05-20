@@ -14,9 +14,9 @@ Transfer CFT uses a specific network access
 method, and one of the following file transfer protocols
 to communicate with Partner objects:
 
-- [PeSIT](about_pesit)
-- [ODETTE](start_here_odette)
-- [SFTP](sftp_intro)
+* [PeSIT](about_pesit)
+* [ODETTE](start_here_odette)
+* [SFTP](sftp_intro)
 
 This
 section introduces Transfer CFT transfer processor concepts. Before beginning you should be familiar with basic Transfer

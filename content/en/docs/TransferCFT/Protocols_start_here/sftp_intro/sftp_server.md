@@ -13,18 +13,18 @@ To set up Transfer CFT as the server:
 1. Add the key in the PKI database.
 1. Define the SSH parameter connection for SFTP.
 1. Define a partner to use in a flow.
-    -   Add the authentication to use.
-    -   Define a default flow model identifier.
+    *   Add the authentication to use.
+    *   Define a default flow model identifier.
 1. Optionally, set the transcoding parameters.
 
 ## Set the protocol (CFTPROT)
 
 You should define the following parameters to use the SFTP protocol with a partner:
 
-- TYPE: SFTP
-- SAP: TCP/IP port for the SFTP server
-- SSH: Link to a CFTSSH object (DIRECT=SERVER)
-- NET: Link to a CFTNET definition
+* TYPE: SFTP
+* SAP: TCP/IP port for the SFTP server
+* SSH: Link to a CFTSSH object (DIRECT=SERVER)
+* NET: Link to a CFTNET definition
 
 ****Example****
 
@@ -43,8 +43,8 @@ CFTPROT id = SFTP,
 
 When Transfer CFT is acting in server mode, your require the following:
 
-- If the client performs a `get `command, the Transfer CFT must use implicit mode (CFTSEND IMPL=YES) on the server side. If you do not have a model having IMPL=YES, the client cannot perform a download (get) and a `permission denied` error occurs.
-- If a third-party SFTP client performs a `put `command, the Transfer CFT server must use open mode (FNAME= &NFNAME). If you do not have a CFTRECV model, the client cannot perform an upload (put) and a `permission denied` error occurs. If you want to additionally provide the IDF for the {{< TransferCFT/axwayvariablesComponentLongName >}} server, you must use the following syntax `/idf/file` for the remote file where the IDF is `flow01.`
+* If the client performs a `get `command, the Transfer CFT must use implicit mode (CFTSEND IMPL=YES) on the server side. If you do not have a model having IMPL=YES, the client cannot perform a download (get) and a `permission denied` error occurs.
+* If a third-party SFTP client performs a `put `command, the Transfer CFT server must use open mode (FNAME= &NFNAME). If you do not have a CFTRECV model, the client cannot perform an upload (put) and a `permission denied` error occurs. If you want to additionally provide the IDF for the {{< TransferCFT/axwayvariablesComponentLongName >}} server, you must use the following syntax `/idf/file` for the remote file where the IDF is `flow01.`
 
 The root directory for the SFTP connection is the WORKINGDIR defined in the CFTSEND (IMPL=YES) or CFTRECV corresponding to the IDF. If both CFTSEND and CFTRECV are defined for that IDF but with different WORKINGDIR, there is a DIAGI 435 error for the Transfer CFT client, and an SFTP failure with an appropriate error message for other SFTP clients.
 
@@ -52,10 +52,10 @@ If you do not define the WORKINGDIR, {{< TransferCFT/axwayvariablesComponentLong
 
 You can use the following symbolic variables when defining the WORKINGDIR:
 
-- &USERID: user login
-- &NRPART: same as &USERID
-- &PART: partner
-- &HOME: home directory on UNIX, or the user directory on Windows (`C:\Users\<user>`)
+* &USERID: user login
+* &NRPART: same as &USERID
+* &PART: partner
+* &HOME: home directory on UNIX, or the user directory on Windows (`C:\Users\<user>`)
 
 ****Example****
 
@@ -125,10 +125,10 @@ PKIKEYGEN id=MY_KEY, keylen=2048
 
 This section you use CFTSSH to define a SSH profile in Transfer CFT. The CFTSSH definition contains the SSH parameter connection for SFTP in server mode.
 
-- ID: Identifier of the object
-- DIRECT=SERVER
-- SRVPRIVKEY: Key Id containing the server private key (RSA) to use with key authentication.
-    -   If SRVPRIVKEY(CFTSSH direct=server) is not set, {{< TransferCFT/axwayvariablesComponentLongName >}} cannot start, and the message displays `CFTN05E SFTP bind() failed: ECDSA, DSA, or RSA host key file must be set`.
+* ID: Identifier of the object
+* DIRECT=SERVER
+* SRVPRIVKEY: Key Id containing the server private key (RSA) to use with key authentication.
+    *   If SRVPRIVKEY(CFTSSH direct=server) is not set, {{< TransferCFT/axwayvariablesComponentLongName >}} cannot start, and the message displays `CFTN05E SFTP bind() failed: ECDSA, DSA, or RSA host key file must be set`.
 
 ****Example****
 
@@ -145,8 +145,8 @@ CFTSSH id = SSH_DEFAULT,
 
 A CFTPART object represents an application, with one SFTP user per application (CFTPART = one application). To define a CFTPART object in server mode using SFTP:
 
-- NRPART: Corresponds to the client login. You cannot have 2 partners with the same NRPART value.
-- PROT: Refers to the SFTP protocol
+* NRPART: Corresponds to the client login. You cannot have 2 partners with the same NRPART value.
+* PROT: Refers to the SFTP protocol
 
 > **Note**
 >
@@ -163,11 +163,11 @@ Select the appropriate type of authentication to use from the options listed in 
 
 There are two ways for you to configure how the server will check the client password:
 
-- Clear text: When NRPASSW=&lt;the user password>, the client password is in clear text.
+* Clear text: When NRPASSW=&lt;the user password>, the client password is in clear text.
 
 <!-- -->
 
-- Uconf definition: When NRPASSW=_AUTH_, authentication is specified in `uconf:cft.server.authentication_method `is used.
+* Uconf definition: When NRPASSW=_AUTH_, authentication is specified in `uconf:cft.server.authentication_method `is used.
 
 > **Note**
 >
@@ -192,12 +192,12 @@ CFTTCP id = USER1,
 
 To configure how the server check the client key (CFTSSH), define:
 
-- Identifier: CLIPUBKEY can refer to an identifier in the local PKI database.
+* Identifier: CLIPUBKEY can refer to an identifier in the local PKI database.
 
 Which CLIPUBKEY is used for the SSH profile is determined as follows:
 
-- To use a specific SSH profile, you must define it in CFTPART 
-- If you do not define a specific SSH profile, then the server uses the one defined by default in CFTPROT 
+* To use a specific SSH profile, you must define it in CFTPART 
+* If you do not define a specific SSH profile, then the server uses the one defined by default in CFTPROT 
 
 This example illustrates a specific SSH profile (SSH_USER2 below).
 
@@ -233,13 +233,13 @@ PKIUTIL pkikey id='USER2', ikname='user2.pub', ikform='ssh'
 
 When using **password and key** two-factor (dual) authentication:
 
-- NRPASSW: Use one of the password authentication methods to configure how the server will check the client password, as described [here.](#Password)
-- CLIPUBKEY: To configure how the server will check the client key, as described [here.](#Key)  
+* NRPASSW: Use one of the password authentication methods to configure how the server will check the client password, as described [here.](#Password)
+* CLIPUBKEY: To configure how the server will check the client key, as described [here.](#Key)  
     ![](/Images/TransferCFT/SFTP_DUALAUTH.png)
 
 <!-- -->
 
-- ```
+* ```
     CFTPART id = USER3,
 
     > ssh = USER3,
@@ -276,14 +276,14 @@ The following diagrams illustrate the previous configuration concepts.
 
 The character conversion in text mode can be done at the requester or server level, either in a send or receive command. You can configure the conversion using FCHARSET/NCHARSET or FCODE/NCODE, where transcoding is performed if FCODE differs from NCODE, or if FCHARSET differs from NCHARSET. The FCHARSET/NCHARSET parameters, however, take precedence over FCODE/NCODE if both are defined. Additionally:
 
-- The charset and transferred file code are exchanged between the requester and server for two Transfer CFTs.
-- A transfer restart is forbidden if the FCHARSET/NCHARSET conversion is done at the server level.
-- The NCODE parameter is available in CFTRECV as with CFTSEND.
+* The charset and transferred file code are exchanged between the requester and server for two Transfer CFTs.
+* A transfer restart is forbidden if the FCHARSET/NCHARSET conversion is done at the server level.
+* The NCODE parameter is available in CFTRECV as with CFTSEND.
 
 ****SFTP versions****
 
-- SFTP 3 and lower: There is no flag to open a file in text mode, so the text mode is selected through the IDF's FTYPE parameter. The newline conversion can be specified on the client side.
-- SFTP 4 and higher: The client indicates if the transfer is done in binary or text mode. This overrides the IDF's FTYPE parameter. The newline conversion is done on the client side to accommodate the server requirement.
+* SFTP 3 and lower: There is no flag to open a file in text mode, so the text mode is selected through the IDF's FTYPE parameter. The newline conversion can be specified on the client side.
+* SFTP 4 and higher: The client indicates if the transfer is done in binary or text mode. This overrides the IDF's FTYPE parameter. The newline conversion is done on the client side to accommodate the server requirement.
 
 If the remote path is absolute (root directory), {{< TransferCFT/suitevariablesTransferCFTName  >}} uses the root directory as the IDF. In this example, `flow01 `corresponds to the IDF for this partner.
 

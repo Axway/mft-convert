@@ -33,9 +33,9 @@ is executed.
 
 The symbolic variable syntax is as follows:
 
-- A special character
+* A special character
     in the first position (leftmost)
-- Optionally followed
+* Optionally followed
     by the character(s):
 
 
@@ -50,13 +50,13 @@ The symbolic variable syntax is as follows:
 |   | These characters can be used in combination, such as ****+:**** or ****&gt;+:****. <br/> See the [Example using optional characters](#Examples) |
 
 
-- Optionally followed
+* Optionally followed
     by a character string to be used as a prefix (-string_prefix)
     and/or a character string to be used as a suffix (+string_suffix)
     and/or a character string to be used as a substitute/alternate value (=string_alternate)
-- Optionally followed
+* Optionally followed
     by a numeric formula with a syntax ‘n’ or ‘p.’ or ‘p.n’
-- And then a character
+* And then a character
     string representing the identifier of the variable to be substituted
 
 The identifiers, recognized by {{< TransferCFT/axwayvariablesComponentShortName  >}}, which can be used in the
@@ -70,37 +70,37 @@ depends on the numeric formula indicated after the & character.
 
 According to the syntax used:
 
-- &VAR syntax
+* &VAR syntax
     (numeric formula not used)
 
     The value substituted for the symbolic variable equals
     the effective value of the ‘VAR’ identifier, truncated of the blank characters
     on the right.
 
-- &+VAR syntax:
+* &+VAR syntax:
 
     The value substituted for the symbolic variable is
     shifted to upper case.
 
-- &nVAR syntax:
-    -   The value substituted for the symbolic variable corresponds
+* &nVAR syntax:
+    *   The value substituted for the symbolic variable corresponds
         to a fixed length string of n characters, equal to the string corresponding
         to the effective value of ‘VAR’, truncated as required, or with blank
         characters added to the right.
-    -   The first character in this string corresponds to
+    *   The first character in this string corresponds to
         the first character, from the left, of the string corresponding to the
         value of the ‘VAR’ identifier.
 
-- &p.VAR syntax:
+* &p.VAR syntax:
 
     The value substituted for the symbolic variable corresponds
     to the character substring formed from the effective value of ‘VAR’ such
     that:
 
-    -   The first character
+    *   The first character
         of this substring corresponds to the p th character (from the left) of
         the string corresponding to the value of ‘VAR’
-    -   The length
+    *   The length
         corresponds exactly to the length of the effective value of ‘VAR’, the
         character in the i position being equal to the character in the p+i position
         of the value of ‘VAR’. If the length of the value of ‘VAR’ is m characters,
@@ -108,8 +108,8 @@ According to the syntax used:
 
 <!-- -->
 
-- &p.nVAR syntax:
-    -   The value substituted for the symbolic variable corresponds
+* &p.nVAR syntax:
+    *   The value substituted for the symbolic variable corresponds
         to the character sub-string formed from the effective value of ‘VAR’ such
         that:
 
@@ -128,15 +128,15 @@ According to the syntax used:
 
 After the &p.nVAR symbolic variable has been substituted:
 
-- The &lt;str_prefix>character
+* The &lt;str_prefix>character
     string is added before the variable, if the substituted variable is not
     empty
-- The &lt;str_suffix>
+* The &lt;str_suffix>
     character string is added after the variable, if the substituted variable
     is not empty
-- The &lt;str_alternate>
+* The &lt;str_alternate>
     character string is used if the substituted variable is empty
-- The character
+* The character
     strings &lt;str_prefix>, &lt;str_suffix> and &lt;str_alternate>
     can contain a symbolic variable
 
@@ -174,11 +174,11 @@ by FNAME=TESTPART1.tst
 In formats in which "n" or "p" are used, the following
 remarks are valid:
 
-- A value of "n"
+* A value of "n"
     equal to 0 is non significant
-- A value of "p"
+* A value of "p"
     equal to 0 is non significant
-- A position "p"
+* A position "p"
     greater than the length of the "effective" value of ‘VAR’ gives,
     after substitution, a string of zero length
 
@@ -239,8 +239,8 @@ Depending on the associated symbolic variable format, the substituted values are
 
 Given the syntax FNAME=&FROOT&(-.)FSUF:
 
-- If &FSUF is empty, FNAME gets the value &FROOT
-- If &FSUF is not empty, FNAME gets the value &FROOT.&FSUF
+* If &FSUF is empty, FNAME gets the value &FROOT
+* If &FSUF is not empty, FNAME gets the value &FROOT.&FSUF
 
 For example, if you have a file readme.txt on two different platforms:
 
@@ -248,20 +248,20 @@ For example, if you have a file readme.txt on two different platforms:
 
 Given the syntax FNAME=&(=DUMMY)PARM,
 
-- If &PARM is empty, FNAME gets the value DUMMY
-- If &PARM is not empty, FNAME gets the value &PARM
+* If &PARM is empty, FNAME gets the value DUMMY
+* If &PARM is not empty, FNAME gets the value &PARM
 
 Given the syntax FNAME=&(-PREF)(+SUF)(=DUMMY)PARM,
 
-- If &PARM is empty, FNAME gets the value DUMMY
-- If &PARM is not empty, FNAME gets the value PREF&PARMSUFF
+* If &PARM is empty, FNAME gets the value DUMMY
+* If &PARM is not empty, FNAME gets the value PREF&PARMSUFF
 
 > **Note**
 >
 > To add a closing parenthesis within the str_prefix, str_suffix and str_alternate, it must be preceded by the character ‘&’:
 
-- Given the syntax FNAME=&(+(1234&))PARM
-    -   If &PARM is not empty, FNAME gets the value &PARM(1234)
+* Given the syntax FNAME=&(+(1234&))PARM
+    *   If &PARM is not empty, FNAME gets the value &PARM(1234)
 
 #### Example of breaking down files names
 
@@ -457,12 +457,12 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 >
 > Note: The symbolic variable formats concerning dates and times are:
 
-- Time: HHMMSSCC
+* Time: HHMMSSCC
      
-- Complete date: YYYYMMDD
-- Year: YY
-- Month: MM
-- Day: DD
+* Complete date: YYYYMMDD
+* Year: YY
+* Month: MM
+* Day: DD
 
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
@@ -580,9 +580,9 @@ substituted by the values of the local parameters of the commands.
 The symbolic
 variables are substituted:
 
-- By the sender parameter
+* By the sender parameter
     values when these values are conveyed by the protocol
-- By default, by
+* By default, by
     the corresponding local parameter values
 
 <span id="Using_symbolic_variables"></span>
@@ -591,9 +591,9 @@ variables are substituted:
 
 Symbolic variables can be used:
 
-- To assign a value
+* To assign a value
     to certain parameters of the parameter setting or transfer commands
-- In the processing
+* In the processing
     operations defined by the user in the procedures associated with the transfers
 
 
@@ -665,5 +665,5 @@ This DIAGI indicates that there was an error while replacing the {{< TransferCFT
 
 ****Log messages****
 
-- CFTS67E: Error replacing variable &lt;var> &lt;error message>
-- CFTS68E: PART=&part [IDF=&idf &#124; IDM=&idm]IDT=&idt _ &fname not executed
+* CFTS67E: Error replacing variable &lt;var> &lt;error message>
+* CFTS68E: PART=&part [IDF=&idf &#124; IDM=&idm]IDT=&idt _ &fname not executed

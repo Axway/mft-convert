@@ -5,8 +5,8 @@ weight: 330
 ---This topic summarizes {{< TransferCFT/axwayvariablesComponentShortName  >}} characteristics that differ from
 other operating systems:
 
-- specific values
-- default files
+* specific values
+* default files
 
 ## Specific values tables
 

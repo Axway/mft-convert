@@ -21,9 +21,9 @@ Example timestamp: 2022-01-13T15:55:31.585+0100.
 This is the execution status of the action. The possible values are:
 &lt;/p>
 
-- Done: Action executed without error
-- Failed: Action failed
-- Denied: Action not allowed for the user
+* Done: Action executed without error
+* Failed: Action failed
+* Denied: Action not allowed for the user
 
 ****WHO****
 
@@ -51,10 +51,10 @@ FM: Flow Manager (should we say here {{< TransferCFT/PrimaryCGorUM  >}} also?)
 
 cft: cft commands mainly for multi-node
 
-- cftstart: Start Transfer CFT server
-- cftstop: Stop Transfer CFT server
-- copstart: Start Copilot server
-- copstop: Stop Copilot server
+* cftstart: Start Transfer CFT server
+* cftstop: Stop Transfer CFT server
+* copstart: Start Copilot server
+* copstop: Stop Copilot server
 
 > **Note**
 >
@@ -67,28 +67,28 @@ This is the action and action details.
 The possible values are:
 &lt;/p>
 
-- Authentication: Login or logout
-- Configuration: Modification in a Transfer CFT object or a Transfer CFT uconf parameter
-- Administration: Start/stop Transfer CFT and Copilot, initialization, and multi-node configuration
-- Transfer: Logged only if the Send or Receive transfer is denied
+* Authentication: Login or logout
+* Configuration: Modification in a Transfer CFT object or a Transfer CFT uconf parameter
+* Administration: Start/stop Transfer CFT and Copilot, initialization, and multi-node configuration
+* Transfer: Logged only if the Send or Receive transfer is denied
 
 ## Action details
 
 The possible actions are:
 
-- Login, Logout
-- Start CFT, CFT is starting, CFT started, CFT failed to start (including the force and fast options)
-- Stop CFT, CFT is stopping, CFT stopped, CFT failed to stop (including the force and fast options)
-- Restart CFT, CFT is restarting
-- CFT copilot is starting, CFT copilot started, CFT copilot failed to start
-- CFT copilot stop
-- UCONFSET ID='uconf_parameter', VALUE='old value' -> 'new value'
-- UCONFUNSET ID='uconf_parameter', OLD_VALUE='old value'
-- CREATE object param1='value1,param2=value2, ...
-- DELETE object param1='value1,param2=value2, ...
-- UPDATE cft_object param1='old value1'>'new value1',param2='old value2'>'new value2', ...
-- UPDATE pki_object param1='value1,param2=value2, ...
-- Command parameters for CFTFILE, PKIFILE, cftinit, cftupdate, cft (for multi-node), SEND , RECV
+* Login, Logout
+* Start CFT, CFT is starting, CFT started, CFT failed to start (including the force and fast options)
+* Stop CFT, CFT is stopping, CFT stopped, CFT failed to stop (including the force and fast options)
+* Restart CFT, CFT is restarting
+* CFT copilot is starting, CFT copilot started, CFT copilot failed to start
+* CFT copilot stop
+* UCONFSET ID='uconf_parameter', VALUE='old value' -> 'new value'
+* UCONFUNSET ID='uconf_parameter', OLD_VALUE='old value'
+* CREATE object param1='value1,param2=value2, ...
+* DELETE object param1='value1,param2=value2, ...
+* UPDATE cft_object param1='old value1'>'new value1',param2='old value2'>'new value2', ...
+* UPDATE pki_object param1='value1,param2=value2, ...
+* Command parameters for CFTFILE, PKIFILE, cftinit, cftupdate, cft (for multi-node), SEND , RECV
 
 > **Note**
 >
@@ -98,8 +98,8 @@ The possible actions are:
 
 The audit log files are saved in the `audit `folder as one file per day. The file name format is:
 
-- Windows, UNIX, HP NonStop, OpenVMS: audit_YYYYMMDD
-- z/OS, IBM i: AYYMMDD
+* Windows, UNIX, HP NonStop, OpenVMS: audit_YYYYMMDD
+* z/OS, IBM i: AYYMMDD
 
 ### Customize the file location
 
@@ -113,6 +113,6 @@ The files are purged as defined in the uconf `cft.audit.retention` parameter (de
 
 ## Limitations
 
-- When using in conjunction with Flow Manager:
-    -   The WHERE parameter contains the name of the Flow Manager server and not the workstation where the browser action was launched.
-    -   The user is the {{< TransferCFT/axwayvariablesComponentLongName >}} user.
+* When using in conjunction with Flow Manager:
+    *   The WHERE parameter contains the name of the Flow Manager server and not the workstation where the browser action was launched.
+    *   The user is the {{< TransferCFT/axwayvariablesComponentLongName >}} user.

@@ -23,8 +23,8 @@ To build the exit:
 1. Change the directory to: &lt;CFTDIRRUNTIME>/src/exit
 1. Run the following command:
 
-- UNIX: `make`
-- Windows: `nmake -f exit.mak`
+* UNIX: `make`
+* Windows: `nmake -f exit.mak`
 
 The output is a library located at `<CFTDIRRUNTIME>/lib/libcftexam.(so/dll)`.
 

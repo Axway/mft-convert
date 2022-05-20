@@ -18,27 +18,27 @@ The DIAGI codes corresponding to local and remote errors range from 0 to 499 and
 
 The various types of error that can occur locally during a transfer are:
 
-- Internal monitor errors: DIAGI code between 0 and 3
+* Internal monitor errors: DIAGI code between 0 and 3
 
 <!-- -->
 
-- Errors relating to transferred files: DIAGI code between 100 and 142
+* Errors relating to transferred files: DIAGI code between 100 and 142
 
 <!-- -->
 
-- Errors in the protocol-level dialog between the two transfer monitors: DIAGI code between 220 and 240
+* Errors in the protocol-level dialog between the two transfer monitors: DIAGI code between 220 and 240
 
 <!-- -->
 
-- Network-related errors: DIAGI code between 301 and 303
+* Network-related errors: DIAGI code between 301 and 303
 
 <!-- -->
 
-- Monitor configuration errors: DIAGI code between 401 and 460
+* Monitor configuration errors: DIAGI code between 401 and 460
 
 <!-- -->
 
-- Non-referenced errors: DIAGI code equal to 399
+* Non-referenced errors: DIAGI code equal to 399
 
 The way in which the DIAGP field is interpreted varies according to the type of error. To determine the meaning of the code, refer to the sub-book Codes, Diagnostics and Messages in the {{< TransferCFT/axwayvariablesComponentShortName  >}} online documentation.
 

@@ -12,8 +12,8 @@ The {{< TransferCFT/axwayvariablesComponentShortName  >}} acceleration feature o
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} achieves this transfer acceleration using two methods:
 
-- UDT: a UDP-based protocol (User Datagram Protocol)
-- pTCP: parallel TCP, which uses multiple parallel connections
+* UDT: a UDP-based protocol (User Datagram Protocol)
+* pTCP: parallel TCP, which uses multiple parallel connections
 
 ### UDT description
 
@@ -100,8 +100,8 @@ Refer to the [UCONF parameters](../uconf_directory) table `acceleration.ptcp.<l
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} 3.0.1 SP2 and higher, and {{< TransferCFT/axwayvariablesComponentShortName  >}} 2.7.1 SP6, support a more recent version of the pTCP protocol than previously supported by {{< TransferCFT/axwayvariablesComponentShortName  >}}. This newer version of pTCP offers the following advantages:
 
-- Multi-node architecture support
-- Exchange capability with Axway SecureTransport
+* Multi-node architecture support
+* Exchange capability with Axway SecureTransport
 
 Note that the new pTCP support is ****not**** compatible with the previously used version of pTCP. This means that {{< TransferCFT/axwayvariablesComponentShortName  >}} 3.0.1 SP2 and higher, and {{< TransferCFT/axwayvariablesComponentShortName  >}} 2.7.1 SP6, ****cannot**** exchange files with earlier versions of {{< TransferCFT/axwayvariablesComponentShortName  >}} using the pTCP protocol.
 
@@ -109,5 +109,5 @@ For more information on supported platforms and transfer acceleration, refer to 
 
 ****Related topics****
 
-- [About the unified configuration](../)
-- [Unified configuration (CFTUTIL)](../uconf_w_cftutil)
+* [About the unified configuration](../)
+* [Unified configuration (CFTUTIL)](../uconf_w_cftutil)

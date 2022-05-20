@@ -24,11 +24,11 @@ the Transfer CFT product, host, and key information.
 
 Type of object to be deactivated.
 
-- PART
+* PART
     = Partner
-- TRK
+* TRK
     = Select to restart Sentinel notification
-- CRON
+* CRON
     = Enables the cronjob CRON=ID
 
 #### INACT
@@ -38,12 +38,12 @@ Type of object to be deactivated.
 
 Type of object to be deactivated.
 
-- PART
+* PART
     = Partner
-- TRK
+* TRK
     = Select to stop dynamic Sentinel notification. All further
     messages are lost.
-- CRON
+* CRON
     = Disables the cronjob CRON=ID
 
 <span id="type_CFTCOM"></span>
@@ -57,9 +57,9 @@ Type of {{< TransferCFT/axwayvariablesComponentShortName  >}} communication medi
 
 This parameter can take the following values:
 
-- FILE:
+* FILE:
     communication is accomplished through a file
-- TCPIP:
+* TCPIP:
     communication is performed through the synchronous communication medium
 
 <span id="type_CFTNET"></span>
@@ -71,7 +71,7 @@ This parameter can take the following values:
 Defines the type of network resource. This parameter can take the following
 values, according to the system:
 
-- TCP: TCP/IP
+* TCP: TCP/IP
     network access resource
 
 #### CFTIDF
@@ -81,9 +81,9 @@ TYPE = { RECV &#124; SEND}
 The transfer direction for which this correspondence is valid. Select
 either:
 
-- SEND:
+* SEND:
     for send transfers
-- RECV:
+* RECV:
     for receive transfer
 
 <span id="type_CFTEXIT"></span>
@@ -95,11 +95,11 @@ either:
 
 The type of exit program, as follows:
 
-- FILE (default value): Data is recorded
+* FILE (default value): Data is recorded
     in the monitor files
-- ACCESS: To use a directory type EXIT
-- EXEC: To use an end-of-transfer type EXIT
-- BOT: To use a beginning-of-transfer type EXIT
+* ACCESS: To use a directory type EXIT
+* EXEC: To use an end-of-transfer type EXIT
+* BOT: To use a beginning-of-transfer type EXIT
 
 <span id="type_CFTACCNT"></span>
 
@@ -110,10 +110,10 @@ The type of exit program, as follows:
 
 This defines the accounting type. CFTACCNT TYPE parameters are:
 
-- FILE (default value): Data is recorded
+* FILE (default value): Data is recorded
     in the {{< TransferCFT/axwayvariablesComponentLongName >}} files defined in the fname
     and afname fields.
-- SYST: Data is recorded in the files
+* SYST: Data is recorded in the files
     of the operating system accounting utility. Available
     only on z/OS (MVS).
 
@@ -126,11 +126,11 @@ This defines the accounting type. CFTACCNT TYPE parameters are:
 Type
 of transfer protocol.
 
-- PeSIT:
+* PeSIT:
     PeSIT protocol
-- ODETTE:
+* ODETTE:
     OFTP (ODETTE) protocol
-- SFTP: SFTP protocol
+* SFTP: SFTP protocol
 
 #### LISTPART
 
@@ -177,7 +177,7 @@ Defines the medium concerned.
 
 Defines the switch action for CFTLOG or CFTACCNT. File types are:
 
-- LOG:
+* LOG:
     The SWITCH command stops message writing on the current log file, switches
     to the alternate log file, and then executes the procedure specified in
     the EXEC parameter of the CFTLOG
@@ -185,7 +185,7 @@ Defines the switch action for CFTLOG or CFTACCNT. File types are:
 
 <!-- -->
 
-- ACCNT:
+* ACCNT:
     The SWITCH command stops statistics from being written on the current
     statistical file, switches the writing to the alternate statistical file,
     and then executes the procedure specified in the EXEC
@@ -264,12 +264,12 @@ TYPE can take the predefined values indicated in the Type table below.
 
 TYPE = { CRON &#124; UCONF &#124; CAT &#124; FOLDER &#124; PARMCACHE &#124; AM}
 
-- CAT: Resize the catalog while the Transfer CFT is running (hot catalog resizing)
-- CRON: Reload the CFTCRON objects
-- FOLDER: Reload the CFTFOLDER objects
-- UCONF: Reload the dynamic UCONF parameters
-- PARMCACHE: Clear the parameter cache
-- AM: Reload roles and privileges
+* CAT: Resize the catalog while the Transfer CFT is running (hot catalog resizing)
+* CRON: Reload the CFTCRON objects
+* FOLDER: Reload the CFTFOLDER objects
+* UCONF: Reload the dynamic UCONF parameters
+* PARMCACHE: Clear the parameter cache
+* AM: Reload roles and privileges
 
 #### CFTUIPREF
 

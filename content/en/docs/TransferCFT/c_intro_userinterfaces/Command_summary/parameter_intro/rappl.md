@@ -10,9 +10,9 @@ weight: 2790
 
 **[RAPPL = *string*]**
 
-- string48      PeSIT
+* string48      PeSIT
     E CFT/CFT
-- string....8          PeSIT E
+* string....8          PeSIT E
 
 Identifier of the application receiving the
 file.
@@ -21,10 +21,10 @@ This parameter value is case sensitive in CFTUTIL commands if you enclose the v
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} does not check:
 
-- The protocol to
+* The protocol to
     be used for the transfer. If the protocol used is ODETTE, this parameter
     is not sent.
-- The maximum size
+* The maximum size
     permitted by the protocol. Only a check of the maximum size of 48 characters
     is performed.
 

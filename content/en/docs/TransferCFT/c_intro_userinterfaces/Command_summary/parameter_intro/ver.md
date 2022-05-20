@@ -11,10 +11,10 @@ weight: 3730
 
 Optional parameter. Indicates the format for the communication area.
 
-- ****V23****(Default
+* ****V23****(Default
     value): The communication area between {{< TransferCFT/axwayvariablesComponentShortName >}} and user’s exits remains
     the same.
-- ****V24****: The communication area takes into
+* ****V24****: The communication area takes into
     account length of the new identifier. For example, the Part length is
     from 8 to 32,and Filename from 64 to 512.
 

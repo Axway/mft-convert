@@ -29,16 +29,16 @@ definition)
 Respect the following conventions when completing values for Transfer
 CFT object fields:
 
-- ****Date****:
+* ****Date****:
     8-digit string in the YYYYMMDD format
-- ****File
+* ****File
     name****: 512 characters comprised of the full path - meaning the drive, path, root, and suffix
-    -   The file system or operating system however imposes limitations such as unauthorized characters, length restrictions, and case sensitivity
-- ****Identifier****:
+    *   The file system or operating system however imposes limitations such as unauthorized characters, length restrictions, and case sensitivity
+* ****Identifier****:
     alphanumeric string of 1 to 32 characters
-- ****Mask****
+* ****Mask****
     : string containing wildcard characters (\* and ?)
-- ****Time****:
+* ****Time****:
     2 to 8-digit string in the HHMMSSSS
 
 [Return to Command index](../)

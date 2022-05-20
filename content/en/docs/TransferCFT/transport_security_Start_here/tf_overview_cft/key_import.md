@@ -10,9 +10,9 @@ format.
 
 You can convert:
 
-- PGP Public
+* PGP Public
     Keyrings to X.509 Certificates
-- PGP Secret
+* PGP Secret
     Keyrings to PKCS#12 packages
 
 ### Import procedure
@@ -27,8 +27,8 @@ When you import a private keyring file containing ElGamal subkey(s), you must pr
     ```
 1. Enter the import command:
 
-- UNIX: ImportPGPKey.sh
-- Windows: ImportPGPKey.bat
+* UNIX: ImportPGPKey.sh
+* Windows: ImportPGPKey.bat
 
 There are several options you can add to the command line:
 
@@ -89,8 +89,8 @@ following file names.
     ```
 1. Enter the import command:
 
-- UNIX: ExportPGPKey.sh
-- Windows: ExportPGPKey.bat
+* UNIX: ExportPGPKey.sh
+* Windows: ExportPGPKey.bat
 
 There are several options you can add to the command line:
 

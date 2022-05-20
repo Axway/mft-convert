@@ -4,10 +4,10 @@ linkTitle: "Using system users"
 weight: 250
 ---This section describes two optional UNIX-specific tasks that you can perform to enable system user authentication and file system rights, and which are not mutually exclusive.
 
-- [Enable the file user rights (USERCTRL)](#Manually)
-    -   [Transfer CFT starts the CFTSU process](#Automati2)
-    -   [User starts the CFTSUD process](#Manually2)
-- [How to use system user authentication for the user interfaces](#Enable2)
+* [Enable the file user rights (USERCTRL)](#Manually)
+    *   [Transfer CFT starts the CFTSU process](#Automati2)
+    *   [User starts the CFTSUD process](#Manually2)
+* [How to use system user authentication for the user interfaces](#Enable2)
 
 <span id="Manually"></span>
 
@@ -52,10 +52,10 @@ You do not need to repeat the ****Automatically start CFTSU process**** steps ab
 
 However, if you execute a version upgrade:
 
-- If you were using the CFTSU in the `$CFTDIRINSTALL/bin` directory, change to use the owner who installed Transfer CFT.
-- Move the CFTSU to a directory outside of the `$CFTDIRINSTALL/bin` directory.
-- Apply the upgrade.
-- Execute the ****Start CFTSU process**** steps above.
+* If you were using the CFTSU in the `$CFTDIRINSTALL/bin` directory, change to use the owner who installed Transfer CFT.
+* Move the CFTSU to a directory outside of the `$CFTDIRINSTALL/bin` directory.
+* Apply the upgrade.
+* Execute the ****Start CFTSU process**** steps above.
 
 <span id="Manually2"></span>
 
@@ -103,8 +103,8 @@ The root user now starts the CFTSUD process and sets the AF_UNIX file owner, whi
 
 There are two ways to enable the system user authentication:
 
-- For the current web-based Transfer CFT UI: set `copilot.restapi.authentication_method=system`
-- For the deprecated Transfer CFT UI (Copilot): set `copilot.misc.createprocessasuser=yes`
+* For the current web-based Transfer CFT UI: set `copilot.restapi.authentication_method=system`
+* For the deprecated Transfer CFT UI (Copilot): set `copilot.misc.createprocessasuser=yes`
 
 > **Note**
 >

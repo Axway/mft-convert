@@ -7,23 +7,23 @@ weight: 300
 The file exit task enables you to take control at various stages in
 a file transfer. Nine topics in this section describe the stages in a file transfer. These are:
 
-- Before
+* Before
     the file is allocated
-- Before
+* Before
     the file is opened
-- Before
+* Before
     the start of the transfer
-- Before
+* Before
     a record is sent or after it is received
-- Before
+* Before
     repositioning
-- After
+* After
     a synchronization point
-- Before
+* Before
     the end of the file
-- Before
+* Before
     the file is closed
-- Before
+* Before
     the end of the transfer
-- After
+* After
     a transfer interruption

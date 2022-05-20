@@ -8,8 +8,8 @@ weight: 180
 
 Transfer CFT in multi-host architecture requires:
 
-- A shared file system
-- You must configure the system prior to the multi-node installation, and the shared disk should be ready when you start the Transfer CFT Copilot server. See [Shared file system prerequisites](../../../windows_install_start_here/before_you_start_win/n_active_active/shared_file_prereq_win) for details.
+* A shared file system
+* You must configure the system prior to the multi-node installation, and the shared disk should be ready when you start the Transfer CFT Copilot server. See [Shared file system prerequisites](../../../windows_install_start_here/before_you_start_win/n_active_active/shared_file_prereq_win) for details.
 
 ### License keys
 
@@ -21,8 +21,8 @@ Transfer CFT in multi-host architecture requires:
 
 You can use a single key for a multi-node installation, as either:
 
-- The hostname must not be defined for the key, or
-- The hostname defined for the key matches the hostname of one of the hosts that composes the multi-node instance
+* The hostname must not be defined for the key, or
+* The hostname defined for the key matches the hostname of one of the hosts that composes the multi-node instance
 
 Additionally, the key must have the cluster option.
 

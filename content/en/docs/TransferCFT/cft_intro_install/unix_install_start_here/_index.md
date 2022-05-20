@@ -21,29 +21,29 @@ the networks used. The TCP/IP network is supported.
 
 The installation section describes prerequisites and how to install, migrate, update and uninstal{{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
-- [Prerequisites](before_you_start_unix/prereqs_overview)
-- [Start the installation](../windows_install_start_here/before_you_start_win/install_transfer_cft_1)
+* [Prerequisites](before_you_start_unix/prereqs_overview)
+* [Start the installation](../windows_install_start_here/before_you_start_win/install_transfer_cft_1)
 
 ## UNIX operations
 
-- [{{< TransferCFT/axwayvariablesComponentShortName >}}
+* [{{< TransferCFT/axwayvariablesComponentShortName >}}
     UNIX utilities](run_first_time_ux/use_cft_utilities)
-- [Running
+* [Running
     {{< TransferCFT/axwayvariablesComponentShortName >}} for the first time]()
-- [Building
+* [Building
     {{< TransferCFT/axwayvariablesComponentShortName >}} API applications](run_first_time_ux/api_applications_start_here)
-- [Activating
+* [Activating
     security](run_first_time_ux/run_first_time_ux/user_rights_and_interface_unix)
-- [Specific
+* [Specific
     configurations](run_first_time_ux/run_first_time_ux/specific_configurations_intro)
 
 ## UNIX high availability
 
 When installing a cluster for high availability, after enabling the cluster option you must set the multi-node option to NO.
 
-- Using
+* Using
     AIX with IBM
-- Solaris
+* Solaris
     Sun cluster
 
 > **Note**

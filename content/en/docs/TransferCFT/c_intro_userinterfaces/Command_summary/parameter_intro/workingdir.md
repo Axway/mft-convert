@@ -10,8 +10,8 @@ weight: 3790
 
 Enter the name of a working directory for a given flow. The directory name is a path that can be:
 
-- Relative (to the runtime)
-- Absolute
+* Relative (to the runtime)
+* Absolute
 
 This parameter can also use the keyword &HOME. For details, see [&HOME](../home).
 

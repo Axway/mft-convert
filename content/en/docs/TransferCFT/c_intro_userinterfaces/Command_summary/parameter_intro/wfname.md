@@ -28,21 +28,21 @@ A temporary file is used to ensure the integrity of the file received:
 the file which can be used (by a user application for example) is only
 available at the end of the transfer.
 
-- The name of this
+* The name of this
     file may include the following symbolic variables:
-- &FDATE,
+* &FDATE,
     &FTIME, &FYEAR, &FMONTH, &FDAY
-- &SPART,
+* &SPART,
     &RPART, &PART, &NPART, &GROUP
-- &SUSER,
+* &SUSER,
     &RUSER
-- &SAPPL,
+* &SAPPL,
     &RAPPL
-- &IDF, &PARM,
+* &IDF, &PARM,
     &IDA
-- &NIDF,
+* &NIDF,
     &NFNAME, &IDT
-- &BDATE,
+* &BDATE,
     &BTIME, &BYEAR, &BMONTH, &BDAY
 
 The ‘&’ character here replaces the char_symb character specific
@@ -94,27 +94,27 @@ The file is transferred in the same way as a sequential file.
 
 This process can only be used for:
 
-- transfers
+* transfers
     between systems of the same type (same SYST parameter value in the CFTPART
     command)
-- the
+* the
     following protocol: **PeSIT CFT to CFT**
 
 The following variables may be used to form the WFNAME character string:
 
-- &FDATE,
+* &FDATE,
     &FTIME, &FYEAR, &FMONTH, &FDAY
-- &SPART,
+* &SPART,
     &RPART, &PART, &NPART, &GROUP
-- &SUSER,
+* &SUSER,
     &RUSER
-- &SAPPL,
+* &SAPPL,
     &RAPPL
-- &IDF,
+* &IDF,
     &PARM, &IDA
-- &NIDF,
+* &NIDF,
     &NFNAME, &IDT
-- &BDATE,
+* &BDATE,
     &BTIME, &BYEAR, &BMONTH, &BDAY
 
 The ‘&’ character here replaces the char_symb character specific

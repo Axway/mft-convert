@@ -4,31 +4,31 @@ linkTitle: "Production related problems"
 weight: 240
 ---Problems can occur that are not specifically related to a transfer or group of transfers, such as:
 
-- Cannot start Transfer CFT
+* Cannot start Transfer CFT
 
 <!-- -->
 
-- The dynamic processes cannot be initialized
+* The dynamic processes cannot be initialized
 
 <!-- -->
 
-- Monitor activities appear to be blocked
+* Monitor activities appear to be blocked
 
 <!-- -->
 
-- Some functions are not performed (procedures, and so on)
+* Some functions are not performed (procedures, and so on)
 
 <!-- -->
 
-- Communications cannot be established with Transfer CFT
+* Communications cannot be established with Transfer CFT
 
 <!-- -->
 
-- Certain processes are missing
+* Certain processes are missing
 
 <!-- -->
 
-- Network errors recur
+* Network errors recur
 
 Most malfunctions are caused by a {{< TransferCFT/axwayvariablesComponentShortName  >}} configuration error, incorrectly defined quotas or privileges for the {{< TransferCFT/axwayvariablesComponentShortName  >}} account, inappropriately sized system parameters (such as GBLPAGES and GBLSECTIONS), and so on.
 
@@ -46,47 +46,47 @@ The specific part of {{< TransferCFT/axwayvariablesComponentShortName  >}} uses 
 
 This message comprises:
 
-- The date and time at which the error occurred
+* The date and time at which the error occurred
 
 <!-- -->
 
-- The name of the internal service concerned
+* The name of the internal service concerned
 
 <!-- -->
 
-- A specific section of text describing the error
+* A specific section of text describing the error
 
 The message text may include the following symbolic variables:
 
-- &cs: code returned by the system service
+* &cs: code returned by the system service
 
 <!-- -->
 
-- &chan: OpenVMS channel number
+* &chan: OpenVMS channel number
 
 <!-- -->
 
-- &cr: monitor-specific return code
+* &cr: monitor-specific return code
 
 <!-- -->
 
-- &str: character string used by the service
+* &str: character string used by the service
 
 <!-- -->
 
-- &evt: character string representing the network event
+* &evt: character string representing the network event
 
 <!-- -->
 
-- &ref: reference to an internal monitor context
+* &ref: reference to an internal monitor context
 
 <!-- -->
 
-- &val: decimal value
+* &val: decimal value
 
 <!-- -->
 
-- &net: type of network used
+* &net: type of network used
 
 Values between square brackets ([...]) are expressed in hexadecimal, others in decimal.
 
@@ -108,16 +108,16 @@ The following messages correspond to calls to services specific to transferred f
 
 The symbolic variables used:
 
-- &NET: indicates that the message can be generated for all types of network
+* &NET: indicates that the message can be generated for all types of network
 
 <!-- -->
 
-- &FCT: function processed when the error occurred (generally a network request)
+* &FCT: function processed when the error occurred (generally a network request)
 
 <!-- -->
 
-- &msg: internal interchange block exchanged between the server task and CFTTPRO task
+* &msg: internal interchange block exchanged between the server task and CFTTPRO task
 
 <!-- -->
 
-- &service: label for a system service used by the task
+* &service: label for a system service used by the task

@@ -21,12 +21,12 @@ coding volume.
 
 The transfer services functions:
 
-- Check the validity
+* Check the validity
     of the command name
-- Analyze the syntax
+* Analyze the syntax
     of the command parameters, if the function using the syntax analyzer is
     used
-- Place the command
+* Place the command
     in the {{< TransferCFT/axwayvariablesComponentShortName >}} communication medium
 
 The processing performed by {{< TransferCFT/axwayvariablesComponentShortName  >}} is totally asynchronous.
@@ -65,15 +65,15 @@ in the communication medium.
 
 Where:
 
-- cftau indicates
+* cftau indicates
     that syntax analysis is requested
-- cftac indicates that syntax analysis is not requested
-- &lt;verb> is
+* cftac indicates that syntax analysis is not requested
+* &lt;verb> is
     the command that you want to process
-- &lt;param> is
+* &lt;param> is
     a character string of variable length that contains the command parameters.
     The end of the field is defined by a character initially set to low-value
-- &lt;rc> is the
+* &lt;rc> is the
     return code
 
 The available &lt;verbs> are listed in the following table.
@@ -106,11 +106,11 @@ an availability check.
 The security check is performed on the user name, and the user group
 if applicable, depending on the command:
 
-- IDF if present
+* IDF if present
     in parameter field: DELETE, END, HALT, KEEP, SEND, RECV, START
-- Procedure name:
+* Procedure name:
     SUBMIT
-- Type: SWITCH LOG
+* Type: SWITCH LOG
     or ACCNT
 
 ## Return codes
@@ -134,12 +134,12 @@ if applicable, depending on the command:
 
 The FIELD and MSG fields of the CFTAPI COPY CLAUSE contain:
 
-- FIELD: name of
+* FIELD: name of
     the incorrect parameter detected by the {{< TransferCFT/axwayvariablesComponentShortName >}} syntax analyzer
-- MSG:
-    -   Either a message
+* MSG:
+    *   Either a message
         relative to the error recognized by the syntax analyzer
-    -   Or an error
+    *   Or an error
         message describing an incident when the command is taken into account
 
 See [Messages

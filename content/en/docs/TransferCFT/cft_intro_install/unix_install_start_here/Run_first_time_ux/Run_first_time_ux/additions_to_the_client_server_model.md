@@ -9,9 +9,9 @@ environmental variables for the Client/server model.
 
 These additions are mainly used when creating a:
 
-- *cftinq.cfg*
+* *cftinq.cfg*
     configuration file
-- CFTDIRINQ environment
+* CFTDIRINQ environment
     variable
 
 ## Client/server environmental variables

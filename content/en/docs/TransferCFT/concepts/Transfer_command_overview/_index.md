@@ -25,11 +25,11 @@ C:\\Axwaycft313sp1\\Transfer_CFT\\runtime> CFTUTIL  
 
 There are two ways to supply parameters for a command:
 
-- You can define all information for a command, both mandatory and optional parameters
+* You can define all information for a command, both mandatory and optional parameters
 
 <!-- -->
 
-- You can rely on default values or template values that are common for a given command
+* You can rely on default values or template values that are common for a given command
 
 <span id="Transfer_associated_commands"></span>
 
@@ -53,7 +53,7 @@ The commands associated with the transfers are listed in the table below.
 For each command, the {{< TransferCFT/axwayvariablesComponentShortName  >}} command interface performs the following
 actions:
 
-- Checks the syntax
+* Checks the syntax
     of the command
-- Puts the command
+* Puts the command
     in the Transfer CFT communication medium

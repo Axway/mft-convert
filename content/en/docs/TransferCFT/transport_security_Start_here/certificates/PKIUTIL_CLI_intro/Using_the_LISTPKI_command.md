@@ -117,7 +117,7 @@ Keys:
 Id.                             
 S K Bits
 --------------------------------
-- - ----
+* - ----
 4KL1USER1                       
 A x 4096
 4KL1USER1KEYPRIV                
@@ -139,16 +139,16 @@ Identifier of the root certificate authority.
 
 Miscellaneous certificate information (the letter only displays in when using the old format or no model):
 
-- T: Type of Certificate: R for
+* T: Type of Certificate: R for
     Root (Root Authority), I for Intermediate (Intermediate Authority),
     U for User
-- S: Certificate state: A for
+* S: Certificate state: A for
     active or I for inactive
-- C: x denotes if the certificate
+* C: x denotes if the certificate
     is in the database
-- K: x denotes if the private
+* K: x denotes if the private
     key associated with the certificate exists
-- E: Certificate expired (!) or otherwise
+* E: Certificate expired (!) or otherwise
 
 ****Exp. Date****
 
@@ -347,8 +347,6 @@ Value of the certificate signer DN field.
 
 <span id="INUM"></span>
 
-### 
-
 <span id="FMODEL d"></span>
 
 ### Filter using FMODEL example
@@ -375,7 +373,7 @@ USER0    ROOT      USER   ACT  22/07/2029 x  2k_l1_user1 2k_root
 
 Key to indicators and symbols:
 
-- The "EXPIRED" ROOT certificate displays the "!" symbol in the "K" column.
-- The "EXPIRED" USER certificate displays the "?" symbol in the "K" column, indicating one if his issuer is expired.
-- The "?" before their ID indicates that their issuer is not shown, although available.
-- If a certificate displays an explanation mark "!" before the ID, it indicates that their issuer is not available (error).
+* The "EXPIRED" ROOT certificate displays the "!" symbol in the "K" column.
+* The "EXPIRED" USER certificate displays the "?" symbol in the "K" column, indicating one if his issuer is expired.
+* The "?" before their ID indicates that their issuer is not shown, although available.
+* If a certificate displays an explanation mark "!" before the ID, it indicates that their issuer is not available (error).

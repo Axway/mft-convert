@@ -5,15 +5,15 @@ weight: 330
 ---This topic describes the communication area structure. The communication
 area contains:
 
-- [General
+* [General
     information fields](#General_information_fields)
-- [Return
+* [Return
     codes](#Return_codes___directory_exit)
-- [Partner
+* [Partner
     information](#Partner_information___directory_exit)
-- [Partner
+* [Partner
     network information](#Partner_network_information___directory_exit)
-- [Information
+* [Information
     per network type](#Partner_network_information___directory_exit) (not supported by all networks)
 
 The next topic describes the communication area structure between the

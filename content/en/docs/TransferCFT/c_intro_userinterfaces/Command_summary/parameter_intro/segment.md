@@ -15,7 +15,7 @@ Option to segment file records in several FPDUs.
 
 This option is not negotiated.
 
-- **NO**: Segmentation
+* **NO**: Segmentation
     "if necessary", which is automatically implemented when a record to be transferred is greater
     than the maximum size of an NSDU - 6 bytes. This relates to data FPDUs
     and not to the other protocol FPDUs.  
@@ -24,7 +24,7 @@ This option is not negotiated.
 
 <!-- -->
 
-- **YES** (default): "Systematic"
+* **YES** (default): "Systematic"
     segmentation, which is implemented by {{< TransferCFT/suitevariablesTransferCFTName >}} to complete a "data unit" (NSDU).
     This option relates to all record sizes, and is only effective
     if used with the option CONCAT = YES.

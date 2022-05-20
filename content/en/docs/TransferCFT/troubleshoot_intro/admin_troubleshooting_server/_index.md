@@ -8,11 +8,11 @@ A complete listing of {{< TransferCFT/axwayvariablesComponentShortName  >}} erro
 
 Administrative issues are classified in the following general categories:
 
-- Post installation and {{< TransferCFT/PrimaryCGorUM >}} registration
-- Configuration and production issues
+* Post installation and {{< TransferCFT/PrimaryCGorUM >}} registration
+* Configuration and production issues
 
 Possible corrective actions include:
 
-- Collect system information - you can use either the {{< TransferCFT/PrimaryCGorUM >}} interface, or from Transfer CFT use [cft_support](../../cft_intro_install/unix_install_start_here/troubleshoot_registration/support_tools)
-- Check for updates and updating the system
-- Regenerate the internal datafile or rebuild the runtime
+* Collect system information - you can use either the {{< TransferCFT/PrimaryCGorUM >}} interface, or from Transfer CFT use [cft_support](../../cft_intro_install/unix_install_start_here/troubleshoot_registration/support_tools)
+* Check for updates and updating the system
+* Regenerate the internal datafile or rebuild the runtime

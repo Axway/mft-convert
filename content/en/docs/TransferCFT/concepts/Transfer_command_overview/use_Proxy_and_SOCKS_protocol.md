@@ -13,14 +13,14 @@ or without SSL.
 
 This topic describes how to use a proxy and SOCKS, and includes:
 
-- [SOCKS protocol architecture](#Connection)
-    -   [About the connection](#Connection)
-- [Using a proxy with Transfer CFT](#Application_in_CFT)
-    -   [Configuring a connection](#Configuration)
-    -   [Error
+* [SOCKS protocol architecture](#Connection)
+    *   [About the connection](#Connection)
+* [Using a proxy with Transfer CFT](#Application_in_CFT)
+    *   [Configuring a connection](#Configuration)
+    *   [Error
         codes](#Error_codes)
-    -   SOCKS references
-- [Setting up a proxy for Copilot](#Setting)
+    *   SOCKS references
+* [Setting up a proxy for Copilot](#Setting)
 
 <span id="SOCKS"></span>
 
@@ -90,17 +90,17 @@ must be declared in the CFTPARM command to be applied by Transfer CFT.
 
 Transfer CFT responds to error codes from a proxy with:
 
-- Error code 91 for SOCKS4
-- Error code 5 for SOCKS5
+* Error code 91 for SOCKS4
+* Error code 5 for SOCKS5
 
 Transfer CFT repeats the transfer. The
 transfer timeout and number of attempts will depend on the CFTTCP command RETRYW, RETRYN
 and RETRYM parameters defining the network characteristics of the remote
 partner.
 
-- 92 and 93
+* 92 and 93
     for SOCKS4
-- Error code != 5 and > 0 for SOCKS5
+* Error code != 5 and > 0 for SOCKS5
 
 Transfer CFT puts the transfer on hold (K status). The operator must manually restart (START command) the transfer.
 
@@ -144,11 +144,11 @@ CFTPROT ID = 'PESITANY_SOCKS5',
 
 To configure an outgoing connection through a proxy, user must define the following objects. The numbers referenced here are taken from the example below.
 
-- A network resource with the class 1 (NET0 in the example).
-- A network resource with the class 2 (NSOCKS5 in the example) and inet parameter = NET0. This net also contains SOCKS proxy host, port, username and password.
-- A transfer protocol with the parameter net = NSOCKS5 (value used in the example).
-- A partner referencing the protocol and class = 2 in its CFTTCP definition.
-- The default port for proxy servers is 1080.
+* A network resource with the class 1 (NET0 in the example).
+* A network resource with the class 2 (NSOCKS5 in the example) and inet parameter = NET0. This net also contains SOCKS proxy host, port, username and password.
+* A transfer protocol with the parameter net = NSOCKS5 (value used in the example).
+* A partner referencing the protocol and class = 2 in its CFTTCP definition.
+* The default port for proxy servers is 1080.
 
 ****Example****
 
@@ -179,8 +179,8 @@ CLASS = '2',
 
 ### SOCKS references
 
-- You can find the SOCKS4 specification at: [http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol.](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol)
-- The SOCKS5 specification is described in RFC 1928 at: <http://tools.ietf.org/html/rfc1928>.
+* You can find the SOCKS4 specification at: [http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol.](http://ftp.icm.edu.pl/packages/socks/socks4/SOCKS4.protocol)
+* The SOCKS5 specification is described in RFC 1928 at: <http://tools.ietf.org/html/rfc1928>.
 
 <span id="Setting"></span>
 
@@ -188,8 +188,8 @@ CLASS = '2',
 
 The proxy implementation for {{< TransferCFT/axwayvariablesComponentShortName  >}} Copilot is handled directly by the Java Socket class, and uses either the SOCKS V4 or V5 protocol. Note that the HTTP proxy that is used to connect to the Transfer CFT Copilot server for downloading is different from the one used for SOCKS 4 data exchange between Copilot client and server. Therefore, you require 2 proxies:
 
-- An HTTP proxy that you set in internet browser
-- A SOCKS 4 proxy that you set in Copilot
+* An HTTP proxy that you set in internet browser
+* A SOCKS 4 proxy that you set in Copilot
 
 Since the Copilot log in screen in a browser window does not provide a way to enter proxy settings, you must force the **Connect to a product** dialog box to display by entering faulty credentials in the Copilot log in screen. Once this connection dialog box displays, you can then set the proxy address and port.
 
@@ -203,5 +203,5 @@ To remove proxy and revert to the standard log in, simply remove the proxy addre
 
 ****Related topics****
 
-- Network resources - CFTNET (UI)
-- [CFTNET (CFTUTIL)](../../../c_intro_userinterfaces/web_copilot_ui/conf_intro/cftnet)
+* Network resources - CFTNET (UI)
+* [CFTNET (CFTUTIL)](../../../c_intro_userinterfaces/web_copilot_ui/conf_intro/cftnet)

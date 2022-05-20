@@ -10,15 +10,15 @@ weight: 300
 
 When renaming a file, Transfer CFT z/OS only releases the unused space if authorized to do so (APF), and if the file is allocated on a single volume. All files deleted by Transfer CFT are removed from the catalog.
 
-- SAM files are deleted/renamed by CAMLST
+* SAM files are deleted/renamed by CAMLST
 
 <!-- -->
 
-- PDS members are deleted/renamed by STOW
+* PDS members are deleted/renamed by STOW
 
 <!-- -->
 
-- VSAM files are deleted/renamed by dynamic calling to IDCAMS
+* VSAM files are deleted/renamed by dynamic calling to IDCAMS
 
 ### Overwrite PDS members
 
@@ -32,15 +32,15 @@ The CFTRECV command MACTION=REPLACE parameter controls the files that are receiv
 
 File sharing characteristics include:
 
-- Transfer CFT VSAM files are allocated as DISP=SHR
+* Transfer CFT VSAM files are allocated as DISP=SHR
 
 <!-- -->
 
-- Read transfer files are allocated as DISP=SHR
+* Read transfer files are allocated as DISP=SHR
 
 <!-- -->
 
-- Write files are allocated as DISP=OLD
+* Write files are allocated as DISP=OLD
 
 ### GRS multi-system protection
 
@@ -48,20 +48,20 @@ Transfer CFT uses QNAME CFTSHARE to protect various resources. QNAME CFTSHARE mu
 
 Transfer CFT uses the following other QNAMEs:
 
-- CFTFILES to protect transferred files
-- CFTSUBM to serialize JOBS submitted on the Internal Reader
+* CFTFILES to protect transferred files
+* CFTSUBM to serialize JOBS submitted on the Internal Reader
 
 <!-- -->
 
-- CFTPUTS for general internal serialization
+* CFTPUTS for general internal serialization
 
 <!-- -->
 
-- CFTCATSH to share the catalog dataspace
+* CFTCATSH to share the catalog dataspace
 
 The CFTFILES ENQs do not need to be broadcast to all systems in the GRS RING.
 
 ****Related topics****
 
-- [File access and coding](../file_access_and_coding)
-- [HFS hierarchical files](../c_hfs_hierarchical_files_zos)
+* [File access and coding](../file_access_and_coding)
+* [HFS hierarchical files](../c_hfs_hierarchical_files_zos)

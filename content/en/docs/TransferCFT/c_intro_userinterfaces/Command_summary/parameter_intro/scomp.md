@@ -12,19 +12,19 @@ weight: 3100
 
 The maximum authorized compression for sending a file.
 
-- rcomp//scomp
+* rcomp//scomp
     = ****0**** (no compression)
-- rcomp//scomp
+* rcomp//scomp
     = ****1**** (compression of a string of
     blanks)
-- rcomp//scomp
+* rcomp//scomp
     = ****2**** (compression of a string of
     identical characters)
-- rcomp//scomp
+* rcomp//scomp
     = ****4**** (character compression)
-- rcomp//scomp
+* rcomp//scomp
     = ****8**** (vertical compression)
-- rcomp//scomp
+* rcomp//scomp
     = ****15**** (all compressions)
 
 This compression is negotiated between the sender and the receiver.

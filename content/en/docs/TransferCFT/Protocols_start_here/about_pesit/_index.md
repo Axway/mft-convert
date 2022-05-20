@@ -18,24 +18,24 @@ In this PeSIT protocol sub-book we'll first review PeSIT features, then discuss
 
 PeSIT features available for {{< TransferCFT/axwayvariablesComponentShortName  >}} include:
 
-- [File
+* [File
     transmission](#File)
-- [File
+* [File
     reception](#File2)
-- [Setting synchronization points during a transfer](#Setting)
-- [Restarting interrupted transfers](#Restarti)
-- [Dynamic
+* [Setting synchronization points during a transfer](#Setting)
+* [Restarting interrupted transfers](#Restarti)
+* [Dynamic
     synchronization during a transfer](#Dynamic)
-- [Temporary
+* [Temporary
     suspension of a transfer](#Temporar)
-- [Data
+* [Data
     compression](#Data)
-- [Generic
+* [Generic
     file selection](#Generic)
-- [Two-way
+* [Two-way
     transfers over the same logical connection](#Two-way)
-- [Acknowledgment/negative acknowledgment messages](#End-to-e)
-- [Relay store-and-forward mode](#Store-an)
+* [Acknowledgment/negative acknowledgment messages](#End-to-e)
+* [Relay store-and-forward mode](#Store-an)
 
 <span id="File"></span>
 
@@ -65,11 +65,11 @@ after an incident.
 When you establish the logical connection between partners, the two
 partners can negotiate the following:
 
-- Synchronization
+* Synchronization
     acknowledgement window
-- Interval
+* Interval
     between synchronization points
-- Whether
+* Whether
     re-synchronization is allowed
 
 <span id="Restarti"></span>
@@ -109,9 +109,9 @@ transferred.
 
 Two types of compression are available in PeSIT:
 
-- Horizontal
+* Horizontal
     compression: deletes repeated characters in a logical record
-- Vertical
+* Vertical
     compression: transmits only that data which differs from the previous
     record
 
@@ -132,8 +132,8 @@ criteria.
 
 The PeSIT protocol allows only one file transfer in a given session at a time. Nevertheless, Transfer CFT can perform several concurrent transfers either as: 
 
-- Consecutive transfers within the same session
-- Several simultaneous file transfers on different sessions in both directions
+* Consecutive transfers within the same session
+* Several simultaneous file transfers on different sessions in both directions
 
 <span id="End-to-e"></span>
 

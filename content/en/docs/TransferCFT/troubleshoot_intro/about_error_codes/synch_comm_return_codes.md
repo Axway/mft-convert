@@ -35,9 +35,9 @@ ENDIF
 
 Note though that the _CMDRET value is not the same as the CFTUTIL return code, which could be:
 
-- 0: no error
-- 4: warning
-- 8: error
+* 0: no error
+* 4: warning
+* 8: error
 
 In the following example the synchronous communication return code is 82, while the CFTUTIL is 8:
 

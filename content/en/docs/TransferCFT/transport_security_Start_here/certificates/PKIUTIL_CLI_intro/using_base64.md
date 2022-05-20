@@ -35,12 +35,12 @@ PKIUTIL PKIEXT FOUT=FOO.cmd
 
 This exports a `FOO.cmd` file, where additional files are created containing the following data:
 
-- ROOT0001: the ROOT DER certificate
-- USER0002: the INTER DER certificate
-- USER0003: the USER DER certificate
-- USERK003: the USER private key in KPRIV format
-- KPRIV004: the PRIV private key in KPRIV format
-- KPUB0004: the PRIV public key in ssh-rsa format
+* ROOT0001: the ROOT DER certificate
+* USER0002: the INTER DER certificate
+* USER0003: the USER DER certificate
+* USERK003: the USER private key in KPRIV format
+* KPRIV004: the PRIV private key in KPRIV format
+* KPUB0004: the PRIV public key in ssh-rsa format
 
 By contrast, the Base64 option uses the IDATA/IKDATA parameters to extract a single `BAR.cmd` file instead of files.
 

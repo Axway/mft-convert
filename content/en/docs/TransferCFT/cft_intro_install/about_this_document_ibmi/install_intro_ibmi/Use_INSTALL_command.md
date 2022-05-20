@@ -4,9 +4,9 @@ linkTitle: "About the INSTALL command"
 weight: 190
 ---The INSTALL command enables you to install:
 
-- Transfer CFT binary objects, such as programs, to the Transfer CFT program library
-- Transfer CFT files to production library
-- Transfer CFT IFS files to IFS directory
+* Transfer CFT binary objects, such as programs, to the Transfer CFT program library
+* Transfer CFT files to production library
+* Transfer CFT IFS files to IFS directory
 
 After uploading the Transfer CFT IBM i CFT33XL file to the target location, in the Transfer CFT profile you must add the CFTTMP library to the library list. In command line, execute:
 
@@ -18,37 +18,37 @@ After uploading the Transfer CFT IBM i CFT33XL file to the target location, in t
 
 During the installation you are prompted to configure your installation, for example:
 
-- Install on an independent ASP
-- CFT program library
-- CFT production library
-- User for whom Transfer CFT is installed
-- CFT JOBD, CFT JOBQ, CFT Subsystem, CFT class, CFT OUTQ
-- Encryption Password
-- Confirm Encryption Password
-- Key file name
-- Salt file name
-- Installation and runtime directory
-- IDPARM (max length &lt; 9)
-- Transfer CFT Copilot server hostname and port
-- Catalog size
-- Communication file size
+* Install on an independent ASP
+* CFT program library
+* CFT production library
+* User for whom Transfer CFT is installed
+* CFT JOBD, CFT JOBQ, CFT Subsystem, CFT class, CFT OUTQ
+* Encryption Password
+* Confirm Encryption Password
+* Key file name
+* Salt file name
+* Installation and runtime directory
+* IDPARM (max length &lt; 9)
+* Transfer CFT Copilot server hostname and port
+* Catalog size
+* Communication file size
 
 You can also enable:
 
-- Multi-node architecture
-- Central Governance connectivity
-- REST API server
-- Sentinel
-- SSL
+* Multi-node architecture
+* Central Governance connectivity
+* REST API server
+* Sentinel
+* SSL
 
 Lastly, you can configure:
 
-- AM type
-- PKI type
-- cft instance id
-- Synchronous transfer port
-- PeSITany port
-- PeSITssl port
+* AM type
+* PKI type
+* cft instance id
+* Synchronous transfer port
+* PeSITany port
+* PeSITssl port
 
 ## Executing the INSTALL command 
 

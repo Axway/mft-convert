@@ -5,10 +5,10 @@ weight: 220
 ---This section introduces the two application families that can be developed using
 two interfaces and the development kit contents for building APIs.
 
-- Applications communicating
+* Applications communicating
     with {{< TransferCFT/axwayvariablesComponentShortName >}} to submit and monitor transfers or query the catalog,
     for example.
-- Exits enabling
+* Exits enabling
     user programs to take control during a send operation.
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} provides a programming interface in C, which require that you have the development kit, C compiler, and associated tools installed on your system.
@@ -16,10 +16,10 @@ two interfaces and the development kit contents for building APIs.
 This section then describes how to
 create the following applications:
 
-- An API
+* An API
     application
-- File exit
-- Directory
+* File exit
+* Directory
     exit
 
 <span id="Prerequi"></span>

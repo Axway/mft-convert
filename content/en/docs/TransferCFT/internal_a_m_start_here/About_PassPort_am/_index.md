@@ -8,24 +8,24 @@ weight: 160
 
 {{< TransferCFT/axwayvariablesCompanyName  >}} PassPort Access Management centralizes {{< TransferCFT/axwayvariablesComponentShortName  >}} access management. PassPort AM provides:
 
-- Identity and access
+* Identity and access
     control for {{< TransferCFT/axwayvariablesCompanyName >}} products
-- Authentication
+* Authentication
     via a user/password login
-- Authorization enabling
+* Authorization enabling
     user access to {{< TransferCFT/axwayvariablesCompanyName >}} products resources
-- Role-based access
+* Role-based access
     that defines privileges for users
 
 ### User roles
 
 The default roles are as follows:
 
-- **Administrator** provides full user access
-- **Helpdesk** enables you to view the Catalog and Log
-- **Designer** allows you to manage application flows
-- **Application** allows applications to request and manage transfers, and view the Catalog
-- **PartnerManager** allows you to manage partners
+* **Administrator** provides full user access
+* **Helpdesk** enables you to view the Catalog and Log
+* **Designer** allows you to manage application flows
+* **Application** allows applications to request and manage transfers, and view the Catalog
+* **PartnerManager** allows you to manage partners
 
 Please refer to the [*Transfer CFT *{{< TransferCFT/axwayvariablesReleaseNumber  >}} *Security Guide*](https://docs.axway.com/bundle/TransferCFT_38_SecurityGuide_allOS_en_HTML5/page/Content/security_guide/predefined_privileges.htm) for a complete list of privileges and roles. (Requires login.)
 
@@ -34,9 +34,9 @@ Please refer to the [*Transfer CFT *{{< TransferCFT/axwayvariablesReleaseNumber
 To configure the PassPort AM Connector in {{< TransferCFT/axwayvariablesComponentShortName  >}}, set the uconf
 parameters described in [Configuring PassPort AM](configure_passport_am). You can use one of the following tools to set these parameters:
 
-- CFTUTIL: CFTUTIL
+* CFTUTIL: CFTUTIL
     UCONFSET id=, value=
-- Transfer CFT user interface:
+* Transfer CFT user interface:
     the [Unified Configuration](../../admin_intro/uconf/uconf_userinterface) window
 
 <span id="CSD file"></span>

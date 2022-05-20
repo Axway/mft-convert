@@ -9,28 +9,28 @@ Installing a multi-host Transfer CFT architecture requires additional prerequisi
 ### Step overview
 
 1. Install the first machine using the [****First host**** installation](#host_installation_step) option.
-    -   For the first host installation, you should enter all hosts for the installation architecture.
+    *   For the first host installation, you should enter all hosts for the installation architecture.
 
     <!-- -->
 
-    -   You must at this point enter the shared directory that will be used by all of the hosts and machines in the setup.
+    *   You must at this point enter the shared directory that will be used by all of the hosts and machines in the setup.
 
     <!-- -->
 
-    -   This first installation saves all of the initial information for the additional machine installations.
+    *   This first installation saves all of the initial information for the additional machine installations.
 1. Install all additional machines using the [****Additional host**** installation](#host_installation_step) option, for example the second and third machine.
-    -   Do ****not**** select ****First host**** for an additional host installation.
+    *   Do ****not**** select ****First host**** for an additional host installation.
 
     <!-- -->
 
-    -   You are prompted to enter the shared directory location, as defined in the previous step.
+    *   You are prompted to enter the shared directory location, as defined in the previous step.
 
 ### Prerequisites
 
 To install Transfer CFT OpenVMS in a cluster you require:
 
-- Multiple machines on which each of these the Transfer CFT binaries can be installed in the installation directory path.
-- A shared directory that is available for all of the machines where the Transfer CFT runtime will be installed and shared.
+* Multiple machines on which each of these the Transfer CFT binaries can be installed in the installation directory path.
+* A shared directory that is available for all of the machines where the Transfer CFT runtime will be installed and shared.
 
 ### Procedure
 
@@ -52,8 +52,8 @@ To begin the procedure:
     --> Type M to modify, ENTER to continue:
     ```
 1. Enter the local Transfer CFT instance details.
-    -   Group name: Use this field to assign your Transfer CFT to a Transfer CFT group. This value is used for Transfer CFT Navigator and Composer, if your setup includes these additional components.
-    -   Local name: This value is your CFTNAME, as defined by LOCALPART in CFTPARM by default. See also the UCONF values.
+    *   Group name: Use this field to assign your Transfer CFT to a Transfer CFT group. This value is used for Transfer CFT Navigator and Composer, if your setup includes these additional components.
+    *   Local name: This value is your CFTNAME, as defined by LOCALPART in CFTPARM by default. See also the UCONF values.
 
     ```
 

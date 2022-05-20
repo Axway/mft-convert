@@ -10,8 +10,8 @@ TURN = {FILE&#124;MESSAGE}
 
 Method of data exchange.
 
-- FILE: data exchange via files and messages
-- MESSAGE: exchange of messages only
+* FILE: data exchange via files and messages
+* MESSAGE: exchange of messages only
 
 This value is negotiated with the value specified in the Transfer CFT within the DMZ.
 

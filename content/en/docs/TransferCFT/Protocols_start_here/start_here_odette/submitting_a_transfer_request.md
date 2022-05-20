@@ -5,19 +5,19 @@ weight: 180
 ---After configuring the OFTP (ODETTE) environment, as described in [Configuring OFTP](../configuring_odette), you must
 define the transfer environment in the following objects:
 
-- CFTSEND
-- CFTRECV
+* CFTSEND
+* CFTRECV
 
 This topic describes the steps that enable you to
 submit a transfer request. The [next
 topic](../receiving_transfers) describes the procedure that enables you to receive. The parameters
 for the CFTSEND object in ODETTE are defined in the following sections:
 
-- [Data
+* [Data
     code](#Data_code)
-- [Setting
+* [Setting
     the type parameter](#Setting_the_type_parameter)
-- [Setting
+* [Setting
     the file format](#Setting_the_file_format)
 
 <span id="About_CFTSEND_in_Odette"></span>
@@ -34,17 +34,17 @@ data code received is ASCII.
 
 To ensure that alphanumerical data are sent in ASCII you can either:
 
-- Set SYST = UNIX
+* Set SYST = UNIX
     in CFTPART.  
     As the partner is defined as an ASCII system, data are then sent in
     ASCII (NCODE not defined) by default. Or,
-- Set NCODE = ASCII
+* Set NCODE = ASCII
     in CFTSEND
 
 Translation is carried out during transmission, if you set:
 
-- FCODE = EBCDIC
-- FCODE = ASCII and
+* FCODE = EBCDIC
+* FCODE = ASCII and
     an external ASCII/ASCII translation table is defined
 
 There is no translation if FCODE = BINARY.
@@ -64,9 +64,9 @@ operating system.
 Do not
 set the following parameters:
 
-- NRECFM: the format
+* NRECFM: the format
     of a file is imposed for Odette text files
-- NLRECL: the maximum
+* NLRECL: the maximum
     length of records is set to 2048 bytes
 
 The corresponding values are implicitly sent by Transfer CFT.
@@ -77,11 +77,11 @@ The corresponding values are implicitly sent by Transfer CFT.
 
 Set the RECFM parameter to:
 
-- F for a file in
+* F for a file in
     fixed format
-- V for a file in
+* V for a file in
     variable format
-- U for a file in
+* U for a file in
     undefined format
 
 > **Note**

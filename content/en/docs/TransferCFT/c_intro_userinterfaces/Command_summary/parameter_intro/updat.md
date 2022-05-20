@@ -19,9 +19,9 @@ transfer to be written to the disk.
 
 For example:
 
-- 0 means the catalog
+* 0 means the catalog
     file is not updated during transfer
-- 1 means the catalog
+* 1 means the catalog
     file is updated at each synchronization point
 
 *Note: For* some systems, increasing

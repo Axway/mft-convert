@@ -66,12 +66,12 @@ logical name must be given by the JCL initiating {{< TransferCFT/axwayvariablesC
 The name of the ****Selection criteria****
 file may be defined by  either the:
 
-- Physical name in
+* Physical name in
     the PARM parameter, *or*
 
 <!-- -->
 
-- Logical name, which
+* Logical name, which
     must be the CFTEXIT object identifier
 
 <span id="Request_catalog"></span>
@@ -92,11 +92,11 @@ IDF = IDFexit
 
 The server:
 
-- Recognizes the
+* Recognizes the
     request for the catalog list using the transfer IDF
-- Processes the ****Selection criteria**** file
-- Consults the catalog
-- Sends the entries
+* Processes the ****Selection criteria**** file
+* Consults the catalog
+* Sends the entries
     selected from the catalog to the requesting partner as fixed-length records.
     The selection implicitly chooses only catalog entries concerning this
     partner. This means that

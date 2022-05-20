@@ -13,8 +13,8 @@ The following outlines tasks for defining a flow. Optional steps, such as defini
 In the ****Flow List**** page click ****Add flow**** and perform the following steps:
 
 1. Select **General information** and complete the fields. The following fields are mandatory:
-    -   Name: Enter a user friendly name in our example ****Simple flow****
-    -   Identifier: Enter the id that will be used in the transfer commands ****flow01**** (Transfer CFT IDF)
+    *   Name: Enter a user friendly name in our example ****Simple flow****
+    *   Identifier: Enter the id that will be used in the transfer commands ****flow01**** (Transfer CFT IDF)
 1. Select ****Source**** and click ****Edit****. The source is the owner of the data being transferred.
 1. Select ****Target**** and click ****Edit****. The target is the receiver of the exchange.
 1. Optionally, select Protocol and define.

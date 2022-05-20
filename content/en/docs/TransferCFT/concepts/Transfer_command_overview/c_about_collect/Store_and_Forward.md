@@ -4,12 +4,12 @@ linkTitle: "Store and forward relays"
 weight: 340
 ---Store and forward, or transfer routing, allows you to define and automate file transfer using an intermediate site. This page describes using store-and-forward services either in a {{< TransferCFT/suitevariablesCentralGovernanceName  >}} context or using a standalone {{< TransferCFT/suitevariablesTransferCFTName  >}}.
 
-- [Store and forward with {{< TransferCFT/suitevariablesCentralGovernanceName >}}](#Store)
-- [Store and forward standalone {{< TransferCFT/suitevariablesTransferCFTName >}}](#Store2)
-    -   [Intentional
+* [Store and forward with {{< TransferCFT/suitevariablesCentralGovernanceName >}}](#Store)
+* [Store and forward standalone {{< TransferCFT/suitevariablesTransferCFTName >}}](#Store2)
+    *   [Intentional
         store and forward](#Intentional_Store_and_Forward)
-    -   [Intentional VAN store and forward](#Intentional_VAN_store_and_forward)
-    -   [Forced
+    *   [Intentional VAN store and forward](#Intentional_VAN_store_and_forward)
+    *   [Forced
         store and forward](#Forced_Store_and_Forward)
 
 <span id="Store"></span>
@@ -22,9 +22,9 @@ To implement a relay in conjunction with {{< TransferCFT/PrimaryCGorUM  >}}:
 
 1. Create the flow as described in the [Central Governance User Guide](https://docs.axway.com/bundle/CentralGovernance_113_UsersGuide_allOS_en_HTML5/page/Content/AxwayStartPage.htm).
 1. In the SEND command include at a minimum:
-    -   The name of the final receiver, for example TARGET_APPLICATION.
-    -   The name of the flow, for example TEST_RELAY.
-    -   The file to be transferred, for example `report`.
+    *   The name of the final receiver, for example TARGET_APPLICATION.
+    *   The name of the flow, for example TEST_RELAY.
+    *   The file to be transferred, for example `report`.
 
     ```
     cftutil send part=target_application, idf=test_relay, fname=report
@@ -58,22 +58,22 @@ figure below.
 
 Configure the following for the initial sender (Site A):
 
-- Define the final receiver CFTPART with both the OMINTIME and OMAXTIME parameters equal to zero.
-- Define the first relay (Site B).
-- In the final receiver partner definition, make a reference to the first relay with IPART=&lt;relay> .
+* Define the final receiver CFTPART with both the OMINTIME and OMAXTIME parameters equal to zero.
+* Define the first relay (Site B).
+* In the final receiver partner definition, make a reference to the first relay with IPART=&lt;relay> .
 
 ****Configure the relay****
 
 Configure the following for the store and forward (Site B):
 
-- Define both the initiator and the receiver CFTPART partner definitions.
-- Set COMMUT=YES (default).
+* Define both the initiator and the receiver CFTPART partner definitions.
+* Set COMMUT=YES (default).
 
 ****Configure the receiver****
 
 Configure the following for the final receiver (Site C):
 
-- Define both the initiator and the relay CFTPART partner definitions.
+* Define both the initiator and the relay CFTPART partner definitions.
 
 > **Note**
 >
@@ -106,26 +106,26 @@ figure below.
 
 Configure the following for the initial sender (Site A):
 
-- Define the final receiver CFTPART with OMINTIME and OMAXTIME parameters equal to zero.
-- Define the first relay.
-- Make a reference to the first relay with IPART=&lt;relay> in the final receiver partner definition.
+* Define the final receiver CFTPART with OMINTIME and OMAXTIME parameters equal to zero.
+* Define the first relay.
+* Make a reference to the first relay with IPART=&lt;relay> in the final receiver partner definition.
 
 ****Configure the relay****
 
 Configure the following for the store and forward (Site B):
 
-- Define both the initiator and the receiver CFTPART partner definitions.
-- Set COMMUT=SERVER.
-- Define a procedure to execute and reference in the CFTPARM (in this example).
-    -   In the store and forward example below, the procedure identified by `myproc `
+* Define both the initiator and the receiver CFTPART partner definitions.
+* Set COMMUT=SERVER.
+* Define a procedure to execute and reference in the CFTPARM (in this example).
+    *   In the store and forward example below, the procedure identified by `myproc `
         includes the following command on completion of processing: `CFTUTIL SEND PART= &RPART, SPART= &SPART, FNAME= &FNAME, IDF=   &IDF`
-    -   When the symbolic variables are replaced: `CFTUTIL SEND PART=ID_C,SPART=ID_A,FNAME=frecv, IDF=test`
+    *   When the symbolic variables are replaced: `CFTUTIL SEND PART=ID_C,SPART=ID_A,FNAME=frecv, IDF=test`
 
 ****Configure the receiver****
 
 Configure the following for the final receiver (Site C):
 
-- Define both the initiator and the relay CFTPART partner definitions.
+* Define both the initiator and the relay CFTPART partner definitions.
 
 > **Note**
 >
@@ -149,37 +149,37 @@ figure below.
 
 ****Configure the sender****
 
-- Define the first relay (Intermediate Site 1).
+* Define the first relay (Intermediate Site 1).
 
 ****Configure the first relay****
 
 Configure the following for the store and forward Intermediate Site 1:
 
-- Define the sender and the second relay (Site 2) = 2 CFTPARTs.
-- Set COMMUT=PART.
+* Define the sender and the second relay (Site 2) = 2 CFTPARTs.
+* Set COMMUT=PART.
 
 <!-- -->
 
-- In the CFTPART for the sender site, make a reference to the second relay using the IPART=&lt;Site 2>.
+* In the CFTPART for the sender site, make a reference to the second relay using the IPART=&lt;Site 2>.
 
 ****Configure the second relay****
 
 Configure the following for the store and forward Intermediate Site 2:
 
-- Define both the first relay (Intermediate Site 1) and the receiver partner definitions (CFTPARTs).
-- Set COMMUT=PART.
-- In the CFTPART for the first relay (Intermediate Site 1), make a reference to the final site.
+* Define both the first relay (Intermediate Site 1) and the receiver partner definitions (CFTPARTs).
+* Set COMMUT=PART.
+* In the CFTPART for the first relay (Intermediate Site 1), make a reference to the final site.
 
 ****Configure the final receiver****
 
-- Define the CFTPART partner definition for the second relay (Intermediate Site 2).
+* Define the CFTPART partner definition for the second relay (Intermediate Site 2).
 
 > **Note**
 >
 > To enable acknowledgments from the receiver to the sender, add the IPART for each CFTPART definition in each relay. For example:
 
-- For the Intermediate Site 2 in the CFTPART ID=IDGWAY, set the IPART=IDDEP1, which refers to the Intermediate Site 1.
-- For the Intermediate Site 1 in the CFTPART ID=IDDEP, set the IPART=IDNAT1, which refers to the sender site.
+* For the Intermediate Site 2 in the CFTPART ID=IDGWAY, set the IPART=IDDEP1, which refers to the Intermediate Site 1.
+* For the Intermediate Site 1 in the CFTPART ID=IDDEP, set the IPART=IDNAT1, which refers to the sender site.
 
 ****Store and forward SEND command****
 

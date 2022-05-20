@@ -14,9 +14,9 @@ You cannot run the InstallBuilder if the **noexec mount option** is set on both 
 
 Workarounds include:
 
-- Remove the `noexec `option from one of the partitions.
-- Run the` .run` with a user who has the necessary rights, for example `sudo`.
-- Create a temporary `/home` directory on an unprotected disk:
+* Remove the `noexec `option from one of the partitions.
+* Run the` .run` with a user who has the necessary rights, for example `sudo`.
+* Create a temporary `/home` directory on an unprotected disk:
 
 ```
 sudo mkdir /instcft
@@ -33,11 +33,11 @@ export HOME=/instcft (unprotected disk)
 
 If Copilot starts, but the Transfer CFT either does not display in the {{< TransferCFT/PrimaryCGorUM  >}} **Product List** or registers in error:
 
-- Verify the Central Governance IP address (or FQDN) used in the Transfer CFT configuration.
-- On the computer running Transfer CFT, check that you can reach Central Governance at the IP address used in the Transfer CFT configuration.
-- Check that the Transfer CFT appears in the Central Governance logs. If not, typically this is because the Transfer CFT is unable contact Central Governance.
-- In {{< TransferCFT/PrimaryCGorUM >}} check **Administration > Services** to ensure that Central Governance is correctly started.
-- Verify the shared secret for Central Governance used in the Transfer CFT configuration.
+* Verify the Central Governance IP address (or FQDN) used in the Transfer CFT configuration.
+* On the computer running Transfer CFT, check that you can reach Central Governance at the IP address used in the Transfer CFT configuration.
+* Check that the Transfer CFT appears in the Central Governance logs. If not, typically this is because the Transfer CFT is unable contact Central Governance.
+* In {{< TransferCFT/PrimaryCGorUM >}} check **Administration > Services** to ensure that Central Governance is correctly started.
+* Verify the shared secret for Central Governance used in the Transfer CFT configuration.
 
 > **Note**
 >
@@ -93,8 +93,8 @@ To have more request details between {{< TransferCFT/suitevariablesCentralGovern
 
 Transfer CFT cannot register in Central Governance when installing Copilot in service mode.
 
-- Preventive measure: Deactivate the firewall to perform the registration.
-- Workaround: If you encounter this error, perform the following steps to register:
+* Preventive measure: Deactivate the firewall to perform the registration.
+* Workaround: If you encounter this error, perform the following steps to register:
     1.  Stop the Copilot Windows service.
     2.  Manually start the service in a DOSBOX to register.
     3.  Accept the authorization from the Windows firewall.

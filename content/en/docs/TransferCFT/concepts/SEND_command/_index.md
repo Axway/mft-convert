@@ -6,12 +6,12 @@ weight: 160
 
 This section describes how to use the SEND command to perform a file transfer. It begins with the simple examples and builds in complexity. However, there are many Transfer CFT parameters that can help you customize your flows, which are described in feature specific topics. Examples in this page are divided into the following umbrella categories:
 
-- [Use or override default values](#Use)
-- [Use file name parameters](#Use2)
-- [Use scheduling features](#Use3)
-- [Execute pre and post transfer activities](#Execute)
-- [Use visibility features to link an application to a transfer](#Use4)
-- [Miscellaneous send features](#Miscella)
+* [Use or override default values](#Use)
+* [Use file name parameters](#Use2)
+* [Use scheduling features](#Use3)
+* [Execute pre and post transfer activities](#Execute)
+* [Use visibility features to link an application to a transfer](#Use4)
+* [Miscellaneous send features](#Miscella)
 
 See also the details on using [symbolic variables](../../c_intro_userinterfaces/command_summary/symbolic_variables).
 
@@ -212,9 +212,9 @@ scheduling](../transfer_command_overview/delayed_transfers).
 
 **Prerequisites**
 
-- You can only use this mode between Transfer CFTs running the same platforms (Windows to Windows, for example)
-- Set the uconf cft.server.force_heterogeneous_mode parameter value to yes if not already done
-- Use the group of files syntax
+* You can only use this mode between Transfer CFTs running the same platforms (Windows to Windows, for example)
+* Set the uconf cft.server.force_heterogeneous_mode parameter value to yes if not already done
+* Use the group of files syntax
 
 Use the fname and wfname parameters to use this mode, also referred to as homogeneous mode.
 
@@ -312,9 +312,9 @@ send part=store1, idf=model, wstates=TX, wtimeout=120
 
 Use the following parameters to further refine the send command and provide more information to the remote partner concerning a transfer
 
-- parm = a free parameter that allows you to add information to send with your transfer (512 characters)
-- sappl, rappl = send information about the applications sending the transfer
-- suser, ruser = send information related to the transfer users
+* parm = a free parameter that allows you to add information to send with your transfer (512 characters)
+* sappl, rappl = send information about the applications sending the transfer
+* suser, ruser = send information related to the transfer users
 
 ```
 send part=store1, idf=model, parm='contains all daily reports'
@@ -330,8 +330,8 @@ send part=store1, idf=model, faction=archive, archivefname=&FNAME_&FDATE_&IDTU
 
 ****Limitations****
 
-- The fname and archivefname must be on the same volume (all platforms)
-- Faction=archive is not supported for:
-    -   Implicit send (CFTSEND IMPL=YES)
-    -   Homogeneous group of files
-    -   Broadcasting
+* The fname and archivefname must be on the same volume (all platforms)
+* Faction=archive is not supported for:
+    *   Implicit send (CFTSEND IMPL=YES)
+    *   Homogeneous group of files
+    *   Broadcasting

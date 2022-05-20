@@ -39,10 +39,10 @@ Due to SSL protocol properties, the security profile in server mode must be know
 
 If the partner has a specific security profile for the server mode, after the partner is identified (the partner network identity is compared with a CFTPART object), additional checks are performed between the profile and open SSL session elements:
 
-- Authentication level check required (CFTSSL command USERCID and VERIFY parameters)
-- Check of the security algorithms supported (CFTSSL command CIPHLIST parameter)
-- Client certificate DN check (CFTSSL command DNUSER parameter)
-- DN check of the authority that issued the client certificate (CFTSSL command DNISSUER parameter)
+* Authentication level check required (CFTSSL command USERCID and VERIFY parameters)
+* Check of the security algorithms supported (CFTSSL command CIPHLIST parameter)
+* Client certificate DN check (CFTSSL command DNUSER parameter)
+* DN check of the authority that issued the client certificate (CFTSSL command DNISSUER parameter)
 
 If a specific SSL profile exists (CFTSSL direct=SERVER), then there are additional checks such as for the DNUSER or DNISSUER. However, if the SSL profile does not exist, the warning message CFTT47W displays.
 

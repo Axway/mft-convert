@@ -4,8 +4,8 @@ linkTitle: "Introduction"
 weight: 150
 ---This document describes how to install Transfer CFT {{< TransferCFT/headerfootervariableshfversion  >}} in a HP NonStop environment. HP NonStop exists on several hardware architectures, such as Itanium and Intel x86. On each of these runs a version of the HP NonStop OS, which is platform dependent. Therefore, there are two different versions of Transfer CFT for HP NonStop:
 
-- Transfer CFT for HP NonStop Itanium, which runs specifically on HP NonStop for Itanium processors.
-- Transfer CFT for HP NonStop x86, which runs specifically on HP NonStop for Intel x86 processors.
+* Transfer CFT for HP NonStop Itanium, which runs specifically on HP NonStop for Itanium processors.
+* Transfer CFT for HP NonStop x86, which runs specifically on HP NonStop for Intel x86 processors.
 
 > **Note**
 >
@@ -29,8 +29,8 @@ Perform any prerequisites operations using the user account intended for the Tra
 
 The following disk space calculations are the minimum requirements for a test environment. This calculation includes space required for service packs and a basic instance of the product. In a production environment, you must evaluate and modify the required disk and memory space per your requirements.
 
-- Disk space: 430 MB for Transfer CFT for HP NonStop Itanium
-- Disk space: 400 MB for Transfer CFT for HP NonStop x86
+* Disk space: 430 MB for Transfer CFT for HP NonStop Itanium
+* Disk space: 400 MB for Transfer CFT for HP NonStop x86
 
 ### Pseudo Random Number Generator Daemon
 
@@ -42,14 +42,14 @@ Transfer CFT needs to access a random device for its security operations. Since 
 
 ### Additional requirements
 
-- Transfer CFT for HP NonStop Itanium is built on an J-series TNS/E Itanium machine. The operating system Release Version Update (RVU) used is J06.21.
-- Transfer CFT for HP NonStop x86 is built on an L-series TNS/X x86 machine. The operating system Release Version Update (RVU) used is L15.08.
+* Transfer CFT for HP NonStop Itanium is built on an J-series TNS/E Itanium machine. The operating system Release Version Update (RVU) used is J06.21.
+* Transfer CFT for HP NonStop x86 is built on an L-series TNS/X x86 machine. The operating system Release Version Update (RVU) used is L15.08.
 
 > **Note**
 >
 > Even though it may be possible to run Transfer CFT for HP NonStop on an older RVU, we recommend that you run the product on a more recent RVU (or similar to the following) to ensure that the product stability and performance is not impaired by an old-system component. More information is available in the HP Release Version Update Compendium manuals.
 
-- The Open System Services (OSS) subsystem should be installed.
+* The Open System Services (OSS) subsystem should be installed.
 
 ## End User License Agreement
 
@@ -57,7 +57,7 @@ You should read and accept the End User License Agreement (EULA) prior to instal
 
 ## Limitations
 
-- CreateProcessAsUser is not supported on HP NonStop.
-- The FACTION parameter ARCHIVE option (for CFTSEND, SEND) is not supported with Guardian files.
+* CreateProcessAsUser is not supported on HP NonStop.
+* The FACTION parameter ARCHIVE option (for CFTSEND, SEND) is not supported with Guardian files.
 
  

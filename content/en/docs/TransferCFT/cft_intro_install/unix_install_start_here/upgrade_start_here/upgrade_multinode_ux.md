@@ -46,13 +46,13 @@ For details on shared disks, node commands, and other multi-node considerations,
     _Install_<OS>_<BN>.run --architecture additional_host --runtimedir <runtimedir>
     ```
 
-- Use the two following parameters, depending on if this is the first host or an additional host:
-    -   `architecture `and `installdir `(first_host), *or*
-    -   `architecture `and `runtimedir `(additional_host)
-- Where:
-    -   --architecture &lt;architecture>: Installation architecture (first_host or additional_host).
-    -   --installdir &lt;installdir>: For a legacy upgrade, this is the directory where the Axway Installer was installed. When this parameter is assigned, it overwrites any reference in the configuration file (first_host).
-    -   --runtimedir &lt;runtimedir>: For a legacy upgrade, you must specify the installation’s shared directory instead of the runtime. For example:` /mnt/Axway_Shared `or` Z:\Axway_Shared`  
+* Use the two following parameters, depending on if this is the first host or an additional host:
+    *   `architecture `and `installdir `(first_host), *or*
+    *   `architecture `and `runtimedir `(additional_host)
+* Where:
+    *   --architecture &lt;architecture>: Installation architecture (first_host or additional_host).
+    *   --installdir &lt;installdir>: For a legacy upgrade, this is the directory where the Axway Installer was installed. When this parameter is assigned, it overwrites any reference in the configuration file (first_host).
+    *   --runtimedir &lt;runtimedir>: For a legacy upgrade, you must specify the installation’s shared directory instead of the runtime. For example:` /mnt/Axway_Shared `or` Z:\Axway_Shared`  
         When this parameter is assigned, it overwrites any reference in the configuration file (additional_host).
 
 ### Restart the upgraded Transfer CFT multihost multi-node environment
@@ -78,11 +78,11 @@ For details on shared disks, node commands, and other multi-node considerations,
     ```
     CFTUTIL listnode
     ```
-    -   All of the Copilots should be started
+    *   All of the Copilots should be started
 
     <!-- -->
 
-    -   All of the Transfer CFT nodes must be started
+    *   All of the Transfer CFT nodes must be started
 
 Your Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}} exec scripts are now operational. However, you must rebuild your APIs and Exits. Once Transfer CFT has been upgraded on a host you can start that instance, there is no need to wait until Transfer CFT is upgraded on every host.
 

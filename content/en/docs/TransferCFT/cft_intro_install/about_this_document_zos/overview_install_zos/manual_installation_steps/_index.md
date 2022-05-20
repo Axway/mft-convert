@@ -71,25 +71,25 @@ Before beginning it is recommended that you save the execution listing for this 
 
 The CFTMAIN/CFTMA31 programs are copied in an authorized APF library for the cases in which Transfer CFT:
 
-- Writes ACCOUNT records to SMF.
+* Writes ACCOUNT records to SMF.
 
 <!-- -->
 
-- Uses the RACF options.
+* Uses the RACF options.
 
 <!-- -->
 
-- Sends messages to TSO users.
+* Sends messages to TSO users.
 
 <!-- -->
 
-- Uses dynamic UCBs (DRM) or UCBs that are defined in 31 bits in IODF.
+* Uses dynamic UCBs (DRM) or UCBs that are defined in 31 bits in IODF.
 
 <!-- -->
 
-- Uses the ARM services.
-- Uses a shared catalog cache.
-- Frees unused space for received files.
+* Uses the ARM services.
+* Uses a shared catalog cache.
+* Frees unused space for received files.
 
 > **Note**
 >
@@ -101,8 +101,6 @@ The CFTMAIN/CFTMA31 programs are copied in an authorized APF library for the cas
 
 <span id="JOB B25LKWS LINK-EDIT Web services "></span>
 
-## 
-
 <span id="COPA010 Setting up the CFT Navigator server files in USS "></span><span id="kanchor10"></span>
 
 ## Set up Copilot server files in USS using COPA010
@@ -111,11 +109,11 @@ The files that are used by the Transfer CFT Copilot server are located in the US
 
 ### Prerequisites
 
-- Authorization to create the directory: coppath
+* Authorization to create the directory: coppath
 
 <!-- -->
 
-- Available disk space: 25,000 K
+* Available disk space: 25,000 K
 
 ### **Procedure**
 
@@ -138,5 +136,5 @@ You can use the JCL COPA010 to set up the Transfer CFT Copilot files in USS.
 
 ****Related topics****
 
-- [Create a Transfer CFT instance](../distribution_environment_installation/t_install_instance_envr_zos)
-- [Customize the JCL installation files](../installation_parameters_to_customize)
+* [Create a Transfer CFT instance](../distribution_environment_installation/t_install_instance_envr_zos)
+* [Customize the JCL installation files](../installation_parameters_to_customize)

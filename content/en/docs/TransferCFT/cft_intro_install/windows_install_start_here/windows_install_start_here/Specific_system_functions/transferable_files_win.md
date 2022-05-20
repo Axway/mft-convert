@@ -6,12 +6,12 @@ weight: 230
 topic describes the Transfer
 CFT parameters that are specific to Windows concerning the characteristics of the transferable file.
 
-- Characteristics
+* Characteristics
     of files automatically detected on transmission
     &lt;/li>
-- FTYPE
+* FTYPE
     values and FCODE values implicitly associated during transmission
-- FTYPE
+* FTYPE
     and FRECFM values on receipt
 
 #### Characteristics of files automatically detected on transmission

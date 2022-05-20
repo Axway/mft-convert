@@ -6,8 +6,8 @@ weight: 220
 
 The default value (No) sets:
 
-- LISTCAT to version 3.0 or higher
-- State to an adapted state, which corresponds to the phase and phase steps described in this section
+* LISTCAT to version 3.0 or higher
+* State to an adapted state, which corresponds to the phase and phase steps described in this section
 
 ![](/Images/TransferCFT/temp_compat.png)
 

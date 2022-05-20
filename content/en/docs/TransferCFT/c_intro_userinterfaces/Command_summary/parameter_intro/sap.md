@@ -43,18 +43,18 @@ Values of the remote SAPs (service
 access points) associated with each of the protocols defined by the PROT
 parameter.
 
-- For transfers to a {{< TransferCFT/axwayvariablesComponentShortName >}} other than
+* For transfers to a {{< TransferCFT/axwayvariablesComponentShortName >}} other than
     the {{< TransferCFT/axwayvariablesComponentShortName >}}, the use of this additional information should
     be looked into on a case by case basis.
-- For transfers to a {{< TransferCFT/axwayvariablesComponentShortName >}},
+* For transfers to a {{< TransferCFT/axwayvariablesComponentShortName >}},
     this parameter is used to designate the protocol applied to the partner
     {{< TransferCFT/axwayvariablesComponentShortName >}}. In other words, the "sap" is an additional
     item of information used to reach a remote application subset (a protocol
     in the {{< TransferCFT/axwayvariablesComponentShortName >}} case) and not only a {{< TransferCFT/axwayvariablesComponentShortName >}}.
-- Each of the values of the parameter represents the "sap" associated
+* Each of the values of the parameter represents the "sap" associated
     with the communication protocol, the identifier of which matches in the
     PROT parameter.
-- The maximum number of SAPs equals the maximum number of protocols (see
+* The maximum number of SAPs equals the maximum number of protocols (see
     the table for the PROT parameter).
 
 The value

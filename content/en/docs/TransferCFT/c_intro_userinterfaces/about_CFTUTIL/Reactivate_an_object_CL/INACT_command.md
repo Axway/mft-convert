@@ -6,10 +6,10 @@ weight: 260
 
 This page describes the INACT command and its parameters. You can use the INACT command to deactivate:
 
-- One or more partners (CFTPART)
-- Sentinel notifications
-- CRON object (CFTCRON)
-- Folder object (CFTFOLDER)
+* One or more partners (CFTPART)
+* Sentinel notifications
+* CRON object (CFTCRON)
+* Folder object (CFTFOLDER)
 
 > **Note**
 >
@@ -41,9 +41,9 @@ INACT TYPE=PART,ID=<CFTPART_ID>,MODE=<mode>,FORCE=<NO &#124; YES>
 
 Where:
 
-- `CFTPART_ID` is the identifier of the partner to deactivate. To deactivate several partners with a single command, use wildcard characters or meta characters.
-- Mode is the mode to be deactivated, with values: "BOTH" , "B", "REQUESTER", "R" , "SERVER", "S"
-- When `FORCE `is set to `YES`, stops any transfers in progress involving the deactivated partners.
+* `CFTPART_ID` is the identifier of the partner to deactivate. To deactivate several partners with a single command, use wildcard characters or meta characters.
+* Mode is the mode to be deactivated, with values: "BOTH" , "B", "REQUESTER", "R" , "SERVER", "S"
+* When `FORCE `is set to `YES`, stops any transfers in progress involving the deactivated partners.
 
 ****Example****
 
@@ -62,8 +62,8 @@ CFTU00I INACT _ Correct (TYPE=PART,ID=PARIS,MODE=REQUESTER)
 
 When a partner is deactivated, transfers awaiting processing are:
 
-- Suspended in requester mode
-- Refused in server mode
+* Suspended in requester mode
+* Refused in server mode
 
 The state of a transfer request awaiting execution in requester mode
 for a deactivated partner remains ****D****,

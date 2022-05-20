@@ -30,8 +30,8 @@ CFTU00I SEND _ Correct (part=paris,idf=t2,wphases=Z,wtimeout=40,ackstate=require
 
 ## Using WSTATES and WTIMEOUT
 
-- Example 1: Transfer request using WSTATES
-- Example 2: Use a SEND with WSTATES and WTIMEOUT
+* Example 1: Transfer request using WSTATES
+* Example 2: Use a SEND with WSTATES and WTIMEOUT
 
 **Example 1: Transfer request using WSTATES**
 

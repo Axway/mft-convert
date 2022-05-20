@@ -5,11 +5,11 @@ weight: 110
 ---Transfer CFT provides a set of objects that you can use to manage your
 transfer security requirements.
 
-- Certificates to
+* Certificates to
     authenticate a remote party
-- TLS to secure
+* TLS to secure
     a connection using the TLS protocol
-- Open SSL to
+* Open SSL to
     generate a local authority certificate and user certificates
 
 You can work with certificates either via the UI or command line.

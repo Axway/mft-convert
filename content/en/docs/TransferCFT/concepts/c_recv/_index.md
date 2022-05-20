@@ -17,28 +17,28 @@ When receiving files you can define parameters related to the following categori
 Free parameters
 for the {{< TransferCFT/axwayvariablesComponentShortName  >}} user, such as adding comments to the transfer:
 
-- Sent to the
+* Sent to the
     sender
-- Local parameters
+* Local parameters
 
 Execution control
 parameters, such as specify the scheduling time for a transfer:
 
-- General
-- User
-- Schedule management
+* General
+* User
+* Schedule management
 
 <!-- -->
 
-- Data processing
+* Data processing
     parameters
 
 Parameters associated
 with the file received, for example the file name:
 
-- File management
-- Physical name
-- Physical characteristics
+* File management
+* Physical name
+* Physical characteristics
     (whole file)
-- Physical characteristics
+* Physical characteristics
     (records)

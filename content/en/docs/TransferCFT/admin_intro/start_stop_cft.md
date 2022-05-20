@@ -10,26 +10,26 @@ You can use Central Governance to stop, start, check status, and restart a Trans
 
 When opening a new session to manage your {{< TransferCFT/axwayvariablesComponentShortName  >}}, you must first set the environmental parameters. See [Set the Transfer CFT profile](#Set).
 
-- [Start {{< TransferCFT/axwayvariablesComponentShortName >}} server](#Start)
-    -   Standard start
-    -   Force a start after an abnormal stop
-    -   Start and suspend interactive mode
-- [Stop {{< TransferCFT/axwayvariablesComponentShortName >}} server](#Stop__server)
-    -   Standard shutdown
-    -   Quick stop
-    -   Forced shutdown
-- [Restart {{< TransferCFT/axwayvariablesComponentShortName >}}](#Restart_server)
-- [Check Transfer CFT status](#Check)
-- [Purge on Transfer CFT start](#Purge%20on%20Transfer%20CFT%C2%A0start)
+* [Start {{< TransferCFT/axwayvariablesComponentShortName >}} server](#Start)
+    *   Standard start
+    *   Force a start after an abnormal stop
+    *   Start and suspend interactive mode
+* [Stop {{< TransferCFT/axwayvariablesComponentShortName >}} server](#Stop__server)
+    *   Standard shutdown
+    *   Quick stop
+    *   Forced shutdown
+* [Restart {{< TransferCFT/axwayvariablesComponentShortName >}}](#Restart_server)
+* [Check Transfer CFT status](#Check)
+* [Purge on Transfer CFT start](#Purge%20on%20Transfer%20CFT%C2%A0start)
 
 ### OS specific tasks and menus
 
-- Windows
-    -   [Service mode](#Service)
-    -   [Windows menus](#Windows)
-- z/OS
-    -   [Start/stop](#Start/st)
-    -   [Check status](#Perform)
+* Windows
+    *   [Service mode](#Service)
+    *   [Windows menus](#Windows)
+* z/OS
+    *   [Start/stop](#Start/st)
+    *   [Check status](#Perform)
 
 > **Note**
 >
@@ -189,9 +189,9 @@ cft status
 
 To configure the Transfer CFT start-up PURGE option, set the uconf values for:
 
-- cft.purge.enable_on_start: Defines if purge should run when starting Transfer CFT
-- cft.purge.background_on_start: Defines if purging on start-up occurs in the background
-- cft.purge.quantity: Defines the number of transfers to delete in a step (only applicable for background purging)
+* cft.purge.enable_on_start: Defines if purge should run when starting Transfer CFT
+* cft.purge.background_on_start: Defines if purging on start-up occurs in the background
+* cft.purge.quantity: Defines the number of transfers to delete in a step (only applicable for background purging)
 
 <span id="Windows2"></span>
 

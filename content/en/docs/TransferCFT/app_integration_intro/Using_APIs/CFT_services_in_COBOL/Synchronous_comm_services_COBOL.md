@@ -28,15 +28,15 @@ USING     <verb>       <param>    
 
 Where:
 
-- CFTU indicates
+* CFTU indicates
     that syntax analysis is requested  
     CFTC indicates that syntax analysis is not requested
-- &lt;verb> is
+* &lt;verb> is
     the command that you want to process
-- &lt;param> is
+* &lt;param> is
     a character string of variable length that contains the command parameters.
     The end of the field is defined by a character initially set to low-value
-- &lt;rc> is the
+* &lt;rc> is the
     return code
 
 The available &lt;verbs> are listed in the following table.

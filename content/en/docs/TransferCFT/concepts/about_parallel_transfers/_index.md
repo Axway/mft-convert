@@ -8,12 +8,12 @@ The objective of this section is to help you understand the global and partner p
 
 Contents include:
 
-- [Global](#Global) and [partner](#Partner) settings as they relate to the Transfer CFT configuration (this page)
-- [Client and server recommendations](maxtrans_use_cases) that demonstrate settings for a high volume of transfers
-- [Connection / maximum transfer](connection_maxtrans_troubleshoot) scenarios with output
-- [Session related scenarios](session_troubleshooting) with output
-- [Multi-node recommendations](multi_node_simultaneous_transfers)
-- [FAQ and troubleshooting](faq)
+* [Global](#Global) and [partner](#Partner) settings as they relate to the Transfer CFT configuration (this page)
+* [Client and server recommendations](maxtrans_use_cases) that demonstrate settings for a high volume of transfers
+* [Connection / maximum transfer](connection_maxtrans_troubleshoot) scenarios with output
+* [Session related scenarios](session_troubleshooting) with output
+* [Multi-node recommendations](multi_node_simultaneous_transfers)
+* [FAQ and troubleshooting](faq)
 
 > **Note**
 >
@@ -98,8 +98,8 @@ In general, you should base your MAXTRANS on the transfer peak in your daily act
 
 Related UCONF values:
 
-- cft.run.maxtrans: The current MAXTRANS value used by Transfer CFT (information only, you cannot set this value)
-- cft.server.maxtrans: This parameter overrides the CFTPARM MAXTRANS parameter when it is not set to 0. If the `cft.server.maxtrans `parameter is set to 0, the MAXTRANS value is used.
+* cft.run.maxtrans: The current MAXTRANS value used by Transfer CFT (information only, you cannot set this value)
+* cft.server.maxtrans: This parameter overrides the CFTPARM MAXTRANS parameter when it is not set to 0. If the `cft.server.maxtrans `parameter is set to 0, the MAXTRANS value is used.
 
 <span id="License"></span>
 
@@ -255,5 +255,5 @@ specified retrym.
 
 ****Related topics****
 
-- [Client and server recommendations](maxtrans_use_cases)
-- [Scenarios and outputs](session_troubleshooting)
+* [Client and server recommendations](maxtrans_use_cases)
+* [Scenarios and outputs](session_troubleshooting)

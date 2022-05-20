@@ -18,9 +18,9 @@ command topic, refer to the [Command index](../command_summary).
 
 The commands which can be interpreted by CFTUTIL are associated with:
 
-- Transfer CFT configuration,
+* Transfer CFT configuration,
     which is the customization for a given operating environment
-- Transfer CFT use,
+* Transfer CFT use,
     which includes the initiation and monitoring of transfers
 
 The following topics contain additional information on how to set up
@@ -60,14 +60,14 @@ screen by default, or to a file as shown below:
 
 In this syntax:
 
-- file_in is a file
+* file_in is a file
     containing the Transfer CFT commands
-- file_out is a file
+* file_out is a file
     into which the results of the commands are written
 
 <!-- -->
 
-- ‘file_symb’ designates a character specific to
+* ‘file_symb’ designates a character specific to
     each environment. Refer to the Transfer CFT Installation Guide that corresponds
     to your OS.
 
@@ -87,17 +87,17 @@ relative to the current directory.
 
 On all systems:
 
-- CFTUTIL standard
+* CFTUTIL standard
     input and standard output are equivalent to:
-    -   CFTUTIL ‘file_symb’
+    *   CFTUTIL ‘file_symb’
         CFTIN CFTOUT
-- CFTIN and CFTOUT
+* CFTIN and CFTOUT
     are reserved words corresponding to the standard input and output
-- Standard input
+* Standard input
     and output to a file: CFTUTIL ‘file_symb’ CFTIN file_out
-- File input and
+* File input and
     standard output: CFTUTIL ‘file_symb’ file_in CFTOUT
-- File input, file
+* File input, file
     output: CFTUTIL ‘file_symb’ file_in file_out
 
 <span id="CONFIG_type"></span>
@@ -124,14 +124,14 @@ See also [Typographical conventions](../command_summary/typographical_convention
 CFTUTIL makes it possible to create the working environment and configure
 the Transfer CFT application, performing the following operations:
 
-- Create and delete
+* Create and delete
     parameter, partner, catalog, log, and account files. Such operations can
     be performed only when the Transfer CFT is stopped
-- Change and add
+* Change and add
     to certain parameters
-- View parameter,
+* View parameter,
     partner, catalog, log, and account files
-- Send commands to
+* Send commands to
     Transfer CFT
 
 <span id="CFTUTIL_commands"></span>
@@ -140,30 +140,30 @@ the Transfer CFT application, performing the following operations:
 
 The CFTUTIL commands can be divided into three categories:
 
-- Operations
-- General configuration
-- Flow management
-- Miscellaneous actions
+* Operations
+* General configuration
+* Flow management
+* Miscellaneous actions
 
 ### CFTUTIL modes
 
 CFTUTIL can be used in three different modes:
 
-- Command mode, for
+* Command mode, for
     example:
 
 ```
 > CFTUTIL SEND PART=PART1, IDF=IDF1, etc.
 ```
 
-- Batch mode, for
+* Batch mode, for
     example:
 
 ```
 > CFTUTIL #file.smp
 ```
 
-- Interactive line
+* Interactive line
     mode, for example:
 
 ```

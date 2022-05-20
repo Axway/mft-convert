@@ -49,16 +49,16 @@ Depending on how you want to use Transfer CFT, the quotas required can vary.
 
 Use these formulas to determine suitable values for the VMS-specific quotas to configure the Transfer CFT profile:
 
-- prclm = 3 + maxtask + 8 (default = 19)
+* prclm = 3 + maxtask + 8 (default = 19)
 
 <!-- -->
 
-- tqelm = 8 + maxtask (default = 16)
+* tqelm = 8 + maxtask (default = 16)
 
 <!-- -->
 
-- pgflquo = 180,000 + (10,000 \* maxtask) (default = 500,000)
+* pgflquo = 180,000 + (10,000 \* maxtask) (default = 500,000)
 
 <!-- -->
 
-- jtquo = 7 168
+* jtquo = 7 168

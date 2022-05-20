@@ -39,11 +39,11 @@ The MIGR$$$ file is located in the target.INSTALL library, and contains informat
 
 The PMIGR2 procedure, is comprised of several steps:
 
-- Export the content of the source file in a sequential work file.
-- Optionally, activate a step to adapt this extracted file (Only for PART and PARM file)
-- Create (recreate) the target file (or no operation).
-- Import from the work file the data in the target file.
-- List the content of target file.
+* Export the content of the source file in a sequential work file.
+* Optionally, activate a step to adapt this extracted file (Only for PART and PARM file)
+* Create (recreate) the target file (or no operation).
+* Import from the work file the data in the target file.
+* List the content of target file.
 
 ## Procedure
 
@@ -97,12 +97,12 @@ The following variables can be set in MIGR$SET file or/and in the PMIGR2 paramet
 
 If the target version is lower than 3.4:
 
-- Submit the procedure ..INSTALL(MIGRPKI) (export + import)
+* Submit the procedure ..INSTALL(MIGRPKI) (export + import)
 
 If the target version is 3.4 or higher:
 
-- Submit the procedures ..INSTALL(MIGRPKI1) (export)
-- Submit the procedures ..INSTALL(MIGRPKI2) (import)
+* Submit the procedures ..INSTALL(MIGRPKI1) (export)
+* Submit the procedures ..INSTALL(MIGRPKI2) (import)
 
 1. Migrate the UCONF file parameters. (MIGRUCNF)
 

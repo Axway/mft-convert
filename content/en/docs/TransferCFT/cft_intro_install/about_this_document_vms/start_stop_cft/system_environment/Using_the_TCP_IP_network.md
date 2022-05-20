@@ -30,7 +30,7 @@ Objects in the {{< TransferCFT/axwayvariablesComponentShortName  >}} programming
 
 1. CFTAPISH.EXE must be installed as an image recognized by VMS. Available options are:
 
-- The library is copied to the SYS$SHARE directory and the image is installed using a command, such as: $ install sys$share:cftapish.exe/share.  
+* The library is copied to the SYS$SHARE directory and the image is installed using a command, such as: $ install sys$share:cftapish.exe/share.  
       
     The application is linked by a link appli, appli.opt/opt type command, where appli designates the application object calling the {{< TransferCFT/axwayvariablesComponentShortName >}} APIs and appli.opt is an option file containing the following lines:
 
@@ -42,7 +42,7 @@ sys$share:vaxcrtl.exe/share ! this option must not be
 sys$share:cftapish.exe/share .
 ```
 
-- The library is located in a {{< TransferCFT/axwayvariablesComponentShortName >}} -specific directory.
+* The library is located in a {{< TransferCFT/axwayvariablesComponentShortName >}} -specific directory.
 
 If the directory is cft_exe:, the image is installed using a command such as install cft_exe:cftapishr.exe/share. However, this image can later only be accessed using a logical name.  
 

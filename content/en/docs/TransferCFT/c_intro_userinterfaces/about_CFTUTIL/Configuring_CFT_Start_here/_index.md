@@ -26,9 +26,9 @@ command line or the user interface.
 During the parameter setting phase, the data describing the Transfer
 CFT environment are entered by:
 
-- Command lines interpreted
+* Command lines interpreted
     by the CFTUTIL utility
-- Transfer CFT user interface
+* Transfer CFT user interface
 
 The PARAMETERS and PARTNERS index files are updated when the Transfer
 CFT parameters are updated.

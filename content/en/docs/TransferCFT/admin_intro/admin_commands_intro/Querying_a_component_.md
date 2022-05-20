@@ -11,18 +11,18 @@ The MQUERY command sends the requested internal information to display in the l
 
 CFTUTIL command lets you list the allocation of {{< TransferCFT/suitevariablesTransferCFTName  >}} connections:
 
-- The connections by partners (IN,OUT and reserved in “retry”)
-- The connections which are taken by protocols awaiting of FPDU.CONNECT (unknown partner)
-- The available connections
+* The connections by partners (IN,OUT and reserved in “retry”)
+* The connections which are taken by protocols awaiting of FPDU.CONNECT (unknown partner)
+* The available connections
 
 Global information:
 
-- Number of sessions
-- Number of client sessions
-- Number of server sessions
-- Number of active sessions
-- Number of inactive sessions
-- Number of server sessions with unknown Partner
+* Number of sessions
+* Number of client sessions
+* Number of server sessions
+* Number of active sessions
+* Number of inactive sessions
+* Number of server sessions with unknown Partner
 
 Partner information is the same as global information but detailed for each partner.
 

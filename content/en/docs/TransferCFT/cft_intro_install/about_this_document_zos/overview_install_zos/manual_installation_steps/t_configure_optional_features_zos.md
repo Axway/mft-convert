@@ -8,9 +8,9 @@ weight: 250
 
 The <span id="kanchor38"></span>PKI file contains all information necessary to use the SSL component:
 
-- Certification authorities
-- Certificates
-- Private keys
+* Certification authorities
+* Certificates
+* Private keys
 
 The examples were created using OPENSSL software, from the Institut Fédéral Suisse de Technologie (Swiss Federal Institute of Technology).
 
@@ -18,9 +18,9 @@ The D43PKI step creates a VSAM KSDS file and initializes it with the supplied ex
 
 It is important to follow these guidelines:
 
-- The supplied examples are designed expressly to check that the SSL component is operating correctly. Do NOT use these examples for any other purpose.
-- Take all appropriate security measures to guarantee the confidentiality of the security data.
-- The usage of data ciphering is subject to legal restrictions that vary from country to country.
+* The supplied examples are designed expressly to check that the SSL component is operating correctly. Do NOT use these examples for any other purpose.
+* Take all appropriate security measures to guarantee the confidentiality of the security data.
+* The usage of data ciphering is subject to legal restrictions that vary from country to country.
 
 <span id="_Toc236186612"></span>
 
@@ -28,20 +28,20 @@ It is important to follow these guidelines:
 
 System Authorization Facility (SAF) based PKI offers a more secured SSL. The optional SAF method uses RACF, or the equivalent, and an optional cryptographic coprocessor to increase data security. To enable the SAF mode of operation you must:
 
-- Enable the IBM Crypto Express 2 coprocessor, if available
-- Configure the IBM ICSF program to use a secured PKDS database
+* Enable the IBM Crypto Express 2 coprocessor, if available
+* Configure the IBM ICSF program to use a secured PKDS database
 
 <!-- -->
 
-- Install and configure the option for Transfer CFT
+* Install and configure the option for Transfer CFT
 
 <!-- -->
 
-- Define RACF
+* Define RACF
 
 <!-- -->
 
-- Define the CFTSSL PARM fields or ROOTCID/USERCID fields
+* Define the CFTSSL PARM fields or ROOTCID/USERCID fields
 
 #### Enabling the Transfer CFT PKI system D47SYST
 
@@ -63,11 +63,11 @@ For information on how to manage certificates using RACF, refer to the IBM docum
 
 SAF certificate management is based on:
 
-- A RING used to store one or more certificates (RACDECRT RING)
+* A RING used to store one or more certificates (RACDECRT RING)
 
 <!-- -->
 
-- The USER that owns the certificates (RACDCERT ID)
+* The USER that owns the certificates (RACDCERT ID)
 
 Both the RING and OWNER are passed to the system from the PARM field or ROOTCID/USERCID fields of the CFTSSL definitions. Code CFTSSL using one of the two following methods:
 
@@ -97,8 +97,8 @@ PARM='DLM=$'
 
 **Variables description**
 
-- ring_name: A string value matching the RACDCERT RING parameter
-- userid: A 1 to 7 character string value that matches the RACDCERT ID parameter
+* ring_name: A string value matching the RACDCERT RING parameter
+* userid: A 1 to 7 character string value that matches the RACDCERT ID parameter
 
 The PARM field length is limited to 64 bytes. You must select a RING NAME that conforms to the 64 bytes restriction.
 
@@ -106,11 +106,11 @@ The PARM field length is limited to 64 bytes. You must select a RING NAME that c
 
 Required tasks for the correct exit functioning include:
 
-- The PKI exit sets or switches the security environment for the user defined as OWNER=userid. To set the security environment, Transfer CFT must be started and APF authorized
+* The PKI exit sets or switches the security environment for the user defined as OWNER=userid. To set the security environment, Transfer CFT must be started and APF authorized
 
 <!-- -->
 
-- You must add SAF security definitions for OWNER=userid, in the SAF CLASS named FACILITY. Setting the definitions involves a number of IRR.DIGCERT.\*.
+* You must add SAF security definitions for OWNER=userid, in the SAF CLASS named FACILITY. Setting the definitions involves a number of IRR.DIGCERT.\*.
 
 The SAF definitions are described in the IBM documentation SA22-7691 Security Server RACF Callable Services, chapter IRRSDL00.
 
@@ -124,5 +124,5 @@ The communication between the APPLICATION and Transfer CFT is done through a med
 
 ****Related topics****
 
-- [Migrating Transfer CFT z/OS]()
-- [Installing a patch](../../../upgrade_prereqs_zos/c_update_zos/t_install_patch_zos)
+* [Migrating Transfer CFT z/OS]()
+* [Installing a patch](../../../upgrade_prereqs_zos/c_update_zos/t_install_patch_zos)

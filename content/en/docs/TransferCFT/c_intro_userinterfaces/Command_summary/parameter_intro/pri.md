@@ -20,9 +20,9 @@ Priority works as follows:
 
 See *mintime* for transfer timing details.
 
-- 128
+* 128
     (default value)
-- A value from 0 to 255 (highest priority)
+* A value from 0 to 255 (highest priority)
 
  
 

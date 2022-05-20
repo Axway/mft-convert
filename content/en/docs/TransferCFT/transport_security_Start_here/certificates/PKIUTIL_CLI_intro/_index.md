@@ -10,17 +10,17 @@ introduces the command line PKIUTIL utility CFTPKI.
 
 The PKIUTIL command topics are as follows:
 
-- [ACT/INACT](using_act_inact)
+* [ACT/INACT](using_act_inact)
     Activate/deactivate a certificate
-- [PKICER](using_the_pkicer_command)
+* [PKICER](using_the_pkicer_command)
     Import, delete, or update a certificate in the database
-- [LISTPKI](using_the_listpki_command)
+* [LISTPKI](using_the_listpki_command)
     Display the internal datafile contents
-- [PKIFILE](using_the_pkifile_command)
+* [PKIFILE](using_the_pkifile_command)
     Create/delete the local certificate database
-- [PKIENTITY](pkientity) Create lists of certificate authority IDs in the PKI database
-- PKIKEY Import, delete, or update a key in the PKI database
-- [PKIKEYGEN](pkikeygen) Generate a new key and insert in the PKI base
+* [PKIENTITY](pkientity) Create lists of certificate authority IDs in the PKI database
+* PKIKEY Import, delete, or update a key in the PKI database
+* [PKIKEYGEN](pkikeygen) Generate a new key and insert in the PKI base
 
 When activated, PKIUTIL uses the local default certificate database.
 For more information, refer to the Transfer CFT Operations
@@ -37,4 +37,4 @@ To simplify the use of `PKIUTIL `commands, you can use the autocomplete feature 
 
 ****Related topics****
 
-- [CFTPARM](../../../admin_intro/admin_config_commands/cftparm_general_parameters)
+* [CFTPARM](../../../admin_intro/admin_config_commands/cftparm_general_parameters)

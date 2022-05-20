@@ -6,8 +6,8 @@ weight: 260
 
 This section describes the parameters and values that are specific to Transfer CFT z/OS and information about:
 
-- Transferable files
-- Filename coding
+* Transferable files
+* Filename coding
 
 ## Transferable files
 

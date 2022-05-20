@@ -15,13 +15,13 @@ and server modes are determined by a security profile.
 
 A security profile monitors the:
 
-- Required authentication
+* Required authentication
     mode: simple (server only) or mutual (server and client) authentication
-- Authentication,
+* Authentication,
     encryption and sealing algorithms to be used
-- Certificate to
+* Certificate to
     be sent for local authentication and the RSA authentication algorithm
-- Checks to be performed
+* Checks to be performed
     on the remote certificate for remote authentication and the RSA authentication
     algorithm
 
@@ -604,10 +604,10 @@ certificate is tolerated by the server. </li>
 The SSL parameter is used to associate a security profile with a protocol
 definition.
 
-- For a security profile related to incoming calls (server mode), the
+* For a security profile related to incoming calls (server mode), the
     SSL parameter value must correspond to the identifier of a DIRECT=SERVER
     SSL command.
-- For a default security profile related to outgoing calls (client mode),
+* For a default security profile related to outgoing calls (client mode),
     the SSL parameter value must correspond to the identifier of a DIRECT=CLIENT
     SSL command.
 
@@ -616,4 +616,4 @@ then the server mode for CFTSSL is not mandatory.
 
 ****Related topics****
 
-- [CFTPROT](../../../admin_intro/admin_config_commands/transfer_protocol_concepts)
+* [CFTPROT](../../../admin_intro/admin_config_commands/transfer_protocol_concepts)

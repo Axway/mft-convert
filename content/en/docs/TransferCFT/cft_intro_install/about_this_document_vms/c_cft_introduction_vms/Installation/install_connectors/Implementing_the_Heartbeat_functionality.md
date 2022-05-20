@@ -12,15 +12,15 @@ For more information on Dashboards and tracked objects, refer to the Sentinel Us
 
 Check that the unified configuration values are set as follows for heartbeat functionality:
 
-- sentinel.heartbeat.enable = YES
+* sentinel.heartbeat.enable = YES
 
 <!-- -->
 
-- sentinel.heartbeat.periodicity = 300: This recommended value has a direct correlation with the value defined in the Monitoring requests.
-- sentinel.heartbeat.script = D$CFT_INST:[extras.sentinel]MFTheartbeat.com: The script name and path according to your system environment.
-- sentinel.trkipaddr = sentinel.server.address
-- sentinel.trkipport = Sentinel.qlt/auto.port value (default = 1305)
+* sentinel.heartbeat.periodicity = 300: This recommended value has a direct correlation with the value defined in the Monitoring requests.
+* sentinel.heartbeat.script = D$CFT_INST:[extras.sentinel]MFTheartbeat.com: The script name and path according to your system environment.
+* sentinel.trkipaddr = sentinel.server.address
+* sentinel.trkipport = Sentinel.qlt/auto.port value (default = 1305)
 
 <!-- -->
 
-- sentinel.xfb.enable = YES
+* sentinel.xfb.enable = YES

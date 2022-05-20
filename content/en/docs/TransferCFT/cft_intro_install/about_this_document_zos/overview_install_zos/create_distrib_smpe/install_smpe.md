@@ -27,12 +27,12 @@ The Transfer CFT software has a SYSMOD FMID (Function Module ID) that identifie
 | Hostname mainframe address<br/> Login user<br/> Login password |  <br/>  |
 
 
-- The setup procedure allocates the destination library dataset (default is AXWAY.SMPE.CFT332.SMPCNTL),  
+* The setup procedure allocates the destination library dataset (default is AXWAY.SMPE.CFT332.SMPCNTL),  
     with the attributes recfm=fb,lrecl=80,blksize=27920,space=(cyl,(1,5)).
-    -   To add a volume or device name, edit the &vol= or &unit= field in the silent_smpe_install.conf file.
-- The sample member $C\* is transferred to the dataset using FTP in text mode.
-- The setup procedure creates the destination USS directory (default is /home/AXWAY/smpnts), and subdirectory (default is CFT332).
-- The Transfer_CFT_mvs.pax.Z SMP/E package file is transferred to the subdirectory using FTP in binary mode, and renamed to CFT332.pax.Z  (approximately 150 Mbytes).
+    *   To add a volume or device name, edit the &vol= or &unit= field in the silent_smpe_install.conf file.
+* The sample member $C\* is transferred to the dataset using FTP in text mode.
+* The setup procedure creates the destination USS directory (default is /home/AXWAY/smpnts), and subdirectory (default is CFT332).
+* The Transfer_CFT_mvs.pax.Z SMP/E package file is transferred to the subdirectory using FTP in binary mode, and renamed to CFT332.pax.Z  (approximately 150 Mbytes).
 
 ### Silent mode
 

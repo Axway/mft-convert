@@ -14,9 +14,9 @@ The Transfer CFT user interface requires secure SSL/TLS communication between t
 
 The {{< TransferCFT/axwayvariablesComponentLongName  >}} user interface requires a web browser. You will best experience browser-based applications such as the UI when using the latest version of one of the following browsers:
 
-- Chrome
-- Microsoft Edge
-- Firefox (keyboard shortcuts are not enabled)
+* Chrome
+* Microsoft Edge
+* Firefox (keyboard shortcuts are not enabled)
 
 ## Prerequisites
 
@@ -126,8 +126,8 @@ For other authentication methods, such as PassPort and LDAP, no check is made. Y
 
 You can use the following UCONF parameters to manage this option:
 
-- `copilot.general.login_failures_fname`: A file that stores data shared between Transfer CFT and Copilot.
-- `copilot.general.max_login_failures`: An integer that sets the maximum number of login failures for a user (default is 3, and 0 disables this option).
+* `copilot.general.login_failures_fname`: A file that stores data shared between Transfer CFT and Copilot.
+* `copilot.general.max_login_failures`: An integer that sets the maximum number of login failures for a user (default is 3, and 0 disables this option).
 
 > **Note**
 >
@@ -137,9 +137,9 @@ When the maximum number of login failures is reached, the user account is locked
 
 ****Platform specifics****
 
-- On IBM i systems, there is no action if the password is incorrect as the system offers methods that you can rely on to avoid brute force attacks (the system value is [QMAXSIGN](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/rzarl/rzarlmaxsgn.htm)).
-- On z/OS systems, only the inherent system protection is available (refer to the RACF suboperand [REVOKE](https://www.ibm.com/support/knowledgecenter/SSLTBW_2.3.0/com.ibm.zos.v2r3.icha700/setrpw.htm) for the PASSWORD option).
-- On OpenVMS systems, only existing system protection is available.
+* On IBM i systems, there is no action if the password is incorrect as the system offers methods that you can rely on to avoid brute force attacks (the system value is [QMAXSIGN](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_74/rzarl/rzarlmaxsgn.htm)).
+* On z/OS systems, only the inherent system protection is available (refer to the RACF suboperand [REVOKE](https://www.ibm.com/support/knowledgecenter/SSLTBW_2.3.0/com.ibm.zos.v2r3.icha700/setrpw.htm) for the PASSWORD option).
+* On OpenVMS systems, only existing system protection is available.
 
 <span id="Troubles"></span>If you encounter issues when trying to connect to the user interface, please refer to [Troubleshooting the user interface](troubleshoot_ui).
 
@@ -151,9 +151,9 @@ Keyboard shortcuts provide a way to navigate the user interface from the keyboar
 
 ![](/Images/TransferCFT/new_ui_shortcuts.png)
 
-- **ALT** + **H**: Displays available shortcuts
-- From the **New** [Transfer] page, for example, press Enter to begin a new request.
-- To navigate across the page using keyboard shortcuts, use Tab to move to the next field, or Shift + Tab to go back.
+* **ALT** + **H**: Displays available shortcuts
+* From the **New** [Transfer] page, for example, press Enter to begin a new request.
+* To navigate across the page using keyboard shortcuts, use Tab to move to the next field, or Shift + Tab to go back.
 
 > **Note**
 >

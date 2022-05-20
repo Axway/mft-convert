@@ -18,15 +18,15 @@ For more general information on expanding the catalog, you can refer to the sect
 1. Save the CATALOG file.
 1. Modify the JCL INSTALL(CFTCATAL):
 
-- RECNB is the new CATALOG size in number of records
-- TMPSPACE 'CYL,(50,10)' is the size of the temporary file
+* RECNB is the new CATALOG size in number of records
+* TMPSPACE 'CYL,(50,10)' is the size of the temporary file
 
 > **Note**
 >
 > If the Transfer CFT HABILITATION is activated:
 
-- In the CFTFILE TYPE=CAT, MODE=CREATE command, add the HABFNAME parameter with the SECINI file (created by the JCL H86SAFCR).
-- In the SISYN : CREATE.CFTIN, comment the sequence code (1), and uncomment the sequence code (3) as follows:  
+* In the CFTFILE TYPE=CAT, MODE=CREATE command, add the HABFNAME parameter with the SECINI file (created by the JCL H86SAFCR).
+* In the SISYN : CREATE.CFTIN, comment the sequence code (1), and uncomment the sequence code (3) as follows:  
     ```
     //CREATE.CFTIN DD \*,DLM='XX'
     /\* CREATE CATALOG \*/
@@ -54,10 +54,10 @@ If you are using a multi-node architecture, use this static mode procedure.
 1. Save the CATALOG files.
 1. Modify the JCL INSTALL(CFTCATAL):
 
-- RECNB is the new CATALOG size in number of records
-- TMPSPACE 'CYL,(50,10)' is the size of the temporary file
-- NODE is the node ID (ex NODE=’0’)
-- In the SISYN : CREATE.CFTIN, comment the sequence code (1), and uncomment the sequence code (2) as follows:
+* RECNB is the new CATALOG size in number of records
+* TMPSPACE 'CYL,(50,10)' is the size of the temporary file
+* NODE is the node ID (ex NODE=’0’)
+* In the SISYN : CREATE.CFTIN, comment the sequence code (1), and uncomment the sequence code (2) as follows:
 
 ```
 //CREATE.CFTIN DD \*,DLM='XX'

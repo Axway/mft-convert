@@ -17,9 +17,9 @@ application events.
 
 The possible values of this parameter include:
 
-- XFB.Transfer
+* XFB.Transfer
     This tracked object describes {{< TransferCFT/axwayvariablesComponentShortName >}} file and message transfers
-- XFB.Log This
+* XFB.Log This
     tracked object describes the contents of {{< TransferCFT/axwayvariablesComponentShortName >}} log files
 
 [Return to Command index](../../)

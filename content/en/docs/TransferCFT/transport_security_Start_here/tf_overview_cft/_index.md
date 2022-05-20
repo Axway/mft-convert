@@ -6,16 +6,16 @@ weight: 200
 
 This topic describes how to implement Axway Trusted File encoding. {{< TransferCFT/axwayvariablesComponentShortName  >}} in conjunction with TrustedFile enables you to send encrypted files in S/MIME, CMS, and OpenPGP format, for increased security for data exchanges. To initiate this additional security, Transfer CFT delivers a set of samples and certificates to implement TrustedFile in your environment. To get started using TrustedFile with Transfer CFT, read the following sections:
 
-- [Before you start](#Before)
-- [About the Transfer CFT configuration file](#Transfer)
-- [Defining the unified configuration parameters](#Defining)
-- [Command example (to encode/decode a file)](#Command)
+* [Before you start](#Before)
+* [About the Transfer CFT configuration file](#Transfer)
+* [Defining the unified configuration parameters](#Defining)
+* [Command example (to encode/decode a file)](#Command)
 
 The topic [Delivered files and certificates](tf_delivered_files_certficates) describes the scripts, conversion tables, files and samples delivered with Transfer CFT. And for more information on TrustedFile functionality, please refer to the [TrustedFile Reference Guide]() .
 
 #### Limitations
 
-- You cannot use {{< TransferCFT/PrimaryCGorUM >}} or {{< TransferCFT/suitevariablesFlowManager >}} to manage {{< TransferCFT/suitevariablesTrustedFileName >}} functionality with {{< TransferCFT/axwayvariablesComponentShortName >}}.
+* You cannot use {{< TransferCFT/PrimaryCGorUM >}} or {{< TransferCFT/suitevariablesFlowManager >}} to manage {{< TransferCFT/suitevariablesTrustedFileName >}} functionality with {{< TransferCFT/axwayvariablesComponentShortName >}}.
 
 <span id="Before"></span>
 
@@ -31,8 +31,8 @@ Transfer CFT delivers useable examples that automatically implement TrustedFile
 
 The Transfer CFT sample configuration file `runtime/conf/cft-tf-smp.conf` includes the TrustedFile IDF as shown here.
 
-- The delivered procedures are called during the preprocessing phase to encode the file (tf_cipher.cmd), and delete the encoded file after sending (tf_delfile.cmd).
-- The post processing script decodes on the receiving side (tf_decipher.cmd).
+* The delivered procedures are called during the preprocessing phase to encode the file (tf_cipher.cmd), and delete the encoded file after sending (tf_delfile.cmd).
+* The post processing script decodes on the receiving side (tf_decipher.cmd).
 
 ****Sending****
 
@@ -87,12 +87,12 @@ CFTUTIL send part=loop,idf=trusted_file, SAPPL=pgp
 
 When using {{< TransferCFT/suitevariablesTrustedFileName  >}} with Transfer CFT, some {{< TransferCFT/suitevariablesTrustedFileName  >}} functionalities are not delivered or available as described in the {{< TransferCFT/suitevariablesTrustedFileName  >}} documentation. These include:
 
-- Overview: Graphical user interface (not delivered in the package)
-- Configuration sample: Encoding and decoding files with Java API
-- C-API
+* Overview: Graphical user interface (not delivered in the package)
+* Configuration sample: Encoding and decoding files with Java API
+* C-API
 
 ****Related topics****
 
-- [SAPPL](../../c_intro_userinterfaces/command_summary/parameter_intro/sappl)
-- [Delivered files and certificates](tf_delivered_files_certficates)
-- [How to generate a certificate for {{< TransferCFT/suitevariablesTrustedFileName >}}](tf_generate_cert)
+* [SAPPL](../../c_intro_userinterfaces/command_summary/parameter_intro/sappl)
+* [Delivered files and certificates](tf_delivered_files_certficates)
+* [How to generate a certificate for {{< TransferCFT/suitevariablesTrustedFileName >}}](tf_generate_cert)

@@ -4,7 +4,6 @@ linkTitle: "Sending a REPLY"
 weight: 210
 ---<span id="About_the_SEND_REPLY_Command"></span>
 
-## 
 
 ## Sending an acknowledgement
 

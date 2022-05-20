@@ -9,14 +9,14 @@ Each of these services is described in one of the following sections, which prov
 of the service. Applications can address requests to {{< TransferCFT/axwayvariablesComponentShortName  >}} via
 service call functions:
 
-- [REST API](../../../app_integration_intro/using_apis/api_intro)
-- [Web services](../../about_this_document_ibmi/using_apis/about_web_services)
-- [Using JPI](../../about_this_document_ibmi/using_apis/java_api)
-- Transfer
+* [REST API](../../../app_integration_intro/using_apis/api_intro)
+* [Web services](../../about_this_document_ibmi/using_apis/about_web_services)
+* [Using JPI](../../about_this_document_ibmi/using_apis/java_api)
+* Transfer
     services
-- Synchronous
+* Synchronous
     communication services
-- Catalog
+* Catalog
     query services
 
 The programming interfaces and programming language are related. The
@@ -36,8 +36,8 @@ for COBOL.
 
 #### Restrictions
 
-- Visual Basic APIs are available on PCs
+* Visual Basic APIs are available on PCs
     only. See [Windows
     operations](../../windows_install_start_here).
-- The security APIs are not covered in this section. See [Managing
+* The security APIs are not covered in this section. See [Managing
     security]().

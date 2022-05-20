@@ -51,7 +51,7 @@ To do so, enter the PING command on an {{< TransferCFT/PrimaryForOS400  >}} comm
 
 Any incidents detected impact the following:
 
-- Security  
+* Security  
     To start TCP, you do not need to have a user profile set to \*IOSYSCFG, but it may be required for some Transfer CFT configuration commands in the TCP/IP environment: the {{< TransferCFT/PrimaryForOS400 >}} messages are explanatory.
 
 Network interface is not started after the ENDTCPIFC command:

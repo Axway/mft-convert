@@ -6,21 +6,21 @@ weight: 290
 
 Information is presented by platform:
 
-- Using a working directory in UNIX or Windows
-    -   Conventions and recommendations
-    -   Configuration examples
+* Using a working directory in UNIX or Windows
+    *   Conventions and recommendations
+    *   Configuration examples
 
 <!-- -->
 
-- Using a working directory in IBM i or z/OS
-    -   Conventions and recommendations
-    -   Configuration examples
+* Using a working directory in IBM i or z/OS
+    *   Conventions and recommendations
+    *   Configuration examples
 
 <!-- -->
 
-- Using a working directory in OpenVMS
-    -   Conventions and recommendations
-    -   Configuration examples
+* Using a working directory in OpenVMS
+    *   Conventions and recommendations
+    *   Configuration examples
 
 When you define a working directory for a given transfer flow, all files related to this transfer flow - meaning sent, received, or temporary files - must be part of the working directory tree. Additionally, scripts that are related to the file transfer flow are executed within the defined working directory (as this is the current working directory).
 
@@ -31,8 +31,8 @@ The WORKINGDIR value can include the symbolic variable &HOME to allow different 
 
 ## Limitations
 
-- On the z/OS, OpenVMS, and IBM i platforms, the temporary files do not reside in the working directory, and script execution does not occur there as described above.
-- IBM I and z/OS can only use an absolute path as the WORKINGDIR parameter.
+* On the z/OS, OpenVMS, and IBM i platforms, the temporary files do not reside in the working directory, and script execution does not occur there as described above.
+* IBM I and z/OS can only use an absolute path as the WORKINGDIR parameter.
 
 ## Using a working directory in UNIX or Windows
 
@@ -40,32 +40,32 @@ The WORKINGDIR value can include the symbolic variable &HOME to allow different 
 
 Note the following conventions and recommendations:
 
-- All working files - sent, received, and temporary files - must be part of the working directory tree. Transfer CFT does not access files that are outside of the defined working directory tree.
+* All working files - sent, received, and temporary files - must be part of the working directory tree. Transfer CFT does not access files that are outside of the defined working directory tree.
 
 <!-- -->
 
-- The maximum size for a complete file name is 512 characters. This value includes the total length of the workingdir added to any relative values.
+* The maximum size for a complete file name is 512 characters. This value includes the total length of the workingdir added to any relative values.
 
 <!-- -->
 
-- The workingdir has no impact on either the &PATH or &FPATH symbolic variables. Transfer CFT uses only the FNAME contents to fill those variables.
+* The workingdir has no impact on either the &PATH or &FPATH symbolic variables. Transfer CFT uses only the FNAME contents to fill those variables.
 
 <!-- -->
 
-- The processing script's path (PREEXEC, EXEC, EXECE, ACKEXEC) if relative, is relative to the default directory (the runtime directory).
+* The processing script's path (PREEXEC, EXEC, EXECE, ACKEXEC) if relative, is relative to the default directory (the runtime directory).
 
 <!-- -->
 
-- Processing scripts are executed inside the workingdir.
+* Processing scripts are executed inside the workingdir.
 
 ### Examples on UNIX or Windows
 
 This section provides the following examples along with a brief description:
 
-- [Workingdir using a relative fname](#Workingd)
-- [Workingdir and directory tree control](#Workingd2)
-- [Workingdir using the &HOME symbolic variable (example 1)](#Workingd3)
-- [Workingdir using the &HOME symbolic variable (example 2)](#Workingd4)
+* [Workingdir using a relative fname](#Workingd)
+* [Workingdir and directory tree control](#Workingd2)
+* [Workingdir using the &HOME symbolic variable (example 1)](#Workingd3)
+* [Workingdir using the &HOME symbolic variable (example 2)](#Workingd4)
 
 <span id="Workingd"></span>
 
@@ -179,35 +179,35 @@ In IBM i and z/OS environments, the working directory feature lets you specify e
 
 Three scenarios are possible on these platforms:
 
-- UNIX file system  
-    -   If a WORKINGDIR Unix file system is defined, it should be either fully qualified (‘/home/user01’ for example) or include the symbolic variable &HOME (z/OS) or ?HOME (IBM i).  
-    -   For example, if the working directory parameter equals &HOME or ?HOME, the working directory is the home directory for the user ID on z/OS or on IBM i.
-- Data set on z/OS  
+* UNIX file system  
+    *   If a WORKINGDIR Unix file system is defined, it should be either fully qualified (‘/home/user01’ for example) or include the symbolic variable &HOME (z/OS) or ?HOME (IBM i).  
+    *   For example, if the working directory parameter equals &HOME or ?HOME, the working directory is the home directory for the user ID on z/OS or on IBM i.
+* Data set on z/OS  
     WORKINGDIR z/OS data set the syntax is as follows:  
-    -   If the segment name ends with a period, for example ‘USER01.PROD.’, then the workingdir refers simply to the data set.  
-    -   If the segment name does not end with a final period, for example ‘USER01.PROD.FILE’, then the workingdir refers to a partitioned data set.  
-    -   We advise you to include the symbolic variable &USERID in the working directory. For example, if the working directory parameter is ‘&USERID.’, the working directory is the user ID followed by a period.
-- Database on IBM i  
+    *   If the segment name ends with a period, for example ‘USER01.PROD.’, then the workingdir refers simply to the data set.  
+    *   If the segment name does not end with a final period, for example ‘USER01.PROD.FILE’, then the workingdir refers to a partitioned data set.  
+    *   We advise you to include the symbolic variable &USERID in the working directory. For example, if the working directory parameter is ‘&USERID.’, the working directory is the user ID followed by a period.
+* Database on IBM i  
     WORKINGDIR IBM i syntax is as follows:
-    -   If there is a slash character (/) in the working directory, it refers to a member of a database file. For example WORKINGDIR= PROD/NEWFILE, FNAME=MEMBER creates PROD/NEWFILE(MEMBER).
-    -   Otherwise, if there is no slash, it refers to a database file. For example WORKINGDIR= PROD, FNAME=FILE creates PROD/FILE.  
+    *   If there is a slash character (/) in the working directory, it refers to a member of a database file. For example WORKINGDIR= PROD/NEWFILE, FNAME=MEMBER creates PROD/NEWFILE(MEMBER).
+    *   Otherwise, if there is no slash, it refers to a database file. For example WORKINGDIR= PROD, FNAME=FILE creates PROD/FILE.  
 
 ### Conventions and recommendations
 
 Note the following Transfer CFT z/OS or IBM i conventions and recommendations:
 
-- Transfer CFT does not authorize sending or receiving Unix file system files that are outside of the designated working directory tree.
-- The maximum size for a complete Unix file name is 512 characters, 44 characters for a z/OS data set name, and 33 characters for a IBM i database file. This value includes the total length of the working directory added to any relative values.
-- The &PATH or &FPATH symbolic variables will contain the WORKINGDIR value.
-- You can only refer to processing scripts that are on native file systems.
+* Transfer CFT does not authorize sending or receiving Unix file system files that are outside of the designated working directory tree.
+* The maximum size for a complete Unix file name is 512 characters, 44 characters for a z/OS data set name, and 33 characters for a IBM i database file. This value includes the total length of the working directory added to any relative values.
+* The &PATH or &FPATH symbolic variables will contain the WORKINGDIR value.
+* You can only refer to processing scripts that are on native file systems.
 
 ## Examples on IBM i and z/OS
 
 ### HFS examples
 
-- [Workingdir using a HFS relative fname](#Workingd7)
-- [Workingdir and HFS directory tree control](#Workingd8)
-- [Workingdir using the HFS &HOME symbolic variable](#Workingd9)
+* [Workingdir using a HFS relative fname](#Workingd7)
+* [Workingdir and HFS directory tree control](#Workingd8)
+* [Workingdir using the HFS &HOME symbolic variable](#Workingd9)
 
 <span id="Workingd7"></span>
 
@@ -281,9 +281,9 @@ The application that is running under the user01 system account sends the file '
 
 ### Data set examples on z/OS
 
-- [Workingdir using a data set file name](#Workingd10)
-- [Workingdir using a data set file name and the &USERID symbolic variable](#Workingd11)
-- [Workingdir using a partitioned data set file name](#Workingd12)
+* [Workingdir using a data set file name](#Workingd10)
+* [Workingdir using a data set file name and the &USERID symbolic variable](#Workingd11)
+* [Workingdir using a partitioned data set file name](#Workingd12)
 
 <span id="Workingd10"></span>
 
@@ -363,8 +363,8 @@ The application sends the file to the remote partner PART1 using the transfer fl
 
 ### Database (\*MBR and \*FILE) examples on IBM i
 
-- [Workingdir using a \*MBR file name](#Workingd13)
-- [Workingdir using a \*FILE file name](#Workingd14)
+* [Workingdir using a \*MBR file name](#Workingd13)
+* [Workingdir using a \*FILE file name](#Workingd14)
 
 <span id="Workingd13"></span>
 
@@ -431,15 +431,15 @@ If a WORKINGDIR root directory is defined, it consists of a number of segments w
 
 ### Conventions and recommendations
 
-- Transfer CFT does not authorize sending or receiving files that are outside of the designed working directory tree.
-- The maximum size for a complete file name is 512 characters. This value includes the total length of the working directory added to any relative values.
-- On Transfer CFT OpenVMS the symbolic variables &PATH or &FPATH will not contain the WORKINGDIR value.
-- You can only refer to processing scripts that are on native file systems and you must use the absolute path.
+* Transfer CFT does not authorize sending or receiving files that are outside of the designed working directory tree.
+* The maximum size for a complete file name is 512 characters. This value includes the total length of the working directory added to any relative values.
+* On Transfer CFT OpenVMS the symbolic variables &PATH or &FPATH will not contain the WORKINGDIR value.
+* You can only refer to processing scripts that are on native file systems and you must use the absolute path.
 
 ### Configuration examples
 
-- Workingdir using a relative fname
-- Workingdir and directory tree control
+* Workingdir using a relative fname
+* Workingdir and directory tree control
 
 <span id="Workingd5"></span>
 

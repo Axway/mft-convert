@@ -12,6 +12,6 @@ weight: 190
 
 [Messages and error codes](messages_and_error_codes_start_here) - Provides a comprehensive list of all {{< TransferCFT/axwayvariablesComponentLongName  >}} messages, from information messages to error messages. Additionally this section explains reason and diagnostic codes, which you can use to better understand {{< TransferCFT/axwayvariablesComponentLongName  >}} errors.
 
-- REASON codes provide a general explanation of the error.
-- DIAGNOSTIC codes provide a detailed explanation of the source
+* REASON codes provide a general explanation of the error.
+* DIAGNOSTIC codes provide a detailed explanation of the source
     of the error.

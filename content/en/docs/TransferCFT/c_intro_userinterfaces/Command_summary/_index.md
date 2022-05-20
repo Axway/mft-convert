@@ -2955,16 +2955,16 @@ general conventions.
 
 ### Typographic conventions
 
-- [   ]
+* [   ]
     Optional parameters or values are displayed between square brackets
-- {   }
+* {   }
     Parameter choices or values are displayed  between
     braces
-- &#124; The vertical
+* &#124; The vertical
     bar separates an enumerated list of parameter values
-- ___ Default values
+* ___ Default values
     for a parameter are underlined
-- , A comma separates
+* , A comma separates
     a list of parameter values
 
 For more information, see [TYPOGRAPHICAL CONVENTIONS.](typographical_conventions)
@@ -2974,12 +2974,12 @@ For more information, see [TYPOGRAPHICAL CONVENTIONS.](typographical_conventions
 The following symbolic variable syntaxes are valid in a {{< TransferCFT/axwayvariablesComponentShortName  >}}
 environment:
 
-- &VAR
-- &+VAR
-- &nVAR:
-- &p.VAR
-- &p.nVAR
-- &(-string_prefix)
+* &VAR
+* &+VAR
+* &nVAR:
+* &p.VAR
+* &p.nVAR
+* &(-string_prefix)
     (+string_suffix)
     (=string_alternate)p.nVAR
 
@@ -2992,41 +2992,41 @@ variables](symbolic_variables).
 This name is a complete physical filename. It can
 be either:
 
-- Created dynamically
+* Created dynamically
     from symbolic variables, or
-- Correspond to the
+* Correspond to the
     name of a version file
 
 #### Using the FNAME parameter
 
 Filename conventions are as follows:
 
-- filename
+* filename
 
 Transfers a file for which the name is specified by
 a filename.
 
-- mask
+* mask
 
 The term mask means that the filename includes at
 least one wild card character (\* or :). This sends a file that lists all
 files that match the mask.
 
-- dirname
+* dirname
 
 Sends a file that lists the contents of the directory.
 
-- #filename
+* #filename
 
 For each file name that is listed in the file, this
 sends the corresponding file.
 
-- #mask
+* #mask
 
 For each file name that matches the mask, this sends
 the corresponding file.
 
-- #dirname
+* #dirname
 
 For each file that exists in the directory, this sends
 the corresponding file.
@@ -3046,9 +3046,9 @@ regardless of platform differences.
 
 The basic CFTUTIL services provided are:
 
-- UCONFSET id=\*\*\*\*,value=\*\*\*\*
-- UCONFGET id=\*\*\*\*
-- LISTUCONF id=\*\*\*\*
+* UCONFSET id=\*\*\*\*,value=\*\*\*\*
+* UCONFGET id=\*\*\*\*
+* LISTUCONF id=\*\*\*\*
 
 This configuration replaces all prior configuring methods, such as manually
 editing cft.ini, ENV_CFT, \*.ini, trkapi.conf, and so on, which have been
@@ -3059,17 +3059,17 @@ CFT User Interface operations.
 
 Accepted types include:
 
-- int lower/higher
+* int lower/higher
            
-- bool true/false
+* bool true/false
               
-- enum (id1 id2 id3
+* enum (id1 id2 id3
     id4)  
-- identifier      
-- string                        
-- path (with abstract
+* identifier      
+* string                        
+* path (with abstract
     use of / \\) escaped by \\ :::: “/dsqfhdj”
-- fname
+* fname
 
 The ‘$’ sign is a reserved character that is used to reference an environmental
 variable. You have abstract use of environment variables using the $ sign.

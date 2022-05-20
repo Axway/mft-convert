@@ -14,10 +14,10 @@ The return code values are available in the `cftapi2.h` header file, located in 
 
 The data structures that are used by the API are as follows:
 
-- Current session in progress: CftApi2Session
-- Catalog: CftApi2Catalog
-- Selection: CftApi2Selection
-- Saved catalog record: CftApi2Record
+* Current session in progress: CftApi2Session
+* Catalog: CftApi2Catalog
+* Selection: CftApi2Selection
+* Saved catalog record: CftApi2Record
 
 The programmer can set pointers to these data structures. These are then allocated and initialized by the API.
 

@@ -11,12 +11,12 @@ coding volume.
 
 The transfer services functions:
 
-- Check the validity
+* Check the validity
     of the command name
-- Analyze the syntax
+* Analyze the syntax
     of the command parameters, if the function using the syntax analyzer is
     used
-- Place the command
+* Place the command
     in the {{< TransferCFT/axwayvariablesComponentShortName >}} communication medium
 
 The processing performed by {{< TransferCFT/axwayvariablesComponentShortName  >}} is totally asynchronous.
@@ -56,18 +56,18 @@ in the communication medium.
 
 Where:
 
-- CFTU indicates
+* CFTU indicates
     that syntax analysis is requested  
     CFTC indicates that syntax analysis is not requested
-- &lt;verb> is
+* &lt;verb> is
     the command that you want to process
-- &lt;param> is
+* &lt;param> is
     a character string of variable length that contains the command parameters.
     The end of the field is defined by a character initially set to low-value
 
 <!-- -->
 
-- &lt;rc> is the
+* &lt;rc> is the
     return code
 
 The available &lt;verbs> are listed in the following table.
@@ -118,12 +118,12 @@ is performed by the function.
 
 The FIELD and MSG fields of the CFTAPI COPY CLAUSE contain:
 
-- FIELD: name of
+* FIELD: name of
     the incorrect parameter detected by the {{< TransferCFT/axwayvariablesComponentShortName >}} syntax analyzer
-- MSG:
-- Either a message
+* MSG:
+* Either a message
     relative to the error recognized by the syntax analyzer
-- Or an error
+* Or an error
     message describing an incident when the command is taken into account
 
 See [Messages

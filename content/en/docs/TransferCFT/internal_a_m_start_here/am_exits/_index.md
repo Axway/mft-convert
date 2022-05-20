@@ -8,12 +8,12 @@ weight: 170
 
 Functions include:
 
-- int exam_init(const char \*username)
-- char\* exam_get_version(void)
-- int exam_check_login(const char \*username, const char \*password)
-- int exam_change_password(const char \*username, const char \*old_password, const char \*new_password)
-- int exam_check_permissions(EXAMPermission \*\*perm_list)
-- int exam_check_potential_permissions(EXAMPermission \*\*perm_list)
+* int exam_init(const char \*username)
+* char\* exam_get_version(void)
+* int exam_check_login(const char \*username, const char \*password)
+* int exam_change_password(const char \*username, const char \*old_password, const char \*new_password)
+* int exam_check_permissions(EXAMPermission \*\*perm_list)
+* int exam_check_potential_permissions(EXAMPermission \*\*perm_list)
 
 To help you get started, an Access Management exit sample is delivered in: `$CFTDIRRUNTIME/src/exit/cftexamsmp1.c`
 

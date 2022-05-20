@@ -4,8 +4,8 @@ linkTitle: "Using system users "
 weight: 240
 ---This section describes two optional Windows-specific tasks that you can perform to enable system user authentication and file system rights, and which are not mutually exclusive.
 
-- [Enable the file user rights (USERCTRL)](#Enable3)
-- [How to use system user authentication for the user interfaces](#How)
+* [Enable the file user rights (USERCTRL)](#Enable3)
+* [How to use system user authentication for the user interfaces](#How)
 
 You can only use the **user authentication for Copilot** when implementing the deprecated Java based Copilot UI or Web Services. This sort of authentication does not apply to the current Transfer CFT UI or to REST API usage.
 
@@ -26,10 +26,10 @@ Some user rights must be assigned to the user who launched the {{< TransferCFT/a
 
 To assign user rights:
 
-- Adjust memory quotas for a process
-- Impersonate a client after authentication (only on Windows 2008)
-- Replace a process level token
-- Create a token object
+* Adjust memory quotas for a process
+* Impersonate a client after authentication (only on Windows 2008)
+* Replace a process level token
+* Create a token object
 
 To define user rights:
 
@@ -46,8 +46,8 @@ To define user rights:
 
 There are two ways to enable the system user authentication:
 
-- For the current web-based Transfer CFT UI: set `copilot.restapi.authentication_method=system`
-- For the deprecated Transfer CFT UI (Copilot): set `copilot.misc.createprocessasuser=yes`
+* For the current web-based Transfer CFT UI: set `copilot.restapi.authentication_method=system`
+* For the deprecated Transfer CFT UI (Copilot): set `copilot.misc.createprocessasuser=yes`
 
 > **Note**
 >
@@ -59,10 +59,10 @@ When enabling user authentication for Copilot, you must run the Transfer Copilot
 
 The user rights to assign are:
 
-- Adjust memory quotas for a process
-- Impersonate a client after authentication (only on Windows 2008)
-- Replace a process level token
-- Create a token object
+* Adjust memory quotas for a process
+* Impersonate a client after authentication (only on Windows 2008)
+* Replace a process level token
+* Create a token object
 
 ### Define user rights
 

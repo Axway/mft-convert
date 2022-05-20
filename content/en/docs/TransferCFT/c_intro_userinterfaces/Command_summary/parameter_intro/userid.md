@@ -22,12 +22,12 @@ is the system "userid" of the server {{< TransferCFT/axwayvariablesComponentShor
 
 This field can include one or more of the following symbolic variables:
 
-- ****&PART****:
+* ****&PART****:
     value substituted by the local identifier of the transfer partner (CFTPART
     ****id****)
-- ****&SUSER****:
+* ****&SUSER****:
     value substituted by the SUSER parameter sent between two {{< TransferCFT/axwayvariablesComponentShortName >}}s (PeSIT D CFT profile and PeSIT E protocols)
-- &****RUSER****:
+* &****RUSER****:
     value substituted by the ****ruser****
     parameter sent between two {{< TransferCFT/axwayvariablesComponentShortName >}}s (PeSIT D CFT profile
     and PeSIT E protocols)

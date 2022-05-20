@@ -12,8 +12,8 @@ Check task manage and verify that the copilot "copxxx" processes are running (as
 
 In the Transfer CFT installation, access the `<install_directory>/runtime/run` folder &gt; and check the following files for errors or failed steps:
 
-- copmsg.out file
-- copui.trc file
+* copmsg.out file
+* copui.trc file
 
 Type of messages can include:
 
@@ -91,8 +91,8 @@ CONNECT action for SERVICE:UI resource not allowed for user: &lt;username>
 
 To troubleshoot:
 
-- Check the values in the [User interface connection](../#Configur2) diagram.
-- Check that the user has the appropriate privileges.
+* Check the values in the [User interface connection](../#Configur2) diagram.
+* Check that the user has the appropriate privileges.
 
 ## Transfer CFT is locked and you cannot log on the user interface
 
@@ -116,13 +116,13 @@ To unlock the database and correct related issues, you must either perform a **R
 
 If the sends an **404 not found** reply when connecting to the URL, please check that the `cftui `alias parameters are set in UCONF as follows:
 
-- `copilot.http.aliases.cftui.alias=/cft/ui`
-- `copilot.http.aliases.cftui.path=<installation_path>/Transfer_CFT/home/distrib/cftui`
+* `copilot.http.aliases.cftui.alias=/cft/ui`
+* `copilot.http.aliases.cftui.path=<installation_path>/Transfer_CFT/home/distrib/cftui`
 
 Check:
 
-- If the server sends an **invalid credential** reply, check that the UCONF `copilot.restapi.authentication_method` and `am.type` parameters are consistent with the **REST API server authentication method** diagram. Please see [Authentication methods](../#Authentication_methods)
-- If the server sends an **insufficient rights** reply, this indicates that access management is enabled (either {{< TransferCFT/PrimaryCGorUM >}} or internal AM) and that you do not have the CONNECT privilege on the SERVICE:UI resource.
-- If you are using the **predefined filters** and there seem to be missing transfers or messages, it is possible that they are not displaying due to a difference in time between the client and the server. This is because the predefined filters use the client time and not the server time.
+* If the server sends an **invalid credential** reply, check that the UCONF `copilot.restapi.authentication_method` and `am.type` parameters are consistent with the **REST API server authentication method** diagram. Please see [Authentication methods](../#Authentication_methods)
+* If the server sends an **insufficient rights** reply, this indicates that access management is enabled (either {{< TransferCFT/PrimaryCGorUM >}} or internal AM) and that you do not have the CONNECT privilege on the SERVICE:UI resource.
+* If you are using the **predefined filters** and there seem to be missing transfers or messages, it is possible that they are not displaying due to a difference in time between the client and the server. This is because the predefined filters use the client time and not the server time.
 
  

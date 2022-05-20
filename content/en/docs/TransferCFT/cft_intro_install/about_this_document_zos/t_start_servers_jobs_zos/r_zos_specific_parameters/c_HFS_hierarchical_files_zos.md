@@ -12,8 +12,8 @@ The z/OS file characteristics, such as format (RECFM), record size (LRECL), and 
 
 Transfer CFT z/OS can only access HFS files for a transfer. This excludes any other use in the Transfer CFT. This means that Transfer CFT z/OS:
 
-- Does not support generic sending of HFS in homogeneous mode.
-- The CFTUTIL utility COPYFILE function does not work with HFS files.
+* Does not support generic sending of HFS in homogeneous mode.
+* The CFTUTIL utility COPYFILE function does not work with HFS files.
 
 ## HFS file names
 
@@ -47,21 +47,21 @@ HFS files are specified by their type, depending on whether they contain text (s
 
 The values allocated to TYPE are:
 
-- T: text file
-    -   This file is structured
-    -   The logical records are limited
-    -   Transfer CFT treats the data in record mode
+* T: text file
+    *   This file is structured
+    *   The logical records are limited
+    *   Transfer CFT treats the data in record mode
 
 <!-- -->
 
-- B: binary file
-    -   This file is non-structured
-    -   Transfer CFT treats the data in continuous flow
+* B: binary file
+    *   This file is non-structured
+    *   Transfer CFT treats the data in continuous flow
 
 <!-- -->
 
-- J: stream text
-    -   Enables sending a text file that contains records that are larger than 32 KB
+* J: stream text
+    *   Enables sending a text file that contains records that are larger than 32 KB
 
 If the parameter is not present, the binary file type becomes the default type.
 
@@ -71,27 +71,27 @@ The RECFM, LRECL and BLKSIZE parameters retain their characteristics when they a
 
 Transfer CFT uses these parameter characteristics as a basis for ensuring data management for a transfer. For this reason, parameter settings must take into account the following:
 
-- Transfer CFT interprets the file format (FRECFM= and NRECFM=) to select a data exchange method. If this parameter is not present, V is the default value.
-- Transfer CFT interprets the size of a logical record (FLRECL= and NRECL=) to adapt the size of exchanged articles. If this parameter is not present, 4096 is the default value.
-- The size of a block is ignored (FBLKSIZE= and NBLKSIZE=) and is set to 0.
-- The LRECL for text files is limited to 32,752 bytes. Some JAVA/XML applications create non delimited text files, not supported by Transfer CFT.
+* Transfer CFT interprets the file format (FRECFM= and NRECFM=) to select a data exchange method. If this parameter is not present, V is the default value.
+* Transfer CFT interprets the size of a logical record (FLRECL= and NRECL=) to adapt the size of exchanged articles. If this parameter is not present, 4096 is the default value.
+* The size of a block is ignored (FBLKSIZE= and NBLKSIZE=) and is set to 0.
+* The LRECL for text files is limited to 32,752 bytes. Some JAVA/XML applications create non delimited text files, not supported by Transfer CFT.
 
 ### HFS file owner and access rights 
 
 An HFS file owner, or attribute, is characterized by:
 
-- A UID (user number)
-- A GID (group number)
-- A string that specifies access rights
+* A UID (user number)
+* A GID (group number)
+* A string that specifies access rights
 
 Transfer CFT z/OS manages the file owner and the access rights in two ways:
 
-- Transfer CFT is an authorized program and the CFTPARM USERCTRL parameter is set to YES.  
+* Transfer CFT is an authorized program and the CFTPARM USERCTRL parameter is set to YES.  
     As a result, files are created/read/written with the same rights as the requesting user. This is the recommended operating mode.
 
 <!-- -->
 
-- Otherwise, the HFS files are created/read/written with the rights of the Transfer CFT. It is recommended that you assign a UID to the Transfer CFT that is not 0.
+* Otherwise, the HFS files are created/read/written with the rights of the Transfer CFT. It is recommended that you assign a UID to the Transfer CFT that is not 0.
 
 When a received transfer leads to the creation of an HFS file, the file is created with the access right -rwxr-xr-x.
 
@@ -111,16 +111,16 @@ CFHF01E:BPX1mod ,RSN=05F1006C,RC=ENOENT (129)No such file or directory
 
 Where:
 
-- BPX1mod: Name of the service module that returned the error
+* BPX1mod: Name of the service module that returned the error
 
 <!-- -->
 
-- RSN=xxxxxxxx: The returned reason code
+* RSN=xxxxxxxx: The returned reason code
 
 Refer to the IBM brochure *UNIX System Services Messages & Codes*.
 
-- RC=: The return code in abbreviated mnemonic (numeric) form
+* RC=: The return code in abbreviated mnemonic (numeric) form
 
 ****Related topics****
 
-- [File access and coding](../file_access_and_coding)
+* [File access and coding](../file_access_and_coding)

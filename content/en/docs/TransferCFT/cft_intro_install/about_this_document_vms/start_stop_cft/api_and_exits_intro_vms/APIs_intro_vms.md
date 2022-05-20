@@ -8,11 +8,11 @@ The Transfer CFT service called (CFTI, CFTU or CFTC) executes the request, eithe
 
 The client application receives from Transfer CFT:
 
-- A return code
+* A return code
 
 <!-- -->
 
-- The requested data, if applicable
+* The requested data, if applicable
 
 ## Creating an API application
 
@@ -22,11 +22,11 @@ The `cft-tcp.conf `configuration sample is located in` cft_scen `or` d$cft_run:[
 
 The `d$cft_run:[src.capi]` subdirectory contains:
 
-- The sample source module,
+* The sample source module,
     called `apixmp1.c,` which interacts with {{< TransferCFT/axwayvariablesComponentShortName >}}. This program
     reads the {{< TransferCFT/axwayvariablesComponentShortName >}} catalog and displays its contents in part or in
     full, depending on the restrictions set in the command line.
-- The `makefile_capi.com`
+* The `makefile_capi.com`
     compilation procedure, which uses the` apixmp1.c `sample source module
     to generate the APIXMPI executable file.
 

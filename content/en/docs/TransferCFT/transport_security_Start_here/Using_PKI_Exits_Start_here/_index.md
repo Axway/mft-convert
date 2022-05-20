@@ -6,11 +6,11 @@ weight: 190
 begins with this topic which describes
 the following PKI exit concepts:
 
-- [Using
+* [Using
     PKI exits](#Using_PKI_exits__Start_here)
-- [Activating](#Activating)
-- [Processing](#Processing)
-- [Defining
+* [Activating](#Activating)
+* [Processing](#Processing)
+* [Defining
     a PKI exit](#Defining_a_PKI_exit)
 
 <span id="Using_PKI_exits"></span>
@@ -28,25 +28,25 @@ those supported by Transfer CFT.
 
 The PKI exit can be used when:
 
-- Creating an SSL
+* Creating an SSL
     task StartTask
-- Opening an SSL
+* Opening an SSL
     session (StartHandshake)
-- Getting a user
+* Getting a user
     certificate chain to be sent (GetCertificate)
-- Getting a list
+* Getting a list
     of CAs to be sent (GetCAList)
-- Checking a user
+* Checking a user
     certificate received (CheckCertificate)
-- Encrypting using
+* Encrypting using
     the private key (CryptData)
-- Activating an alert
+* Activating an alert
     during the handshake phase (HandshakeAlert)
-- The SSL session
+* The SSL session
     is established (HandshakeDone)
-- The SSL session
+* The SSL session
     is released (EndSession)
-- An SSL task has
+* An SSL task has
     been terminated (EndTask)
 
 <span id="Activating"></span>
@@ -71,9 +71,9 @@ internal datafile specific to the product.
 
 It is first called at each step described previously and:
 
-- May handle processing
+* May handle processing
     associated with each step
-- May ignore any
+* May ignore any
     processing associated with each step, in which case, the Transfer CFT
     PKI takes over
 
@@ -87,8 +87,8 @@ A Transfer CFT PKI exit is called through a C function called `cftpkie`. How th
 
 To define a PKI exit, generate a DLL and set the following UCONF parameters:
 
-- Set `pki.type` = `exit`
-- Specify `pki.exit.libpath` as the path to the dynamic load library
+* Set `pki.type` = `exit`
+* Specify `pki.exit.libpath` as the path to the dynamic load library
 
 A sample of how to generate this exit is located in the `<cft.runtime_dir>/src/exit` directory. You can invoke a makefile to generate this DLL (among other things) from the `cftpkie.c` source file located in the same directory. Before calling this makefile, load the Transfer CFT profile.
 

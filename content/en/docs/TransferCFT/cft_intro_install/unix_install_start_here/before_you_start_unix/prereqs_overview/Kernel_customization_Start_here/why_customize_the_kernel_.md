@@ -5,13 +5,13 @@ weight: 190
 ---This topic explains the advantages of customizing the kernel, and additionally
 presents the following related subjects:
 
-- [Global
+* [Global
     memory segment](#Global_memory_segment)
-- [Message
+* [Message
     queue depth](#Message_queue_depth)
-- [Memory
+* [Memory
     allocated to TCP](#Memory_allocated_to_TCP)
-- [Number
+* [Number
     of files used by a process](#Number_of_files_used_by_a_process)
 
 <span id="Global_memory_segment"></span>

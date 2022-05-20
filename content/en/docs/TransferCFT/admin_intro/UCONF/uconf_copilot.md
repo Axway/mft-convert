@@ -75,8 +75,8 @@ Use this parameter to define the {{< TransferCFT/axwayvariablesComponentShortNam
 
 This section describes how to install the certificates that are required to enable HTTPS connections for Copilot. The basic steps are:
 
-- Install a certificate on the server
-- Install a certificate on the client
+* Install a certificate on the server
+* Install a certificate on the client
 
 ### Install a certificate on the server
 

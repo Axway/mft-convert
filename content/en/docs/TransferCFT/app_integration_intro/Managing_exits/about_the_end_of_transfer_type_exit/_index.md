@@ -20,11 +20,11 @@ transfer state (UPDATE) or to delete the catalog record (DELETE).
 
 The following changes of state are authorized in the event of an UPDATE:
 
-- H --> K
-- K --> H
-- T --> X
-- H or K --> D
-- T --> T
+* H --> K
+* K --> H
+* T --> X
+* H or K --> D
+* T --> T
 
 If a transfer procedure is submitted, it is initiated when the exit
 call ends.

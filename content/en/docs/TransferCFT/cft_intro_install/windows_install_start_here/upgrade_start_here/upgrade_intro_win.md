@@ -24,10 +24,10 @@ All passwords stored in the UCONF dictionary, or in the {{< TransferCFT/axwayva
 
 Before beginning the upgrade procedure:
 
-- Download the Transfer CFT installation kit, available at [support.axway.com](https://support.axway.com/).
-- Stop the Transfer CFT server and the Transfer CFT Copilot server, by entering:
-    -   cft stop
-    -   copstop -f
+* Download the Transfer CFT installation kit, available at [support.axway.com](https://support.axway.com/).
+* Stop the Transfer CFT server and the Transfer CFT Copilot server, by entering:
+    *   cft stop
+    *   copstop -f
 
 ### Windows Application Experience recommendation
 
@@ -53,23 +53,23 @@ You can use the following installer options for {{< TransferCFT/suitevariablesTr
 
 **--architecture &lt;architecture>**: Installation architecture (single or cluster mode).
 
-- Default: single
-- Allowed: single first_host additional_host
+* Default: single
+* Allowed: single first_host additional_host
 
 **--runtimedir &lt;runtimedir>**: Shared Runtime Directory. On LEGACY upgrades, this is the shared data directory where the Axway Installer was installed.
 
-- Only used when architecture=additional_host
+* Only used when architecture=additional_host
 
 **--installdir &lt;installdir>**: Directory where the Transfer CFT is installed/upgraded. On LEGACY upgrades, this is the directory where the Axway Installer was installed.
 
-- Not used when architecture=additional_host
-- Default:&lt;Current Drive>:\\axway\\cft
+* Not used when architecture=additional_host
+* Default:&lt;Current Drive>:\\axway\\cft
 
 **--conf-file &lt;conf-file>**: File used to personalize installation of Transfer CFT
 
-- In this type of installation only 2 parameters are used:
-    -   \- architecture and installdir (if architecture = single/first_host), or
-    -   \- architecture and runtimedir (if architecture = additional_host)
+* In this type of installation only 2 parameters are used:
+    *   \- architecture and installdir (if architecture = single/first_host), or
+    *   \- architecture and runtimedir (if architecture = additional_host)
 
 You can set these using command line or the configuration file. The values passed in command line take precedence over the values in the configuration file.
 
@@ -114,13 +114,13 @@ Run the Axway Installer in update mode.
 
 The following available options are described in detail in [Upgrade options](#Upgrade):
 
-- --architecture &lt;architecture>
-- --runtimedir &lt;runtimedir> (only available when architecture = additional_hosts)
-- --installdir &lt;installdir>
-- --conf-file &lt;conf-file>
-- --help
-- --debuglevel
-- --mode
+* --architecture &lt;architecture>
+* --runtimedir &lt;runtimedir> (only available when architecture = additional_hosts)
+* --installdir &lt;installdir>
+* --conf-file &lt;conf-file>
+* --help
+* --debuglevel
+* --mode
 
 ## Post upgrade
 

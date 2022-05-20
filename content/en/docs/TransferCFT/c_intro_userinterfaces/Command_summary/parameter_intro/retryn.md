@@ -17,7 +17,7 @@ between attempts.
 
 ****4****: default value
 
-- any
+* any
     other value from ****0**** to ****32767****
 
 When ****retryn**** attempts have been
@@ -32,12 +32,12 @@ If retryw = 1, retryn = 4, retrym =12
 
 In this example the following occurs:
 
-- Four
+* Four
     retries at one-minute intervals
-- Two
+* Two
     retries at two-minute intervals
-- One retry at four-minute intervals
-- Five
+* One retry at four-minute intervals
+* Five
     retries at eight-minute intervals
 
 **Retry concepts**
@@ -58,13 +58,13 @@ CFTPART ... PROT = ( 'PROT1',
 
 The retry order is as follows:
 
-- IP1 SAP1 PROT1 (first host, first protocol)
-- IP1 SAP1 PROT1 (retry)
-- IP2 SAP1 PROT1 (second host, first protocol)
-- IP2 SAP1 PROT1 (retry)
-- IP1 SAP2 PROT2 (first host, second protocol)
-- IP1 SAP2 PROT2 (retry)
-- IP2 SAP2 PROT2 (second host, second protocol)
-- IP2 SAP2 PROT2 (retry)
+* IP1 SAP1 PROT1 (first host, first protocol)
+* IP1 SAP1 PROT1 (retry)
+* IP2 SAP1 PROT1 (second host, first protocol)
+* IP2 SAP1 PROT1 (retry)
+* IP1 SAP2 PROT2 (first host, second protocol)
+* IP1 SAP2 PROT2 (retry)
+* IP2 SAP2 PROT2 (second host, second protocol)
+* IP2 SAP2 PROT2 (retry)
 
 [Return to Command index](../../)

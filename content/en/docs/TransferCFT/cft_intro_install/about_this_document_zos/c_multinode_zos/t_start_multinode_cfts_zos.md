@@ -20,8 +20,8 @@ The node manager submits a JCL defined by the UCONF `cft.multi_node.start_node.p
 
 The following sections describe the two ways that you can start a node (customize MNRMAIN).
 
-- STC: `          //STEP010 EXEC PGM=IKJEFT01,PARM='%RXSCFT SC'`
-- JCL: `           //STEP010 EXEC PGM=IKJEFT01,PARM='%RXSCFT SJ'`
+* STC: `          //STEP010 EXEC PGM=IKJEFT01,PARM='%RXSCFT SC'`
+* JCL: `           //STEP010 EXEC PGM=IKJEFT01,PARM='%RXSCFT SJ'`
 
 ### STC
 
@@ -98,13 +98,13 @@ A12345TA, A12345TB, A12345TC, A12345TD
 ### Start the Transfer CFT node manager
 
 1. For each host that you configured (LPAR1, LPAR2, ...), start the node manager.
-    -   Submit the JCL MNRMNG.
+    *   Submit the JCL MNRMNG.
 1. Start Transfer CFT.
-    -   Submit the JCL MNSTART.
-    -   You only need to perform this task once.
+    *   Submit the JCL MNSTART.
+    *   You only need to perform this task once.
 1. Check the status of the multi-node setup.
-    -   Submit the JCL MNLNODE.
-    -   Check the results and the sysout.
+    *   Submit the JCL MNLNODE.
+    *   Check the results and the sysout.
 
 ### Trace the node start
 
@@ -121,9 +121,9 @@ For each start request an entry is created in the file …MONLOG, for example, w
 ```
 Start request cftmain Jobname=SOZ113T4 25 Jun 2014 at 15:00:49 by Userid=SOP745
 
-- Plex=PLEX1,Sysname=Z113 ,Version=z/OS 01.13.00 HBB7780
-- Hostname=z-zos111b,Hostid=10.128.60.15
-- Started by console command: S SOP7457A,JOBNAME=SOZ113T4
+* Plex=PLEX1,Sysname=Z113 ,Version=z/OS 01.13.00 HBB7780
+* Hostname=z-zos111b,Hostid=10.128.60.15
+* Started by console command: S SOP7457A,JOBNAME=SOZ113T4
 
 ```
 
@@ -132,8 +132,8 @@ For example, when node started by JCL.
 ```
 Start request cftmain Jobname=SOP745T4 13 Apr 2015 at 16:10:52 by Userid=SOP745
 
-- Plex=PLEX1,Sysname=Z113 ,Version=z/OS 01.13.00 HBB7780
-- Hostname=z-zos111b,Hostid=10.128.60.15
-- Submitted by JCL IKJ56250I JOB SOP745T4(JOB03462) SUBMITTED
+* Plex=PLEX1,Sysname=Z113 ,Version=z/OS 01.13.00 HBB7780
+* Hostname=z-zos111b,Hostid=10.128.60.15
+* Submitted by JCL IKJ56250I JOB SOP745T4(JOB03462) SUBMITTED
 
 ```

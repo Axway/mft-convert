@@ -126,11 +126,11 @@ Migrate the PARM, PART, IDF, other static configuration objects, and UCONF param
 1. Load the former Transfer CFT 3.0.1 or 3.1.3 environment.
 1. Use the CFTMI command to export all communication media files (cftcom and cftcomXX, where XX is the node number having a range from 00 to &lt;number of nodes - 1>).
 
-- For each communication media file, enter:  
+* For each communication media file, enter:  
     ```
     CFTMI MIGR type=COM, direct=FROMCOM, ifname=<com_filename_for_node_manager_on_former_cft>, ofname=com_output.xml
     ```
-- For each node, enter:  
+* For each node, enter:  
     ```
     CFTMI MIGR type=COM, direct=FROMCOM, ifname=<com_filename_for_node_<node>_on_former_cft>, ofname=com_output_<node>.xml
     ```
@@ -139,11 +139,11 @@ Load Transfer CFT {{< TransferCFT/PrimaryTransferCFTversionlong  >}} environment
 
 Import all communication media files using the `CFTMI` command for each of them. Use the same node number for both &lt;node> in the command.
 
-- Enter:  
+* Enter:  
     ```
     CFTMI MIGR type=COM, direct=TOCOM, ifname=com_ouput.xml, ofname=<com_filename_for_node_manager_on_new_cft>
     ```
-- For each node, enter:  
+* For each node, enter:  
     ```
     CFTMI MIGR type=COM, direct=TOCOM, ifname=com_ouput_<node>.xml, ofname=<com_filename_for_node_<node>_on_new_cft>
     ```

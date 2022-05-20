@@ -9,11 +9,11 @@ to create or delete a parameter, partner, catalog, log and accounting files.
 The following operations can only be carried out when Transfer CFT is
 shut down.
 
-- Modify or add certain
+* Modify or add certain
     parameters
-- View the parameter,
+* View the parameter,
     partner, catalog, log and accounting files
-- Send commands to
+* Send commands to
     the monitor
 
 ### Start CFTUTIL
@@ -52,7 +52,7 @@ CFT> /end
 CFTUTIL can also accept commands passed either individually as parameters
 or in a command file:
 
-- Command passed
+* Command passed
     as a parameter:  
     The command line is passed as a CFTUTIL parameter using the following
     syntax:
@@ -66,7 +66,7 @@ or in a command file:
 This command displays a table of scheduled (or performed)
 transfers to the *headoffice* partner
 
-- File passed as
+* File passed as
     a parameter
 
 The following command runs the CFTUTIL utility, which

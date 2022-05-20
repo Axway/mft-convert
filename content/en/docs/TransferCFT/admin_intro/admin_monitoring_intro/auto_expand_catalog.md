@@ -10,18 +10,18 @@ Once the catalog exceeds the minimum alert level, it can be expanded to the amou
 
 If you defined a timer for catalog alerts, TLVCLEAR, once the usage surpasses the allotted time value one of the following occurs:
 
-- The catalog is expanded and a message sent to the log, but no script is executed
-- The catalog is expanded, a message is sent to the log, and the TLVCEXEC script executes.
+* The catalog is expanded and a message sent to the log, but no script is executed
+* The catalog is expanded, a message is sent to the log, and the TLVCEXEC script executes.
 
 ## Steps
 
 To enable the auto-expand option, with {{< TransferCFT/axwayvariablesComponentShortName  >}} running:
 
 1. Set the uconf values for:
-    -   `cft.cftcat.auto_expand_percent `
-    -   `cft.cftcat.auto_expand_max_size`
+    *   `cft.cftcat.auto_expand_percent `
+    *   `cft.cftcat.auto_expand_max_size`
 1. To activate the new values, run the command: `CFTUTIL reconfig type = uconf`
-    -   If {{< TransferCFT/axwayvariablesComponentShortName >}} is stopped when setting uconf values, you do not need to execute the `reconfig `command.
+    *   If {{< TransferCFT/axwayvariablesComponentShortName >}} is stopped when setting uconf values, you do not need to execute the `reconfig `command.
 
 
 | Parameter  | Default  | Description  |
@@ -32,19 +32,19 @@ To enable the auto-expand option, with {{< TransferCFT/axwayvariablesComponentSh
 
 Related parameters:
 
-- TLVCLEAR: Level below which the alert stops.
-- TLVCEXEC: Batch to execute when the alert ends.
-- TLVWRATE: The minimum amount of time, in seconds, to wait before resending an alert.
-- TLVWEXEC: Batch to execute when CFTCAT/TLVWARN is reached.
-- TLVWARN: Catalog usage limit before issuing an alert. When this limit is reached, the CFTCAT/TLVWEXEC is executed.
+* TLVCLEAR: Level below which the alert stops.
+* TLVCEXEC: Batch to execute when the alert ends.
+* TLVWRATE: The minimum amount of time, in seconds, to wait before resending an alert.
+* TLVWEXEC: Batch to execute when CFTCAT/TLVWARN is reached.
+* TLVWARN: Catalog usage limit before issuing an alert. When this limit is reached, the CFTCAT/TLVWEXEC is executed.
 
 ****Example****
 
 The example is based on the following settings:
 
-- catalog size = 100
-- cft.cftcat.auto_expand_percent = 20
-- cft.cftcat.auto_expand_max_size = 140
+* catalog size = 100
+* cft.cftcat.auto_expand_percent = 20
+* cft.cftcat.auto_expand_max_size = 140
 
 When you reach the TLVWRATE (level=80%), the following messages are sent to the log:
 

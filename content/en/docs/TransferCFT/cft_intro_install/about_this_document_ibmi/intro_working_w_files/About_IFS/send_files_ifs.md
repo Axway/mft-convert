@@ -44,16 +44,16 @@ The FNAME parameter is set to a generic name that includes wildcard characters. 
 
 A receiving Transfer CFT can specify the name of each file received via the symbolic variables:
 
-- ?FPATH the file path of the sending file, and
-- ?FROOT the file name of the sending file
+* ?FPATH the file path of the sending file, and
+* ?FROOT the file name of the sending file
 
 ****Example****
 
-- CFTSEND
+* CFTSEND
 
 `FNAME = “#/home/send/FIC*.*”, FRECVFM = V`
 
-- CFTRECV
+* CFTRECV
 
 `FNAME = “/home/recv/?FROOT”, `
 
@@ -63,9 +63,9 @@ A receiving Transfer CFT can specify the name of each file received via the symb
 
 These rules apply to the structure of the file containing a list of files:
 
-- A record can contain only one file name
-- Each file name must be listed in the first column
-- The file names must be written in EBCDIC
+* A record can contain only one file name
+* Each file name must be listed in the first column
+* The file names must be written in EBCDIC
 
 ****Example****
 
@@ -75,8 +75,8 @@ Enter:
 
 If the file FICLIST contains the following lists:
 
-- /home/send/FIC1
-- /home/send/FIC2
-- /home/send/FIC3
+* /home/send/FIC1
+* /home/send/FIC2
+* /home/send/FIC3
 
 Then the files FIC1, FIC2 and FIC3 are sent.

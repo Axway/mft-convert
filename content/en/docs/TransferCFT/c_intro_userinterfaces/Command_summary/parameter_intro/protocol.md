@@ -6,8 +6,6 @@ weight: 2770
 
 ### protocol
 
-####  
-
 #### CFTNET TYPE = TCP
 
 ****PROTOCOL = { '  '
@@ -16,9 +14,9 @@ weight: 2770
 Defines the remote TCP network resource proxy used to access the second
 network:
 
-- SOCKS4
-- SOCKS5
-- ' ' a blank indicates no proxy protocol is defined
+* SOCKS4
+* SOCKS5
+* ' ' a blank indicates no proxy protocol is defined
 
  
 

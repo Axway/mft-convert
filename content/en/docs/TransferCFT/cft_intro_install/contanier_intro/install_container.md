@@ -10,13 +10,13 @@ The information in this page may be supplemented, corrected, or even contradicte
 
 To get started, you require:
 
-- For Docker-Compose:
-    -   Docker 17.11 and higher
-    -   Docker-Compose 1.17.0 and higher
-- For container orchestration:
-    -   Kubernetes 1.14 and up
-    -   OpenShift 3 and 4
-    -   Helm 2.16 and higher, Helm 3 and higher
+* For Docker-Compose:
+    *   Docker 17.11 and higher
+    *   Docker-Compose 1.17.0 and higher
+* For container orchestration:
+    *   Kubernetes 1.14 and up
+    *   OpenShift 3 and 4
+    *   Helm 2.16 and higher, Helm 3 and higher
 
 Beyond the prerequisites listed above, the installation instructions for each container option provide links to their own prerequisites.
 
@@ -49,11 +49,11 @@ The repository contains several README.md files that correspond to each sub-modu
 
 Use the following links to find more information in the associated README:
 
-- Transfer CFT Docker changelog: <https://github.com/Axway/docker-cft/blob/master/CHANGELOG.md>
-- Organizational repository information: <https://github.com/Axway/docker-cft/blob/master/README.md>
-- How to build a Docker image: <https://github.com/Axway/docker-cft/blob/master/docker/README.md>
-- How to use Docker-Compose: <https://github.com/Axway/docker-cft/blob/master/compose/README.md>
-- How to use Kubernetes with Helm:<https://github.com/Axway/docker-cft/blob/master/helm/transfer-cft/README.md>
+* Transfer CFT Docker changelog: <https://github.com/Axway/docker-cft/blob/master/CHANGELOG.md>
+* Organizational repository information: <https://github.com/Axway/docker-cft/blob/master/README.md>
+* How to build a Docker image: <https://github.com/Axway/docker-cft/blob/master/docker/README.md>
+* How to use Docker-Compose: <https://github.com/Axway/docker-cft/blob/master/compose/README.md>
+* How to use Kubernetes with Helm:<https://github.com/Axway/docker-cft/blob/master/helm/transfer-cft/README.md>
 
 ## Download the Transfer CFT Docker image
 

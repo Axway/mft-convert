@@ -6,8 +6,8 @@ weight: 170
 
 When you install the Transfer CFT you can create the following environments in a single step:
 
-- Distribution environment
-- Transfer CFT run-time instance environment
+* Distribution environment
+* Transfer CFT run-time instance environment
 
 <span id="kanchor58"></span>
 
@@ -30,8 +30,8 @@ To define an alias, adapt the parameters in bold to suit your environment. Enter
 
 ### Required configuration
 
-- An FTP client that permits the transfer of files to the z/OS host
-- Download the ESD file from {{< TransferCFT/axwayvariablesCompanyName >}} Support at [https://support.axway.com](https://support.axway.com/)
+* An FTP client that permits the transfer of files to the z/OS host
+* Download the ESD file from {{< TransferCFT/axwayvariablesCompanyName >}} Support at [https://support.axway.com](https://support.axway.com/)
 
 > **Note**
 >
@@ -39,11 +39,11 @@ To define an alias, adapt the parameters in bold to suit your environment. Enter
 
 To install the Transfer CFT z/OS product, you need approximately:
 
-- 200 cylinders 3390 of disk space on z/OS to transfer the delivery files from another system using FTP
+* 200 cylinders 3390 of disk space on z/OS to transfer the delivery files from another system using FTP
 
 <!-- -->
 
-- 450 additional cylinders of disk space to unpack the installation files
+* 450 additional cylinders of disk space to unpack the installation files
 
 <span id="Installa"></span><span id="kanchor59"></span>
 
@@ -55,19 +55,19 @@ The installation package is a zip archive that contains the product and installe
 
 Once you unzip the files, locate and run the setup file in the root folder of the installation package. Two installation modes are available:
 
-- Installation (console mode)
-    -   UNIX/Linux: setup.sh
-    -   Windows: setup.bat
-- Silent installation
-    -   UNIX/Linux: setup.sh --silent
-    -   Windows: setup.bat --silent
+* Installation (console mode)
+    *   UNIX/Linux: setup.sh
+    *   Windows: setup.bat
+* Silent installation
+    *   UNIX/Linux: setup.sh --silent
+    *   Windows: setup.bat --silent
 
 ## Upload Transfer CFT z/OS using the installer
 
 This section describes how to prepare the distribution environment necessary to create a target environment. The procedure consists of:
 
-- Installing the product
-- Creating the distribution environment
+* Installing the product
+* Creating the distribution environment
 
 ```
 Unix Installation example:
@@ -160,15 +160,15 @@ Before you start the silent installation you must update the silent_install.conf
 
 Once you have configured and saved the file for silent installation, run the following command to start the installation:
 
-- UNIX/Linux: setup.sh --silent
-- Windows: setup.bat --silent
+* UNIX/Linux: setup.sh --silent
+* Windows: setup.bat --silent
 
 ## Decompress the installation files
 
 Use one of the following methods to unpack the installation files:
 
-- Decompress using the ADRDSSU format, *or*
-- Decompress using double Xmit format
+* Decompress using the ADRDSSU format, *or*
+* Decompress using double Xmit format
 
 <span id="kanchor60"></span>
 
@@ -178,31 +178,31 @@ From the transferred distlib.UPLIB library, customize and submit the J1IDISTA 
 
 This procedure:
 
-- Transforms the product file into an ADRDSSU file type (via IKJEFT01)
+* Transforms the product file into an ADRDSSU file type (via IKJEFT01)
 
 <!-- -->
 
-- Restores the Transfer CFT distribution files via ADRDSSU
+* Restores the Transfer CFT distribution files via ADRDSSU
 
 <!-- -->
 
-- Creates a distribution environment
+* Creates a distribution environment
 
 <!-- -->
 
-- Creates a Transfer CFT instance environment (if required)
+* Creates a Transfer CFT instance environment (if required)
 
 To customize the JCL, apply a `change all` command on the following parameters:
 
-- distlib: distribution environment prefix
+* distlib: distribution environment prefix
 
 <!-- -->
 
-- volser: volume serial number, used to override the default value. If used, the statement marked as comment must be activated
+* volser: volume serial number, used to override the default value. If used, the statement marked as comment must be activated
 
 <!-- -->
 
-- storclass: SMS Storage class, used to override the default value. If used, the statement marked as a comment must be activated
+* storclass: SMS Storage class, used to override the default value. If used, the statement marked as a comment must be activated
 
 > **Note**
 >
@@ -216,12 +216,12 @@ From the transferred distlib.UPLIB library, customize and submit the J1IDISTX J
 
 This procedure:
 
-- Performs two successive orders RECEIVE (via IKJEFT01)
-- Creates a distribution environment
-- Creates a Transfer CFT instance environment (if needed)
-- Creates a Composer connector environment for Transfer CFT (if needed)
+* Performs two successive orders RECEIVE (via IKJEFT01)
+* Creates a distribution environment
+* Creates a Transfer CFT instance environment (if needed)
+* Creates a Composer connector environment for Transfer CFT (if needed)
 
 To customize the JCL, apply a change all command to the following parameters:
 
-- distlib: distribution environment prefix
-- Volse: volume serial number, used to override the default value. If used, the statement marked as comment must be activated
+* distlib: distribution environment prefix
+* Volse: volume serial number, used to override the default value. If used, the statement marked as comment must be activated

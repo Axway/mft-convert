@@ -45,20 +45,20 @@ file.
 
 This parameter can take on the following values:
 
-- LOCALNAME
+* LOCALNAME
 
 The HOSTS file or the DNS service is used to obtain the machine’s IP
 address. The HOSTS file (the DNS service) must contain the IP address
 that corresponds to the name of the machine.  
 Default value:
 
-- LOCALHOST
+* LOCALHOST
 
 The standard name "localhost" is used. It is sometimes necessary
 for the HOSTS file to contain the IP address of the standard localhost
 name. In general the value of this IP address is 127.0.0.1.
 
-- IPADDRESS
+* IPADDRESS
 
 IP address of the local machine, obtained directly. This is stated in
 the LOCALHOSTADDR. Parameter.
@@ -110,10 +110,10 @@ Syntax of the CFTTCP HOST parameter:
 
 Where:
 
-- PPPxx: is the
+* PPPxx: is the
     name of the section in the cftras.ini file (xx between 00 and 99
     inclusive)
-- host: corresponds
+* host: corresponds
     either to the name of the remote host, or the IP address of the  
     remote partner
 
@@ -125,26 +125,26 @@ Structure of the cftras.ini file
 
 Each section has the format:
 
-- [PPPxx]          :
+* [PPPxx]          :
     the name of the section (xx between 00 and 99 inclusive)
-- linkentry=LINK1    
+* linkentry=LINK1    
     : the entry defined in the Windows RAS directory
-- phoneno=1234567890
+* phoneno=1234567890
     : the telephone number of the RAS server
-- server=server :
+* server=server :
     the NT server on which the user is identified
-- username=user :
+* username=user :
     the name of the user connecting to the RAS server
-- password=password    
+* password=password    
     : the password of the user connecting to the RAS server
 
 > **Note**
 >
 >  
 
-- The link
+* The link
     entry field, as defined in the RAS directory, is mandatory.
-- All the other fields
+* All the other fields
     in a section are optional. Their default values are as defined in the
     RAS directory entry. If necessary, these optional parameters can replace
     the parameters defined in the RAS directory entry.

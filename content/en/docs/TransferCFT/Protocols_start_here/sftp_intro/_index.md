@@ -4,9 +4,9 @@ linkTitle: "SFTP protocol"
 weight: 110
 ---The SSH File Transfer Protocol (SFTP) is a protocol that transfers files over an encrypted SSH channel. The SSH protocol is an encrypted protocol that uses a client-server model to authenticate two parties and encrypt the data between them.
 
-- The server listens on a designated port for connections, and is responsible for negotiating the secure connection, authenticating the connecting party, and spawning the correct environment if the credentials are accepted.
+* The server listens on a designated port for connections, and is responsible for negotiating the secure connection, authenticating the connecting party, and spawning the correct environment if the credentials are accepted.
 
-- The client begins the TCP handshake with the server, negotiates the secured connection, checks that the server's identity matches previously recorded information, and provides credentials to authenticate.
+* The client begins the TCP handshake with the server, negotiates the secured connection, checks that the server's identity matches previously recorded information, and provides credentials to authenticate.
 
 Please see [SSH session concepts](sftp_keys_concepts) for session concepts and SSH object details.
 
@@ -16,17 +16,17 @@ Please see [SSH session concepts](sftp_keys_concepts) for session concepts and 
 
 The Transfer CFT supports the following SFTP features:
 
-- Text/binary file transfer
-- Group of files in heterogeneous mode (`mput, mget`)
-- Folder monitoring
-- Multi-node
-- SSH compression
-- Bandwidth control in client mode
-- Authentication with the user password
-- Authentication with an SSH key
-- Dual authentication with user password and SSH key
-- Amazon S3 and Ceph Storage
-- Google Cloud Storage
+* Text/binary file transfer
+* Group of files in heterogeneous mode (`mput, mget`)
+* Folder monitoring
+* Multi-node
+* SSH compression
+* Bandwidth control in client mode
+* Authentication with the user password
+* Authentication with an SSH key
+* Dual authentication with user password and SSH key
+* Amazon S3 and Ceph Storage
+* Google Cloud Storage
 
 <span id="Supporte"></span>
 
@@ -34,16 +34,16 @@ The Transfer CFT supports the following SFTP features:
 
 The Transfer CFT in server mode supports the following SFTP commands:
 
-- Upload (`put`) and download (`get`)
-- Get directory listings
-- Create, remove, change directory
-- Rename, remove file
-- Change file mode
-- Action on remote source (delete or archive)
+* Upload (`put`) and download (`get`)
+* Get directory listings
+* Create, remove, change directory
+* Rename, remove file
+* Change file mode
+* Action on remote source (delete or archive)
 
 The Transfer CFT in client mode supports the following SFTP commands:
 
-- Upload (`put`) and download (`get`)
+* Upload (`put`) and download (`get`)
 
 ## Supported SFTP versions
 
@@ -89,20 +89,20 @@ arrows in both directions.
 
 ## Limitations
 
-- SFTP supports messages and replies (ACK or NACK), but only between Transfer CFTs.
-- SFTP implementation does not support the store-and-forward functionality.
-- You cannot use Copilot to create CFTSSH objects.
-- When using Secure Relay with Transfer CFT for SFTP exchanges, SSH termination is not supported.
-- Transfer CFT supports the RSA digital signature algorithm; however, ECDSA and DSA are not supported.
-- 512-bit RSA keys are not supported. Use at least a 1024-bit key for RSA.
-- *Windows* - You cannot modify the files rights (chmod) from the SFTP client when using Transfer CFT Windows as the SFTP server.
-- *z/OS* - Only z/OS UNIX files are processed, not native files.
-- *IBM i* - Only IBM i UNIX files are processed, not native files.
-- *HP NonStop* - Only UNIX files are processed, not native files.
-- Not supported on OpenVMS systems.
+* SFTP supports messages and replies (ACK or NACK), but only between Transfer CFTs.
+* SFTP implementation does not support the store-and-forward functionality.
+* You cannot use Copilot to create CFTSSH objects.
+* When using Secure Relay with Transfer CFT for SFTP exchanges, SSH termination is not supported.
+* Transfer CFT supports the RSA digital signature algorithm; however, ECDSA and DSA are not supported.
+* 512-bit RSA keys are not supported. Use at least a 1024-bit key for RSA.
+* *Windows* - You cannot modify the files rights (chmod) from the SFTP client when using Transfer CFT Windows as the SFTP server.
+* *z/OS* - Only z/OS UNIX files are processed, not native files.
+* *IBM i* - Only IBM i UNIX files are processed, not native files.
+* *HP NonStop* - Only UNIX files are processed, not native files.
+* Not supported on OpenVMS systems.
 
 Limitations when using Amazon S3, Ceph, or Google Cloud Storage with SFTP (*available on Unix and Windows systems*):
 
-- You cannot restart a transfer in server receive mode.
-- When listing files, only the size and modification time display.
-- You cannot see how much free space is available in the Cloud folder.
+* You cannot restart a transfer in server receive mode.
+* When listing files, only the size and modification time display.
+* You cannot see how much free space is available in the Cloud folder.

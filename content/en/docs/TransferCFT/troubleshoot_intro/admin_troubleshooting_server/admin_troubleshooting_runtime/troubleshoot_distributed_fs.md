@@ -8,11 +8,11 @@ When transferring files that are located in a **N**etwork **F**ile **S**ystem, a
 
 ****Symptom****
 
-- Flow transfers hang in the phase `T` and phasestep `C`, with a timeout but no error message.
+* Flow transfers hang in the phase `T` and phasestep `C`, with a timeout but no error message.
 
 ****Remedy****
 
-- Check that the correct port for the lockd service is open on the firewall (default=4045).
+* Check that the correct port for the lockd service is open on the firewall (default=4045).
 
 ## Multi-node multihost installation issues
 

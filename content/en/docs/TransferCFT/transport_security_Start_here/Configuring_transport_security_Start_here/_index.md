@@ -8,28 +8,28 @@ are involved in the Transfer CFT transport security configuration. The
 CFTPARM, CFTPROT, and CFTPART objects include parameters that are directly
 associated with SSL.
 
-- CFTPARM
+* CFTPARM
     configuration
-- CFTPART
+* CFTPART
     configuration
-- [CFTPROT
+* [CFTPROT
     configuration](../../c_intro_userinterfaces/about_cftutil/configuring_cft_start_here/cftprot_command_line)
-- [CFTSSL
+* [CFTSSL
     configuration](transport_security_cftssl)
-- [Integrated
+* [Integrated
     PKI](#Implementing_a_PKI)
-- [Delivered SSL templates](#Using)
+* [Delivered SSL templates](#Using)
 
 This topic
 provides basic information that you need to use transport security on
 your Transfer CFT. The following security elements are defined
 in this topic:
 
-- [About
+* [About
     transport security](#About_Transport_Security)
-- [Security
+* [Security
     profiles](#Security_profiles)
-- [Implementing
+* [Implementing
     a PKI](#Implementing_a_PKI)
 
 <span id="About_Transport_Security"></span>
@@ -52,11 +52,11 @@ mode,...).
 The SSL and TLS protocols define the security suite, or cipher suite,
 concept. A suite is identified by a number and designates one:
 
-- Authentication
+* Authentication
     algorithm
-- Encryption algorithm
+* Encryption algorithm
     to ensure confidentiality
-- Hash
+* Hash
     algorithm to ensure integrity
 
 The suites supported by Transfer CFT are described in the following
@@ -108,13 +108,13 @@ of an SSL or TLS session. It is associated with the definition of a protocol
 
 For incoming calls, or server mode:
 
-- One single profile per CFTPROT command
-- Additional controls may be associated for each partner
+* One single profile per CFTPROT command
+* Additional controls may be associated for each partner
 
 For outgoing calls, or client mode:
 
-- One default security profile per CFTPROT command
-- A different profile may be forced for each partner
+* One default security profile per CFTPROT command
+* A different profile may be forced for each partner
 
 <span id="Implementing_a_PKI"></span>
 
@@ -128,41 +128,41 @@ API.
 The Transfer CFT integrated PKI provides
 a certificate management solution comprising a:
 
-- Certificate database
-- Certificate database
+* Certificate database
+* Certificate database
     management utility (PKIUTIL)
 
 The PKIUTIL certificate database management utility offers functions
 allowing you to:
 
-- Create and delete
+* Create and delete
     the database
-- Install a trusted
+* Install a trusted
     certificate in the database
-- Install a user
+* Install a user
     certificate and its associated private key in the database
-- Delete a certificate
+* Delete a certificate
     from the database
-- Enable/disable
+* Enable/disable
     a certificate
-- Display the database
+* Display the database
     content, according to various criteria (authorities, validity date,...)
 
 The certificate import command accepts the following formats:
 
-- PEM, Privacy
+* PEM, Privacy
     Enhanced Mail,
     of the Base 64 variety
-- DER
-- PKCS, Public
+* DER
+* PKCS, Public
     Key Cryptographic
     Standards:
-- PKCS #7 Cryptographic
+* PKCS #7 Cryptographic
     Message Syntax Standard used for encrypting the data
-- PKCS#12 Personal
+* PKCS#12 Personal
     Information Exchange Syntax Standard used for storing and transporting
     private keys, certificates, and so on
-- PKCS#8 used
+* PKCS#8 used
     for storing the private keys, encrypted or decrypted
 
 Transfer CFT then accesses

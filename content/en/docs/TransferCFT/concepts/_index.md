@@ -20,9 +20,9 @@ Transfer CFT requires a certain number parameters, such as the protocol, to suc
 {{< TransferCFT/axwayvariablesComponentShortName  >}} provides
 a set of *objects* that allow you to define these transfer related parameters. Prerequisites to make file transfers between two Transfer CFTs include:
 
-- A common network, such as TCP
-- A common protocol, such as PeSIT ANY
-- A basic partner object on each Transfer CFT (declare each partner)
+* A common network, such as TCP
+* A common protocol, such as PeSIT ANY
+* A basic partner object on each Transfer CFT (declare each partner)
 
 However, your out-of-the-box Transfer CFT can perform a basic loop transfer without any additional configuration. Additionally, the Transfer CFT installation provides samples that you can use as a templates to get started. For more information on samples and performing a verification transfer, refer to the Post installation section in your OS specific *Transfer CFT Installation Guide*.
 
@@ -31,9 +31,9 @@ However, your out-of-the-box Transfer CFT can perform a basic loop transfer wit
 In Transfer
 CFT there are 3 types of transfers:
 
-- Files
-- Replies (acknowledgments)
-- Messages
+* Files
+* Replies (acknowledgments)
+* Messages
 
 See also, [Transfer command basics.](transfer_command_overview)
 
@@ -41,8 +41,8 @@ See also, [Transfer command basics.](transfer_command_overview)
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} uses two commands for transfer requests:
 
-- SEND: sends a file or message to a partner
-- RECV: requests the reception of files from a partner
+* SEND: sends a file or message to a partner
+* RECV: requests the reception of files from a partner
 
 Additionally, there are basic [transfer control commands](../c_intro_userinterfaces/web_copilot_ui/operations/managing_transfer_states) that you can use to manage a transfer.
 
@@ -81,9 +81,9 @@ When using {{< TransferCFT/PrimaryCGorUM  >}} with {{< TransferCFT/axwayvariable
 
 The default command is the command whose file identifier corresponds either to the:
 
-- CFTPART
+* CFTPART
     IDF = parameter
-- Or, if the above
+* Or, if the above
     parameter is not included, to the CFTPARM DEFAULT
     = parameter
 
@@ -108,14 +108,14 @@ the Transfer CFT catalog file.
 A catalog record, known as a catalog
 entry, includes information such as the:
 
-- Transfer direction:
+* Transfer direction:
     Send or Receive
-- Type of object
+* Type of object
     transferred: File, Message, or Reply
-- Partner name
-- Transfer identifier
-- Transfer status
-- Troubleshooting diagnostics
+* Partner name
+* Transfer identifier
+* Transfer status
+* Troubleshooting diagnostics
 
 For more information, see the [list catalog contents](../c_intro_userinterfaces/about_cftutil/monitoring_cftutil_intro/listcat_command) topic.
 
@@ -134,9 +134,9 @@ access methods . See [File locations: Model and physical files](create_transfers
 When a transfer occurs, it is labeled with an identifier. There are
 two additional types of identifiers, besides the IDM and IDF, that can correspond with a transfer:
 
-- Transfer
+* Transfer
     identifier
-- Catalog
+* Catalog
     identifier
 
 #### Transfer identifier: IDT

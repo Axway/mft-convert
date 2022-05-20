@@ -6,23 +6,23 @@ weight: 280
 
 The Menu bar is comprised of the options:
 
-- Job manager
+* Job manager
 
 <!-- -->
 
-- Network manager
+* Network manager
 
 <!-- -->
 
-- Assistant
+* Assistant
 
 <!-- -->
 
-- Options
+* Options
 
 <!-- -->
 
-- About
+* About
 
 To select an option, position the cursor on the appropriate menu in the bar and click to select. Some of these menus include sub-menus.
 

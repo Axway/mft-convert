@@ -20,8 +20,8 @@ or the transfer protocols.
 
 The description of each command is generally organized in parts:
 
-- Functional description
-- List indicating
+* Functional description
+* List indicating
     the general syntax of parameters passed with a command, grouped by categories
 
 ****Example****
@@ -35,14 +35,14 @@ TYPE = {PARM
 &#124; COM},
 ```
 
-- Detailed description
+* Detailed description
     of parameters, in alphabetical order
 
 FNAME =
 filename (Name
 of the file to which the command applies)
 
-- Generic example
+* Generic example
     of parameter setting. Parameter setting examples are indicated in New
     Courier typeface.
 
@@ -56,10 +56,10 @@ Example of creating a parameter file:
 
 There are two types of parameters mandatory and optional:
 
-- Mandatory parameters
+* Mandatory parameters
     are followed by the word (*Mandatory*)
     in italics
-- Optional parameters
+* Optional parameters
     (placed between square brackets [ ])
 
 Each parameter description applies the following general syntax:
@@ -94,12 +94,12 @@ E CFT/CFT
 In this object, the NFNAME
 parameter is:
 
-- Used to indicate
+* Used to indicate
     a physical filename
-- Optional with no
+* Optional with no
     default value, the optional nature being indicated by square brackets
     [ ]
-- Reserved for transfer
+* Reserved for transfer
     cases in PeSIT E
     profile between two {{< TransferCFT/axwayvariablesComponentShortName >}}s
 
@@ -152,9 +152,9 @@ notations are used in the detailed parameter descriptions.
 
 When using the CFTUTIL HELP command, as shown in the example below, the following rules apply to parameter values:
 
-- If `STRING `is in upper case, the parameter value is not case sensitive
-- If `String `is mixed case, the parameter value is case sensitive
-- If `STRING or "String"`, the parameter value is only case sensitive when enclosed in quotes
+* If `STRING `is in upper case, the parameter value is not case sensitive
+* If `String `is mixed case, the parameter value is case sensitive
+* If `STRING or "String"`, the parameter value is only case sensitive when enclosed in quotes
 
 ****Example****
 
@@ -181,8 +181,8 @@ max_length=32 Password for the user who is receiving the file
 
 The following conventions apply when using double quotes (hereafter referred to as quotes) " " and single quotes ' ' in CFTUTIL commands:
 
-- Enclosing in quotes " " keeps case sensitivity for applicable parameters as listed in the **Note** below.
-- Enclosing in a single quote ' ' keeps spaces in the value
+* Enclosing in quotes " " keeps case sensitivity for applicable parameters as listed in the **Note** below.
+* Enclosing in a single quote ' ' keeps spaces in the value
 
 > **Note**
 >
@@ -253,14 +253,14 @@ In the parameter description, the protocol concerned is
 indicated explicitly. This notation is used, for example, in the following
 cases:
 
-- Associated parameter
+* Associated parameter
     is only defined for certain protocols
 
 Example: [NSPACE = {value of FSPACE
 &#124; n},]           ODETTE,
 PeSIT
 
-- Length of the value
+* Length of the value
     of the associated parameter differs from one protocol to another.
 
 ****Example  

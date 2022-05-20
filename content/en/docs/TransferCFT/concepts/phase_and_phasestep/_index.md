@@ -6,10 +6,10 @@ weight: 140
 
 This topic presents processing ****concepts****, step overviews in the following sections:
 
-- [Types of processing phases](#Types)
-- [Phasesteps in each phase](#Types2)
-- [About backward compatibility](#About)
-- [Example usage](#Example)
+* [Types of processing phases](#Types)
+* [Phasesteps in each phase](#Types2)
+* [About backward compatibility](#About)
+* [Example usage](#Example)
 
 <span id="Types"></span>
 
@@ -17,11 +17,11 @@ This topic presents processing ****concepts****, step overviews in the following
 
 The term ****phase**** refers to the highest level in the transfer flow cycle:
 
-- \(A\) Pre-processing: All pre-transfer script execution occurs here
-- \(T\) Transferring: All transfer execution occurs in this phase
-- \(Y\) Post-processing: All post-transfer script execution occurs here
-- \(Z\) Acknowledgement: Acknowledgement reception/send steps and ack script execution occur here
-- \(X\) Done: End condition when all of the previous phases are completed
+* \(A\) Pre-processing: All pre-transfer script execution occurs here
+* \(T\) Transferring: All transfer execution occurs in this phase
+* \(Y\) Post-processing: All post-transfer script execution occurs here
+* \(Z\) Acknowledgement: Acknowledgement reception/send steps and ack script execution occur here
+* \(X\) Done: End condition when all of the previous phases are completed
 
 ![](/Images/TransferCFT/phase_simple.png)
 
@@ -31,12 +31,12 @@ The term ****phase**** refers to the highest level in the transfer flow cycle:
 
 The ****phasestep**** refers to the details that can occur during any given phase:
 
-- \(D\) At disposal: The processing of the Phase is ready to be executed; it is ready to go.
-- \(H\) Hold: The processing of the Phase is on hold and waiting for an action to be executed.
-- \(C\) Processing/Current: The Phase processing is being executed.
-- \(K\) Keep: The Phase processing is stopped.
-- \(X\) Done: This phase step only exists for the Done phase, once all previous phases are complete.
-- \(E\) Exit EOT: This phase step only exists for the Post-processing phase, to signal an [end-of-transfer exit](../../app_integration_intro/managing_exits/about_the_end_of_transfer_type_exit).
+* \(D\) At disposal: The processing of the Phase is ready to be executed; it is ready to go.
+* \(H\) Hold: The processing of the Phase is on hold and waiting for an action to be executed.
+* \(C\) Processing/Current: The Phase processing is being executed.
+* \(K\) Keep: The Phase processing is stopped.
+* \(X\) Done: This phase step only exists for the Done phase, once all previous phases are complete.
+* \(E\) Exit EOT: This phase step only exists for the Post-processing phase, to signal an [end-of-transfer exit](../../app_integration_intro/managing_exits/about_the_end_of_transfer_type_exit).
 
 ![](/Images/TransferCFT/temp_phase_steps.png)
 

@@ -6,9 +6,9 @@ weight: 210
 topic presents two transfer modes, which are comprised of the following
 sections:
 
-- Write transfer
+* Write transfer
     mode
-- [Read
+* [Read
     transfer and locked-for-sending mode](#Read_transfer_and_locked_for_sending_mode)
 
 <span id="Write_transfer_mode"></span>
@@ -32,8 +32,8 @@ receiver/server end using the FNAME parameter of the local CFTRECV parameter
 setting command. The name assigned at the server end may be determined
 either:
 
-- Explicitly
-- From symbolic variables
+* Explicitly
+* From symbolic variables
     defined on reception
 
 For the definition of symbolic variables, refer to the *Symbolic variables*
@@ -42,7 +42,7 @@ sections.
 The figures below indicate these possibilities.
 
 **Sender/requester transfer: closed mode
-- explicit name at the server end**
+* explicit name at the server end**
 
 ![](/Images/TransferCFT/Send_req_tx_closed_explicit_name_server.gif)
 
@@ -52,7 +52,7 @@ In the figure above, the name assigned (FNAME = Y) at the server end
 is explicit.
 
 **Sender/requester transfer: closed mode
-- symbolic variables at the server end**
+* symbolic variables at the server end**
 
 ![](/Images/TransferCFT/Send_req_tx_closed_symbolic_var_server.gif)
 
@@ -60,11 +60,11 @@ In the second figure (transfer in PeSIT E protocol for example), the
 name assigned at the server end is defined using the following symbolic
 variables:
 
-- &IDT recovers
+* &IDT recovers
     the identifier associated with the transfer in process for a given partner
-- &IDF recovers
+* &IDF recovers
     the IDF sent by the sender during a transfer
-- &PART recovers
+* &PART recovers
     the locally defined name of the requester partner
 
 <span id="Write_transfer_open_mode"></span>
@@ -78,12 +78,12 @@ location of the file on the receiver/server.
 
 To implement this mode:
 
-- The *requester*
+* The *requester*
     must consequently define a physical name to be used on the server. This
     name is indicated in the NFNAME parameter of the SEND command (or by the
     parameter of the CFTSEND parameter setting command). This name is sent
     by the protocol
-- The *receiver/server*
+* The *receiver/server*
     must be able to use the name sent. For this purpose, the value of the
     FNAME parameter of the CFTRECV command must be the symbolic variable &NFNAME
 
@@ -181,12 +181,12 @@ impose the physical location of the file to be received by the receiver/requeste
 
 To implement this mode:
 
-- The *server*
+* The *server*
     must define a physical name to be used at the requester end to store the
     file received. This name is indicated in the NFNAME parameter of the SEND
     command activated in locked for sending mode and is sent by the protocol
     during the transfer.
-- The *receiver/requester*
+* The *receiver/requester*
     must be able to make use of the name sent. For this purpose, the value
     of the FNAME parameter of the RECV command (or by default the parameter
     of the CFTRECV parameter setting command) must be equal to the symbolic

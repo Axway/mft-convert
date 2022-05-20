@@ -15,8 +15,8 @@ In non-APF installations, Transfer CFT is started by the user USERMON and the US
 While Transfer CFT is still started by the user USERMON, in an APF installation the USERCTRL setting has a direct effect on the transfer procedure.
 
 1. USERCTRL=NO USERID=TEST
-    -   A receive is performed by the user USERMON
-    -   TEST submits the end-of-transfer procedure
+    *   A receive is performed by the user USERMON
+    *   TEST submits the end-of-transfer procedure
 1. USERCTRL=NO USERID=
     &lt;ul>&lt;li>A receive is performed by the user USERMON&lt;/li>&lt;li>USERMON submits the end-of-transfer procedure&lt;/li>&lt;/ul>&lt;/li>
 1. USERCTRL=NO USERID=NON RACF USERID (not in RACF database)
@@ -26,8 +26,8 @@ While Transfer CFT is still started by the user USERMON, in an APF installation 
 1. USERCTRL=YES USERID=
     &lt;ul>&lt;li>A receive is performed by the user USERMON&lt;/li>&lt;li>USERMON submits the end-of-transfer procedure&lt;/li>&lt;/ul>&lt;/li>
 1. USERCTRL=YES USERID=NON RACF USERID (not in RACF database)
-    -   Receive is not performed
-    -   End-of transfer procedure not submitted
+    *   Receive is not performed
+    *   End-of transfer procedure not submitted
 
 ## Release a resource for receive transfers
 

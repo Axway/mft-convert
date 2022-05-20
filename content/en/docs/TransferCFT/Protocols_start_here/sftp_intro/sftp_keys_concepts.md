@@ -6,8 +6,8 @@ weight: 140
 
 An SSH session is established in two steps:
 
-- Agree on and establish encryption to protect future communication.
-- Authenticate the user and determine if access to the server should be granted.
+* Agree on and establish encryption to protect future communication.
+* Authenticate the user and determine if access to the server should be granted.
 
 If you are already familiar with SSH concepts are ready for details on configuring the CFTSSH object, please see [CFTSSH - Security profile](../../../c_intro_userinterfaces/web_copilot_ui/cftssl/cftssh).
 
@@ -19,9 +19,9 @@ If you are already familiar with SSH concepts are ready for details on configuri
 
 To establish a secured session between the client and the server:
 
-- The client tries to connect to the server, and the server returns the encryption protocols and supported versions (CFTSSH).
-- The server additionally sends an asymmetric public key to the client so that the client can verify the authenticity of the server.
-- The client and the server then use an algorithm to share a symmetrical key to create the secured communication.
+* The client tries to connect to the server, and the server returns the encryption protocols and supported versions (CFTSSH).
+* The server additionally sends an asymmetric public key to the client so that the client can verify the authenticity of the server.
+* The client and the server then use an algorithm to share a symmetrical key to create the secured communication.
 
 ### Authenticating the user
 

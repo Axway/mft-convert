@@ -6,9 +6,9 @@ weight: 220
 
 The procedure consists of:
 
-- Installing and generating a deployment package that is based on the configured template
+* Installing and generating a deployment package that is based on the configured template
     &lt;/li>
-- Deploying and installing the generated package
+* Deploying and installing the generated package
 
 <span id="Install"></span>
 

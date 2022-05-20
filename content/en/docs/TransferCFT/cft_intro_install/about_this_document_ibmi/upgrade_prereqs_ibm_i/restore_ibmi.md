@@ -17,8 +17,8 @@ weight: 240
 
 Before beginning either restore procedure:
 
-- Check that you have access to the CFTEXTLIB library created during the previous upgrade procedure.
-- Stop the Transfer CFT server and the Copilot UI server. Enter:
+* Check that you have access to the CFTEXTLIB library created during the previous upgrade procedure.
+* Stop the Transfer CFT server and the Copilot UI server. Enter:
 
 ```
 CFTSTOP
@@ -45,9 +45,9 @@ CFTUTIL about
     ```
 1. Call the `RSTCFT `command for your {{< TransferCFT/suitevariablesTransferCFTName >}}. The `RSTCFT `command prompt resembles the following screen:
 
-- CFTEXTLIB: Enter the name of the library used during the upgrade procedure. This library must contain the two SAVFs (CFTPGM and CFTPROD) needed for the restore procedure.
-- CFTPGM: Enter the name of the library containing the binaries of your Transfer CFT to restore.
-- CFTPROD: Enter the name of the library containing the working files of your Transfer CFT to restore.
+* CFTEXTLIB: Enter the name of the library used during the upgrade procedure. This library must contain the two SAVFs (CFTPGM and CFTPROD) needed for the restore procedure.
+* CFTPGM: Enter the name of the library containing the binaries of your Transfer CFT to restore.
+* CFTPROD: Enter the name of the library containing the working files of your Transfer CFT to restore.
 
 <span id="Manually"></span>
 
@@ -63,13 +63,13 @@ CFTUTIL about
     CALL PGM(CFTMI) PARM(‘MIGR’ ‘type=CAT, direct=FROMCAT, ifname=CFTPROD/CAT, ofname=CFTEXTLIB/CAT39’)
     ```
 1. Restore the CFTPGM and CFTPROD libraries using the `SAVF `created during the upgrade:
-    -   Restore CFTPGM:
-    -   ```
+    *   Restore CFTPGM:
+    *   ```
         CLRLIB CFTPGM
         RSTLIB SAVLIB(CFTPGM) DEV(\*SAVF) SAVF(CFTEXTLIB/CFTPGM) RSTLIB(CFTPGM) OPTION(\*ALL) MBROPT(\*ALL) ALWOBJDIF(\*ALL)
         ```
-    -   Restore CFTPROD:
-    -   ```
+    *   Restore CFTPROD:
+    *   ```
         CLRLIB CFTPGM
         RSTLIB SAVLIB(CFTPROD) DEV(\*SAVF) SAVF(CFTEXTLIB/CFTPROD) RSTLIB(CFTPROD) OPTION(\*ALL) MBROPT(\*ALL) ALWOBJDIF(\*ALL)
         ```

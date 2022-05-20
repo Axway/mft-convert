@@ -14,9 +14,9 @@ An upgrade is the process of updating to a newer, enhanced version of the softwa
 
 This mode has the following advantages:
 
-- Allows you to update in the same location
-- You can perform this upgrade yet still revert to the previous state if needed
-- Scripts and APIs remain intact and only require a recompilation for the APIs
+* Allows you to update in the same location
+* You can perform this upgrade yet still revert to the previous state if needed
+* Scripts and APIs remain intact and only require a recompilation for the APIs
 
 ## About migrations
 
@@ -24,8 +24,8 @@ A migration means that an initial Transfer CFT is installed in a directory that 
 
 This mode has the following advantages:
 
-- The new installation occurs in a new location, and the existing configuration in the existing Transfer CFT environment is not affected.
-- You can choose to use either of the versions, if needed, in case of an issue with one of the installations.
+* The new installation occurs in a new location, and the existing configuration in the existing Transfer CFT environment is not affected.
+* You can choose to use either of the versions, if needed, in case of an issue with one of the installations.
 
 > **Note**
 >
@@ -33,7 +33,7 @@ This mode has the following advantages:
 
 This mode has the following restriction:
 
-- You must copy scripts and APIs from the previous version to the new installation.
+* You must copy scripts and APIs from the previous version to the new installation.
 
 ## About manual migrations
 
@@ -46,21 +46,21 @@ The general procedure for migrating from a previous version of Transfer CFT to T
 
 This mode has the following advantages:
 
-- Because it is manual, you can customize as needed.
-- You can migrate from versions older than version 2.7.x.
+* Because it is manual, you can customize as needed.
+* You can migrate from versions older than version 2.7.x.
 
 ## Prerequisites
 
 ### Important information before performing an upgrade or migration procedure
 
-- You must update your {{< TransferCFT/axwayvariablesComponentShortName >}} to the most recent service pack version.
-- Backup {{< TransferCFT/axwayvariablesComponentShortName >}} before beginning an upgrade or migration procedure.
-- Before beginning the upgrade or migration procedure stop the existing version of Transfer CFT and the UI server. (I.e., you must stop all cluster nodes as a database migration occurs when performing an upgrade.)
+* You must update your {{< TransferCFT/axwayvariablesComponentShortName >}} to the most recent service pack version.
+* Backup {{< TransferCFT/axwayvariablesComponentShortName >}} before beginning an upgrade or migration procedure.
+* Before beginning the upgrade or migration procedure stop the existing version of Transfer CFT and the UI server. (I.e., you must stop all cluster nodes as a database migration occurs when performing an upgrade.)
 
 ### About license keys
 
-- You require a new license key if you are migrating from a version 2.x {{< TransferCFT/axwayvariablesComponentShortName >}} to a version 3.x.
-- For details on how to apply or update a license key, and the new license key location, see the section **Apply a license key**.
+* You require a new license key if you are migrating from a version 2.x {{< TransferCFT/axwayvariablesComponentShortName >}} to a version 3.x.
+* For details on how to apply or update a license key, and the new license key location, see the section **Apply a license key**.
 
 > **Note**
 >
@@ -70,14 +70,14 @@ This mode has the following advantages:
 
 Upgrading Transfer CFT by applying a new service pack can overwrite your Transfer CFT program and production library. Therefore, as a precaution, prior to upgrading you must:     
 
-- Copy the existing Transfer CFT program library, for example CFTPGM in CFTPGM.O.
-- Copy the existing Transfer CFT production library, for example CFTPROD in CFTPROD.O.
+* Copy the existing Transfer CFT program library, for example CFTPGM in CFTPGM.O.
+* Copy the existing Transfer CFT production library, for example CFTPROD in CFTPROD.O.
 
 The CFTPROD library contains your personal data and should not be cleared. Data may include:
 
-- Files, the UCONF file, Transfer CFT batch procedures, system objects (\*datara,\*jobd, \*sbsd,\*cls,\*jobq, etc.)
-- Scripts, procedures, files used by the Transfer CFT Enabler OS/400 Connector
-- Internal Access Management files
+* Files, the UCONF file, Transfer CFT batch procedures, system objects (\*datara,\*jobd, \*sbsd,\*cls,\*jobq, etc.)
+* Scripts, procedures, files used by the Transfer CFT Enabler OS/400 Connector
+* Internal Access Management files
 
 > **Note**
 >
