@@ -1,8 +1,8 @@
 ---
-title: "Managing multi- node  "
-linkTitle: "Managing multi- node"
+title: "Managing multi-node  "
+linkTitle: "Managing multi-node"
 weight: 280
---- This topic describes how to set up and manage your multi- node environment. It describes:
+---This topic describes how to set up and manage your multi-node environment. It describes:
 
 ## Starting the Transfer CFT cluster
 
@@ -36,15 +36,15 @@ The node 2 is created. The cluster is composed of three nodes: node 0, node 1 an
 
 > **Note**
 >
-> When adding a node, you must add the corresponding new license key for that node in the license- key file &lt;CFTDIRRUNTIME>/conf/cft.key:one_key_per_line.
+> When adding a node, you must add the corresponding new license key for that node in the license-key file &lt;CFTDIRRUNTIME>/conf/cft.key:one_key_per_line.
 
 ### Enable a node
 
-Once the new node has been added, you can now enable it using the command: `cft enable_node - n 2`
+Once the new node has been added, you can now enable it using the command: `cft enable_node -n 2`
 
 ### Start a node
 
-The node 2 can be started using the command:` cft start - n 2`
+The node 2 can be started using the command:` cft start -n 2`
 
 ## Removing a node from the Transfer CFT cluster
 
@@ -64,14 +64,14 @@ After fencing and stopping the *last node*, you can remove it. Enter:` cft remov
 
 ## Rebalancing after a fail over
 
-Once the failed node manager is running again, you can rebalance the cluster by re- starting one or multiple nodes.
+Once the failed node manager is running again, you can rebalance the cluster by re-starting one or multiple nodes.
 
 In this example there are two hosts (host00 and host01), and two nodes (node00 and node01). Node00 is running on host00, and node01 is running on host01.
 
 1. Host00 and node00 experience a fail over.
-1. The host01 node manager re- starts the node00 locally.
+1. The host01 node manager re-starts the node00 locally.
 1. Node00 and node01 run on host01.
-1. Host00 and its node manager are manually re- started.
+1. Host00 and its node manager are manually re-started.
 1. From one of the Transfer CFT cluster hosts, host00 or host01, execute the command: `cft restart –n 0`
 1. The host00 node manager restarts the node00 locally.
 

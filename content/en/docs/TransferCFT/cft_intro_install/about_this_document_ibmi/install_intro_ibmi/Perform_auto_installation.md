@@ -2,7 +2,7 @@
 title: "Silent installation"
 linkTitle: "Silent installation"
 weight: 200
---- 1.  Log in with the **`CFTINST`** user (with \*ALLOBJ special authority).
+---1.  Log in with the **`CFTINST`** user (with \*ALLOBJ special authority).
 1. Select `1`.
 1. Install Transfer CFT. The following example installs Transfer CFT with the Central Governance option:
 

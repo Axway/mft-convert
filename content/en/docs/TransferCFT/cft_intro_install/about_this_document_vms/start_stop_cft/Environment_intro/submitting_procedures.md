@@ -2,9 +2,10 @@
 title: "Submit Transfer CFT OpenVMS procedures"
 linkTitle: "Submit Transfer CFT VMS procedures"
 weight: 260
---- A number of logical names are used to configure the Transfer CFT behavior with respect to the various procedures submitted by it. For more information, refer to the MONIT_MEM utility section.
+---A number of logical names are used to configure the Transfer CFT behavior with respect to the various procedures submitted by it. For more information, refer to the [MONIT_MEM utility]() section.
 
 The following table describes the logical names for the procedures that control Transfer CFT behavior.
+
 
 | Logical Name | Description |
 | --- | --- |
@@ -13,9 +14,11 @@ The following table describes the logical names for the procedures that control 
 | CFT_PRINT | This logical name is used to define a print queue, via which the procedure execution reports are printed. It must be defined with the /JOB attribute. |
 | CFT_LOGDEL | When set to YES, this logical name is used to request VMS to delete the execution reports of the procedures that it submits. Any other value maintains the reports in the SYS$LOGIN directory. It must be defined with the /JOB attribute. |
 
+
 ### Controlling memory usage
 
 Logical names are used to control Transfer CFT memory bottlenecks, refer to the [Delivered components](../../security_elements) section. The following table describes the logical names that are used to control Transfer CFT OpenVMS memory.
+
 
 | Logical Name | Meaning |
 | --- | --- |

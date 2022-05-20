@@ -2,7 +2,7 @@
 title: "Restore a previous version"
 linkTitle: "Roll back an upgrade"
 weight: 240
---- In the event that after upgrading a version you need to revert back to the previous version, you can perform the steps in this section using either the [automatic](#Automati) procedure or the [manual](#Manually) restore procedure.
+---In the event that after upgrading a version you need to revert back to the previous version, you can perform the steps in this section using either the [automatic](#Automati) procedure or the [manual](#Manually) restore procedure.
 
 > **Note**
 >
@@ -38,7 +38,7 @@ CFTUTIL about
 1. Log in with the `CFTINST `user.
 1. In the production, add the library you created during the upgrade (CFTEXTLIB in the following example). Use the command syntax:
 
-<!- - - - >
+<!-- -->
 
 1. ```
     ADDLIBLE LIB(CFTEXTLIB) POSITION(\*FIRST)
@@ -63,13 +63,13 @@ CFTUTIL about
     CALL PGM(CFTMI) PARM(‘MIGR’ ‘type=CAT, direct=FROMCAT, ifname=CFTPROD/CAT, ofname=CFTEXTLIB/CAT39’)
     ```
 1. Restore the CFTPGM and CFTPROD libraries using the `SAVF `created during the upgrade:
-    - Restore CFTPGM:
-    - ```
+    -   Restore CFTPGM:
+    -   ```
         CLRLIB CFTPGM
         RSTLIB SAVLIB(CFTPGM) DEV(\*SAVF) SAVF(CFTEXTLIB/CFTPGM) RSTLIB(CFTPGM) OPTION(\*ALL) MBROPT(\*ALL) ALWOBJDIF(\*ALL)
         ```
-    - Restore CFTPROD:
-    - ```
+    -   Restore CFTPROD:
+    -   ```
         CLRLIB CFTPGM
         RSTLIB SAVLIB(CFTPROD) DEV(\*SAVF) SAVF(CFTEXTLIB/CFTPROD) RSTLIB(CFTPROD) OPTION(\*ALL) MBROPT(\*ALL) ALWOBJDIF(\*ALL)
         ```

@@ -2,7 +2,7 @@
 title: "Configuring  OFTP (ODETTE)"
 linkTitle: "Configuring OFTP"
 weight: 150
---- This topic describes the objects
+---This topic describes the objects
 that you must configure to use the OFTP protocol, before submitting a file transfer. The following list describes
 each of the Transfer CFT objects. Each of these objects topics indicates
 the parameters that you must set to complete the Transfer CFT OFTP configuration.
@@ -43,10 +43,10 @@ session, set the RESYNC parameter to YES.
 
 <span id="Read_time_out"></span>
 
-### Read time- out
+### Read time-out
 
-To specify the read time- out for a response, set the RTO parameter. This corresponds to the wait time- out for a response to an "FPDU"
-before it is assumed that communication has been interrupted. This time- out
+To specify the read time-out for a response, set the RTO parameter. This corresponds to the wait time-out for a response to an "FPDU"
+before it is assumed that communication has been interrupted. This time-out
 is also used for Transfer CFT internal events.
 
 <span id="Data_compression"></span>
@@ -99,7 +99,7 @@ phase.
 
 <span id="Two_way_exchanges"></span>
 
-### Two- way exchanges
+### Two-way exchanges
 
 To specify the direction of transfers for each partner, you can use
 the following parameters to set the SRIN and SROUT parameters to:
@@ -123,6 +123,7 @@ as displayed in the table below. The value SROUT is the transfer direction
 proposed by site A, and SRIN is the transfer direction determined by site
 B.
 
+
 | If... | Then the final values are... |
 | --- | --- |
 | SROUT = BOTH and SRIN = SENDER | SROUT = RECEIVER and SRIN = SENDER |
@@ -130,6 +131,7 @@ B.
 | SRIN = BOTH and SROUT = SENDER | SROUT = SENDER and SRIN = RECEIVER |
 | SRIN = BOTH and SROUT = RECEIVER | SROUT = RECEIVER and SRIN = SENDER |
 | SRIN = BOTH and SROUT = BOTH | SROUT = BOTH and SRIN = BOTH |
+
 
 The [SRIN](../../../c_intro_userinterfaces/command_summary/parameter_intro/srin) parameter,
 present in the Start Session IDentification, serves as a basis for negotiation

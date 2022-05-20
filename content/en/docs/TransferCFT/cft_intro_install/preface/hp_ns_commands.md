@@ -2,7 +2,7 @@
 title: "Transfer CFT commands"
 linkTitle: "Command usage"
 weight: 200
---- This chapter describes how to use Transfer CFT commands in a Tandem/Guardian environment.
+---This chapter describes how to use Transfer CFT commands in a Tandem/Guardian environment.
 
 ## About the commands
 
@@ -30,7 +30,7 @@ A description of these commands is provided in *Transfer CFT {{< TransferCFT/Pri
 
 The PROFILE file updates the PMSEARCHLIST so that it can call Transfer CFT commands from anywhere. It also contains PARAM and DEFINE entries, which are mandatory before using certain Transfer CFT commands such as CFTUTLX.
 
-Before creating a NETBATCH attachment- set, you must call the PROFILE.
+Before creating a NETBATCH attachment-set, you must call the PROFILE.
 
 ### Access CFTUTIL
 
@@ -62,7 +62,7 @@ $SAS51 FORD36IX 5> CFTUTIL about
 CFTU20I
 CFTU20I CFT/V3/UHPNONSTOP H06
 CFTU20I Version 3.6 SP0 P0 20200330
-CFTU20I (C) Copyright AXWAY 1989- 2020
+CFTU20I (C) Copyright AXWAY 1989-2020
 CFTU20I ====> Starting Session on 2020/04/08 Time is 06:48:40
 CFTU20I Parameters file :/home/axway/farid/Dev/CFT36/runtime/data/cftparm
 CFTU20I Partners file :/home/axway/farid/Dev/CFT36/runtime/data/cftpart
@@ -73,7 +73,7 @@ Product information :
 \* version = 3.6
 \* level =
 \* upgrade = 12795000
-\* target = hp_nonstop_oss- ia64- 32
+\* target = hp_nonstop_oss-ia64-32
 Host information :
 \* hostname = NSBLDE4
 \* sysname = NONSTOP_KERNEL
@@ -108,11 +108,13 @@ You must define a TACL variable before running the command. This variable contai
 
 The following table gives the correspondences between the commands and the variables to use:
 
+
 | Command  | Variable  |
 | --- | --- |
 | CFT  | CFT^OUT  |
 | CFTUTIL  | CFT^UTLOUT  |
 | PKIUTIL  | PKI^UTLOUT  |
+
 
 This generates a type 101 Guardian unstructured file.
 
@@ -135,14 +137,14 @@ $SAS51 FORD36IX 8> fup copy FORD36UD.CFTUTL
 CFTU20I
 CFTU20I CFT/V3/UHPNONSTOP H06
 CFTU20I Version 3.6 SP0 P0 20200330
-CFTU20I (C) Copyright AXWAY 1989- 2020
+CFTU20I (C) Copyright AXWAY 1989-2020
 CFTU20I ====> Starting Session on 2020/04/08 Time is 07:19:10
 […]
 \* type = DATE
 \* expire = 2025/06/10
 \* cpuid =
 \* hostname = NSBLDE4
-\* sysname = hp_nonstop_oss- ia64- 32
+\* sysname = hp_nonstop_oss-ia64-32
 \* Nb Transfers = Max
 \* Nb CPU = Max
 \* Nb Partners = Max
@@ -166,11 +168,13 @@ To gather command details, Axway support may ask you to set the `CFTUTLX^TRACE^L
 
 The `CFTUTLX^TRACE^LEVEL` values are:
 
+
 | Value  | Description  | Temporary CFTUTLX files are deleted  |
 | --- | --- | --- |
 | 1  | Generates traces and redirects them to a temporary file.  | No  |
 | 2  | Generates traces and redirects them to the standard output.  | No  |
 | 3  | Both 1 and 2 occur.  | No  |
 | Any other value or not set  | Does not generate traces.  | Yes  |
+
 
 Temporary files are generated in the Guardian DEFAULTS location with file names ranging from CTMP0000 to CTMP9999. You must manually purge these files after sending a copy to Axway support.

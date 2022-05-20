@@ -2,7 +2,7 @@
 title: "Security "
 linkTitle: "Security "
 weight: 110
---- Transfer CFT provides a set of objects that you can use to manage your
+---Transfer CFT provides a set of objects that you can use to manage your
 transfer security requirements.
 
 - Certificates to
@@ -16,8 +16,9 @@ You can work with certificates either via the UI or command line.
 All other security operations must be performed using command lines.
 
 This section describes the functions and components that are used to perform
-security operations, and comprises a set of sub- sections that describe how to configure
+security operations, and comprises a set of sub-sections that describe how to configure
 and manage the Transfer CFT security objects as well as use additional {{< TransferCFT/axwayvariablesCompanyName  >}} products to offer security features.
+
 
 | Topics/sections  | Description  |
 | --- | --- |
@@ -28,3 +29,5 @@ and manage the Transfer CFT security objects as well as use additional {{< Trans
 | [Using Trusted File for encoding](tf_overview_cft)  | Describes how to implement Axway Trusted File encoding.  |
 | [Using SecureRelay](sr_overview)  | Describes the Axway Secure Relay integration with Transfer CFT.  |
 
+
+ 

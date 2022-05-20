@@ -2,7 +2,7 @@
 title: "Use case: replace variable and zip file"
 linkTitle: "Usage: zip a file before sending"
 weight: 200
---- **Example in UNIX**
+---**Example in UNIX**
 
 This use case demonstrates how to replace a variable in a file, and then zip the file prior to processing the transfer.
 
@@ -18,14 +18,14 @@ This use case demonstrates how to replace a variable in a file, and then zip the
     if [ "&APPSTATE" = "" ]; then
     CFTUTIL end part=&PART,idtu=&IDTU,istate=yes,appstate="0%"
     fi
-    if [ "&APPSTATE" = "0%" - o "&APPSTATE" = "" ]; then
+    if [ "&APPSTATE" = "0%" -o "&APPSTATE" = "" ]; then
     tmpfile=&FNAME_&PART
     sed s/_user_/&PART/g <&FNAME >$tmpfile
     CFTUTIL end part=&PART,idtu=&IDTU,istate=yes,appstate="50%",fname=$tmpfile
     else
     tmpfile=&FNAME
     fi
-    if [ "&APPSTATE" = "50%" - o "&APPSTATE" = "0%" - o "&APPSTATE" = "" ]; then
+    if [ "&APPSTATE" = "50%" -o "&APPSTATE" = "0%" -o "&APPSTATE" = "" ]; then
     outputfile=$tmpfile.tgz
     tar zcvf $outputfile $tmpfile
     CFTUTIL end part=&PART,idtu=&IDTU,istate=no,appstate="100%",fname=$outputfile

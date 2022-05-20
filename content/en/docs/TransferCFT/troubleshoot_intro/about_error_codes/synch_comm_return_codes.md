@@ -2,7 +2,7 @@
 title: "Synchronous communication return codes"
 linkTitle: "Synchronous communication return codes"
 weight: 310
---- This section describes diagnosing the return code when using synchronous communication with {{< TransferCFT/axwayvariablesComponentShortName  >}}.
+---This section describes diagnosing the return code when using synchronous communication with {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
 ## How to find the return code
 
@@ -62,6 +62,7 @@ CFTU20I Session active for 0:01:42
 
 For the return codes 70 through 79, the error occurred in the SEND or RECV transfer command, and the transfer was not executed.
 
+
 | RC  | Error  | Description  | Action  |
 | --- | --- | --- | --- |
 | 70  | APIS_READ_CONF_FILE  | Media configuration file error.  |   |
@@ -75,9 +76,11 @@ For the return codes 70 through 79, the error occurred in the SEND or RECV trans
 | 78  | APIS_SOCKET_READ  | Channel read error occurred  |   |
 | 79  | APIS_CLOSE_SOCKET  | Close channel failed occurred.  |   |
 
+
 ## SWAITCAT related errors
 
 For the return codes 80 through 87, the error is related to the SWAITCAT command. Refer to the SWAITCAT [Concepts](../../../c_intro_userinterfaces/about_cftutil/managing_transfer_states/swaitcat_concepts) or [Examples](../../../app_integration_intro/synch_comm_tcpip_intro/sync_transfer_request_tasks) sections for more information.
+
 
 | RC  | Error  | Description  | Action  |
 | --- | --- | --- | --- |

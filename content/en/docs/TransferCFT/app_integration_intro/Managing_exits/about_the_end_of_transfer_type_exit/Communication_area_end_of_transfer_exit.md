@@ -2,7 +2,7 @@
 title: "About  the communication area"
 linkTitle: "About the communication area"
 weight: 350
---- This topic describes the end- of- transfer exit communication area. The
+---This topic describes the end-of-transfer exit communication area. The
 communication area contains the fields which are described in the tables
 below:
 
@@ -27,6 +27,7 @@ The following tables list all the fields of the communication structure.
 
 ### General information fields
 
+
 | Field | Explanation |
 | --- | --- |
 | idt | Transfer identifier |
@@ -38,9 +39,11 @@ The following tables list all the fields of the communication structure.
 | diagi | Internal diagnostics code |
 | diagp | Protocol diagnostics code |
 
+
 <span id="Local_file_information_fields"></span>
 
 ### Local file information fields
+
 
 | Field | Explanation |
 | --- | --- |
@@ -64,9 +67,11 @@ The following tables list all the fields of the communication structure.
 | nbchar | Number of characters transferred |
 | nbr | Number of records transferred |
 
+
 <span id="Network_file_information"></span>
 
 ### Network file information
+
 
 | Field | Explanation |
 | --- | --- |
@@ -75,6 +80,7 @@ The following tables list all the fields of the communication structure.
 | nfname | Network name of the file |
 | nkeylen | Network key length (indexed) |
 | nkeypos | Network key position (indexed) |
+
 
 <span id="Transfer_information"></span>
 
@@ -98,7 +104,7 @@ Message text sent
 
 parm
 
-user- defined network parameter
+user-defined network parameter
 
 profil
 
@@ -286,24 +292,29 @@ Please refer to the CFTPARM page for additional parameters and details
 
 ### Information input/returned by the user
 
+
 | Field | Explanation |
 | --- | --- |
 | version | Exit version<br/> The value of this parameter is used to identify the version of the EXIT task supplied. |
 | comment | Local comment<br/> This field can be modified by the user program. Any modifications are taken into account when the catalog is updated (if usraction = UPDATE with or without change of state). |
 | state | State requested on UPDATE (D, H, K, X). See [Transfer states.](../#Transfer_state) |
 
+
 <span id="Information_returned_by_the_user"></span>
 
 ### Information returned by the user
+
 
 | Field | Explanation |
 | --- | --- |
 | usraction | Action requested by the user:<br/> • U: UPDATE<br/> • D: DELETE<br/> • N: NONE<br/> Note: If the value of the parameter is N (NONE), any changes to parameters that have been requested, for example, modifications made to the comment field, are ignored. |
 | usrmsg | User message, 80 characters, recorded in the {{< TransferCFT/axwayvariablesComponentShortName  >}} LOG file (CFTS18I)<br/> This message can contain the code returned by the user function and other information. |
 
+
 <span id="Additional_information"></span>
 
 ### Additional information
+
 
 | Field | Explanation |
 | --- | --- |

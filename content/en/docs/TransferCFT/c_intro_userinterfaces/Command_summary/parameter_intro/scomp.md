@@ -2,7 +2,7 @@
 title: "scomp"
 linkTitle: "scomp"
 weight: 3100
---- <span id="scomp"></span>
+---<span id="scomp"></span>
 
 ### scomp
 
@@ -31,9 +31,11 @@ This compression is negotiated between the sender and the receiver.
 
 Default values are:
 
+
 | Protocol  | Default value |
 | --- | --- |
 | PeSIT ANY profile | 0 |
 | ODETTE  | 1  |
+
 
 [Return to Command index](../../)

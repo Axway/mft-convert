@@ -2,7 +2,7 @@
 title: "Accounting records - CFTACCNT  "
 linkTitle: "Accounting - CFTACCNT"
 weight: 230
---- <span id="About_CFTACCNT"></span>This page describes the <span id="kanchor46"></span>CFTACCNT command.
+---<span id="About_CFTACCNT"></span>This page describes the <span id="kanchor46"></span>CFTACCNT command.
 
 Use this command to define the recording mode of the statistical data
 concerning correctly terminated transfers (T or X state).
@@ -29,6 +29,7 @@ topics****
 
 ## Parameter descriptions
 
+
 | Parameter  | Description  |
 | --- | --- |
 | ID | Identifier of the CFTACCNT command. |
@@ -42,6 +43,7 @@ topics****
 | [MAXREC](../../../command_summary/parameter_intro/maxrec)  | Statistical file maximum number of records. |
 | [EXEC](../../../command_summary/parameter_intro/exec#exec_CFTACCNT)  | Name of the procedure to be executed when Transfer CFT switches to the other statistical file<br/> (SWITCH). |
 | [SWITCH](../../../command_summary/parameter_intro/switch#switch)  | Time at which Transfer CFT automatically switches to the alternate statistical file.<br/> When this parameter is not defined, Transfer CFT switches statistical files daily at midnight. |
+
 
 ## Examples
 

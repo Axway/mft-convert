@@ -2,7 +2,7 @@
 title: "Using  server mode"
 linkTitle: "Using server mode"
 weight: 390
---- This topic describes how to use the communication area for a directory
+---This topic describes how to use the communication area for a directory
 exit in server mode. The [next topic](../using_requester_mode)
 explains a directory exit in the requester mode.
 
@@ -15,6 +15,7 @@ the user function is called. You must perform checks concerning the characterist
 of the calling partner.
 
 ### Partner information fields
+
 
 | Field  | Explanation  |
 | --- | --- |
@@ -34,6 +35,7 @@ of the calling partner.
 | udata  | User data  |
 | pcvin  | Incoming reverse charge call |
 | gfa  | Closed subscriber group number  |
+
 
 When the user function is called, if the partner name ****part****
 is empty, so that the partner local identifier is unknown to Transfer
@@ -55,6 +57,7 @@ in the following System information field table.
 
 ### System information fields
 
+
 | Field  | Explanation  |
 | --- | --- |
 | syst  | System  |
@@ -69,6 +72,7 @@ in the following System information field table.
 | rauth  | File receive authorization list identifier  |
 | xlate  | Transcoding table identifier  |
 | idf  | Partner file identifier  |
+
 
 If the part field of the communication
 structure is empty on return from the user function, the partner local

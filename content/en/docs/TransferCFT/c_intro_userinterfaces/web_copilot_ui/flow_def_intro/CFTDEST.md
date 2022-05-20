@@ -2,17 +2,18 @@
 title: "Broadcast lists - CFTDEST "
 linkTitle: "Broadcast lists - CFTDEST"
 weight: 190
---- This topic describes how to manages the list of partners for distribute/collect
+---This topic describes how to manages the list of partners for distribute/collect
 operations using the CFTDEST object.
 
 ****Related
 topics****
 
 - Command syntax
-    CFTDEST](../../../command_summary#CFTDEST)
+    [CFTDEST](../../../command_summary#CFTDEST)
 - Object concepts
     [Defining
-    broadcasting lists
+    broadcasting lists]()
+
 
 | Parameter  | Description  |
 | --- | --- |

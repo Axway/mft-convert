@@ -2,14 +2,14 @@
 title: "Configure exchanges that use SSL"
 linkTitle: "Configure exchanges that use SSL"
 weight: 250
---- There are two ways to configure Transfer CFT with Secure Relay using the TLS protocol:
+---There are two ways to configure Transfer CFT with Secure Relay using the TLS protocol:
 
-- End- to- end SSL: The remote peer communicates with Transfer CFT via Secure Relay (RA) using end- to- end SSL.
+- End-to-end SSL: The remote peer communicates with Transfer CFT via Secure Relay (RA) using end-to-end SSL.
 - SSL termination: The remote peer communicates with Secure Relay (RA) through an SSL channel. In this scenario, the handshake occurs between the remote peer and the Secure Relay RA. The RA retrieves the key and certificate stored in Transfer CFT through the Master Agent (MA) in order to complete the handshake.
 
-The communication between the Master Agent (MA) and {{< TransferCFT/axwayvariablesComponentLongName  >}} occurs over a plain- text channel.
+The communication between the Master Agent (MA) and {{< TransferCFT/axwayvariablesComponentLongName  >}} occurs over a plain-text channel.
 
-End- to- end SSL compared with SSL termination
+End-to-end SSL compared with SSL termination
 
 ![](/Images/TransferCFT/sr_schema.png)
 
@@ -22,17 +22,17 @@ This page describes how to create and configure the following Transfer CFT objec
 
 SSL termination in Secure Relay is possible using the internal PKI database. As such, the internal PKI base (pki.type=cft), rootcid, and usercid correspond to certificates stored in the internal PKI database.
 
-## End- to- end SSL
+## End-to-end SSL
 
 ### Create a CFTNET object
 
 1. Create a CFTNET object where:
-    - TYPE=TCP
-    - PROTOCOL=SR
+    -   TYPE=TCP
+    -   PROTOCOL=SR
 1. Define the mandatory parameters RECALLHOST, HOST, and SSLTERM.
-    - RECALLHOST: The host address on which the Master Agent calls Transfer CFT when Secure Relay receives an incoming call. If Transfer CFT and the Master Agent run of the same host, use the loopback network interface (for example, 127.0.0.1) instead of the public network interface.
-    - HOST: Designates the network interface that is used on the Router Agent side.
-    - SSLTERM: Set this Boolean to NO for end- to- end SSL.
+    -   RECALLHOST: The host address on which the Master Agent calls Transfer CFT when Secure Relay receives an incoming call. If Transfer CFT and the Master Agent run of the same host, use the loopback network interface (for example, 127.0.0.1) instead of the public network interface.
+    -   HOST: Designates the network interface that is used on the Router Agent side.
+    -   SSLTERM: Set this Boolean to NO for end-to-end SSL.
 
 ****Example****
 
@@ -95,6 +95,7 @@ passw = <user_cid_password>
 NOTE
 : You must enter a value in this field even if you are using "pki.type=cft", which normally does not require a password.
 
+ 
 ```
 
 This CFTSSL object is used for incoming connections (direct=client).
@@ -127,7 +128,7 @@ prot = PESITSSL,
 sap = <remote_partner_sap>,
 nspart = NPARIS_SSL,
 nrpart = NPHOENIX_SSL
-
+ 
 CFTTCP id = PARIS_SSL,
 class = 2, /\* the same class as the one used in the CFTNET \*/
 host = <remote_partner_host_address>
@@ -142,20 +143,20 @@ host = <remote_partner_host_address>
 
 #### Configure the Master Agent in {{< TransferCFT/axwayvariablesComponentLongName  >}}
 
-1. Go to the in the` $CFTDIRINSTALL/distrib/xsr/` folder, and rename the `iaik_jce- 3.16.jar` file as `iaik_jce- 3.16.unused.`
-1. Move the `entrust- toolkit- 8.0.36.jar` file from the `$CFTDIRINSTALL/distrib/xsr/fips` folder to the `$CFTDIRINSTALL/distrib/xsr/` folder.
+1. Go to the in the` $CFTDIRINSTALL/distrib/xsr/` folder, and rename the `iaik_jce-3.16.jar` file as `iaik_jce-3.16.unused.`
+1. Move the `entrust-toolkit-8.0.36.jar` file from the `$CFTDIRINSTALL/distrib/xsr/fips` folder to the `$CFTDIRINSTALL/distrib/xsr/` folder.
 
 ## SSL termination with Secure Relay
 
 ### Create a CFTNET object
 
 1. Create a CFTNET object where:
-    - TYPE=TCP
-    - PROTOCOL=SR
+    -   TYPE=TCP
+    -   PROTOCOL=SR
 1. Define the mandatory parameters RECALLHOST, HOST, and SSLTERM.
-    - RECALLHOST: The host address on which the Master Agent calls Transfer CFT when Secure Relay receives an incoming call. If Transfer CFT and the Master Agent run of the same host, use the loopback network interface (for example, 127.0.0.1) instead of the public network interface.
-    - HOST: Designates the network interface that is used on the Router Agent side.
-    - SSLTERM: Set this Boolean to YES to enable SSL termination.
+    -   RECALLHOST: The host address on which the Master Agent calls Transfer CFT when Secure Relay receives an incoming call. If Transfer CFT and the Master Agent run of the same host, use the loopback network interface (for example, 127.0.0.1) instead of the public network interface.
+    -   HOST: Designates the network interface that is used on the Router Agent side.
+    -   SSLTERM: Set this Boolean to YES to enable SSL termination.
 
 ****Example****
 
@@ -218,6 +219,7 @@ passw = <user_cid_password>
 NOTE
 : You must enter a value in this field even if you are using "pki.type=cft", which normally does not require a password.
 
+ 
 ```
 
 Here the CFTSSL object is used for incoming connections (direct=client).
@@ -250,7 +252,7 @@ prot = PESITSSL,
 sap = <remote_partner_sap>,
 nspart = NPARIS_SSL,
 nrpart = NPHOENIX_SSL
-
+ 
 CFTTCP id = PARIS_SSL,
 class = 2, /\* the same class as the one used in the CFTNET \*/
 host = <remote_partner_host_address>

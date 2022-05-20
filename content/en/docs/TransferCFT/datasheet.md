@@ -2,7 +2,7 @@
 title: "System support"
 linkTitle: "System support"
 weight: 50
---- This page provides basic operating system, supported feature, and file system information. Always check the [Supported Platform Guide](https://docs.axway.com/bundle/Axway_Products_SupportedPlatforms_allOS_en/resource/Axway_Products_SupportedPlatforms_allOS_en.pdf) for the latest updates.
+---This page provides basic operating system, supported feature, and file system information. Always check the [Supported Platform Guide](https://docs.axway.com/bundle/Axway_Products_SupportedPlatforms_allOS_en/resource/Axway_Products_SupportedPlatforms_allOS_en.pdf) for the latest updates.
 
 ## Platforms
 
@@ -36,10 +36,10 @@ weight: 50
 
 ### Additional operating systems
 
-- HP- UX 11.31 for PA- RISC
-- HP- UX 11.31 for ia64
+- HP-UX 11.31 for PA-RISC
+- HP-UX 11.31 for ia64
 - HP NonStop H and J series for ia64
-- HP NonStop L series for x86- 32
+- HP NonStop L series for x86-32
 - IBM i 7.2, 7.3, 7.4
 - OpenVMS 8.3, 8.4 for Alpha and ia64
 
@@ -51,7 +51,7 @@ weight: 50
 - Google Cloud Platform (GCP) VM instances
 - Microsoft Azure VM instances
 - VMware EXSi Virtual Machine
-- Other: Axway provides support for Axway products running in a virtual environment in a manner identical to Axway products running on any other major x86- based system. If, however, Axway suspects that the virtualization layer is the root cause of an incident, then the customer is required to contact the appropriate virtualization support provider to resolve the virtualization issue.
+- Other: Axway provides support for Axway products running in a virtual environment in a manner identical to Axway products running on any other major x86-based system. If, however, Axway suspects that the virtualization layer is the root cause of an incident, then the customer is required to contact the appropriate virtualization support provider to resolve the virtualization issue.
 
 ## Container support
 
@@ -62,23 +62,25 @@ weight: 50
 
 ## Web browsers
 
-Your browser- based experience is best when using the latest version of one of the following browsers:
+Your browser-based experience is best when using the latest version of one of the following browsers:
 
 - Chrome
 - Microsoft Edge
 - Firefox (keyboard shortcuts are not enabled)
 
-## File systems for multi- node
+## File systems for multi-node
+
 
 | Operating system  | Supported  | Unsupported  |
 | --- | --- | --- |
 | AIX  | GPFS, NFSv4*  | NFSv3, CXFS, VeritasSF  |
-| HP- UX  | NFSv4*  | NFSv3, CXFS, VeritasSF  |
-| Linux- x86  | GPFS, NFSv4*  | NFSv3, CXFS, ACFS, OCFSv1, OCFSv2, QFS, VeritasSF  |
+| HP-UX  | NFSv4*  | NFSv3, CXFS, VeritasSF  |
+| Linux-x86  | GPFS, NFSv4*  | NFSv3, CXFS, ACFS, OCFSv1, OCFSv2, QFS, VeritasSF  |
 | OpenVMS  | RMS  |   |
 | Solaris  | NFSv4*  | NFSv3, CXFS, QFS, VeritasSF  |
-| Windows- x86  | SMB/CIFS, GPFS  | CXFS, NFS  |
+| Windows-x86  | SMB/CIFS, GPFS  | CXFS, NFS  |
 | z/OS  | Sharing DASD across Sysplex  |   |
+
 
 \*References to NFSv4 imply any version of NFSv4. All NFSv4 minor versions are supported, for example version 4.2.
 
@@ -96,7 +98,8 @@ If you are implementing either {{< TransferCFT/suitevariablesTrustedFileName  >}
 
 ## Standard defaults
 
-The Internet Assigned Numbers Authority (IANA) reserves the TCP ports 1761- 1768 for {{< TransferCFT/axwayvariablesComponentShortName  >}}. For more information, refer to: [www.iana.org/assignments/service- names- port- numbers/service- names- port- numbers](http://www.iana.org/assignments/service- names- port- numbers/service- names- port- numbers.xhtml?&page=31).
+The Internet Assigned Numbers Authority (IANA) reserves the TCP ports 1761-1768 for {{< TransferCFT/axwayvariablesComponentShortName  >}}. For more information, refer to: [www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?&page=31).
+
 
 | Component  | Port |
 | --- | --- |
@@ -112,6 +115,7 @@ The Internet Assigned Numbers Authority (IANA) reserves the TCP ports 1761- 1768
 | {{< TransferCFT/suitevariablesSecureRelayName  >}} MA<br/> ma.comm_port |  <br/> 6801 |
 | {{< TransferCFT/suitevariablesSecureRelayName  >}} RA<br/> • ra.comm_port<br/> • ra.admin_port |  <br/> • 6811<br/> • 6810 |
 
+
 \*not supported
 
 > **Note**
@@ -120,4 +124,4 @@ The Internet Assigned Numbers Authority (IANA) reserves the TCP ports 1761- 1768
 
 ## Third party licenses
 
-Available on the Axway support site, at [support.axway.com](https://support.axway.com/en/documents/document- details/id/1441679).
+Available on the Axway support site, at [support.axway.com](https://support.axway.com/en/documents/document-details/id/1441679).

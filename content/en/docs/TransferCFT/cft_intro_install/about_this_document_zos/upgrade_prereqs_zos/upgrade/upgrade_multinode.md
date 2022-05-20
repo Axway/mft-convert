@@ -1,8 +1,8 @@
 ---
-title: "Upgrade a multi- node architecture"
-linkTitle: "Upgrade multi- node architecture"
+title: "Upgrade a multi-node architecture"
+linkTitle: "Upgrade multi-node architecture"
 weight: 250
---- This section describes the upgrade of an instance of Transfer CFT z/OS configured in multi- node.
+---This section describes the upgrade of an instance of Transfer CFT z/OS configured in multi-node.
 
 ## Prerequisite
 
@@ -49,7 +49,7 @@ RECNB=
             => Target CATALOG records number (to be customized)
 //     DISPFIL=&DISPCAT,
 //     HABFNAME='NO'
-
+ 
 ```
 
 ****Submit the procedure ..INSTALL(MIGRCAT).****
@@ -98,7 +98,7 @@ Define the variables RECNB, OLDFIL, TMPFIL and NEWFIL. Replace X with the node n
 //     SER='DK231F',
 //     OLDFIL=Source.COM.N0 X
 ,  => Source COM node 0X 
-
+       
 //     TMPFIL=Prefix.WORK.MCOM.N0X, => Temporary file (size defined by &TMPSCOM) 
 //     NEWFIL=Target.COM.N0X,  => Target COM node 0X
 //     RECNB=5000,             => Target COM node 0X

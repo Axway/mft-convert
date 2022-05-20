@@ -2,7 +2,7 @@
 title: "           INACT  - Deactivate an object"
 linkTitle: "INACT - Deactivating objects"
 weight: 260
---- <span id="kanchor67"></span>
+---<span id="kanchor67"></span>
 
 This page describes the INACT command and its parameters. You can use the INACT command to deactivate:
 
@@ -18,12 +18,14 @@ This page describes the INACT command and its parameters. You can use the INACT 
 
 Command guide: [INACT](../../../command_summary#INACT)
 
+
 | Parameter  | Description  |
 | --- | --- |
 | [ID](../../../command_summary/parameter_intro/id)  | Identifier for the object to be deactivated. To deactivate several objects with a single command, use wildcard characters or meta characters. |
 | [TYPE](../../../command_summary/parameter_intro/type)  | Object to be deactivated:<br/> • PART<br/> • TRK<br/> • CRON<br/> • FOLDER |
 | [MODE](../../../command_summary/parameter_intro/mode)  | Mode to be deactivated on partners (only when TYPE=PART object):<br/> • BOTH (default)<br/> • REQUESTER<br/> • SERVER<br/> You can use the shortcuts B, R and S in place of the keywords. |
 | [FORCE](../../../command_summary/parameter_intro/force) |  • YES: Stops any transfers in progress involving the deactivated partners.<br/> • NO: Default value, transfers progress normally. |
+
 
 ## Using the INACT command
 
@@ -54,7 +56,7 @@ INACT TYPE=PART, ID=PARIS, MODE=REQUESTER
 Returning the following output:
 
 ```
-CFTU20I Part=PARIS : ACTIVEBOTH - > ACTIVESERV
+CFTU20I Part=PARIS : ACTIVEBOTH -> ACTIVESERV
 CFTU00I INACT _ Correct (TYPE=PART,ID=PARIS,MODE=REQUESTER)
 ```
 
@@ -107,7 +109,7 @@ INACT TYPE=CRON,ID=CRON1
 Returning the following output:
 
 ```
-CFTU20I Cronjob=CRON1 : ACTIVE - > NOACTIVE
+CFTU20I Cronjob=CRON1 : ACTIVE -> NOACTIVE
 CFTU00I INACT _ Correct (id=cron1,type=cron)
 ```
 
@@ -132,6 +134,6 @@ INACT TYPE=FOLDER,ID=USER1
 Returning the following output:
 
 ```
-CFTU20I Folder=USER1 : ACTIVE - > NOACTIVE
+CFTU20I Folder=USER1 : ACTIVE -> NOACTIVE
 CFTU00I INACT _ Correct (TYPE=FOLDER,ID=USER1)
 ```

@@ -2,7 +2,7 @@
 title: "Tracking configuration changes"
 linkTitle: "Configuration change logging"
 weight: 140
---- The configuration auditing feature enables Transfer CFT to track configuration changes and send this information to the Sentinel
+---The configuration auditing feature enables Transfer CFT to track configuration changes and send this information to the Sentinel
 server. The configuration change can be:
 
 - Deleting, modifying, or creating a CFTxxx object (PART, or PART database)
@@ -15,7 +15,7 @@ server. The configuration change can be:
 
 ## Procedure
 
-To enable configuration change auditing, set the following unified configuration](../../../admin_intro/uconf) (UCONF) parameters:
+To enable configuration change auditing, set the following [unified configuration](../../../admin_intro/uconf) (UCONF) parameters:
 
 1. Activate the Sentinel connector by setting `sentinel.xfb.enable=yes`.
 1. Activate the audit by setting `sentinel.xfb.audit=yes.`
@@ -49,6 +49,7 @@ containing:
 
 ### Ident attribute details
 
+
 | CFTA0nX  | Details  |
 | --- | --- |
 | n=1 | CFTPARM file  |
@@ -60,9 +61,11 @@ containing:
 | X=I  | Information  |
 | X=E  | Error  |
 
+
 <span id="Return message attribute"></span>
 
 ### Return message attribute details
+
 
 | Attribute  | Details  |
 | --- | --- |
@@ -77,6 +80,7 @@ containing:
 | UpdDate=&amp;upddate  | &amp;upddate is the Update Date for the object  |
 | UpdTime=&amp;updtime  | &amp;updtime is the Update Time for the object  |
 
+
 ## Disable XFB.Log
 
 By default, `sentinel.xfb.log` is set to `IEWF `(information, error, warning, and fatal), which sends Transfer CFT log information to Sentinel. To disable the XFB.Log, use the uconf utility to set this value to ' '.
@@ -88,4 +92,4 @@ CFTUTIL uconfset id=sentinel.xfb.log, value=' '
 ****Related topics****
 
 - UCONF: [unified configuration](../../../admin_intro/uconf)
-- [XFBTransfer
+- [XFBTransfer]()

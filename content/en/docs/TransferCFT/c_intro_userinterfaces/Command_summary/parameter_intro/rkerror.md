@@ -2,7 +2,7 @@
 title: "rkerror"
 linkTitle: "rkerror"
 weight: 2950
---- <span id="rkerror"></span>
+---<span id="rkerror"></span>
 
 ### rkerror
 
@@ -20,5 +20,7 @@ aborts due to the receiving file creation error (server mode):
 
 If the RKERROR parameter is also set in the CFTRECV command, the CFTRECV
 command takes precedence.
+
+ 
 
 [Return to Command index](../../)

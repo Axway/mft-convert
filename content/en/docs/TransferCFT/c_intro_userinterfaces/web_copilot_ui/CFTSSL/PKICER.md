@@ -2,7 +2,7 @@
 title: "Certificates - PKICER"
 linkTitle: "Certificates - PKICER"
 weight: 220
---- This section describes how to:
+---This section describes how to:
 
 - Import,
     delete or update a root or intermediate certificate authority in the local
@@ -23,6 +23,7 @@ can import all their certificates with the same identifier.
 ## Parameters
 
 Some parameters are available only in command line, as indicated in the table.
+
 
 | CID = string | Unique local identifier of the certificate to be created, replaced or deleted. |
 | --- | --- |

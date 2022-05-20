@@ -2,7 +2,7 @@
 title: "Ongoing  CFTSEND"
 linkTitle: "Ongoing CFTSEND"
 weight: 440
---- <span id="About_the_ongoing_CFTSEND_object"></span>
+---<span id="About_the_ongoing_CFTSEND_object"></span>
 
 ## About the ongoing CFTSEND object
 
@@ -14,7 +14,7 @@ Use the CFTSEND object to specify:
     of the file to send to the partner
 - The actions to
     perform locally during and after a transfer (translation, compression,
-    call to a user EXIT, an end- of- transfer procedure...)
+    call to a user EXIT, an end-of-transfer procedure...)
 - An authorized time
     slot and default user associated with the transfers
 

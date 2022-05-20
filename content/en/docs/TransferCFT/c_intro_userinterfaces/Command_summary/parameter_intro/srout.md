@@ -2,7 +2,7 @@
 title: "srout"
 linkTitle: "srout"
 weight: 3320
---- <span id="srout"></span>
+---<span id="srout"></span>
 
 ### srout
 
@@ -21,5 +21,7 @@ this protocol on the {{< TransferCFT/axwayvariablesComponentShortName  >}}:
 - ****BOTH**** (default value): both send and
     receive transfers
 - ****NONE****: no transfers
+
+ 
 
 [Return to Command index](../../)

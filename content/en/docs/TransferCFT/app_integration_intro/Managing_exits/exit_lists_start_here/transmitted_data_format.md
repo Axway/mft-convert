@@ -2,7 +2,7 @@
 title: "Critera file and data format"
 linkTitle: "Transmitted data format"
 weight: 320
---- This section describes  the criteria file format, which corresponds to
+---This section describes  the criteria file format, which corresponds to
 the system version, and the physical characteristics
 of the transmitted data.
 
@@ -37,6 +37,7 @@ Displays using the same format as in {{< TransferCFT/headerfootervariableshflong
 - Format V23: The record is truncated if LRECL&lt;503 or padded with spaces if LRECL>503.
 - Format V24: The record is truncated if LRECL&lt;1569 or padded with spaces if LRECL>1569.
 
+
 | Type  | V24 length  | V23 length  | Description  |
 | --- | --- | --- | --- |
 | CHAR  | 1  | 1  | 'L': start of record marker  |
@@ -60,9 +61,11 @@ Displays using the same format as in {{< TransferCFT/headerfootervariableshflong
 | CHAR  | 64 | 8  | Diagp  |
 | Total | 1569 | 503 bytes  |   |
 
+
 ****Format 2****
 
 The fields are as described in the following table, where the field size depends on the format version (V23 or V24).
+
 
 | Type | V24 length | V23 length | Description |
 | --- | --- | --- | --- |
@@ -87,6 +90,7 @@ The fields are as described in the following table, where the field size depends
 | CHAR  | 3 | 3  | Diagi  |
 | CHAR  | 64 | 8  | Diagp  |
 
+
 ****Format C: CSV - Comma Separated Value****
 
 Each field is separated by a comma.
@@ -108,7 +112,7 @@ Each field is separated by a tab.
 ****Format X: XML****
 
 ```
-<?xml version="1.0" encoding="UTF- 8"?><CAT><TRANSFER DIRECT="S" STATE="X" PHASE="X" PHASESTEP="X" SPART="MARTIN" RPART="PARIS" IDF="ID_EXITL" IDT="L1111423" NBR="2" FNAME="" PRI="128" DATEK="20191211" TIMEK="11422580" PARM="" SUSER="" RUSER="" COMMENT="" DIAGI="0" DIAGP="CP NONE"/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <TRANSFER DIRECT="R" STATE="X" PHASE="X" PHASESTEP="X" SPART="PARIS" RPART="MARTIN" IDF="BIN" IDT="L1111415" NBR="2" FNAME="pub\\L1111415_A000002K.RCV" PRI="128" DATEK="20191211" TIMEK="11415981" PARM="My  &quot;param&quot; with quote" SUSER="" RUSER="" COMMENT="" DIAGI="0" DIAGP="CP NONE"/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+<?xml version="1.0" encoding="UTF-8"?><CAT><TRANSFER DIRECT="S" STATE="X" PHASE="X" PHASESTEP="X" SPART="MARTIN" RPART="PARIS" IDF="ID_EXITL" IDT="L1111423" NBR="2" FNAME="" PRI="128" DATEK="20191211" TIMEK="11422580" PARM="" SUSER="" RUSER="" COMMENT="" DIAGI="0" DIAGP="CP NONE"/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <TRANSFER DIRECT="R" STATE="X" PHASE="X" PHASESTEP="X" SPART="PARIS" RPART="MARTIN" IDF="BIN" IDT="L1111415" NBR="2" FNAME="pub\\L1111415_A000002K.RCV" PRI="128" DATEK="20191211" TIMEK="11415981" PARM="My  &quot;param&quot; with quote" SUSER="" RUSER="" COMMENT="" DIAGI="0" DIAGP="CP NONE"/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 <TOTAL>2</TOTAL></CAT>      
 ```
 
@@ -154,7 +158,7 @@ Comment \*/
 The commands are processed as follows:
 
 - If the criteria
-    file is not found, the exit- list generates a file opening error
+    file is not found, the exit-list generates a file opening error
 - The criteria file
     must contain at least one SEND command or one RECV command
 - All the commands
@@ -182,5 +186,5 @@ significant items such as the filename, which depends on the selected version.
     criteria for send transfers
 - RECV = selection
     criteria for received transfers:
-    - STATE: transfer
+    -   STATE: transfer
         status

@@ -2,7 +2,7 @@
 title: "CFTPROT  - Transfer protocols"
 linkTitle: "CFTPROT - Transfer protocol"
 weight: 400
---- The following table lists the parameters which are common to all protocols.The CFTPROT TYPE = xxx commands are explained in the tables following the general parameters.
+---The following table lists the parameters which are common to all protocols.The CFTPROT TYPE = xxx commands are explained in the tables following the general parameters.
 
 For network resources of the asynchronous type (not SAP), there
 cannot be more than one CFTPROT object per CFTNET object.
@@ -15,12 +15,14 @@ topics****
 - Object concepts
     [Transfer protocols](../../../../admin_intro/admin_config_commands/transfer_protocol_concepts)
 
+ 
 Use this command to define network parameter settings.
+
 
 | Parameters  | Description  |
 | --- | --- |
-| [DISCTD](../../../command_summary/parameter_intro/disctd) | Wait time- out (in seconds) before disconnection, in the absence of a new transfer request to the partner, in requester mode.<br/> The session established for a transfer remains active for DISCTD seconds after the completion of this transfer.<br/> If the value is 0, the wait time- out is infinite. |
-| [see table](../../../command_summary/parameter_intro/discts) | Wait time- out (in seconds) before disconnection, in the absence of a new transfer request from the partner, in server mode.<br/> The session established for a transfer remains active for DISCTS seconds after the completion of this transfer. If at the end of this time- out, no new transfer has been received, the connection is freed by the ABORT FPDU. |
+| [DISCTD](../../../command_summary/parameter_intro/disctd) | Wait time-out (in seconds) before disconnection, in the absence of a new transfer request to the partner, in requester mode.<br/> The session established for a transfer remains active for DISCTD seconds after the completion of this transfer.<br/> If the value is 0, the wait time-out is infinite. |
+| [see table](../../../command_summary/parameter_intro/discts) | Wait time-out (in seconds) before disconnection, in the absence of a new transfer request from the partner, in server mode.<br/> The session established for a transfer remains active for DISCTS seconds after the completion of this transfer. If at the end of this time-out, no new transfer has been received, the connection is freed by the ABORT FPDU. |
 | [DYNAM](../../../command_summary/parameter_intro/dynam) | Dynamic partner identifier (8 characters) in server mode. |
 | [EXIT](../../../command_summary/parameter_intro/exit)  | Identifier describing the directory EXIT.<br/> The value of this identifier corresponds to the CFTEXIT ID parameter.<br/> The identifier may contain the &amp;NPART symbolic variable. |
 | [EXITA](../../../command_summary/parameter_intro/exita)  | Identifier describing the directory EXIT.<br/> The value of this identifier corresponds to the value of the CFTEXIT ID parameter.<br/> The identifier may contain the &amp;NPART symbolic variable. |
@@ -30,12 +32,13 @@ Use this command to define network parameter settings.
 | [NET](../../../command_summary/parameter_intro/net)  | Identifier referring to a CFTNET command associated with this protocol. |
 | [Compression](../../../command_summary/parameter_intro/rcomp). |
 | [RESTART](../../../command_summary/parameter_intro/restart) | Maximum number of transfer restart attempts.<br/> An attempt is taken into account as soon as the physical connection with the remote site is correctly established. |
-| [RTO](../../../command_summary/parameter_intro/rto)  | Network monitoring time- out (in seconds) excluding the protocol connection/disconnection/break phase.<br/> Corresponds to the wait time- out of a reply to an FPDU before disconnection (READ TIME OUT).<br/> If the value is 0, the wait time- out is infinite. |
+| [RTO](../../../command_summary/parameter_intro/rto)  | Network monitoring time-out (in seconds) excluding the protocol connection/disconnection/break phase.<br/> Corresponds to the wait time-out of a reply to an FPDU before disconnection (READ TIME OUT).<br/> If the value is 0, the wait time-out is infinite. |
 | [SAP](../../../command_summary/parameter_intro/sap)  | Name of the local SAP, Service Access Point, associated with this protocol.<br/> Used to identify the "access point" at which incoming connection requests for this communication protocol are placed.<br/> The SAP supplied by a requester partner when making its connection request is retrieved by the local Transfer CFT which uses it to deduce the protocol to be used. Each CFTPROT object in a given resource class must include its specific SAP.<br/> The value of this parameter may be expressed in hexadecimal form. In this case, the first character must be "#" (number sign) (for example: #31 is understood as the ASCII character ‘1’). |
 | [SCOMP](../../../command_summary/parameter_intro/scomp)  | Maximum authorized compression for sending a file.<br/> This compression is negotiated between the sender and the receiver.<br/> A zero value corresponds to no compression. |
 | [SRIN](../../../command_summary/parameter_intro/srin)  | Controls the direction of transfers authorized for the Transfer CFT when it is server, accepter of the protocol connection. |
 | [SROUT](../../../command_summary/parameter_intro/srout) | Controls the direction of transfers authorized for the Transfer CFT when it is requester (initiator of the protocol connection). |
 | [TYPE](../../../command_summary/parameter_intro/type#type_CFTPROT)  | Type of file transfer protocol. |
+
 
 <span id="Defining_ODETTE"></span>
 
@@ -68,6 +71,7 @@ and specifics regarding the use of this particular protocol.
 
 **Description**: Use this command to describe the ODETTE transfer protocol.
 
+
 | Parameter | Description  |
 | --- | --- |
 | [EERP](../../../command_summary/parameter_intro/eerp) | Used to interpret the value of the ORIGINATOR and DESTINATOR fields contained in the EERP message, according to the protocol version.<br/> The End to End ResPonse service generates a message called EERP. This message informs the file sender that the data sent arrived correctly.<br/> The first version of the protocol (1986) specifies that:<br/> • the ORIGINATOR protocol field corresponds to the file sender<br/> • the DESTINATOR protocol field corresponds to the file receiver<br/> The second version (1991) specifies that:<br/> • the ORIGINATOR protocol field corresponds to the EERP sender (i.e. the file receiver)<br/> • the DESTINATOR protocol field corresponds to the EERP receiver (i.e. the file sender)<br/> Note: heck the consistency of the customized values from one end to another. If the sender and receiver have different versions, it is not possible to acknowledge the transfer. |
@@ -76,8 +80,9 @@ and specifics regarding the use of this particular protocol.
 | [RESYNC](../../../command_summary/parameter_intro/resync)  | Option for restarting a transfer following an interruption.<br/> This option is negotiated with the partner when the connection is established: if the option is set to NO for one of the partners, transfer restarts are not managed. |
 | [Protocol topics](../../../command_summary/parameter_intro/rrusize) to optimize the definition of the value of this parameter. |
 | [SCREDIT](../../../command_summary/parameter_intro/scredit) | Value of the "credit" (expressed as a number of "DATA" messages) proposed by Transfer CFT when it is the requester.<br/> Transfer CFT is authorized to send a number of "DATA" protocol messages equal to the result of the negotiation (performed when the protocol session is established), before waiting for a new "credit" to be sent by the server. |
-| [Protocol topics](../../../command_summary/parameter_intro/srusize) to optimize the definition of the value of this parameter.<br/> MVS connection, the maximum value of SRUSIZE is equal to the value configured in the NCP (or the equivalent) less (- ) 6 bytes. |
+| [Protocol topics](../../../command_summary/parameter_intro/srusize) to optimize the definition of the value of this parameter.<br/> MVS connection, the maximum value of SRUSIZE is equal to the value configured in the NCP (or the equivalent) less (-) 6 bytes. |
 | TCP  | Processing method used for protocol messages:<br/> • Transfer CFT: activation of the method specific to Transfer CFT<br/> • OFTP: activation of the standard method (RFC 2204)<br/> This parameter applies in both initiator and responder modes.  |
+
 
 <span id="Defining_PeSIT"></span>
 
@@ -113,20 +118,21 @@ the use of each of these variants, refer to the Transfer CFT [Protocols](../../.
 
 **Description**: Use CFTPROT TYPE = PESIT command to describe the PeSIT transfer protocol.
 
+
 | Parameter  | Description  |
 | --- | --- |
 | [CONCAT](../../../command_summary/parameter_intro/concat)<br/> Only in sender mode | Option to concatenate FPDUs (File Protocol Data Units) in a given NSDU.<br/> This option is not negotiated. |
-| [CTO](../../../command_summary/parameter_intro/cto)  | Minimum duration (in minutes) of the session, Cycle Time Out.<br/> At the end of a transfer, the wait time- out for a nfew transfer is recalculated depending on:<br/> • the time (hour) for opening the session<br/> • the current time<br/> • the wait delay before disconnection (DISCTS for the protocol)<br/> • the duration of the session (CTO)<br/> The session is liberated if no transfer was initiated by the remote partner during the indicated duration. |
+| [CTO](../../../command_summary/parameter_intro/cto)  | Minimum duration (in minutes) of the session, Cycle Time Out.<br/> At the end of a transfer, the wait time-out for a nfew transfer is recalculated depending on:<br/> • the time (hour) for opening the session<br/> • the current time<br/> • the wait delay before disconnection (DISCTS for the protocol)<br/> • the duration of the session (CTO)<br/> The session is liberated if no transfer was initiated by the remote partner during the indicated duration. |
 | [CYCLE](../../../command_summary/parameter_intro/cycle)  | Periodicity (in minutes) for creation of a protocol session:<br/> • 0: PeSIT session open on startup<br/> • n: periodicity |
-| [DISCTC](../../../command_summary/parameter_intro/disctc)  | Wait time- out (in seconds) for the reply FPDU (ACONNECT), after the sending of a CONNECT FPDU.<br/> If the value is 0, the wait time- out is infinite. |
-| [DISCTR](../../../command_summary/parameter_intro/disctr)  | Network disconnection wait time- out. Wait time- out (in seconds) for the partner site to cut the connection, after sending an "abort" request (ABORT FPDU).<br/> If the value is 0, the wait time- out is infinite. |
+| [DISCTC](../../../command_summary/parameter_intro/disctc)  | Wait time-out (in seconds) for the reply FPDU (ACONNECT), after the sending of a CONNECT FPDU.<br/> If the value is 0, the wait time-out is infinite. |
+| [DISCTR](../../../command_summary/parameter_intro/disctr)  | Network disconnection wait time-out. Wait time-out (in seconds) for the partner site to cut the connection, after sending an "abort" request (ABORT FPDU).<br/> If the value is 0, the wait time-out is infinite. |
 | [HIDE99](../../../command_summary/parameter_intro/hide99) | Optional parameter available only to PESIT protocol definition (TYPE=PESIT) using the ANY profile (PROFIL=ANY/CFT).<br/> • NO (Default value): no information inside PI99 (free message PI Code) is hidden<br/> • YES: hide private information carried by the protocol (physical local path of the file) |
-| [LOGON](../../../command_summary/parameter_intro/logon)<br/> Only in requester mode PeSIT E | Implementation of the pre- connection phase.<br/> According to the value of this parameter:<br/> • YES: this phase is implemented. The requester sends a 24- byte EBCDIC message as follows:<br/> • • byte 1 to 8: ‘PESIT ’ (PeSIT followed by 3 blank characters) (corresponding to the protocol used)<br/> • byte 9 to 16: requester identifier (NSPART of CFTPART)<br/> • byte 17 to 24: requester password (NSPASSW of CFTPART)<br/> <br/> • NO: this phase is not implemented: the requester does not send a message<br/> Note: The Transfer CFT server automatically adapts itself to the choice of the requesting partner to send a Logon message or not. |
-| [MULTART](../../../command_summary/parameter_intro/multart)<br/> Only in sender mode | Option to group several records of the file sent in a given FPDU (multi- record FPDUs).<br/> • in sender mode, MULTART = YES is recommended if the partner supports multi- record FPDUs<br/> The value MULTART = YES is PROHIBITED in this profile<br/> • in receiver mode, the Transfer CFT accepts multi- record FPDUs, regardless of the value of this parameter |
+| [LOGON](../../../command_summary/parameter_intro/logon)<br/> Only in requester mode PeSIT E | Implementation of the pre-connection phase.<br/> According to the value of this parameter:<br/> • YES: this phase is implemented. The requester sends a 24-byte EBCDIC message as follows:<br/> • • byte 1 to 8: ‘PESIT ’ (PeSIT followed by 3 blank characters) (corresponding to the protocol used)<br/> • byte 9 to 16: requester identifier (NSPART of CFTPART)<br/> • byte 17 to 24: requester password (NSPASSW of CFTPART)<br/> <br/> • NO: this phase is not implemented: the requester does not send a message<br/> Note: The Transfer CFT server automatically adapts itself to the choice of the requesting partner to send a Logon message or not. |
+| [MULTART](../../../command_summary/parameter_intro/multart)<br/> Only in sender mode | Option to group several records of the file sent in a given FPDU (multi-record FPDUs).<br/> • in sender mode, MULTART = YES is recommended if the partner supports multi-record FPDUs<br/> The value MULTART = YES is PROHIBITED in this profile<br/> • in receiver mode, the Transfer CFT accepts multi-record FPDUs, regardless of the value of this parameter |
 | [PAD](../../../command_summary/parameter_intro/pad) <br/> Only in requester mode CFT profile | *Deprecated in* {{< TransferCFT/axwayvariablesComponentLongName  >}}**{{< TransferCFT/axwayvariablesReleaseNumber  >}}<br/> Use of the CRC (Cyclic Redundancy Checksum).<br/> This option is not negotiated: in server mode, Transfer CFT always adapts itself to the choice of the requesting partner.<br/> The PAD = YES option is mandatory for an access through a PAD. |
 | [PART](../../../command_summary/parameter_intro/part)  | List of the partners (maximum of four) for which a PeSIT session, where the transactional turn is cyclically opened..<br/> Inactive partners (result of the command INACT) are not taken into account. |
-| PROF  | PeSIT D or E protocol profile.<br/> The profile options are:<br/> • SIT profile: the PeSIT is then used in the SIT network context.<br /> It is the same in PeSIT version D and version E.<br /> It provides synchronization point management but does not manage: • segmentation: the value of the SEGMENT parameter must be set to<br /> NO (SEGMENT = NO)<br/> • or multi- records: the value of the MULTART parameter must be set to<br /> NO (MULTART = NO)<br/> <br/> Note: A sender in the PeSIT SIT profile cannot segment a record sent in several data FPDUs or group several records sent in the same data FPDU<br/> • or compression: the RCOMP and SCOMP parameters are not applicable<br/> • or receive transfer requests<br/> • EXTERN profile: corresponds to the "non- SIT" (external to SIT network) standardized definition of the PeSIT version D protocol<br/> • CFT profile: the PeSIT version D protocol is used outside the context of the SIT network, the partner also having a Transfer CFT<br/> Its functionality level is greater than the PeSIT D EXTERN profile specifications,<br/> • ANY profile: corresponds to the "non- SIT" (external to SIT network) standardized definition of the PeSIT version E protocol<br/> This profile includes the facilities of the CFT profile, as standard.<br/> Additional facilities are provided between two Transfer CFTs, while remaining in conformity with the PeSIT E standard. These facilities are based on the use of the PI 99 (free PI).<br/> • the DMZ profile (DeMilitarized Zone): corresponds to the normalized "hors SIT" definition for the PeSIT protocol, version E E (refer to Managing the Turn)<br/> Note: In server mode, the PROF parameter can take either the EXTERN, CFT or ANY values (corresponding to the "non- SIT" profiles): indeed, in server mode, the Transfer CFT automatically adapts itself to the non- SIT profile proposed by the requesting partner. |
-| [RCHKW](../../../command_summary/parameter_intro/rchkw) | Size of the receive mode synchronization point acknowledgement anticipation window, expressed as a number of synchronization points.<br/> Negotiated with the sender partner.<br/> RCHKW=0 means that synchronization points are not acknowledged.<br/> RCHKW=1 is equivalent to operation in half- duplex mode.<br/> On LU6.2 networks all non- null values will be forced to 1 during protocol negotiation. |
+| PROF  | PeSIT D or E protocol profile.<br/> The profile options are:<br/> • SIT profile: the PeSIT is then used in the SIT network context.<br /> It is the same in PeSIT version D and version E.<br /> It provides synchronization point management but does not manage: • segmentation: the value of the SEGMENT parameter must be set to<br /> NO (SEGMENT = NO)<br/> • or multi-records: the value of the MULTART parameter must be set to<br /> NO (MULTART = NO)<br/> <br/> Note: A sender in the PeSIT SIT profile cannot segment a record sent in several data FPDUs or group several records sent in the same data FPDU<br/> • or compression: the RCOMP and SCOMP parameters are not applicable<br/> • or receive transfer requests<br/> • EXTERN profile: corresponds to the "non-SIT" (external to SIT network) standardized definition of the PeSIT version D protocol<br/> • CFT profile: the PeSIT version D protocol is used outside the context of the SIT network, the partner also having a Transfer CFT<br/> Its functionality level is greater than the PeSIT D EXTERN profile specifications,<br/> • ANY profile: corresponds to the "non-SIT" (external to SIT network) standardized definition of the PeSIT version E protocol<br/> This profile includes the facilities of the CFT profile, as standard.<br/> Additional facilities are provided between two Transfer CFTs, while remaining in conformity with the PeSIT E standard. These facilities are based on the use of the PI 99 (free PI).<br/> • the DMZ profile (DeMilitarized Zone): corresponds to the normalized "hors SIT" definition for the PeSIT protocol, version E E (refer to Managing the Turn)<br/> Note: In server mode, the PROF parameter can take either the EXTERN, CFT or ANY values (corresponding to the "non-SIT" profiles): indeed, in server mode, the Transfer CFT automatically adapts itself to the non-SIT profile proposed by the requesting partner. |
+| [RCHKW](../../../command_summary/parameter_intro/rchkw) | Size of the receive mode synchronization point acknowledgement anticipation window, expressed as a number of synchronization points.<br/> Negotiated with the sender partner.<br/> RCHKW=0 means that synchronization points are not acknowledged.<br/> RCHKW=1 is equivalent to operation in half-duplex mode.<br/> On LU6.2 networks all non-null values will be forced to 1 during protocol negotiation. |
 | [RESYNC](../../../command_summary/parameter_intro/resync)<br/> PeSIT D CFT profile, PeSIT D EXTERN profile, PeSIT E | Dynamic resynchronization of exchanges during transfer (without interrupting the data exchange phase).<br/> This option is negotiated with the partner at the time the connection is established: if this option is set to NO for one of the partners, dynamic resynchronization is not managed.<br/> Note: The only dynamic resynchronization possible between two Transfer CFTs is performed when a CRC error is detected (PAD=YES). |
 | [REVERSE](../../../command_summary/parameter_intro/reverse)<br/> Only in requester mode PeSIT D CFT profile, PeSIT E | Option to reuse a connection to perform two transfers in different directions one after the other. |
 | [RPACING](../../../command_summary/parameter_intro/rpacing) | Value of the interval between synchronization points for receive transfers (in Kbytes) (1 Kbyte = 1024 bytes) (see explanations of the SPACING parameter).<br/> This parameter is negotiated with the partner (SPACING parameter if Transfer CFT); the smallest value is selected as the interval between synchronization points.<br/> A null value (RPACING = 0) means that synchronization points are not set. |
@@ -136,6 +142,7 @@ the use of each of these variants, refer to the Transfer CFT [Protocols](../../.
 | [SPACING](../../../command_summary/parameter_intro/spacing)  | Interval between synchronization points being sent (in Kbytes)<br /> (1 Kbyte = 1 024 bytes). |
 | [SRUSIZE](../../../command_summary/parameter_intro/srusize) | Maximum size of NSDUs being received and sent. |
 | [see details](../../../command_summary/parameter_intro/sserv) | Identifies the service (protocol variant) required for the incoming partner. |
+
 
 <span id="SSL_parameter_in_CFTPROT"></span>
 
@@ -174,7 +181,7 @@ then the server mode for CFTSSL is not mandatory.
 Syntax:  
 
 CFTPROT  
-
+  
 [SSL =     identifier,]
 
 Description: Use the CFTPROT object to set:
@@ -184,9 +191,11 @@ Description: Use the CFTPROT object to set:
 - Security
     profile in server mode
 
+
 | Parameter | Description  |
 | --- | --- |
 | [SSL](../../../command_summary/parameter_intro/ssl) | SSL commands Identifier used for security profiles. |
+
 
 <span id="PeSIT_examples"></span>
 
@@ -198,8 +207,8 @@ PeSIT protocol, SIT profile, associated
 with the data exchange protocol and network resources defined by the CFTNET
 ID=ACCEPTOR command.
 
-The time- outs are the default values [ [Compression](../../../command_summary/parameter_intro/compression)]. Each FPDU contains a single file
-record (MULTART=NO). There is no on- line compression.
+The time-outs are the default values [ [Compression](../../../command_summary/parameter_intro/compression)]. Each FPDU contains a single file
+record (MULTART=NO). There is no on-line compression.
 
 ```
 CFTPROT     ID    

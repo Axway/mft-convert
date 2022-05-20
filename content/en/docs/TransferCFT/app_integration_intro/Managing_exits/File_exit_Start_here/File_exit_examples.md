@@ -2,15 +2,15 @@
 title: "File  exit examples"
 linkTitle: "File exit examples"
 weight: 350
---- This topic provides examples of file exits and the parameter values
+---This topic provides examples of file exits and the parameter values
 for these exits.
 
 ### File type exit parameter settings
 
 ```
-/\*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \*/
+/\*--------------------------------------------------------\*/
 /\* PARAMETER settings for a FILE TYPE EXIT TASK \*/
-/\*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \*/
+/\*--------------------------------------------------------\*/
 /cftsend     id
       =
 exf1     ,
@@ -115,7 +115,7 @@ to select one of the functions in the exfini initialization function.
 The EXFxmp1 user functions:
 
 - Take charge of
-    file- access
+    file-access
 - Take control at
     each step
 - Send 50 records
@@ -124,7 +124,7 @@ The EXFxmp1 user functions:
     transfer (ret1 = 9) after 4 consecutive transfers
 
 The EXIT task is deactivated after 5 minutes inactivity (WAITTASK =
-5). After de- activation, it is again possible to start a transfer successfully
+5). After de-activation, it is again possible to start a transfer successfully
 (the global variable nbsend is reinitialized to 0 on reactivation of the
 task).
 

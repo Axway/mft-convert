@@ -1,12 +1,12 @@
 ---
-title: "Post- transfer file renaming"
-linkTitle: "Post- transfer file renaming"
+title: "Post-transfer file renaming"
+linkTitle: "Post-transfer file renaming"
 weight: 230
---- You can configure  post- transfer, file renaming on the receiver side of a flow. The file is renamed on transfer completion, in the post processing phase, and includes a configurable retry mechanism.
+---You can configure  post-transfer, file renaming on the receiver side of a flow. The file is renamed on transfer completion, in the post processing phase, and includes a configurable retry mechanism.
 
 ****Limitation****
 
-- When using a group of files in homogeneous mode, you cannot use post- transfer file renaming.
+- When using a group of files in homogeneous mode, you cannot use post-transfer file renaming.
 
 ## How to configure
 
@@ -22,10 +22,12 @@ FACTION=RETRYRENAME
 
 Use the following uconf parameters to customize the retry mechanism.
 
+
 | Parameter  | Default  | Value  | Description  |
 | --- | --- | --- | --- |
-| cft.server.transfer.rrename.retry_delay  | 60 seconds  | 1- 65535  | Delay in seconds between two retries for renaming.<br/> If the file is not successfully renamed after the first retry_delay, the time is compounded so that the next retry occurs at the retry time added to the number of tries multiplied by the retry value.<br/> The time of the next retry = D + D * (R- 1)<br/> Where:<br/> • D is the retry_delay<br/> • R is the number of retries<br/> For example, if the file is not renamed after 60 seconds (default value), the next retry occurs in 120 seconds, and the following one in 180 seconds, etc. |
-| cft.server.transfer.rrename.max_retries  | 10  | 1- 65535  | Maximum number of retries.  |
+| cft.server.transfer.rrename.retry_delay  | 60 seconds  | 1-65535  | Delay in seconds between two retries for renaming.<br/> If the file is not successfully renamed after the first retry_delay, the time is compounded so that the next retry occurs at the retry time added to the number of tries multiplied by the retry value.<br/> The time of the next retry = D + D * (R-1)<br/> Where:<br/> • D is the retry_delay<br/> • R is the number of retries<br/> For example, if the file is not renamed after 60 seconds (default value), the next retry occurs in 120 seconds, and the following one in 180 seconds, etc. |
+| cft.server.transfer.rrename.max_retries  | 10  | 1-65535  | Maximum number of retries.  |
+
 
 ### Monitoring
 
@@ -47,24 +49,24 @@ The retry and rename (R) option falls between the (T) and (Y) phase.
 
 ## Queuing
 
-If you have several transfers with RETRYRENAME set for the same FNAME in a single flow, the transfers are queued based on their date/time of the end- of- transfer (DATEE, TIMEE).
+If you have several transfers with RETRYRENAME set for the same FNAME in a single flow, the transfers are queued based on their date/time of the end-of-transfer (DATEE, TIMEE).
 
 ## Example of spooling and renaming files
 
-This example combines the use of the serialization with the rename/retry mechanism to ensure a spooling of file transfers without overwriting an un- consumed file at the destination.
+This example combines the use of the serialization with the rename/retry mechanism to ensure a spooling of file transfers without overwriting an un-consumed file at the destination.
 
 - Our user defines a transfer flow, for example `DailyReport,`based on a transfer state (acknowledgement) using the serialization option.
 - Several applications generate files that use the same flow, `DailyReport`; these file transfer requests are queued.
 - The source Transfer CFT for the flow executes the first file transfer request, `Report1`.  
 - The target Transfer CFT receives `Report1`.
-- Post- processing makes the file available to a target application, and immediately sends an acknowledgment to the source. This enables the next file transfer in the queue to be executed.
+- Post-processing makes the file available to a target application, and immediately sends an acknowledgment to the source. This enables the next file transfer in the queue to be executed.
 - Upon receiving the acknowledgement, the source Transfer CFT executes the next transfer request. However:
 
-> - If the file no longer exists on the target (it was consumed by a target application), the cycle repeats as above.
+> -   If the file no longer exists on the target (it was consumed by a target application), the cycle repeats as above.
 >
-> <!- - - - >
+> <!-- -->
 >
-> - If the file still exists on the target Transfer CFT, then the next new file transfer (`Report2`) enters a retry cycle while it waits for the previous file to be deleted (moved/copied).
+> -   If the file still exists on the target Transfer CFT, then the next new file transfer (`Report2`) enters a retry cycle while it waits for the previous file to be deleted (moved/copied).
 
 ### Example configuration
 
@@ -83,9 +85,9 @@ CFTRECV id=DailyReport, faction=retryrename, wfname=pub/&idtu.tmp, fname=pub/MyR
 myreport.cmd
 ```
 
-#### Define post- processing
+#### Define post-processing
 
-Post- processing should include an acknowledgement so that the next queued transfer request is triggered. Additionally, your post- processing script can include, for example, a message to indicate that the file has been received and renamed, and is ready to be consumed by the target application.
+Post-processing should include an acknowledgement so that the next queued transfer request is triggered. Additionally, your post-processing script can include, for example, a message to indicate that the file has been received and renamed, and is ready to be consumed by the target application.
 
 ```
 end part=&part,idt=&idt,istate=yes,diagc='READY TO CONSUME'

@@ -2,7 +2,7 @@
 title: "Creating  a directory exit - IBM i"
 linkTitle: "Creating a directory exit"
 weight: 300
---- This page describes a delivered sample that is designed to create an example directory exit. You can use the `TCPPARAM `configuration sample that is located in `CFTPROD/UTIN`.
+---This page describes a delivered sample that is designed to create an example directory exit. You can use the `TCPPARAM `configuration sample that is located in `CFTPROD/UTIN`.
 
 ****Before you start****
 
@@ -18,7 +18,7 @@ your text editor (EDTF for example) as follows.
 1. Locate the communication properties
     for your site, which appear at the end of the file. When
     modifying the (`TCPPARAM`) file, you must also find every occurrence
-    of the HOST string located in cfttcp- type commands and replace the X character
+    of the HOST string located in cfttcp-type commands and replace the X character
     strings with your system name or address.
 
 ## Prerequisites
@@ -57,7 +57,7 @@ To generate the sample CFTEXITA application:
 1. Access the `<installdir>/runtime/conf `directory.
 1. Generate the {{< TransferCFT/axwayvariablesComponentShortName >}} databases
     using `cftinit` the configuration file provided
-    and modified for this EXIT:` cft- tcp.conf`
+    and modified for this EXIT:` cft-tcp.conf`
 1. When the` cftinit complete `
     message is displayed, run {{< TransferCFT/axwayvariablesComponentShortName >}} using the `cftstart `utility: `cftstart`
 1. When the` CFTMAIN process   ID is xxxxx` message is displayed, perform an initial standard transfer

@@ -2,7 +2,7 @@
 title: "Before repositioning"
 linkTitle: "Stage Before repositioning"
 weight: 410
---- At the receiver end (DIRECT = R)
+---At the receiver end (DIRECT = R)
 with file accessing managed by the user, the user function has to reposition
 using the information (rpos, frecs and fcars) the {{< TransferCFT/axwayvariablesComponentShortName  >}} provides.
 
@@ -15,13 +15,16 @@ the beginning of the file by setting the ret1 field to 1.
 
 ### Fields to define
 
+
 | Field  | Description  |
 | --- | --- |
 | ret1 | Return code:<br/> • 0: processing ok<br/> • 1: restart at the beginning of the file<br/> • 9: refusal and end of transfer |
 | ret2 | Error message  |
 | msg | Message sent to the standard output  |
 
+
 ### Field values
+
 
 | Field | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
 | --- | --- | --- | --- | --- |
@@ -31,8 +34,8 @@ the beginning of the file by setting the ret1 field to 1.
 | retsync | 0 |   | 0 |   |
 | ret1 | 0 | * | 0 | * |
 | ret2 | blank | * | blank | * |
-| us- sem |   |   |   |   |
-| us- ctx |   |   |   |   |
+| us-sem |   |   |   |   |
+| us-ctx |   |   |   |   |
 | idexit | = | = | = | = |
 | exname | = | = | = | = |
 | parmexit | = | = | = | = |

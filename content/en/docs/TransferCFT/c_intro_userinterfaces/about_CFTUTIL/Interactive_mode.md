@@ -2,7 +2,7 @@
 title: "Use  interactive mode "
 linkTitle: "Using interactive mode"
 weight: 130
---- CFTUTIL can be used in an interactive mode, which consists of several
+---CFTUTIL can be used in an interactive mode, which consists of several
 operating modes that use the same CFTUTIL operations regardless of the operating system.
 
 <span id="Data_entry_in_command_line"></span>
@@ -20,10 +20,12 @@ In this syntax:
     each environment. Refer to the Transfer CFT Operating Guide that corresponds
     to your OS:
 
+
 | OS |  file_symb |
 | --- | --- |
 | Windows | # |
 | UNIX |  @ |
+
 
 - file_in is a file
     containing the Transfer CFT commands
@@ -41,7 +43,7 @@ On all systems:
 
 - CFTUTIL standard
     input and standard output are equivalent to:
-    - CFTUTIL ‘file_symb’
+    -   CFTUTIL ‘file_symb’
         CFTIN CFTOUT
 - CFTIN and CFTOUT
     are reserved words corresponding to the standard input and output

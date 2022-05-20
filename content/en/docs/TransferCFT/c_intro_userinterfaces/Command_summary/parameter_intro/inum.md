@@ -2,7 +2,7 @@
 title: "inum"
 linkTitle: "inum"
 weight: 1700
---- <span id="inum"></span>
+---<span id="inum"></span>
 
 ## inum
 

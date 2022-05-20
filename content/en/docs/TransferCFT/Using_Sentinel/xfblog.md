@@ -1,5 +1,5 @@
 ---
-    title: "XFBLog Tracked Object"
+title: "XFBLog Tracked Object"
 linkTitle: "XFBLog Tracked Object"
 weight: 220
 ---When you configure Sentinel to monitor Transfer CFT, you can import
@@ -10,6 +10,7 @@ events and errors that occur on Transfer CFT. This topic describes the XFBLog at
 ## XFBLog attributes
 
 The XFBLog includes the following attributes.
+
 
 | Attribute  | Description  | Type  | Length  |
 | --- | --- | --- | --- |
@@ -23,6 +24,7 @@ The XFBLog includes the following attributes.
 | SeverityClass  | Severity class:<br/> ES – System Error<br/> EC – Component Error<br/> EM – Message Error<br/> AV – Error and Warning<br/> IG – General Information<br/> IP – Program Information | Variable string  | 10  |
 | SessionTag  | Session tag  | Variable string  | 20  |
 | TransferTag  | Transfer tag  | Variable string  | 20  |
+
 
 ****Related topics****
 

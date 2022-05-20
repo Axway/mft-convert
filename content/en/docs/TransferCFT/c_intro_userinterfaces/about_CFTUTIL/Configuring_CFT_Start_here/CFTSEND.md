@@ -2,29 +2,30 @@
 title: "CFTSEND - Send template"
 linkTitle: "CFTSEND - Default SEND templates"
 weight: 430
---- This topic describes how to define the CFTSEND
+---This topic describes how to define the CFTSEND
 template. Use this command to SEND a file or files to a partner.
 
 ****Related
 topics****
 
 - Command syntax
-    CFTSEND](../../../command_summary#CFTSEND)
+    [CFTSEND](../../../command_summary#CFTSEND)
 - Object concepts
     [Default
     send templates](../../../../concepts/cft_configuration_concepts_start_here/default_send_template_concepts)
 
+
 | Parameter  | Description  |
 | --- | --- |
 | [ACKEXEC](../../../command_summary/parameter_intro/ackexec)  | Name of the file describing the procedure to be executed when receiving an acknowledgement reply for the transfer.  |
-| [ARCHIVEFNAME  | The archived source file name after transfer completion if FACTION=ARCHIVE.<br/> <blockquote> **Note**<br/> The fname and archivefname must be on the same volume (all platforms).<br/> </blockquote>  |
-| COMMENT](../../../command_summary/parameter_intro/comment) | Local alphanumeric comment associated with the send transfer. |
+| [ARCHIVEFNAME]()  | The archived source file name after transfer completion if FACTION=ARCHIVE.<br/> <blockquote> **Note**<br/> The fname and archivefname must be on the same volume (all platforms).<br/> </blockquote>  |
+| [COMMENT](../../../command_summary/parameter_intro/comment) | Local alphanumeric comment associated with the send transfer. |
 | [CYCDATE](../../../command_summary/parameter_intro/cycdate) | Upper final date for activating the first transfer of a cycle. |
 | [CYCLE](../../../command_summary/parameter_intro/cycle) | Number of units defining the transfer cycle period. |
 | [CYCTIME](../../../command_summary/parameter_intro/cyctime) | Upper limit time for activating the first transfer of a cycle. |
 | [DELETE](../../../command_summary/parameter_intro/delete)  | Automatic deletion of the catalog entries in the "X" phase (done) for the corresponding IDF. |
 | [EXEC](../../../command_summary/parameter_intro/delete) | Name of the file describing the procedure to be executed on completion of the transfer. |
-| [EXECSUB](../../../command_summary/parameter_intro/execsub) | Submission policy of the end- of- transfer procedure, when sending a group of files.  |
+| [EXECSUB](../../../command_summary/parameter_intro/execsub) | Submission policy of the end-of-transfer procedure, when sending a group of files.  |
 | [EXECSUBA](../../../command_summary/parameter_intro/execsuba)  | Submission policy of the procedure to launch receiving acknowledgement, when sending a group of files.  |
 | [EXECSUBPRE](../../../command_summary/parameter_intro/execsubpre)  | Submission policy of the preprocessing procedure, when sending a group of files.  |
 | [EXIT](../../../command_summary/parameter_intro/exit) | Identifier of the CFTEXIT command associated with this transfer.<br/> Used to activate a file EXIT user task. The value of this parameter may be equal to the symbolic variable &amp;IDF. |
@@ -42,7 +43,7 @@ topics****
 | [FORCE](../../../command_summary/parameter_intro/force) | Determines the priority with which the parameters set in CFTSEND are taken into account relative to the parameters set in an associated SEND command. |
 | [FORG](../../../command_summary/parameter_intro/forg)  | Organization of the file to be sent:<br/> • SEQ: sequential<br/> • INDEXED: indexed<br/> • DIRECT: relative direct access |
 | [FRECFM](../../../command_summary/parameter_intro/frecfm) | Record format of the file to be sent:<br/> • F: fixed<br/> • V: variable,<br/> • U: undefined |
-| [FSPACE](../../../command_summary/parameter_intro/fspace)  | Size of the file to be sent, in K- bytes (1 K- byte = 1024 bytes). |
+| [FSPACE](../../../command_summary/parameter_intro/fspace)  | Size of the file to be sent, in K-bytes (1 K-byte = 1024 bytes). |
 | [FTYPE](../../../command_summary/parameter_intro/ftype) | Type of local file to be sent. Also see the NTYPE parameter. |
 | [GROUPID](../../../command_summary/parameter_intro/groupid) | Information completing the USERID of the CFTSEND command. |
 | [ID](../../../command_summary/parameter_intro/id)  | Local identifier of the model file (IDF) to be sent. |
@@ -53,7 +54,7 @@ topics****
 | [MINDATE](../../../command_summary/parameter_intro/mindate) | Minimum transfer validity date.<br/> Only taken into account in requester mode |
 | [NBLKSIZE](../../../command_summary/parameter_intro/nblksize) | File block size, in protocol terms. |
 | [NCODE](../../../command_summary/parameter_intro/ncode)  | Sent data code. |
-| [NCOMP](../../../command_summary/parameter_intro/ncomp) | Compression of on- line data required by the sender. |
+| [NCOMP](../../../command_summary/parameter_intro/ncomp) | Compression of on-line data required by the sender. |
 | [NETBAND](../../../command_summary/parameter_intro/netband) | Select the outgoing port range. |
 | [NFNAME](../../../command_summary/parameter_intro/nfname) | Name of the physical file sent to the receiver partner. |
 | [NKEYLEN](../../../command_summary/parameter_intro/nkeylen) | Length (in bytes) of the key of an indexed file. |
@@ -78,6 +79,7 @@ topics****
 | [WFNAME](../../../command_summary/parameter_intro/wfname)  | Name of the temporary file used to send a group of files selected in line with the generic name specified in FNAME. |
 | [XLATE](../../../command_summary/parameter_intro/xlate)  | Identifier of the translation table used for send transfers relative to this model file. |
 
+
 <span id="Additional_filename_information"></span>
 
 ### Additional filename information
@@ -90,12 +92,14 @@ be defined in the send transfer request (SEND command or CFTAPI call)
 rather than in the CFTSEND object. Click on the links in the following
 table for examples and details.
 
+
 | Format  | Processing  |
 | --- | --- |
 | [FNAME = filename](../../../command_summary/filename_conventions)  | Sends a file or a version of a file  |
 | FNAME = {mask &#124; dirname}  | Lists a directory  |
-| [FNAME = #filename  | Sends a group of files, the list of which is located in the specified file  |
+| [FNAME = #filename]()  | Sends a group of files, the list of which is located in the specified file  |
 | FNAME = {#mask &#124; #dirname}  |  • Sends a group of files selected in line with the generic name specified (#mask)<br/> • Sends all files in the directory specified (#dirname)  |
+
 
 <span id="Example"></span>
 

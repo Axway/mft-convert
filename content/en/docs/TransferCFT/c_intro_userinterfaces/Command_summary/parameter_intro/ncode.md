@@ -2,7 +2,7 @@
 title: "ncode"
 linkTitle: "ncode"
 weight: 2140
---- <span id="ncode"></span>
+---<span id="ncode"></span>
 
 ### ncode
 
@@ -35,7 +35,7 @@ The following values explicitly or implicitly determine the action:
 - If FCODE or NCODE
     is equal to BINARY, no translation is performed
 - If not (the local
-    data and the on- line data being assumed to be coded in ASCII or EBCDIC):
+    data and the on-line data being assumed to be coded in ASCII or EBCDIC):
 - If NCODE is
     equal to FCODE, ASCII/ASCII or EBCDIC/EBCDIC translation can only be performed
     with an external translation table (see the use of the XLATE parameter)
@@ -58,12 +58,12 @@ The following values explicitly or implicitly determine the action:
     is equal to BINARY, no translation is performed
 - If NCODE is equal to FCODE, no ASCII/ASCII or EBCDIC/EBCDIC translation is performed
 - If NCODE is not equal FCODE **and FTYPE = T, X, O or J**, ASCII/EBCDIC or EBCDIC/ASCII translation is performed using either an external translation table or the internal Transfer CFT translation table
-    - FTYPE = T (End of Line CRLF on Windows, LF on Unix)
-    - FTYPE = X (End of line = LF)
-    - FTYPE = O (End of line = CRLF)
-    - FTYPE = J (Stream Text)
+    -   FTYPE = T (End of Line CRLF on Windows, LF on Unix)
+    -   FTYPE = X (End of line = LF)
+    -   FTYPE = O (End of line = CRLF)
+    -   FTYPE = J (Stream Text)
 
-Regardless of the FTYPE, when using SFTP, the end- of- line in the received file is Text type (CRLF on Windows, and LF on Unix).
+Regardless of the FTYPE, when using SFTP, the end-of-line in the received file is Text type (CRLF on Windows, and LF on Unix).
 
 For further information, refer to *[Protocols](../../../../protocols_start_here)*.
 
@@ -82,12 +82,12 @@ The following values explicitly or implicitly determine the action:
     is equal to BINARY, no translation is performed
 - If NCODE is equal to FCODE, no ASCII/ASCII or EBCDIC/EBCDIC translation is performed
 - If NCODE is not equal FCODE **and FTYPE = T, X, O or J**, ASCII/EBCDIC or EBCDIC/ASCII translation is performed using either an external translation table or the internal Transfer CFT translation table
-    - FTYPE = T (End of Line CRLF on Windows, LF on Unix)
-    - FTYPE = X (End of line = LF)
-    - FTYPE = O (End of line = CRLF)
-    - FTYPE = J (Stream Text)
+    -   FTYPE = T (End of Line CRLF on Windows, LF on Unix)
+    -   FTYPE = X (End of line = LF)
+    -   FTYPE = O (End of line = CRLF)
+    -   FTYPE = J (Stream Text)
 
-Regardless of the FTYPE, when using SFTP, the end- of- line in the received file is Text type (CRLF on Windows, and LF on Unix).
+Regardless of the FTYPE, when using SFTP, the end-of-line in the received file is Text type (CRLF on Windows, and LF on Unix).
 
 <span id="ncode_CFTXLATE"></span>
 

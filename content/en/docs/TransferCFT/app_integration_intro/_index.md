@@ -2,7 +2,7 @@
 title: "Application integration"
 linkTitle: "Application integration"
 weight: 140
---- This section provides information on using the following services and features in {{< TransferCFT/axwayvariablesComponentShortName  >}}:
+---This section provides information on using the following services and features in {{< TransferCFT/axwayvariablesComponentShortName  >}}:
 
 [About the CFTUTIL interface](../c_intro_userinterfaces/about_cftutil) - Describes the CFTUTIL command line utility used in Transfer CFT.
 
@@ -10,7 +10,7 @@ weight: 140
 
 [Using a shared disk as the data transfer medium](copy_a_file) - Describes how to copy a file to a different location without actually sending the file, while still retaining standard Transfer CFT tracking.
 
-[Using synchronous communication](synch_comm_tcpip_intro) - Synchronous communication provides a real- time response when sending data from a client to the Transfer CFT server. This response indicates that the client command was acknowledged by Transfer CFT and is listed in the catalog.
+[Using synchronous communication](synch_comm_tcpip_intro) - Synchronous communication provides a real-time response when sending data from a client to the Transfer CFT server. This response indicates that the client command was acknowledged by Transfer CFT and is listed in the catalog.
 
 [Using APIs](../cft_intro_install/about_this_document_zos/using_apis) - Application Programming Interfaces are a set of functions
 that create application services.

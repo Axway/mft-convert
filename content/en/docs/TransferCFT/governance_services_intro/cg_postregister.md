@@ -1,8 +1,8 @@
 ---
-title: "Post- registration operations"
-linkTitle: "Post- registration operations "
+title: "Post-registration operations"
+linkTitle: "Post-registration operations "
 weight: 190
---- In addition to registration, there are other types of recurring exchanges that occur between {{< TransferCFT/axwayvariablesComponentShortName  >}} and {{< TransferCFT/PrimaryCGorUM  >}} or {{< TransferCFT/suitevariablesFlowManager  >}}.
+---In addition to registration, there are other types of recurring exchanges that occur between {{< TransferCFT/axwayvariablesComponentShortName  >}} and {{< TransferCFT/PrimaryCGorUM  >}} or {{< TransferCFT/suitevariablesFlowManager  >}}.
 
 - Configuration and flow deployment
 - SSL certificate renewal
@@ -56,7 +56,7 @@ Where YYYYMMDDHHMMSS is the date and time of the renewal. For example, August 7 
 
 #### Change the private key length
 
-You can configure the key length for either a governance or business certificate from the default value of 2048 to 4096 either when you install {{< TransferCFT/suitevariablesTransferCFTName  >}}, or post- installation if you have a {{< TransferCFT/suitevariablesTransferCFTName  >}} that is already registered with {{< TransferCFT/suitevariablesCentralGovernanceName  >}} or {{< TransferCFT/suitevariablesFlowManager  >}}.
+You can configure the key length for either a governance or business certificate from the default value of 2048 to 4096 either when you install {{< TransferCFT/suitevariablesTransferCFTName  >}}, or post-installation if you have a {{< TransferCFT/suitevariablesTransferCFTName  >}} that is already registered with {{< TransferCFT/suitevariablesCentralGovernanceName  >}} or {{< TransferCFT/suitevariablesFlowManager  >}}.
 
 > **Note**
 >
@@ -74,7 +74,7 @@ You can configure the key length for either a governance or business certificate
     ```
     PKIUTIL LISTPKI TYPE=USER, CONTENT=FULL &#124; grep "Private Key type"
     ```
-
+      
     The result should be: `Private Key type  RSA      =  4096 bits`
 
 ## Product updates
@@ -83,4 +83,4 @@ You can configure the key length for either a governance or business certificate
 
 > **Note**
 >
-> Available on Unix and Windows, though this service is not available for multi- node.
+> Available on Unix and Windows, though this service is not available for multi-node.

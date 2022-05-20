@@ -2,11 +2,11 @@
 title: "Update, upgrade, or migrate "
 linkTitle: "Update, upgrade, or migrate"
 weight: 190
---- This section describes how to update, upgrade, or migrate to Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}}.
+---This section describes how to update, upgrade, or migrate to Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}}.
 
 ## About updates
 
-An update brings Transfer CFT up- to- date with a patch or service pack offering fixes and minor enhancements. For example, you can update a Transfer CFT 3.1.3 SP3 to Transfer CFT 3.1.3 SP8.
+An update brings Transfer CFT up-to-date with a patch or service pack offering fixes and minor enhancements. For example, you can update a Transfer CFT 3.1.3 SP3 to Transfer CFT 3.1.3 SP8.
 
 ## About upgrades
 

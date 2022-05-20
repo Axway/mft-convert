@@ -2,7 +2,7 @@
 title: "fdelete"
 linkTitle: "fdelete"
 weight: 1120
---- ### fdelete
+---### fdelete
 
 #### CFTSEND/CFTRECV
 

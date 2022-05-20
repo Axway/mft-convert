@@ -2,14 +2,14 @@
 title: "Processing  data"
 linkTitle: "Processing data"
 weight: 170
---- This topic describes compression functions in Transfer CFT when using
+---This topic describes compression functions in Transfer CFT when using
 the OFTP (ODETTE) protocol.
 
 - [Negotiating
     compression](#Negotiating_compression)
 - [Change
     direction](#Change_Direction)
-- [End- to- end
+- [End-to-end
     messages](#End_to_end_messages)
 - [Online
     translation](#Online_Translation)
@@ -42,7 +42,7 @@ This Compression Option is negotiated as indicated in the figure below.
 
 Within the specific framework of the OFTP protocol, the data FPDU (DTF)
 is constituted in a particular way. This DATA FPDU comprises n SUBRECORDS
-(n &gt;= 1); where the term SUBRECORD means "sub- part of a record".
+(n &gt;= 1); where the term SUBRECORD means "sub-part of a record".
 
 Each record to be sent is first formatted by breaking it down into SUBRECORDs;
 the size of each SUBRECORD is 63 characters or less and is preceded by
@@ -66,7 +66,9 @@ If it does, Transfer CFT deletes these characters.
 
 ********Structure of the data exchange buffer********
 
-![View of structure including the initial Byte, header, and sub- record](/Images/TransferCFT/Image1693.gif)
+![View of structure including the initial Byte, header, and sub-record](/Images/TransferCFT/Image1693.gif)
+
+ 
 
 ********HEADER structure********
 
@@ -80,7 +82,7 @@ The OFTP (ODETTE) protocol uses a HORIZONTAL compression. Horizontal
 compression works by compressing repetitive characters, including the
 blank character. Compression is implemented at the HEADER level by setting
 the N6 bit to 1. Where the compression is implemented, bits N0 to N5 no
-longer indicate the sub- record size, as shown in the above diagram, but
+longer indicate the sub-record size, as shown in the above diagram, but
 the number of times a single byte is repeated; the byte in question immediately
 follows the HEADER.
 
@@ -126,21 +128,21 @@ The Change Direction is sent in THREE specific CASES:
     send a file, at the time the EFPA protocol message is sent. There are
     two possibilities on completion of transfer, either:
 
-<!- - - - >
+<!-- -->
 
 - The SENDER
     has something else to send and in this case, it sends another file to
     its partner,
 - The SENDER
     has nothing more to send and in this case it sets the DISCTD disconnection
-    time- out. On expiration of this time- out, if:  
-    - the negotiated transfer direction is BOTH  
-    - The sender sends the CD to its partner
-    - The transfer direction does not permit this  
-    - The session is interrupted
-    - All transfer requests are ignored until the next F_CONNECT_RQ
+    time-out. On expiration of this time-out, if:  
+    -   the negotiated transfer direction is BOTH  
+    -   The sender sends the CD to its partner
+    -   The transfer direction does not permit this  
+    -   The session is interrupted
+    -   All transfer requests are ignored until the next F_CONNECT_RQ
 
-<!- - - - >
+<!-- -->
 
 - Transfer CFT calls
     its partner following a RECV command, a request to receive one or more
@@ -150,14 +152,14 @@ The Change Direction is sent in THREE specific CASES:
 
 <span id="End_to_end_messages"></span>
 
-## End- to- end messages
+## End-to-end messages
 
 <span id="Sending_an_end_to_end_message"></span>
 
-### Sending an end- to- end message
+### Sending an end-to-end message
 
-The OFTP (ODETTE) protocol has an additional service called END- TO- END
-RESPONSE or END- TO- END CONTROL, EERP, for acknowledging an end- to- end
+The OFTP (ODETTE) protocol has an additional service called END-TO-END
+RESPONSE or END-TO-END CONTROL, EERP, for acknowledging an end-to-end
 transfer.
 
 This is a message sent by the RECEIVER of the file. This message, still
@@ -188,7 +190,7 @@ EERP parameter value:
 
 > **Note**
 >
-> Check the consistency of the end- to- end parameter value settings.
+> Check the consistency of the end-to-end parameter value settings.
 > If a sender has a different version from a receiver, it will not be possible
 > to acknowledge the transfer.
 
@@ -208,14 +210,14 @@ EERP TRANSMISSION example:
 
 <span id="Responding_to_an_end_to_end_message"></span>
 
-### Responding to an end- to- end message
+### Responding to an end-to-end message
 
 To prevent overcrowding of EERP messages between two sites, during an
 uninterrupted flow of crossed EERP messages in particular, an FPDU RTR,
 Ready To
 Receive, has been defined. Although
 this "FPDU" is an acknowledgement of the partner receiving the
-EERP message, it does not have an end- to- end meaning. There is a corresponding
+EERP message, it does not have an end-to-end meaning. There is a corresponding
 "RTR" message for each EERP message.
 
 After sending an EERP message, the sender which is the receiver of the

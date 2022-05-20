@@ -2,7 +2,7 @@
 title: "Sending  messages "
 linkTitle: "Sending messages"
 weight: 230
---- This topic describes the concepts related to sending messages using
+---This topic describes the concepts related to sending messages using
 PeSIT and Transfer CFT profiles.
 
 - Send free message as a new transfer: SEND TYPE=MESSAGE (for PeSIT and SFTP (only CFT/CFT) protocols)

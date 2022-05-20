@@ -2,7 +2,7 @@
 title: "Create a Transfer CFT flow with an unmanaged product "
 linkTitle: "Create a flow using an unmanaged product"
 weight: 320
---- This page describes how to create a {{< TransferCFT/suitevariablesTransferCFTName  >}} flow in {{< TransferCFT/suitevariablesCentralGovernanceName  >}} using an unmanaged product and mutual authentication (SSL) for a secure transfer. You may want to become familiar with [PeSIT concepts](../../../../../protocols_start_here/about_pesit), parameters such as [NSPART](../../../../../c_intro_userinterfaces/command_summary/parameter_intro/nspart), [NRPART](../../../../../c_intro_userinterfaces/command_summary/parameter_intro/nrpart), and [SAP](../../../../../c_intro_userinterfaces/command_summary/parameter_intro/sap), prior to starting the procedure, or refer to the [parameter overview](#Paramete) in this page.
+---This page describes how to create a {{< TransferCFT/suitevariablesTransferCFTName  >}} flow in {{< TransferCFT/suitevariablesCentralGovernanceName  >}} using an unmanaged product and mutual authentication (SSL) for a secure transfer. You may want to become familiar with [PeSIT concepts](../../../../../protocols_start_here/about_pesit), parameters such as [NSPART](../../../../../c_intro_userinterfaces/command_summary/parameter_intro/nspart), [NRPART](../../../../../c_intro_userinterfaces/command_summary/parameter_intro/nrpart), and [SAP](../../../../../c_intro_userinterfaces/command_summary/parameter_intro/sap), prior to starting the procedure, or refer to the [parameter overview](#Paramete) in this page.
 
 ## You will need...
 
@@ -23,7 +23,7 @@ The information in this configuration example corresponds to the text used in th
 
 1. Select **Add unmanaged product**.
 1. Enter a **Name** &lt;UP name> and the **Host** &lt;UP host> for this product.
-1. For the ****Type****, select ****Custom**** in the drop- down menu.
+1. For the ****Type****, select ****Custom**** in the drop-down menu.
 1. Select the environment in the **Operating systems** field.
 1. In the **Protocol** section, enter the **PeSIT login** &lt;UP PeSIT login>and password &lt;UP PeSIT password>. Confirm password.
 1. In the **TCP** subsection, select PeSIT / ****Mutual authentication**** and add the pesitssl listening **port** &lt;UP PeSIT port in> for the unmanaged product.
@@ -32,6 +32,7 @@ The information in this configuration example corresponds to the text used in th
 1. Use all other defaults and click ****Save unmanaged product****.
 
 Parameter mapping
+
 
 | Transfer CFT  | Unmanaged product configuration fields  |
 | --- | --- |
@@ -42,6 +43,7 @@ Parameter mapping
 | CFTPART PROT  | Mutual authentication (indicates PeSIT SSL)  |
 | CFTPART SAP  | Port  |
 | CFTSSL DIRECT=CLIENT<br/> ROOTCID corresponding to the ROOT certificate in the Transfer CFT PKI database | Certificate  |
+
 
 ## Create a communication profile on the source {{< TransferCFT/suitevariablesTransferCFTName  >}}
 
@@ -58,6 +60,7 @@ In this step you create a communication profile on the source {{< TransferCFT/su
 
 Parameter mapping
 
+
 | Transfer CFT  | Communication profile for the Unmanaged product  |
 | --- | --- |
 | CFTPROT  | Protocol name  |
@@ -68,6 +71,7 @@ Parameter mapping
 | CFTSSL DIRECT=CLIENT<br/> USERCID | Private certificate  |
 | N/A  | Password (for P12)  |
 | CFTSSL DIRECT=CLIENT<br/> ID | SSL security profile  |
+
 
 ## Create a flow
 
@@ -82,18 +86,22 @@ Make the following selections, using the default values for all other fields.
     From the list, select {{< TransferCFT/axwayvariablesComponentLongName >}} as the product type and select your {{< TransferCFT/suitevariablesTransferCFTName >}}. Confirm by clicking **Add source**.  
     ![](/Images/TransferCFT/flow03.png)
 1. Select ****Protocol****. In the Protocol page, select:
-    - PeSIT as the **Exchange protocol**.
-    - Enter a value for the Flow identifier. Record this identifier as a reference if you want to check the flow configuration on your {{< TransferCFT/axwayvariablesComponentLongName >}}.
-    - Mutual authentication.
-    - Select Show Transfer CFT communication profiles and select the communication profile that you created.
+    -   PeSIT as the **Exchange protocol**.
+    -   Enter a value for the Flow identifier. Record this identifier as a reference if you want to check the flow configuration on your {{< TransferCFT/axwayvariablesComponentLongName >}}.
+    -   Mutual authentication.
+    -   Select Show Transfer CFT communication profiles and select the communication profile that you created.
 1. Select **Target**, then **Unmanaged products**.  
     Click **Edit** product and then from the list, click to select your product.
 1. Click **Select as target** to confirm.
 1. Click **Save**, then click ****Deploy****.
 
+ 
+
+
 | Transfer CFT  | Flow field  |
 | --- | --- |
 | CFTSEND ID  | Flow identifier  |
+
 
 ## Check the flow on {{< TransferCFT/axwayvariablesComponentLongName  >}}
 
@@ -103,8 +111,8 @@ Then create a new transfer using the unmanaged product and the flow identifier y
 
 1. Add a file to exchange. For example put a file called ****report001****, in the {{< TransferCFT/axwayvariablesComponentShortName >}}` runtime/pub` folder.
 1. From the source {{< TransferCFT/axwayvariablesComponentShortName >}}, run the SEND command.
-    - Remember to replace `<instance_target>` with your unmanaged product (target).
+    -   Remember to replace `<instance_target>` with your unmanaged product (target).
 
-    <!- - - - >
+    <!-- -->
 
-    - The ****Flow identifier**** field is equivalent to the {{< TransferCFT/axwayvariablesComponentShortName >}} IDF parameter.
+    -   The ****Flow identifier**** field is equivalent to the {{< TransferCFT/axwayvariablesComponentShortName >}} IDF parameter.

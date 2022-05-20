@@ -2,7 +2,7 @@
 title: "Password authentication "
 linkTitle: "Password authentication: synchronous communication"
 weight: 230
---- ## About password authentication for synchronous communication media
+---## About password authentication for synchronous communication media
 
 Password authentication lets you control remote users that perform CFTUTIL commands via a synchronous communication media.
 
@@ -18,12 +18,12 @@ To enable password authentication set the authentication feature to yes, and spe
 Available authentication methods are:
 
 - Operating System: value=system
-    - The user/password is checked against the Operating System values. For Unix environments, you must enable `cftsu `as described in [How to use system user authentication for the user interfaces](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/t_adding_system_user_unix#Enable2)
+    -   The user/password is checked against the Operating System values. For Unix environments, you must enable `cftsu `as described in [How to use system user authentication for the user interfaces](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/t_adding_system_user_unix#Enable2)
 - Access Management: value=am
-    - The user/password is checked by the configured access management system (either PassPort AM, or the AM exit)
+    -   The user/password is checked by the configured access management system (either PassPort AM, or the AM exit)
 - Transfer CFT UI User Access Base (UNIX and HP NonStop only): value=xfbadm
-    - The user/password is checked using the xfbadm base
-    - Refer to [xfbadmusr and xfbadmgrp utilities](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/use_cft_utilities) for more information
+    -   The user/password is checked using the xfbadm base
+    -   Refer to [xfbadmusr and xfbadmgrp utilities](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/use_cft_utilities) for more information
 
 See Related topics below for links to more information on these access management types.
 
@@ -31,10 +31,12 @@ See Related topics below for links to more information on these access managemen
 
 1. Define the unified configuration settings so that you enable authentication yes, and select the method.
 
+
 | Parameters  | Default  | Description  |
 | --- | --- | --- |
 | cft.server.cftcoms.authentication_enable  | No  | Authentication for synchronous communication:<br/> • Yes: Enable password authentication<br/> • No: Disable authentication |
 | cft.server.authentication_method  | None  | Authentication method can be:<br/> • none: No method defined<br/> • system: Operating system<br/> • am: PassPort AM or AM exit<br/> • xfbadm: [xfbadmusr](../../../cft_intro_install/unix_install_start_here/run_first_time_ux/use_cft_utilities#xfbadmusr1) utility |
+
 
 1. Define the following parameters.
 

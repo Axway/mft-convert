@@ -2,7 +2,7 @@
 title: "storageaccount"
 linkTitle: "storageaccount"
 weight: 3430
---- ### storageaccount
+---### storageaccount
 
 CFTSEND, CFTRECV
 

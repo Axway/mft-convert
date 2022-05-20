@@ -2,7 +2,7 @@
 title: "comment"
 linkTitle: "comment"
 weight: 450
---- <span id="Comment"></span>
+---<span id="Comment"></span>
 
 ### comment
 
@@ -32,7 +32,7 @@ If this parameter is not defined, the explicit value is set in the protocol defi
 
 **[COMMENT = *string160*]**
 
-Enter a local free- text description for the receive transfer. You can
+Enter a local free-text description for the receive transfer. You can
 enter up to 160 alphanumeric characters. The content of this field:
 
 - is

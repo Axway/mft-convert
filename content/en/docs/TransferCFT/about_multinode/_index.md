@@ -1,17 +1,17 @@
 ---
-title: "Multi- node architecture"
-linkTitle: "Multi- node architecture"
+title: "Multi-node architecture"
+linkTitle: "Multi-node architecture"
 weight: 160
---- This topic describes the {{< TransferCFT/axwayvariablesComponentShortName  >}} multi- node feature, which provides you with horizontal scalability and high availability for failovers. Following a brief review of terms, this topic describes:
+---This topic describes the {{< TransferCFT/axwayvariablesComponentShortName  >}} multi-node feature, which provides you with horizontal scalability and high availability for failovers. Following a brief review of terms, this topic describes:
 
 - Active/Active clusters
 - Active/Passive clusters
-- Multi- node architecture
+- Multi-node architecture
 - Recovery and dispatching
 
 ****Terminology****
 
-The {{< TransferCFT/axwayvariablesComponentShortName  >}} active- active architecture is based on hosts, nodes, and a shared file system.
+The {{< TransferCFT/axwayvariablesComponentShortName  >}} active-active architecture is based on hosts, nodes, and a shared file system.
 
 *What is a host?* A host refers to a physical or virtual server located behind a load balancer, or other DNS mechanism. A server can host zero or multiple nodes. {{< TransferCFT/axwayvariablesComponentShortName  >}} itself does not manage the round robin or other load balancing mechanisms.
 
@@ -21,7 +21,7 @@ The {{< TransferCFT/axwayvariablesComponentShortName  >}} active- active archite
 
 ## Active/active cluster
 
-The Transfer CFT active/active architecture, multi- node with multi- host functionality, includes:
+The Transfer CFT active/active architecture, multi-node with multi-host functionality, includes:
 
 - Scalability to overcome node transfer and session restrictions (for example, the maximum number of simultaneous transfers per node).
 - Automatic node restart after a host failure allowing another host to take over.
@@ -52,25 +52,25 @@ The active/passive architecture requires a shared file system.
 - Available on all {{< TransferCFT/suitevariablesTransferCFTName >}} versions
 - Supported platforms: Windows Server with MSCS , Linux, Solaris, AIX /HACMP, and IBM i
 
-## Multi- node architecture
+## Multi-node architecture
 
-The Transfer CFT multi- node architecture is based on hosts, nodes, a shared file system and a load balancer. Regardless of the number of servers hosting the nodes from outside the cluster, all of the nodes are viewed as a single Transfer CFT instance.
+The Transfer CFT multi-node architecture is based on hosts, nodes, a shared file system and a load balancer. Regardless of the number of servers hosting the nodes from outside the cluster, all of the nodes are viewed as a single Transfer CFT instance.
 
 > **Note**
 >
-> This section, and the multi- node sections that follow, are based on an active/active installation.
+> This section, and the multi-node sections that follow, are based on an active/active installation.
 
-The multi- node setup comprises:
+The multi-node setup comprises:
 
 - A ****shared file system**** (infrastructure), for multiple nodes to be able to access the same files using the same set configuration. The shared disk provides communication, configuration, partners, data flows, internal datafiles, and application transferable files.
 - A ****load balancer**** (infrastructure), hardware or software, by which incoming connections can pass. The load balancer dispatches the incoming traffic between the different hosts. However, the outgoing traffic does not use the load balancer.
 - One ****connection dispatcher**** per host (Copilot component), checks for incoming connections on the host it is running on and dispatches connections to nodes running on the same host. For z/OS platforms, refer to *VIPA load balancing* in the *Transfer CFT z/OS Installation and Operation Guide*.
-- One ****node manager**** per host (Copilot component), which monitors all nodes. If a node goes down, the node manager detects the inactivity and restarts it if needed, while taking into account the activity of other node managers. The monitoring mechanism is based on locks provided by the file system lock manager or the resource lock manager. Additionally, the node manager has its own watchdog that is used to prevent incorrect behavior after a shared file system auto- unlock, for instance due to NFSv4 lease time. If the watchdog does not receive a keep- alive from the node manager, all local nodes are killed and relock is requested.
-- One ****synchronous communication media dispatcher**** per host (Copilot component), which allows the use of the synchronous communication media feature in a multi- node environment.
+- One ****node manager**** per host (Copilot component), which monitors all nodes. If a node goes down, the node manager detects the inactivity and restarts it if needed, while taking into account the activity of other node managers. The monitoring mechanism is based on locks provided by the file system lock manager or the resource lock manager. Additionally, the node manager has its own watchdog that is used to prevent incorrect behavior after a shared file system auto-unlock, for instance due to NFSv4 lease time. If the watchdog does not receive a keep-alive from the node manager, all local nodes are killed and relock is requested.
+- One ****synchronous communication media dispatcher**** per host (Copilot component), which allows the use of the synchronous communication media feature in a multi-node environment.
 
 ********Normal functioning********
 
-!](/Images/TransferCFT/normal_multinode.png)
+![](/Images/TransferCFT/normal_multinode.png)
 
 ********If Host A goes down, then Host B takes over Node 1********
 
@@ -99,7 +99,7 @@ The following internal datafiles are node specific, and the filename is flagged 
 > **Note**
 >
 > Caution  
-> Transfer CFT is sensitive to the shared file system's performance, as transfer requests perform concurrent access to the database (COM, catalog, parameters). We recommend a high- performance shared file system, a solid- state drive (SSD), a dedicated network link between the clients and the file system server, and low latency &lt; 2ms.
+> Transfer CFT is sensitive to the shared file system's performance, as transfer requests perform concurrent access to the database (COM, catalog, parameters). We recommend a high-performance shared file system, a solid-state drive (SSD), a dedicated network link between the clients and the file system server, and low latency &lt; 2ms.
 
 ## Failover recovery
 
@@ -128,7 +128,7 @@ If a node fails during the transfer recovery process, the catalog record is lock
 
 ## How local request dispatching works
 
-In a multi- node architecture there is one primary communication file, and then as many secondary communication files as nodes to control request dispatching.
+In a multi-node architecture there is one primary communication file, and then as many secondary communication files as nodes to control request dispatching.
 
 ****How does communication between the primary file and secondary files occur?****
 
@@ -156,7 +156,7 @@ There are two types of requests, which may be handled differently depending on t
 
 ## How remote request dispatching works
 
-All remote requests are going through a load balancer, server transfers, SOAP web- service requests, REST API requests, UI requests (Copilot applet application).
+All remote requests are going through a load balancer, server transfers, SOAP web-service requests, REST API requests, UI requests (Copilot applet application).
 
 > **Note**
 >
@@ -170,14 +170,14 @@ All remote requests are going through a load balancer, server transfers, SOAP we
 
 ![](/Images/TransferCFT/api_multinode.png)
 
-## Troubleshooting multi- node issues
+## Troubleshooting multi-node issues
 
-For information on troubleshooting multi- node issues, please refer to [Troubleshoot multi- node](../troubleshoot_intro/admin_troubleshooting_server/admin_troubleshooting_runtime/troubleshoot_multinode).
+For information on troubleshooting multi-node issues, please refer to [Troubleshoot multi-node](../troubleshoot_intro/admin_troubleshooting_server/admin_troubleshooting_runtime/troubleshoot_multinode).
 
 ****Related topics****
 
-- [Multi- node commands](multi_node_commands)
-- [Managing multi- node
+- [Multi-node commands](multi_node_commands)
+- [Managing multi-node]()
 - [Unified configuration parameters](../cft_intro_install/about_this_document_zos/c_multinode_zos/multi_node_parameters)
-- [Configure multi- node simultaneous transfers](../concepts/about_parallel_transfers/multi_node_simultaneous_transfers)
+- [Configure multi-node simultaneous transfers](../concepts/about_parallel_transfers/multi_node_simultaneous_transfers)
 - [Using a shared file system](../cft_intro_install/unix_install_start_here/before_you_start_unix/n_active_active/shared_file_prereq_ux/activeactive_shared_file_systems)

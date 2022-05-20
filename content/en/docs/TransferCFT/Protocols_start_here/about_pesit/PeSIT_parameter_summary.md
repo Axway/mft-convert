@@ -2,8 +2,9 @@
 title: "PI to parameter mapping"
 linkTitle: "PeSIT parameter summary"
 weight: 160
---- The following table shows the correspondence between
+---The following table shows the correspondence between
 standardized PI codes and Transfer CFT defined values.
+
 
 | PI  | Description  |  Transfer CFT value  |
 | --- | --- | --- |
@@ -29,7 +30,7 @@ standardized PI codes and Transfer CFT defined values.
 | 16  | Data code  | NCODE  |
 | 17  | Transfer priority  | PRI  |
 | 18  | Restart point  | (T)  |
-| 19  | End- of- transfer code  | (T)  |
+| 19  | End-of-transfer code  | (T)  |
 | 20  | Synchron. point no.  | (T)  |
 | 21  | Compression  | NCOMP<br /> RCOMP SCOMP  |
 | 22  | Access type  | SROUT (read, write, mixed)  |
@@ -44,7 +45,7 @@ standardized PI codes and Transfer CFT defined values.
 | 37  | File label  | NFNAME (length &lt; 512)  |
 | 38  | Key length  | NKEYLEN  |
 | 39  | Key offset  | NKEYPOS  |
-| 41  | Space reservation unit  | 0 (kilo- bytes)  |
+| 41  | Space reservation unit  | 0 (kilo-bytes)  |
 | 42  | Space reservation<br /> maximum value  | NSPACE  |
 | 51  | Creation date  | FDATE  |
 |   | Creation time  | FTIME  |
@@ -54,11 +55,12 @@ standardized PI codes and Transfer CFT defined values.
 | 91  | Message  | New parameter  |
 | 99  | Free message  |   |
 
+
 In this table:
 
 - T: defined by Transfer
     CFT during transfer
 - (/): not used by
     Transfer CFT
-- (- ): PI not supported
+- (-): PI not supported
     by this version of the protocol

@@ -2,7 +2,7 @@
 title: "sh"
 linkTitle: "sh"
 weight: 3200
---- <span id="sh"></span>
+---<span id="sh"></span>
 
 ### sh
 
@@ -12,5 +12,7 @@ weight: 3200
 
 Number of days after which the catalog entries for "unterminated"
 send requests (H or K state) are automatically purged.
+
+ 
 
 [Return to Command index](../../)

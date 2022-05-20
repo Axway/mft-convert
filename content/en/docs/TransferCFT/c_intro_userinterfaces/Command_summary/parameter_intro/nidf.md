@@ -2,7 +2,7 @@
 title: "nidf"
 linkTitle: "nidf"
 weight: 2220
---- <span id="nidf"></span>
+---<span id="nidf"></span>
 
 ### nidf
 
@@ -19,5 +19,7 @@ network identifier. **** This value is transferred in the network.
 **[NIDF = string ]**
 
 The network identifier.
+
+ 
 
 [Return to Command index](../../)

@@ -2,9 +2,9 @@
 title: "AM exits"
 linkTitle: "Activate AM exits"
 weight: 300
---- <span id="Activat"></span>
+---<span id="Activat"></span>
 
-## Activating a platform- generic exit
+## Activating a platform-generic exit
 
 1. Check that the '`am.exit.custom.safclass.value`' parameter is not set to a value.
 1. Ensure that the parameter '`am.exit.custom.rbac_fname.value`' is associated with a correct configuration file.
@@ -35,4 +35,6 @@ H85SAFPR: TO ISSUE RACF PERMIT COMMANDS
 
 **Example**
 
-PERMIT UI.\*\* CLASS(safcftcl) ACCESS(READ) - ID(grpcft grpdesk )
+PERMIT UI.\*\* CLASS(safcftcl) ACCESS(READ) -
+
+ID(grpcft grpdesk )

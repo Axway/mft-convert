@@ -2,14 +2,14 @@
 title: "Suffix  management"
 linkTitle: "Suffix management"
 weight: 270
---- By default, during file send or receive operations, Transfer CFT uses
+---By default, during file send or receive operations, Transfer CFT uses
 the file type, [FTYPE](../../../../../c_intro_userinterfaces/command_summary/parameter_intro/ftype),
 to determine the action to be taken. However, Transfer CFT also features a mechanism called suffix management
 which enables Transfer CFT to determine the type
 of file processed from the file name. This topic describes:
 
 - [Defining suffixes](#Defining)
-    - [Enabling suffix management](#Enabling)
+    -   [Enabling suffix management](#Enabling)
 - [Separating file name extensions](#Separati)
 
 <span id="Defining"></span>
@@ -43,7 +43,7 @@ with the following rules:
     defined with *wildcard* characters, which define either any character
     (?) or any character string (**\***)
 - The suffix definitions
-    are case- sensitive but the types are not. Type **t** is, therefore,
+    are case-sensitive but the types are not. Type **t** is, therefore,
     identical to type **T**, but the suffix **.txt** is different from
     the suffix **.TXT**
 - Empty lines and
@@ -55,7 +55,7 @@ with the following rules:
 
 Sample suffix definition file:
 
-`## Sample suffix definition file#.doc=O           # MS- DOS   text file (param.doc for example).txt=T             # UNIX text file(cft.txt for example)*.bin=B          #   Binary file (fil.bin for example)*.dat?=B     # Binary   file (john.dat0,fred.data for example)`
+`## Sample suffix definition file#.doc=O           # MS-DOS   text file (param.doc for example).txt=T             # UNIX text file(cft.txt for example)*.bin=B          #   Binary file (fil.bin for example)*.dat?=B     # Binary   file (john.dat0,fred.data for example)`
 
 `          #   ...`
 
@@ -86,4 +86,4 @@ To enable the option to separate the file name and extension in Unix, set the fo
 
 ` cft.unix.parse_file_name_suffix=yes`
 
-For more information on unified configuration parameters, see [UCONF: Unix- specific parameters](../uconf_unix).
+For more information on unified configuration parameters, see [UCONF: Unix-specific parameters](../uconf_unix).

@@ -2,7 +2,7 @@
 title: "Uninstall Transfer CFT"
 linkTitle: "Uninstall "
 weight: 200
---- This topic describes how to uninstall Transfer CFT. If you uninstall a Transfer CFT, you will lose the complete Transfer CFT configuration. To avoid this, save your environment (sample, exit, …) before removing the Transfer CFT OpenVMS.
+---This topic describes how to uninstall Transfer CFT. If you uninstall a Transfer CFT, you will lose the complete Transfer CFT configuration. To avoid this, save your environment (sample, exit, …) before removing the Transfer CFT OpenVMS.
 
 There is no automatic procedure to uninstall {{< TransferCFT/axwayvariablesComponentLongName  >}}; you must perform system commands to delete all files as described here.
 
@@ -12,6 +12,7 @@ There is no automatic procedure to uninstall {{< TransferCFT/axwayvariablesCompo
 
     `sh log D$CFT_RUN`
 
+      
     ```
     "D$CFT_INST" = "DKB200:[CFT.HOME.]"
     "D$CFT_RUN" = " DKB400:[CFT.SHARED.CFT.RUNTIME.]"

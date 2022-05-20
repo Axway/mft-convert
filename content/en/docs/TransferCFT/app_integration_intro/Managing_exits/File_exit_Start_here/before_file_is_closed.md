@@ -2,9 +2,10 @@
 title: "Before the file is closed"
 linkTitle: "Stage Before the file is closed"
 weight: 400
---- If the user function manages file accessing, it must close the file.
+---If the user function manages file accessing, it must close the file.
 
 ### Fields to define
+
 
 | Field  | Description  |
 | --- | --- |
@@ -12,7 +13,9 @@ weight: 400
 | ret2 | Error message  |
 | msg | Message sent to the standard output  |
 
+
 ### Field values
+
 
 | Field | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
 | --- | --- | --- | --- | --- |
@@ -22,8 +25,8 @@ weight: 400
 | retsync | 0 |   | 0 |   |
 | ret1 | 0 | * | 0 | * |
 | ret2 | blank | * | blank | * |
-| us- sem |   |   |   |   |
-| us- ctx |   |   |   |   |
+| us-sem |   |   |   |   |
+| us-ctx |   |   |   |   |
 | idexit | = | = | = | = |
 | exname | = | = | = | = |
 | parmexit | = | = | = | = |

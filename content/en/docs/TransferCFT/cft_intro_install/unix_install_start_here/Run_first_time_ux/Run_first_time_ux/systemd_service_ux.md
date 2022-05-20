@@ -2,7 +2,7 @@
 title: "Configure systemd services"
 linkTitle: "Configure systemd services"
 weight: 210
---- This section describes the steps you must perform to start and stop, or update, Transfer CFT from {{< TransferCFT/PrimaryCGorUM  >}} with Linux `systemd `services defined.
+---This section describes the steps you must perform to start and stop, or update, Transfer CFT from {{< TransferCFT/PrimaryCGorUM  >}} with Linux `systemd `services defined.
 
 > **Note**
 >
@@ -32,7 +32,7 @@ Authorize the user that operates {{< TransferCFT/axwayvariablesComponentLongName
 On Ubuntu/Debian, use the `visudo `command to add a file called `cft `to `/etc/sudoers.d/`:
 
 ```
-sudo visudo - f /etc/sudoers.d/cft
+sudo visudo -f /etc/sudoers.d/cft
 ```
 
 Add the following lines:

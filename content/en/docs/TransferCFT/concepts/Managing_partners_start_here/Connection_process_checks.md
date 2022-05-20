@@ -2,7 +2,7 @@
 title: "Connection  process checks"
 linkTitle: "Connection process checks"
 weight: 250
---- This topic describes the Transfer CFT mechanism for performing checks
+---This topic describes the Transfer CFT mechanism for performing checks
 on connection.
 
 ## Explicit parameter setting
@@ -58,7 +58,7 @@ the previous example is then as follows:
 #### Using a dynamic partner in server mode
 
 In server mode, Transfer CFT usually only accepts
-a transfer request if the partner is pre- defined in the parameter settings.
+a transfer request if the partner is pre-defined in the parameter settings.
 
 It is, however, possible to accept connections from a partner not defined
 beforehand:

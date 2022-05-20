@@ -2,7 +2,7 @@
 title: "Managing  PKI exits"
 linkTitle: "Managing PKI exits"
 weight: 210
---- This topic describes the steps involved in a PKI exit, as well as how
+---This topic describes the steps involved in a PKI exit, as well as how
 PKI exits work in Transfer CFT transport security. PKI processes and concepts
 include:
 
@@ -16,18 +16,18 @@ include:
     an SSL task](#Opening_an_SSL_task)
 - [Sending
     a CA list](#Getting_a_CA_list_to_be_sent)
-    - [Getting
+    -   [Getting
         a certificate to be sent](#Getting_a_certificate_to_be_sent)
-    - [Checking
+    -   [Checking
         a received certificate](#Checking_a_received_certificate)
 - [Encrypting with the private
     key](#Encrypting_with_the_private_key)
 
 An exit is a point in a software program at
-which a user- developed program can take control of program processes.
+which a user-developed program can take control of program processes.
 One type of exit is a PKI exit.
 
-Axway provides a set of C- language user exits
+Axway provides a set of C-language user exits
 with the Transfer CFT product. These exits are triggered by different
 types of Transfer CFT processing events.
 
@@ -87,7 +87,7 @@ for which no network message has yet been exchanged.
 
 A new context (data structure) is created by Transfer CFT for the session
 to be opened. This context is passed to the cftpkie function in
-all other session- related phases. It contains the session properties and
+all other session-related phases. It contains the session properties and
 is enhanced as the handshake progresses.
 
 In this phase, the context contains the security profile (CFTSSL command
@@ -183,7 +183,7 @@ releases the network session, or waits for the remote entity to do so.
 
 <span id="Session_established_end_of_handshake"></span>
 
-### Session established end- of- handshake
+### Session established end-of-handshake
 
 The cftpkie function call in the HandshakeDone phase corresponds
 to the end of the SSL handshake. The PKI type exit is now only called
@@ -222,7 +222,7 @@ It also contains:
     available to the cftpkie function; this area is private to a context;
     its size is returned by the cftpkie function in the StartTask
     phase
-- 64- byte global
+- 64-byte global
     area available to the cftpkie function; this area is sent in the
     other Transfer CFT exit communication structures (file, directory and
     end of transfer exits); the contents of this area must be set when returned

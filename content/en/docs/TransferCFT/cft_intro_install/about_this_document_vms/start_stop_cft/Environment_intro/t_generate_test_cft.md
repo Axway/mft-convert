@@ -2,9 +2,9 @@
 title: "Generating a test Transfer CFT"
 linkTitle: "Generate a test Transfer CFT"
 weight: 230
---- ## Create a test Transfer CFT
+---## Create a test Transfer CFT
 
-To generate a test Transfer CFT, enter the command: `$cftinit cft_scen:cft- tcp.conf`
+To generate a test Transfer CFT, enter the command: `$cftinit cft_scen:cft-tcp.conf`
 
 The following messages are displayed:
 
@@ -12,7 +12,7 @@ The following messages are displayed:
 CFTU20I
 CFTU20I CFT/VMS
 CFTU20I Version 3.0.1 09/09/2012
-CFTU20I (C) Copyright AXWAY 1989- 2012
+CFTU20I (C) Copyright AXWAY 1989-2012
 CFTU20I ====> Starting Session on 09/09/2012 Time is 13:58:32
 CFTU20I
 CFTU00I CFTFILE _ Correct (TYPE=PARAM,FNAME=CFTPARM)
@@ -30,7 +30,7 @@ CFTU20I Ending Session on 23/10/2006 Time is 16:43:47
 CFTU20I Session active for 0:00:10
 CFTU20I CFT/VMS
 CFTU20I Version 3.0.1 09/09/2012
-CFTU20I (C) Copyright AXWAY 1989- 2012
+CFTU20I (C) Copyright AXWAY 1989-2012
 CFTU20I ====> Starting Session on 09/09/2012 Time is 13:59:32
 CFTU20I Parameters file :CFTPARM
 CFTU20I Partners file :CFTPART
@@ -67,7 +67,7 @@ CFTU20I Session active for 0:00:00
 
 ## Create sample partners
 
-To create sample partners, enter the command:` $ cftinit cft_scen:cft- tcp- part.conf`
+To create sample partners, enter the command:` $ cftinit cft_scen:cft-tcp-part.conf`
 
 The following procedure creates the sample partners:
 
@@ -78,7 +78,7 @@ The following procedure creates the sample partners:
 CFTU20I
 CFTU20I CFT/VMS
 CFTU20I Version 3.0.1 09/09/2012
-CFTU20I (C) Copyright AXWAY 1989- 2012
+CFTU20I (C) Copyright AXWAY 1989-2012
 CFTU20I ====> Starting Session on 09/09/2012 Time is 13:57:39
 CFTU20I Parameters file :CFTPARM
 CFTU20I Partners file :CFTPART
@@ -110,4 +110,4 @@ To begin submitting commands to Transfer CFT you can use:
 - Copilot
 - API programming interfaces
 
-For more information, see *communications*.
+For more information, see *[communications]()*.

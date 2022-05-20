@@ -2,7 +2,7 @@
 title: "bufsize"
 linkTitle: "bufsize"
 weight: 330
---- <span id="bufsize"></span>
+---<span id="bufsize"></span>
 
 ### bufsize
 

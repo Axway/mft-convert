@@ -2,7 +2,7 @@
 title: "Transfer CFT z/OS performance"
 linkTitle: "Optimize performance"
 weight: 270
---- This section introduces performance issues to consider when using Transfer CFT in a z/OS environment.
+---This section introduces performance issues to consider when using Transfer CFT in a z/OS environment.
 
 <span id="Memory usage"></span>
 
@@ -14,7 +14,7 @@ The 24–bit addressed memory (JCL REGION parameter) is used as follows:
 
 - Approximately 1,000 k used by the programs and memory areas.
 
-<!- - - - >
+<!-- -->
 
 - Each transfer task requires an additional 4 k.
 
@@ -22,30 +22,30 @@ The 31–bit addressed memory is used as follows:
 
 - Approximately 64 Mbytes are used by the programs and the memory zones.
 
-<!- - - - >
+<!-- -->
 
 - Each transfer task requires an additional 1 Mbyte.
 
-<!- - - - >
+<!-- -->
 
 - Each open BSAM file uses two buffers, the size of which is equal to BLKSIZE.
 
-<!- - - - >
+<!-- -->
 
 - Each receive transfer uses (CFTPROT PACING\*CHKW) receive buffers; the use of high values with a large number of concurrent transfers may cause Transfer CFT z/OS to abort (ABENDS878).
 
-<!- - - - >
+<!-- -->
 
 - The CFTSSL module needs an extra 4 Mbytes.
 
-<!- - - - >
+<!-- -->
 
 - The installation of Sentinel requires an increase in the size of the execution area according to the configuration file options selected, and according to the number of messages to be processed.
 
 Transfer CFT z/OS delays additional transfer creation when:
 
-- 64 K of 24- bit memory is not available – message: CFTA02E
-- 1 MB of 31- bit memory is not available – messages: CFTA01W for a transfer TASK (TFIL) or CFTA01E
+- 64 K of 24-bit memory is not available – message: CFTA02E
+- 1 MB of 31-bit memory is not available – messages: CFTA01W for a transfer TASK (TFIL) or CFTA01E
 
 The 64–bit addressed memory is used as follows:
 
@@ -53,7 +53,7 @@ The 64–bit addressed memory is used as follows:
 - 8 to 12 MB are allocated for each transfer
 - Transfer CFT may use up to 20 Gbytes of storage above the bar
 
-You can control the 64- bit usage with the MEMLIMIT=value JCL parameter. When the value is less than 512M, the use of 64- bit storage is disabled. In this case, Transfer CFT will handle a smaller number of parallel transfers and use more (20%) CPU cycles.
+You can control the 64-bit usage with the MEMLIMIT=value JCL parameter. When the value is less than 512M, the use of 64-bit storage is disabled. In this case, Transfer CFT will handle a smaller number of parallel transfers and use more (20%) CPU cycles.
 
 Even if Transfer CFT is running in a single address space, it may use a very large amount of virtual storage. You should monitor the z/OS use of page datasets.
 
@@ -65,7 +65,7 @@ The 24–bit addressed memory is used as follows:
 
 The 31–bit addressed memory is used as follows:
 
-- Each logged- in user requires an additional 10 Mbytes
+- Each logged-in user requires an additional 10 Mbytes
 
 <span id="Disk input/output"></span>
 
@@ -75,21 +75,21 @@ Disk I/O operations are performed in the following cases:
 
 - When each BSAM block is read, or written
 
-<!- - - - >
+<!-- -->
 
 - When a BSAM block is written at each synchronization point and a TCLOSE is sent for the file in write mode
 
-<!- - - - >
+<!-- -->
 
 - When each catalog record is written every UPDAT synchronization points  
     (CFTCAT parameter value)
 
-<!- - - - >
+<!-- -->
 
 - When the first record in each CFTCOM file is read every WSCAN seconds  
     (CFTCOM value)
 
-<!- - - - >
+<!-- -->
 
 - Input/output management for HFS files is performed under the control of the OMVS address space. Using RECFM=V to write HFS files is usually faster than using RECFM=U
 
@@ -100,7 +100,7 @@ Transfer CFT z/OS keeps a copy of the Transfer CFT CATALOG in a dataspace. As a
 - Transfer CFT does not reread the records.
 - Transfer CFT uses CFTCAT 4\*RECNB pages in z/OS auxiliary storage.
 - If A12OPTS SHARECAT=YES is specified, other Transfer CFT applications read the catalog primarily from this cache (messages CFCA03I and CFCA04I on the system console). In this case, stopping Transfer CFT may be delayed if another user is sharing this cache (messages CFCA06W and CFCA01).
-- A 2- GB data space is allocated for everyunit of 131,000 records in the catalog.
+- A 2-GB data space is allocated for everyunit of 131,000 records in the catalog.
 
 ### Release unused disk space in received files
 
@@ -112,8 +112,8 @@ In z/OS the Transfer CFT releases unused disk space in the files received if Tra
 
 Transfer CFT in z/OS is partially compatible with file compression managed by DF/SMS.
 
-- Read: Transfer CFT recalculates the size of the non- compressed file from DF/SMS information.
-- Create: Transfer CFT requests the space required to write a non- compressed file. If possible, Transfer CFT then frees space not used at the end of transfer.
+- Read: Transfer CFT recalculates the size of the non-compressed file from DF/SMS information.
+- Create: Transfer CFT requests the space required to write a non-compressed file. If possible, Transfer CFT then frees space not used at the end of transfer.
 
 You cannot restart a receive transfer for a DF/SMS compressed file.
 
@@ -138,7 +138,7 @@ The RESTART is delayed for one minute to handle the TCP/IP network sessions.
 
 ## LE diagnostic files 
 
-Certain Transfer CFT modules use a diagnostic file generated by LE. This file is CEEDUMP, an LE- formatted dump file.
+Certain Transfer CFT modules use a diagnostic file generated by LE. This file is CEEDUMP, an LE-formatted dump file.
 
 <span id="VIPA"></span>
 
@@ -155,7 +155,7 @@ This section describes the specific parameters to use Transfer CFT with VIPA. Yo
 Transfer CFT is fully compatible with dynamic VIPA. There are two methods available to use dynamic VIPA with Transfer CFT:
 
 - Use the IBM program MODDVIPA to create or delete a dynamic VIPA definition. This is the mode of operations required for Transfer CFT GUI.
-- Use the CFTNET SRCPORTS=(1- 65535) value in Transfer CFT parameters. A SAF security profile update may be required in this case. Please read IBM SC31- 8775 for more information.
+- Use the CFTNET SRCPORTS=(1-65535) value in Transfer CFT parameters. A SAF security profile update may be required in this case. Please read IBM SC31-8775 for more information.
 
 #### Source VIPA
 

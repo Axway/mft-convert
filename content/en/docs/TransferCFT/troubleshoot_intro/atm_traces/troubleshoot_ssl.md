@@ -2,7 +2,7 @@
 title: "Recovery and trace analysis"
 linkTitle: "Troubleshoot SSL and TLS "
 weight: 330
---- This section describes how to collect trace information to help with troubleshooting.
+---This section describes how to collect trace information to help with troubleshooting.
 
 ## Activating traces
 
@@ -35,10 +35,10 @@ To analyze an SSL frame, read the first 6 bytes:
 Where:
 
 - Content Type: determines the nature of the frame (0x: hexadecimal):
-    - 0x14 change_cipher_specs
-    - 0x15 alert
-    - 0x16 handshake
-    - 0x17 Application_Data
+    -   0x14 change_cipher_specs
+    -   0x15 alert
+    -   0x16 handshake
+    -   0x17 Application_Data
 - Version: Determines the version of SSL used.
 - Fragment length: specifies the length of the fragment.
 - Message Type: Determines the type of message.
@@ -170,7 +170,7 @@ CFTY02Z>&gt; CTX = 200003 B64A8529 33DFEB17 776E82D7 B88AFBA2>. ... .3 Wn ......
 
 16030100 8610:
 
-10 => client_key_exchange message containing the pre- master key.
+10 => client_key_exchange message containing the pre-master key.
 
 8\. CFTY02Z>&gt; CTX = 200003 SSLact () _ 139 HANDSHAKE SENDING DATA
 
@@ -360,7 +360,7 @@ CFTY02Z>&gt; CTX = 210004 B64A8529 33DFEB17 776E82D7 B88AFBA2>. ... .3 Wn ......
 
 16030100 8610:
 
-10 => Client_Key_Exchange receiving the message (receipt of the pre- master key).
+10 => Client_Key_Exchange receiving the message (receipt of the pre-master key).
 
 8\. CFTY02Z>&gt; CTX = 210004 ndata () _ 139 RECEIVED FROM HANDSHAKE DATA NETWORK
 
@@ -480,7 +480,7 @@ CFTY02Z>&gt; CTX = 200005 16030100 86100000 82008066 3C1D98DA &gt;........... f.
 
 CFTY02Z>&gt; CTX = 200005 F9DE2268 3472A9A6 767FC251 188B14B1> H4R ... .. v.. ... Q. "
 
-16030100 8610: Sending message Clien_Key_Exchange (containing the key pre- master)
+16030100 8610: Sending message Clien_Key_Exchange (containing the key pre-master)
 
 6\. CFTY02Z>&gt; CTX = 200005 SSLact () _ 6 SENDING DATA HANDSHAKE
 

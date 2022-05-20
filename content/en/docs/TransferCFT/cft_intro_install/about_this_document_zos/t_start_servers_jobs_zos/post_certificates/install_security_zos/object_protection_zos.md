@@ -2,7 +2,7 @@
 title: "Transfer CFT object protection"
 linkTitle: "Object protection"
 weight: 330
---- This section describes protecting Transfer CFT objects and how to configure the following:
+---This section describes protecting Transfer CFT objects and how to configure the following:
 
 [Resource name generation](#Add)
 
@@ -13,7 +13,7 @@ weight: 330
 - [Control the SWITCH, MQUERY and SHUT commands](#Controll3)
 - [Control via the APPL object](#Controll4)
 - [Control FILE type transfers](#Controll5)
-- [Control MESSAGE- type transfers](#Controll6)
+- [Control MESSAGE-type transfers](#Controll6)
 
 <span id="Add"></span>
 
@@ -83,7 +83,8 @@ However, if specific authorizations must be granted to some users, declare the d
 
 ```
 RDEFINE safcftcl    CFTRECV.DEFAULT UACC(NONE) OWNER( grpcft )
-PERMIT   CFTRECV.DEFAULT   CLASS( safcftcl )    ACCESS(CONTROL) - ID( grpcft   grpaprm   usera   userb   and so on  )
+PERMIT   CFTRECV.DEFAULT   CLASS( safcftcl )    ACCESS(CONTROL) -
+ID( grpcft   grpaprm   usera   userb   and so on  )
 CONNECT   usera   GROUP( grpfprm ) OWNER( grpcft )
 CONNECT   userb   GROUP( grpfprm ) OWNER( grpcft )
 ```
@@ -121,7 +122,7 @@ The parameter file CFTAPPL command is used to define the transfer owner. There a
 - When the user is explicitly indicated in the CFTAPPL ID=Text, USERID=Usrtso2, DIRECT=BOTH command, the owner of the transfer in send and/or receive mode is the one specified by the USERID parameter.
 - When the user is implicitly indicated by the CFTAPPL ID=Default, USERID=&USERID, DIRECT=BOTH command, the owner, in requester mode, is deduced from the SEND or RECV command owner; in server mode, the owner is deduced from the user indicated in the CFTRECV or CFTSEND command.
 
-If no user is indicated in the CFTRECV or CFTSEND command, the monitor user is considered to be the transfer owner.  Avoid this method for security reasons, as the end- of- transfer procedures would be performed under its authority.
+If no user is indicated in the CFTRECV or CFTSEND command, the monitor user is considered to be the transfer owner.  Avoid this method for security reasons, as the end-of-transfer procedures would be performed under its authority.
 
 The CFTAPPL command lets Transfer CFT control access to a parameter file identifier in one of several cases:
 
@@ -146,7 +147,7 @@ PERMIT APPL.TEXT CLASS(safcftcl) ID(Usrtso1) ACCESS(CONTROL)
 
 > **Note**
 >
-> As end- of- transfer commands are submitted from the transfer owner account (Usrtso2), these procedures cannot execute certain commands (DELETE, START, KEEP, and so on) unless the USRTSO2 user corresponds to a RACF profile type:PERMIT APPL.TEXT CLASS(safcftcl) ID(usrtso2) ACCESS(CONTROL)orPERMIT ALL_CAT.\*\* CLASS(safcftcl) ID(usrtso2) ACCESS(CONTROL)
+> As end-of-transfer commands are submitted from the transfer owner account (Usrtso2), these procedures cannot execute certain commands (DELETE, START, KEEP, and so on) unless the USRTSO2 user corresponds to a RACF profile type:PERMIT APPL.TEXT CLASS(safcftcl) ID(usrtso2) ACCESS(CONTROL)orPERMIT ALL_CAT.\*\* CLASS(safcftcl) ID(usrtso2) ACCESS(CONTROL)
 
 <span id="Controll5"></span>
 
@@ -174,7 +175,8 @@ SEND IDF=TEXT,PART=BANK,FNAME=CFTV2.TEST.CHECK
 Then the transfer is rejected unless Usrtso2, the transfer owner, corresponds to an RACF profile of the type:
 
 ```
-RDEFINE safcftcl TRANSFER.TEXT.S.BANK.CFTV2.TEST.\*  - UACC(NONE) OWNER(GRPCFT)
+RDEFINE safcftcl TRANSFER.TEXT.S.BANK.CFTV2.TEST.\*  -
+UACC(NONE) OWNER(GRPCFT)
 PERMIT TRANSFER.TEXT.S.BANK.CFTV2.TEST.\* CLASS(safcftcl) –
 ID(Usrtso2) ACCESS(CONTROL)
 ```
@@ -208,7 +210,8 @@ Then the transfer is rejected unless Usrtso2, the transfer owner, corresponds to
 
 ```
 RDEFINE safcftcl MESSAGE.TEXT.S.BANK UACC(NONE) OWNER(GRPCFT)
-PERMIT MESSAGE.TEXT.S.BANK CLASS(safcftcl)- ID(Usrtso2) ACCESS(CONTROL)
+PERMIT MESSAGE.TEXT.S.BANK CLASS(safcftcl)-
+ID(Usrtso2) ACCESS(CONTROL)
 ```
 
 If the Usrtso1 user submits the command:

@@ -2,7 +2,7 @@
 title: "Shared file system prerequisites"
 linkTitle: "Shared file systems"
 weight: 200
---- This section provides general information concerning the prerequisites for shared file systems for the following types of files used with {{< TransferCFT/suitevariablesTransferCFTName  >}} in a UNIX environment.
+---This section provides general information concerning the prerequisites for shared file systems for the following types of files used with {{< TransferCFT/suitevariablesTransferCFTName  >}} in a UNIX environment.
 
 - Transfer CFT data files: This refers to all files managed by {{< TransferCFT/suitevariablesTransferCFTName >}} other than transferable application files (including database files), which are stored in the {{< TransferCFT/suitevariablesTransferCFTName >}} runtime directory.
 - Transferable application files: This refers to the files transferred by Transfer CFT.
@@ -17,13 +17,15 @@ The following table lists the file systems that are supported and tested with Tr
 
 ****<span id="Supported_fs_ux_standalone"></span>Supported file systems****
 
+
 | Operating system  | File system  |
 | --- | --- |
 | AIX  | GPFS, NFSv3, NFSv4*  |
-| HP- UX  | NFSv3, NFSv4*  |
-| Linux- x86  | GFS2, GPFS, GlusterFS, NFSv3, NFSv4*  |
+| HP-UX  | NFSv3, NFSv4*  |
+| Linux-x86  | GFS2, GPFS, GlusterFS, NFSv3, NFSv4*  |
 | Solaris  | NFSv4*  |
-| Windows- x86  | GPFS, SMB  |
+| Windows-x86  | GPFS, SMB  |
+
 
 \*References to NFSv4 imply any version of NFSv4. All NFSv4 minor versions are supported, for example version 4.2.
 
@@ -35,19 +37,21 @@ You can use any POSIX compliant shared file system for both Transfer CFT data fi
 
 #### {{< TransferCFT/suitevariablesTransferCFTName  >}} data files
 
-**Supported shared file systems for multi- node, multi- host architecture (active/active)**
+**Supported shared file systems for multi-node, multi-host architecture (active/active)**
 
-The following non- exhaustive table lists shared file systems that have been tested with Transfer CFT.
+The following non-exhaustive table lists shared file systems that have been tested with Transfer CFT.
+
 
 | Operating system  | Supported  | Unsupported  |
 | --- | --- | --- |
 | AIX  | GPFS, NFSv4*  | NFSv3, CXFS, VeritasSF  |
-| HP- UX  | NFSv4*  | NFSv3, CXFS, VeritasSF  |
-| Linux- x86  | GPFS, GFS2, NFSv4*, AWS EFS  | NFSv3, CXFS, ACFS, OCFSv1, OCFSv2, QFS, VeritasSF  |
+| HP-UX  | NFSv4*  | NFSv3, CXFS, VeritasSF  |
+| Linux-x86  | GPFS, GFS2, NFSv4*, AWS EFS  | NFSv3, CXFS, ACFS, OCFSv1, OCFSv2, QFS, VeritasSF  |
 | OpenVMS  | RMS  |   |
 | Solaris  | NFSv4*  | NFSv3, CXFS, QFS, VeritasSF  |
-| Windows- x86  | SMB/CIFS, GPFS  | CXFS, NFS  |
+| Windows-x86  | SMB/CIFS, GPFS  | CXFS, NFS  |
 | z/OS  | Sharing DASD across Sysplex  |   |
+
 
 \*References to NFSv4 imply any version of NFSv4. All NFSv4 minor versions are supported, for example version 4.2.
 
@@ -59,6 +63,6 @@ Please see the [Supported file systems](#Supported_fs_ux_standalone) in the Stan
 
 ## NFS prerequisite
 
-When implementing a multihost, multi- node architecture, the Transfer CFT user must have read and write access to any folder and files on all hosts. Across all hosts in the implementation, you should ensure that they are using the same UID number.
+When implementing a multihost, multi-node architecture, the Transfer CFT user must have read and write access to any folder and files on all hosts. Across all hosts in the implementation, you should ensure that they are using the same UID number.
 
-For more information, please refer to the [NFS](http://nfs.sourceforge.net/nfs- howto/ar01s07.html#pemission_issues) documentation.
+For more information, please refer to the [NFS](http://nfs.sourceforge.net/nfs-howto/ar01s07.html#pemission_issues) documentation.

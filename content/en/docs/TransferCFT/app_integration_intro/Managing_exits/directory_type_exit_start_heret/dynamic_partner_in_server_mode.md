@@ -2,8 +2,8 @@
 title: "Dynamic  partner in server mode"
 linkTitle: "Dynamic partner in server mode"
 weight: 370
---- In server mode, standard {{< TransferCFT/axwayvariablesComponentShortName  >}} operations consist of accepting
-a transfer request only if the partner is pre- defined in the parameter
+---In server mode, standard {{< TransferCFT/axwayvariablesComponentShortName  >}} operations consist of accepting
+a transfer request only if the partner is pre-defined in the parameter
 settings. This topic describes a mode where {{< TransferCFT/axwayvariablesComponentShortName  >}} can accept a
 connection from a partner that is not already defined. This type of partner
 is referred to as a **dynamic partner**.

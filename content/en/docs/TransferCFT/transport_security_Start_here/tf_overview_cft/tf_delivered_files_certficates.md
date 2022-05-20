@@ -2,7 +2,7 @@
 title: "Delivered files, samples, and certificates"
 linkTitle: "Delivered files and samples "
 weight: 220
---- The samples that are delivered with Transfer CFT use the Transfer CFT preprocessing utility to encode/decode a plaintext file before sending it. This topic describes the various delivered files, samples, and certificates that you can use to complete your {{< TransferCFT/suitevariablesTrustedFileName  >}} implementation.
+---The samples that are delivered with Transfer CFT use the Transfer CFT preprocessing utility to encode/decode a plaintext file before sending it. This topic describes the various delivered files, samples, and certificates that you can use to complete your {{< TransferCFT/suitevariablesTrustedFileName  >}} implementation.
 
 Content described in this topic:
 
@@ -16,11 +16,11 @@ Content described in this topic:
 Conventions for Transfer CFT with Trusted File content includes:
 
 - $CFTDIRRUNTIME variable
-    - Unix: &lt;CFTDIRRUNTIME>
-    - Windows: %CFTDIRRUNTIME%
+    -   Unix: &lt;CFTDIRRUNTIME>
+    -   Windows: %CFTDIRRUNTIME%
 - $CFTDIRINSTAL variable
-    - Unix: &lt;CFTDIRINSTALL>
-    - Windows: %CFTDIRINSTALL%
+    -   Unix: &lt;CFTDIRINSTALL>
+    -   Windows: %CFTDIRINSTALL%
 
 <span id="Scripts"></span>
 
@@ -28,19 +28,23 @@ Conventions for Transfer CFT with Trusted File content includes:
 
 Unix scripts
 
+
 | Script  | Description  |
 | --- | --- |
 | &lt;CFTDIRRUNTIME&gt;/exec/tf_decipher.cmd  | Trusted File deciphering script  |
 | &lt;CFTDIRRUNTIME&gt;/exec/tf_cipher.cmd  | Trusted File ciphering script  |
 | &lt;CFTDIRRUNTIME&gt;/exec/tf_delfile.cmd  | End of transfer procedure to delete the sent ciphered file  |
 
+
 Windows scripts
+
 
 | Script  | Description  |
 | --- | --- |
 | &lt;CFTDIRRUNTIME&gt;/exec/tf_decipher.bat  | Trusted File deciphering script  |
 | &lt;CFTDIRRUNTIME&gt;/exec/tf_cipher.bat  | Trusted File ciphering script  |
 | &lt;CFTDIRRUNTIME&gt;/exec/tf_delfile.bat  | End of transfer procedure to delete the sent ciphered file  |
+
 
 <span id="Trusted"></span>
 
@@ -52,13 +56,15 @@ If you want to use your own certificates and if the option tf.enablepasswordciph
 
 passPhrase: For PKCS#12 files, the password required to access the file.
 
-General Usage: CFTTF - pcfg conffile [- plain plainFilename] [- entitiesLocation entitiesLocation]
+ 
 
-[- envelope envelopeName] [- plainFileCharset plainCharset] [- plainEncCharset encCharset]
+General Usage: CFTTF -pcfg conffile [-plain plainFilename] [-entitiesLocation entitiesLocation]
 
-[- messagesPath messagesPath] [- template xmlFilename]
+[-envelope envelopeName] [-plainFileCharset plainCharset] [-plainEncCharset encCharset]
 
-To generate a passphrase, use the command: `CFTTF - pw [password]`
+[-messagesPath messagesPath] [-template xmlFilename]
+
+To generate a passphrase, use the command: `CFTTF -pw [password]`
 
 ****Example****
 
@@ -76,6 +82,7 @@ The following files refer to “user1” and “user2”, which are used in the 
 
 Sample file descriptions
 
+
 | File  | Description  |
 | --- | --- |
 | encfile_cms.xml  | Sample file used for encoding CMS format  |
@@ -85,9 +92,11 @@ Sample file descriptions
 | decfile_pgp.xml  | Sample file used for decoding PGP format  |
 | decfile_smime.xml  | Sample file used for decoding S/MIME format  |
 
+
 ## Sample certificates
 
 The following certificates are located in: &lt;CFTDIRRUNTIME>/conf/tf/.
+
 
 | Certificate  | Description  |
 | --- | --- |
@@ -95,6 +104,7 @@ The following certificates are located in: &lt;CFTDIRRUNTIME>/conf/tf/.
 | &lt;CFTDIRRUNTIME&gt;/conf/tf/certs/priv/xppuser2.p12  | Private delivered “user2” certificate  |
 | &lt;CFTDIRRUNTIME&gt;/conf/tf/certs/pub/xppuser1.pem  | Public delivered “user1” certificate  |
 | &lt;CFTDIRRUNTIME&gt;/conf/tf/certs/pub/xppuser2.pem  | Public delivered “user2” certificate  |
+
 
 <span id="Messages"></span>
 
@@ -122,10 +132,11 @@ Refer to the **Trusted File 3.6 Reference Guide** for details, available on [sup
 
 The **** `<CFTDIRRUNTIME>/conf/tf/transcoding.tbl` **** file contains all available transcoding tables.
 
+
 | Table  | Description  |
 | --- | --- |
 | &lt;CFTDIRINSTALL&gt;/distrib/tf/tables/iso_atoe.tbl  | Converts Latin ASCII to French EBCDIC  |
 | &lt;CFTDIRINSTALL&gt;/distrib/tf/tables/iso_etoa.tbl  | Converts French EBCDIC to Latin ASCII  |
-| &lt;CFTDIRINSTALL&gt;/distrib/tf/tables/std_atoe.tbl  | Converts IBM- PC850 to French EBCDIC  |
-| &lt;CFTDIRINSTALL&gt;/distrib/tf/tables/std_etoa.tbl  | Converts French EBCDIC to IBM- PC850  |
+| &lt;CFTDIRINSTALL&gt;/distrib/tf/tables/std_atoe.tbl  | Converts IBM-PC850 to French EBCDIC  |
+| &lt;CFTDIRINSTALL&gt;/distrib/tf/tables/std_etoa.tbl  | Converts French EBCDIC to IBM-PC850  |
 

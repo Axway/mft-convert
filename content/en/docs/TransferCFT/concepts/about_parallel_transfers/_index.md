@@ -2,7 +2,7 @@
 title: "Configure simultaneous transfers"
 linkTitle: "Configure simultaneous transfers"
 weight: 210
---- The maximum number of simultaneous transfers in Transfer CFT is managed by a combination of global parameters, partner settings, and the license key.
+---The maximum number of simultaneous transfers in Transfer CFT is managed by a combination of global parameters, partner settings, and the license key.
 
 The objective of this section is to help you understand the global and partner parameters, and provide configuration recommendations in order to assist you in optimizing your file transfer volume.
 
@@ -12,12 +12,12 @@ Contents include:
 - [Client and server recommendations](maxtrans_use_cases) that demonstrate settings for a high volume of transfers
 - [Connection / maximum transfer](connection_maxtrans_troubleshoot) scenarios with output
 - [Session related scenarios](session_troubleshooting) with output
-- [Multi- node recommendations](multi_node_simultaneous_transfers)
+- [Multi-node recommendations](multi_node_simultaneous_transfers)
 - [FAQ and troubleshooting](faq)
 
 > **Note**
 >
-> Some parameters benefit from further tuning if using a multi node architecture. See also Multi- node partner configuration.
+> Some parameters benefit from further tuning if using a multi node architecture. See also Multi-node partner configuration.
 
 <span id="Global"></span>
 
@@ -47,7 +47,7 @@ CFTNET id=NET0, maxcnx=10CFTNET id=NET1, maxcnx=20
 
 A session is a conversation between two partners. The session occurs at the protocol level and executes over a network connection. A session is established at a certain point in time and then is later disconnected.
 
-An established session is either active or inactive. An active session means that a transfer is using it. An inactive session remains established during a wait timeout; this is referred to as *session persistence*. After the timed- out session is closed, its associated connection is automatically closed.
+An established session is either active or inactive. An active session means that a transfer is using it. An inactive session remains established during a wait timeout; this is referred to as *session persistence*. After the timed-out session is closed, its associated connection is automatically closed.
 
 You can also set the maximum number of simultaneous sessions using the UCONF parameter `cft.server.max_session`. The default value is 0  and the maximum number of supported simultaneous transfer is 2000 (2 x 1000).
 
@@ -117,7 +117,7 @@ Key information :
 \*
 \* type = DATE
 \* expire = 2015/11/14
-\* sysname = linux- x86- 64
+\* sysname = linux-x86-64
 \* Nb Transfers = 64
 \* Nb CPU = 4
 \* Nb Partners = Max
@@ -157,7 +157,7 @@ CFTPARM ID=IDPARM0,TRANTASK=n, ...
 
 ##### Example
 
-The following parameter values can create a maximum of 2 file access tasks. Transfers 1 through 4 are assigned to the first task, and the next transfer triggers a new file access task that handles transfers 5- 8 (as there are four transfers for each task). Any additional transfers are balanced between the two existing tasks. (This means that all new concurrent transfers are put on hold until resources become available.)
+The following parameter values can create a maximum of 2 file access tasks. Transfers 1 through 4 are assigned to the first task, and the next transfer triggers a new file access task that handles transfers 5-8 (as there are four transfers for each task). Any additional transfers are balanced between the two existing tasks. (This means that all new concurrent transfers are put on hold until resources become available.)
 
 ```
 MAXTRANS = 14,MAXTASK = 2,
@@ -220,11 +220,13 @@ CFTTCP ID =<partner1_id>, HOST=<partner1_URL>, CNXIN=2, CNXOUT=3, CNXINOUT=4, ..
 
 When using a stand alone Transfer CFT to another stand alone Transfer CFT (or other PeSIT application), the recommendations for a heavily loaded configuration should remain symmetrical.
 
+
 | Stand alone  | Stand alone  |
 | --- | --- |
 | CNXOUT=(Partner's CNXIN) | CNXIN = (Partner’s CNXOUT)  |
 | CNXIN=(Partner’s CNXOUT) | CNXOUT=(Partner’s CNXIN)  |
 | CNXINOUT=CNXIN+CNXOUT | CNXINOUT=CNXIN+CNXOUT  |
+
 
 #### RETRYW scheduling parameter
 

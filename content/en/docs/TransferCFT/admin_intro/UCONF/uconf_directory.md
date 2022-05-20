@@ -2,7 +2,7 @@
 title: "UCONF parameters"
 linkTitle: "UCONF parameters"
 weight: 260
---- You can download this page as a PDF here.
+---You can download this page as a PDF here.
 
 ****Viewing the table****
 
@@ -46,6 +46,7 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 >
 > By default, all UCONF parameters are static and require a restart. Only parameters with the RECONFIG or IRECONFIG flags are dynamic; for these dynamic parameters only you can use the reconfig command and no restart is required.
 
+
 | Name | Description | Type | Restriction | Default Value | Platform | Flags |
 | --- | --- | --- | --- | --- | --- | --- |
 | acceleration.enable | Enables the acceleration. | bool Yes No |   | No | "NT, UNIX" | EXPERT |
@@ -59,7 +60,7 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | acceleration.udt.&lt;logical_name&gt;.buffer_size | Internal UDT buffer size in bytes. | int |   | 10240000 | ALL |   |
 | acceleration.udt.&lt;logical_name&gt;.fc | Maximum window size in packets. | int |   | 25600 | ALL |   |
 | acceleration.udt.&lt;logical_name&gt;.linger | Linger time on close() call. | int |   | 180 | ALL |   |
-| acceleration.udt.&lt;logical_name&gt;.max_bw | Maximum bandwidth that one single UDT connection can use in bytes/second. - 1 means unlimited. | int |   | - 1 | ALL |   |
+| acceleration.udt.&lt;logical_name&gt;.max_bw | Maximum bandwidth that one single UDT connection can use in bytes/second. -1 means unlimited. | int |   | -1 | ALL |   |
 | acceleration.udt.&lt;logical_name&gt;.mss | Maximum packet size in bytes. | int |   | 1500 | ALL |   |
 | acceleration.udt.&lt;logical_name&gt;.rcv_buf | UDT receiver buffer size limit in bytes. | int |   | 10240000 | ALL |   |
 | acceleration.udt.&lt;logical_name&gt;.snd_buf | UDT sender buffer size limit in bytes. | int |   | 10240000 | ALL |   |
@@ -72,7 +73,7 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | am.exit.libpath | Location of Access Management exit library. | fname | "min length:0, max length:512" | "none (not MVS, not VMS) &#124; CFTDXAM (MVS) &#124; CFT_EXE:AM_EXIT.EXE (VMS)" | ALL |   |
 | am.internal.group_database | Group database where group members are defined. | string |   | 'system' (not MVS) &#124; 'file' (MVS) | "NT, UNIX, MVS, OS400, VMS" |   |
 | am.internal.group_database.fname | The file where group members are defined. Used only when am.internal.group_database equals file. | fname | "min length:0, max length:512" | $(cft.mvs.group_fname) (MVS) | "MVS, VMS" |   |
-| am.internal.libpath | Location of Private Access Management exit library. Do not modify this parameter! | fname | "min length:0, max length:512" | $(cft.install_dir)/lib/libcftpexam.so (UNIX) &#124; $(cft.install_dir)/lib/libcftpexam.a (AIX) &#124; $(cft.install_dir)/lib/libcftpexam.sl (HPUX- PARISC) &#124; $(cft.install_dir)/bin/cftpexam.dll (NT) &#124; CFTDXIN (MVS) &#124; LIBCFTPEXA (OS400) &#124; CFT_EXE:AMTYPE_INTERNAL.EXE (VMS) | "NT, UNIX, MVS, OS400, VMS" | EXPERT |
+| am.internal.libpath | Location of Private Access Management exit library. Do not modify this parameter! | fname | "min length:0, max length:512" | $(cft.install_dir)/lib/libcftpexam.so (UNIX) &#124; $(cft.install_dir)/lib/libcftpexam.a (AIX) &#124; $(cft.install_dir)/lib/libcftpexam.sl (HPUX-PARISC) &#124; $(cft.install_dir)/bin/cftpexam.dll (NT) &#124; CFTDXIN (MVS) &#124; LIBCFTPEXA (OS400) &#124; CFT_EXE:AMTYPE_INTERNAL.EXE (VMS) | "NT, UNIX, MVS, OS400, VMS" | EXPERT |
 | am.internal.persistence_timeout | Delay in seconds between updating the list of groups that a user belongs to. | int |   | 300 | "NT, UNIX, MVS, OS400, VMS" |   |
 | am.internal.role.admin | Admin role and groups mapping. This role enables you to perform all administrative tasks. | string list |   | ADMIN (MVS) | "NT, UNIX, MVS, OS400, VMS" |   |
 | am.internal.role.application | Application role and groups mapping. This role enables application to send transfers. | string list |   | TRANSFER (MVS) | "NT, UNIX, MVS, OS400, VMS" |   |
@@ -107,22 +108,22 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | am.persistency.fname | "Persistent users and roles cache file name for AM with CG, Keycloak, LDAP" | fname | "min length:0, max length:512" | "$(cft.runtime_dir)/data/CFTAMUR (not MVS, not OS400, not VMS) &#124; $(cft.runtime_dir)DATA]CFTAMUR (VMS) &#124; $(cft.runtime_dir)CFTAMUR (MVS) &#124; *LIBL/CFTAMUR (OS400)" | ALL |   |
 | am.saml.client_id | Value used as issuer on SAML requests. This should match the Identity Provider configuration. | string |   | '$(cft.instance_id)' | ALL |   |
 | am.saml.idp.cert_id | Identifier of the certificate (stored in the internal PKI base) used to verify the SAML Identity Provider server's signatures. | string |   | ' ' | ALL |   |
-| am.saml.idp.logout_service | Endpoint for SAML requests of type LogoutRequest (HTTP- Redirect binding).\ | string |   | '$(am.saml.idp.sign_on_service)' | ALL |   |
-| am.saml.idp.sign_on_service | Endpoint for SAML requests of type AuthnRequest (HTTP- Redirect binding).\ | string |   | ' ' | ALL |   |
+| am.saml.idp.logout_service | Endpoint for SAML requests of type LogoutRequest (HTTP-Redirect binding).\ | string |   | '$(am.saml.idp.sign_on_service)' | ALL |   |
+| am.saml.idp.sign_on_service | Endpoint for SAML requests of type AuthnRequest (HTTP-Redirect binding).\ | string |   | ' ' | ALL |   |
 | am.superuser | Users for which no CG AM rights check is done. | string list |   | $(am.passport.superuser) (not VMS) &#124; $(CFT$USER) (VMS) | ALL |   |
 | am.type | Access Management type used. | string | enum: none cft passport exit internal cg fc saml | 'none' | ALL |   |
 | aws.credentials | List of parameters for AWS. | string list |   |   | ALL |   |
-| aws.credentials.&lt;logical_name&gt;.access_key_id | "Access Key ID (a 20- character, alphanumeric sequence)." | string |   |   | ALL |   |
-| aws.credentials.&lt;logical_name&gt;.acl | ACL policy to apply on the created file while uploading a file to AWS. | string | enum: private public- read public- read- write authenticated- read aws- exec- read bucket- owner- read bucket- owner- full- control |   | ALL |   |
-| aws.credentials.&lt;logical_name&gt;.encryption_key_id | Key identifier to use for the SSE- KMS encryption. | passwd |   |   | ALL |   |
-| aws.credentials.&lt;logical_name&gt;.encryption_type | "Server side encryption type. If empty, there is no encryption." | string | enum: none sse- s3 sse- kms | none | ALL |   |
+| aws.credentials.&lt;logical_name&gt;.access_key_id | "Access Key ID (a 20-character, alphanumeric sequence)." | string |   |   | ALL |   |
+| aws.credentials.&lt;logical_name&gt;.acl | ACL policy to apply on the created file while uploading a file to AWS. | string | enum: private public-read public-read-write authenticated-read aws-exec-read bucket-owner-read bucket-owner-full-control |   | ALL |   |
+| aws.credentials.&lt;logical_name&gt;.encryption_key_id | Key identifier to use for the SSE-KMS encryption. | passwd |   |   | ALL |   |
+| aws.credentials.&lt;logical_name&gt;.encryption_type | "Server side encryption type. If empty, there is no encryption." | string | enum: none sse-s3 sse-kms | none | ALL |   |
 | aws.credentials.&lt;logical_name&gt;.proxy_host | Proxy IP address or FQDN. | string |   |   | ALL |   |
 | aws.credentials.&lt;logical_name&gt;.proxy_password | Proxy password. | passwd |   |   | ALL |   |
 | aws.credentials.&lt;logical_name&gt;.proxy_port | Proxy port. | int |   |   | ALL |   |
 | aws.credentials.&lt;logical_name&gt;.proxy_scheme | Proxy scheme to use. | string | enum: http https |   | ALL |   |
 | aws.credentials.&lt;logical_name&gt;.proxy_username | Proxy user name. | string |   |   | ALL |   |
 | aws.credentials.&lt;logical_name&gt;.region | "Region to use, overrides parsing result of WORKINGDIR and config/env settings." | string |   |   | ALL |   |
-| aws.credentials.&lt;logical_name&gt;.secret_access_key | Secret Access Key (a 40- character sequence). | passwd |   |   | ALL |   |
+| aws.credentials.&lt;logical_name&gt;.secret_access_key | Secret Access Key (a 40-character sequence). | passwd |   |   | ALL |   |
 | cft.accnt.enable_extended_byte_fields | Enables fields FBYTE_EXTENDED and NBYTE_EXTENDED (length=15) of the Accounting file. | bool No Yes |   | No | ALL |   |
 | cft.api.catalog.cache_size | Size of the catalog cache for API calls. | int |   | 20 | ALL |   |
 | cft.api.waitcat.scantime_scale | Scantime scale (1/n seconds). | int |   | 1 | ALL |   |
@@ -134,7 +135,7 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | cft.cftcat.auto_expand_max_size | Maximum size in record for automatic expansion. | int |   | 1000000 | ALL | RECONFIG |
 | cft.cftcat.auto_expand_percent | Expansion factor. | int |   | 0 | ALL | RECONFIG |
 | cft.cftcat.default_size | Default size in records used when creating a catalog with cftinit. | int |   | 10000 | ALL |   |
-| cft.cftcat.enable_deprecated_blknum | "Enables BLKNUM as a catalog management command parameter (LISTCAT, DELETE, START, etc.). Do not enable BLKNUM when using the multi- node feature." | bool No Yes |   | No | ALL |   |
+| cft.cftcat.enable_deprecated_blknum | "Enables BLKNUM as a catalog management command parameter (LISTCAT, DELETE, START, etc.). Do not enable BLKNUM when using the multi-node feature." | bool No Yes |   | No | ALL |   |
 | cft.cftcat.fname | Replaces the CFTCATA logical name. | fname | "min length:0, max length:512" | "$(cft.runtime.data_dir)cftcata (not VMS, not MVS) &#124; $(cft.runtime.data_dir)CFTCATA.REL (VMS) &#124; $(cft.runtime.data_dir)CATALOG (MVS)" | ALL |   |
 | cft.cftcom.default_size | Default size used when creating a COM file with cftinit. | int |   | 1000 | ALL |   |
 | cft.cftcom.fname | Overrides the CFTCOM logical name. | fname | "min length:0, max length:512" | "$(cft.runtime.data_dir)cftcom (not VMS, not MVS) &#124; $(cft.runtime.data_dir)cftcom.rel (VMS) &#124; $(cft.runtime.data_dir)COM (MVS)" | ALL |   |
@@ -157,28 +158,28 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | cft.client.cftcoms.ssl_id | Default identifier of CFTSSL client object used by CFTUTIL to connect to CFTCOMS server if the SSL parameter of the CONFIG command is not specified. | string |   | '' | ALL |   |
 | cft.default_idf.enable | Enables the default IDF to use when the transfer request IDF is not explicitly defined by a CFTRECV or CFTSEND command. | bool No Yes |   | Yes | ALL | RECONFIG |
 | cft.dirdepth | Lists subdirectory files. | bool Yes No |   | Yes | ALL | RECONFIG |
-| cft.fips.enable_compliance | Enables FIPS compliance (Yes/No). | bool Yes No |   | No | "not MVS, not VMS, not HPUX- PARISC- 64" |   |
-| cft.fips.libcrypto | OpenSSL libcrypto library location. | fname | "min length:0, max length:512" | $(cft.install_dir)/lib/libcrypto.so.1.0.0 (UNIX) &#124; $(cft.install_dir)/lib/libcrypto.a(libcrypto.so.1.0.0) (AIX) &#124; $(cft.install_dir)/lib/libcrypto.sl.1.0.0 (HPUX- PARISC) &#124; $(cft.install_dir)/bin/libeay32.dll (NT) | "not MVS, not VMS, not HPUX- PARISC- 64" | EXPERT |
+| cft.fips.enable_compliance | Enables FIPS compliance (Yes/No). | bool Yes No |   | No | "not MVS, not VMS, not HPUX-PARISC-64" |   |
+| cft.fips.libcrypto | OpenSSL libcrypto library location. | fname | "min length:0, max length:512" | $(cft.install_dir)/lib/libcrypto.so.1.0.0 (UNIX) &#124; $(cft.install_dir)/lib/libcrypto.a(libcrypto.so.1.0.0) (AIX) &#124; $(cft.install_dir)/lib/libcrypto.sl.1.0.0 (HPUX-PARISC) &#124; $(cft.install_dir)/bin/libeay32.dll (NT) | "not MVS, not VMS, not HPUX-PARISC-64" | EXPERT |
 | cft.full_hostname | Full hostname. | string |   | '$(cftfullhostname)' (VMS) | ALL |   |
-| cft.guardian.backup_processor | backup processor on which CFT is started (default - 1). | int | "min:- 1, max:15" | - 1 | HP_NONSTOP | EXPERT |
+| cft.guardian.backup_processor | backup processor on which CFT is started (default -1). | int | "min:-1, max:15" | -1 | HP_NONSTOP | EXPERT |
 | cft.guardian.cftwrk | Default Guardian pathname for TACL and Netbatch procedures. | string | "min length:0, max length:27" |   | HP_NONSTOP |   |
 | cft.guardian.collector | Collector | string |   |   | HP_NONSTOP |   |
 | cft.guardian.hometerm | CFT Home Terminal. | string | "min length:2, max length:35" |   | HP_NONSTOP | EXPERT |
 | cft.guardian.netbatch.attachment_set | Netbatch attachment set. | string | "min length:1, max length:8" | NBASCFTLI | HP_NONSTOP | EXPERT |
 | cft.guardian.netbatch.jobname_prefix | "Prefix for Netbatch JOB Name, Suffix composed of last characters of file created to contain the input TCAL statements." | string | "min length:0, max length:4" | ZBBT | HP_NONSTOP | EXPERT |
 | cft.guardian.netbatch.output | Netbatch output file (default $S.ABTZ). | string | "min length:3, max length:35" | '$S.#ABTZ' | HP_NONSTOP | EXPERT |
-| cft.guardian.netbatch.priority | Netbatch Run priority (default - 1). | int | "min:- 1, max:199" | 90 | HP_NONSTOP | EXPERT |
+| cft.guardian.netbatch.priority | Netbatch Run priority (default -1). | int | "min:-1, max:199" | 90 | HP_NONSTOP | EXPERT |
 | cft.guardian.netbatch.process | Netbatch process name. | string | "min length:2, max length:5" | $ZBAT | HP_NONSTOP | EXPERT |
 | cft.guardian.netbatch.selpri | Netbatch SELPRI (default 4). | int | "min:1, max:7" | 4 | HP_NONSTOP | EXPERT |
 | cft.guardian.nonstop | Enables NonStop mode (Yes/No). | bool Yes No |   | No | HP_NONSTOP |   |
-| cft.guardian.priority | CFT priority (default - 1). | int | "min:- 1, max:199" | - 1 | HP_NONSTOP | EXPERT |
+| cft.guardian.priority | CFT priority (default -1). | int | "min:-1, max:199" | -1 | HP_NONSTOP | EXPERT |
 | cft.guardian.process_name_prefix | Guardian Process name prefix (2 characters maximum). | string | "min length:0, max length:2" | LA | HP_NONSTOP |   |
-| cft.guardian.processor | processor on which CFT is started (default - 1). | int | "min:- 1, max:15" | - 1 | HP_NONSTOP | EXPERT |
-| cft.guardian.tacl.backup_processor | backup processor on which TACL is started (default - 1). | int |   | - 1 | HP_NONSTOP | EXPERT |
+| cft.guardian.processor | processor on which CFT is started (default -1). | int | "min:-1, max:15" | -1 | HP_NONSTOP | EXPERT |
+| cft.guardian.tacl.backup_processor | backup processor on which TACL is started (default -1). | int |   | -1 | HP_NONSTOP | EXPERT |
 | cft.guardian.tacl.hometerm | TACL Home Terminal. | string | "min length:2, max length:35" | $ZHOME | HP_NONSTOP | EXPERT |
 | cft.guardian.tacl.output | TACL output file (default $S.ABTT). | string | "min length:3, max length:35" | '$S.#ABTT' | HP_NONSTOP | EXPERT |
-| cft.guardian.tacl.priority | TCAL priority (default - 1). | int | "min:- 1, max:199" | 90 | HP_NONSTOP | EXPERT |
-| cft.guardian.tacl.processor | processor on which TACL is started (default - 1). | int |   | - 1 | HP_NONSTOP | EXPERT |
+| cft.guardian.tacl.priority | TCAL priority (default -1). | int | "min:-1, max:199" | 90 | HP_NONSTOP | EXPERT |
+| cft.guardian.tacl.processor | processor on which TACL is started (default -1). | int |   | -1 | HP_NONSTOP | EXPERT |
 | cft.guardian.tcpip_resolver_name | TCPIP alternate resolver file name. | string | "min length:0, max length:35" |   | HP_NONSTOP | EXPERT |
 | cft.icm.timestamp | Add a timestamp before CFTUTIL messages. | int |   | 0 | ALL |   |
 | cft.idparm | Default IDPARM used by Transfer CFT. | string |   | 'IDPARM0' | ALL |   |
@@ -203,31 +204,31 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | cft.jre.loader | Loads the JRE (Java Runtime Environment). | fname | "min length:0, max length:512" | $(cft.install_dir)/distrib/java/CFTJRE.jar | "NT, UNIX" | EXPERT |
 | cft.jre.pid_fname | File containing the JRE Process ID. | fname | "min length:0, max length:512" | $(cft.runtime.run_dir)jre.pid | "NT, UNIX, VMS" | EXPERT |
 | cft.jre.run.pid | JRE Process ID. | string |   | '1' | "NT, UNIX" | RUNTIME |
-| cft.jre.start_options | JRE start options. | string |   | "'- Xmx1024m - Dlog4j.configuration=conf/cft- log4j.properties - Dhttp.strictPostRedirect=true - Djdk.http.auth.tunneling.disabledSchemes=""""' (not NT) &#124; '- Xmx512m - Xrs - Dstdout_fname=run/cftjre.out - Dlog4j.configuration=conf/cft- log4j.properties - Dhttp.strictPostRedirect=true - Djdk.http.auth.tunneling.disabledSchemes=""""' (NT)" | "NT, UNIX" | EXPERT |
+| cft.jre.start_options | JRE start options. | string |   | "'-Xmx1024m -Dlog4j.configuration=conf/cft-log4j.properties -Dhttp.strictPostRedirect=true -Djdk.http.auth.tunneling.disabledSchemes=""""' (not NT) &#124; '-Xmx512m -Xrs -Dstdout_fname=run/cftjre.out -Dlog4j.configuration=conf/cft-log4j.properties -Dhttp.strictPostRedirect=true -Djdk.http.auth.tunneling.disabledSchemes=""""' (NT)" | "NT, UNIX" | EXPERT |
 | cft.listcat_compat | Condition if the default listcat format does or doesn't include phase and phasestep. | bool No Yes |   | No | ALL |   |
 | cft.multi_node.cftcom.dispatcher_policy | Used to dispatch transfers with HOLD state. | string | enum: round_robin node_affinity | 'round_robin' | ALL | EXPERT |
-| cft.multi_node.cftcom.lock_fname | Lock file for CFTCOM task in multi- node. | fname | "min length:0, max length:512" | $(cft.runtime.run_dir)cftcom.lck | not MVS | EXPERT |
+| cft.multi_node.cftcom.lock_fname | Lock file for CFTCOM task in multi-node. | fname | "min length:0, max length:512" | $(cft.runtime.run_dir)cftcom.lck | not MVS | EXPERT |
 | cft.multi_node.cftcom.lock_retry_delay | Delay in seconds for CFTMCOM (multinode master) lock retry delay. | int |   | $(cft.multi_node.lock_retry_delay) | ALL | EXPERT |
-| cft.multi_node.cftcron.lock_fname | Lock file for cronjobs scheduler task in multi- node. | fname | "min length:0, max length:512" | $(cft.runtime.run_dir)cftcron.lck | ALL | EXPERT |
+| cft.multi_node.cftcron.lock_fname | Lock file for cronjobs scheduler task in multi-node. | fname | "min length:0, max length:512" | $(cft.runtime.run_dir)cftcron.lck | ALL | EXPERT |
 | cft.multi_node.cftcron.lock_retry_delay | Delay in seconds for cftcron lock retry. | int |   | $(cft.multi_node.lock_retry_delay) | ALL | EXPERT |
-| cft.multi_node.cftdscan.lock_fname | Lock file for CFTDSCAN task in multi- node. | fname | "min length:0, max length:512" | $(cft.runtime_dir)/run/cftdscan.lck (not OS400) &#124; *LIBL/DSCLCK (OS400) &#124; $(cft.runtime_dir)run]cftdscan.lck (VMS) | not MVS | EXPERT |
+| cft.multi_node.cftdscan.lock_fname | Lock file for CFTDSCAN task in multi-node. | fname | "min length:0, max length:512" | $(cft.runtime_dir)/run/cftdscan.lck (not OS400) &#124; *LIBL/DSCLCK (OS400) &#124; $(cft.runtime_dir)run]cftdscan.lck (VMS) | not MVS | EXPERT |
 | cft.multi_node.connection_retry_delay | Delay in seconds for connection retry. | int |   | 10 | ALL | EXPERT |
-| cft.multi_node.enable | Enables the multi- node architecture. | bool Yes No |   | No | ALL |   |
+| cft.multi_node.enable | Enables the multi-node architecture. | bool Yes No |   | No | ALL |   |
 | cft.multi_node.enable_spurious_log_messages | "If Yes, shows all log messages for all nodes, even if it is not relevant for each one" | bool Yes No |   | No | ALL | EXPERT |
-| cft.multi_node.hostnames | List of hosts that handle the multi- node architecture. | string list |   |   | ALL | EXPERT |
-| cft.multi_node.hostnames.&lt;logical_name&gt;.control_port | Control port of (copsmng) in multi- node. | int |   |   | ALL |   |
-| cft.multi_node.hostnames.&lt;logical_name&gt;.copcod_local_port | Connection dispatcher local port in multi- node. | int |   |   | ALL |   |
-| cft.multi_node.hostnames.&lt;logical_name&gt;.copui_client_socket | Windows socket passing for UI server (copui) in multi- node. | int |   |   | ALL |   |
-| cft.multi_node.hostnames.&lt;logical_name&gt;.copui_client_ssl_socket | Windows ssl socket passing for UI server (copui) in multi- node. | int |   |   | ALL |   |
-| cft.multi_node.hostnames.&lt;logical_name&gt;.copui_notification_port | Notification port for UI server (copui) in multi- node. | int |   |   | ALL |   |
-| cft.multi_node.hostnames.&lt;logical_name&gt;.copui_pid | copui Process ID in multi- node. | string |   |   | ALL |   |
+| cft.multi_node.hostnames | List of hosts that handle the multi-node architecture. | string list |   |   | ALL | EXPERT |
+| cft.multi_node.hostnames.&lt;logical_name&gt;.control_port | Control port of (copsmng) in multi-node. | int |   |   | ALL |   |
+| cft.multi_node.hostnames.&lt;logical_name&gt;.copcod_local_port | Connection dispatcher local port in multi-node. | int |   |   | ALL |   |
+| cft.multi_node.hostnames.&lt;logical_name&gt;.copui_client_socket | Windows socket passing for UI server (copui) in multi-node. | int |   |   | ALL |   |
+| cft.multi_node.hostnames.&lt;logical_name&gt;.copui_client_ssl_socket | Windows ssl socket passing for UI server (copui) in multi-node. | int |   |   | ALL |   |
+| cft.multi_node.hostnames.&lt;logical_name&gt;.copui_notification_port | Notification port for UI server (copui) in multi-node. | int |   |   | ALL |   |
+| cft.multi_node.hostnames.&lt;logical_name&gt;.copui_pid | copui Process ID in multi-node. | string |   |   | ALL |   |
 | cft.multi_node.hostnames.&lt;logical_name&gt;.host | Address (FQDN or IP address) of the host. | string |   |   | ALL |   |
-| cft.multi_node.hostnames.&lt;logical_name&gt;.node_manager_local_port | Node manager local port of (copnman) in multi- node. | int |   |   | ALL |   |
-| cft.multi_node.hostnames.&lt;logical_name&gt;.node_manager_port | Node manager port of (copnman) in multi- node. | int |   |   | ALL |   |
-| cft.multi_node.hostnames.&lt;logical_name&gt;.pid | Copilot Process ID (copsmng) in multi- node. | string |   |   | ALL |   |
-| cft.multi_node.hostnames.&lt;logical_name&gt;.state | Copilot (copsmng) status in multi- node. | string | enum: INITIALIZING STARTING RUNNING STOPPING STOPPED ERROR | STOPPED | ALL |   |
+| cft.multi_node.hostnames.&lt;logical_name&gt;.node_manager_local_port | Node manager local port of (copnman) in multi-node. | int |   |   | ALL |   |
+| cft.multi_node.hostnames.&lt;logical_name&gt;.node_manager_port | Node manager port of (copnman) in multi-node. | int |   |   | ALL |   |
+| cft.multi_node.hostnames.&lt;logical_name&gt;.pid | Copilot Process ID (copsmng) in multi-node. | string |   |   | ALL |   |
+| cft.multi_node.hostnames.&lt;logical_name&gt;.state | Copilot (copsmng) status in multi-node. | string | enum: INITIALIZING STARTING RUNNING STOPPING STOPPED ERROR | STOPPED | ALL |   |
 | cft.multi_node.hostnames.&lt;logical_name&gt;.state_timestamp | Timestamp of the last Copilot status update. | string |   |   | ALL |   |
-| cft.multi_node.listen_port_range | "Defines a port range to use for listening points dedicated to inter- node communication in multi- node. The syntax is startingPort- EndingPort. For example '33000- 33100'. If empty, the default Operating System port numbers range is used." | string |   | '' | ALL |   |
+| cft.multi_node.listen_port_range | "Defines a port range to use for listening points dedicated to inter-node communication in multi-node. The syntax is startingPort-EndingPort. For example '33000-33100'. If empty, the default Operating System port numbers range is used." | string |   | '' | ALL |   |
 | cft.multi_node.load_balancer.host | Load balancer address (FQDN or IP address) used by Central Governance to connect to Transfer CFT UI Server. | string |   | '' | ALL |   |
 | cft.multi_node.load_balancer.port | Load balancer port used by Central Governance to connect to Transfer CFT UI Server port dedicated to Central Governance (default 1767). | int |   |   | ALL |   |
 | cft.multi_node.lock_retry_delay | Delay in seconds for cftcron and CFTMCOM (multinode master) lock retry. | int |   | 20 | ALL | EXPERT |
@@ -242,7 +243,7 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | cft.multi_node.nodes.&lt;itemNumber&gt;.jre_pid | JRE Process ID. | int |   |   | ALL |   |
 | cft.multi_node.nodes.&lt;itemNumber&gt;.msg | Message describing the current startup or shutdown process. | string |   |   | ALL |   |
 | cft.multi_node.nodes.&lt;itemNumber&gt;.nodestate | Node status. | string | enum: DISABLED ENABLED_STOPPED ENABLED_STARTED | DISABLED | ALL |   |
-| cft.multi_node.nodes.&lt;itemNumber&gt;.pid | CFTMAIN Process ID in multi- node. | string |   |   | ALL |   |
+| cft.multi_node.nodes.&lt;itemNumber&gt;.pid | CFTMAIN Process ID in multi-node. | string |   |   | ALL |   |
 | cft.multi_node.nodes.&lt;itemNumber&gt;.progress | Indicates the startup or shutdown progress expressed as a percentage. | int |   |   | ALL |   |
 | cft.multi_node.nodes.&lt;itemNumber&gt;.prx_port | Internal listening port of a node. | int |   |   | ALL |   |
 | cft.multi_node.nodes.&lt;itemNumber&gt;.starting | Flag set when CFT is starting. | bool Yes No |   | No | ALL |   |
@@ -250,20 +251,20 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | cft.multi_node.nodes.&lt;itemNumber&gt;.state_timestamp | Timestamp of the last Transfer CFT status update. | string |   |   | ALL |   |
 | cft.multi_node.nodes.&lt;itemNumber&gt;.stopping | Flag set when CFT is stopping. | bool Yes No |   | No | ALL |   |
 | cft.multi_node.policy_fname | "*(*) full name, *(#) node id" | string  |   | '*(*).N*(#)' (MVS) | ALL | EXPERT |
-| cft.multi_node.registration.lock_fname | Lock file for registration task to Central Governance in multi- node. | fname | "min length:0, max length:512" | $(cft.runtime.run_dir)regist.lck | ALL | EXPERT |
+| cft.multi_node.registration.lock_fname | Lock file for registration task to Central Governance in multi-node. | fname | "min length:0, max length:512" | $(cft.runtime.run_dir)regist.lck | ALL | EXPERT |
 | cft.multi_node.shared.filesystem.type | Used to select appropriate consistency enforcement strategy. | string | enum: unknown posix nfs cifs | 'unknown' | ALL | EXPERT |
 | cft.multi_node.sharedidt.enable | Use global IDT calculation method. | bool Yes No |   | No | ALL | EXPERT |
-| cft.multi_node.sharedidt.fname | Shared file for global IDT calculation in multi- node. | fname | "min length:0, max length:512" | $(cft.runtime.data_dir)cftsidt | "NT, UNIX, MVS, OS400" | EXPERT |
+| cft.multi_node.sharedidt.fname | Shared file for global IDT calculation in multi-node. | fname | "min length:0, max length:512" | $(cft.runtime.data_dir)cftsidt | "NT, UNIX, MVS, OS400" | EXPERT |
 | cft.multi_node.start_node.proc_fname | Procedure to start Transfer CFT nodes. | fname | "min length:0, max length:512" | $(cft.runtime_dir)INSTALL(MNRMON) | MVS | EXPERT |
 | cft.multi_node.start_node.user | Userid used to start Transfer CFT nodes (lib APF). | string |   | ' ' | MVS | EXPERT |
 | cft.multi_node.transfer_recovery_retry_delay | Delay in seconds for transfer recovery retry. | int |   | 20 | ALL | EXPERT |
 | cft.multi_node.transfer_recovery_timeout | Timeout in seconds for the transfer recovery process. | int |   | 30 | ALL | EXPERT |
 | cft.mvs.check_exec | "Control procedures submitted Yes:'/', Value:'//* EXEC CFT'." | string | enum: no yes value | 'no' | MVS |   |
-| cft.mvs.copilot.check_apf | YES indicates Copilot server must be APF- authorized to start. | bool Yes No |   | No | MVS | EXPERT |
-| cft.mvs.monitor.check_apf | YES indicates Transfer CFT must be APF- authorized to start. | bool Yes No |   | No | MVS | EXPERT |
-| cft.mvs.multi_node.monitor.arm | Forces REGISTER to ARM in multi- node (if ARM=YES in SGINSTAL). | bool Yes No |   | No | MVS | EXPERT |
-| cft.mvs.sginstal.allnext | The % factor applied to the secondary allocation when creating a multi- volume file. | int | "min:1, max:255" | 100 | MVS | EXPERT |
-| cft.mvs.sginstal.allone | The % factor applied to the primary allocation computed to create a multi- volume file. | int | "min:1, max:255" | 100 | MVS | EXPERT |
+| cft.mvs.copilot.check_apf | YES indicates Copilot server must be APF-authorized to start. | bool Yes No |   | No | MVS | EXPERT |
+| cft.mvs.monitor.check_apf | YES indicates Transfer CFT must be APF-authorized to start. | bool Yes No |   | No | MVS | EXPERT |
+| cft.mvs.multi_node.monitor.arm | Forces REGISTER to ARM in multi-node (if ARM=YES in SGINSTAL). | bool Yes No |   | No | MVS | EXPERT |
+| cft.mvs.sginstal.allnext | The % factor applied to the secondary allocation when creating a multi-volume file. | int | "min:1, max:255" | 100 | MVS | EXPERT |
+| cft.mvs.sginstal.allone | The % factor applied to the primary allocation computed to create a multi-volume file. | int | "min:1, max:255" | 100 | MVS | EXPERT |
 | cft.mvs.sginstal.allprim | The % factor applied to the primary allocation computed to create a single volume file. | int | "min:1, max:255" | 100 | MVS | EXPERT |
 | cft.mvs.sginstal.allsec | The % of the primary space used as the secondary allocation when creating a single volume file. | int | "min:1, max:255" | 10 | MVS | EXPERT |
 | cft.mvs.sginstal.arm | Support of the Automatic Restart Manager. | bool Yes No |   | Yes | MVS | EXPERT |
@@ -294,7 +295,7 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | cft.mvs.sginstal.tape | Option to manage support tape files. | string | enum: notsup update output | 'UPDATE' | MVS | EXPERT |
 | cft.mvs.sginstal.trace | Transfer CFT internal trace size (in KB). | int | "min:4, max:16383" | 128 | MVS | EXPERT |
 | cft.mvs.sginstal.tsoedit | File support with sequence number in columns 73 to 80. | bool Yes No |   | No | MVS | EXPERT |
-| cft.mvs.sginstal.volnum | The maximum number of volumes in a multi- volume allocation. | int | "min:1, max:127" | 20 | MVS | EXPERT |
+| cft.mvs.sginstal.volnum | The maximum number of volumes in a multi-volume allocation. | int | "min:1, max:127" | 20 | MVS | EXPERT |
 | cft.mvs.sginstal.vsamsufs | "Suffix for the VSAM (ESDS, KSDS) DATA and INDEX components. (SHORT for .D and .I (default), LONG for .DATA and .INDEX)." | string | enum: SHORT LONG | 'SHORT' | MVS | EXPERT |
 | cft.nt.cftw_display_log_messages | Display CFTLOG instead of CFTMAIN in CFTW. | bool Yes No |   | Yes | NT |   |
 | cft.nt.cftw_trcfilename | CFTW trace. | fname | "min length:0, max length:512" | $(cft.runtime.run_dir)cftw.trc | NT |   |
@@ -309,18 +310,18 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | cft.probes.history_size | Number of probe items in the history for each time class. | int |   | 20 | ALL | RECONFIG |
 | cft.probes.periodicity | Time interval between the probe samples in seconds. | int |   | 60 | ALL | RECONFIG |
 | cft.probes.time_classes | "List of history time classes: the default is 1 second, 10 seconds, 1 minute, 10 minutes..." | string |   | 1 10 60 600 3600 21600 86400 604800 | ALL | RECONFIG |
-| cft.purge.background_on_start | Defines if the start- up purge is run in background mode. | bool Yes No |   | Yes | ALL |   |
-| cft.purge.enable_on_start | Defines if the purge must be run at start- up. | bool Yes No |   | Yes | ALL |   |
+| cft.purge.background_on_start | Defines if the start-up purge is run in background mode. | bool Yes No |   | Yes | ALL |   |
+| cft.purge.enable_on_start | Defines if the purge must be run at start-up. | bool Yes No |   | Yes | ALL |   |
 | cft.purge.periodicity | "Time interval in days (x or xD), in hours (xH) or in minutes (xM) between two automatic purges of entries in the transfers catalog." | string |   | '0' | ALL | RECONFIG |
 | cft.purge.quantity | Number of transfers to delete in one step. | int |   | 10 | ALL | RECONFIG |
-| cft.purge.rh | "The amount of time in days (x or xD), in hours (xH) or in minutes (xM) to keep HOLD receiver transfers before purging. If not set to - 1, overrides the RH parameter of the CFTCAT object." | string |   | '- 1' | ALL | RECONFIG |
-| cft.purge.rt | "The amount of time in days (x or xD), in hours (xH) or in minutes (xM) to keep TERMINATED receiver transfers before purging. If not set to - 1, overrides the RT parameter of the CFTCAT object." | string |   | '- 1' | ALL | RECONFIG |
-| cft.purge.rx | "The amount of time in days (x or xD), in hours (xH) or in minutes (xM) to keep DONE receiver transfers before purging. If not set to - 1, overrides the RX parameter of the CFTCAT object." | string |   | '- 1' | ALL | RECONFIG |
-| cft.purge.ry | "The amount of time in days (x or xD), in hours (xH) or in minutes (xM) to keep POSTPROCESSING receiver transfers before purging. If not set to - 1, overrides the RY parameter of the CFTCAT object." | string |   | '- 1' | ALL | RECONFIG |
-| cft.purge.sh | "The amount of time in days (x or xD), in hours (xH) or in minutes (xM) to keep HOLD sender transfers before purging. If not set to - 1, overrides the SH parameter of the CFTCAT object." | string |   | '- 1' | ALL | RECONFIG |
-| cft.purge.st | "The amount of time in days (x or xD), in hours (xH) or in minutes (xM) to keep TERMINATED sender transfers before purging. If not set to - 1, overrides the ST parameter of the CFTCAT object." | string |   | '- 1' | ALL | RECONFIG |
-| cft.purge.sx | "The amount of time in days (x or xD), in hours (xH) or in minutes (xM) to keep DONE sender transfers before purging. If not set to - 1, overrides the SX parameter of the CFTCAT object." | string |   | '- 1' | ALL | RECONFIG |
-| cft.purge.sy | "The amount of time in days (x or xD), in hours (xH) or in minutes (xM) to keep POSTPROCESSING sender transfers before purging. If not set to - 1, overrides the SY parameter of the CFTCAT object." | string |   | '- 1' | ALL | RECONFIG |
+| cft.purge.rh | "The amount of time in days (x or xD), in hours (xH) or in minutes (xM) to keep HOLD receiver transfers before purging. If not set to -1, overrides the RH parameter of the CFTCAT object." | string |   | '-1' | ALL | RECONFIG |
+| cft.purge.rt | "The amount of time in days (x or xD), in hours (xH) or in minutes (xM) to keep TERMINATED receiver transfers before purging. If not set to -1, overrides the RT parameter of the CFTCAT object." | string |   | '-1' | ALL | RECONFIG |
+| cft.purge.rx | "The amount of time in days (x or xD), in hours (xH) or in minutes (xM) to keep DONE receiver transfers before purging. If not set to -1, overrides the RX parameter of the CFTCAT object." | string |   | '-1' | ALL | RECONFIG |
+| cft.purge.ry | "The amount of time in days (x or xD), in hours (xH) or in minutes (xM) to keep POSTPROCESSING receiver transfers before purging. If not set to -1, overrides the RY parameter of the CFTCAT object." | string |   | '-1' | ALL | RECONFIG |
+| cft.purge.sh | "The amount of time in days (x or xD), in hours (xH) or in minutes (xM) to keep HOLD sender transfers before purging. If not set to -1, overrides the SH parameter of the CFTCAT object." | string |   | '-1' | ALL | RECONFIG |
+| cft.purge.st | "The amount of time in days (x or xD), in hours (xH) or in minutes (xM) to keep TERMINATED sender transfers before purging. If not set to -1, overrides the ST parameter of the CFTCAT object." | string |   | '-1' | ALL | RECONFIG |
+| cft.purge.sx | "The amount of time in days (x or xD), in hours (xH) or in minutes (xM) to keep DONE sender transfers before purging. If not set to -1, overrides the SX parameter of the CFTCAT object." | string |   | '-1' | ALL | RECONFIG |
+| cft.purge.sy | "The amount of time in days (x or xD), in hours (xH) or in minutes (xM) to keep POSTPROCESSING sender transfers before purging. If not set to -1, overrides the SY parameter of the CFTCAT object." | string |   | '-1' | ALL | RECONFIG |
 | cft.readline.enable | Enables readline history for CFTUTIL | bool Yes No |   | Yes | "UNIX, NT" |   |
 | cft.readline.history_fname | Readline history file. | fname | "min length:0, max length:512" | $(HOME)/.cft_history (UNIX) &#124; %APPDATA%\cft\CftutilHistory.txt (NT) | "UNIX, NT" |   |
 | cft.readline.history_size | Readline history size. | int |   | 500 | "UNIX, NT" |   |
@@ -355,18 +356,18 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | cft.secure_open_mode | Refuse transfer in open mode when fname contains '\..\' or '/../' after substitution. | bool No Yes |   | No | ALL | EXPERT RECONFIG |
 | cft.seed.enable_internal | Enables internal randomized for SSL SEED. | bool Yes No |   | No (not OS400) &#124; Yes (OS400) | not MVS | EXPERT |
 | cft.server.authentication_method | Server Authentication method (used by COMS and RPASSWD/SPASSWD). | string |   | 'none' | ALL |   |
-| cft.server.bandwidth.cos | Number of class- of- service. | int |   | 1 | ALL | RECONFIG |
+| cft.server.bandwidth.cos | Number of class-of-service. | int |   | 1 | ALL | RECONFIG |
 | cft.server.bandwidth.cos.0 | #ERROR | #ERROR |   |   | ALL |   |
-| cft.server.bandwidth.cos.&lt;itemNumber&gt;.comment | User comment that describes the class- of- service. | string |   |   | ALL |   |
-| cft.server.bandwidth.cos.&lt;itemNumber&gt;.max_rate_in | Maximum rate in KBytes of incoming data for that class- of- service. - 1 means unlimited. | int |   | - 1 | ALL |   |
-| cft.server.bandwidth.cos.&lt;itemNumber&gt;.max_rate_out | Maximum rate in KBytes of outgoing data for that class- of- service. - 1 means unlimited. | int |   | - 1 | ALL |   |
-| cft.server.bandwidth.cos.&lt;itemNumber&gt;.parent | Parent class- of- service. | int |   | 0 | ALL |   |
-| cft.server.bandwidth.cos.&lt;itemNumber&gt;.session_max_rate_in | Maximum rate in KBytes of incoming data for sessions under that class- of- service. - 1 means unlimited. | int |   | - 1 | ALL |   |
-| cft.server.bandwidth.cos.&lt;itemNumber&gt;.session_max_rate_out | Maximum rate in KBytes of outgoing data for sessions under that class- of- service. - 1 means unlimited. | int |   | - 1 | ALL |   |
-| cft.server.bandwidth.cos.&lt;itemNumber&gt;.weight_in | Use to compute the nominal rate of incoming data for this class of service. - 1 means unlimited. | int |   | - 1 | ALL |   |
-| cft.server.bandwidth.cos.&lt;itemNumber&gt;.weight_out | Use to compute the nominal rate of outgoing data for this class of service. - 1 means unlimited. | int |   | - 1 | ALL |   |
-| cft.server.bandwidth.cos_requester_default | Default class- of- service for requester mode transfers. | int |   | 0 | ALL | RECONFIG |
-| cft.server.bandwidth.cos_server_default | Default class- of- service for server mode transfers. | int |   | 0 | ALL | RECONFIG |
+| cft.server.bandwidth.cos.&lt;itemNumber&gt;.comment | User comment that describes the class-of-service. | string |   |   | ALL |   |
+| cft.server.bandwidth.cos.&lt;itemNumber&gt;.max_rate_in | Maximum rate in KBytes of incoming data for that class-of-service. -1 means unlimited. | int |   | -1 | ALL |   |
+| cft.server.bandwidth.cos.&lt;itemNumber&gt;.max_rate_out | Maximum rate in KBytes of outgoing data for that class-of-service. -1 means unlimited. | int |   | -1 | ALL |   |
+| cft.server.bandwidth.cos.&lt;itemNumber&gt;.parent | Parent class-of-service. | int |   | 0 | ALL |   |
+| cft.server.bandwidth.cos.&lt;itemNumber&gt;.session_max_rate_in | Maximum rate in KBytes of incoming data for sessions under that class-of-service. -1 means unlimited. | int |   | -1 | ALL |   |
+| cft.server.bandwidth.cos.&lt;itemNumber&gt;.session_max_rate_out | Maximum rate in KBytes of outgoing data for sessions under that class-of-service. -1 means unlimited. | int |   | -1 | ALL |   |
+| cft.server.bandwidth.cos.&lt;itemNumber&gt;.weight_in | Use to compute the nominal rate of incoming data for this class of service. -1 means unlimited. | int |   | -1 | ALL |   |
+| cft.server.bandwidth.cos.&lt;itemNumber&gt;.weight_out | Use to compute the nominal rate of outgoing data for this class of service. -1 means unlimited. | int |   | -1 | ALL |   |
+| cft.server.bandwidth.cos_requester_default | Default class-of-service for requester mode transfers. | int |   | 0 | ALL | RECONFIG |
+| cft.server.bandwidth.cos_server_default | Default class-of-service for server mode transfers. | int |   | 0 | ALL | RECONFIG |
 | cft.server.bandwidth.delay | Bandwidth control granularity (in microsecond) : the amount of time between refreshing token bucket. | int |   | 1000000 | ALL | EXPERT RECONFIG |
 | cft.server.bandwidth.enable | Enables the network bandwidth used for incoming and outgoing data in flows. | bool No Yes |   | No | ALL | RECONFIG |
 | cft.server.bandwidth.enable_borrowing | Enables bandwidth borrowing (passive borrowing). | bool Yes No |   | Yes | ALL | EXPERT RECONFIG |
@@ -386,7 +387,7 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | cft.server.log.exclude_filters | List of logical identifiers. Allows user to exclude messages from the CFTLOG according to matching filters. | string list |   | filter1 | ALL |   |
 | cft.server.log.exclude_filters.&lt;logical_name&gt;.comment | Free comment. | string |   |   | ALL |   |
 | cft.server.log.exclude_filters.&lt;logical_name&gt;.pattern | Pattern of the log message to exclude. The wildcard '*' can be used for the pattern. | string |   |   | ALL |   |
-| cft.server.max_processing_scripts | "Set to a non- zero integer to define the maximum number of processing scripts, other than EXECE, that can be executed in parallel. Zero (0) disables the feature." | int |   | 0 | ALL |   |
+| cft.server.max_processing_scripts | "Set to a non-zero integer to define the maximum number of processing scripts, other than EXECE, that can be executed in parallel. Zero (0) disables the feature." | int |   | 0 | ALL |   |
 | cft.server.max_session | Maximum number of simultaneous sessions. | int |   | 0 | ALL |   |
 | cft.server.maxtrans | Overrides the maxtrans of CFTPARM object (The maximum authorized number of transfers in parallel) parameter. | int |   | 0 (not UNIX) &#124; $(cft.unix.active_trans) (UNIX) | ALL |   |
 | cft.server.nrdp.conn_retry_delay_max | Retry delay max in seconds when network resource depletion is detected. | int | max:60 | 30 | ALL |   |
@@ -396,28 +397,28 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | cft.server.parm.cache_size | Cache size in number of entries for the PARM and PART databases. The zero value disables the cache. | int | "min:0, max:10000" | 5000 | ALL |   |
 | cft.server.parm.cache_timeout | "Timeout in seconds, that specifies the PARM/PART cache expiration. The zero value disables the expiration." | int | "min:0, max:86400" | 60 | ALL |   |
 | cft.server.processing_scripts_variables_blacklist | "POSIX Regular Extended expression that defines forbidden characters. These characters should not be used in symbolic variables, \" | string |   | '`&#124;\$\(&#124;;&#124;&amp;&#124;\&#124;' (UNIX) &#124; '&amp;' (NT) | "UNIX, NT" |   |
-| cft.server.read_buffer_size | "Read buffer size for transferred sequential files (- 1: Auto, 0: no buffer, n: buffer size)." | int |   | - 1 | "NT, UNIX, OS400" | EXPERT IRECONFIG |
+| cft.server.read_buffer_size | "Read buffer size for transferred sequential files (-1: Auto, 0: no buffer, n: buffer size)." | int |   | -1 | "NT, UNIX, OS400" | EXPERT IRECONFIG |
 | cft.server.send_abort_on_shut | Sends protocol ABORT on CFT shut if set to Yes. | bool Yes No |   | No | ALL | EXPERT |
 | cft.server.tcp.max_count_to_log_incoming_silent_connections | The maximum number of incoming silent connections to reach before displaying a message in the log. Enter 0 to disable. | int |   | 0 | ALL | RECONFIG |
 | cft.server.tcp.stat.log.interval | Interval in seconds between LOG of TCP statistics and counters. | int |   | 0 | ALL | EXPERT |
 | cft.server.transfer.max_files_listed | Maximum number of files when sending a group of files in heterogeneous mode or when listing the contents of a folder. A zero value disables the limit. | int | min:0 | 100000 | UNIX |   |
-| cft.server.transfer.raise_error_when_exec_not_found | "Raise an error when the defined procedure script is not found (i.e. the PHASESTEP is set to K, with DIAGI=155 and DIAGP=NO EXEC). This parameter is applicable to post- processing (EXEC and EXECE) and ack- processing (ACKEXEC)." | bool No Yes |   | Yes | ALL |   |
+| cft.server.transfer.raise_error_when_exec_not_found | "Raise an error when the defined procedure script is not found (i.e. the PHASESTEP is set to K, with DIAGI=155 and DIAGP=NO EXEC). This parameter is applicable to post-processing (EXEC and EXECE) and ack-processing (ACKEXEC)." | bool No Yes |   | Yes | ALL |   |
 | cft.server.transfer.rrename.max_retries | Maximum number of retries. | int | "min:1, max:65535" | 10 | ALL |   |
 | cft.server.transfer.rrename.retry_delay | Delay in seconds between two retries for rename. | int | "min:1, max:65535" | 60 | ALL |   |
 | cft.server.transfer.tcp.listen_backlog | Sets the TCP listen backlog size (value 0 means SO_MAXCONN). | int |   | 0 (not NT) &#124; 20 (NT) | ALL |   |
-| cft.server.write_buffer_size | "Write buffer size for transferred sequential files (- 1: Auto, 0: no buffer, n: buffer size)." | int |   | - 1 | "NT, UNIX, OS400" | EXPERT IRECONFIG |
+| cft.server.write_buffer_size | "Write buffer size for transferred sequential files (-1: Auto, 0: no buffer, n: buffer size)." | int |   | -1 | "NT, UNIX, OS400" | EXPERT IRECONFIG |
 | cft.short_hostname | Hostname. | string |   | '$(UCX$INET_HOST)' (VMS) | ALL |   |
 | cft.ssl.version_max | Maximum SSL version allowed by Transfer CFT monitor for business flows. | string | enum: ssl_3.0 tls_1.0 tls_1.1 tls_1.2 | 'tls_1.2' | ALL |   |
 | cft.ssl.version_min | Minimum SSL version allowed by Transfer CFT monitor for business flows. | string | enum: ssl_3.0 tls_1.0 tls_1.1 tls_1.2 | '$(ssl.version_min)' | ALL |   |
 | cft.state_compat | "Defines if backward compatibility is enabled, with either the use of phase and phasestep or the formerly used." | bool No Yes |   | No | ALL |   |
-| cft.support_dir | Directory where cft- support archives are stored. | dir | "min length:0, max length:512" | $(CFTDIRRUNTIME)/cft- support | "UNIX, NT" |   |
+| cft.support_dir | Directory where cft-support archives are stored. | dir | "min length:0, max length:512" | $(CFTDIRRUNTIME)/cft-support | "UNIX, NT" |   |
 | cft.synchrony_dir | Synchrony installation directory. | dir | "min length:0, max length:512" |   | not MVS |   |
 | cft.uconf.cftext | Condition if uconf configuration is extracted using CFTUTIL CFTEXT TYPE=ALL. | bool No Yes |   | Yes | ALL |   |
-| cft.uconf.default_fname | Path to uconf (unified configuration) default database. | fname | "min length:0, max length:512" | $(cft.install.dat_dir)cftuconf- common.dat (not MVS) &#124; DD:DEFAULT (MVS) | ALL | EXPERT |
+| cft.uconf.default_fname | Path to uconf (unified configuration) default database. | fname | "min length:0, max length:512" | $(cft.install.dat_dir)cftuconf-common.dat (not MVS) &#124; DD:DEFAULT (MVS) | ALL | EXPERT |
 | cft.uconf.dictionary_version | Version of the UCONF dictionary file. | string |   | '[CFT_VERSION] SP[CFT_SP]' | ALL | READ_ONLY |
 | cft.uconf.instance_fname | Path to uconf (unified configuration) instance repository. | fname | "min length:0, max length:512" | "$(cft.runtime.data_dir)cftuconf.dat (not UNIX, not NT) &#124; $(cft.runtime.data_dir)cftparm (UNIX, NT)" | not MVS |   |
 | cft.uconf.instance_version | Version of the UCONF instance file. | string |   | ' ' | ALL | READ_ONLY |
-| cft.uconf.runtime_fname | Path to uconf (unified configuration) runtime instance repository. | fname | "min length:0, max length:512" | "DD:UCONFRUN (MVS) &#124; $(cft.runtime.run_dir)cftuconf- run.dat (not UNIX, not NT, not MVS) &#124; $(cft.runtime.data_dir)cftparm (UNIX, NT)" | ALL |   |
+| cft.uconf.runtime_fname | Path to uconf (unified configuration) runtime instance repository. | fname | "min length:0, max length:512" | "DD:UCONFRUN (MVS) &#124; $(cft.runtime.run_dir)cftuconf-run.dat (not UNIX, not NT, not MVS) &#124; $(cft.runtime.data_dir)cftparm (UNIX, NT)" | ALL |   |
 | cft.unix.cftsu.afunix | Sets the AF_UNIX file for CFTSU. | fname | "min length:0, max length:512" | $(cft.runtime.run_dir)SCFTSU | UNIX | EXPERT |
 | cft.unix.cftsu.fname | Specify the absolute pathname to the cftsu to execute. | fname | "min length:0, max length:512" |   | UNIX | EXPERT |
 | cft.unix.cftsu.isservice | Use CFTSU as a service. | bool No Yes |   | No | UNIX |   |
@@ -439,16 +440,16 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | cg.ca_cert_id | Identifier of the CA certificate (stored in the internal PKI base) used to authenticate the Central Governance server. | string list |   |   | ALL |   |
 | cg.cert.subject_dn | Subject Distinguished Name of the Central Governance certificate. It's used to verify the Central Governance identity when Central Governance connects to Transfer CFT. | string |   | '' | ALL |   |
 | cg.certificate.business.csr_dn | Distinguished Name to use to build the Certificate Sign Request for business flow. Tokens must be separated by a comma. | string |   | "'O=Axway,OU=MFT,CN=$(cft.full_hostname)'" | ALL | IRECONFIG |
-| cg.certificate.business.csr_id | Internal identifier given by the Central Governance server when sending a Certificate Signing Request for business exchanges. | int |   | - 1 | ALL | READ_ONLY |
+| cg.certificate.business.csr_id | Internal identifier given by the Central Governance server when sending a Certificate Signing Request for business exchanges. | int |   | -1 | ALL | READ_ONLY |
 | cg.certificate.business.key_len | "Business certificate key length. When this parameter is changed, the \" | int | enum: 2048 4096 | 2048 | ALL | EXPERT |
 | cg.certificate.business.renewal_datetime | "Datetime (GMT/UTC) used to force the renewal of the business certificate. When datetime is reached, start the renewal procedure. The datetime format is YYYYMMDDHHMMSS." | datetime |   |   | ALL | RECONFIG |
 | cg.certificate.governance.csr_dn | Distinguished Name to use to build the Certificate Sign Request for governance exchanges. Tokens must be separated by a comma. | string |   | "'O=Axway,OU=MFT,CN=Transfer CFT $(cft.instance_id)'" | ALL | IRECONFIG |
-| cg.certificate.governance.csr_id | Internal identifier given by the Central Governance server when sending a Certificate Signing Request for governance exchanges. | int |   | - 1 | ALL | READ_ONLY |
+| cg.certificate.governance.csr_id | Internal identifier given by the Central Governance server when sending a Certificate Signing Request for governance exchanges. | int |   | -1 | ALL | READ_ONLY |
 | cg.certificate.governance.key_len | "Governance certificate key length. When this parameter is changed, the \" | int | enum: 2048 4096 | 2048 | ALL | EXPERT |
 | cg.certificate.governance.renewal_datetime | "Datetime (GMT/UTC) used to force the renewal of the governance certificate. When datetime is reached, start the renewal procedure. The datetime format is YYYYMMDDHHMMSS." | datetime |   |   | ALL | RECONFIG |
 | cg.configuration_policy | Central Governance configuration policy to apply on the Transfer CFT instance. | string | "min length:0, max length:100" | ' ' | ALL |   |
 | cg.enable | "Enables exchanges with the Central Governance server (registration, heartbeat)." | bool No Yes |   | No | ALL |   |
-| cg.host | Central Governance server host address (IP address or FQDN). | string |   | 'cg- server- hostname' | ALL | RECONFIG |
+| cg.host | Central Governance server host address (IP address or FQDN). | string |   | 'cg-server-hostname' | ALL | RECONFIG |
 | cg.key_label | Label used for License Key Management. | string |   | ' ' | ALL | EXPERIMENTAL |
 | cg.metadata | Properties sent to Central Governance. | string list |   | agent | ALL |   |
 | cg.metadata.&lt;logical_name&gt;.value | Value of the metadata. | string |   |   | ALL |   |
@@ -463,7 +464,7 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | cg.proxy.out.login | Proxy login used by Transfer CFT to connect to Central Governance | string |   | '' | ALL | RECONFIG |
 | cg.proxy.out.password | Proxy password used by Transfer CFT to connect to Central Governance | passwd |   |   | ALL | RECONFIG |
 | cg.proxy.out.port | Proxy port used by Transfer CFT to connect to Central Governance | int |   |   | ALL | RECONFIG |
-| cg.registration_id | "Registration Identifier provided by Central Governance server. If set to - 1, Transfer CFT tries to register to Central Governance server." | int |   | - 1 | ALL | EXPERT |
+| cg.registration_id | "Registration Identifier provided by Central Governance server. If set to -1, Transfer CFT tries to register to Central Governance server." | int |   | -1 | ALL | EXPERT |
 | cg.renewal_period | Number of day before expiration the certificate renewal procedure executes. | int |   | 60 | ALL | RECONFIG |
 | cg.shared_secret | The shared secret needed to register to the Central Governance server. | passwd |   |   | ALL | RECONFIG |
 | cg.timeout | TCP connection timeout (in seconds) | int |   | 5 | ALL | RECONFIG |
@@ -514,16 +515,16 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | copilot.misc.clienttimeout | "Client connection timeout, in minutes (0 means no timeout ; for CFT UI tokens, 0 means one hour timeout)." | int |   | 30 | ALL |   |
 | copilot.misc.copstart | Script used by Copilot to start Copilot. | fname | "min length:0, max length:512" |   | UNIX |   |
 | copilot.misc.copstop | Script used by Copilot to stop Copilot. | fname | "min length:0, max length:512" |   | UNIX |   |
-| copilot.misc.createprocessasuser | Enables using system users in Copilot. | bool Yes No |   | Yes (WIN- IA64) &#124; Yes (WIN- X86) &#124; No (UNIX) &#124; Yes (OS400) &#124; Yes (MVS) | ALL |   |
+| copilot.misc.createprocessasuser | Enables using system users in Copilot. | bool Yes No |   | Yes (WIN-IA64) &#124; Yes (WIN-X86) &#124; No (UNIX) &#124; Yes (OS400) &#124; Yes (MVS) | ALL |   |
 | copilot.misc.help_url | The URL for the Transfer CFT User guide. | string |   | 'https://docs.axway.com/bundle/TransferCFT_39_UsersGuide_allOS_en_HTML5/page/Content' | ALL |   |
 | copilot.misc.languages | List of the additional languages. | string |   | '' | ALL | EXPERT |
-| copilot.misc.local_encoding | "Local encoding to use, which must be relatively compatible with ASCII." | string |   | AUTO (not VMS) &#124; iso8859- 1 (VMS) | ALL |   |
+| copilot.misc.local_encoding | "Local encoding to use, which must be relatively compatible with ASCII." | string |   | AUTO (not VMS) &#124; iso8859-1 (VMS) | ALL |   |
 | copilot.misc.maxnbprocess | Maximum number of processes in processes pool that may be ready to process a client connection. | int |   | 20 | ALL |   |
 | copilot.misc.minnbprocessready | "Minimum number of processes, in the processes pool, that must be ready to process a client connection." | int |   | 1 (not MVS) &#124; 2 (MVS) | ALL |   |
 | copilot.misc.nbprocesstostart | "Number of processes to add in processes pool, when there are not enough processes in the pool." | int |   | 1 (not MVS) &#124; 3 (MVS) | ALL |   |
 | copilot.misc.server_inactivity_timeout | Inactivity timeout in seconds for copilot server process servicing a client (0 means no timeout). | int |   | 7200 | ALL |   |
 | copilot.misc.tcptimeout | Timeout of TCP select in seconds. | int |   | "10 (not MVS, not VMS) &#124; 60 (VMS) &#124; 300 (MVS)" | ALL |   |
-| copilot.misc.xts_encoding | XTS string encoding. | string |   | UTF- 8 (not OS400) &#124; 01208 (OS400) | ALL | EXPERT |
+| copilot.misc.xts_encoding | XTS string encoding. | string |   | UTF-8 (not OS400) &#124; 01208 (OS400) | ALL | EXPERT |
 | copilot.node_manager.node_repair_period | Delay in seconds used by CFT to detect and try to repair node starting issues. The value 0 means that the repair feature is disabled. It's recommended to set a value &gt;= 60 and &gt;= 4*copilot.node_manager.watchperiod. | int |   | 0 | ALL | EXPERT |
 | copilot.node_manager.watchperiod | Interval in seconds between two checks of Transfer CFT nodes status. | int |   | 10 | ALL |   |
 | copilot.nt.coptray_trcfilename | Coptray trace. | fname | "min length:0, max length:512" | $(cft.runtime.run_dir)coptray.trc | NT |   |
@@ -533,8 +534,8 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | copilot.pid_fname | File containing the Copilot (copsmng) Process ID. | fname | "min length:0, max length:512" | $(cft.runtime.run_dir)copsmng.pid | ALL | EXPERT |
 | copilot.restapi.api_token_validity | "Specifies the API Token validity period, in seconds. 0 disables expiration." | int | min:0 | 0 | ALL |   |
 | copilot.restapi.authentication_method | REST API Server Authentication method. | string |   | 'system' (not UNIX) &#124; 'xfbadm' (UNIX) | ALL |   |
-| copilot.restapi.catalog.retry_delay | The amount of time in seconds between retries for the catalog surveys. | int | "min:- 1, max:10" | 5 | ALL |   |
-| copilot.restapi.catalog.retry_timeout | The amount of time in seconds of the timeout to look an update in the catalog. | int | "min:- 1, max:120" | 30 | ALL |   |
+| copilot.restapi.catalog.retry_delay | The amount of time in seconds between retries for the catalog surveys. | int | "min:-1, max:10" | 5 | ALL |   |
+| copilot.restapi.catalog.retry_timeout | The amount of time in seconds of the timeout to look an update in the catalog. | int | "min:-1, max:120" | 30 | ALL |   |
 | copilot.restapi.coms_id | The TCP CFTCOM object identifier used by the REST API server to communicate to Transfer CFT server. | string | "min length:0, max length:32" | 'coms' | ALL |   |
 | copilot.restapi.enable | Enable or not rest API | bool Yes No |   | No | ALL |   |
 | copilot.restapi.maxclient | Number of client connections handled per REST worker. | int | "min:1, max:1024" | 256 | ALL |   |
@@ -544,7 +545,7 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | copilot.rootdirs | List of authorized root directories used to limit remote file access. | string list |   | runtime | ALL |   |
 | copilot.rootdirs.&lt;logical_name&gt;.fname | Path to accessible directory. | dir | "min length:0, max length:512" | ##INVALID## | ALL |   |
 | copilot.run.control_port | Copilot main agent (copsmng) control port. | int |   |   | ALL | RUNTIME |
-| copilot.run.copcod_local_port | Connection dispatcher local port in multi- node. | int |   |   | ALL | RUNTIME |
+| copilot.run.copcod_local_port | Connection dispatcher local port in multi-node. | int |   |   | ALL | RUNTIME |
 | copilot.run.copui_client_socket | Windows socket passing. | string |   | ' ' | ALL | RUNTIME |
 | copilot.run.copui_client_ssl_socket | Windows ssl socket passing. | string |   | ' ' | ALL | RUNTIME |
 | copilot.run.copui_notification_port | Notification port for copsmng (Copilot). | int |   |   | ALL | RUNTIME |
@@ -569,7 +570,7 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | copilot.trace.exec_bufsize | Internal buffer. | int |   | 5 | ALL |   |
 | copilot.trace.exec_time | Hour of day to execute switchlog. If not empty (default) use the YYYYmmddHHMMSS format. | string |   | '' | ALL | RUNTIME |
 | copilot.trace.exec_timeout | Timeout in seconds for executing a switchlog. | int |   | 10 | ALL |   |
-| copilot.trace.trcafilename | Alternate trace file of copui process. | fname | "min length:0, max length:512" | $(cft.runtime.run_dir)copui- a.trc | not MVS |   |
+| copilot.trace.trcafilename | Alternate trace file of copui process. | fname | "min length:0, max length:512" | $(cft.runtime.run_dir)copui-a.trc | not MVS |   |
 | copilot.trace.trcfilename | Primary trace file of copui process. | fname | "min length:0, max length:512" | $(cft.runtime.run_dir)copui.trc (not MVS) &#124; 'dd:COTRACE' (MVS) | ALL |   |
 | copilot.trace.trclevel | "General trace level: ERR(error), WRN(warning), INF(info), DBG(debug)" | string | enum: ERR WRN INF DBG | 'ERR' | ALL |   |
 | copilot.trace.trcmaxlen | Maximum size (Mb) of the primary trace file (dynamic parameter). | int |   | 10 | ALL |   |
@@ -584,7 +585,7 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | copilot.webservices.enable | Enables the use of Web services. | bool Yes No |   | Yes | ALL |   |
 | copilot.webservices.ordersoap | "If set to Yes, the SOAP reply has the order defined in the copilotcft.wsdl." | bool Yes No |   | No | ALL |   |
 | copilot.webservices.upload_directory | Directory where files are uploaded. | dir | "min length:0, max length:512" | $(cft.runtime_dir)/upload (not MVS) &#124; $(cft.runtime_dir)UPLOAD (MVS) &#124; $(cft.install_dir)UPLOAD] (VMS) | ALL |   |
-| copilot.webservices.wsicomplience | "If set to Yes, client requests are checked against WS- I recommendations." | bool Yes No |   | No | ALL |   |
+| copilot.webservices.wsicomplience | "If set to Yes, client requests are checked against WS-I recommendations." | bool Yes No |   | No | ALL |   |
 | crypto.key_fname | Filename containing the private key to use to encipher data. | fname |   |   | ALL |   |
 | crypto.salt_fname | Filename containing the salt used to create the private key. | fname |   |   | ALL |   |
 | custom.install | Custom variables used in samples. | string list |   |   | not MVS |   |
@@ -592,38 +593,38 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | folder_monitoring.folders | List of directory to scan attributes sets. | string list |   |   | ALL | EXPERT |
 | folder_monitoring.folders.&lt;logical_name&gt;.control | Meta data used to control user changes. | string |   |   | ALL |   |
 | folder_monitoring.folders.&lt;logical_name&gt;.enable | Enables the scan of the folder. | bool No Yes |   | Yes | ALL |   |
-| folder_monitoring.folders.&lt;logical_name&gt;.enable_subdir | Enables sub- directory scan. | bool No Yes |   | Yes | ALL |   |
-| folder_monitoring.folders.&lt;logical_name&gt;.file_count | Number of file to take into account while scanning. | int |   | - 1 | ALL |   |
+| folder_monitoring.folders.&lt;logical_name&gt;.enable_subdir | Enables sub-directory scan. | bool No Yes |   | Yes | ALL |   |
+| folder_monitoring.folders.&lt;logical_name&gt;.file_count | Number of file to take into account while scanning. | int |   | -1 | ALL |   |
 | folder_monitoring.folders.&lt;logical_name&gt;.file_exclude_filter | Exclude file name matching this pattern. | string |   |   | ALL |   |
 | folder_monitoring.folders.&lt;logical_name&gt;.file_idle_delay | Delay in seconds to decide that a file is ready to be submitted. | int |   | 5 | ALL |   |
 | folder_monitoring.folders.&lt;logical_name&gt;.file_include_filter | Include file name matching this pattern. | string |   |   | ALL |   |
-| folder_monitoring.folders.&lt;logical_name&gt;.file_size_max | Maximum file size in bytes - ignored if larger size. | int |   | - 1 | ALL |   |
-| folder_monitoring.folders.&lt;logical_name&gt;.file_size_min | Minimum file size in bytes - ignored if shorter size. | int |   | - 1 | ALL |   |
+| folder_monitoring.folders.&lt;logical_name&gt;.file_size_max | Maximum file size in bytes - ignored if larger size. | int |   | -1 | ALL |   |
+| folder_monitoring.folders.&lt;logical_name&gt;.file_size_min | Minimum file size in bytes - ignored if shorter size. | int |   | -1 | ALL |   |
 | folder_monitoring.folders.&lt;logical_name&gt;.filter_type | Pattern filtering algorithm to use. | string | enum: STRJCMP WILDMAT EREGEX |   | ALL |   |
-| folder_monitoring.folders.&lt;logical_name&gt;.idf | CFT IDF either fixed string or sub- directory name level (0) or (1). | string |   |   | ALL |   |
+| folder_monitoring.folders.&lt;logical_name&gt;.idf | CFT IDF either fixed string or sub-directory name level (0) or (1). | string |   |   | ALL |   |
 | folder_monitoring.folders.&lt;logical_name&gt;.interval | Interval between two scans in seconds. | int |   | 60 | ALL |   |
 | folder_monitoring.folders.&lt;logical_name&gt;.method | Monitoring method (file or move). MOVE method recommended. | string | enum: FILE MOVE | MOVE | ALL |   |
-| folder_monitoring.folders.&lt;logical_name&gt;.part | CFT PART either fixed string or sub- directory name level (0) or (1). | string |   |   | ALL |   |
+| folder_monitoring.folders.&lt;logical_name&gt;.part | CFT PART either fixed string or sub-directory name level (0) or (1). | string |   |   | ALL |   |
 | folder_monitoring.folders.&lt;logical_name&gt;.renaming_method | "If TIMESTAMP, add a timestamp (GMT/UTC) to the moved file name." | string | enum: TIMESTAMP NONE | TIMESTAMP | ALL |   |
 | folder_monitoring.folders.&lt;logical_name&gt;.renaming_separators | Character before [and after] the timestamp in file name. | string |   |   | ALL |   |
 | folder_monitoring.folders.&lt;logical_name&gt;.resubmit_changed_file | Resubmit a file changed after previous submission (FILE method only). | bool No Yes |   | Yes | ALL |   |
 | folder_monitoring.folders.&lt;logical_name&gt;.scan_dir | Top level directory to scan. | string |   |   | ALL |   |
 | folder_monitoring.folders.&lt;logical_name&gt;.use_file_system_events | Enables use of the file system events monitoring service. | bool No Yes |   | No | ALL |   |
 | folder_monitoring.folders.&lt;logical_name&gt;.work_dir | Directory specification where to move files from scan_dir. | string |   |   | ALL |   |
-| pesit.parameters.enable_encoding | "Defines if the PeSIT parameters should be encoded in UTF- 8. This affects PI37, PI91 and PI99." | bool Yes No |   | No | "UNIX, NT" | EXPERT |
+| pesit.parameters.enable_encoding | "Defines if the PeSIT parameters should be encoded in UTF-8. This affects PI37, PI91 and PI99." | bool Yes No |   | No | "UNIX, NT" | EXPERT |
 | pki.cft.port | Transfer CFT PKI listening server port number. Value 0 means a dynamic port will choose by the Operating System at runtime. Other values will be handled as a range from port to (port + number of nodes - 1) in multinode. | int |   | 0 | ALL |   |
 | pki.exit.libpath | Location of CFTPKIE exit dynamic library. | fname | "min length:0, max length:512" |  &#124; CFTPKIE (VMS) | ALL |   |
 | pki.passport.hostname | PassPort PKI server IP address. | string |   | 'localhost' | ALL |   |
 | pki.passport.login | PassPort PKI login. Leave empty for an anonymous connection. | string |   | '' | ALL |   |
-| pki.passport.msgpath | PassPort msgpath (full pathname of the message- log file). | fname | "min length:0, max length:512" | $(cft.install.psenglish_dir) (not MVS) &#124; 'dd:PKIMSG' (MVS) | ALL | EXPERT |
+| pki.passport.msgpath | PassPort msgpath (full pathname of the message-log file). | fname | "min length:0, max length:512" | $(cft.install.psenglish_dir) (not MVS) &#124; 'dd:PKIMSG' (MVS) | ALL | EXPERT |
 | pki.passport.password | PassPort PKI password. | passwd |   |   | ALL |   |
 | pki.passport.port | PassPort PKI server port number. | int |   | 7000 | ALL |   |
-| pki.passport.trace | XPP PKI trace (0- &gt;5). | string |   | '0' | ALL |   |
+| pki.passport.trace | XPP PKI trace (0-&gt;5). | string |   | '0' | ALL |   |
 | pki.run.cft | Number of defined Secure Relay Master Agents. | int |   | 1 | ALL |   |
 | pki.run.cft.&lt;itemNumber&gt;.port | Transfer CFT PKI listening server port number reserved at runtime for a specific node. | int | "min:1, max:65535" | 0 | ALL |   |
 | pki.run.cft.port | Transfer CFT PKI listening server port number reserved at runtime. | int |   | 0 | ALL | RUNTIME |
 | pki.type | PKI type used. | string |   | 'cft' | ALL |   |
-| samples | Parameters used for the sample configuration file (cft- tcp.conf). | string list |   |   | ALL |   |
+| samples | Parameters used for the sample configuration file (cft-tcp.conf). | string list |   |   | ALL |   |
 | secure_relay.enable | Enables Secure Relay. | bool Yes No |   | No | ALL |   |
 | secure_relay.ma.admin_outport_range | Secure Relay Master Agent admin outport range. | string |   | ' ' | ALL | EXPERT |
 | secure_relay.ma.autostart | Allows to automatically start the embedded Secure Relay Master Agent. | bool Yes No |   | Yes | ALL |   |
@@ -642,7 +643,7 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | secure_relay.ma.log_fname | Secure Relay Master Agent log file. | fname | "min length:0, max length:512" | $(cft.runtime.log_dir)xsrMaster.log (not MVS) &#124; $(cft.runtime.xsr_dir)XsrMaster.log (MVS) | ALL |   |
 | secure_relay.ma.log_level | "Secure Relay Master Agent log level : 0, 1, 2 or 3." | int | min:0; max:3 | 0 | ALL |   |
 | secure_relay.ma.pid_fname | File containing the Secure Relay Master Agent Process ID. | fname | "min length:0, max length:512" | $(cft.runtime.run_dir)xsrMaster.pid (not MVS) &#124; (MVS) | ALL |   |
-| secure_relay.ma.start_options | Secure Relay Master Agent start options. | string |   | "'- Xmx1024m' (not NT, not MVS) &#124; '- Xmx512m - Xrs' (NT) &#124; '- Xms512m' (MVS)" | ALL | EXPERT |
+| secure_relay.ma.start_options | Secure Relay Master Agent start options. | string |   | "'-Xmx1024m' (not NT, not MVS) &#124; '-Xmx512m -Xrs' (NT) &#124; '-Xms512m' (MVS)" | ALL | EXPERT |
 | secure_relay.ma.start_proc | Secure Relay Master Agent start procedure. | fname | "min length:0, max length:512" | $(cft.runtime_dir)INSTALL(XSRRUN) (MVS) &#124; *LIBL/STRXSR (OS400) | "MVS, OS400" |   |
 | secure_relay.ma.start_timeout | Amount of time in seconds of the timeout when starting Secure Relay. | int |   | "15 (not MVS, not OS400) &#124; 120 (MVS, OS400)" | ALL |   |
 | secure_relay.ra | Number of defined Secure Relay Router Agents. | int |   | 1 | ALL |   |
@@ -667,13 +668,13 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | sentinel.trkflushdurationmax | Maximum amount of time in seconds to flush the overflow file. | int |   | 3 | ALL |   |
 | sentinel.trkgmtdiff | Difference between local time and GMT in minutes. | int |   |   | ALL |   |
 | sentinel.trkident | Application name for audit. | string |   | '$(cft.instance_id)' | ALL |   |
-| sentinel.trkipaddr | Sentinel Server IP address. | string |   | 'sentinel- server- hostname' | ALL |   |
+| sentinel.trkipaddr | Sentinel Server IP address. | string |   | 'sentinel-server-hostname' | ALL |   |
 | sentinel.trkipaddr_bkup | Sentinel backup server IP address. | string |   | '' | ALL |   |
 | sentinel.trkipport | Sentinel Server port number. | string |   | '1305' | ALL |   |
 | sentinel.trkipport_bkup | Sentinel backup port number. | int |   | 1305 | ALL |   |
 | sentinel.trklenmsg | Maximum length of a message in TrkUtil (default 16000). | int |   | 16000 | ALL |   |
 | sentinel.trklocaladdr | Universal Agent IP Address. | string |   | '$(cft.full_hostname)' | ALL |   |
-| sentinel.trkmsgencoding | Charset encoding of messages sent to Sentinel Server. | string | enum: ISO8859- 1 ISO8859- 15 UTF- 8 | "'ISO8859- 1' (not MVS, not OS400) &#124; 'none' (MVS, OS400)" | ALL |   |
+| sentinel.trkmsgencoding | Charset encoding of messages sent to Sentinel Server. | string | enum: ISO8859-1 ISO8859-15 UTF-8 | "'ISO8859-1' (not MVS, not OS400) &#124; 'none' (MVS, OS400)" | ALL |   |
 | sentinel.trkproductipaddr | Application IP Address. | string |   | '$(cft.full_hostname)' | ALL |   |
 | sentinel.trkproductname | Application name. | string |   | 'CFT' | ALL |   |
 | sentinel.trksharedfile | MANDATORY when the Event Router and applications are sharing the logger file. Set to NO if applications are sending messages directly to the Sentinel server without going through an ER. | bool Yes No |   | No | MVS |   |
@@ -702,7 +703,7 @@ The following table is an exhaustive list of the unified configuration (UCONF) v
 | ssl.ciphersuites | SSL cipher suites negotiated by Transfer CFT connectors. | int_list |   | "49200, 49199, 156, 157, 60, 61, 47, 53" | ALL |   |
 | ssl.extension.enable_sni | Enable TLS Server Name Indication extension for Transfer CFT connectors. | bool Yes No |   | Yes | ALL | EXPERT |
 | ssl.version_min | Minimum SSL version allowed by Transfer CFT connectors. | string | enum: ssl_3.0 tls_1.0 tls_1.1 tls_1.2 | 'tls_1.0' | ALL |   |
-| tf.defaultlocalcharset | Corresponds to a character set listed in the character set conversion reference table. | string |   | 'ISO- 8859- 1' | ALL | RECONFIG |
+| tf.defaultlocalcharset | Corresponds to a character set listed in the character set conversion reference table. | string |   | 'ISO-8859-1' | ALL | RECONFIG |
 | tf.enablepasswordcipher | "Indicates that entities passphrases, either in the entities definition file (entities.xml) or in the operation description file." | bool Yes No |   | Yes | ALL |   |
 | tf.entitieslocation | Indicates the path to the entities.xml file where Trusted File is configured in standalone mode. | fname | "min length:0, max length:512" | $(cft.runtime.conftf_dir)entities.xml (not MVS) &#124; $(cft.runtime.conftf_dir)UPARM(XENTITI) (MVS) | ALL |   |
 | tf.entitieslocationtype | Trusted File configures a local or remote server (local or remote) | string |   | 'local' | ALL | RECONFIG |

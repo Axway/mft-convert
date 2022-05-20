@@ -2,7 +2,7 @@
 title: "force"
 linkTitle: "force"
 weight: 1230
---- <span id="force"></span>
+---<span id="force"></span>
 
 ### force
 
@@ -41,7 +41,7 @@ set in an associated SEND command.
     command but is in a CFTSEND command, the value defined in the CFTSEND
     command is taken into account.
 
-<!- - - - >
+<!-- -->
 
 - YES: The parameters specified in CFTSEND
     take priority over the parameters defined in an associated SEND command.
@@ -57,6 +57,7 @@ The following table summarizes {{< TransferCFT/axwayvariablesComponentShortName 
 or CFTSEND object with parameter FORCE set to YES.
 
 ****Parameters Default value Processing (FORCE = YES)****
+
 
 | Parameter | Default | Processing when FORCE = YES |
 | --- | --- | --- |
@@ -78,11 +79,14 @@ or CFTSEND object with parameter FORCE set to YES.
 | OPERMSG | &lt;os dep.&gt; | Parameter cannot be overridden |
 | EXECSUB | LIST | Parameter cannot be overridden |
 
+
 <span id="INACT_force"></span>
 
 #### INACT, DELETE, END, HALT, KEEP, START, RESUME
 
 ****[FORCE = {<u>NO</u> &#124; YES}]****
+
+ 
 
 <span id="START_force"></span>
 
@@ -97,9 +101,9 @@ has been restarted:
     no action is taken (default value)
 - YES:
     the request is restarted immediately if you have either a:
-    - Diagnostic
+    -   Diagnostic
         code diagi 302
-    - Cyclic request
+    -   Cyclic request
         in the D state
 
 The maximum execution time for a restarted request is 23595999.

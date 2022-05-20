@@ -1,19 +1,19 @@
 ---
-title: "Post- installation"
-linkTitle: "Post- installation"
+title: "Post-installation"
+linkTitle: "Post-installation"
 weight: 160
---- ## Transfer CFT in production
+---## Transfer CFT in production
 
 This chapter describes how to operate Transfer CFT, and is comprised of the following sections:
 
-- Predefined commands](operating_cft/predefined_commands)
+- [Predefined commands](operating_cft/predefined_commands)
 - [CFTUTIL commands](operating_cft/submit_cftutil_commands)
 - [Source files interpretation](operating_cft/interpret_source_member)
 - [Start/stop the UI server](start_copilot_server)
 - [Run Transfer CFT](operating_cft/running_transfer_cft) jobs:
-    - [Query Transfer CFT messages
-    - [Start Transfer CFT](operating_cft/start_cft)
-    - [Submit a transfer command](submit_transfer_command)
+    -   [Query Transfer CFT messages]()
+    -   [Start Transfer CFT](operating_cft/start_cft)
+    -   [Submit a transfer command](submit_transfer_command)
 - [Transfer CFT shutdown](operating_cft/shut_cft)
 
 <span id="Transfer"></span>
@@ -41,7 +41,7 @@ Create a JOBD object to launch Transfer CFT jobs using the default values. This 
 
 Create an SBS object to launch Transfer CFT jobs. This creates a subsytem with a storage size of 250MB.
 
-****4. Add job- queue entry.****
+****4. Add job-queue entry.****
 
 Add a job queue entry to the subsystem that you created in step 3 to link it with the JOBQ that you created in step 1. The maximum active job is unlimited.
 

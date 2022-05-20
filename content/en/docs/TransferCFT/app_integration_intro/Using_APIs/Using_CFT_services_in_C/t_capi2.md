@@ -2,7 +2,7 @@
 title: "About cftapi2"
 linkTitle: "About cftapi2"
 weight: 330
---- The catalog functions enable you to query and modify the catalog. These functions also include a method to recover information about the {{< TransferCFT/axwayvariablesComponentShortName  >}} that is using the catalog.
+---The catalog functions enable you to query and modify the catalog. These functions also include a method to recover information about the {{< TransferCFT/axwayvariablesComponentShortName  >}} that is using the catalog.
 
 Additionally, the API catalog supports 32 character identifiers and 512 character file names.
 
@@ -23,11 +23,16 @@ The programmer can set pointers to these data structures. These are then allocat
 
 ## API functions
 
+
 | Service | CftApi2Session *ipcai2_initialize () |
 | --- | --- |
 | Definition | Initializes the API. |
 | Parameter | None. |
 | Return value | This function returns a pointer to the CFTApi2Session. If the returned value is NULL, the session cannot be initialized. |
+
+
+ 
+
 
 | Service | long ipcai2_get_errno(CftApi2Session * session) |
 | --- | --- |
@@ -36,12 +41,20 @@ The programmer can set pointers to these data structures. These are then allocat
 | Return value | The last error code for the API for this session. |
 | Remarks | This function can be used after all calls to the API except for ipcai2_initialize() and ipcai2_finalize(). |
 
+
+ 
+
+
 | Service | long ipcai2_get_errno_str(CftApi2Session * session, char *buffer, int bufflen) |
 | --- | --- |
 | Definition | Recuperates the error message. |
 | Parameter | session: Pointer to the CftApi2Session structure is returned by the initialization function ipcai2_initialize()<br /> buffer: The buffer that will be informed of the error message.<br /> bufflen: Length of the buffer sent to the API. |
 | Return value | If the return code is positive, it contains the last error code for the API for this session.<br/> If the Return code is negative, the buffer is too short. If this happens, and the code is equal to –n where n is equal to the required length. |
 | Remarks | This function can be used after all calls to the API except for ipcai2_initialize() and ipcai2_finalize(). |
+
+
+ 
+
 
 | Service | long ipcai2_finalize(CftApi2Session * session) |
 | --- | --- |
@@ -50,12 +63,20 @@ The programmer can set pointers to these data structures. These are then allocat
 | Return value | None. |
 | Remarks | None. |
 
+
+ 
+
+
 | Service | CftApi2Catalog *ipcai2_catalog_open(CftApi2Session * session, char *catalog_fname)  |
 | --- | --- |
 | Definition | Opens the {{< TransferCFT/axwayvariablesComponentShortName  >}} catalog file. |
 | Parameter | session: Pointer to the CftApi2Session structure returned by the initialization ipcai2_initialize()<br /> catalog_fname: Name of the catalog file. If the file name is "" the API opens the catalog file by default, for example _CFTCATA for {{< TransferCFT/axwayvariablesComponentShortName  >}}UNIX. |
 | Return value | This function returns a pointer to the CftApi2Catalog structure. If the returned value is NULL, the catalog cannot be opened and the error code is returned by calling ipcai2_get_errno(). |
 | Remarks | None |
+
+
+ 
+
 
 | Service | long ipcai2_catalog_reload_cache(CftApi2Catalog *catalog) |
 | --- | --- |
@@ -64,12 +85,20 @@ The programmer can set pointers to these data structures. These are then allocat
 | Return value | None. |
 | Remarks | None. |
 
+
+ 
+
+
 | Service | long ipcai2_catalog_close(CftApi2Catalog * catalog |
 | --- | --- |
 | Definition | Closes the catalog. |
 | Parameter | catalog: Pointer to the catalog returned by ipcai2_catalog_open() |
 | Return value | Calling ipcai2_get_errno() ou ipcai2_get_errno_str() enables you to recuperate the return code for this function. |
 | Remarks | None. |
+
+
+ 
+
 
 | Service | CftApi2Selection *ipcai2_catalog_selection_new(CftApi2Catalog *catalog) |
 | --- | --- |
@@ -78,12 +107,20 @@ The programmer can set pointers to these data structures. These are then allocat
 | Return value | This function returns a pointer to a CftApi2Selection structure. If the returned value is NULL the selection cannot be initialized and an error code is returned by calling ipcai2_get_errno(). |
 | Remarks | None. |
 
+
+ 
+
+
 | Service | long ipcai2_catalog_selection_ref(CftApi2Selection *selection) |
 | --- | --- |
 | Definition | References a selection. |
 | Parameter | Selection: The pointer for the selected structure returned by calling ipcai2_catalog_selection_new() |
 | Return value | Negative or null: Error, recuperated the error code from ipcai2_get_errno() or ipcai2_get_errno_str().<br /> Positive: Total number of sessions referenced after this call. |
 | Remarks | A selection can be referenced several times, and must be referenced at least one time before it is used. |
+
+
+ 
+
 
 | Service | long ipcai2_catalog_selection_set(CftApi2Selection * selection, char *param, char *value) |
 | --- | --- |
@@ -92,12 +129,20 @@ The programmer can set pointers to these data structures. These are then allocat
 | Return value | None. |
 | Remarks | None. |
 
+
+ 
+
+
 | Service | long ipcai2_catalog_selection_next(CftApi2Selection *selection) |
 | --- | --- |
 | Definition | Executes a selection. |
 | Parameter | selection: Pointer for the selection is referenced by ipcai2_catalog_selection_ref() |
 | Return value | A call to ipcai2_get_errno() ou ipcai2_get_errno_str() enables you to recover the return code for this function. |
 | Remarks | None. |
+
+
+ 
+
 
 | Service | long ipcai2_catalog_record_get(CftApi2Selection * selection, char *param, char *buffer, int bufflen) |
 | --- | --- |
@@ -106,12 +151,20 @@ The programmer can set pointers to these data structures. These are then allocat
 | Return value | If the Return code is positive it contains the last API error code for this session. If the return code is negative, the buffer is too short and the code is equal to –n where n is the required length for the buffer.  |
 | Remarks | None. |
 
+
+ 
+
+
 | Service | long ipcai2_catalog_selection_unref(CftApi2Selection *selection) |
 | --- | --- |
-| Definition | De- lists a selection. |
+| Definition | De-lists a selection. |
 | Parameter | selection: Pointer to a selection structure that references ipcai2_catalog_selection_ref() |
 | Return value | Negative: Error, recovered the error code by calling ipcai2_get_errno() or ipcai2_get_errno_str()<br /> Null: Okay, and no other referred sessions.<br /> Positive: Total number of referred sessions after this call. |
 | Remarks | None |
+
+
+ 
+
 
 | Service | long ipcai2_catalog_selection_delete(CftApi2Selection *selection) |
 | --- | --- |
@@ -120,12 +173,20 @@ The programmer can set pointers to these data structures. These are then allocat
 | Return value | A call to ipcai2_get_errno() or ipcai2_get_errno_str() enables you to recover the Return code for this function. |
 | Remarks | None. |
 
+
+ 
+
+
 | Service | long ipcai2_transfert_change_state(CftApi2Selection * selection, char state) |
 | --- | --- |
 | Definition | Modifies the transfer state for the selected catalog. |
 | Parameter | selection: Pointer to a selection carried out by ipcai2_catalog_selection_next() |
 | Return value | None. |
 | Remarks | The {{< TransferCFT/axwayvariablesComponentShortName  >}} API must have already opened the communication medium. |
+
+
+ 
+
 
 | Service | long ipcai2_catalog_info_get(CftApi2Catalog *catalog, char *param, char *buffer, int bufflen) |
 | --- | --- |
@@ -134,12 +195,17 @@ The programmer can set pointers to these data structures. These are then allocat
 | Return value | If the Return code is positive it contains the last API error code for this session.<br/> If the return code is negative, the buffer is too short. The code is equal to –n ,where the n is equal to the required length. |
 | Remarks | None. |
 
+
+ 
+
+
 | Service | long ipcai2_monitor_info_get(CftApi2Catalog *catalog, char *param, char *buffer, int bufflen) |
 | --- | --- |
 | Definition | Recovers information about the {{< TransferCFT/axwayvariablesComponentShortName  >}}. |
 | Parameter | catalog: Pointer to the catalog returned by ipcai2_catalog_open()<br /> param: Parameter to recover. The parameter is available in cftapi2.h under “Monitor information parameters” topic : CFTAPI2_MON_INFO__*<br /> buffer: Buffer that was provided the parameter value .<br /> bufflen: Length of the buffer sent to the API. |
 | Return value | If the return code is positive, it contains the last API error code for the session.<br/> If the return code is negative, the buffer is too short. In this case, the code is equal to –n where n is the required length. |
 | Remarks | None. |
+
 
 #### Examples of API usage
 

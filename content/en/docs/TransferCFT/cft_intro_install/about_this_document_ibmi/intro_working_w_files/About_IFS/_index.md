@@ -2,13 +2,13 @@
 title: "Using IFS hierarchical files "
 linkTitle: "Using IFS hierachial files"
 weight: 200
---- This topic describes the Integrated File System, ****IFS****, functions available in Transfer CFT {{< TransferCFT/PrimaryForOS400  >}}.
+---This topic describes the Integrated File System, ****IFS****, functions available in Transfer CFT {{< TransferCFT/PrimaryForOS400  >}}.
 
 It includes:
 
-- Configure send mode (IFS)](send_files_ifs)
+- [Configure send mode (IFS)](send_files_ifs)
 - [Configure receive mode (IFS)](receive_files_ifs)
-- [Copyfile (IFS)
+- [Copyfile (IFS)]()
 
 See also [IFS access error codes.](../../os400_support_tool/ifs_access_errors)
 
@@ -25,11 +25,11 @@ The IFS provides a common interface to another system on the IBM i. After insta
 Respect the following naming conventions:
 
 - The file name must be prefixed by the slash character /
-    - For example: `/home/filename`
+    -   For example: `/home/filename`
 - You cannot replace environmental variables in the file name
-    - For example:` $HOME/filename` is not a recognized filename
+    -   For example:` $HOME/filename` is not a recognized filename
 - You cannot precede filenames by a relative path
-    - For example: `../filename` is not a recognized filename
+    -   For example: `../filename` is not a recognized filename
 
 ### Encoding IFS data
 
@@ -38,7 +38,7 @@ IFS file data can be in an ASCII, EBCDIC, or BINARY format. The CCSID, Code Char
 - Transfer CFT can read and write IFS files in these three formats: ASCII, EBCDIC, or BINARY.  
     When using the ASCII or EBCDIC formats, the data translation for a Transfer CFT transfer, if necessary, is managed by the Transfer CFT translation tables (CFTXLATE).
 - When Transfer CFT receives an IFS file, the CCSID for the file is set by default. This identifier is set to the Transfer CFT {{< TransferCFT/PrimaryForOS400 >}} job CCSID value.
-- The CFTRECV (or RECV) command FCODE=ASCII parameter creates an ASCII file with an associated CCSID code value of 819 (ISO 8859- 1 common use default Internet code).
+- The CFTRECV (or RECV) command FCODE=ASCII parameter creates an ASCII file with an associated CCSID code value of 819 (ISO 8859-1 common use default Internet code).
 
 ### IFS file rights and authorizations
 

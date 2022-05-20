@@ -2,11 +2,11 @@
 title: "postmindate"
 linkTitle: "postmindate"
 weight: 2650
---- ### postmindate
+---### postmindate
 
 #### SEND
 
-Schedules the post- processing exec file processing date.
+Schedules the post-processing exec file processing date.
 
 You can express the date value:
 

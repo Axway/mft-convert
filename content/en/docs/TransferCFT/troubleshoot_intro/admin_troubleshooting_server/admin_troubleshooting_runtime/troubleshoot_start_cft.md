@@ -2,7 +2,7 @@
 title: "Issues when starting Transfer CFT"
 linkTitle: "Issues when starting"
 weight: 300
---- ## Cannot start Transfer CFT
+---## Cannot start Transfer CFT
 
 ### Bind failed
 

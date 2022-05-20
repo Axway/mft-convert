@@ -2,7 +2,7 @@
 title: "host"
 linkTitle: "host"
 weight: 1460
---- <span id="host"></span>
+---<span id="host"></span>
 
 ### host
 
@@ -41,5 +41,7 @@ Networking IP address of the local resource.
 ****[HOST = string512]****
 
 Networking IP address for the local resource.
+
+ 
 
 [Return to Command index](../../)

@@ -1,5 +1,5 @@
 ---
-    title: "XFBTransfer system attributes"
+title: "XFBTransfer system attributes"
 linkTitle: "XFBTransfer system attributes"
 weight: 220
 ---This section provides information on the following attributes:
@@ -13,6 +13,7 @@ weight: 220
 
 ## Monitoring errors
 
+
 | Sentinel<br/> attribute | Data type | Length | Description | Name in<br/> {{< TransferCFT/axwayvariablesComponentShortName  >}} |
 | --- | --- | --- | --- | --- |
 | IsException<br/>  | Integer<br/>  |   | Values:<br/> • 0: The relevant Tracked-Event Message does not describe an exception.<br/> • 1: The relevant Tracked-Event Message describes one or more exceptions. | Not used |
@@ -20,9 +21,11 @@ weight: 220
 | ReturnCode | String | 20 | Processing details that the relevant tracked application generated. When the value of IsAlert is 1, this attribute often contains an error code. | DIAGI + DIAGP |
 | ReturnMessage | String | 250 | Processing details that the relevant tracked application generated | DIAGC |
 
+
 <span id="Monitori2"></span>
 
 ## Monitoring tracked-event messages
+
 
 | Sentinel<br/> attribute | Data type | Length | Description | Name in {{< TransferCFT/axwayvariablesComponentShortName  >}} |
 | --- | --- | --- | --- | --- |
@@ -32,14 +35,17 @@ weight: 220
 | ProductOS | String. | 20 | Operating system of the application that generated the relevant Tracked Event. | {{< TransferCFT/axwayvariablesComponentShortName  >}} target |
 | State | String | 29 | Status of the relevant Tracked Event. The possible values of this attribute depend on the tracked application/product and file transfer protocol used. See [List of Sentinel states](#List) . | PHASE/PHASESTEP combination |
 
+
 <span id="Monitori3"></span>
 
 ## Monitoring processing cycles
+
 
 | Sentinel<br/> attribute | Data Type | Length | Description | Name in<br/> {{< TransferCFT/axwayvariablesComponentShortName  >}} |
 | --- | --- | --- | --- | --- |
 | CycleId | String | 250 | CycleId of the relevant Tracked Event. | TRKR |
 | IsEnd | Int. |   | Values:<br/> • 0: The relevant Processing Cycle is not complete.<br/> • 1 : The relevant Processing Cycle is complete. | IsEnd set to 1 when PHASE=X |
+
 
 <span id="List"></span>
 
@@ -61,6 +67,7 @@ In the XFBTransfer Tracked Object, the Attributes ‘Direction” and “IsServe
 
 ****Receiver/Server transfer states****
 
+
 | ****State**** | ****Compatible Sentinel State**** | ****IsEnd**** | ****IsAlert**** | ****IsException**** | ****Description**** |
 | --- | --- | --- | --- | --- | --- |
 | RECEIVING | RECEIVING | 0 | 0 | 0 | File data transmission in progress |
@@ -77,7 +84,9 @@ In the XFBTransfer Tracked Object, the Attributes ‘Direction” and “IsServe
 | COMPLETED | CONSUMED | 1 | 0 | 0 | Transfer completed (this state is replaced by ROUTED on the relay site in store and forward mode) |
 | ROUTED | ROUTED | 1 | 0 | 0 | File successfully routed (only on the relay site in store and forward mode) |
 
+
 ****Sender/Server transfer states****
+
 
 | ****State**** | ****Compatible Sentinel State**** | ****IsEnd**** | ****IsAlert**** | ****IsException**** | ****Description**** |
 | --- | --- | --- | --- | --- | --- |
@@ -94,7 +103,9 @@ In the XFBTransfer Tracked Object, the Attributes ‘Direction” and “IsServe
 | POST_PROC_ACK_ABORT | SENT/ENDED_TO_ACK/ENDED_TO_NACK | 0 | 1 | 1 | Post processing of the Acknowledgement phase aborted by the application (KEEP command) |
 | COMPLETED | CONSUMED | 1 | 0 | 0 | Transfer completed |
 
+
 ****Receiver/Requester transfer states****
+
 
 | ****State**** | ****Compatible Sentinel State**** | ****IsEnd**** | ****IsAlert**** | ****IsException**** | ****Description**** |
 | --- | --- | --- | --- | --- | --- |
@@ -111,7 +122,9 @@ In the XFBTransfer Tracked Object, the Attributes ‘Direction” and “IsServe
 | POST_PROC_ACK_ABORT | RECEIVED/ACKED/NACKED | 0 | 1 | 1 | Post processing of the Acknowledgement phase aborted by the application (KEEP command) |
 | COMPLETED | CONSUMED | 1 | 0 | 0 | Transfer completed |
 
+
 ****Sender/Requester transfer states****
+
 
 | ****State**** | ****Compatible Sentinel State**** | ****IsEnd**** | ****IsAlert**** | ****IsException**** | ****Description**** |
 | --- | --- | --- | --- | --- | --- |

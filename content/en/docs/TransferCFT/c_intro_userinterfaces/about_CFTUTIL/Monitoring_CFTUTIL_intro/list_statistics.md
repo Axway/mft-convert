@@ -2,7 +2,7 @@
 title: "Displaying LISTCAT, DISPLAY, and LISTCOM statistics"
 linkTitle: "Displaying LISTCAT and LISTCOM statistics"
 weight: 330
---- {{< TransferCFT/axwayvariablesComponentLongName  >}} provides a set of variables `%<var>%` that allow you to list various catalog and communication file details in a CFTUTIL session.
+---{{< TransferCFT/axwayvariablesComponentLongName  >}} provides a set of variables `%<var>%` that allow you to list various catalog and communication file details in a CFTUTIL session.
 
 ## Using LISTCAT variables
 
@@ -23,9 +23,11 @@ PRINT MSG='NbSelected = %_LISTCAT_SELECTED%'
 PRINT MSG='NbTotal = %_LISTCAT_CAT%'
 PRINT MSG='NbFree = %_LISTCAT_FREE%'
 PRINT MSG='Percent free= %_LISTCAT_FREE_P%'
-
+ 
+ 
 Results
---- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - BCLPM SFT XX TGTG E0216242 1 1 0 CP 88%
+------------------------------------
+BCLPM SFT XX TGTG E0216242 1 1 0 CP 88%
 BCLPRM RFT XX TGTG E0216242 1 1 0 CP 88%
 2 record(s) selected
 1000 record(s) in Catalog file
@@ -64,7 +66,7 @@ For example, to display specific statistics in the log:
 ```
 listcat content=stat
 wlog msg='number of records in catalog = %_LISTCAT_SELECTED%'
-
+ 
 listlog
 ...
 00 21/08/11 17:51:17 CFTR16I number of records in catalog = 4

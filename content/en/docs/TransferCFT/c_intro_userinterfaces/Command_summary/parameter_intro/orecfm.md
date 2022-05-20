@@ -2,7 +2,7 @@
 title: "orecfm"
 linkTitle: "orecfm"
 weight: 2500
---- <span id="orecfm"></span>
+---<span id="orecfm"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
@@ -25,8 +25,12 @@ specific Operations Guide. If the output file is compressed (OCOMP
 not 0), the value of the ORECFM parameter is forced
 to V.
 
+
 | OS  | Details  |
 | --- | --- |
 | UNIX | The value "U" is kept for compatibility with previous versions. It has the same meaning as ORECFM=V. |
+
+
+ 
 
 [Return to Command index](../../)

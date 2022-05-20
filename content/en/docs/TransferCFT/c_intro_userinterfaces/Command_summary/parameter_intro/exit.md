@@ -2,7 +2,7 @@
 title: "exit"
 linkTitle: "exit"
 weight: 980
---- <span id="exit_CFTPROT"></span><span id="exit"></span>
+---<span id="exit_CFTPROT"></span><span id="exit"></span>
 
 ### exit
 
@@ -19,5 +19,7 @@ Used to activate a file EXIT user task. The value of this parameter
 may be equal to the symbolic variable &IDF.
 
 ####  
+
+ 
 
 [Return to Command index](../../)

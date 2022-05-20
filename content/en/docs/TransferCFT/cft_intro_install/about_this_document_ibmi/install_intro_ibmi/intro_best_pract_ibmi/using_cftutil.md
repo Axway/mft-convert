@@ -2,9 +2,9 @@
 title: "Using CFTUTIL Transfer CFT IBM i specific commands"
 linkTitle: "Using CFTUTIL IBM i specific commands"
 weight: 290
---- ## Line- mode commands
+---## Line-mode commands
 
-The Transfer CFT utility CFTUTIL can accept line- mode commands. Enter the command at the `CFTUTIL > `prompt and press ENTER to validate. To exit CFTUTIL, enter the` /end `command.
+The Transfer CFT utility CFTUTIL can accept line-mode commands. Enter the command at the `CFTUTIL > `prompt and press ENTER to validate. To exit CFTUTIL, enter the` /end `command.
 
 ****Examples****
 

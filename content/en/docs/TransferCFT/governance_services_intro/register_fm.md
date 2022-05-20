@@ -2,7 +2,7 @@
 title: "Register Transfer CFT with Flow Manager"
 linkTitle: "Register with Flow Manager"
 weight: 170
---- This section describes how to register a Transfer CFT instance with either an on premise or SaaS {{< TransferCFT/suitevariablesFlowManager  >}}. You can refer to the Flow Manager User Guide](https://docs.axway.com/bundle/FlowManager_20_allOS_en_HTML5/page/user_guide.html) for Flow Manager details.
+---This section describes how to register a Transfer CFT instance with either an on premise or SaaS {{< TransferCFT/suitevariablesFlowManager  >}}. You can refer to the [Flow Manager User Guide](https://docs.axway.com/bundle/FlowManager_20_allOS_en_HTML5/page/user_guide.html) for Flow Manager details.
 
 ## Prerequisites
 
@@ -15,8 +15,8 @@ weight: 170
 
 - The shared secret that the Flow Manager administrator generated. Refer to the [Flow Manager User Guide](https://docs.axway.com/bundle/FlowManager_20_allOS_en_HTML5/page/flow_manager_user_guide.html) for details.
 - If you are implementing a SaaS cloud Flow Manager, you additionally require:
-    - A Flow Manager Agent capable of interconnecting Flow Manager and your {{< TransferCFT/axwayvariablesComponentLongName >}} instance. Refer to the [Flow Manager User Guide](https://docs.axway.com/bundle/FlowManager_20_allOS_en_HTML5/page/user_guide.html) for details.
-    - Access to an on- demand Flow Manager SaaS environment.
+    -   A Flow Manager Agent capable of interconnecting Flow Manager and your {{< TransferCFT/axwayvariablesComponentLongName >}} instance. Refer to the [Flow Manager User Guide](https://docs.axway.com/bundle/FlowManager_20_allOS_en_HTML5/page/user_guide.html) for details.
+    -   Access to an on-demand Flow Manager SaaS environment.
 
 ## Automatically activate connectivity
 
@@ -26,9 +26,9 @@ The automatic activation is only available on UNIX and Windows platforms and can
 
 ## Manually activate connectivity
 
-This section describes the steps to register your {{< TransferCFT/axwayvariablesComponentLongName  >}} with {{< TransferCFT/suitevariablesFlowManager  >}}. The procedure is the same for either an on- premise or SaaS {{< TransferCFT/suitevariablesFlowManager  >}}, with the exception of the two steps described in [Define the {{< TransferCFT/suitevariablesFlowManager  >}} Agent](#Define).
+This section describes the steps to register your {{< TransferCFT/axwayvariablesComponentLongName  >}} with {{< TransferCFT/suitevariablesFlowManager  >}}. The procedure is the same for either an on-premise or SaaS {{< TransferCFT/suitevariablesFlowManager  >}}, with the exception of the two steps described in [Define the {{< TransferCFT/suitevariablesFlowManager  >}} Agent](#Define).
 
-All commands in this section are performed using CFTUTIL unless stated otherwise. For details on the UCONF parameters referenced in this section, please see [UCONF: Central Governance options.
+All commands in this section are performed using CFTUTIL unless stated otherwise. For details on the UCONF parameters referenced in this section, please see [UCONF: Central Governance options]().
 
 #### Define UCONF parameters used for {{< TransferCFT/axwayvariablesComponentLongName  >}} instance identification
 
@@ -43,7 +43,7 @@ uconfset id=cft.instance_group, value=<cft_instance_group>
 uconfset id=cft.full_hostname, value=<cft_address>
 ```
 
-Additionally, if running in a multi- host/multi- node environment, you must set the load balancer address(FQDN or IP address) and port that {{< TransferCFT/suitevariablesFlowManager  >}} uses to reach the Transfer CFT (`copilot.general.ssl_serverport`):
+Additionally, if running in a multi-host/multi-node environment, you must set the load balancer address(FQDN or IP address) and port that {{< TransferCFT/suitevariablesFlowManager  >}} uses to reach the Transfer CFT (`copilot.general.ssl_serverport`):
 
 ```
 uconfset id=cft.multi_node.load_balancer.host, value=<load_balancer_address>
@@ -60,9 +60,9 @@ uconfset id=cg.metadata.agent.value, value=<agent_host_FQDN>
 
 Please refer to the [Flow Manager User Guide](https://docs.axway.com/bundle/FlowManager_20_allOS_en_HTML5/page/user_guide.html) for Flow Manager Agent details.
 
-#### Optionally define a proxy server for on- premise {{< TransferCFT/suitevariablesFlowManager  >}} to {{< TransferCFT/axwayvariablesComponentLongName  >}} communication
+#### Optionally define a proxy server for on-premise {{< TransferCFT/suitevariablesFlowManager  >}} to {{< TransferCFT/axwayvariablesComponentLongName  >}} communication
 
-To use a proxy server for your on- premise {{< TransferCFT/suitevariablesFlowManager  >}} to connect to {{< TransferCFT/axwayvariablesComponentLongName  >}}, set the following parameters.
+To use a proxy server for your on-premise {{< TransferCFT/suitevariablesFlowManager  >}} to connect to {{< TransferCFT/axwayvariablesComponentLongName  >}}, set the following parameters.
 
 ```
 uconfset id=cg.proxy.in.host, value= <proxy_address>
@@ -171,9 +171,9 @@ CHECK CONTENT=BRIEF&#124;FULL, FOUT=FileName
 
 Check the list in the output for errors and correct all errors before attempting registration. See also, [Use the check command](../../c_intro_userinterfaces/about_cftutil/check_command).
 
-## Register or re- register
+## Register or re-register
 
-Ensure that `cft_registration_id `is reset to `- 1`. Otherwise, reset it as follows:  
+Ensure that `cft_registration_id `is reset to `-1`. Otherwise, reset it as follows:  
 
 ```
 CFTUTIL uconfunset id=cg.registration_id

@@ -2,7 +2,7 @@
 title: "Uninstall "
 linkTitle: "Uninstall"
 weight: 130
---- This page describes how to uninstall Transfer CFT. When you uninstall a Transfer CFT, you lose the complete Transfer CFT
+---This page describes how to uninstall Transfer CFT. When you uninstall a Transfer CFT, you lose the complete Transfer CFT
 configuration. To avoid this, save your environment (samples, exits, etc.) before removing the Transfer CFT.
 
 ## Modes
@@ -13,7 +13,7 @@ configuration. To avoid this, save your environment (samples, exits, etc.) befor
 
 ****Silent****
 
-` ./uninstall - - mode unattended`
+` ./uninstall --mode unattended`
 
 ## Procedure
 

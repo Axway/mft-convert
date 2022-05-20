@@ -2,7 +2,7 @@
 title: "spasswd"
 linkTitle: "spasswd"
 weight: 3280
---- ### spasswd
+---### spasswd
 
 #### CFTSEND/CFTRECV
 
@@ -30,3 +30,4 @@ Or you can use _AUTH_ to indicate authentication method as defined in the uconf 
 
 [Return to Command index](../../)
 
+ 

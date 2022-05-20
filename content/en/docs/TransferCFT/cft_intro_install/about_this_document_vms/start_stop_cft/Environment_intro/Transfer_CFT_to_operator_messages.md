@@ -2,7 +2,7 @@
 title: "Transfer CFT to operator messages "
 linkTitle: "Transfer CFT to operator messages"
 weight: 270
---- The CFTLOG command NOTIFY parameter is used to designate the operator where LOG messages are sent. These messages are processed differently, according to the syntax used for the NOTIFY parameter. Two possibilities are available, user name or hexadecimal value.
+---The CFTLOG command NOTIFY parameter is used to designate the operator where LOG messages are sent. These messages are processed differently, according to the syntax used for the NOTIFY parameter. Two possibilities are available, user name or hexadecimal value.
 
 - The NOTIFY parameter value is a user name. The messages intended for the operator are sent to all of the terminals on which the user is logged. Each message is displayed on the last line of the terminal. A new message overwrites the previous one. To stop receiving these messages on a particular terminal, enter the command: `$ set terminal/nobroadcast`
 
@@ -19,6 +19,7 @@ $ reply/enable=oper1
 ```
 
 **Hexadecimal values for the operator classes**
+
 
 | Symbolic Name  | Hexadecimal Mask  | Decimal Value  |
 | --- | --- | --- |

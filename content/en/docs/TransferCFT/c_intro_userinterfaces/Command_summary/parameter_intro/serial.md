@@ -2,7 +2,7 @@
 title: "serial"
 linkTitle: "serial"
 weight: 3170
---- ### serial
+---### serial
 
 #### SEND/RECV CFTSEND/CFTRECV
 
@@ -13,7 +13,7 @@ When sending files sequentially, this value is the processing phase that a seria
 Use this parameter to define file transfer serialization in flows, where:
 
 - ' ' : no serialization occurs (default)
-- Y: Post- processing
+- Y: Post-processing
 - X: Done
 
 See also, [Transfer serialization](../../../../app_integration_intro/transfer_serialization).

@@ -2,7 +2,7 @@
 title: "Read commands"
 linkTitle: "Read commands"
 weight: 300
---- The QUERY, TEST, and WAITCAT commands can locate the first transfer that meets a certain set of criteria. But, if there are other transfers that meet this same criteria, they are overlooked. To overcome this limitation and find these additional transfers, you can use the read commands.
+---The QUERY, TEST, and WAITCAT commands can locate the first transfer that meets a certain set of criteria. But, if there are other transfers that meet this same criteria, they are overlooked. To overcome this limitation and find these additional transfers, you can use the read commands.
 
 Three read commands are available and described in this section:
 
@@ -141,7 +141,7 @@ _MOV NAME=_ECHO,VALUE=0
 BEGSELCA DIRECT=SEND,DIAGI=406
 PRINT MSG='Partner DTSA File Transfer Diags Appli. '
 PRINT MSG=' Id. Id. CFT Protocol Id. '
-PRINT MSG='- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - '
+PRINT MSG='-------- ---- -------- -------- --- -------- --------'
 WHILE NAME = VAR, VALUE = 0, TYPE = EQU
 GETCAT
 Deleted: 1.3.
@@ -155,7 +155,8 @@ _STRCMP NAME=PART, STR=STRNIL ,RC=CMP
 IF NAME=CMP, VALUE=0, TYPE=EQU
 BRKWHILE
 ENDIF
-PRINT MSG='%[- 8.8]_CAT_PART% %_CAT_DIRECT%%_CAT_TYP%%_CAT_STATE% %[- 8.8]_CAT_IDF% %_CAT_IDT% %_CAT_DIAGI% %_CAT_DIAGP% %_CAT_IDA%'
+PRINT MSG='%[-8.8]_CAT_PART% %_CAT_DIRECT%%_CAT_TYP%%_CAT_STATE% %[-
+8.8]_CAT_IDF% %_CAT_IDT% %_CAT_DIAGI% %_CAT_DIAGP% %_CAT_IDA%'
 ENDWHILE
 ENDSELCA
 EXIT
@@ -176,12 +177,12 @@ MQUERY OBJECT = STR,
 #### Parameters
 
 - OBJECT: Possible values ​​are:
-    - CACHE: Select to list the {{< TransferCFT/axwayvariablesComponentShortName >}} catalog or command cache.
-    - SYSTEM: Lists system information.
+    -   CACHE: Select to list the {{< TransferCFT/axwayvariablesComponentShortName >}} catalog or command cache.
+    -   SYSTEM: Lists system information.
 - CONTENT: Possible values ​​are FUL / BRIEF.
 - NAME: Possible values ​​are:
-    - CAT: Lists  the catalog cache.
-    - COMMAND: Lists  the command cache.
+    -   CAT: Lists  the catalog cache.
+    -   COMMAND: Lists  the command cache.
 
 #### Example
 

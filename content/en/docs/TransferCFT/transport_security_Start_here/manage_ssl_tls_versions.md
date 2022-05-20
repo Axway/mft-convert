@@ -2,7 +2,7 @@
 title: "Managing SSL and TLS versions"
 linkTitle: "Manage SSL and TLS versions"
 weight: 170
---- This section describes how to manage the SSL and TLS versions, and enable compatibility mode if needed. Additionally, it provides details on TLS use with {{< TransferCFT/axwayvariablesComponentLongName  >}}.
+---This section describes how to manage the SSL and TLS versions, and enable compatibility mode if needed. Additionally, it provides details on TLS use with {{< TransferCFT/axwayvariablesComponentLongName  >}}.
 
 ## SSL/TLS parameters
 
@@ -63,15 +63,17 @@ It is important to note that the Transfer CFT SSL/TLS implementation allows a fa
 
 You can use these UCONF parameters to define the minimum SSL/TLS protocol version (setting these parameters to tls_1.0, for example, disables SSL 3.0 connections):
 
+
 | Parameter  | Description  | Type  | Possible values  | Default value  |
 | --- | --- | --- | --- | --- |
 | ssl.version_min  | Minimum SSL version allowed by the access management connector.  | enum  | ssl_3.0, tls_1.0, tls_1.1, tls_1.2  | tls_1.0  |
 | cft.ssl.version_min | Minimum SSL version allowed by the Transfer CFT server. Note that if default value for this parameter is not set, it uses the ssl.version_min value. | enum | ssl_3.0, tls_1.0, tls_1.1, tls_1.2  | $(ssl.version_min)  |
 | copilot.ssl.version_min | Minimum SSL version allowed by the Transfer CFT Copilot server. Note that if default value for this parameter is not set, it uses the ssl.version_min value. | enum  | ssl_3.0, tls_1.0, tls_1.1, tls_1.2  | $(ssl.version_min)  |
 
+
 #### Related information
 
-For *SSL 3.0 Protocol Vulnerability and POODLE attack* (CVE- 2014- 3566) details, refer to: <https://www.us- cert.gov/ncas/alerts/TA14- 290A>
+For *SSL 3.0 Protocol Vulnerability and POODLE attack* (CVE-2014-3566) details, refer to: <https://www.us-cert.gov/ncas/alerts/TA14-290A>
 
 ## TLS Server Name Indication (SNI)
 

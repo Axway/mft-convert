@@ -2,7 +2,7 @@
 title: "duplicat"
 linkTitle: "duplicat"
 weight: 770
---- ### duplicat
+---### duplicat
 
 ****CFTSEND, CFTRECV****
 

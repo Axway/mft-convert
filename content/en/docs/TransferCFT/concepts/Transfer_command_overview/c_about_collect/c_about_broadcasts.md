@@ -2,7 +2,7 @@
 title: "Broadcasting concepts"
 linkTitle: "Broadcasting processes "
 weight: 330
---- <span id="Broadcasting_through_a_store_and_forward_site"></span>
+---<span id="Broadcasting_through_a_store_and_forward_site"></span>
 
 ### Broadcasting using a store and forward site
 

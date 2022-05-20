@@ -2,7 +2,7 @@
 title: "Monitor transfers"
 linkTitle: "Monitor transfers"
 weight: 470
---- In the {{< TransferCFT/PrimaryCGorUM  >}} interface, select **Flows &gt; Monitoring** to open the Visibility user interface. Click **View_Flows** to show the list of available searches. For example then, select **View all flows**, then **Execute**.
+---In the {{< TransferCFT/PrimaryCGorUM  >}} interface, select **Flows &gt; Monitoring** to open the Visibility user interface. Click **View_Flows** to show the list of available searches. For example then, select **View all flows**, then **Execute**.
 
 ******Search for a specific file******
 
@@ -54,7 +54,7 @@ Click the browse icon to display a list of {{< TransferCFT/axwayvariablesCompone
 
 ******View all high priority flows in error******
 
-Finds all high- priority flows in error.
+Finds all high-priority flows in error.
 
 Click the name of the search to execute it. There are no conditions to specify.
 

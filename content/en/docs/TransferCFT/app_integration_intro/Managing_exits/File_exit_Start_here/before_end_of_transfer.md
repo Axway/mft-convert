@@ -2,10 +2,11 @@
 title: "Before the end of the transfer"
 linkTitle: "Stage Before the end of the transfer"
 weight: 420
---- If the user function manages file accessing, it must de- allocate the
+---If the user function manages file accessing, it must de-allocate the
 file.
 
 ### Fields to define
+
 
 | Field  | Description  |
 | --- | --- |
@@ -15,7 +16,9 @@ file.
 | exec | Name of the end of transfer procedure  |
 | faction | Action to be taken on the file after sending |
 
+
 ### Field values
+
 
 | Field | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
 | --- | --- | --- | --- | --- |
@@ -25,8 +28,8 @@ file.
 | retsync | 0 |   | 0 |   |
 | ret1 | 0 | * | 0 | * |
 | ret2 | blank | * | blank | * |
-| us- sem |   |   |   |   |
-| us- ctx |   |   |   |   |
+| us-sem |   |   |   |   |
+| us-ctx |   |   |   |   |
 | idexit | = | = | = | = |
 | exname | = | = | = | = |
 | parmexit | = | = | = | = |

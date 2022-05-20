@@ -2,7 +2,7 @@
 title: "Model and Physical file concepts"
 linkTitle: "Model and physical file concepts"
 weight: 230
---- This topic introduces the concepts of Model File Identifiers, IDF, and
+---This topic introduces the concepts of Model File Identifiers, IDF, and
 Physical Files.
 
 ### Types of transfers modes
@@ -125,6 +125,8 @@ is the default value defined in the DEFAULT parameter of CFTPARM.
 Example of the mechanisms to use for this
 type of transfer:
 
+ 
+
 **Implementing a sender/requester transfer
 (write) - Explicit parameter setting**
 
@@ -162,7 +164,7 @@ characteristics associated with this request may be managed in two ways,
 according to operating constraints:
 
 - Either using a
-    locked- for- sending command previously saved in the server catalog
+    locked-for-sending command previously saved in the server catalog
 
 This mode is activated by the transfer command SEND STATE=HOLD, the
 parameter STATE=HOLD indicating a delayed transfer ("H" state
@@ -292,7 +294,7 @@ in locked for sending mode at the server end with a single activation
 of the RECV command.
 
 To implement this mechanism, the value of the FILE parameter of the
-RECV command, at the requester end, must be equal to the pre- defined value
+RECV command, at the requester end, must be equal to the pre-defined value
 ALL (FILE = ALL).
 
 Transfers do not take place simultaneously.
@@ -414,7 +416,7 @@ This mechanism is used to receive all the files whose IDF at the server
 corresponds to the "mask" sent by the requester.
 
 To implement this mechanism, the value of the FILE parameter of the
-RECV command at the requester end must be equal to the pre- defined value
+RECV command at the requester end must be equal to the pre-defined value
 ALL (FILE = ALL).
 
 The server unlocks all pending transfers concerning the requester and
@@ -445,16 +447,20 @@ generic IDF**
 
 #### Global Receptions
 
+
 | **ODETTE, PeSIT D CFT profile, PeSIT E**  | Available only with the protocols mentioned above.  |
 | --- | --- |
 
+
 This mechanism allows the requester to receive all the files pending
 at the server end.
+
 
 | **ODETTE**  | Only the following receive command is valid:<br /> RECV IDF = *<br /> Although sequencing is at the sender’s initiative, the receiver end catalog will contain a record corresponding to the global reception request and a record for each reception, in the same way as for the other protocols. This command provides the possibility to change direction and hence globally receive all the files pending at the remote partner end.  |
 | --- | --- |
 | **PeSIT D CFT profile**  | To activate a reception from a requester {{< TransferCFT/axwayvariablesComponentShortName  >}} to a server monitor, only the following commands are valid:<br /> RECV IDF = * and RECV IDF = *, FILE = ALL |
 | **PeSIT D CFT profile, PeSIT E**  | Possible between two {{< TransferCFT/axwayvariablesComponentShortName  >}}s, using one of these two protocols.<br /> Between two CFTs, this is a special case of selective reception, the command being RECV IDF = *, FILE = ALL  |
+
 
 ### Protection of the model file identifier
 
@@ -480,6 +486,8 @@ indicated in the following figure.
 to send the requested IDF**
 
 ![](/Images/TransferCFT/Check_partner_authorizd_send_reqd_IDF.gif)
+
+ 
 
 These mechanisms may, in particular, be implemented to check whether
 partners are authorized or not to access or to write/create a file in

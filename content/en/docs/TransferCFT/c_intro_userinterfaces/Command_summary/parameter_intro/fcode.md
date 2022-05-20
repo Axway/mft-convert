@@ -2,7 +2,7 @@
 title: "fcode"
 linkTitle: "fcode"
 weight: 1090
---- <span id="fcode"></span>
+---<span id="fcode"></span>
 
 ### **<span id="fcode_CFTAUTH"></span>**fcode
 
@@ -11,6 +11,7 @@ weight: 1090
 The sent file data code. The following table indicates for each OS the
 default value supported.
 
+
 | OS  | Default  |
 | --- | --- |
 | z/OS (MVS) | EBCDIC  |
@@ -18,6 +19,7 @@ default value supported.
 | UNIX  | ASCII  |
 | VMS  | ASCII  |
 | Windows | ASCII  |
+
 
 <span id="fcode_CFTRECV"></span>
 
@@ -58,7 +60,7 @@ Note that an external translation table is taken into account:
 At each receive transfer:
 
 - if
-    the data received is in ASCII and the local data is in EBCDIC, or vice- versa,
+    the data received is in ASCII and the local data is in EBCDIC, or vice-versa,
     translation is always performed: translation according to an external
     table, or, by default, translation according to the {{< TransferCFT/axwayvariablesComponentShortName >}} internal
     table

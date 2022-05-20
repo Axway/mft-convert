@@ -1,8 +1,8 @@
 ---
 title: "Start/stop Transfer CFT"
-linkTitle: "Post- installation"
+linkTitle: "Post-installation"
 weight: 180
---- This section describes the procedures for using {{< TransferCFT/axwayvariablesComponentShortName  >}} in an OpenVMS environment.
+---This section describes the procedures for using {{< TransferCFT/axwayvariablesComponentShortName  >}} in an OpenVMS environment.
 
 A full installation performs all the tasks needed to adapt the required files to your system.
 

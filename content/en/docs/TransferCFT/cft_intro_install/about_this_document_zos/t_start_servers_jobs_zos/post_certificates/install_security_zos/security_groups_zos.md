@@ -2,7 +2,7 @@
 title: "Administrator group (GRPCFT)"
 linkTitle: "User groups"
 weight: 320
---- ### Administrator group (GRPCFT)
+---### Administrator group (GRPCFT)
 
 #### ALTER access rights for all Transfer CFT files
 
@@ -20,7 +20,7 @@ The administrator group must be able to perform all Transfer CFT management comm
 
 #### CFTMAIN JOB owner
 
-The only JOBs to be executed under the GRPMON group user must be the monitor start procedures, and the SWITCH – LOG and SWITCH- ACCNT commands. All CFTRECV and CFTSEND IMPL=YES commands must be defined with the USERID= and GROUPID= parameters, so that the Transfer CFT does not execute any end- of- transfer commands under user authority instead of under a correct user. 
+The only JOBs to be executed under the GRPMON group user must be the monitor start procedures, and the SWITCH – LOG and SWITCH-ACCNT commands. All CFTRECV and CFTSEND IMPL=YES commands must be defined with the USERID= and GROUPID= parameters, so that the Transfer CFT does not execute any end-of-transfer commands under user authority instead of under a correct user. 
 
 #### CFTMAIN execution rights
 

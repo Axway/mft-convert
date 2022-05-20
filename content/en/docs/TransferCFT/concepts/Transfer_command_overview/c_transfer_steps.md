@@ -2,15 +2,15 @@
 title: "Requester and server modes"
 linkTitle: "Transfer steps"
 weight: 170
---- Transfer CFT mechanisms differ depending on if the Transfer CFT is operating in
-requester mode or server mode, as mentioned in the Introduction. This section describes the transfer steps
+---Transfer CFT mechanisms differ depending on if the Transfer CFT is operating in
+requester mode or server mode, as mentioned in the [Introduction](). This section describes the transfer steps
 in relation to each mode.
 
 - In
     requester mode, Transfer CFT initiates the connection with the partner
     following a local request.
 - In
-    server mode, Transfer CFT replies to an incoming connection, re- sent
+    server mode, Transfer CFT replies to an incoming connection, re-sent
     by the system communication layers.
 
 For details on using these modes in a Central {{< TransferCFT/suitevariablesGovernance  >}} setting, please refer to the Central {{< TransferCFT/suitevariablesGovernance  >}} {{< TransferCFT/suitevariablesDocTypeUser  >}}.

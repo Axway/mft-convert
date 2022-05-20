@@ -1,10 +1,11 @@
 ---
-    title: "CycleId calculation"
+title: "CycleId calculation"
 linkTitle: "CycleId calculation"
 weight: 240
 ---The internal CycleId is an XFBTransfer Tracked Object attribute. This field has the structure described in the following table.
 
 Internal CycleID structure PeSIT
+
 
 | Offset | Length | PI | Description |
 | --- | --- | --- | --- |
@@ -22,7 +23,11 @@ Internal CycleID structure PeSIT
 | 154 | 1 | E | For transmission |
 | 154  | 1  | R | For reception |
 
+
+ 
+
 Internal CycleID structure SFTP
+
 
 | Offset | Length | Value  | Description |
 | --- | --- | --- | --- |

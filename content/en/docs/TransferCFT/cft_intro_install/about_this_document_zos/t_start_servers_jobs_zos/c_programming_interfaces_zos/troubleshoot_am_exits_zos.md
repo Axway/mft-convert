@@ -2,11 +2,11 @@
 title: "Troubleshoot and example definitions"
 linkTitle: "Troubleshoot AM exits"
 weight: 310
---- ## Common mistakes
+---## Common mistakes
 
-`    > ICH409I 282- 014 ABEND DURING RACHECK PROCESSING`
+`    > ICH409I 282-014 ABEND DURING RACHECK PROCESSING`
 
-`           - > invalid access value (if value <> 2 & 4 & 8)`
+`           -> invalid access value (if value <> 2 & 4 & 8)`
 
 ### Administrator
 
@@ -200,10 +200,10 @@ Define CONNECT 2
 
 ### Create a 'RACF' profile
 
-` - - - RDEFINE CORPCFT1 UI.** UACC(NONE) OWNER(......)`
+` ---  RDEFINE CORPCFT1 UI.** UACC(NONE) OWNER(......)`
 
 ### Give permissions to group(s) or user(s) ID(...)
 
-` - - - PERMIT UI.**  CLASS(CORPCFT1) ACCESS(READ) - `
+` ---  PERMIT UI.**  CLASS(CORPCFT1) ACCESS(READ) -`
 
 ID(... ...)

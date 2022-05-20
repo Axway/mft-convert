@@ -2,13 +2,14 @@
 title: "Miscellaneous  codes"
 linkTitle: "Miscellaneous codes"
 weight: 370
---- The codes in this topic are listed by protocol.
+---The codes in this topic are listed by protocol.
 
 <span id="FPDU_Build_Error_Codes__PeSIT_"></span>
 
 ### FPDU Build error codes (PeSIT)
 
-This code specifies a build error in the received PeSIT FPDU. It forms the "PDU iNN"- type protocol diagnostic code.
+This code specifies a build error in the received PeSIT FPDU. It forms the "PDU iNN"-type protocol diagnostic code.
+
 
 | Error code  | Description  |
 | --- | --- |
@@ -20,8 +21,8 @@ This code specifies a build error in the received PeSIT FPDU. It forms the "PDU 
 | 6 | Reception of an FPDU other than CONNECT with an incorrect CRC |
 | 7 | Reception of two or more FPDUs concatenated in one NSDU, while the CRC option is active. According to the protocol specifications, FPDU concatenation is inhibited with the CRC option enabled |
 | 8 | Header of a received FPDU does not conform: the size indicated is smaller than the minimum size of an FPDU. The minimum size of an FPDU in the PeSIT protocol is six bytes (length of the header). If a CRC is applied, the minimum size of an FPDU becomes eight bytes (length of a header with its CRC) |
-| 9 | Header of a received CONNECT- phase FPDU does not conform: an error has been detected in the target identifier in the header |
-| 10 | Header of a received CONNECT- phase FPDU does not conform: an error has been detected in the source identifier in the header |
+| 9 | Header of a received CONNECT-phase FPDU does not conform: an error has been detected in the target identifier in the header |
+| 10 | Header of a received CONNECT-phase FPDU does not conform: an error has been detected in the source identifier in the header |
 | 11 | Reception of a network message that is smaller than the minimum size of an FPDU. The minimum size of an FPDU in the PeSIT protocol is six bytes (length of the header). If a CRC is applied, the minimum size of an FPDU becomes eight bytes (length of a header with its CRC) |
 | 12 | Concatenated FPDU with invalid header |
 | 13 | Reception of an NSDU that is larger than that negotiated |
@@ -32,6 +33,7 @@ This code specifies a build error in the received PeSIT FPDU. It forms the "PDU 
 | 18 | Received FPDU of unknown type |
 | 19 | Received FPDU of a phase inconsistent with its type |
 
+
 <span id="CFT_Numeric_codes___OFTP__ODETTE__protocol"></span>
 
 ### {{< TransferCFT/axwayvariablesComponentShortName  >}} Numeric codes - OFTP (ODETTE) protocol
@@ -39,6 +41,7 @@ This code specifies a build error in the received PeSIT FPDU. It forms the "PDU 
 These codes, specific to the ODETTE protocol and internal to the {{< TransferCFT/axwayvariablesComponentShortName  >}},
 indicate the source of the failure. This code forms the DIAGP protocol diagnostic
 code. Values are expressed in hexadecimal.
+
 
 | Error code  | Description  |
 | --- | --- |
@@ -65,7 +68,7 @@ code. Values are expressed in hexadecimal.
 | 0551 | Invalid restart parameter value |
 | 0601 | IDF incompatibility. The received NIDF value does not correspond to the IDF requested (RECV IDF=xxxx command).<br/> Note: the only valid value for the IDF parameter of the RECV request is "*" |
 | 0650 | Reception of a negative A_SELECT |
-| 0701 | Error during the file de- selection phase at the partner end |
+| 0701 | Error during the file de-selection phase at the partner end |
 | 0750 | Internal monitor error: attempt to send a DATA FPDU but the "credit" has been completely spent and the {{< TransferCFT/axwayvariablesComponentShortName  >}} is waiting for a CDT FPDU |
 | 0751 | Record size is greater than the size of the exchange buffer |
 | 0A00 | Local SSRM FPDU formatting error |
@@ -85,6 +88,7 @@ code. Values are expressed in hexadecimal.
 | 0B04 | Local EFNA FPDU formatting error |
 | 0B05 | Local RTR FPDU formatting error |
 
+
 <span id="CFT_Mnemonic_codes___Odette_protocol"></span>
 
 ### {{< TransferCFT/axwayvariablesComponentShortName  >}} Mnemonic codes - ODETTE protocol
@@ -92,8 +96,9 @@ code. Values are expressed in hexadecimal.
 These codes, specific to the ODETTE protocol and internal to the {{< TransferCFT/suitevariablesTransferCFTName  >}},
 indicate the source of the fault.
 
-This code forms the "XXX HHHH"- type DIAGP protocol diagnostic
+This code forms the "XXX HHHH"-type DIAGP protocol diagnostic
 code. Values are expressed in mnemonic form.
+
 
 | Error code  | Description  |
 | --- | --- |
@@ -110,6 +115,7 @@ code. Values are expressed in mnemonic form.
 | SSI | Error during negotiation of a session parameter (SSID FPDU) |
 | VER | Error in the protocol software release number (at present this number is set to 1) |
 
+
 <span id="FPDU_Mnemonic_codes___PeSIT_protocol"></span>
 
 ### FPDU Mnemonic codes - PeSIT protocol
@@ -117,6 +123,7 @@ code. Values are expressed in mnemonic form.
 This code forms the "XXX NNN" or "XXX iNNN" DIAGP
 protocol diagnostic code in the PeSIT protocol; it represents the XXX
 part. Values are expressed in mnemonic form.
+
 
 | Code  | FPDU  |
 | --- | --- |

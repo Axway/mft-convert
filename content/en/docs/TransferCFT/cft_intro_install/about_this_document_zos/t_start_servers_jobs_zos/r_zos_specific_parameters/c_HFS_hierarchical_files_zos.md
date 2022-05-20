@@ -2,9 +2,9 @@
 title: "HFS hierarchical files"
 linkTitle: "HFS hierarchical files"
 weight: 310
---- The HFS Hierarchical File System data architecture is consecutive and non- structured for records and blocks. The HFS files are installed in hierarchical disk spaces, and divided into directories and sub- directories according to UNIX conventions.
+---The [HFS Hierarchical File System]() data architecture is consecutive and non-structured for records and blocks. The HFS files are installed in hierarchical disk spaces, and divided into directories and sub-directories according to UNIX conventions.
 
-HFS files are managed either by applications that work in an UNIX/OMVS environment, or by applications that use the USS UNIX System Services, such as the management and access interface.
+HFS files are managed either by applications that work in an UNIX/OMVS environment, or by applications that use the [USS UNIX System Services](), such as the management and access interface.
 
 Transfer CFT only accepts the complete name from the root directory. All file name components are separated by the ‘/’ character. The complete name is limited to 248 characters.
 
@@ -43,25 +43,25 @@ FNAME =/home/qualcft/\*\*
 
 ### HFS file characteristics
 
-HFS files are specified by their type, depending on whether they contain text (structured) or are binary (non- structured). The FTYPE= and NTYPE= parameters convey the file type.
+HFS files are specified by their type, depending on whether they contain text (structured) or are binary (non-structured). The FTYPE= and NTYPE= parameters convey the file type.
 
 The values allocated to TYPE are:
 
 - T: text file
-    - This file is structured
-    - The logical records are limited
-    - Transfer CFT treats the data in record mode
+    -   This file is structured
+    -   The logical records are limited
+    -   Transfer CFT treats the data in record mode
 
-<!- - - - >
+<!-- -->
 
 - B: binary file
-    - This file is non- structured
-    - Transfer CFT treats the data in continuous flow
+    -   This file is non-structured
+    -   Transfer CFT treats the data in continuous flow
 
-<!- - - - >
+<!-- -->
 
 - J: stream text
-    - Enables sending a text file that contains records that are larger than 32 KB
+    -   Enables sending a text file that contains records that are larger than 32 KB
 
 If the parameter is not present, the binary file type becomes the default type.
 
@@ -89,11 +89,11 @@ Transfer CFT z/OS manages the file owner and the access rights in two ways:
 - Transfer CFT is an authorized program and the CFTPARM USERCTRL parameter is set to YES.  
     As a result, files are created/read/written with the same rights as the requesting user. This is the recommended operating mode.
 
-<!- - - - >
+<!-- -->
 
 - Otherwise, the HFS files are created/read/written with the rights of the Transfer CFT. It is recommended that you assign a UID to the Transfer CFT that is not 0.
 
-When a received transfer leads to the creation of an HFS file, the file is created with the access right - rwxr- xr- x.
+When a received transfer leads to the creation of an HFS file, the file is created with the access right -rwxr-xr-x.
 
 Before Transfer CFT z/OS creates a file, it checks that enough space is available in the File System. If not, Transfer CFT refuses the creation, and returns error code 00F00B37.
 
@@ -101,7 +101,7 @@ Transfer CFT handles HFS files smaller than 4 terabytes.
 
 Changing the name of an HFS file can only be carried out in the same directory. Additionally, the file path that is described in the FNAME= parameter must be identical to the path specified in the WFNAME=parameter.
 
-### HFS- specific error message
+### HFS-specific error message
 
 For each HFS file access error, Transfer CFT z/OS displays the CFTHF01E message in the SYSLOG.
 
@@ -113,7 +113,7 @@ Where:
 
 - BPX1mod: Name of the service module that returned the error
 
-<!- - - - >
+<!-- -->
 
 - RSN=xxxxxxxx: The returned reason code
 

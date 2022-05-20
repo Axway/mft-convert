@@ -2,7 +2,7 @@
 title: "Using  PKI exits: Start here"
 linkTitle: "Using PKI exits"
 weight: 190
---- This book describes the rules for implementing the PKI exit. This book
+---This book describes the rules for implementing the PKI exit. This book
 begins with this topic which describes
 the following PKI exit concepts:
 
@@ -17,7 +17,7 @@ the following PKI exit concepts:
 
 ## PKI exit overview
 
-The PKI exit is used to extract all or part of an external PKI, third- party
+The PKI exit is used to extract all or part of an external PKI, third-party
 software, or OS APIs. It enables a user to take control at different stages
 when opening an SSL session, to handle authentication in place of the
 Transfer CFT PKI.
@@ -66,7 +66,7 @@ during the subsequent phases.
 
 ### Processing
 
-A PKI exit co- exists with the Transfer CFT PKI, the local certificate
+A PKI exit co-exists with the Transfer CFT PKI, the local certificate
 internal datafile specific to the product.
 
 It is first called at each step described previously and:

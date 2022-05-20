@@ -2,7 +2,7 @@
 title: "Transfer CFT: Install, update, upgrade or migrate"
 linkTitle: "Installation (allOS)"
 weight: 60
---- The Transfer CFT installation and migration documentation provides instructions for installing, upgrading, migrating, and deploying your {{< TransferCFT/axwayvariablesComponentShortName  >}}, and includes the following information:
+---The Transfer CFT installation and migration documentation provides instructions for installing, upgrading, migrating, and deploying your {{< TransferCFT/axwayvariablesComponentShortName  >}}, and includes the following information:
 
 - How to prepare for installation
 - How to install
@@ -48,7 +48,8 @@ You should be aware of the following features or parameters, which were modified
 
 - Additional documentation is available at {{< TransferCFT/axwayvariablesCompanyName >}} Support at [https://support.axway.com](https://support.axway.com/).
 
-<!- - - - >
+<!-- -->
 
 - Refer to the Axway [Supported Platforms](https://docs.axway.com/bundle/Axway_Products_SupportedPlatforms_allOS_en/resource/Axway_Products_SupportedPlatforms_allOS_en.pdf) document for a complete platform and version listing.
 
+ 

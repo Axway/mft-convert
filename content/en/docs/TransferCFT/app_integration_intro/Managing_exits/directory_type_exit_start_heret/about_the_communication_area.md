@@ -2,7 +2,7 @@
 title: "About  the communication area"
 linkTitle: "About the communication area"
 weight: 330
---- This topic describes the communication area structure. The communication
+---This topic describes the communication area structure. The communication
 area contains:
 
 - [General
@@ -25,6 +25,7 @@ The following tables list all the fields of the communication structure.
 
 ### General information fields
 
+
 | ****Field**** | ****Explanation**** |
 | --- | --- |
 | version  | Interface version number<br/> The current version number is "0130". |
@@ -46,11 +47,13 @@ The following tables list all the fields of the communication structure.
 | maxrtyp  | Requester mode only<br/> Maximum number of protocol connection attempts |
 | currtyp | Requester mode only<br/> Current number of protocol connection attempts |
 | protl  | Information about the protocols of the CFTPARM object:<br/> • protocol identifier<br/> • protocol type<br/> • profile, in the case of the PESIT protocol<br/> • associated network type |
-| idf  | Partner- related file identifier |
+| idf  | Partner-related file identifier |
+
 
 <span id="Return_codes___directory_exit"></span>
 
 ### Return codes
+
 
 | Field | Explanation |
 | --- | --- |
@@ -59,9 +62,11 @@ The following tables list all the fields of the communication structure.
 | diag | Diagnostic code if the return code is not 0 and 1<br/> The contents of this field are used in the EXIT related error. |
 | msg  | User message<br/> If this field is defined, the content is sent to the Transfer CFT standard output. |
 
+
 <span id="Partner_information___directory_exit"></span>
 
 ### Partner information
+
 
 | Field | Explanation |
 | --- | --- |
@@ -93,9 +98,11 @@ The following tables list all the fields of the communication structure.
 | rauth | File receive authorization list identifier |
 | xlate | Transcoding table identifier |
 
+
 <span id="Partner_network_information___directory_exit"></span>
 
 ### Partner network information
+
 
 | Field | Explanation |
 | --- | --- |
@@ -112,9 +119,11 @@ The following tables list all the fields of the communication structure.
 | cnxout | Maximum number of simultaneous outgoing calls, for the given network partner |
 | cnxinout | Maximum number of simultaneous communications, for the given network partner |
 
+
 <span id="Network_dependent_information___directory_exit"></span>
 
 ### Network dependent information
+
 
 | Field | Explanation |
 | --- | --- |
@@ -134,7 +143,9 @@ The following tables list all the fields of the communication structure.
 | padno | Obsolete parameter |
 | padset | Obsolete parameter |
 
+
 ### Additional information
+
 
 | Field | Explanation |
 | --- | --- |

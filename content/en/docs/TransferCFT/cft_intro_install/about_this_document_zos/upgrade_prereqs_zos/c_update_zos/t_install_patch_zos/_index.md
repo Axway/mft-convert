@@ -1,14 +1,14 @@
 ---
-title: "Transfer CFT maintenance (non- SMP/E)"
-linkTitle: "Transfer CFT maintenance (non- SMP/E)"
+title: "Transfer CFT maintenance (non-SMP/E)"
+linkTitle: "Transfer CFT maintenance (non-SMP/E)"
 weight: 250
---- ## Update or apply a service pack (non- SMP/E)
+---## Update or apply a service pack (non-SMP/E)
 
-This section describes how to install a patch or service pack on your z/OS Transfer CFT using the non- SMP/E method.
+This section describes how to install a patch or service pack on your z/OS Transfer CFT using the non-SMP/E method.
 
 Information includes:
 
-- Install update libraries (PTF)](#Install%20update%20libraries%20(PTF))
+- [Install update libraries (PTF)](#Install%20update%20libraries%20(PTF))
 - [Transfer the PTF file to the host machine](#Transfer%20the%20PTF%20file%20to%20the%20host%20machine)
 - [Integrate PTF elements using A13PTFLD](#Integrate%20PTF%20elements%C2%A0using%20A13PTFLD) 
 - [Apply a PTF using A13PTFLK](#Apply%20a%20PTF%C2%A0using%20A13PTFLK) 
@@ -17,13 +17,14 @@ Information includes:
 
 ## Install update libraries
 
-A PTF file results from the fixed formatting (80) of an ADRDSSU- type file containing the update libraries. The PTF format is used by all delivery and distribution modes. The PTF files are available at [support.axway.com](http://support.axway.com/).
+A PTF file results from the fixed formatting (80) of an ADRDSSU-type file containing the update libraries. The PTF format is used by all delivery and distribution modes. The PTF files are available at [support.axway.com](http://support.axway.com/).
 
 > **Note**
 >
 > PTF files are cumulative. A basic Transfer CFT z/OS installation can integrate PTFs. If you use this method, apply the PTFs one at a time.
 
 Libraries taken into account during a DUMP ADRDSSU
+
 
 | Libraries  | Contents  |
 | --- | --- |
@@ -43,6 +44,7 @@ Libraries taken into account during a DUMP ADRDSSU
 | H  | Update ‘header’ C.  |
 | XMLLIB  | Update XML components.  |
 | EXEC  | Update Transfer CFT procedures.  |
+
 
 <span id="Transfer the PTF file to the host machine"></span>
 
@@ -68,11 +70,11 @@ Where:
 
 - xxxxxx identifies the PTF number
 
-<!- - - - >
+<!-- -->
 
 - distlib indicates the distribution environment
 
-<!- - - - >
+<!-- -->
 
 - distlib.UPLIB library is created during the product installation
 
@@ -86,15 +88,16 @@ If an FTP server is configured on the workstation, you can use the sample JCL, A
 
 All of the A13\* JCLs are used to update or apply a Service Pack to Transfer CFT as described here.
 
+
 | JCL  | Description  |
 | --- | --- |
 | A13AUTO  | To automatically apply fixes.  |
 | A13PTFFT  | To transfer a patch to the distlib.UPLIB in binary mode (using FTP - mode GET).  |
 | A13PTFLD  | To update the distribution libraries. (ADRDSSU)  |
 | A13PTFLI  | To update the distribution libraries. (XMIT)  |
-| A13PTFLK  | To apply a patch in the Transfer CFT loadlib (create a save library/link- edit).  |
+| A13PTFLK  | To apply a patch in the Transfer CFT loadlib (create a save library/link-edit).  |
 | A13RSTOR  | To restore the loadlib from a save library.  |
-| A13SDEL  | To delete a save- load library when a patch is validated, or if the loadlib is restored to reapply a patch.  |
+| A13SDEL  | To delete a save-load library when a patch is validated, or if the loadlib is restored to reapply a patch.  |
 |   | **Transfer CFT Copilot update**  |
 | A13UCOPA  | To apply a patch to Transfer CFT Copilot (Create a save file).  |
 | A13UCOPR  | To restore the Transfer CFT Navigator environment from a save file in USS environment.  |
@@ -109,6 +112,7 @@ All of the A13\* JCLs are used to update or apply a Service Pack to Transfer CFT
 | A13XML  | To update the XML library.  |
 | A13WDEL  | To delete work files. |
 | A13RBACK  | To automatically execute the three jobs A13RSTOR, A13UCOPR, and A13UXSRR.  |
+
 
 <span id="Integrate PTF elements using A13PTFLD"></span>
 
@@ -142,7 +146,7 @@ For more information, you can consult the patch documentation located in the dis
 
 ## Apply a PTF using A13PTFLK
 
-Usually a patch is applied through a LINK- EDIT. The JCL A13PTFLK is found in the target.INSTALL library.
+Usually a patch is applied through a LINK-EDIT. The JCL A13PTFLK is found in the target.INSTALL library.
 
 Before submitting the JOB, specify the LINK EDIT identifier in the EXEC card:
 
@@ -158,9 +162,9 @@ This JOB runs in several phases:
 
 - Backup of LOAD libraries, of which one of the qualifiers is the PTF identifier
 
-<!- - - - >
+<!-- -->
 
-- LINK- EDIT
+- LINK-EDIT
 
 > **Note**
 >
@@ -226,4 +230,4 @@ If ID='NONE', this JCL is not submitted.
 
 ****Related topics****
 
-- [About migrating Transfer CFT z/OS
+- [About migrating Transfer CFT z/OS]()

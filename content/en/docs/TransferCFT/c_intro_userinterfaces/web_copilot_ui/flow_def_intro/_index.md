@@ -2,7 +2,7 @@
 title: "Flow definitions"
 linkTitle: "Flow definitions"
 weight: 160
---- This page outlines the flow management section of the Transfer CFT UI.
+---This page outlines the flow management section of the Transfer CFT UI.
 
 - Partners: Define a partner and set partner characteristics
 - Broadcast lists: Manage the list of partners for distribute/collect operations

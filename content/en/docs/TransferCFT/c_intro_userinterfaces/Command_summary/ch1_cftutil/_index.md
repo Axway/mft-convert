@@ -2,7 +2,7 @@
 title: "CFTUTIL programming"
 linkTitle: "CFTUTIL programming"
 weight: 180
---- ## Elements
+---## Elements
 
 ### Comments
 
@@ -12,7 +12,7 @@ A comment is text that is delimited by the character pairs / \* and \*/, which i
 
 An internal command or application consists of the following:
 
-- ****A unique keyword**** that identifies the command (id_cmd). A keyword is a string composed of a maximum of 8 characters, and begins with an alphabetic character (A- Z, a- z).
+- ****A unique keyword**** that identifies the command (id_cmd). A keyword is a string composed of a maximum of 8 characters, and begins with an alphabetic character (A-Z, a-z).
 - ****A list of arguments****
 
 The general command syntax is:
@@ -80,7 +80,7 @@ id = 'J /' APOSTROPHE '
 
 ### Hexadecimal
 
-A value may consist of any character hexadecimal (0- 9, A- F, a- f).
+A value may consist of any character hexadecimal (0-9, A-F, a-f).
 
 ```
 id = 0123456789ABCDEFabcdef
@@ -88,7 +88,7 @@ id = 0123456789ABCDEFabcdef
 
 ### Numeric
 
-A value may consist of any numeric character (0- 9).
+A value may consist of any numeric character (0-9).
 
 ```
 id = 0123456789
@@ -96,7 +96,7 @@ id = 0123456789
 
 ### Binary
 
-A value may consist of any binary character (0- 1).
+A value may consist of any binary character (0-1).
 
 ```
 id = 0110010100

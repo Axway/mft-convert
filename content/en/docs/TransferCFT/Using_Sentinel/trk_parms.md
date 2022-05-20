@@ -1,5 +1,5 @@
 ---
-    title: "TRK configuration parameters"
+title: "TRK configuration parameters"
 linkTitle: "TRK configuration parameters"
 weight: 210
 ---To limit the number of messages related to monitoring the XFB.Transfer class, due to a large number of transfers, you can set the monitoring parameters as described in this section.
@@ -22,6 +22,7 @@ The parameter definitions are taken into account in the order listed below. For 
 >
 > When using Central Governance to manage Transfer CFT, you can only use TRK at the flow level, which corresponds to transfer models, but not for partners and general parameters.
 
+
 | Definition  | NO  | ALL  | SUMMARY  | ERROR  | UNDEFINED  |
 | --- | --- | --- | --- | --- | --- |
 | 1. Transfer requests (SEND/RECV in requester mode only)  | No tracking  | Full tracking  | First and last  | Errors only  | Uses the transfer definition  |
@@ -29,6 +30,7 @@ The parameter definitions are taken into account in the order listed below. For 
 | 3. Partners | No tracking | Full tracking | First and last  | Errors only  | Uses the general parameter definition  |
 | 4. General parameters (CFTPARM)  | No tracking  | Full tracking  | First and last  | Errors only  | Uses the UCONF definition (sentinel.xfb.transfer)  |
 | 5. UCONF definition  | No<br/> tracking | Full tracking  | First and last  | Errors only  | N/A  |
+
 
 ### Check Transfer CFT's Sentinel task (CFTTRK) activity
 

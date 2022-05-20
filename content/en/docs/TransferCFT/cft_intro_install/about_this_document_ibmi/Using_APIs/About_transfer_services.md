@@ -2,7 +2,7 @@
 title: "Transfer  services"
 linkTitle: "Transfer services"
 weight: 250
---- Use the transfer services to send transfer control commands to Transfer
+---Use the transfer services to send transfer control commands to Transfer
 CFT, with or without a **syntax analysis**
 of these commands. The programming interface proposes a function integrating
 a syntax analysis of the command to detect any errors, at the source,
@@ -27,6 +27,7 @@ has executed the command correctly. A return code indicating the success
 of the function only means that the command has been correctly placed
 in the communication medium.
 
+
 | Function | Use |
 | --- | --- |
 | SEND | Send transfer request: file, message or reply |
@@ -35,8 +36,8 @@ in the communication medium.
 | KEEP | Suspend one or more send or receive transfers with a given partner.<br/> The interrupted transfers are set to the "K" state and can only be restarted by a START command. |
 | START | Start one or more send or receive transfers |
 | DELETE | Delete a catalog entry and any transfer in process associated with it |
-| END | Set a transfer status to executed<br/> The transfer is set to the "X" state. This indicates that end- of- transfer procedure has been correctly executed. |
-| SUBMIT | Submit the end- of- transfer procedure |
+| END | Set a transfer status to executed<br/> The transfer is set to the "X" state. This indicates that end-of-transfer procedure has been correctly executed. |
+| SUBMIT | Submit the end-of-transfer procedure |
 | SHUT | Shut down {{< TransferCFT/axwayvariablesComponentShortName  >}} |
 | SWITCH | Switch monitoring files, LOG, STATS... |
 | CLOSEAPI | Free resources allocated at opening of communication medium: memory, network, file |

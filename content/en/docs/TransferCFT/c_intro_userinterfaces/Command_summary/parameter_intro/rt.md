@@ -2,7 +2,7 @@
 title: "rt"
 linkTitle: "rt"
 weight: 3020
---- <span id="rt"></span>
+---<span id="rt"></span>
 
 ### rt
 
@@ -12,5 +12,7 @@ weight: 3020
 
 Number of days after which the catalog entries of terminated receive
 transfers (RT state) are automatically purged.
+
+ 
 
 [Return to Command index](../../)

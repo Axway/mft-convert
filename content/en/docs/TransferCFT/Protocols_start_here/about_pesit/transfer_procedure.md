@@ -2,7 +2,7 @@
 title: "Transfer  procedure "
 linkTitle: "Transfer procedure"
 weight: 210
---- This topic describes the following PeSIT transfer procedure processes and concepts:
+---This topic describes the following PeSIT transfer procedure processes and concepts:
 
 - [Establishing a connection](#Establishing_a_connection)
 - [Transfer concatenation](#Transfer_Concatenation)
@@ -23,11 +23,11 @@ Following a transfer request, the requesting Transfer CFT:
     connection frame
 
 At the server end, Transfer
-CFT always positively acknowledges the pre- connection message. Another
+CFT always positively acknowledges the pre-connection message. Another
 Transfer CFT may perform an initial access control on the basis of the identifiers
 provided by the requester in the LOGON message.
 
-If the pre- connection message is acknowledged positively, the requester
+If the pre-connection message is acknowledged positively, the requester
 then sends a protocol connection request (FPDU CONNECT of the PeSIT protocol).
 As for the LOGON message, the requester identification protocol fields
 are set to the values NPART1 and NPASSW1.
@@ -48,20 +48,20 @@ and error codes](../../../troubleshoot_intro/messages_and_error_codes_start_here
 
 ## Transfer concatenation
 
-The figure below shows a concatenation of one- way send transfers. If
+The figure below shows a concatenation of one-way send transfers. If
 the time interval between two requests remains below the values of the
-time- out parameters DISCTD (at the requester end) and DISCTS
+time-out parameters DISCTD (at the requester end) and DISCTS
 (at the server end), the transfers are able to be concatenated over the
 same protocol connection.
 
-Once these time- outs have expired, the protocol connection is broken
-by the first partner whose time- out limit is reached. Another session
+Once these time-outs have expired, the protocol connection is broken
+by the first partner whose time-out limit is reached. Another session
 therefore has to be established to respond to a further transfer request.
-It is consequently best to correctly set up the wait time- outs between
+It is consequently best to correctly set up the wait time-outs between
 transfers to optimize the use of network resources and avoid performance
 being degraded by the systematic establishing of a protocol connection.
 
-#### Time- out role
+#### Time-out role
 
 ![Protocol session time out role betweeen a requester and server ](/Images/TransferCFT/Timeout_role3.gif)
 
@@ -72,7 +72,7 @@ transfers in different directions over the same protocol connection. This
 parameter is only taken into account in requester mode. If REVERSE = YES
 is specified, concatenation is possible provided that the time interval
 between two successive transfer requests does not exceed the configured
-wait time- outs. If REVERSE = NO is specified, a protocol connection is established
+wait time-outs. If REVERSE = NO is specified, a protocol connection is established
 for each transfer.
 
 It should be noted that a transfer only uses an established connection
@@ -80,11 +80,11 @@ for the same pair of requester and server identifiers. In particular,
 a requester cannot request a transfer with its partner over a connection
 for which it was initially server.
 
-#### One- way protocol connection
+#### One-way protocol connection
 
 ![One way protocol session connection between requester and server](/Images/TransferCFT/One_way_protocol_connection.gif)
 
-#### Two- way protocol connection
+#### Two-way protocol connection
 
 ![Two way protocol session connection between requester and server](/Images/TransferCFT/Two_way_protocol_connection.gif)
 
@@ -170,7 +170,7 @@ request:
     looks for the transfer context in the catalog. It then actualizes PI 11,
     12 and 13 found in the reception request (FPDU SELECT).
 
-<!- - - - >
+<!-- -->
 
 - In server/sender
     mode, on receipt of an FPDU SELECT indicating a retry request, the
@@ -180,7 +180,7 @@ request:
     diagnostic with a value of 205 (file nonexistent) or 214 (negotiation
     failure at retry point).
 
-<!- - - - >
+<!-- -->
 
 - In requester/sender
     mode, the retry request is of local origin  
@@ -188,7 +188,7 @@ request:
     looks for the transfer context in the catalog. It then actualizes PI 11,
     12 and 13 found in the send request (FPDU CREATE).
 
-<!- - - - >
+<!-- -->
 
 - In server/receiver
     mode, on receipt of an FPDU CREATE indicating a retry request,

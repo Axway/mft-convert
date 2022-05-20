@@ -2,7 +2,7 @@
 title: "datetimemin"
 linkTitle: "datetimemin"
 weight: 640
---- ### datetimemin
+---### datetimemin
 
 #### LISTLOG
 
@@ -16,7 +16,7 @@ Use to display logs that happened on or after this start date and time. The defa
 
 Use to display catalog transfers that happened on or after this start date and time according to the transfer record creation (DATEK, TIMEK). The default value unit is DAY. This parameter accepts either absolute or relative values. Use the syntactical format where:
 
-- Relative values are: - 1, - 1M, - 1H, - 1D
+- Relative values are: -1, -1M, -1H, -1D
 - Absolute values are: YYYYMMDDhhmmss with a maximum of 14 characters
 
 You can use this parameter in combination with [datetimemax](../datetimemax).
@@ -24,7 +24,7 @@ You can use this parameter in combination with [datetimemax](../datetimemax).
 ****Relative example****
 
 ```
-CFTUTIL display datetimemin=- 3H
+CFTUTIL display datetimemin=-3H
 ```
 
 ****Absolute example****

@@ -1,8 +1,8 @@
 ---
 title: "Running Transfer CFT for the first time UNIX"
-linkTitle: "Post- installation"
+linkTitle: "Post-installation"
 weight: 150
---- The elements and tasks required to
+---The elements and tasks required to
 start {{< TransferCFT/axwayvariablesComponentShortName  >}} for the first time include:
 
 - [Set the environment](#Set)
@@ -21,17 +21,17 @@ After installing {{< TransferCFT/axwayvariablesComponentShortName  >}}
     variables. Run: `‘. ./profile’`
 - Create a new set of Transfer
     CFT working files, parameters, partners, catalog, communication file, logs,
-    use the sample configuration files cft- tcp.conf and cft- tcp- part.conf in the `runtime/conf `directory. You can configure these during the product installation, or manually after installation.
+    use the sample configuration files cft-tcp.conf and cft-tcp-part.conf in the `runtime/conf `directory. You can configure these during the product installation, or manually after installation.
 - Use `cftinit <configuration_file>` > and/or `cftupdate` to interpret the parameter and
     partner files.  
     ```
-    cftinit conf/cft- tcp.conf
-    cftupdate conf/cft- tcp- part.conf
+    cftinit conf/cft-tcp.conf
+    cftupdate conf/cft-tcp-part.conf
     ```
-
+      
     or  
     ```
-    cftinit conf/cft- tcp.conf conf/cft- tcp- part.conf
+    cftinit conf/cft-tcp.conf conf/cft-tcp-part.conf
     ```
 
 > **Note**
@@ -41,8 +41,8 @@ After installing {{< TransferCFT/axwayvariablesComponentShortName  >}}
 
 ****Sample file details****
 
-- `cft- tcp.conf`: Contains PARM object definitions (PARM, CAT, COM, LOG, ACCNT, PROT, SEND, RECV,...etc.)
-- `cft- tcp- part.conf`: Contains partner definitions (CFTPART, CFTTCP, CFTSSL)
+- `cft-tcp.conf`: Contains PARM object definitions (PARM, CAT, COM, LOG, ACCNT, PROT, SEND, RECV,...etc.)
+- `cft-tcp-part.conf`: Contains partner definitions (CFTPART, CFTTCP, CFTSSL)
 
 Delivered partners are:
 
@@ -54,13 +54,15 @@ Delivered partners are:
 
 The following table lists the commands according to {{< TransferCFT/axwayvariablesComponentLongName  >}} version.
 
+
 | Version 2.7.1 and higher  | Version 2.7.0 and lower  |
 | --- | --- |
 | cft start  | cftstart  |
 | cft stop  | cftstop  |
 | cft status  | cftstatus  |
-| cft force- stop  | cftstop - kill  |
-| cft force- stop –kill  | cftstop - forcedkill  |
+| cft force-stop  | cftstop -kill  |
+| cft force-stop –kill  | cftstop -forcedkill  |
+
 
 > **Note**
 >

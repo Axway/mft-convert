@@ -1,8 +1,8 @@
 ---
-title: "Configure multi- node simultaneous transfers"
+title: "Configure multi-node simultaneous transfers"
 linkTitle: "Configure simultaneous transfers "
 weight: 200
---- The Transfer CFT session management in a multi- node architecture differs from a standalone implementation. This section describes parameters you can use to customize a multi- node environment, and offers some recommendations.
+---The Transfer CFT session management in a multi-node architecture differs from a standalone implementation. This section describes parameters you can use to customize a multi-node environment, and offers some recommendations.
 
 > **Note**
 >
@@ -11,7 +11,7 @@ weight: 200
 
 ## Global settings
 
-The MAXCNX and MAXTRANS parameters control the Transfer CFT maximum number of simultaneous connections and authorized parallel transfers respectively. It is important to remember that the MAXCNX and MAXTRANS values in a multi- node architecture apply to each node. This means that if there are 3 nodes, multiply the MAXCNX value by 3 to have the actual value for that Transfer CFT.
+The MAXCNX and MAXTRANS parameters control the Transfer CFT maximum number of simultaneous connections and authorized parallel transfers respectively. It is important to remember that the MAXCNX and MAXTRANS values in a multi-node architecture apply to each node. This means that if there are 3 nodes, multiply the MAXCNX value by 3 to have the actual value for that Transfer CFT.
 
 If you have limited resources, set the MAXTRANS to a low value. If resources are not limited, a rule of thumb might be to set MAXTRANS to the sum of all partner CNXINOUT values (maximum value of 1000).
 
@@ -19,7 +19,7 @@ See also [Configure simultaneous transfers](../../concepts/about_parallel_transf
 
 ## Session parameters
 
-You can use the CNXIN, CNXOUT, and CNXINOUT parameters in CFTTCP to define the number of sessions. The formulas in this section apply equally to both a multi- node to multi- node configuration, and to a multi- node to standalone configuration, where the standalone installation has (`nb_nodes=1`) and the multi- node has (`nb_nodes=nodes`).
+You can use the CNXIN, CNXOUT, and CNXINOUT parameters in CFTTCP to define the number of sessions. The formulas in this section apply equally to both a multi-node to multi-node configuration, and to a multi-node to standalone configuration, where the standalone installation has (`nb_nodes=1`) and the multi-node has (`nb_nodes=nodes`).
 
 In the following example, the formulas calculate optimal values to help you avoid connection errors (such as [DIAGI 418](../../troubleshoot_intro/about_error_codes/about_diagnostic_codes/diagi_diagnostic_codes)):
 
@@ -37,4 +37,4 @@ You can reverse the formula for the remote Transfer CFT.
 
 ****Related topics****
 
-[About multi- node architecture](../)
+[About multi-node architecture](../)

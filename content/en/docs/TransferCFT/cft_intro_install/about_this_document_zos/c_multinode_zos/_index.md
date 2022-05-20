@@ -1,13 +1,13 @@
 ---
-title: "Multi- node architecture"
-linkTitle: "Multi- node architecture"
+title: "Multi-node architecture"
+linkTitle: "Multi-node architecture"
 weight: 160
---- This topic describes the Transfer CFT multi- node feature, which provides you with horizontal scalability and high availability for failovers. See the <a href="" class="MCTextPopup popup popupHead">Active/active You configure two or more Transfer CFTs, up to four nodes, each having an independent workload. These nodes will then run as individual nodes until a fail over occurs.
+---This topic describes the Transfer CFT multi-node feature, which provides you with horizontal scalability and high availability for failovers. See the <a href="" class="MCTextPopup popup popupHead">Active/active You configure two or more Transfer CFTs, up to four nodes, each having an independent workload. These nodes will then run as individual nodes until a fail over occurs.
 When a fail over occurs, one of the other nodes takes over from the failed node. This secondary node offers services to new and existing transfer requests and tasks, until the original node resumes activity.
 When the failed node restarts, a manual intervention required in Transfer CFT, it resumes its connections from the secondary or replacement node.
 To summarize, when a fail over occurs the external Transfer CFT is oblivious to any change. The requests are directed to the sysplex distributor, which resubmits any uncommitted transactions to the replacement node. During fail back, the connection returns to the original node.</a> description for conceptual information.
 
-Multi- node benefits for {{< TransferCFT/axwayvariablesComponentShortName  >}} include:
+Multi-node benefits for {{< TransferCFT/axwayvariablesComponentShortName  >}} include:
 
 - Horizontal scalability: increased transfer flow capacity.
 - High availability: active/active including patch management on an active cluster, and automatic node restart after fail over.
@@ -23,28 +23,28 @@ Check that the user that starts Copilot and Transfer CFT has:
 
 ****TSO version****
 
-The user ID for the user that starts Copilot and Transfer CFT has a 7- characters maximum when using z/OS 2.2 or lower. Therefore, a user with an 8- character user ID cannot use TSO with a z/OS version lower than v2.3.
+The user ID for the user that starts Copilot and Transfer CFT has a 7-characters maximum when using z/OS 2.2 or lower. Therefore, a user with an 8-character user ID cannot use TSO with a z/OS version lower than v2.3.
 
 <span id="Prerequi"></span>
 
 ## Prerequisites
 
-Transfer CFT in multi- node architecture can use a single key for a multi- node installation (which is stored in the PDS member: UPARM(PRODKEY)) as either:
+Transfer CFT in multi-node architecture can use a single key for a multi-node installation (which is stored in the PDS member: UPARM(PRODKEY)) as either:
 
 - The hostname must not be defined for the key, or
-- The hostname defined for the key matches the hostname of one of the hosts that composes the multi- node instance
+- The hostname defined for the key matches the hostname of one of the hosts that composes the multi-node instance
 
 Additionally, the key must have the cluster option.
 
-- A shared file system for use of a multi- node architecture on several hosts. Additionally, the system must be configured prior to the multi- node installation and the shared disk ready when starting the Copilot server.
-- The Transfer CFT configuration files (PARM, PART, COM, CAT) and services files (LOG, ACCNT) must implement SMS (system- managed storage).
+- A shared file system for use of a multi-node architecture on several hosts. Additionally, the system must be configured prior to the multi-node installation and the shared disk ready when starting the Copilot server.
+- The Transfer CFT configuration files (PARM, PART, COM, CAT) and services files (LOG, ACCNT) must implement SMS (system-managed storage).
 - The SHARECAT parameter in the SGINSTAL macro (INSTALL(A12OPTS) and INSTALL(A12OPTSP) members) must be set to ‘NO’ or ‘INACT’.
 
 ## Architecture
 
-The Transfer CFT multi- node architecture is based on hosts, nodes, and a shared file system. Regardless of the number of servers hosting the nodes from outside the cluster, the nodes are viewed as a single machine on a network.
+The Transfer CFT multi-node architecture is based on hosts, nodes, and a shared file system. Regardless of the number of servers hosting the nodes from outside the cluster, the nodes are viewed as a single machine on a network.
 
-In a z/OS environment, the multi- node architecture uses SYSPLEX components that include data sharing and a VIPA SYSPLEX distributor, along with LPAR (logical partition) resources.
+In a z/OS environment, the multi-node architecture uses SYSPLEX components that include data sharing and a VIPA SYSPLEX distributor, along with LPAR (logical partition) resources.
 
 **High level architectural overview**
 
@@ -62,7 +62,7 @@ A node is a Transfer CFT runtime running on a host. Multiple nodes are called a 
 
 A shared file system is a file system resource that where data is shared by several nodes and/or hosts.
 
-The shared file system for {{< TransferCFT/axwayvariablesComponentShortName  >}} z/OS is a DASD (direct- access storage device) in a SYSPLEX environment.
+The shared file system for {{< TransferCFT/axwayvariablesComponentShortName  >}} z/OS is a DASD (direct-access storage device) in a SYSPLEX environment.
 
 ## Concepts
 
@@ -89,7 +89,7 @@ Copilot operates two services in z/OS, the node manager and the UI server. Only 
 
 #### Node manager
 
-The node manager monitors all nodes that are part of the Transfer CFT multi- node environment (independent of the host). The monitoring mechanism is based on locks provided by the resource enqueuing system.
+The node manager monitors all nodes that are part of the Transfer CFT multi-node environment (independent of the host). The monitoring mechanism is based on locks provided by the resource enqueuing system.
 
 Typically, when a node is not running correctly, the node manager tries to start it locally.
 
@@ -108,14 +108,14 @@ See the IBM documentation for complete details: <http://pic.dhe.ibm.com/infocent
 
 ### SYSPLEX distributor
 
-This service dispatches an incoming connection to one of the hosts (LPAR) either using one of many methods, for example a round robin or weighted- active method.
+This service dispatches an incoming connection to one of the hosts (LPAR) either using one of many methods, for example a round robin or weighted-active method.
 
 ### CFTCOM dispatcher
 
-For outgoing calls, you can set the CFTCOM dispatcher to use either a round robin load balancing, or define a one- to- one relationship between a partner and a node. A one- to- one relationship ensures that for any given partner the transfers are kept in the correct chronological order. In the unified configuration, set the variable: **`cft.multi_node.cftcom.dispatcher_policy`**
+For outgoing calls, you can set the CFTCOM dispatcher to use either a round robin load balancing, or define a one-to-one relationship between a partner and a node. A one-to-one relationship ensures that for any given partner the transfers are kept in the correct chronological order. In the unified configuration, set the variable: **`cft.multi_node.cftcom.dispatcher_policy`**
 
 - Round robin: **`round_robin` (default)**
-- One- to- one:**` node_affinity`**
+- One-to-one:**` node_affinity`**
 
 ### Runtime files
 
@@ -138,7 +138,7 @@ The following databases are node specific, and the filename is flagged by the no
 
 > **Note**
 >
-> When using multi- node architecture, the allocated space in the catalog file is 10% greater than when working in a standalone Transfer CFT.
+> When using multi-node architecture, the allocated space in the catalog file is 10% greater than when working in a standalone Transfer CFT.
 
 ## Recovery
 
@@ -177,11 +177,11 @@ Note the following restrictions:
 - The use of the console interface commands can apply only to one specific node.
 - Bandwidth control is calculated by node.
 - Accounting statistics are generated by node.
-- Nodes are not automatically re- balanced when a host is recovered after a failure.
+- Nodes are not automatically re-balanced when a host is recovered after a failure.
 - Duplicate file detection is not supported.
 - If the parameter 'ARM' in SGINSTAL is set to 'YES':
-    - The Node Manager (CFTCOPL) will register to ARM.
-    - Transfer CFT (CFTMAIN) will not register to ARM.
-- Secure Relay is not supported in a multi- node architecture.
+    -   The Node Manager (CFTCOPL) will register to ARM.
+    -   Transfer CFT (CFTMAIN) will not register to ARM.
+- Secure Relay is not supported in a multi-node architecture.
 - You can only have one communication media of the type "file".
 - The SHARECAT parameter in the SGINSTAL macro (INSTALL(A12OPTS) and INSTALL(A12OPTSP) members) must be set to ‘NO’ or ‘INACT’.

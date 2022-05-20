@@ -2,7 +2,7 @@
 title: "Using PKIENTITY "
 linkTitle: "Using PKIENTITY"
 weight: 260
---- ## Create a list of certificate authority IDs
+---## Create a list of certificate authority IDs
 
 This topic describes how to create lists of certificate authority IDs in the PKI database.
 
@@ -16,8 +16,8 @@ The maximum number of CAs that you can enter for the ROOTCID parameter of the CF
 
 To define a certificate list, use the PKIENTITY command with the following parameters:
 
-- ID: An identifier is a case- insensitive string with a maximum of 32 characters. If the identifier contains spaces, enclose the identifier in single quotes. (*mandatory* *parameter*)
-- CERTIFICATES: A list of up to 100 certificate IDs. Each ID is a case- insensitive string with a maximum of 32 characters. There is no check other than syntax when you insert this parameter, so if you use an ID in the CERTIFICATES list that is the same as a PKIENTITY object ID {{< TransferCFT/axwayvariablesComponentShortName >}} ignores this ID when loading CFTSSL properties.  
+- ID: An identifier is a case-insensitive string with a maximum of 32 characters. If the identifier contains spaces, enclose the identifier in single quotes. (*mandatory* *parameter*)
+- CERTIFICATES: A list of up to 100 certificate IDs. Each ID is a case-insensitive string with a maximum of 32 characters. There is no check other than syntax when you insert this parameter, so if you use an ID in the CERTIFICATES list that is the same as a PKIENTITY object ID {{< TransferCFT/axwayvariablesComponentShortName >}} ignores this ID when loading CFTSSL properties.  
 - MODE: An action on the certificate, CREATE, REPLACE, or DELETE. (default = REPLACE)
 - PKIFNAME: The name of the PKI internal datafile to use. (default = $CFTPKU)
 

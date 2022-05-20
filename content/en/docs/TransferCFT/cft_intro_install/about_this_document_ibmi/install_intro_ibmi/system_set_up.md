@@ -2,18 +2,18 @@
 title: "About the installed environment"
 linkTitle: "About the installed environment"
 weight: 170
---- ## Transfer CFT libraries
+---## Transfer CFT libraries
 
 After complete installation of the Transfer CFT product, the procedure will create the following libraries:
 
 - CFTPGM: This library is generally reserved for Transfer CFT and which contains:
-    - Programs
-    - Examples of source files (CFTSRC file)
-    - Savf File for IFS environment
-    - CFTPROD: This library is generally reserved for customer and which contains:
-    - Source files customized by the client
-    - SAVF files when you apply Service Pack
-    - CFT specific objects and subsystems
+    -   Programs
+    -   Examples of source files (CFTSRC file)
+    -   Savf File for IFS environment
+    -   CFTPROD: This library is generally reserved for customer and which contains:
+    -   Source files customized by the client
+    -   SAVF files when you apply Service Pack
+    -   CFT specific objects and subsystems
 
 ## Transfer CFT specific objects and subsystems
 

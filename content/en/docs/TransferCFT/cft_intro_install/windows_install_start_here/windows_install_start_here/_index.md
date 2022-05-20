@@ -1,8 +1,8 @@
 ---
 title: "Windows: Installation and operation"
-linkTitle: "Post- installation"
+linkTitle: "Post-installation"
 weight: 170
---- <span id="Specifications_and_Prerequisites_for_CFT_Windows"></span>
+---<span id="Specifications_and_Prerequisites_for_CFT_Windows"></span>
 
 ## {{< TransferCFT/axwayvariablesComponentShortName  >}} Windows specific operations
 
@@ -35,6 +35,6 @@ the networks used. The TCP/IP network is supported.
 
 ![](/Images/TransferCFT/install01_(2).png)
 
-****Multi- node installation****
+****Multi-node installation****
 
 ****![](/Images/TransferCFT/install_multi.png)****

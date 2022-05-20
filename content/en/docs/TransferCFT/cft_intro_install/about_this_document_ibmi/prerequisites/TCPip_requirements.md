@@ -2,7 +2,7 @@
 title: "TCP/IP requirements"
 linkTitle: "TCP/IP requirements"
 weight: 190
---- This section describes the specific requirements for TCP/IP in a Transfer CFT {{< TransferCFT/PrimaryForOS400  >}} environment.
+---This section describes the specific requirements for TCP/IP in a Transfer CFT {{< TransferCFT/PrimaryForOS400  >}} environment.
 
 ## Interface level used
 

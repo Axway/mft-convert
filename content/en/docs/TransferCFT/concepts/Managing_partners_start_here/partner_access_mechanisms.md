@@ -2,7 +2,7 @@
 title: "Partner  access mechanisms "
 linkTitle: "Partner access mechanisms"
 weight: 220
---- A SEND/RECV transfer command can perform one or more transfers with:
+---A SEND/RECV transfer command can perform one or more transfers with:
 
 A single partner
 via a direct connection
@@ -32,7 +32,8 @@ are:
 
 - Network and protocol
     connection
-- Application connection - the SAP
+- Application connection -
+    the SAP
 
 The {{< TransferCFT/axwayvariablesComponentShortName  >}} reciprocal recognition mechanism is then defined.
 

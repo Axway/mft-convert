@@ -2,7 +2,7 @@
 title: "content"
 linkTitle: "content"
 weight: 500
---- <span id="content"></span>
+---<span id="content"></span>
 
 ### content
 
@@ -34,7 +34,7 @@ The possible values are:
     CFTT52I PART=&part IDF=&idf IDT=&idt Requester session
     close
 
-<!- - - - >
+<!-- -->
 
 - Server mode:  
     CFTT51I PART=&part IDF=&idf IDT=&idt Server session opened  
@@ -71,9 +71,9 @@ The possible values are:
 - BRIEF: Displays the most basic, essential information
     concerning the selected transfers with one line per transfer
 - EXTEND: Displays information concerning
-    security, exits and end- of- transfer procedures, as well as the BRIEF type
+    security, exits and end-of-transfer procedures, as well as the BRIEF type
     information with one line per transfer
-- COMMUT: Displays a sort of BRIEF output, but contains some network- oriented details
+- COMMUT: Displays a sort of BRIEF output, but contains some network-oriented details
 - FULL: Displays complete information concerning
     each transfer
 - DEBUG: Displays the most complete output with additional information beyond the FULL content
@@ -96,12 +96,12 @@ information of a catalog entry.
 
 ```
 LISTCOM CONTENT =FULL
-
+ 
 CFTU00I LISTCOM _ Correct (content=full)
 CFTU00I SEND _ Correct (part=paris,idf=txt,fname=pche.dv.mvtx4)
 CFTU20I Communication file row number used: 00001137 on 20191212 Time 09331119
 CFTU00I RETURN _ Correct (CODE=0)
-
+ 
 1 record(s) selected
 0 record(s) cleared
 1500 record(s) in Com file
@@ -155,7 +155,7 @@ listcat]******
 
 Indicates the amount of information to display. Here, the options are listed in order of increasing details that are displayed.
 
-- PROPS: Delivers a simple property- like output
+- PROPS: Delivers a simple property-like output
 - BRIEF: Displays basic information
     concerning the UCONF value (the set value and if this is a user or default value)
 - EXTRACT: Outputs information in format that you can directly enter in CFTUTIL

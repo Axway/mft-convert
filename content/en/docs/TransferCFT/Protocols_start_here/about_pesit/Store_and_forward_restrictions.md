@@ -2,7 +2,7 @@
 title: "Using store and forward "
 linkTitle: "Store and forward restrictions"
 weight: 170
---- PeSIT makes it possible to route files from one computer
+---PeSIT makes it possible to route files from one computer
 to another. The store and forward mode is only defined and supported
 by Transfer CFT in write transfer cases. This
 topic provides information concerning the PeSIT services,
@@ -95,6 +95,7 @@ message FPDU.
 FPDU related PI codes and the corresponding
 Transfer CFT values
 
+
 | PI  | Description  | Transfer CFT value  |
 | --- | --- | --- |
 | 3  | Sending application’s name<br /> Sending user’s name  | PI 4 of the acknowledged file creation request  |
@@ -108,6 +109,7 @@ Transfer CFT values
 | 61  | Initial sender | PI 62 of the acknowledged file creation request  |
 | 62  | Final receiver | PI 61 of the acknowledged file creation request  |
 | 91  | Message  | MSG parameter of the SEND command  |
+
 
 Most of the acknowledgement message PI codes are defined using the protocol
 parameters which were specified at the time of the creation request (FPDU

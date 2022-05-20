@@ -1,8 +1,8 @@
 ---
-title: "Time- saving shortcuts"
+title: "Time-saving shortcuts"
 linkTitle: "How to use autocomplete"
 weight: 160
---- {{< TransferCFT/suitevariablesTransferCFTName  >}} offers several commands and options that enable you to work more quickly and efficiently. The following sections describe:
+---{{< TransferCFT/suitevariablesTransferCFTName  >}} offers several commands and options that enable you to work more quickly and efficiently. The following sections describe:
 
 - [Using autocompletion](#Using)
 - [Using the `check `command](#Using2)
@@ -17,8 +17,8 @@ weight: 160
 To simplify the use of Transfer CFT commands, you can use the bash autocompletion feature when working in interactive mode. Bash autocompletion is valid for `CFTUTIL`, `PKIUTIL`, and the `cft` commands. This feature intuitively provides commands and available parameters along with a brief description. Additionally, for certain parameters Bash autocompletion proposes a list of possible parameter values, either static or dynamic, depending on the parameter.
 
 - [Keyboard shortcuts](#Special)
-    - [Use the Bash autocompletion keys](#Auto- com)
-    - [UCONF parameter specifics](#UCONF%C2%A0pa)
+    -   [Use the Bash autocompletion keys](#Auto-com)
+    -   [UCONF parameter specifics](#UCONF%C2%A0pa)
 
 > **Note**
 >
@@ -33,6 +33,7 @@ To simplify the use of Transfer CFT commands, you can use the bash autocompletio
 ### Keyboard shortcuts
 
 The CFTUTIL utility uses the following keys as shortcuts when entering a command.
+
 
 | Key | Action |
 | --- | --- |
@@ -49,7 +50,8 @@ The CFTUTIL utility uses the following keys as shortcuts when entering a comman
 | Enter | Submit the command. |
 | Ctrl + C | CFTUTIL hard exit (not recommended). |
 
-<span id="Auto- com"></span>
+
+<span id="Auto-com"></span>
 
 ### Use the Bash autocompletion keys
 
@@ -116,10 +118,10 @@ Where:
 
 You can use the `check`command with `cftinit `and `cftupdate `using the following syntax:
 
-- `cftinit - check file`
-- `cftupdate - check file`
+- `cftinit -check file`
+- `cftupdate -check file`
 
-Here, the `- check` option is equivalent to running `CFTUTIL CHECK `at the end of a successful cftinit or cftupdate .
+Here, the `-check` option is equivalent to running `CFTUTIL CHECK `at the end of a successful cftinit or cftupdate .
 
 <span id="Previous"></span>
 
@@ -133,17 +135,19 @@ You can use the **Up/Down Arrow** keys as a shortcut to recall the previous or n
 
 To retrieve a command you know, begin by typing the first characters of the command. CFTUTIL returns only the commands starting with those characters. For example type LI and press **Tab**, the commands LISTCAT, LISTLOG, LISTCOM display. You can then use the **Up/Down Arrow** keys to scroll the list.
 
-<span id="Command- "></span>
+<span id="Command-"></span>
 
-### Command- history settings
+### Command-history settings
 
-Use the following uconf parameters to manage the command- history settings.
+Use the following uconf parameters to manage the command-history settings.
+
 
 | Parameter | Default value | Description |
 | --- | --- | --- |
 | cft.readline.history_size | 500 | Maximum number of commands that you can store. |
 | cft.readline.enable | Yes | Save and retrieve the commands from disk. |
 | cft.readline.history_fname |  • Win: %APPDATA%\cft\CftutilHistory.txt<br/> • Unix: $(HOME)/.cft_history | Name of the file containing the command history. |
+
 
 <span id="Modify"></span>
 

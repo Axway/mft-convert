@@ -2,7 +2,7 @@
 title: "Migrating Transfer CFT  3.2.x, 3.3.2 or 3.4 to 3.10"
 linkTitle: "Migrating from Transfer CFT 3.2.x or higher"
 weight: 250
---- This topic describes how to migrate Transfer CFT 3.2.x, 3.3.2, or 3.4 to version {{< TransferCFT/axwayvariablesComponentVersion  >}}. It is divided in 2 sections, the first section describes migration for a single node architecture, and the second section multi- node architecture. Lastly there are instructions explaining what would be needed to migrate from single node architecture to multi node architecture.
+---This topic describes how to migrate Transfer CFT 3.2.x, 3.3.2, or 3.4 to version {{< TransferCFT/axwayvariablesComponentVersion  >}}. It is divided in 2 sections, the first section describes migration for a single node architecture, and the second section multi-node architecture. Lastly there are instructions explaining what would be needed to migrate from single node architecture to multi node architecture.
 
 ## Single node architecture
 
@@ -17,14 +17,14 @@ Migrate PARM, PART, IDF, other static configuration objects and UCONF parameters
 1. Load the former Transfer CFT 3.x environment. See the [Migration prerequisites](../) for details.
 1. Export your static configuration objects using the command CFTUTIL CFTEXT. Enter:  
     ```
-    CFTUTIL CFTEXT type=all, fout=cft- extract.conf
+    CFTUTIL CFTEXT type=all, fout=cft-extract.conf
     ```
-1. Open the extract configuration files, cft- extract.conf, and update the file paths with those of the new Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion >}} installation.
+1. Open the extract configuration files, cft-extract.conf, and update the file paths with those of the new Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion >}} installation.
 1. Load Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion >}} environment.
 1. Stop {{< TransferCFT/headerfootervariableshflongproductname >}} if you have not already done so.
 1. Import your static configuration objects using the cftinit command. Enter:  
     ```
-1. cftinit cft- extract.conf
+1. cftinit cft-extract.conf
 
 ### Migrating PKI certificates
 
@@ -33,14 +33,14 @@ Stop Transfer CFT and the Transfer CFT Copilot server before starting.
 1. Load the former Transfer CFT 3.x environment.
 1. Export your PKI certificates using the command PKIUTIL PKIEXT. Enter:  
     ```
-1. PKIUTIL PKIEXT fout=pki- extract.conf
-1. Copy all files that are referenced in the pki- extractconf file (INAME OR IKNAME) to the folder where you are going to execute the PKI command on the new version. In the following example, copy ROOT0001 to the new folder in Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber >}}.
+1. PKIUTIL PKIEXT fout=pki-extract.conf
+1. Copy all files that are referenced in the pki-extractconf file (INAME OR IKNAME) to the folder where you are going to execute the PKI command on the new version. In the following example, copy ROOT0001 to the new folder in Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber >}}.
 1. Load the Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion >}} environment.
 1. Create a new PKI internal datafile using the command PKIUTIL PKIFILE. Replace &lt;`pki_database_filename`&gt; with the appropriate value: $CFTPKU for UNIX, the absolute path value for the CFTPKU for Windows. Enter:
 1. Import your PKI certificates into Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion >}} using the command PKIUTIL. Replace the &lt;`prefix_character`&gt; based on your system, @ for UNIX and # for Windows.  
     Enter:  
     ```
-    PKIUTIL <prefix_character>pki- extract.conf
+    PKIUTIL <prefix_character>pki-extract.conf
     ```
 
 ### Migrating the runtime environment
@@ -75,9 +75,9 @@ Stop Transfer CFT and the Transfer CFT Copilot server before starting.
 
 #### Executables and binaries
 
-Remember that you can copy your post- processing scripts directly from the runtime/exec to the new version ({{< TransferCFT/axwayvariablesReleaseNumber  >}}). When you copy files from the exec folder, be certain to modify any paths that point to the former version (3.x in this case). However, you must rebuild APIs and EXITS (binaries).
+Remember that you can copy your post-processing scripts directly from the runtime/exec to the new version ({{< TransferCFT/axwayvariablesReleaseNumber  >}}). When you copy files from the exec folder, be certain to modify any paths that point to the former version (3.x in this case). However, you must rebuild APIs and EXITS (binaries).
 
-## Migrate a multi- node to multi- node architecture
+## Migrate a multi-node to multi-node architecture
 
 ### Migrating the configuration
 
@@ -90,13 +90,13 @@ Migrate PARM, PART, IDF, other static configuration objects and UCONF parameters
 1. Load the former Transfer CFT 3.x environment.
 1. Export your static configuration objects using the command CFTUTIL CFTEXT. Enter:  
     ```
-    CFTUTIL CFTEXT type=all, fout=cft- extract.conf
+    CFTUTIL CFTEXT type=all, fout=cft-extract.conf
     ```
-1. Open the extract configuration files, cft- extract.conf, and update the file paths with those of the new Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion >}} installation.
+1. Open the extract configuration files, cft-extract.conf, and update the file paths with those of the new Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion >}} installation.
 1. Load Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion >}} environment.
 1. Import your static configuration objects using the cftinit command. Enter:  
     ```
-    cftinit cft- extract.conf
+    cftinit cft-extract.conf
     ```
 
 ### Migrating PKI certificates
@@ -106,7 +106,7 @@ Stop Transfer CFT and the Transfer CFT Copilot server before starting.
 1. Load the former Transfer CFT 3.x environment.
 1. Export your PKI certificates using the command PKIUTIL PKIEXT. Enter:  
     ```
-    PKIUTIL PKIEXT fout=pki- extract.conf
+    PKIUTIL PKIEXT fout=pki-extract.conf
     ```
 1. Load the Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion >}} environment.
 1. Create a new PKI internal datafile using the command PKIUTIL PKIFILE. Replace &lt;pki_database_filename> with the appropriate value, $CFTPKU for UNIX or the absolute path value for the CFTPKU for Windows. Enter:  
@@ -115,7 +115,7 @@ Stop Transfer CFT and the Transfer CFT Copilot server before starting.
     ```
 1. Import your PKI certificates into Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion >}} using the command PKIUTIL. Replace the &lt;prefix_character> based on your system, @ for UNIX and # for Windows. Enter:  
     ```
-    PKIUTIL <prefix_character>pki- extract.conf
+    PKIUTIL <prefix_character>pki-extract.conf
     ```
 
 ### Migrating the runtime environment
@@ -146,8 +146,8 @@ Stop Transfer CFT and the Transfer CFT Copilot server before starting.
     For the manager, enter:
 1. For each node, enter:` `
 
-## Single- node to multi- node architecture migration
+## Single-node to multi-node architecture migration
 
-The only difference between migrating from single node to multi- node architecture and migrating from single- node to single- node architecture is the catalog migration step. Since there is no catalog named `cftcata `in multi- node, import the catalog exported from single- node architecture to the catalog of any of the nodes in the multi- node architecture.
+The only difference between migrating from single node to multi-node architecture and migrating from single-node to single-node architecture is the catalog migration step. Since there is no catalog named `cftcata `in multi-node, import the catalog exported from single-node architecture to the catalog of any of the nodes in the multi-node architecture.
 
 Be certain to stop Transfer CFT and the Transfer CFT Copilot server before performing the procedure.

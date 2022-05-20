@@ -2,7 +2,7 @@
 title: "_NONE_"
 linkTitle: "_NONE_"
 weight: 2280
---- A keyword to use with the procedure parameters EXEC, EXECE, and ACKEXEC. You can use the _NONE_ keyword in send and receive commands to disable the EXECSF, EXECRF, EXECSE, EXECRE and EXECSFA procedures that are defined in the general Transfer CFT environment parameter settings (CFTPARM).
+---A keyword to use with the procedure parameters EXEC, EXECE, and ACKEXEC. You can use the _NONE_ keyword in send and receive commands to disable the EXECSF, EXECRF, EXECSE, EXECRE and EXECSFA procedures that are defined in the general Transfer CFT environment parameter settings (CFTPARM).
 
 Where:
 

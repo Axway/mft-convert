@@ -2,7 +2,7 @@
 title: "Troubleshoot security errors"
 linkTitle: "Troubleshoot security errors "
 weight: 300
---- This section describes security related errors and troubleshooting tips.
+---This section describes security related errors and troubleshooting tips.
 
 ## Handshake errors
 
@@ -250,10 +250,10 @@ Major version l Minor version Fragment length Type message
 Where:
 
 - Content Type: determines the nature of the frame (0x: hexadecimal):
-    - 0x14 change_cipher_specs
-    - 0x15 alert
-    - 0x16 handshake
-    - 0x17 Application_Data
+    -   0x14 change_cipher_specs
+    -   0x15 alert
+    -   0x16 handshake
+    -   0x17 Application_Data
 - Version: Determines the version of SSL used.
 - Fragment length: specifies the length of the fragment.
 - Message Type: Determines the type of message.
@@ -335,7 +335,7 @@ CFTY02Z>&gt; CTX = 200003 B64A8529 33DFEB17 776E82D7 B88AFBA2>. ... .3 Wn ......
 
 16030100 8610:
 
-10 => client_key_exchange message containing the pre- master key.
+10 => client_key_exchange message containing the pre-master key.
 
 CFTY02Z>&gt; CTX = 200003 SSLact () _ 139 HANDSHAKE SENDING DATA
 

@@ -2,13 +2,14 @@
 title: "Create an implicit mode flow and transfer a file"
 linkTitle: "Create an implicit mode flow and transfer a file"
 weight: 310
---- You can use the implicit transfer mode to make a file whose content is frequently changing available to other applications. In this case the file is always available, and applications can retrieve it as many time as necessary.
+---You can use the implicit transfer mode to make a file whose content is frequently changing available to other applications. In this case the file is always available, and applications can retrieve it as many time as necessary.
 
 > **Note**
 >
 > Implicit Mode implies that the Target is requester, and as such it is the Target that pulls the file.
 
 ![Simplified diagram of a Target Transfer CFT requesting a file from the Source](/Images/TransferCFT/Implicit_mode_cft_w_cg.png)
+
 
 |   |  Task  | Description  | Details  |
 | --- | --- | --- | --- |

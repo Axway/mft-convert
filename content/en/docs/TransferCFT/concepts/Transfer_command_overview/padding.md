@@ -2,7 +2,7 @@
 title: "Pad records for text files"
 linkTitle: "Padding records for text files"
 weight: 330
---- You can define the pad/unpad character for fixed and variable formats at both the file and network level in the SEND, CFTSEND, CFTRECV and RECV commands when TYPE = FILE.
+---You can define the pad/unpad character for fixed and variable formats at both the file and network level in the SEND, CFTSEND, CFTRECV and RECV commands when TYPE = FILE.
 
 <span id="Format"></span>
 
@@ -42,7 +42,7 @@ This parameter defines the padding character at the network level.
 
 > **Note**
 >
-> In addition to printable characters, you can also enter a non- printable character for NPAD or FPAD using the hexadecimal syntax: 0xHH. For example: 0xFC, 0xab, 0x00
+> In addition to printable characters, you can also enter a non-printable character for NPAD or FPAD using the hexadecimal syntax: 0xHH. For example: 0xFC, 0xab, 0x00
 
 ## Usage
 

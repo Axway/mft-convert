@@ -2,7 +2,7 @@
 title: "Using  the PKICER command"
 linkTitle: "Using PKICER"
 weight: 230
---- Use the PKICER command to:
+---Use the PKICER command to:
 
 - Import,
     delete or update a root or intermediate certificate authority in the local
@@ -56,6 +56,7 @@ ID    
 ```
 
 Some parameters are available only in command line, as indicated in the table.
+
 
 | ID = string1..32 | Unique local identifier of the certificate to be created, replaced or deleted. |
 | --- | --- |

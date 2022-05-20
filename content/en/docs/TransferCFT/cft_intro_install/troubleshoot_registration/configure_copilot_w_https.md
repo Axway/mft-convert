@@ -2,13 +2,14 @@
 title: "Configuring Copilot with HTTPS"
 linkTitle: "Install a certificate on the server"
 weight: 180
---- The certificates used by the Transfer CFT Copilot server to authenticate itself are defined in UCONF using the parameters described in the following tables.
+---The certificates used by the Transfer CFT Copilot server to authenticate itself are defined in UCONF using the parameters described in the following tables.
 
 The examples provided in this section use sample certificates that are supplied in product. Do not use these certificates in production; you should instead use your own certificates.
 
 ******Example 1******
 
 This example uses a single PKCS#12 certificate.
+
 
 | Parameter | Value |
 | --- | --- |
@@ -17,9 +18,11 @@ This example uses a single PKCS#12 certificate.
 | copilot.ssl.SslKeyFile<br/>  | Not used |
 | copilot.ssl.SslKeyPassword<br/>  | Not used |
 
+
 ******Example 2******
 
 This example uses a DER certificate with the private key in a separate DER file.
+
 
 | Parameter | Value |
 | --- | --- |
@@ -28,9 +31,11 @@ This example uses a DER certificate with the private key in a separate DER file.
 | copilot.ssl.SslKeyFile<br/>  | conf/pki /MFT_Demonstration_User_Certificatek.der |
 | copilot.ssl.SslKeyPassword<br/>  | Key file password (no password with sample file above) |
 
+
 ### Additional HTTPS parameters
 
 There are two additional UCONF parameters to use for https connections:
+
 
 | Parameter | Value |
 | --- | --- |

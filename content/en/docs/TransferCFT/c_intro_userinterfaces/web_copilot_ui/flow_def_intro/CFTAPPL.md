@@ -2,7 +2,7 @@
 title: "Assigning  a transfer owner - CFTAPPL"
 linkTitle: "Transfer owner assignment - CFTAPPL"
 weight: 230
---- This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
+---This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
 
 For a specified transfer and file or message identifier, Transfer CFT
 assigns the USERID identifier defined in the corresponding CFTAPPL command.
@@ -25,7 +25,7 @@ in this section).
 If neither the corresponding CFTAPPL command nor the default command
 can be found, the transfer is refused.
 
-For more details, refer to Pre- Transfer Controls
+For more details, refer to Pre-Transfer Controls
 and the Requester/Sender and Server/Sender examples in
 the previous topic.
 
@@ -88,7 +88,7 @@ Command identifier (eight characters).
 
 - If you use a generic CFTAPPL command, identifiers with the same prefixes are grouped together in a single command. The maximum length of the CFTAPPL identifier is defined in the general parameters (LENAPPL parameter of the CFTPARM command).
 
-You can use the ? to represent any single character and/or use the \* wildcard character to represent any sub- string.
+You can use the ? to represent any single character and/or use the \* wildcard character to represent any sub-string.
 
 > **Note**
 >
@@ -155,7 +155,7 @@ owner CFTAPPL</a>.
 
 <span id="Pre_transfer_controls"></span>
 
-### Pre- transfer controls
+### Pre-transfer controls
 
 Transfer CFT scans the configuration to locate a CFTAPPL command, the
 identifier of which is the same as the IDF assigned to the SEND or RECV
@@ -235,7 +235,7 @@ On the server side, a CFTAPPL command corresponding to the same IDF contains the
 
 - USER3 becomes the transfer owner
 
-<!- - - - >
+<!-- -->
 
 - The user who submitted the RECV command becomes the owner of the command
 

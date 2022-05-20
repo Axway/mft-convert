@@ -1,8 +1,8 @@
 ---
-title: "Upgrade a Transfer CFT multi- node installation"
-linkTitle: "Upgrade a multi- node installation"
+title: "Upgrade a Transfer CFT multi-node installation"
+linkTitle: "Upgrade a multi-node installation"
 weight: 190
---- This section describes how to upgrade from a Transfer CFT 3.1.3, 3.2.x, 3.3.2, or 3.4 multi- node, multihost installation to Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}}.
+---This section describes how to upgrade from a Transfer CFT 3.1.3, 3.2.x, 3.3.2, or 3.4 multi-node, multihost installation to Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}}.
 
 As of {{< TransferCFT/axwayvariablesComponentLongName  >}} 3.4 there is no separate upgrade package, you use the installation package to perform an upgrade procedure as described in the sections below.
 
@@ -22,37 +22,39 @@ During an upgrade, if the CFTCOM file path is greater than 64 characters the COM
 
 ## Procedure
 
-For details on shared disks, node commands, and other multi- node considerations, refer to the *Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}} User Guide &gt; Manage multi- node architecture*. For more information on Upgrading Transfer CFT, see [Upgrade Transfer CFT](../upgrade_intro_win) for Windows.
+For details on shared disks, node commands, and other multi-node considerations, refer to the *Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}} User Guide &gt; Manage multi-node architecture*. For more information on Upgrading Transfer CFT, see [Upgrade Transfer CFT](../upgrade_intro_win) for Windows.
 
 ### Upgrade all hosts
 
 1. Stop Copilot. This command stops Copilot as well all cftnodes running on that machine.  
     ```
-    copstop - f
+    copstop -f
     ```
 
 1. Connect to the first machine and execute the following command:
 
 1. ```
     .\\Transfer_CFT_ 3.10
-    _Install_win- x86- 64_<BN>.exe - - architecture first_host - - installdir <installdir>
+    _Install_win-x86-64_<BN>.exe --architecture first_host --installdir <installdir>
     ```
+
+     
 
 1. For each additional host, connect to the machine and execute the following command:  
     ```
     .\\Transfer_CFT_ 3.10
-    _Install_win- x86- 64_<BN>.exe - - architecture additional_host - - runtimedir <runtimedir>
+    _Install_win-x86-64_<BN>.exe --architecture additional_host --runtimedir <runtimedir>
     ```
 
 - Use the two following parameters, depending on if this is the first host or an additional host:
-    - `architecture `and `installdir `(first_host), *or*
-    - `architecture `and `runtimedir `(additional_host)
+    -   `architecture `and `installdir `(first_host), *or*
+    -   `architecture `and `runtimedir `(additional_host)
 - Where:
-    - - - architecture &lt;architecture>: Installation architecture (first_host or additional_host).
-    - - - installdir &lt;installdir>: For a legacy upgrade, this is the directory where the Axway Installer was installed. When this parameter is assigned, it overwrites any reference in the configuration file (first_host).
-    - - - runtimedir &lt;runtimedir>: For a legacy upgrade, this is the shared data directory where the Axway Installer was installed. When this parameter is assigned, it overwrites any reference in the configuration file (additional_host).
+    -   --architecture &lt;architecture>: Installation architecture (first_host or additional_host).
+    -   --installdir &lt;installdir>: For a legacy upgrade, this is the directory where the Axway Installer was installed. When this parameter is assigned, it overwrites any reference in the configuration file (first_host).
+    -   --runtimedir &lt;runtimedir>: For a legacy upgrade, this is the shared data directory where the Axway Installer was installed. When this parameter is assigned, it overwrites any reference in the configuration file (additional_host).
 
-### Restart the upgraded Transfer CFT multihost multi- node environment
+### Restart the upgraded Transfer CFT multihost multi-node environment
 
 1. Launch the Transfer CFT profile from the Transfer CFT runtime directory on the shared disk.  
     ```
@@ -63,7 +65,7 @@ For details on shared disks, node commands, and other multi- node considerations
     ```
     CFTUTIL ABOUT
     ```
-1. Start Copilot (start each of the Copilots in the multi- node environment).  
+1. Start Copilot (start each of the Copilots in the multi-node environment).  
     ```
     copstart
     ```
@@ -71,15 +73,15 @@ For details on shared disks, node commands, and other multi- node considerations
     ```
     cft restart
     ```
-1. Check the upgraded Transfer CFT multi- node multihost system.  
+1. Check the upgraded Transfer CFT multi-node multihost system.  
     ```
     CFTUTIL listnode
     ```
-    - All of the Copilots should be started
+    -   All of the Copilots should be started
 
-    <!- - - - >
+    <!-- -->
 
-    - All of the Transfer CFT nodes must be started
+    -   All of the Transfer CFT nodes must be started
 
 Once Transfer CFT has been upgraded on a host you can start that instance, there is no need to wait until Transfer CFT is upgraded on every host.
 
@@ -87,4 +89,4 @@ Once Transfer CFT has been upgraded on a host you can start that instance, there
 
 After completing the upgrade procedure, your Transfer CFT {{< TransferCFT/axwayvariablesComponentVersion  >}}, exec scripts are operational. However, you must rebuild your programs that use APIs and exits.
 
-After performing an upgrade, all passwords are cyphered using a hard- coded key. We recommend that you generate an encryption key as described in [Generate an encryption key](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/Security/cipher_key.htm).
+After performing an upgrade, all passwords are cyphered using a hard-coded key. We recommend that you generate an encryption key as described in [Generate an encryption key](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_HTML5/page/Content/Security/cipher_key.htm).

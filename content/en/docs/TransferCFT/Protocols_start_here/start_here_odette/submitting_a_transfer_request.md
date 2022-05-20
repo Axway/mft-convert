@@ -2,7 +2,7 @@
 title: "Submitting  a transfer request"
 linkTitle: "Submitting a transfer request"
 weight: 180
---- After configuring the OFTP (ODETTE) environment, as described in [Configuring OFTP](../configuring_odette), you must
+---After configuring the OFTP (ODETTE) environment, as described in [Configuring OFTP](../configuring_odette), you must
 define the transfer environment in the following objects:
 
 - CFTSEND

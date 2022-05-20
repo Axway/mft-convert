@@ -2,7 +2,7 @@
 title: "rx"
 linkTitle: "rx"
 weight: 3050
---- <span id="rx"></span>
+---<span id="rx"></span>
 
 ### rx
 
@@ -13,5 +13,7 @@ weight: 3050
 Number of days after which the catalog entries of receive transfers
 for which the end of reception procedure is correctly executed (RX state)
 are automatically purged.
+
+ 
 
 [Return to Command index](../../)

@@ -2,7 +2,7 @@
 title: "Creating  the transfer environment"
 linkTitle: "Creating the transfer environment"
 weight: 200
---- ## Model file parameters
+---## Model file parameters
 
 CFTSEND objects include parameters controlling the access to the data
 to be sent and the send transfer process.
@@ -48,14 +48,14 @@ The CFTSEND command is used to specify, for each IDF model file:
     CFT:
 - To control
     access to the data to be sent  
-
+      
     Only the characteristics of the file which do not vary from one transfer
     to another and which Transfer CFT cannot locate automatically, are generally
     specified. For example, when the same local physical filename is always
     associated with the IDF model file, it is logical to specify this name
     by indicating an FNAME parameter in the CFTSEND command
 
-<!- - - - >
+<!-- -->
 
 - As default
     values for the file network characteristics, if such values are not explicitly
@@ -64,18 +64,18 @@ The CFTSEND command is used to specify, for each IDF model file:
     characteristics: values to be sent to the partner, in protocol parameters,
     to describe the file (a physical filename can even be sent - see the definition
     of the ****Open**** mode further on).  
-
+      
     The physical characteristics that Transfer CFT is able to locate automatically
     for the local file, can be considered as default values for the corresponding
     CFT SEND parameters (example: local record length: FLRECL), parameters
     which themselves consist of default values for the network characteristics
     (example: record length sent to the partner: NLRECL).  
-
+      
     Also, when the transfer is initiated by a local SEND command explicitly
     including one or more parameters which are also included in the CFTSEND
     command, according to the value of the FORCE parameter:
 
-<!- - - - >
+<!-- -->
 
 - If FORCE =
     NO, the parameters of the SEND command take precedence over the parameters
@@ -89,7 +89,7 @@ The CFTSEND command is used to specify, for each IDF model file:
 - The actions to
     be performed locally:
 - Call when transferring
-    to a user- written file EXIT task
+    to a user-written file EXIT task
 - Action to be
     taken on the data handled by the monitor during the transfer: translation,
     compression
@@ -116,57 +116,57 @@ following categories:
     with values: FORCE
 - Identification
     parameters:
-    - General: ID,
+    -   General: ID,
         USERID, GROUPID
-    - PeSIT protocol
+    -   PeSIT protocol
         related (SIT profile, PeSIT D CFT profile or PeSIT E): RAPPL, SAPPL
-    - PeSIT protocol
+    -   PeSIT protocol
         related (PeSIT D CFT profile or PeSIT E): RUSER, SUSER
 
-<!- - - - >
+<!-- -->
 
 - Free parameters
     for the {{< TransferCFT/axwayvariablesComponentShortName >}} user:
-    - Sent to the
+    -   Sent to the
         receiver: PARM, SAPPL
-    - For local use:
+    -   For local use:
         COMMENT, OPERMSG, DELETE, NOTIFY
 
-<!- - - - >
+<!-- -->
 
 - Execution control
     parameters:
-    - General: IMPL,
+    -   General: IMPL,
         STATE, PRI
-    - User: EXEC,
+    -   User: EXEC,
         EXIT
-    - Schedule management:
+    -   Schedule management:
         MINDATE, ...TCYCLE
 
-<!- - - - >
+<!-- -->
 
 - Data processing
     parameters: NCOMP, XLATE
 - Parameters associated
     with the file sent:
-    - File management:
+    -   File management:
         FACTION
-    - Physical name:
+    -   Physical name:
         FNAME
-    - Physical characteristics
+    -   Physical characteristics
         (whole file): FSPACE, FORG, FTYPE, FCODE, FDISP
-    - Physical characteristics
+    -   Physical characteristics
         (records): FRECFM, FLRECL, FBLKSIZE
 
-<!- - - - >
+<!-- -->
 
 - File parameters
     for the partner, according to the protocol:
-    - Physical name:
+    -   Physical name:
         NFNAME
-    - Physical characteristics
+    -   Physical characteristics
         (whole file): NSPACE, NTYPE, NCODE
-    - Physical characteristics
+    -   Physical characteristics
         (records): NRECFM, NLRECL, NBLKSIZE, NKEYLEN, NKEYPOS
 
 For the partner file parameters, Nxxxxx of SEND and CFTSEND:
@@ -178,7 +178,7 @@ For the partner file parameters, Nxxxxx of SEND and CFTSEND:
     of the protocol profile used).
 - This information
     is used by the receiver monitor according to its specific possibilities:
-    - Pending the version and OS, see the description of these possibilities
+    -   Pending the version and OS, see the description of these possibilities
         at the level of the CFTRECV command and in the relevant Operations Guide.
 - In all cases:
     the values sent must be valid for the receiver partner.

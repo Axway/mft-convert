@@ -2,7 +2,7 @@
 title: "maxtask"
 linkTitle: "maxtask"
 weight: 1940
---- <span id="maxtask"></span>
+---<span id="maxtask"></span>
 
 ### maxtask
 
@@ -20,6 +20,7 @@ system.
 >
 > When MAXTASK is set to one, a high TRANTASK value is useless.
 
+
 | OS  | Maximum number supported  |
 | --- | --- |
 | UNIX  | 64 |
@@ -27,6 +28,7 @@ system.
 | z/OS (MVS) | 400 |
 | IBM i | 64 |
 | OpenVMS  | 64 |
+
 
 The following CFTI18I  message displays in the CFTLOG when Transfer CFT is started so that you can view the actual MAXTRANS, MAXTASK, TRANTASK values.
 

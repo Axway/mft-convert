@@ -2,7 +2,7 @@
 title: "switch"
 linkTitle: "switch"
 weight: 3450
---- <span id="switch"></span>
+---<span id="switch"></span>
 
 ### switch
 
@@ -45,5 +45,7 @@ and switch fields, log files are automatically switched:
     on the number of records in the file
 
 See also [Housekeeping for log files](../../../../admin_intro/admin_monitoring_intro/housekeeping_logs).
+
+ 
 
 [Return to Command index](../../)

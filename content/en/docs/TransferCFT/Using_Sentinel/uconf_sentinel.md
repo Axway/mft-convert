@@ -1,17 +1,17 @@
 ---
-    title: "UCONF: Sentinel options"
+title: "UCONF: Sentinel options"
 linkTitle: "UCONF: Sentinel options"
 weight: 240
 ---This section describes how to configure the Sentinel monitoring agent, which is part of Transfer CFT, using the following groups of UCONF parameters:
 
-- sentinel.trkxxxxx: These parameters correspond to the trkxxxxx parameter described in the Sentinel Universal Agent User Guide .
+- sentinel.trkxxxxx: These parameters correspond to the trkxxxxx parameter described in the [Sentinel Universal Agent User Guide]() .
 - sentinel.xfb.xxxx: These parameters indicate how the Sentinel monitoring agent is used in Transfer CFT.
 - Additional uconf values are related to the communication between the Sentinel monitoring agent and Sentinel
-  - ssl.ciphersuites
-  - ssl.version_min
-  - ssl.extension.enable_sni
-  - cft.ipv6.disable_connect
-  - See [UCONF parameters](../../admin_intro/uconf/uconf_directory) for parameter details.
+    -   ssl.ciphersuites
+    -   ssl.version_min
+    -   ssl.extension.enable_sni
+    -   cft.ipv6.disable_connect
+    -   See [UCONF parameters](../../admin_intro/uconf/uconf_directory) for parameter details.
 - sentinel.trktname: The path to the overflow file, where the maximum number of messages that the overflow file can store is equal to sentinel.xfb.buffer_size (not sentinel.trktmaxmsg).
 - `sentinel.trktmaxmsg`: *Obsolete*. The maximum number of messages in the `sentinel.trktname` overflow file is defined by the sentinel.xfb.buffer_size.
 
@@ -23,8 +23,8 @@ Use the following uconf parameters to configure the name and size of the overflo
 
 - sentinel.trktname: The path to the overflow file.
 - sentinel.xfb.buffer_size: The maximum number of messages that the overflow file can store. Once the maximum value is reached, messages are no longer sent to Sentinel and:
-  - If `sentinel.xfb.shut` is set to any value other than 0, Transfer CFT stops.
-  - If `sentinel.xfb.shut` is set to 0, Transfer CFT continues to run.
+    -   If `sentinel.xfb.shut` is set to any value other than 0, Transfer CFT stops.
+    -   If `sentinel.xfb.shut` is set to 0, Transfer CFT continues to run.
 
 > **Note**
 >
@@ -33,6 +33,7 @@ Use the following uconf parameters to configure the name and size of the overflo
 ## Sentinel configuration parameters
 
 The following table lists the Sentinel parameters in the unified configuration and the corresponding former Sentinel parameter.
+
 
 | Unified configuration parameter  | Default value  | Former Sentinel parameter name<br/> trkapi.cfg |
 | --- | --- | --- |
@@ -65,11 +66,13 @@ The following table lists the Sentinel parameters in the unified configuration a
 | sentinel.trktrace  | 0  | TRKTRACE  |
 | sentinel.trktmaxmsg  | 100000 (0 indicates no limit)  | TRKTMAXMSG  |
 
+
 For more information on event messages, refer to the Axway Sentinel documentation.
 
 ## Sentinel Heartbeat implementation parameters
 
 The following table lists the Heartbeat parameters that you can set in the unified configuration.
+
 
 | Unified configuration parameter  | Default value  | Description  |
 | --- | --- | --- |
@@ -77,14 +80,17 @@ The following table lists the Heartbeat parameters that you can set in the unifi
 | sentinel.heartbeat.periodicity  | 300  | The delay in seconds between sending Heartbeats.  |
 | sentinel.heartbeat.script  | $(cft.install_dir)<br/> /extras/sentinel/MFTheartbeat.sh<br/> or<br/> $(cft.install_dir)<br/> \extras\sentinel\MFTheartbeat.bat | Script for executing Heartbeats.  |
 
+
 ## Sentinel parameters
 
 The following table lists the parameters that you can set in the unified configuration.
+
 
 | Unified configuration parameter  | Default value  | Description  |
 | --- | --- | --- |
 | sentinel.xfb.transfer_progress_period  | 60  | The frequency in seconds in which Transfer CFT notifies Sentinel (for both SENDING and RECEIVING states) that a transfer is running.<br/> 0 = no notification<br/>  |
 | sentinel.xfb.transfer.send_relay_site_nidf  | No  | Enables an NIDF on the relay site. This uses an NIDF instead of COMMUT when sending an event to Sentinel using the XFBTransfer object.  |
+
 
 <span id="sentinel.TRKTMODE"></span>\*sentinel.TRKTMODE
 

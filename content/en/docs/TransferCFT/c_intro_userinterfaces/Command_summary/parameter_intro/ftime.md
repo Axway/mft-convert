@@ -2,7 +2,7 @@
 title: "ftime"
 linkTitle: "ftime"
 weight: 1370
---- <span id="ftime"></span>
+---<span id="ftime"></span>
 
 ### ftime
 
@@ -14,3 +14,4 @@ File creation time (HHMMSSCC).
 
 [Return to Command index](../../)
 
+ 

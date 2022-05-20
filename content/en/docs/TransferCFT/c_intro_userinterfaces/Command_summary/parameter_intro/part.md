@@ -2,7 +2,7 @@
 title: "part"
 linkTitle: "part"
 weight: 2560
---- <span id="part"></span>
+---<span id="part"></span>
 
 ### part
 
@@ -60,24 +60,26 @@ If the NPART parameter is defined, the PART parameter is ignored.
 id of the partner responsible for the transfer.**
 
 When sending a reply, this identifier designates
-the file sender. If the command is used in an end- of- receive procedure,
+the file sender. If the command is used in an end-of-receive procedure,
 the user can define this parameter using the symbolic variable PART=&PART.
 
 This identifier designates:
 
 - either a partner described by the command:
-
+    
 | CFTPART | ID = &lt;PART parameter value&gt;, ... |   |
 | --- | --- | --- |
 
-<!- - - - >
+
+<!-- -->
 
 - or a list of partners described by
     the command:
-
+    
 | CFTDEST | ID = &lt;PART parameter value&gt;, |   |
 | --- | --- | --- |
 |   | PART = (*identifier, identifier . . .*) |   |
+
 
 #### CFTIDF
 
@@ -132,5 +134,7 @@ The associated value of this parameter can be:
 #### CFTPROT (DMZ)
 
 **[PART = {*identifier, identifier,...}*]**
+
+ 
 
 [Return to Command index](../../)

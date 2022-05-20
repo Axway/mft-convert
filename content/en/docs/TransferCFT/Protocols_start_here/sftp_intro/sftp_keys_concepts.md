@@ -2,7 +2,7 @@
 title: "SSH session concepts"
 linkTitle: "SSH concepts"
 weight: 140
---- ******The supported operating systems are listed in the [Platform features](../../../datasheet) table.******
+---******The supported operating systems are listed in the [Platform features](../../../datasheet) table.******
 
 An SSH session is established in two steps:
 
@@ -25,7 +25,7 @@ To establish a secured session between the client and the server:
 
 ### Authenticating the user
 
-Once the secured communication is established, the client must be authenticated. Authentication methods for SSH include passwords, keys, and a combined password/key authentication (two- factor or dual authentication method).
+Once the secured communication is established, the client must be authenticated. Authentication methods for SSH include passwords, keys, and a combined password/key authentication (two-factor or dual authentication method).
 
 ### Define the CFTSSH object
 

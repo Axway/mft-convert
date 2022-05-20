@@ -2,7 +2,7 @@
 title: "Submit script function"
 linkTitle: "Submit script function"
 weight: 230
---- This section describes how to submit a script.
+---This section describes how to submit a script.
 
 ### _FMSUB
 

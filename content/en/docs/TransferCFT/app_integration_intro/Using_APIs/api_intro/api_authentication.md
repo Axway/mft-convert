@@ -2,7 +2,7 @@
 title: "Client authentication"
 linkTitle: "Client authentication "
 weight: 310
---- {{< TransferCFT/suitevariablesTransferCFTName  >}} REST API supports *HTTP Basic* and *HTTP Bearer* as the authentication method. Confidentiality is ensured by the use of an HTTPS connection.
+---{{< TransferCFT/suitevariablesTransferCFTName  >}} REST API supports *HTTP Basic* and *HTTP Bearer* as the authentication method. Confidentiality is ensured by the use of an HTTPS connection.
 
 We recommended that you use the HTTP Bearer as opposed to Basic method for the following reasons:
 
@@ -19,7 +19,7 @@ To use this type of authentication you must specify the HTTP Authorization head
 ****Example****
 
 ```
-curl - X GET "https://localhost:1768/cft/api/v1/transfers" - H "accept: application/json" - H "Authorization: Bearer eyJhbGnMQdLK6lwYPwy6- B3zrHYjhAqX5UUYht2zkd5- iSBbdyUYuVpSTMhA"
+curl -X GET "https://localhost:1768/cft/api/v1/transfers" -H "accept: application/json" -H "Authorization: Bearer eyJhbGnMQdLK6lwYPwy6-B3zrHYjhAqX5UUYht2zkd5-iSBbdyUYuVpSTMhA"
 ```
 
 To use the bearer method, you require an access token as described below.
@@ -33,7 +33,7 @@ To use the bearer method, you require an access token as described below.
 In the {{< TransferCFT/axwayvariablesComponentLongName  >}} UI:
 
 1. Navigate to your user login in the upper right hand corner.
-1. Select **My Access Tokens** in the drop- down menu.  
+1. Select **My Access Tokens** in the drop-down menu.  
     The **My Access Token** page displays.
 1. Click **Generate Token**.  
     The Action, User, Creation date, and Token fields display. In the **Token** field, click the ![](/Images/TransferCFT/copy_icon.png)copy icon to copy the entire token.
@@ -47,7 +47,7 @@ To use this type of authentication you must specify the HTTP Authorization head
 ****Example****
 
 ```
-curl - X GET "https://localhost:1768/cft/api/v1/transfers" - H "accept: application/json" - H "Authorization: Basic Z3Vlc3Q6Z3Vlc3QK"
+curl -X GET "https://localhost:1768/cft/api/v1/transfers" -H "accept: application/json" -H "Authorization: Basic Z3Vlc3Q6Z3Vlc3QK"
 ```
 
 ## Limit the number of failed login attempts
@@ -63,7 +63,7 @@ You can use the following UCONF parameters to manage this option:
 
 > **Note**
 >
-> In a multi- host environment, an attacker may have up to the copilot.general.max_login_failures \* &lt;number of host> tries before the user is locked if the file is not in a directory shared by all hosts.
+> In a multi-host environment, an attacker may have up to the copilot.general.max_login_failures \* &lt;number of host> tries before the user is locked if the file is not in a directory shared by all hosts.
 
 When the maximum number of login failures is reached, the user account is locked for 30 seconds.
 

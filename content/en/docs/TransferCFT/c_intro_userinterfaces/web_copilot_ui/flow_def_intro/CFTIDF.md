@@ -2,7 +2,7 @@
 title: "CFTIDF  - Template to virtual file association"
 linkTitle: "Template/virtual file association - CFTIDF"
 weight: 240
---- <span id="About_the_CFTIDF_Command"></span>You can use this command to locally establish this correspondence
+---<span id="About_the_CFTIDF_Command"></span>You can use this command to locally establish this correspondence
 between the local IDF and the NIDF sent or received.
 
 ****Related
@@ -13,6 +13,7 @@ topics****
 - Object concepts
     [Template
     to virtual file association](../../../../concepts/cft_configuration_concepts_start_here/network_file_identifier_concepts)
+
 
 | Parameter  | Description  |
 | --- | --- |

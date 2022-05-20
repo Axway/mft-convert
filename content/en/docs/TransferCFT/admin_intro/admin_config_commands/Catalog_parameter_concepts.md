@@ -2,7 +2,7 @@
 title: "Catalog attributes "
 linkTitle: "CFTCAT - Catalog attributes "
 weight: 230
---- ****Related
+---****Related
 topics****
 
 - Command syntax
@@ -49,3 +49,4 @@ each time a Catalog event occurs, but not more than once every TLVWRATE
 seconds. This alert ends when the fill level drops below the TLVCLEAR
 level.
 
+ 

@@ -2,7 +2,7 @@
 title: "st"
 linkTitle: "st"
 weight: 3400
---- <span id="st"></span>
+---<span id="st"></span>
 
 ### st
 
@@ -12,5 +12,7 @@ weight: 3400
 
 Number of days after which the catalog entries of terminated send transfers
 (ST state) are automatically purged.
+
+ 
 
 [Return to Command index](../../)

@@ -2,7 +2,7 @@
 title: "About Transfer CFT services in COBOL"
 linkTitle: "Using services in COBOL"
 weight: 320
---- This book begins with ****this topic****
+---This book begins with ****this topic****
 which provides information about using the {{< TransferCFT/axwayvariablesComponentShortName  >}} services in COBOL.
 
 The programming interface is implemented by the calling application
@@ -31,14 +31,14 @@ Where:
 
 - CFTx indicates:
 
-> - CFTI:
+> -   CFTI:
 >     {{< TransferCFT/axwayvariablesComponentShortName >}} catalog querying services
 >
-> <!- - - - >
+> <!-- -->
 >
-> - CFTU:
+> -   CFTU:
 >     transfer services with syntax analysis
-> - CFTC:
+> -   CFTC:
 >     transfer services without syntax analysis
 
 - &lt;verb> is the  command

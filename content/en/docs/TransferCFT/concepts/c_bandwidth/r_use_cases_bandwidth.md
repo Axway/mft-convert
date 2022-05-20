@@ -2,7 +2,7 @@
 title: "Bandwidth use cases"
 linkTitle: "Bandwidth use cases"
 weight: 220
---- This topic presents three bandwidth scenarios, with suggested unified configuration (UCONF) setting required to implement each of the following use cases:
+---This topic presents three bandwidth scenarios, with suggested unified configuration (UCONF) setting required to implement each of the following use cases:
 
 - [Limiting overall bandwidth](#Limit)
 - [Prioritizing data transfer](#Prioriti)
@@ -41,8 +41,8 @@ Limit the bandwidth on COS1 to 100, COS2 to 50 KB, and COS3 to 25. Note that you
 ```
 uconf:cft.server.bandwidth.enable=yes
 uconf:cft.server.bandwidth.cos=4
-uconf:cft.server.bandwidth.cos.0.max_rate_in=- 1
-uconf:cft.server.bandwidth.cos.0.max_rate_out=- 1
+uconf:cft.server.bandwidth.cos.0.max_rate_in=-1
+uconf:cft.server.bandwidth.cos.0.max_rate_out=-1
 uconf:cft.server.bandwidth.cos.1.max_rate_in=100
 uconf:cft.server.bandwidth.cos.1.max_rate_out=100
 uconf:cft.server.bandwidth.cos.2.max_rate_in=50

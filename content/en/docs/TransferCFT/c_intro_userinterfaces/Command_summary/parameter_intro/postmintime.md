@@ -2,11 +2,11 @@
 title: "postmintime"
 linkTitle: "postmintime"
 weight: 2660
---- ### postmintime
+---### postmintime
 
 #### SEND
 
-Schedules the post- processing exec file processing time.
+Schedules the post-processing exec file processing time.
 
 You can express the time value:
 

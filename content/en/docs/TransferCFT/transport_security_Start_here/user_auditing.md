@@ -2,7 +2,7 @@
 title: "Managing audit logs"
 linkTitle: "Manage audit logs - verify avec ST / GTW"
 weight: 250
---- ## {{< TransferCFT/headerfootervariableshfoverview  >}}
+---## {{< TransferCFT/headerfootervariableshfoverview  >}}
 
 {{< TransferCFT/axwayvariablesComponentLongName  >}} features a compulsory audit log that tracks user authentication, administration, configuration, and denied transfer actions, which is saved in a text file. This feature can be useful in helping to diagnose Transfer CFT production problems or for security purposes  and can be scanned by supervisory tools in production environments. Additionally, it is included when you run the `cft_support` command.
 
@@ -12,9 +12,9 @@ Each string in the audit log file provides context for an action, the “when, s
 
 ****WHEN****
 
-This is timestamp that uses the ISO 8601 format time zone YYYY- MM- DDTHH:MM:SS.mmm+/- hh:mm. Where: YYYY: year, MM: month, DD: Day, HH: hour: MM: minute: SS: second, mmm: millisecond: Timezone offset from UTC in the format ±[hh]:[mm] for hours and minutes.
+This is timestamp that uses the ISO 8601 format time zone YYYY-MM-DDTHH:MM:SS.mmm+/-hh:mm. Where: YYYY: year, MM: month, DD: Day, HH: hour: MM: minute: SS: second, mmm: millisecond: Timezone offset from UTC in the format ±[hh]:[mm] for hours and minutes.
 
-Example timestamp: 2022- 01- 13T15:55:31.585+0100.
+Example timestamp: 2022-01-13T15:55:31.585+0100.
 
 ****STATUS****
 
@@ -49,7 +49,7 @@ WS: A Web Service call (Soap) from an application
 
 FM: Flow Manager (should we say here {{< TransferCFT/PrimaryCGorUM  >}} also?)
 
-cft: cft commands mainly for multi- node
+cft: cft commands mainly for multi-node
 
 - cftstart: Start Transfer CFT server
 - cftstop: Stop Transfer CFT server
@@ -69,7 +69,7 @@ The possible values are:
 
 - Authentication: Login or logout
 - Configuration: Modification in a Transfer CFT object or a Transfer CFT uconf parameter
-- Administration: Start/stop Transfer CFT and Copilot, initialization, and multi- node configuration
+- Administration: Start/stop Transfer CFT and Copilot, initialization, and multi-node configuration
 - Transfer: Logged only if the Send or Receive transfer is denied
 
 ## Action details
@@ -82,13 +82,13 @@ The possible actions are:
 - Restart CFT, CFT is restarting
 - CFT copilot is starting, CFT copilot started, CFT copilot failed to start
 - CFT copilot stop
-- UCONFSET ID='uconf_parameter', VALUE='old value' - > 'new value'
+- UCONFSET ID='uconf_parameter', VALUE='old value' -> 'new value'
 - UCONFUNSET ID='uconf_parameter', OLD_VALUE='old value'
 - CREATE object param1='value1,param2=value2, ...
 - DELETE object param1='value1,param2=value2, ...
 - UPDATE cft_object param1='old value1'>'new value1',param2='old value2'>'new value2', ...
 - UPDATE pki_object param1='value1,param2=value2, ...
-- Command parameters for CFTFILE, PKIFILE, cftinit, cftupdate, cft (for multi- node), SEND , RECV
+- Command parameters for CFTFILE, PKIFILE, cftinit, cftupdate, cft (for multi-node), SEND , RECV
 
 > **Note**
 >
@@ -114,5 +114,5 @@ The files are purged as defined in the uconf `cft.audit.retention` parameter (de
 ## Limitations
 
 - When using in conjunction with Flow Manager:
-    - The WHERE parameter contains the name of the Flow Manager server and not the workstation where the browser action was launched.
-    - The user is the {{< TransferCFT/axwayvariablesComponentLongName >}} user.
+    -   The WHERE parameter contains the name of the Flow Manager server and not the workstation where the browser action was launched.
+    -   The user is the {{< TransferCFT/axwayvariablesComponentLongName >}} user.

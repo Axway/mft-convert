@@ -2,7 +2,7 @@
 title: "Recording  mode for statistical data"
 linkTitle: "CFTACCNT - Recording mode for statistical data "
 weight: 220
---- The CFTACCNT object defines the recording mode for statistical data
+---The CFTACCNT object defines the recording mode for statistical data
 of correctly terminated transfers. See also the parameter list
 [CFTACCNT.](../../../c_intro_userinterfaces/web_copilot_ui/conf_intro/cftaccnt)
 
@@ -41,7 +41,7 @@ Two recording modes can be used, depending on the system:
     the data and their management (parameter setting TYPE = FILE). This mode
     is available on ALL SYSTEMS.
 
-<!- - - - >
+<!-- -->
 
 - Recording of data
     in the files of the accounting utility of the operating system in question
@@ -53,6 +53,7 @@ mode, see [Recording mode TYPE](#Recordin). For each terminated transfer, {{< Tr
 contained in the following table.
 
 ****CFTACCNT list of headings****
+
 
 | Heading  | Offset<br/> V24 | Offset<br/> V23 |
 | --- | --- | --- |
@@ -92,6 +93,7 @@ contained in the following table.
 | Logic file network identifier (NIDF)  | 1735  |   |
 | Unused  | 1768  |   |
 | Total | 2048  | 491<br/> z/OS: 482 |
+
 
 (\*) z/OS: For format V23 the partner group is not included in account structure. The total length is 482.
 
@@ -152,9 +154,11 @@ parameter as well.
 The CFTACCNT command references
 the {{< TransferCFT/axwayvariablesComponentShortName  >}} application via the utility.
 
+
 | Protocol  | Details  |
 | --- | --- |
 | z/OS (MVS) | The ACCID parameter identifying the {{< TransferCFT/axwayvariablesComponentShortName  >}} application must be defined. |
+
 
 Syntax
 
@@ -181,6 +185,8 @@ CFTACCNT TYPE = FILE
 `[ SWITCH   = { 00000000   &#124; time } ]`
 
 `[ FORMAT   = { V23   &#124; 23 &#124; V24 &#124; 24} ]`
+
+ 
 
 CFTACCNT TYPE = SYST
 

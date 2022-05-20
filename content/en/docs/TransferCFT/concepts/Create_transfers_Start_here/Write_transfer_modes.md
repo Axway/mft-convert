@@ -2,14 +2,14 @@
 title: "Write  transfer modes"
 linkTitle: "Write transfer modes"
 weight: 210
---- This
+---This
 topic presents two transfer modes, which are comprised of the following
 sections:
 
 - Write transfer
     mode
 - [Read
-    transfer and locked- for- sending mode](#Read_transfer_and_locked_for_sending_mode)
+    transfer and locked-for-sending mode](#Read_transfer_and_locked_for_sending_mode)
 
 <span id="Write_transfer_mode"></span>
 
@@ -45,6 +45,8 @@ The figures below indicate these possibilities.
 - explicit name at the server end**
 
 ![](/Images/TransferCFT/Send_req_tx_closed_explicit_name_server.gif)
+
+ 
 
 In the figure above, the name assigned (FNAME = Y) at the server end
 is explicit.
@@ -96,7 +98,7 @@ by the parameter of the CFTSEND parameter setting command.
 > **Note**
 >
 > If the sender/requester defines NFNAME and the server/receiver has
-> not defined FNAME = &NFNAME (or vice- versa), the transfer fails and
+> not defined FNAME = &NFNAME (or vice-versa), the transfer fails and
 > is interrupted. If the requester/sender defines NFNAME and the file name
 > is preceded with "\*", the server/receiver can use the name of
 > its choice as the FNAME. The following figure summarizes the implementation
@@ -108,7 +110,7 @@ by the parameter of the CFTSEND parameter setting command.
 
 <span id="Read_transfer_and_locked_for_sending_mode"></span>
 
-## Read transfer and locked- for- sending mode
+## Read transfer and locked-for-sending mode
 
 <span id="Read_transfer_closed_mode"></span>
 
@@ -206,10 +208,10 @@ For the same reason, the file name sent at the server end cannot be
 locally determined using a symbolic variable.
 
 If a requester defines FNAME = &NFNAME and the server has not defined
-NFNAME, or vice- versa, the transfer does not go through and is interrupted.
+NFNAME, or vice-versa, the transfer does not go through and is interrupted.
 
 If a requester defines FNAME=&FNAME and the server has not defined
-NFNAME, or vice- versa, the transfer does not go through and is interrupted.
+NFNAME, or vice-versa, the transfer does not go through and is interrupted.
 
 However, if the server/sender defines NFNAME and the file name is preceded
 with "\*", the requester/receiver can use the name of its choice

@@ -2,7 +2,7 @@
 title: "Communication  media"
 linkTitle: "Communication media"
 weight: 250
---- - [About
+----   [About
     the communication media](#About_the_communication_media)
 - [Defining
     the CFT user name](#Defining_the_CFT_user_name)

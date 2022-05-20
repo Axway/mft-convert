@@ -1,8 +1,8 @@
 ---
-title: "Migrate a multi- node architecture"
-linkTitle: "Multi- node migration"
+title: "Migrate a multi-node architecture"
+linkTitle: "Multi-node migration"
 weight: 260
---- This section describes the upgrade of an instance of Transfer CFT z /OS configured in multi- node. Perform the sames steps as in the [non multi- node environment](../), with the only difference being the MIGRCAT, MIGRCOM and PMIGR2 procedures as described in the following sections.
+---This section describes the upgrade of an instance of Transfer CFT z /OS configured in multi-node. Perform the sames steps as in the [non multi-node environment](../), with the only difference being the MIGRCAT, MIGRCOM and PMIGR2 procedures as described in the following sections.
 
 ## Migrate the CATALOG files (MIGRCAT)
 
@@ -45,7 +45,7 @@ RECNB=
             => Target CATALOG records number (to be customized)
 //     DISPFIL=&DISPCAT,
 //     HABFNAME='NO'
-
+ 
 ```
 
 Submit the procedure `..INSTALL(MIGRCAT)`
@@ -94,7 +94,7 @@ Define the variables RECNB, OLDFIL, TMPFIL and NEWFIL. Replace X with the node n
 //     SER='DK231F',
 //     OLDFIL=Source.COM.N0 X
 ,  => Source COM node 0X 
-
+       
 //     TMPFIL=Prefix.WORK.MCOM.N0X, => Temporary file (size defined by &TMPSCOM) 
 //     NEWFIL=Target.COM.N0X,  => Target COM node 0X
 //     RECNB=5000,             => Target COM node 0X

@@ -2,7 +2,7 @@
 title: "Troubleshoot 240 or 740 RTO"
 linkTitle: "Troubleshoot RTO 240 or 740"
 weight: 480
---- ****Issue: An error occurs with a 240 or 740 RTO****
+---****Issue: An error occurs with a 240 or 740 RTO****
 
 This error may occur when a transfer CFT timeout occurs between the select and deselect file steps during the transfer phase.
 
@@ -26,13 +26,13 @@ Various routers may be traversed when going from the local host to the remote ho
 You can use the ping command to find the appropriate MTU size. For example, on Windows:
 
 ```
-ping <remote address> - l 1472 - f
+ping <remote address> -l 1472 -f
 ```
 
 Where:
 
-- - l: Sets the size in bytes (1500 - 28)
-- - f: Sets the *Do not fragment option*
+- -l: Sets the size in bytes (1500 - 28)
+- -f: Sets the *Do not fragment option*
 
 Reducing the RUSIZE can avoid this root cause. However this should be fixed by setting properly the network environment.
 
@@ -62,7 +62,7 @@ These issues can also cause the timer to expire and induce the 240 RTO. You can 
 Execute cft_support collect, and if necessary force a dump on a specific task in order to collect information. For example, on Unix:
 
 ```
-kill - 3 <process id>
+kill -3 <process id>
 ```
 
 The solution may be a mix of system tuning and Transfer CFT configuration tuning.
@@ -73,5 +73,5 @@ Transfer CFT parameters that may increase CPU usage are:
 - WAITTASK (CFTPARM): recommended value 1441 on all platforms and 5 on z/OS
 - WSCAN/UPDAT (CFTCAT)
 - WSCAN (CFTCOM)
-- Processing scripts (pre- processing, postprocessing scripts) overload
+- Processing scripts (pre-processing, postprocessing scripts) overload
 - CFTCRON

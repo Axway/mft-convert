@@ -2,7 +2,7 @@
 title: "Set the default CFTUTIL file names (CONFIG)"
 linkTitle: "CONFIG - Set default file names"
 weight: 200
---- The <span id="CONFIG_command"></span>CONFIG command redefines the data media
+---The <span id="CONFIG_command"></span>CONFIG command redefines the data media
 that the CFTUTIL utility uses. A medium refers to any data medium or local
 communication means.
 
@@ -77,6 +77,7 @@ media</a>
 
 **Command syntax**: [CONFIG](../../command_summary#CONFIG)
 
+
 | Command and Parameters | Description |
 | --- | --- |
 | **CONFIG** command | Use this command to redefine the data media with which the CFTUTIL utility operates.  |
@@ -84,6 +85,7 @@ media</a>
 |  [FNAME](../../command_summary/parameter_intro/fname)<br/>  | For TYPE = COM<br/> There must be a correspondence with the CFTCOM NAME parameter that defines the communication medium as seen from Transfer CFT.<br/> For a communication medium supported by TCP/IP (MEDIACOM=TCPIP) this is either:<br/> • A host name (string) using the format: "protocol://machine:port", or<br/> • A configuration file (filename) |
 |  [MEDIACOM](../../command_summary/parameter_intro/mediacom)  | Defines the communication medium type if this medium is relevant to the system. |
 |  [TYPE](../../command_summary/parameter_intro/type#type_CONFIG)  | Defines the medium concerned. |
+
 
 ## Examples
 

@@ -2,7 +2,7 @@
 title: "fdisp"
 linkTitle: "fdisp"
 weight: 1130
---- <span id="fdisp"></span>
+---<span id="fdisp"></span>
 
 ### fdisp
 
@@ -57,6 +57,7 @@ The following table shows the combined effect of the FDISP and FACTION parameter
 >
 > There no impact on FDISP when used in combination with RENAME or RETRYRENAME.
 
+
 | CFTRECV, FDISP  | CFTRECV, FACTION  | Comments  |
 | --- | --- | --- |
 | both  | delete  | If no file exists, the file is created. If file exists it is deleted and recreated (regardless of if it is empty or not).  |
@@ -66,5 +67,6 @@ The following table shows the combined effect of the FDISP and FACTION parameter
 | old  | delete  | If no file exists, the transfer is aborted. If file exists the file is deleted and recreated (regardless of if it is empty or not).  |
 | old  | erase  | If no file exists, the transfer is aborted. If file exists the file is overwritten (regardless of if it is empty or not).  |
 | old  | verify  | If no file exists, the transfer is aborted. If file exists and it is not empty, the transfer is aborted. If file exists but it is empty, the file is overwritten.  |
+
 
 [Return to Command index](../../)

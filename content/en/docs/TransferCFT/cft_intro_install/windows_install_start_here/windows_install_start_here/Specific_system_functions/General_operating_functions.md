@@ -2,7 +2,7 @@
 title: "General  operating functions"
 linkTitle: "General operating functions"
 weight: 240
---- - [Logical
+----   [Logical
     file names](#Logical_file_names)
 - [Using
     a definition file](#Using%20a%20definition%20file)
@@ -48,6 +48,7 @@ before operating Transfer CFT:
 The following table lists the logical names of files, and
 defines the role.
 
+
 | Working file  | Logical name  | Comment  |
 | --- | --- | --- |
 | Parameter  | CFTPARM  | Parameter file  |
@@ -61,6 +62,7 @@ defines the role.
 | Suffixes (1)  | CFTSUFX  | Suffixes file  |
 | Parameter  | SEC.INI  | System enabling file  |
 | Logical names  | CFTNMLOG  | Redefinition files  |
+
 
 (1): see [Recognizing file types](../file_management_functions)
 
@@ -84,7 +86,7 @@ Because it is simple and flexible, this is the preferred method and
 is used whenever a straightforward correspondence of logical name to physical
 name is sufficient.
 
-When making re- definitions of this sort, users can use the environment
+When making re-definitions of this sort, users can use the environment
 variables provided by the various operating systems. Quite clearly, the
 redefined names must be legal for the file system used (FAT, NTFS, FAT32).
 

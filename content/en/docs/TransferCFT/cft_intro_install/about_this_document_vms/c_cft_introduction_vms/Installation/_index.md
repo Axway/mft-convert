@@ -2,21 +2,21 @@
 title: "Install Transfer CFT "
 linkTitle: "Install Transfer CFT "
 weight: 190
---- The {{< TransferCFT/axwayvariablesComponentShortName  >}} product comprises the {{< TransferCFT/axwayvariablesComponentShortName  >}} and the utilities supporting communications between {{< TransferCFT/axwayvariablesComponentShortName  >}} and users.
+---The {{< TransferCFT/axwayvariablesComponentShortName  >}} product comprises the {{< TransferCFT/axwayvariablesComponentShortName  >}} and the utilities supporting communications between {{< TransferCFT/axwayvariablesComponentShortName  >}} and users.
 
 The installation procedure creates the environment in which {{< TransferCFT/axwayvariablesComponentShortName  >}} is to be executed. The system manager is responsible for assigning users the appropriate quotas and privileges to access the tools used to dialog with {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
 There are two types of installation:
 
-- Initial product installation: This procedure generates a full environment, comprising a standard directory structure. When the installation terminates correctly, a procedure is used to generate configuration files that enable you to perform a test loop- back transfer.
+- Initial product installation: This procedure generates a full environment, comprising a standard directory structure. When the installation terminates correctly, a procedure is used to generate configuration files that enable you to perform a test loop-back transfer.
 
-<!- - - - >
+<!-- -->
 
 - Upgrade: This installation procedure renames the previous {{< TransferCFT/axwayvariablesComponentShortName >}} subdirectories and generates a new standard installation directory structure.
 
 See the [Product license key](../../preinstallation#Product) section for information on the license key and the end user license.
 
-## Pre- installation
+## Pre-installation
 
 To prepare for the installation procedure:
 
@@ -26,13 +26,13 @@ To prepare for the installation procedure:
 
     `Password`:
 
-1. Access the directory where you uploaded the zipped installation kit files. The `Transfer_CFT_{{< TransferCFT/axwayvariablesReleaseNumber >}}_Install_vms- ia64_<BN>.zip` file contains the following archive files:
-    - cft036.a
-    - cft036.b
-    - cft036.c
-    - cft036.d
+1. Access the directory where you uploaded the zipped installation kit files. The `Transfer_CFT_{{< TransferCFT/axwayvariablesReleaseNumber >}}_Install_vms-ia64_<BN>.zip` file contains the following archive files:
+    -   cft036.a
+    -   cft036.b
+    -   cft036.c
+    -   cft036.d
 
-1. Unzip the file: `unzip Transfer_CFT_{{< TransferCFT/axwayvariablesReleaseNumber >}}_Install_vms- ia64_<BN>.zip`
+1. Unzip the file: `unzip Transfer_CFT_{{< TransferCFT/axwayvariablesReleaseNumber >}}_Install_vms-ia64_<BN>.zip`
 
 ## Start the installation
 
@@ -58,7 +58,7 @@ To prepare for the installation procedure:
 
 1. Define the groups that can connect to Transfer CFT.  
 
-    ****WARNING**** The following restrictions apply when using Transfer CFT in a multi- node architecture. The Transfer CFT user must be available on all machines where you are installing Transfer CFT, and have the same group number and user ID.
+    ****WARNING**** The following restrictions apply when using Transfer CFT in a multi-node architecture. The Transfer CFT user must be available on all machines where you are installing Transfer CFT, and have the same group number and user ID.
 
     ```
     For each user group that connects to Transfer CFT via CFTUTIL, COPILOT or
@@ -75,7 +75,7 @@ To prepare for the installation procedure:
 
 1. Select the transfer options.
     ```
-     \* Maximum of simultaneous transfers (all networks) [32]: \* Maximum of file sub- processes [8]: \* Maximum of transfers per file sub- process [8]:
+     \* Maximum of simultaneous transfers (all networks) [32]: \* Maximum of file sub-processes [8]: \* Maximum of transfers per file sub-process [8]:
      You can select the DEC Network: \* Will CFT use the DECnet network [Yes]: \* Name of the batch queue used by CFT [SYS$BATCH]:
      This feature requires the CMKRNL privilege. \* Will procedures be executed for the transfer owner user [No]:
     ```

@@ -2,7 +2,7 @@
 title: "Defining CFTSEND in PeSIT "
 linkTitle: "Defining CFTSEND in PeSIT"
 weight: 190
---- The CFTSEND object contains the parameters controlling the access to
+---The CFTSEND object contains the parameters controlling the access to
 the data to be sent and the execution of the send process.
 
 When the transfer is initiated by a local SEND object explicitly containing
@@ -66,7 +66,7 @@ the parameters sent override those set in the associated receive command.
 
 ### Data processing parameters
 
-The on- line compression of data requested by the user is given by the
+The on-line compression of data requested by the user is given by the
 **NCOMP** parameter. The authorized values and the default values are
 the same as for the SCOMP parameter of the CFTPROT object. During transmission,
 the combination of the values taken by NCOMP and SCOMP is used as a basis
@@ -167,10 +167,11 @@ converted as follows:
 The table below summarizes the parameter values authorized according
 to the functional levels negotiated for the protocol.
 
+
 | CFTSEND or SEND parameter  | PeSIT E  | PeSIT E<br/> +<br/> Transfer CFT extensions  |
 | --- | --- | --- |
 | FDATE/FTIME  | X  | X  |
-| NBLKSIZE  | - | X  |
+| NBLKSIZE  | -  | X  |
 | NCODE  | X  | X  |
 | NCOMP  | 0, 2, 8, 10<br /> (dft: 10)  | 0..15<br /> (dft: 15)  |
 | NFNAME (transmission in open mode)  | X (3)  | X  |
@@ -181,17 +182,18 @@ to the functional levels negotiated for the protocol.
 | NORG | X  | X  |
 | NRECFM  | F, V  | F, V, U  |
 | NSPACE  | X  | X  |
-| NTYPE  | - | X  |
-| PARM | - | X  |
+| NTYPE  | -  | X  |
+| PARM | -  | X  |
 | PRI  | low &lt; 128<br /> average = 128<br /> high &gt; 128  | low &lt; 128<br /> average = 128<br /> high &gt; 128  |
 | RAPPL  | string8  | string48  |
 | RUSER  | string8  | string32 |
 | SAPPL | string8  | string48  |
 | SUSER  | string8  | string32 |
 
+
 - X:  parameter
     used without restriction for protocol exchanges.
-- "- ":  parameter
+- "-":  parameter
     not used by the protocol.
 - (3): this parameter is conveyed
     by the protocol but the associated semantics (not specified by PeSIT)

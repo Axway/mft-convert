@@ -2,7 +2,7 @@
 title: "Implicit  transfer modes"
 linkTitle: "Implicit transfer modes"
 weight: 220
---- <span id="Read_transfer_and_implicit_send_mode"></span>
+---<span id="Read_transfer_and_implicit_send_mode"></span>
 
 ## Read transfer and implicit send mode
 
@@ -118,7 +118,7 @@ variables (see the previous paragraph).
 > **Note**
 >
 > If a requester defines FNAME=&NFNAME and the server has not defined
-> NFNAME, or vice- versa, the transfer fails and is interrupted. If the server/sender
+> NFNAME, or vice-versa, the transfer fails and is interrupted. If the server/sender
 > defines NFNAME and the file name is preceded with "\*", the requester/receiver
 > can use the name of its choice as the FNAME.
 
@@ -149,12 +149,14 @@ parameter may be explicit or locally defined using symbolic variables
 > **Note**
 >
 > If a requester defines NFNAME and the server has not defined FNAME
-> = &NFNAME, or vice- versa, the transfer fails and is interrupted.
+> = &NFNAME, or vice-versa, the transfer fails and is interrupted.
 
 **Receiver/requester transfer in implicit
 send mode: open mode at the server end**
 
 ![](/Images/TransferCFT/rec_req_tx_implicit_send_open_at_server.gif)
+
+ 
 
 These two mechanisms can be implemented simultaneously:
 
@@ -170,4 +172,4 @@ This possibility is represented in the following diagram.
 **Receiver/requester transfer in implicit
 send mode: open mode at the requester and server end**
 
-![](/Images/TransferCFT/rec_req_tx_implicit_send- open_at_req_and_server.gif)
+![](/Images/TransferCFT/rec_req_tx_implicit_send-open_at_req_and_server.gif)

@@ -2,7 +2,7 @@
 title: "Transfer synchronization"
 linkTitle: "Transfer synchronization"
 weight: 280
---- Transfer CFT provides the following synchronization services:
+---Transfer CFT provides the following synchronization services:
 
 - Set synchronization points during transfer
 - Resume an interrupted transfer from a synchronization point
@@ -64,8 +64,8 @@ This means that the negotiated value of the interval between synchronization
 points must always be equal to or greater than the size of the largest
 of the articles of the file to be transferred. If compression is used,
 this then corresponds to the size of the largest article after compression.
-The default value (36 kilo- bytes) has been chosen such that articles of
-up to 32 kilo- bytes in size can be sent without problems, even though
+The default value (36 kilo-bytes) has been chosen such that articles of
+up to 32 kilo-bytes in size can be sent without problems, even though
 this would only be necessary under exceptional circumstances.
 
 A zero value of the interval between synchronization points indicates
@@ -102,12 +102,12 @@ basis of 1 byte every 32 bytes (for example: 32 bytes for a size of 1024,
 #### In server mode
 
 If the remote Transfer CFT
-opens a one- way write (or read) session, Transfer CFT negotiates, as synchronization
+opens a one-way write (or read) session, Transfer CFT negotiates, as synchronization
 interval, the smallest value between what the partner proposes and the
 value of the RPACING parameter of the CFTPROT command for reception
 (or the SPACING parameter for transmission).
 
-For a two- way session,
+For a two-way session,
 Transfer CFT then negotiates the smallest value between the one proposed
 by the partner and the values of the SPACING and RPACING
 parameters.  

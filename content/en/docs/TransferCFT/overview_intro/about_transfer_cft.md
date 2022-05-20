@@ -2,11 +2,11 @@
 title: "About Transfer CFT"
 linkTitle: "About Transfer CFT"
 weight: 90
---- {{< TransferCFT/axwayvariablesCompanyName  >}} {{< TransferCFT/axwayvariablesPlatformorSuiteShortName  >}} {{< TransferCFT/axwayvariablesComponentShortName  >}} is a powerful data controller that provides file exchange services between disparate hardware and software platforms using open protocols, within or beyond the boundaries of your enterprise. Transfer CFT, part of the {{< TransferCFT/axwayvariablesPlatformorSuiteLongName  >}} Managed File Transfer product offerings, delivers non- intrusive, high- volume file- transfer services as a standalone system or implemented as part of an MFT solution.
+---{{< TransferCFT/axwayvariablesCompanyName  >}} {{< TransferCFT/axwayvariablesPlatformorSuiteShortName  >}} {{< TransferCFT/axwayvariablesComponentShortName  >}} is a powerful data controller that provides file exchange services between disparate hardware and software platforms using open protocols, within or beyond the boundaries of your enterprise. Transfer CFT, part of the {{< TransferCFT/axwayvariablesPlatformorSuiteLongName  >}} Managed File Transfer product offerings, delivers non-intrusive, high-volume file-transfer services as a standalone system or implemented as part of an MFT solution.
 
 To create successful data flows within an enterprise, organizations require a guaranteed level of security, tracking, and data flow management. {{< TransferCFT/axwayvariablesComponentShortName  >}}'s additional value comes from providing the following services that allow for monitored, secure business interactions:
 
-- Performs cross- platform transfers
+- Performs cross-platform transfers
 - Manages large volumes of files with support for varying file types
 - Automates flows and STP (Straight Through Processing)
 - Provides homogeneous production processes across platforms and networks
@@ -18,14 +18,14 @@ To create successful data flows within an enterprise, organizations require a gu
 As a transfer exchange system, {{< TransferCFT/axwayvariablesComponentShortName  >}} provides reliable and secure internal file transfers between applications. High value characteristics include:
 
 - Respect for individual environments
-- Effective and non- intrusive application integration
+- Effective and non-intrusive application integration
 - Nodes that can recognize and interact with other nodes
 
-<!- - - - >
+<!-- -->
 
 - An agile architecture
 
-********High- level view of Transfer CFT in an enterprise architecture********
+********High-level view of Transfer CFT in an enterprise architecture********
 
 ****![View of Transfer CFT in A2A operations within a corporate network](/Images/TransferCFT/2013_g_TransferCFT_Corporate_Network_new.png)****
 
@@ -37,13 +37,13 @@ As a transfer exchange system, {{< TransferCFT/axwayvariablesComponentShortName 
 
 Additional flexibility and value come from the various types of transfer modes that you can use with {{< TransferCFT/axwayvariablesComponentShortName  >}}. Within each mode, there are a variety of transfer types:
 
-- Centralized mode or peer- to- peer, client- server based
+- Centralized mode or peer-to-peer, client-server based
 - Distribution mode
-    - One to one
-    - Broadcasting (1 to N)
-    - Collecting (N to 1)
-    - Relay store and forward
-    - Permanent file transfers
+    -   One to one
+    -   Broadcasting (1 to N)
+    -   Collecting (N to 1)
+    -   Relay store and forward
+    -   Permanent file transfers
 
 ### Support for security services
 
@@ -55,13 +55,13 @@ Additional flexibility and value come from the various types of transfer modes t
 - Data is secured both at rest and in motion
 - Ability to add a DMZ component (software proxy)
 
-### Event- oriented automation and integration
+### Event-oriented automation and integration
 
-{{< TransferCFT/axwayvariablesComponentShortName  >}} just- in- time services include:
+{{< TransferCFT/axwayvariablesComponentShortName  >}} just-in-time services include:
 
 - Exits
-- APIs: Web- services (REST API, SOAP), C, and Java
-- Managed pre- and post- processing scripts
+- APIs: Web-services (REST API, SOAP), C, and Java
+- Managed pre- and post-processing scripts
 - Folder monitoring
 
 ### Full platform independence
@@ -76,8 +76,8 @@ Additional flexibility and value come from the various types of transfer modes t
 {{< TransferCFT/axwayvariablesComponentShortName  >}} provides the following services that you cannot achieve with traditional FTP:
 
 - Guaranteed delivery
-- End- to- end acknowledgement
-- Application- to- application horizontal scalability
+- End-to-end acknowledgement
+- Application-to-application horizontal scalability
 - File transfer acceleration
 - Bandwidth throttling and prioritization
 

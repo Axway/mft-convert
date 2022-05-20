@@ -2,7 +2,7 @@
 title: "Perform broadcast and collect operations"
 linkTitle: "Perform broadcast and collect operations"
 weight: 340
---- Broadcast and collect modes allow you to send files to multiple partners and receiving files from multiple partners using a single command request for each.
+---Broadcast and collect modes allow you to send files to multiple partners and receiving files from multiple partners using a single command request for each.
 
 ## Broadcast
 
@@ -14,6 +14,7 @@ Additionally, you can define what occurs if a partner is unknown, how the script
 
 ![Simplified diagram of a Source Transfer CFT sending a file to multiple Targets](/Images/TransferCFT/Broadcast_w_cg.png)
 
+
 |   |  Task  | Description  | Details  |
 | --- | --- | --- | --- |
 | 1<br/>  | Create a flow.<br/> <br/> <br />  | In {{< TransferCFT/PrimaryCGorUM  >}} click ****Flows**** &gt; ****Add flow****.<br/> Create a flow named ****Broadcast_flow****, and give it the identifier ****flow04****.<br/> In this flow the MainOffice is the Source with the two stores as the Targets. | [![](/Images/TransferCFT/mapArrow.png)](../intro_cg_task_catalog/t_defineflow_broadcast)  |
@@ -23,11 +24,15 @@ Additionally, you can define what occurs if a partner is unknown, how the script
 | 5<br/>  | Execute the SEND command.<br/>  | From the source {{< TransferCFT/axwayvariablesComponentShortName  >}}, run the following command:<br/> <code>CFTUTIL SEND PART=DEST_stores, IDF=flow04, FNAME=pub/SALES_report</code><br/>  | [![](/Images/TransferCFT/mapArrow.png)](../../../../../c_intro_userinterfaces/about_cftutil)  |
 | 6  | Monitor the file transfer status.  | In {{< TransferCFT/PrimaryCGorUM  >}} select the ****Flows**** tab, and click ****Monitoring****.  | [![](/Images/TransferCFT/mapArrow.png)](../intro_cg_task_catalog/c_flow_monitoring)  |
 
+
 ## Collect
 
 Collecting files is the inverse of using a broadcast list. In the collect transfer mode you can receive a dedicated file from multiple partners (P*n*). This allows the receiver, or flow initiator, to receive a file from all defined partners using a single request command. More information...
 
 ![Simplified diagram of a Target Transfer CFT receiving files from multiple sources](/Images/TransferCFT/TransferCFT_Collect_w_CG.png)
+
+ 
+
 
 |   | Task  | Description  | Details  |
 | --- | --- | --- | --- |

@@ -2,7 +2,7 @@
 title: "userctrl"
 linkTitle: "userctrl"
 weight: 3700
---- <span id="userctrl"></span>
+---<span id="userctrl"></span>
 
 ### userctrl
 
@@ -24,5 +24,7 @@ Use this field to define the file access control. You can use the UserCtrl param
 
 - For details in UNIX, please see [Enable the file user rights (USERCTRL)](../../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/t_adding_system_user_unix#Manually)
 - For details in Windows, please see [Enable the file user rights (USERCTRL)](../../../../cft_intro_install/windows_install_start_here/windows_install_start_here/running_cft_for_the_first_time_windows/add_system_user_windows#Enable3)
+
+ 
 
 [Return to Command index](../../)

@@ -2,7 +2,7 @@
 title: "Update, upgrade, or migrate"
 linkTitle: "Update, upgrade, or migrate "
 weight: 180
---- ## Before you start
+---## Before you start
 
 This section describes how to upgrade or migrate to Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}}. Additionally, it describes the two methods for updating {{< TransferCFT/axwayvariablesComponentLongName  >}} z/OS and provides links to detailed information.
 
@@ -17,7 +17,7 @@ See the section [System requirements](../c_about_zos/r_prerequistes_zos) for det
 Applying a service pack (or patch) updates the product without changing the version. Typically it provides corrections to known issues, and may add minor enhancements. There are two supported methods to apply a service pack on {{< TransferCFT/axwayvariablesComponentLongName  >}} z/OS:
 
 - [Update the Transfer CFT instance with the maintenance identifier (SMP/E)](c_update_zos/maintenance)
-- [Update or apply a service pack (non- SMP/E)](c_update_zos/t_install_patch_zos)
+- [Update or apply a service pack (non-SMP/E)](c_update_zos/t_install_patch_zos)
 
 ## Upgrade procedure
 

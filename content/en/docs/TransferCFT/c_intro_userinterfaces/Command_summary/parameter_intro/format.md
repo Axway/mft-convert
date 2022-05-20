@@ -2,7 +2,7 @@
 title: "format"
 linkTitle: "format"
 weight: 1260
---- <span id="format"></span>
+---<span id="format"></span>
 
 ### format
 
@@ -58,6 +58,7 @@ Displays using the same format as in {{< TransferCFT/headerfootervariableshflong
 
 ##### Format 2
 
+
 | Type | V24 length | V23 length | Description |
 | --- | --- | --- | --- |
 | CHAR  | 1  | 1  | 'L': start of record marker  |
@@ -81,6 +82,7 @@ Displays using the same format as in {{< TransferCFT/headerfootervariableshflong
 | CHAR  | 3 | 3  | Diagi  |
 | CHAR  | 64 | 8  | Diagp  |
 
+
 ##### Format C: CSV - Comma Separated Value
 
 Each field is separated by a comma.
@@ -102,7 +104,7 @@ Each field is separated by a tab.
 ##### Format X: XML
 
 ```
-<?xml version="1.0" encoding="UTF- 8"?><CAT><TRANSFER DIRECT="S" STATE="X" PHASE="X" PHASESTEP="X" SPART="MARTIN" RPART="PARIS" IDF="ID_EXITL" IDT="L1111423" NBR="2" FNAME="" PRI="128" DATEK="20191211" TIMEK="11422580" PARM="" SUSER="" RUSER="" COMMENT="" DIAGI="0" DIAGP="CP NONE"/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <TRANSFER DIRECT="R" STATE="X" PHASE="X" PHASESTEP="X" SPART="PARIS" RPART="MARTIN" IDF="BIN" IDT="L1111415" NBR="2" FNAME="pub\\L1111415_A000002K.RCV" PRI="128" DATEK="20191211" TIMEK="11415981" PARM="My  &quot;param&quot; with quote" SUSER="" RUSER="" COMMENT="" DIAGI="0" DIAGP="CP NONE"/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+<?xml version="1.0" encoding="UTF-8"?><CAT><TRANSFER DIRECT="S" STATE="X" PHASE="X" PHASESTEP="X" SPART="MARTIN" RPART="PARIS" IDF="ID_EXITL" IDT="L1111423" NBR="2" FNAME="" PRI="128" DATEK="20191211" TIMEK="11422580" PARM="" SUSER="" RUSER="" COMMENT="" DIAGI="0" DIAGP="CP NONE"/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <TRANSFER DIRECT="R" STATE="X" PHASE="X" PHASESTEP="X" SPART="PARIS" RPART="MARTIN" IDF="BIN" IDT="L1111415" NBR="2" FNAME="pub\\L1111415_A000002K.RCV" PRI="128" DATEK="20191211" TIMEK="11415981" PARM="My  &quot;param&quot; with quote" SUSER="" RUSER="" COMMENT="" DIAGI="0" DIAGP="CP NONE"/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 <TOTAL>2</TOTAL></CAT>      
 ```
 

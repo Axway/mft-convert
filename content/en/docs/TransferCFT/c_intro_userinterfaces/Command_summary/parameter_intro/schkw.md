@@ -2,7 +2,7 @@
 title: "schkw"
 linkTitle: "schkw"
 weight: 3090
---- <span id="schkw"></span>
+---<span id="schkw"></span>
 
 ### schkw
 
@@ -21,5 +21,7 @@ points, expressed as a number of synchronization points not acknowledged.
 The value is negotiated during the connection phase with the partner RCHKW
 value. This window is used to send the data before the acknowledgments
 are received. SCHKW=0 means that synchronization points are not acknowledged.
+
+ 
 
 [Return to Command index](../../)

@@ -2,7 +2,7 @@
 title: "Download the installation package "
 linkTitle: "2. Download the install package"
 weight: 140
---- Before you start the installation, you should:
+---Before you start the installation, you should:
 
 - Download the installation package from {{< TransferCFT/axwayvariablesCompanyName >}} Sphere.
 - Uncompress or unzip the package.
@@ -11,7 +11,7 @@ The installation package is a zip archive. It contains the product, a configurat
 
 > **Note**
 >
-> In this section, replace &lt;OS> with your operating system and &lt;BN> with the build number, for example, Transfer_CFT_3.8_Install_linux- x86- 64_11256000.run.
+> In this section, replace &lt;OS> with your operating system and &lt;BN> with the build number, for example, Transfer_CFT_3.8_Install_linux-x86-64_11256000.run.
 
 > **Note**
 >

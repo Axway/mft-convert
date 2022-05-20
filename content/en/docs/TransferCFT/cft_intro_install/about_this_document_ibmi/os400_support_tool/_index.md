@@ -2,11 +2,12 @@
 title: "Troubleshooting"
 linkTitle: "Troubleshooting"
 weight: 210
---- ## Using the support tool
+---## Using the support tool
 
 To assist Axway Customer Support, the CFTSUPPORT command collects useful information from a Transfer CFT environment including the configuration, Unified Configuration parameters (UCONF), catalog information, log files, and so on. This information is then packaged and stored in a tar file in the specified IFS folder.
 
 Collected information for the Transfer CFT {{< TransferCFT/PrimaryForOS400  >}} platform includes these different CFTPROD/SUPOUT file members:
+
 
 | File  | Comment  |
 | --- | --- |
@@ -33,6 +34,7 @@ Collected information for the Transfer CFT {{< TransferCFT/PrimaryForOS400  >}} 
 | LOG  | Cftlog file  |
 | SAVFOUTQ.bin  | Back up the Transfer CFT Out Queue (in *SAVF format)  |
 | WRKACTJOB  | List system activity  |
+
 
 ## Using the CFTSUPPORT command
 

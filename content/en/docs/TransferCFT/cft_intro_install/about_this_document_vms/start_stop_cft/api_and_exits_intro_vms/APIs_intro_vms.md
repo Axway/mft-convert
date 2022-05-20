@@ -2,7 +2,7 @@
 title: "Using Application programming interfaces (API)"
 linkTitle: "Using APIs"
 weight: 240
---- You perform Transfer CFT service calls differently depending on the programming language that you use (C or COBOL). For more information, refer to the programming topics in [About APIs](../../../../about_this_document_zos/using_apis)
+---You perform Transfer CFT service calls differently depending on the programming language that you use (C or COBOL). For more information, refer to the programming topics in [About APIs](../../../../about_this_document_zos/using_apis)
 
 The Transfer CFT service called (CFTI, CFTU or CFTC) executes the request, either with or without analyzing command syntax, and then initializes the response zone.
 
@@ -10,13 +10,13 @@ The client application receives from Transfer CFT:
 
 - A return code
 
-<!- - - - >
+<!-- -->
 
 - The requested data, if applicable
 
 ## Creating an API application
 
-The `cft- tcp.conf `configuration sample is located in` cft_scen `or` d$cft_run:[conf].`
+The `cft-tcp.conf `configuration sample is located in` cft_scen `or` d$cft_run:[conf].`
 
 ## Application components
 
@@ -37,7 +37,7 @@ To test the configuration:
 1. Connect to the OpenVMS session with your Transfer CFT user.
 1. Generate the {{< TransferCFT/axwayvariablesComponentShortName >}} internal datafiles
     using `cftinit` with the configuration file:  
-    cftinit cft_scen:cft- tcp.conf
+    cftinit cft_scen:cft-tcp.conf
 1. When the` cftinit complete`
     message is displayed, run {{< TransferCFT/axwayvariablesComponentShortName >}} using the command:  
     cft start

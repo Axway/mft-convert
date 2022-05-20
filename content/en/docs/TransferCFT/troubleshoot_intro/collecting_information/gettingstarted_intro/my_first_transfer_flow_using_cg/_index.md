@@ -2,11 +2,11 @@
 title: "My first transfer flow "
 linkTitle: "First transfer flow with Central Governance"
 weight: 260
---- This topic describes how to create basic {{< TransferCFT/axwayvariablesComponentShortName  >}} transfer flows using {{< TransferCFT/PrimaryCGorUM  >}}. Once you understand file transfer flow concepts, you can customize your application integrations and data flows.
+---This topic describes how to create basic {{< TransferCFT/axwayvariablesComponentShortName  >}} transfer flows using {{< TransferCFT/PrimaryCGorUM  >}}. Once you understand file transfer flow concepts, you can customize your application integrations and data flows.
 
 ## Learn how to...
 
-- Create applications to use in flows](app_first_transfer_flow_using_cg)
+- [Create applications to use in flows](app_first_transfer_flow_using_cg)
 - [Create and deploy a basic flow](simple_first_transfer_flow_using_cg)
 - [Create a flow that sends multiple files](multi_file_first_transfer_flow_using_cg)
 - [Create an implicit mode flow](implicit_first_transfer_flow_using_cg)
@@ -23,7 +23,7 @@ weight: 260
 - Three started {{< TransferCFT/axwayvariablesComponentShortName >}}s that are registered with {{< TransferCFT/PrimaryCGorUM >}}
 - Three files for exchanges. After creating the files, name them: SALES_report, DAILY_news, and INVENTORY
 
-<!- - - - >
+<!-- -->
 
 - Appropriate rights in {{< TransferCFT/PrimaryCGorUM >}} for creating flows - refer to the {{< TransferCFT/PrimaryCGorUM >}} **User's Guide** for more information on user rights
 - Familiarize yourself with the two user interfaces as described in the [Getting started overview](../)
@@ -46,12 +46,14 @@ Use the **Details** arrows ![](/Images/TransferCFT/mapArrow.png) to get more inf
 
 When you are working in {{< TransferCFT/PrimaryCGorUM  >}}, you create *applications* that represent your exchange partners. In these exercises we create three applications in {{< TransferCFT/PrimaryCGorUM  >}}.
 
+
 |   | Task  | Description  | Details  |
 | --- | --- | --- | --- |
 | 1  | Check your Transfer CFTs in {{< TransferCFT/PrimaryCGorUM  >}}.<br />  | In {{< TransferCFT/PrimaryCGorUM  >}} select ****Products**** on the top toolbar to open the ****Product List**** page and note the host name of the {{< TransferCFT/axwayvariablesComponentShortName  >}}s to use in these exercises. | [![](/Images/TransferCFT/mapArrow.png)](intro_cg_task_catalog/t_view_products_in_cg)  |
 | 2  | Add an application.  | In this example, create three applications to represent the MainOffice, Store_66, and Store_89.  | [![](/Images/TransferCFT/mapArrow.png)](intro_cg_task_catalog/t_declareapplication)  |
 
-Notice the association between the application ****Name**** and the ****Transfer CFT**** instance identifier. You will need the Transfer CFT identifier, for example `CFTlptxumcft4- 01` in the example below, to use in your transfer commands.
+
+Notice the association between the application ****Name**** and the ****Transfer CFT**** instance identifier. You will need the Transfer CFT identifier, for example `CFTlptxumcft4-01` in the example below, to use in your transfer commands.
 
 Your **Name** list should look like this:
 
@@ -70,6 +72,9 @@ Let's begin by creating a simple flow, and then exchange a file. In this example
 
 ![Simplified diagram of a Source Transfer CFT sending a file to a Target](/Images/TransferCFT/TransferCFT_Standard_w_cg.png)
 
+ 
+
+
 |   | Task  | Description  | Details  |
 | --- | --- | --- | --- |
 | 1  | Define a flow.<br />  | In {{< TransferCFT/PrimaryCGorUM  >}} define a flow named Simple_flow and give it the identifier flow01.<br/> Use Store_66 as the Source and the MainOffice as the Target.<br /> Note: You cannot modify the Protocol until you have defined both the Source and Target. | [![](/Images/TransferCFT/mapArrow.png)](intro_cg_task_catalog/t_defineflow)  |
@@ -78,6 +83,7 @@ Let's begin by creating a simple flow, and then exchange a file. In this example
 | 4  | Run the SEND command.  | In {{< TransferCFT/axwayvariablesComponentShortName  >}}, run the following command:<br /> CFTUTIL SEND part=&lt;instance_MainOffice&gt;, idf=flow01, fname=pub\SALES_report<br/> Remember, replace &lt;instance_MainOffice&gt; with the Transfer CFT instance for the MainOffice as it displays in the list of applications.<br/> <blockquote> **Note**<br/> Tip The flow Identifier field is equivalent to the Transfer CFT IDF parameter.<br/> </blockquote>  | [![](/Images/TransferCFT/mapArrow.png)](../../../../c_intro_userinterfaces/about_cftutil)  |
 | 5  | Monitor the flow.  | In {{< TransferCFT/PrimaryCGorUM  >}}, check the status of the file exchange.  | [![](/Images/TransferCFT/mapArrow.png)](intro_cg_task_catalog/c_flow_monitoring)  |
 
+
 <span id="Send_multiple_files_to_application"></span>
 
 ### Create a flow that sends multiple files to an application
@@ -85,6 +91,7 @@ Let's begin by creating a simple flow, and then exchange a file. In this example
 This flow sends multiple files to a defined application. So a Store_66 application might create several files and set them to an available state, and the MainOffice application can then retrieve these when ready, for example at a scheduled time.
 
 ![Simplified diagram of a Source Transfer CFT sending a multiple files to a Target](/Images/TransferCFT/multiple_send_w_cg.png)
+
 
 |   | Task  | Description  | Details  |
 | --- | --- | --- | --- |
@@ -95,6 +102,7 @@ This flow sends multiple files to a defined application. So a Store_66 applicati
 | 5  | Run the SEND command.  | In {{< TransferCFT/axwayvariablesComponentShortName  >}}, run the following command: <code>CFTUTIL SEND part=&lt;instance_MainOffice&gt;, idf=flow02, fname=#pub\Store_66\*</code> Remember, replace <code>&lt;instance_MainOffice&gt;</code> with the Transfer CFT instance for the MainOffice as it displays in the list of applications. | [![](/Images/TransferCFT/mapArrow.png)](../../../../c_intro_userinterfaces/about_cftutil)  |
 | 6  | Monitor the flow.  | In {{< TransferCFT/PrimaryCGorUM  >}}, check the status of the file exchange.  | [![](/Images/TransferCFT/mapArrow.png)](intro_cg_task_catalog/c_flow_monitoring)  |
 
+
 <span id="Create_implicit_mode_flow"></span>
 
 ### Create an implicit mode flow
@@ -103,13 +111,15 @@ You can use the transfer mode to make a file whose content is frequently changin
 
 ![Simplified diagram of a Target Transfer CFT requesting a file from the Source](/Images/TransferCFT/CFT_w_CG_Implicit_mode.png)
 
+
 |   | Task  | Description  | Details  |
 | --- | --- | --- | --- |
-| 1  | Create an implicit flow.<br />  | In {{< TransferCFT/PrimaryCGorUM  >}} define a flow called <code>flow03</code>.<br/> To enable implicit mode, you select ****Target pulls file**** in the flow's General Information page.<br/> Continue to define the flow with the MainOffice as the Target, which will pull the file, and Store_89 as the file Source.<br />  | [![](/Images/TransferCFT/mapArrow.png)  |
+| 1  | Create an implicit flow.<br />  | In {{< TransferCFT/PrimaryCGorUM  >}} define a flow called <code>flow03</code>.<br/> To enable implicit mode, you select ****Target pulls file**** in the flow's General Information page.<br/> Continue to define the flow with the MainOffice as the Target, which will pull the file, and Store_89 as the file Source.<br />  | [![](/Images/TransferCFT/mapArrow.png)]()  |
 | 2  | Define the path to the file location.  | In the File properties of the Source, define the path to the file to be sent.<br/> In our example, use the TEST file located in the {{< TransferCFT/axwayvariablesComponentShortName  >}} runtime /pub folder. |   |
 | 3  | Deploy the flow. | In {{< TransferCFT/PrimaryCGorUM  >}} you can save and deploy later, or save and deploy.  | [![](/Images/TransferCFT/mapArrow.png)](intro_cg_task_catalog/t_savedeployflow)  |
 | 4  | Run the RECV command.  | In {{< TransferCFT/axwayvariablesComponentShortName  >}}, run the following command: <code>CFTUTIL RECV PART=&lt;instance_Store_89&gt;, IDF=flow03</code> Remember, replace <code>&lt;instance_Store_89&gt;</code> with the Transfer CFT instance for Store_89 as it displays in the list of applications. | [![](/Images/TransferCFT/mapArrow.png)](../../../../c_intro_userinterfaces/about_cftutil)  |
 | 5  | Monitor the flow.  | In {{< TransferCFT/PrimaryCGorUM  >}}, check the status of the file exchange.  | [![](/Images/TransferCFT/mapArrow.png)](intro_cg_task_catalog/c_flow_monitoring)  |
+
 
 <span id="Broadcast_and_collect_using_cg"></span>
 
@@ -127,6 +137,7 @@ Additionally, you can define what occurs if a partner is unknown, how the script
 
 ![Simplified diagram of a Source Transfer CFT sending a file to multiple Targets](/Images/TransferCFT/TransferCFT_Broadcast_w_CG.png)
 
+
 |   | Task  | Description  | Details  |
 | --- | --- | --- | --- |
 | 1  | Create a flow.<br />  | In {{< TransferCFT/PrimaryCGorUM  >}} define a flow called <code>flow04</code>. In this flow the MainOffice is the Source with the two stores as the Targets. | [![](/Images/TransferCFT/mapArrow.png)](intro_cg_task_catalog/t_defineflow_broadcast)  |
@@ -136,11 +147,15 @@ Additionally, you can define what occurs if a partner is unknown, how the script
 | 5  | Run the SEND command.  | In {{< TransferCFT/axwayvariablesComponentShortName  >}}, run the following command:<br/> <code>CFTUTIL SEND PART=DEST_stores, IDF=flow04, FNAME=pub/SALES_report</code> | [![](/Images/TransferCFT/mapArrow.png)](../../../../c_intro_userinterfaces/about_cftutil)  |
 | 6  | Monitor the flow.  | In {{< TransferCFT/PrimaryCGorUM  >}}, check the status of the file exchange.  | [![](/Images/TransferCFT/mapArrow.png)](intro_cg_task_catalog/c_flow_monitoring)  |
 
+
 #### Collecting
 
 Collecting files is the inverse of using a broadcast list. In the collect transfer mode you can receive a dedicated file from multiple partners (P*n*). This allows the receiver, or flow initiator, to receive a file from all defined partners using a single request command. More information...
 
 ![Simplified diagram of a Target Transfer CFT receiving files from multiple sources](/Images/TransferCFT/TransferCFT_Collect_w_CG.png)
+
+ 
+
 
 |   | Task  | Description  | Details  |
 | --- | --- | --- | --- |
@@ -151,11 +166,12 @@ Collecting files is the inverse of using a broadcast list. In the collect transf
 | 5  | Run the RECV command.  | In {{< TransferCFT/axwayvariablesComponentShortName  >}}, run the following command: <code>CFTUTIL RECV PART=DEST_Stores, IDF=flow05</code>  | [![](/Images/TransferCFT/mapArrow.png)](../../../../c_intro_userinterfaces/about_cftutil)  |
 | 6  | Monitor the flow.  | In {{< TransferCFT/PrimaryCGorUM  >}}, check the status of the file exchange.  | [![](/Images/TransferCFT/mapArrow.png)](intro_cg_task_catalog/c_flow_monitoring)  |
 
+
 <span id="Get"></span>
 
 ## Get more information
 
-Once you understand the basic modes and concepts described in this section, you can add processing, symbolic variables, scripts and more to your transfers using other {{< TransferCFT/axwayvariablesComponentShortName  >}} options and features. See the dedicated sections in this document for details on customizing your transfer flows. A good place to start is [Transfer Concepts](../../../../concepts/transfer_command_overview), which presents high- level transfer processing concepts, transfer mode details, and procedural topics.
+Once you understand the basic modes and concepts described in this section, you can add processing, symbolic variables, scripts and more to your transfers using other {{< TransferCFT/axwayvariablesComponentShortName  >}} options and features. See the dedicated sections in this document for details on customizing your transfer flows. A good place to start is [Transfer Concepts](../../../../concepts/transfer_command_overview), which presents high-level transfer processing concepts, transfer mode details, and procedural topics.
 
 - For more information on {{< TransferCFT/suitevariablesCentralGovernanceName >}}, screen details, checking product status, and so on, please refer to the {{< TransferCFT/suitevariablesCentralGovernanceName >}} {{< TransferCFT/suitevariablesDocTypeUser >}}.
 - For a complete listing of Source and Target parameters, refer to the Transfer CFT to {{< TransferCFT/PrimaryCGorUM >}} parameter mapping available in the **Central Governance* {{< TransferCFT/suitevariablesDocTypeUser >}}*.

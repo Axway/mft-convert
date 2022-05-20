@@ -2,7 +2,7 @@
 title: "fbufsize"
 linkTitle: "fbufsize"
 weight: 1060
---- <span id="fbufsize"></span>
+---<span id="fbufsize"></span>
 
 ### fbufsize
 

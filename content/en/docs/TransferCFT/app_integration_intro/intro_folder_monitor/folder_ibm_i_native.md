@@ -2,7 +2,7 @@
 title: "Folder monitoring IBM i native files"
 linkTitle: "Folder monitoring IBM i native files"
 weight: 200
---- This section describes the IBM i native file folder monitoring specificities. The IBM i native files folder monitoring mechanism is the same as [Scheduled folder monitoring](../#scheduled_folder): Transfer CFT periodically checks the status of native files (\*FILE objects) in a defined library to see if there are transfer candidates.
+---This section describes the IBM i native file folder monitoring specificities. The IBM i native files folder monitoring mechanism is the same as [Scheduled folder monitoring](../#scheduled_folder): Transfer CFT periodically checks the status of native files (\*FILE objects) in a defined library to see if there are transfer candidates.
 
 ## Support
 

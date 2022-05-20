@@ -2,7 +2,7 @@
 title: "Customize the z/OS installation"
 linkTitle: "Customize the z/OS installation"
 weight: 230
---- Each target environment corresponds to a Transfer CFT. This topic describes the specific Transfer CFT customization. Transfer CFT customization is application dependent, as opposed to the target environment, which is system dependent.
+---Each target environment corresponds to a Transfer CFT. This topic describes the specific Transfer CFT customization. Transfer CFT customization is application dependent, as opposed to the target environment, which is system dependent.
 
 ## JCL CFTENV (include member)
 
@@ -34,7 +34,7 @@ Example:
 > //CFTIN DD \*,SYMBOLS=(CNVTSYS,SUBSLOG)
 > SEND PART=PARIS,IDF=BIN,
 > FNAME=&CFTENV..FTEST,
-> IDA=’&SYSNAME- &ZOSLVL- &SYSCLONE’
+> IDA=’&SYSNAME-&ZOSLVL-&SYSCLONE’
 > /\*
 
 ```
@@ -104,7 +104,7 @@ To do this, copy the following members into a specific PROCLIB:
 - PCFTUTIL
 - PCFTUTL
 
-When changing the Transfer CFT version, you should get the new version of these members. A rollback is done by copying the backups of these members. This also applies to the end- of- transfer procedures.
+When changing the Transfer CFT version, you should get the new version of these members. A rollback is done by copying the backups of these members. This also applies to the end-of-transfer procedures.
 
 <span id="JOB H80EXEC"></span>
 
@@ -202,9 +202,9 @@ You can run the JCL multiple times, once to create the member .. SAMPLE (CFTPARM
 The JOB D40INIT prepares the Transfer CFT z/OS files. Before submitting this JOB, adapt the following points to the requirements of the operating service:
 
 - File names (if the default values in the samples are not usable)
-    - By default file names are defined in JCL INCLUDE=CFTENV
+    -   By default file names are defined in JCL INCLUDE=CFTENV
 
-<!- - - - >
+<!-- -->
 
 - The values of the parameters RECNB and FSPACE
 
@@ -212,31 +212,31 @@ The following data is required to use the basic Transfer CFT installation custom
 
 - CFTPARM: VSAM KSDS file, Transfer CFT parameters descriptions
 
-<!- - - - >
+<!-- -->
 
 - CFTPART: VSAM KSDS file, Transfer CFT partners description
 
-<!- - - - >
+<!-- -->
 
 - CFTCAT: VSAM ESDS file, Transfer CFT catalog
 
-<!- - - - >
+<!-- -->
 
 - CFTLOG1: Sequential file used as the log file by Transfer CFT
 
-<!- - - - >
+<!-- -->
 
 - CFTLOG2: Sequential file used by Transfer CFT as the alternate log file
 
-<!- - - - >
+<!-- -->
 
 - CFTACNT1: Sequential file used as the account file by Transfer CFT
 
-<!- - - - >
+<!-- -->
 
 - CFTACNT2:  Sequential file used by Transfer CFT as the alternate account file
 
-<!- - - - >
+<!-- -->
 
 - CFTCOM: VSAM ESDS file used by Transfer CFT as a buffer for the Transfer CFT commands submitted by CFTUTIL, a BATCH program, a TSO user, the Transfer CFT Copilot, or the Transfer CFT UI
 
@@ -248,11 +248,11 @@ The JCL E50PARM, located in the target.INSTALL library, updates the Transfer CFT
 
 To activate the SFTP parameters:
 
-1. - In the CFTPARM MEMBER, uncomment the `/*   sftp,sftpcli, */` line.
+1. -   In the CFTPARM MEMBER, uncomment the `/*   sftp,sftpcli, */` line.
 
-1. - Uncomment the following:
-        - `//* DD DISP=SHR,`
-        - `//* DSN=&QUAL..SAMPLE(CFTSFTP)`
+1. -   Uncomment the following:
+        -   `//* DD DISP=SHR,`
+        -   `//* DSN=&QUAL..SAMPLE(CFTSFTP)`
 
 ```
 E50PARM

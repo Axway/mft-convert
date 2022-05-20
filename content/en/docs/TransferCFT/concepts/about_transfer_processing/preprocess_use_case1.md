@@ -2,7 +2,7 @@
 title: "Usage: add a script for transfer errors"
 linkTitle: "Usage: add a script for transfer errors"
 weight: 190
---- This topic describes how to add a script that will execute when send and receive errors occur. Use the EXECE command to set the script.For information on the processing phases and phase steps, see [Processing concepts](../../phase_and_phasestep).
+---This topic describes how to add a script that will execute when send and receive errors occur. Use the EXECE command to set the script.For information on the processing phases and phase steps, see [Processing concepts](../../phase_and_phasestep).
 
 ## Step overview
 
@@ -25,7 +25,7 @@ After you create the script to be executed when an error occurs, point to the sc
 - Use either `CFTUTIL send `or` CFTUTIL recv`
 - To set the script to execute, enter: `exece=<yourscriptfileaddress>`
 - You can set the default behavior in the configuration file using:
-    - Unix: `CFTUTIL @<conffile>`
-    - Windows: `CFTUTIL #<conffile> `
+    -   Unix: `CFTUTIL @<conffile>`
+    -   Windows: `CFTUTIL #<conffile> `
 - Use the parameters `DIAGP `an `DIAGC `to specify a customized error that in the DIAGP/DIAGC catalog respectively.
 - Use the command [CFTEXT](../../../c_intro_userinterfaces/about_cftutil/configuring_cft_start_here/cftext_command) to generate a configuration file with current parameters.

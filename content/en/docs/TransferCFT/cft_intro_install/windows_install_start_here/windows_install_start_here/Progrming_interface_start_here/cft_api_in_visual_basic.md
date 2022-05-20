@@ -2,7 +2,7 @@
 title: "Building  API in Visual Basic"
 linkTitle: "Building API in Visual Basic"
 weight: 250
---- The {{< TransferCFT/axwayvariablesComponentShortName  >}} API toolkit contains a dynamic library, which enables
+---The {{< TransferCFT/axwayvariablesComponentShortName  >}} API toolkit contains a dynamic library, which enables
 users to develop a {{< TransferCFT/axwayvariablesComponentShortName  >}} API application, that was itself developed
 in Visual Basic. This library and the sample supplied have been validated
 for Visual Basic version 4.0 and higher.

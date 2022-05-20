@@ -2,7 +2,7 @@
 title: "User  interface options"
 linkTitle: "User interface options"
 weight: 160
---- Select the appropriate user interface according to tasks you want to perform.
+---Select the appropriate user interface according to tasks you want to perform.
 
 ## Configuration, monitoring, and flow management
 
@@ -24,7 +24,7 @@ weight: 160
 
 ### CFTUTIL interface
 
-The CFTUTIL interface provides a batch or interactive line- mode interface
+The CFTUTIL interface provides a batch or interactive line-mode interface
 to execute {{< TransferCFT/axwayvariablesComponentShortName  >}} operating commands.
 
 The CFTUTIL commands that are described in this documentation are collectively listed

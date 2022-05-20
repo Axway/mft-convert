@@ -2,7 +2,7 @@
 title: "Access management  reference information "
 linkTitle: "Reference: access management mapping"
 weight: 210
---- This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
+---This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
 
 ## Access management mapping in earlier versions
 
@@ -68,7 +68,7 @@ obj (ID)
              CFT
 obj (ID)
                     create,delete,read,modify
-
+     
     Transfer:
              Transfer
 (IDF,PART,SPART,RPART,IPART,MODE,FNAME)

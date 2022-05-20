@@ -2,7 +2,7 @@
 title: "Configuring Transfer CFT parameters"
 linkTitle: "Configuring Transfer CFT parameters"
 weight: 310
---- From the Main Menu, enter the command **`cft`** and press ****Enter**** to open the Manager Menu.
+---From the Main Menu, enter the command **`cft`** and press ****Enter**** to open the Manager Menu.
 
 1. Select option 1 Customization and press ENTER.
 1. In the Customization screen, select option 1 CFT parameters and press ENTER.
@@ -14,11 +14,11 @@ weight: 310
 
 The parameter file that you selected in the previous step, option 1 Editing the parameter source member, is interpreted by CFTUTIL. The options are confirmed before being interpreted. To interpret or update a parameter source, select option 2 Interpret selected member in the Customization screen. The following screen is displayed.
 
-The parameter and partner files can be created, re- created, or updated prior to interpretation. If this is the first time that you are interpreting a parameter source, you must first create it.
+The parameter and partner files can be created, re-created, or updated prior to interpretation. If this is the first time that you are interpreting a parameter source, you must first create it.
 
 - Select 1= Create for each time you interpret a new parameter source.
 
-<!- - - - >
+<!-- -->
 
 - Select 2 = Update to change existing command parameters. You can modify many of the Transfer CFT parameters while CFT is running, but some configuration command changes cannot be applied dynamically. For more information, refer to the Transfer CFT online documentation.
 
@@ -29,7 +29,7 @@ View messages
 ```
 CFTU20I CFT OS/400
 CFTU20I Version 3.2.1 2015/03/15
-CFTU20I (C) Copyright AXWAY 1989- 2015
+CFTU20I (C) Copyright AXWAY 1989-2015
 CFTU20I ====> Starting Session on 02/04/2013 Time is 09:28:19
 CFTU20I
 CFTU00I CFTFILE _ Correct (type=param,mode=create,fname=CFTPROD/PARM1) CFTU20I Number of Command(s) 1
@@ -40,7 +40,7 @@ Press ENTER to end terminal session.
 CFTU20I
 CFTU20I CFT OS/400
 CFTU20I Version 3.0.1 2013/03/15
-CFTU20I (C) Copyright AXWAY 1989- 2012
+CFTU20I (C) Copyright AXWAY 1989-2012
 CFTU20I ====> Starting Session on 02/04/2013 Time is 09:29:20
 CFTU20I
 CFTU00I CFTFILE _ Correct (type=part,mode=create,fname=CFTPROD/PART1 )
@@ -52,7 +52,7 @@ Press ENTER to end terminal session.
 CFTU20I
 CFTU20I CFT OS/400
 CFTU20I Version 3.2.1 2015/03/15
-CFTU20I (C) Copyright AXWAY 1989- 2015
+CFTU20I (C) Copyright AXWAY 1989-2015
 CFTU20I ====> Starting Session on 02/04/2013 Time is 09:29:24
 CFTU20I Parameters file :+CFTPARM
 CFTU20I

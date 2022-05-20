@@ -1,12 +1,12 @@
 ---
-title: "Windows- specific prerequisites "
-linkTitle: "Windows- specific prerequisites"
+title: "Windows-specific prerequisites "
+linkTitle: "Windows-specific prerequisites"
 weight: 170
---- The following are tasks to perform or issues to address before installing Transfer CFT.
+---The following are tasks to perform or issues to address before installing Transfer CFT.
 
 ## Windows requirements
 
-The Windows installation directory must not contain any sub- folders or files that are owned by another user.
+The Windows installation directory must not contain any sub-folders or files that are owned by another user.
 
 ## Hardware and software requirements
 
@@ -17,7 +17,7 @@ Before installing {{< TransferCFT/axwayvariablesComponentShortName  >}} Windows 
     system type
 
 These selections affect the minimum hardware and software requirements
-for the product and may be inter- dependent.
+for the product and may be inter-dependent.
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} is based on an external network layer, which must be installed before operating the product. And note that if other applications are running at the same time as {{< TransferCFT/axwayvariablesComponentShortName  >}},
 the RAM requirement needs to be increased.
@@ -36,7 +36,7 @@ User Account Control (UAC) is an option to add security infrastructure on Window
 For Windows versions that support UAC, Windows Vista, Windows Server 2008, Windows 7, Windows Server 2008 R2, and Windows 2012, you must disable the UAC when using {{< TransferCFT/PrimaryCGorUM  >}} to apply patches, service packs or upgrades for Transfer CFT.
 
 1. From the **Start** menu, type UAC and click to search.
-1. In the User Control Account settings pop- up window, set the slider to **Never Notify**.
+1. In the User Control Account settings pop-up window, set the slider to **Never Notify**.
 1. Click **OK**.
 1. Reboot to make the change effective.
 
@@ -71,7 +71,7 @@ The following tasks require that you have elevated rights and fail if one of the
 
 ## User rights prerequisites
 
-There are certain Windows- specific tasks you must perform to enable system user authentication and file system rights before using Transfer CFT or the Copilot server.
+There are certain Windows-specific tasks you must perform to enable system user authentication and file system rights before using Transfer CFT or the Copilot server.
 
 The following sections describe how to:
 
@@ -101,13 +101,13 @@ This section describes how to create a mapped drive using the **psexec** tool, w
 
 To map network shares to a drive accessible to Windows Services, you must log in as the NT AUTHORITY\\SYSTEM account.
 
-1. Download the [](http://technet.microsoft.com/en- us/sysinternals/bb842062.aspx)[Sysinternals Suite from Microsoft](https://technet.microsoft.com/en- us/sysinternals/bb842062.aspx), and unzip it to a directory.
+1. Download the [](http://technet.microsoft.com/en-us/sysinternals/bb842062.aspx)[Sysinternals Suite from Microsoft](https://technet.microsoft.com/en-us/sysinternals/bb842062.aspx), and unzip it to a directory.
 1. Open a command window and start a session as Administrator (Run as administrator).
 1. Go to the unzipped directory containing the Sysinternals Suite executable:
 1. Log in as the NT AUTHORITY\\SYSTEM account:
 1. In the new window, create the persistent mapped drive.
 1. Provide the credentials for a user having access to the shared folder.
-1. Create a **Startup script** that contains only the command from step 5 (Create the persistent mapped drive), and implement using the instructions in the Microsoft article: [Assign Computer Startup scripts](https://technet.microsoft.com/en- us/library/cc770556(v=ws.11).aspx).
+1. Create a **Startup script** that contains only the command from step 5 (Create the persistent mapped drive), and implement using the instructions in the Microsoft article: [Assign Computer Startup scripts](https://technet.microsoft.com/en-us/library/cc770556(v=ws.11).aspx).
 
 ### Remove a mapped drive
 

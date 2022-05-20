@@ -2,7 +2,7 @@
 title: "hide99"
 linkTitle: "hide99"
 weight: 1430
---- <span id="hide99"></span>
+---<span id="hide99"></span>
 
 ### hide99
 
@@ -18,5 +18,7 @@ using the ANY profile (PROFIL=ANY/CFT).
     (free message PI Code) is hidden
 - YES: hide private information carried
     by the protocol (physical local path of the file)
+
+ 
 
 [Return to Command index](../../)

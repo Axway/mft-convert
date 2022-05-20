@@ -2,7 +2,7 @@
 title: "notify"
 linkTitle: "notify"
 weight: 2260
---- <span id="notify"></span>
+---<span id="notify"></span>
 
 ### notify
 
@@ -22,7 +22,7 @@ messages selected according to the value of the OPERMSG parameter as follows:
     all messages from a transfer that was requested with the command if used
     in SEND or RECV
 
-The value of this parameter is a left aligned 8- character string.
+The value of this parameter is a left aligned 8-character string.
 
 The destination of these messages may be, according to the system:
 
@@ -36,7 +36,7 @@ The destination of these messages may be, according to the system:
     operator console  
     The NOTIFY parameter value must begin by the 2 characters OP
 
-<!- - - - >
+<!-- -->
 
 - a computer
     user  
@@ -51,6 +51,7 @@ involved:
 - NO indicates the corresponding recipient
     type does not exist
 
+
 | OS  | Monitor submitter  | Operator console  | Any user  |
 | --- | --- | --- | --- |
 | MVS (z/OS) | NO  | YES  | YES  |
@@ -59,8 +60,10 @@ involved:
 | VMS  | NO  | YES  | YES  |
 | Windows | YES  | NO  | NO  |
 
+
 The following table indicates, for each system, the default values of
 the NOTIFY parameter supported. The value ‘ ’ corresponds to 7 blank characters.
+
 
 | OS  | Default values for NOTIFY  |
 | --- | --- |
@@ -70,24 +73,29 @@ the NOTIFY parameter supported. The value ‘ ’ corresponds to 7 blank charact
 | VMS  | OP  |
 | Windows | ‘ ’  |
 
+
 In the operator console, the possible choices are indicated in
 the following table. If ‘OP’ is indicated for the interpreted characters,
 only these two characters (OP) are interpreted; the following characters
 are not significant.
 
+
 | Operator console OS | Characters interpreted  | Messages sent to... |
 | --- | --- | --- |
 | MVS (z/OS) | OP  | Operator console(s)  |
-| OS400  | OP  | QSYSOPR "message- queue"  |
+| OS400  | OP  | QSYSOPR "message-queue"  |
 | UNIX  | OP  | Operator console  |
 | VMS  | Opxxxxxx  | System console and output peripheral system LOG file identified by the "xxxxxx" link present in the current monitor execution directory  |
 | Windows | Not applicable  |   |
 
+
 For the user:
+
 
 | User OS  | Messages are...  |
 | --- | --- |
 | MVS (z/OS) | Sent by SEND to the specified TSO USERID; in this case, the {{< TransferCFT/axwayvariablesComponentShortName  >}} program must be authorized (APF). |
 | VMS | Sent to the "VMS User " designated by its VMS name. In this case, the {{< TransferCFT/axwayvariablesComponentShortName  >}} task must have the OPER privilege. |
+
 
 [Return to Command index](../../)

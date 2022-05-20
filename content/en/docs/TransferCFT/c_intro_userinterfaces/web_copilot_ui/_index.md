@@ -2,7 +2,7 @@
 title: "Transfer CFT user interface"
 linkTitle: "Transfer CFT UI "
 weight: 100
---- {{< TransferCFT/suitevariablesTransferCFTName  >}} features a web browser user interface that you can use to configure, track and manage transfers, and consult the  log. The following sections describe the steps you must perform before you can start using this user interface.
+---{{< TransferCFT/suitevariablesTransferCFTName  >}} features a web browser user interface that you can use to configure, track and manage transfers, and consult the  log. The following sections describe the steps you must perform before you can start using this user interface.
 
 The Transfer CFT user interface requires secure SSL/TLS communication between the browser and the REST server, and for the REST API option to be enabled. If you performed a custom installation without these options, you must perform the following steps before connecting to the user interface.
 
@@ -12,7 +12,7 @@ The Transfer CFT user interface requires secure SSL/TLS communication between t
 
 ## Supported browsers
 
-The {{< TransferCFT/axwayvariablesComponentLongName  >}} user interface requires a web browser. You will best experience browser- based applications such as the UI when using the latest version of one of the following browsers:
+The {{< TransferCFT/axwayvariablesComponentLongName  >}} user interface requires a web browser. You will best experience browser-based applications such as the UI when using the latest version of one of the following browsers:
 
 - Chrome
 - Microsoft Edge
@@ -24,7 +24,7 @@ For security purposes, you require a user certificate to secure the user interfa
 
 > **Note**
 >
-> You cannot use a self- signed certificate to secure the connection.
+> You cannot use a self-signed certificate to secure the connection.
 
 <span id="Connect"></span>
 
@@ -62,7 +62,7 @@ You are now ready to [connect to the user interface](#Connect2). If you encounte
     CFTUTIL uconfset id=copilot.ssl.SslCertFile, value=<ssl pkcs12 certificate for copilot>
     CFTUTIL uconfset id=copilot.ssl.SslCertPassword, value=<ssl pkcs12 certificate password>
     ```
-
+      
     These parameter settings are described in [Install a certificate on the server side](../../admin_intro/manage_copilot#Install).  
 
 1. Specify the authentication method, as the client must provide credentials (user/password) to the REST server. Set the UCONF the `copilot.restapi.authentication_method` parameter.  
@@ -94,11 +94,13 @@ The user that starts the Copilot server must have write permission for the Trans
 
 The supported authentication methods are:
 
+
 | Authentication method  | copilot.restapi.authentication_method  | Details  |
 | --- | --- | --- |
-| Operating System  | system  | The user/password is checked against the operating system.<br/> <blockquote> **Note**<br/> We strongly recommend that you set copilot.misc.createprocessasuser=yes when using the system option.<br/> </blockquote> **Unix**<br/> You must use <code>cftsu </code>to create users as a superuser is required (sudo or root privilege) to create a group and assign a user to a group. Refer to [Using system users - UNIX](../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/t_adding_system_user_unix) for details.<br/> • Create a group "group1": groupadd group1<br/> • Add user "user1" to group "group1": usermod - a - G group1 user1<br/> **Windows**<br/> You require a superuser (administrative user account) to create a group and assign a user to a group.<br/> • Create a group "group1": net localgroup group1 /add<br/> • Add user "user1" to group "group1": net localgroup group1 user1 /add<br/> <blockquote> **Note**<br/> For a user belonging to a domain, use: domain\user1 instead of user1<br/> </blockquote>  |
+| Operating System  | system  | The user/password is checked against the operating system.<br/> <blockquote> **Note**<br/> We strongly recommend that you set copilot.misc.createprocessasuser=yes when using the system option.<br/> </blockquote> **Unix**<br/> You must use <code>cftsu </code>to create users as a superuser is required (sudo or root privilege) to create a group and assign a user to a group. Refer to [Using system users - UNIX](../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/t_adding_system_user_unix) for details.<br/> • Create a group "group1": groupadd group1<br/> • Add user "user1" to group "group1": usermod -a -G group1 user1<br/> **Windows**<br/> You require a superuser (administrative user account) to create a group and assign a user to a group.<br/> • Create a group "group1": net localgroup group1 /add<br/> • Add user "user1" to group "group1": net localgroup group1 user1 /add<br/> <blockquote> **Note**<br/> For a user belonging to a domain, use: domain\user1 instead of user1<br/> </blockquote>  |
 | Access Management  | am  | This methods uses an indirection towards the Access Management system. The user/password is checked by the configured access management system: {{< TransferCFT/suitevariablesFlowManager  >}}, PassPort AM, or internal AM. |
-| xfbadm database<br/> (UNIX and HP NonStop exclusively) | xfbadm  | The user/password is checked using the xfbadm base (see the [xfbadmusr and xfbadmgrp utilities](../../cft_intro_install/unix_install_start_here/run_first_time_ux/use_cft_utilities)).<br/> A user that can execute xfbadmusr/xfbadmgrp utilities can create users and groups after executing the <code>profile </code>from the runtime directory.<br/> • Create a group "group1" with gid=200: xfbadmgrp add - G group1 - p group1_pw - g 200<br/> • From the user prompt, to add a user "user1" to group "group1"enter: xfbadmusr add - l user1 - p user1_pw - u AUTO - g 200 |
+| xfbadm database<br/> (UNIX and HP NonStop exclusively) | xfbadm  | The user/password is checked using the xfbadm base (see the [xfbadmusr and xfbadmgrp utilities](../../cft_intro_install/unix_install_start_here/run_first_time_ux/use_cft_utilities)).<br/> A user that can execute xfbadmusr/xfbadmgrp utilities can create users and groups after executing the <code>profile </code>from the runtime directory.<br/> • Create a group "group1" with gid=200: xfbadmgrp add -G group1 -p group1_pw -g 200<br/> • From the user prompt, to add a user "user1" to group "group1"enter: xfbadmusr add -l user1 -p user1_pw -u AUTO -g 200 |
+
 
 ********<span id="REST"></span>REST API server authentication method********
 
@@ -129,7 +131,7 @@ You can use the following UCONF parameters to manage this option:
 
 > **Note**
 >
-> In a multi- host environment, an attacker may have up to the copilot.general.max_login_failures \* &lt;number of host> tries before the user is locked if the file is not in a directory shared by all hosts.
+> In a multi-host environment, an attacker may have up to the copilot.general.max_login_failures \* &lt;number of host> tries before the user is locked if the file is not in a directory shared by all hosts.
 
 When the maximum number of login failures is reached, the user account is locked for 30 seconds.
 
@@ -172,7 +174,7 @@ Additionally, you can add or modify a root directory to the directories availabl
 1. Click **OK** to confirm. This creates a new UCONF root directory parameter having that name.
 
 1. In the newly created root directory, click `##INVALID## `in the **Value** field and enter the full path to the new directory.  
-
+      
     ![](/Images/TransferCFT/rootdirs3.png)  
     For example, enter `C:\MyNewDirectory`.
 
@@ -183,10 +185,10 @@ Additionally, you can add or modify a root directory to the directories availabl
 
 ### UNIX LDAP user
 
-You cannot use an LDAP user to connect to the web- based user interface.
+You cannot use an LDAP user to connect to the web-based user interface.
 
 ### Keyboard shortcut limitation
 
-When tabbing through the UI using keyboard shortcuts, if you tab to a field in a collapsed section that has a drop- down box and you use the space bar, the field's drop- down menu displays even though the section remains collapsed.
+When tabbing through the UI using keyboard shortcuts, if you tab to a field in a collapsed section that has a drop-down box and you use the space bar, the field's drop-down menu displays even though the section remains collapsed.
 
 ![](/Images/TransferCFT/UI_LIMITATION.png)

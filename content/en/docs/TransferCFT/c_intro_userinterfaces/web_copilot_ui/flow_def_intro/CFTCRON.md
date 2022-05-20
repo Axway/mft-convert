@@ -2,8 +2,8 @@
 title: "Scheduling script execution - CFTCRON"
 linkTitle: "Cron jobs - CFTCRON"
 weight: 250
---- The CRONJOB Job Scheduler feature enables Transfer CFT to execute scripts at predetermined
-dates and times. An example script, `cron- wlog.cmd`, is delivered in the installed product
+---The [CRONJOB Job Scheduler]() feature enables Transfer CFT to execute scripts at predetermined
+dates and times. An example script, `cron-wlog.cmd`, is delivered in the installed product
 packaging ($CFTDIRRUNTIME/exec on Unix/Windows). You can adapt this example to suit your local requirements.
 
 See [Use processing scripts](../../../../concepts/about_transfer_processing/proc_commands) for details on script processing execution methods.
@@ -13,20 +13,20 @@ See [Use processing scripts](../../../../concepts/about_transfer_processing/proc
 This section describes the CRON related commands and parameters.
 
 - CFTPARM: Each CRONJOB is associated with a CFTPARM via a CRONTABS parameter (environment definition):
-    - The CRONTABS parameter of the CFTPARM object refers to the CRONTAB parameter of the CFTCRON objects.
-    - You can have a CRONTAB with the same value for different CFTCRON objects (in the example below, note that CRON1 and CRON4 refer to the same CRONTAB).
-    - **Example**
+    -   The CRONTABS parameter of the CFTPARM object refers to the CRONTAB parameter of the CFTCRON objects.
+    -   You can have a CRONTAB with the same value for different CFTCRON objects (in the example below, note that CRON1 and CRON4 refer to the same CRONTAB).
+    -   **Example**
 - RECONFIG TYPE=CRON
-    - This sends a notification to Transfer CFT
+    -   This sends a notification to Transfer CFT
         to reload the enabled CRONJOBs. You use this command after modifying a CFTCRON (when either inserting or deleting).
-    - The RECONFIG command does not reload CFTPARM. If
+    -   The RECONFIG command does not reload CFTPARM. If
         you modify the CFTPARM CRONTABS then you must restart Transfer CFT.
 - MQUERY name=CRON
-    - Displays the log, which gives the current status of
+    -   Displays the log, which gives the current status of
         the enabled cronjobs.
 - ACT/INACT type=CRON
-    - To activate CRON4 in the previous example:
-    - To inactivate CRON1, enter:
+    -   To activate CRON4 in the previous example:
+    -   To inactivate CRON1, enter:
 
 For CFTCRON command parameter details, see the [Command reference](../../../command_summary).
 &lt;/p>
@@ -63,8 +63,9 @@ minutes, while an upper case M defines months.
 - Bold characters
     are terminators
 - Italic characters
-    are grammar rule non- terminators
+    are grammar rule non-terminators
 - A, b, c are integers
+
 
 | Rule | Syntax | Alternate syntax |
 | --- | --- | --- |
@@ -75,7 +76,9 @@ minutes, while an upper case M defines months.
 |   |   | z/OS (MVS) specific syntax |
 | content_set | [a:b] [a:b]<br/> [a:]<br/> [:b]<br/> * | &lt;a:b&gt;<br/> &lt;a:&gt;<br/> &lt;:b&gt; |
 
+
 ### Time parameter descriptions
+
 
 | Symbol  | Description  | Values  |
 | --- | --- | --- |
@@ -86,7 +89,9 @@ minutes, while an upper case M defines months.
 | M  | Month  | 1 to 12  |
 | W  | Day of the week  | 0 to 7 (0 and 7 both represent Sunday)  |
 
+
 ### Time syntax examples
+
 
 | If you use this syntax… | The job is executed… |
 | --- | --- |
@@ -99,11 +104,12 @@ minutes, while an upper case M defines months.
 | D=1;h=15;m=30 | Every first day of the month, at 15:30:00 |
 | D=*/2;h=6 | Every 2 days at 06:00:00, day 1, day 3, day 5...day 31. Due to the fact that all months do not have 31 days, the following month the job will be performed 2 days from the 31st, that means on day 2, then day 4, day 6, and so on. |
 | D=[1:7];W=0;h=4 | Every first Sunday of the month at 04:00:00 |
-| D=- 1;h=6 | Every last day of the month at 06:00:00 |
-| D=[- 7:- 1];W=3;h=6 | Every last Wednesday of the month at 06:00:00 |
+| D=-1;h=6 | Every last day of the month at 06:00:00 |
+| D=[-7:-1];W=3;h=6 | Every last Wednesday of the month at 06:00:00 |
 | W=0 | Every Sunday at 00:00:00 |
 | W=1 | Every Monday at 00:00:00 |
 | M=1 | Every January, the first at 00:00:00 |
+
 
 ## CRONJOB messages
 
@@ -123,6 +129,7 @@ The possible cronjob messages are:
 The table below lists the symbolic variables available in the CRONJOB
 procedure. Define these using the EXEC parameter of the CFTCRON command.
 
+
 | Symbolic variable | Corresponding substituted value |
 | --- | --- |
 | &amp;CFTEVENT | Fixed name=CRONJOB  |
@@ -137,6 +144,7 @@ procedure. Define these using the EXEC parameter of the CFTCRON command.
 | &amp;COMMENT | Comment value indicated in CFTCRON command |
 | &amp;PARM | Parm value indicated in CFTCRON command |
 | &amp;SCOUNT | Counter for the Cronjob procedures launched for a specific Identifier |
+
 
 ****Related
 topics****

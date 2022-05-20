@@ -2,7 +2,7 @@
 title: "retryn"
 linkTitle: "retryn"
 weight: 2910
---- <span id="retryn"></span>
+---<span id="retryn"></span>
 
 ### retryn
 
@@ -33,12 +33,12 @@ If retryw = 1, retryn = 4, retrym =12
 In this example the following occurs:
 
 - Four
-    retries at one- minute intervals
+    retries at one-minute intervals
 - Two
-    retries at two- minute intervals
-- One retry at four- minute intervals
+    retries at two-minute intervals
+- One retry at four-minute intervals
 - Five
-    retries at eight- minute intervals
+    retries at eight-minute intervals
 
 **Retry concepts**
 

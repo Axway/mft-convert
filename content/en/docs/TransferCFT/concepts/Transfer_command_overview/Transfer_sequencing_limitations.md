@@ -2,7 +2,7 @@
 title: "Partner  call limitations"
 linkTitle: "Partner call  limitations"
 weight: 230
---- This topic describes the limitations on partner connections.
+---This topic describes the limitations on partner connections.
 
 ### Number of connections
 

@@ -2,7 +2,7 @@
 title: "Customize the initialize.properties file"
 linkTitle: "3. Customize the initialize.properties file"
 weight: 160
---- A common practice is to create a copy of the `initialize.properties ` file, which is located in the downloaded installation package. This gives you an initial intact version should you later need it.
+---A common practice is to create a copy of the `initialize.properties ` file, which is located in the downloaded installation package. This gives you an initial intact version should you later need it.
 
 Customize the `initialize.properties ` file. Use the table below to help you with parameter settings; note that the `CryptoKey_Password` is mandatory. Be sure that if you want to use special characters in a configuration file field, you protect the value by enclosing it in double quotation marks ("").
 
@@ -26,22 +26,26 @@ If you do not enclose this value in "", the string is interpreted as: `CryptoKey
 >
 > Parameters that have default values are flagged by @default.
 
+
 | Parameter  | Automatic or default  | Description  | UCONF  |
 | --- | --- | --- | --- |
 | Installation architecture  | @default = single  | Defines single or cluster mode installation.<br/> Values: single, first_host, additional_host | N/A  |
 | installdir  |   | Transfer CFT installation directory.  | cft.install_dir  |
-| accept_general_conditions  | NO  | Set to YES to accept the General Terms and Conditions in the product [license](https://www.axway.com/en/legal/contract- documents) when performing a silent installation.  |   |
+| accept_general_conditions  | NO  | Set to YES to accept the General Terms and Conditions in the product [license](https://www.axway.com/en/legal/contract-documents) when performing a silent installation.  |   |
+
 
 ****Basic installation parameters****
 
+
 | Parameter  | Automatic or default  | Description  | UCONF  |
 | --- | --- | --- | --- |
-| runtimeDir  | ./runtime  | Transfer CFT runtime directory.<br/> Specify the directory where you want to install the Transfer CFT runtime directory.<br/> By default, the runtime directory is installed in a sub- directory of the Transfer CFT installation directory. Use the default directory, or specify a new directory. A runtime directory will be created if it does not already exist. | cft.runtime_dir  |
+| runtimeDir  | ./runtime  | Transfer CFT runtime directory.<br/> Specify the directory where you want to install the Transfer CFT runtime directory.<br/> By default, the runtime directory is installed in a sub-directory of the Transfer CFT installation directory. Use the default directory, or specify a new directory. A runtime directory will be created if it does not already exist. | cft.runtime_dir  |
 | Full_Hostname | @automatic  | Host Address of the local server: FQDN (Fully Qualified Domain Name) or IP Address. See **Note*** | cft.full_hostname  |
 | multinode_hostname  | @automatic  | When not defined, this field is filled with the hostname of the machine where you are installing {{< TransferCFT/suitevariablesTransferCFTName  >}}, whether it is the first host or an additional host.<br/> If the hostname contains a "." period, the value used consists of the name of the host preceding the first period. For example, "myhost.fqdn.net" would be shortened to "myhost". | cft.multi_node.hostnames  |
 | multinode_host_address  | @automatic  | If you do not specify a value, the machine's FQDN address is used.<br/> Note that if there is an error in the machine's configuration, the value taken could be incorrect. Be sure to check that you can ping the address, and that it is the value for the cluster network. | cft.multi_node.hostnames.&lt;hostname&gt;.host  |
 | Instance_ID | @default  | The maximum length is 24.  | cft.instance_id  |
 | Instance_Group  |   | Transfer CFT instance group.<br/> The maximum length is 1000. | cft.instance_group  |
+
 
 > **Note**
 >
@@ -52,13 +56,16 @@ If you do not enclose this value in "", the string is interpreted as: `CryptoKey
 
 ****Security configuration parameters****
 
+
 | Parameter  | Automatic or default  | Description  | UCONF  |
 | --- | --- | --- | --- |
-| CryptoKey_Password | @mandatory  | Seed password to generate the encryption key.<br/> The password must contains at least 8 characters, contain upper and<br/> lower case characters as well as numeric and special characters (*$!?+- @). | N/A  |
+| CryptoKey_Password | @mandatory  | Seed password to generate the encryption key.<br/> The password must contains at least 8 characters, contain upper and<br/> lower case characters as well as numeric and special characters (*$!?+-@). | N/A  |
 | CryptoKey_Key_File | @default = $CFTDIRRUNTIME/data/crypto/crypkey  | Location that stores the generated key file.  | crypto.key_fname  |
 | CryptoKey_Salt_File | @default = $CFTDIRRUNTIME/data/crypto/crypsalt  | Location that stores the generated salt file.  | crypto.salt_fname  |
 
+
 ****Runtime configuration parameters****
+
 
 | Parameter  | Automatic or default  | Description  | UCONF  |
 | --- | --- | --- | --- |
@@ -74,18 +81,22 @@ If you do not enclose this value in "", the string is interpreted as: `CryptoKey
 | UI_DefaultUser_Username<br/> UI_DefaultUser_Password |   | *UNIX systems only*<br/> The default Transfer CFT UI user/password. | N/A  |
 | RESTAPI_Enable<br/> <br/>  | @default = Yes  | Setting this to Yes activates the Transfer CFT REST API Server. | copilot.restapi.enable  |
 | RESTAPI_Port  | 1768  | The port number used to connect to the REST API server. | copilot.restapi.serverport  |
-| RESTAPI_Certificate_Path<br/> RESTAPI_Cert_Pass |   | Sets the certificate and the corresponding password to be used by the Transfer<br/> CFT REST API Server and for HTTPS connections with Copilot (the old Transfer CFT UI, Web services, and JPI).<br/> • When REST API is enabled, you must complete these fields.<br/> • When Copilot_OnlySSL is activated, you must complete these fields.<br/> When using Central Governance, the REST API server automatically uses the SSL business certificate generated during the registration; there is no need to pre- define this value if you are going to register Transfer CFT with Central Governance. | copilot.ssl.SslCertFile  |
+| RESTAPI_Certificate_Path<br/> RESTAPI_Cert_Pass |   | Sets the certificate and the corresponding password to be used by the Transfer<br/> CFT REST API Server and for HTTPS connections with Copilot (the old Transfer CFT UI, Web services, and JPI).<br/> • When REST API is enabled, you must complete these fields.<br/> • When Copilot_OnlySSL is activated, you must complete these fields.<br/> When using Central Governance, the REST API server automatically uses the SSL business certificate generated during the registration; there is no need to pre-define this value if you are going to register Transfer CFT with Central Governance. | copilot.ssl.SslCertFile  |
 
-****Multi- node and Cluster parameters****
+
+****Multi-node and Cluster parameters****
+
 
 | Parameter  | Automatic or default  | Description  | UCONF  |
 | --- | --- | --- | --- |
-| Multinode_Enable  | @default = No  | Enable the multi- node architecture.<br/> To use a multi- node architecture, you must define the multi- node option in the initialize.properties file. | cft.multi_node.enable  |
+| Multinode_Enable  | @default = No  | Enable the multi-node architecture.<br/> To use a multi-node architecture, you must define the multi-node option in the initialize.properties file. | cft.multi_node.enable  |
 | Multinode_Number  | @default = 2  | Enter the number of nodes.  | cft.multi_node.nodes  |
 | LoadBalancer_Host  |   | Specify the host address of the load balancer.<br/> When using an ACTIVE/ACTIVE or ACTIVE/PASSIVE deployment, you require a load balancer to connect to the Transfer CFT Copilot server. | cft.multi_node.load_balancer.host  |
 | LoadBalancer_Port  |   | Specify the load balancer port, which is redirected to the Central Governance dedicated port of the Transfer CFT UI Server. When using ACTIVE/ACTIVE or ACTIVE/PASSIVE deployment, you require a load balancer to connect to the Transfer CFT Copilot server. | cft.multi_node.load_balancer.port  |
 
+
 ****Central Governance parameters****
+
 
 | Parameter  | Automatic or default  | Description  | UCONF  |
 | --- | --- | --- | --- |
@@ -97,7 +108,9 @@ If you do not enclose this value in "", the string is interpreted as: `CryptoKey
 | CG_ConfigurationPolicy  |   | Specify Central Governance configuration policy to apply to the Transfer CFT instance.  | cg.configuration_policy  |
 | CG_Certificate_Path  | @default = $CFTDIRRUNTIME/conf/pki/passportCA.pem  | Specify the Custom Certificate to authenticate Central Governance.  | N/A  |
 
+
 ****Sentinel Connector parameters****
+
 
 | Parameter  | Automatic or default  | Description  | UCONF  |
 | --- | --- | --- | --- |
@@ -109,7 +122,9 @@ If you do not enclose this value in "", the string is interpreted as: `CryptoKey
 | Sentinel_Use_SSL  | @default = Yes  | Enables an SSL connection with Sentinel.  | sentinel.xfb.use_ssl  |
 | Sentinel_Certificate_Path  | @default=$CFTDIRRUNTIME/conf/pki/passportCA.pem  | Sentinel root certificate.  | N/A  |
 
+
 **Windows Services parameters**
+
 
 | Parameter  | Automatic or default  | Description  | UCONF  |
 | --- | --- | --- | --- |
@@ -124,22 +139,27 @@ If you do not enclose this value in "", the string is interpreted as: `CryptoKey
 | CFTUI_ServiceUsername CFTUI_ServicePassword  |   | The Username (Domain\User) of the user who will start the Transfer CFT UI Server.  | N/A  |
 | CFTUI_StartType  | @default= auto  | The Transfer CFT UI Server service start type: auto, manual, disabled  | N/A  |
 
+
 > **Note**
 >
 > In contrast with previous versions of Transfer CFT on Windows platforms, the Start menu option is automatically created and desktop icons are no longer an option.
 
 ****Miscellaneous parameters****
 
+
 | Parameter  | Automatic or default  | Description  | UCONF  |
 | --- | --- | --- | --- |
 | JAVA_BINARY_PATH  |   | Java binary path used to start Transfer CFT jar files.  | cft.jre.java_binary_path  |
 | IntegrityControl_Enable  | @default = Yes  | Activate integrity control for the Transfer CFT databases.  |   |
 
+
 **SAML parameters**
+
 
 | Parameter  | Automatic or default  | UCONF  |
 | --- | --- | --- |
 | Enable SAML  | @default = No  | am.type= 'saml'  |
+
 
 ## Password management
 

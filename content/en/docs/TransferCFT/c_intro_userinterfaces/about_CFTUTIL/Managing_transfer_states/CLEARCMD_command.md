@@ -2,12 +2,13 @@
 title: "CLEARCMD - Delete a command in the COM file"
 linkTitle: "CLEARCMD - Deleting a transfer request"
 weight: 290
---- This page describes the <span id="CLEARCMD_command"></span>CLEARCMD. Use this
+---This page describes the <span id="CLEARCMD_command"></span>CLEARCMD. Use this
 command to delete a transfer request from the communication file. A log message is generated to trace who has cleared which command.
 
 > **Note**
 >
 > You must include either the COMMAND or JOBNAME parameter when using this command.
+
 
 | Parameters  | Description  |
 | --- | --- |
@@ -15,6 +16,7 @@ command to delete a transfer request from the communication file. A log message 
 | INDEX | Request number as displayed by the LISTCOM command.<br/> For example:<br/> • <code>INDEX=*</code> Selects all record numbers.<br/> • <code>INDEX=12345</code> Selects the record number 12345 in the COM file. |
 | JOBNAME  | Jobname (string 15), which you can combine with wildcard characters.<br/> For example:<br/> • <code>JOBNAME=12345</code><br/> • <code>JOBNAME=123*</code><br/> • <code>JOBNAME=12?45</code> |
 | USERID | Identifier of the request owner. |
+
 
 ### Delete a single command
 
@@ -28,7 +30,7 @@ Begin by running the LISTCOM command.
 cftutil listcom
 RECORDS
 RECORD N 1 ACTIVE : YES
-COMMAND- TYPE : SEND USERID : AXWAY\\Manager
+COMMAND-TYPE : SEND USERID : AXWAY\\Manager
 GROUPID :
 JOBNAME : 17944
 COMMAND :
@@ -46,7 +48,7 @@ Repeat the LISTCOM command, and the example below displays  the results (note t
 ```
 cftutil listcom
 RECORD N 1 ACTIVE : CLEARED
-COMMAND- TYPE : SEND USERID : AXWAY\\Manager
+COMMAND-TYPE : SEND USERID : AXWAY\\Manager
 GROUPID :
 JOBNAME : 17944
 COMMAND :
@@ -82,13 +84,13 @@ To delete all RECV commands that have the JOBNAME 9168 for the Axway/Manager a
 ```
 cftutil listcom
 RECORD N 3 ACTIVE : YES
-COMMAND- TYPE : RECV USERID : AXWAY\\Manager
+COMMAND-TYPE : RECV USERID : AXWAY\\Manager
 GROUPID :
 JOBNAME : 9168
 COMMAND :
 part=loop,idf=\*
 RECORD N 4 ACTIVE : YES
-COMMAND- TYPE : RECV USERID : AXWAY\\Manager
+COMMAND-TYPE : RECV USERID : AXWAY\\Manager
 GROUPID :
 JOBNAME : 9168
 COMMAND :
@@ -106,13 +108,13 @@ Run LISTCOM; the selected records now display as CLEARED.
 ```
 cftutil listcom
 RECORD N 3 ACTIVE : CLEARED
-COMMAND- TYPE : RECV USERID : AXWAY\\Manager
+COMMAND-TYPE : RECV USERID : AXWAY\\Manager
 GROUPID :
 JOBNAME : 9168
 COMMAND :
 On 20200203 at 161221 UserId=AXWAY\\Manager, JobName=20144 ran the command 'CLEARCMD UserId=AXWAY\\Manager, Index=\*, JobName=9168, Command=RECV'. This clears the command: UserId=AXWAY\\Manager, JobName=9168, Command=RECV part=loop,idf=\*
 RECORD N 4 ACTIVE : CLEARED
-COMMAND- TYPE : RECV USERID : AXWAY\\Manager
+COMMAND-TYPE : RECV USERID : AXWAY\\Manager
 GROUPID :
 JOBNAME : 9168
 COMMAND :
@@ -128,6 +130,8 @@ The following is a list of error and information messages that display.
 `CFTU26E CLEARCMD _ Error (Index value not authorized_ Bad command)`
 
 `CFTU00I CLEARCMD _ Failed (userid=AXWAY\Manager,index=4*,command=recv)`
+
+ 
 
 **Error 2**
 

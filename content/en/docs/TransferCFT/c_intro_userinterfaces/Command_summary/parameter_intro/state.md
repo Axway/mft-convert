@@ -2,7 +2,7 @@
 title: "state"
 linkTitle: "state"
 weight: 3410
---- <span id="state"></span>
+---<span id="state"></span>
 
 ### state
 
@@ -42,7 +42,7 @@ Select one of the following transfer states:
 
 - **\***
 
-<!- - - - >
+<!-- -->
 
 - **C**
 - **CDHKTX**

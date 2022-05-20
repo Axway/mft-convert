@@ -2,10 +2,10 @@
 title: "Use processing scripts"
 linkTitle: "Standard use of processing commands"
 weight: 170
---- There are 4 stages where you can configure processing - preprocessing, post- processing, ack processing, and for a transfer error. For these, Transfer CFT provides global definitions in the static configuration that are used by default. However, you can override the default scripts, in the CFTSEND, SEND, CFTRECV and RECV commands, using the following parameters:
+---There are 4 stages where you can configure processing - preprocessing, post-processing, ack processing, and for a transfer error. For these, Transfer CFT provides global definitions in the static configuration that are used by default. However, you can override the default scripts, in the CFTSEND, SEND, CFTRECV and RECV commands, using the following parameters:
 
 - `Preexec`: for preprocessing
-- `Exec`: for post- processing
+- `Exec`: for post-processing
 - `Ackexec`: for acknowledge processing
 - `Exece`: for transfer errors
 
@@ -46,7 +46,7 @@ CFTUTIL END PART=PART01, IDTU=A0000001
 Depending on the operating system, the temporary file is treated as follows:
 
 - Windows: The temporary file is automatically deleted.
-    - To keep temporary files, you can set CFTNODEL as described in [Transfer scripts and temporary files](../../../cft_intro_install/windows_install_start_here/windows_install_start_here/running_cft_for_the_first_time_windows/transfer_procedures_win).
+    -   To keep temporary files, you can set CFTNODEL as described in [Transfer scripts and temporary files](../../../cft_intro_install/windows_install_start_here/windows_install_start_here/running_cft_for_the_first_time_windows/transfer_procedures_win).
 
 - z/OS: Transfer CFT writes directly to a JES internal reader.
 
@@ -60,12 +60,12 @@ Depending on the operating system, the temporary file is treated as follows:
 
     `rm $0.err`
 
-    - See <a href="../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/cft_temporary_files" class="MCXref xref">Transfer scripts and
+    -   See <a href="../../../cft_intro_install/unix_install_start_here/run_first_time_ux/run_first_time_ux/cft_temporary_files" class="MCXref xref">Transfer scripts and
         temporary files</a>for more information.
 
 - HP NonStop
 
-    - native environment: You must perform the following steps to remove the temporary file:
+    -    native environment: You must perform the following steps to remove the temporary file:
         &lt;ul>&lt;li>#PURGE [#IN]&lt;/li>&lt;li>The same BTPURGE procedure as in the previous version is delivered and can be executed&lt;/li>&lt;span class="code">&lt;code>RUN &lt;subvolume>UP.BTPURGE [#DEFAULTS]&lt;/code>&lt;/span>&lt;/ul>&lt;/li>&lt;li>OSS environment: You must add the following lines at the end of the template processing script: &lt;p class="code">&lt;code>rm $0 &lt;/code>&lt;/p>&lt;p class="code">&lt;code>rm $0.err&lt;/code>&lt;/p>&lt;/li>&lt;/ul>&lt;/li>
 
     <span id="Directly"></span>
@@ -95,12 +95,12 @@ Depending on the operating system, the temporary file is treated as follows:
 
     If a command is incorrect and cannot be executed, the transfer remains in the phasestep C. Possible reasons for this include:
 
-    - The command file name is too long
-    - The command file name does not point to a regular file
-    - The search permission is denied on a component of the command's path prefix
-    - The execute permission is denied
-    - The system does not support executing this type of file
-    - A loop exists in symbolic links encountered during resolution of the path or file argument
+    -   The command file name is too long
+    -   The command file name does not point to a regular file
+    -   The search permission is denied on a component of the command's path prefix
+    -   The execute permission is denied
+    -   The system does not support executing this type of file
+    -   A loop exists in symbolic links encountered during resolution of the path or file argument
 
     > **Note**
     >
@@ -109,7 +109,7 @@ Depending on the operating system, the temporary file is treated as follows:
 
     ## Schedule processing
 
-    You can use the Premindate/Premintime, Postmindate/Postmintime, and Ackmindate/Ackmintime parameters to schedule script processing activity. Additionally you can use prestate=Hold to wait for a START to start pre- processing.
+    You can use the Premindate/Premintime, Postmindate/Postmintime, and Ackmindate/Ackmintime parameters to schedule script processing activity. Additionally you can use prestate=Hold to wait for a START to start pre-processing.
 
     ## Throttle processing
 
@@ -118,7 +118,7 @@ Depending on the operating system, the temporary file is treated as follows:
     > **Note**
     >
     > Caution  
-    > When using this parameter, every end- of- transfer procedure must notify Transfer CFT once the processing is complete. This can be done either via an END or KEEP command (in the case of an error). Failure to signal that processing is complete means that new procedures cannot start once the cft.server.max_processing_scripts value is reached.
+    > When using this parameter, every end-of-transfer procedure must notify Transfer CFT once the processing is complete. This can be done either via an END or KEEP command (in the case of an error). Failure to signal that processing is complete means that new procedures cannot start once the cft.server.max_processing_scripts value is reached.
 
     ```
     uconfset id= cft.server.max_processing_scripts
@@ -285,7 +285,7 @@ Depending on the operating system, the temporary file is treated as follows:
           <tr>
              <td >EXECSUB         </td>
              <td >LIST/SUBF/FILE         </td>
-             <td >Group of files: execution policy for post- processing phase.         </td>
+             <td >Group of files: execution policy for post-processing phase.         </td>
           </tr>
           <tr>
              <td >EXECSUBA         </td>
@@ -389,6 +389,7 @@ Depending on the operating system, the temporary file is treated as follows:
 
     ### KEEP
 
+    
 | Command  | Parameter  | Value  | Description  |
 | --- | --- | --- | --- |
 | KEEP  | DIAGP  | string  | Specify a customized error that will be set for DIAGP in the catalog.  |
@@ -396,8 +397,10 @@ Depending on the operating system, the temporary file is treated as follows:
 | KEEP  | PHASE  | char  | The transfer phase at which the command is applied.  |
 | KEEP  | PHASE STEP  | char  | The phase step at which the command is applied.  |
 
+
     ### HALT
 
+    
 | Command  | Parameter  | Value  | Description  |
 | --- | --- | --- | --- |
 | HALT  | DIAGP  | string  | Specify a customized error that will be set for DIAGP in the catalog.  |
@@ -405,19 +408,23 @@ Depending on the operating system, the temporary file is treated as follows:
 | HALT  | PHASE  | char  | The transfer phase at which the command is applied.  |
 | HALT  | PHASE STEP  | char  | The phase step at which the command is applied.  |
 
+
     ### SUBMIT
 
+    
 | Command  | Parameter  | Value  | Description  |
 | --- | --- | --- | --- |
 | SUBMIT  | APPSTATE  | string  | Specify an application state for the processing script that will allow a SUBMIT to occur at the correct script step.  |
-| - " - | PHASE  | char  | The transfer phase at which the command is applied.  |
-| - " - | PHASE STEP  | char  | The phase step at which the command is applied.  |
+| - " -  | PHASE  | char  | The transfer phase at which the command is applied.  |
+| - " -  | PHASE STEP  | char  | The phase step at which the command is applied.  |
+
 
     ### START
 
+    
 | Command  | Parameter  | Value  | Description  |
 | --- | --- | --- | --- |
 | START  | PHASE  | char  | The transfer phase at which the command is applied.  |
-| - " - | MAXDURATION  | integer  | Restart a transfer that reached its maxduration, time in minutes {<u>0</u>...32767}.  |
-| - " - | PHASE STEP  | char  | The phase step at which the command is applied.  |
+| - " -  | MAXDURATION  | integer  | Restart a transfer that reached its maxduration, time in minutes {<u>0</u>...32767}.  |
+| - " -  | PHASE STEP  | char  | The phase step at which the command is applied.  |
 

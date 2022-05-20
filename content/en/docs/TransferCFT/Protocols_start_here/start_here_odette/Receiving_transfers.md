@@ -2,7 +2,7 @@
 title: "Receiving OFTP transfers"
 linkTitle: "Receiving transfers"
 weight: 190
---- After you configure the OFTP (ODETTE) environment, as described in [Configuring
+---After you configure the OFTP (ODETTE) environment, as described in [Configuring
 OFTP](../configuring_odette), you must define the transfer environment in the RECV
 object to receive a request.
 
@@ -67,6 +67,7 @@ DIAGP=LDT_TXT.
 If the receiver file type is not defined, {{< TransferCFT/axwayvariablesComponentShortName  >}} assigns the value
 contained in the table below, according to the receiving system.
 
+
 | Receiving system  | FTYPE default  |
 | --- | --- |
 | z/OS (MVS) | ‘ ’  |
@@ -74,13 +75,14 @@ contained in the table below, according to the receiving system.
 | UNIX  | T  |
 | OpenVMS (VMS)  | F  |
 
+
 If the FRECFM and FLRECL parameters are not defined or imposed , data
 are saved, by default, in a file of variable format , with a maximum record
 length of 2048 bytes.
 
 > **Note**
 >
-> To avoid protocol- related
+> To avoid protocol-related
 > problems, a Transfer CFT user subscribing to Atlas400 must request the
 > &lt;CR>/&lt;LF> insert option from their Transpac sales branch.
 > When the &lt;CR>/&lt;LF> delimiter is missing, a delimiter must
@@ -145,7 +147,7 @@ The only command relevant for reception is RECV IDF=\*. This command
 generates a generic catalog entry in the "K" state with a diagnostic
 DIAGP="RECV ALL". All the files waiting to be transferred (sent)
 to Transfer CFT from the partner end are released one after another. Once
-each file has been received, the end- of- transfer procedure defined in
+each file has been received, the end-of-transfer procedure defined in
 the [EXECRF](../../../c_intro_userinterfaces/command_summary/parameter_intro/execrf) parameter
 ([CFTPARM](../../../admin_intro/admin_config_commands/cftparm_general_parameters#General_parameters__Start_here))
 is executed.
@@ -178,7 +180,7 @@ Note:
     transfer, (H state and diagi other than 0), then tries to reactivate the
     entry with an error
 
-<!- - - - >
+<!-- -->
 
 - if there is an
     error during the data transfer phase and retrying is forbidden, the transfer

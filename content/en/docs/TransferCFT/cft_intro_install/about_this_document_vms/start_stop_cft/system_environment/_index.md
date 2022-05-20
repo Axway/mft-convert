@@ -2,11 +2,11 @@
 title: "System environment"
 linkTitle: "System specific functions"
 weight: 210
---- This section describes the {{< TransferCFT/axwayvariablesComponentShortName  >}} architecture, the resources used, and the methods for controlling the {{< TransferCFT/axwayvariablesComponentShortName  >}} behavior in an OpenVMS environment.
+---This section describes the {{< TransferCFT/axwayvariablesComponentShortName  >}} architecture, the resources used, and the methods for controlling the {{< TransferCFT/axwayvariablesComponentShortName  >}} behavior in an OpenVMS environment.
 
 ## {{< TransferCFT/axwayvariablesComponentShortName  >}} processes
 
-{{< TransferCFT/axwayvariablesComponentShortName  >}} is made up of a JOB that contains several processes. When a job is activated, a CFTMAIN process is created, either in batch mode or as a detached process, and creates sub- processes itself. All these processes are executed with the same UIC as the account in which {{< TransferCFT/axwayvariablesComponentShortName  >}} was installed and share two global memory sections.
+{{< TransferCFT/axwayvariablesComponentShortName  >}} is made up of a JOB that contains several processes. When a job is activated, a CFTMAIN process is created, either in batch mode or as a detached process, and creates sub-processes itself. All these processes are executed with the same UIC as the account in which {{< TransferCFT/axwayvariablesComponentShortName  >}} was installed and share two global memory sections.
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} contains several processes, each of which has standard output files corresponding to SYS$OUTPUT and SYS$ERROR. These files are created in SYS$LOGIN and are named:
 
@@ -20,11 +20,11 @@ Where:
 
 - &lt;node> is the node on which {{< TransferCFT/axwayvariablesComponentShortName >}} is executed
 
-<!- - - - >
+<!-- -->
 
 - CFT_process is the {{< TransferCFT/axwayvariablesComponentShortName >}} process name
 
-<!- - - - >
+<!-- -->
 
 - XX is the group UIC number displayed in hexadecimal
 
@@ -32,13 +32,13 @@ These files can only be accessed in read mode after you have shut down {{< Trans
 
 During normal operations, these files may accumulate each time {{< TransferCFT/axwayvariablesComponentShortName  >}} is restarted. The administrator must delete these periodically, so that the disk is not unnecessarily saturated.
 
-### Inter- process communication
+### Inter-process communication
 
-{{< TransferCFT/axwayvariablesComponentShortName  >}} processes inter- communicate using the shared memory and two global sections, which can be seen by all users in the same group. Each process using {{< TransferCFT/axwayvariablesComponentShortName  >}}- specific inter- process communication functions is automatically associated with these two global sections which are:
+{{< TransferCFT/axwayvariablesComponentShortName  >}} processes inter-communicate using the shared memory and two global sections, which can be seen by all users in the same group. Each process using {{< TransferCFT/axwayvariablesComponentShortName  >}}-specific inter-process communication functions is automatically associated with these two global sections which are:
 
 - CFT_XX
 
-<!- - - - >
+<!-- -->
 
 - CFT3_XX
 
@@ -48,7 +48,7 @@ In the system, the corresponding parameters are as follows:
 
 - GBLPGFIL represents the number of global pages that can be created on the system
 
-<!- - - - >
+<!-- -->
 
 - GBLSECTIONS represents the number of sections that can be created on the system
 

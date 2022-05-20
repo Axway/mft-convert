@@ -2,7 +2,7 @@
 title: "RECV - Receive files"
 linkTitle: "Using the RECV command"
 weight: 170
---- This command is used to request the reception of files from a designated partner.
+---This command is used to request the reception of files from a designated partner.
 
 > **Note**
 >
@@ -28,7 +28,7 @@ parameters, such as specify the scheduling time for a transfer:
 - User
 - Schedule management
 
-<!- - - - >
+<!-- -->
 
 - Data processing
     parameters

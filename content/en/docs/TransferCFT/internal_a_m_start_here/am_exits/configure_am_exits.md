@@ -2,15 +2,16 @@
 title: "Configuring an Access Management exit"
 linkTitle: "Configuring the exit"
 weight: 190
---- This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
+---This section describes how to configure access management when not using {{< TransferCFT/PrimaryCGorUM  >}}.
 
 To enable an Access Management exit, set the ****uconf**** parameters described in this page.
 
 From the Administration pane in the graphical user interface, select ****Unified Configuration****. The Unified Configuration window is displayed.
 
-Double- click in a Unified Configuration window field to begin editing parameters.
+Double-click in a Unified Configuration window field to begin editing parameters.
 
 Configure the AM exit using the parameters in the following table.
+
 
 | Access Management exit parameters  | Value  | Description  |
 | --- | --- | --- |
@@ -21,6 +22,7 @@ Configure the AM exit using the parameters in the following table.
 | am.exit.custom.rbac_fname.value  |   | Path to the RBAC flat file used by the Access Management exit sample.  |
 | am.exit.custom.ldap_host.value  |   | LDAP server hostname/IP address that is used by the Access Management exit sample.  |
 | am.exit.custom.ldap_port.value  |   | LDAP server port that is used by the Access Management exit sample.  |
+
 
 > **Note**
 >

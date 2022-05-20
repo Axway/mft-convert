@@ -2,7 +2,7 @@
 title: "Use  a proxy with SOCKS protocol"
 linkTitle: "Transfers via proxy and SOCKS"
 weight: 320
---- A proxy is a program
+---A proxy is a program
 that acts as an intermediary between a client and server. It is often
 used to interconnect two networks via a single point.
 
@@ -14,12 +14,12 @@ or without SSL.
 This topic describes how to use a proxy and SOCKS, and includes:
 
 - [SOCKS protocol architecture](#Connection)
-    - [About the connection](#Connection)
+    -   [About the connection](#Connection)
 - [Using a proxy with Transfer CFT](#Application_in_CFT)
-    - [Configuring a connection](#Configuration)
-    - [Error
+    -   [Configuring a connection](#Configuration)
+    -   [Error
         codes](#Error_codes)
-    - SOCKS references
+    -   SOCKS references
 - [Setting up a proxy for Copilot](#Setting)
 
 <span id="SOCKS"></span>
@@ -108,6 +108,7 @@ Transfer CFT puts the transfer on hold (K status). The operator must manually re
 
 The following tables lists common parameters for either SOCKS 4 or SOCKS 5. The only difference between the parameters used for SOCKS 4 and 5 is the PASSWORD parameter.
 
+
 | Parameters  | Value  | Description  |
 | --- | --- | --- |
 | **ID** | STRING max_length=32  | Network resource identifier. |
@@ -123,6 +124,7 @@ The following tables lists common parameters for either SOCKS 4 or SOCKS 5. The 
 | **PORT**  | Number &lt;0&gt; min=1 max=65535  | Listening port of the proxy/proxies in the first network  |
 | USER  | String max_length=32  | User name transmitted in the connection request addressed to the proxy  |
 | PASSWORD  | String max_length=32  | *SOCKS 5 only*<br/> User password transmitted in the connection request addressed to the proxy. |
+
 
 ****Example****
 

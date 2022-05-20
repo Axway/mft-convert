@@ -2,7 +2,7 @@
 title: "Transfer CFT communications"
 linkTitle: "Transfer CFT communications"
 weight: 320
---- This section describes the communication modes between users and {{< TransferCFT/axwayvariablesComponentShortName  >}}.
+---This section describes the communication modes between users and {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
 ## Using CFTUTIL
 
@@ -31,7 +31,7 @@ CFTU20I
 CFTU20I CFT/VMS
 CFTU20I Version 3.10
 04/04/2018
-CFTU20I (C) Copyright AXWAY 1989- 2018
+CFTU20I (C) Copyright AXWAY 1989-2018
 CFTU20I ====> Starting Session on 04/04/2018 Time is 17:03:35
 CFTU20I
 CFTU00I CFTFILE  _ Correct (TYPE=PARAM,FNAME=CFTPARM)
@@ -60,23 +60,23 @@ $   cftutil
 CFTU20I
 CFTU20I CFT/VMS
 CFTU20I Version 3.2.1 08/08/2015
-CFTU20I (C) Copyright AXWAY 1989- 2015
+CFTU20I (C) Copyright AXWAY 1989-2015
 CFTU20I ====> Starting Session on 23/10/2015 Time is 17:08:03
 CFTU20I
-
+ 
 To exit CFTUTIL, press Ctrl+Z or enter /end
 .
 ```
 
-## File- based communication
+## File-based communication
 
-File- based communication is the default communication mode. In the configuration file CFTCOM card, you must set the TYPE parameter to FILE and the FNAME parameter to CFTCOM for example. For more information, refer to the Transfer CFT 3.0.1 User's Guide or online help.
+File-based communication is the default communication mode. In the configuration file CFTCOM card, you must set the TYPE parameter to FILE and the FNAME parameter to CFTCOM for example. For more information, refer to the Transfer CFT 3.0.1 User's Guide or online help.
 
 By default, CFTUTIL dialogs with {{< TransferCFT/axwayvariablesComponentShortName  >}} using the CFTCOM communication file. There are two ways to change the communication file:
 
 - CFTUTIL CONFIG command
 
-<!- - - - >
+<!-- -->
 
 - CFTCOM logical name
 
@@ -89,10 +89,10 @@ $ cftutil
 CFTU20I
 CFTU20I CFT/VMS
 CFTU20I Version 3.0.1 15/02/2012
-CFTU20I (C) Copyright AXWAY 1989- 2012
+CFTU20I (C) Copyright AXWAY 1989-2012
 CFTU20I ====> Starting Session on 06/07/2012 Time is 14:58:27
 CFTU20I
-1:CFU] config type=com,mediacom=file,fname=my_file
+1:[CFU] config type=com,mediacom=file,fname=my_file
 CFTU00I CONFIG   _ Correct (type=com,mediacom=file,fname=my_file)
 2:[CFU]
 ```
@@ -111,7 +111,7 @@ $ CFTUTIL
 CFTU20I
 CFTU20I CFT/VMS
 CFTU20I Version 3.0.1 15/02/2012
-CFTU20I (C) Copyright AXWAY 1989- 2012
+CFTU20I (C) Copyright AXWAY 1989-2012
 CFTU20I ====> Starting Session on 06/07/2012 Time is 15:01:04
 CFTU20I
 1:[CFU]
@@ -137,10 +137,10 @@ Communication file users must have read and write access rights for the file. If
 
 - The same group, file protection must be: S:RWED,O:RWED,G:RWE,W:
 
-<!- - - - >
+<!-- -->
 
 - Different groups, file protection must be: S:RWED,O:RWED,G:RWE,W:RWE
 
 You can also grant write access rights to authorized users only using ACLs on the file.
 
-If users from various groups use the communication file, it is recommended that you set the CFT_LOCK logical name to SYSTEM and grant the SYSLCK privilege to the relevant users. For more information, see the [Transfer CFT parameter settings section.
+If users from various groups use the communication file, it is recommended that you set the CFT_LOCK logical name to SYSTEM and grant the SYSLCK privilege to the relevant users. For more information, see the [Transfer CFT parameter settings]() section.

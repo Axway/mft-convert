@@ -2,13 +2,13 @@
 title: "ncharset"
 linkTitle: "ncharset"
 weight: 2130
---- <span id="ncharset"></span>
+---<span id="ncharset"></span>
 
 ### ncharset
 
 #### SEND, RECV, CFTSEND, CFTRECV, CFTPROT, CFTPART
 
-******[ NCHARSET = { None / CFT_EBCDIC- FR / CFT_ UTF- 8 / CFT_ISO8859- 1 / ASCII / EBCDIC / UTF- 8 / UTF- 16BE / UTF- 16LE / ISO8859- 1 / . . . }]******
+******[ NCHARSET = { None / CFT_EBCDIC-FR / CFT_ UTF-8 / CFT_ISO8859-1 / ASCII / EBCDIC / UTF-8 / UTF-16BE / UTF-16LE / ISO8859-1 / . . . }]******
 
 The ncharset is the destination file encoding that is used on a file
 to encode or decode network data.
@@ -20,25 +20,25 @@ to encode or decode network data.
 
 **Example 1**
 
-To translate a local text file before sending it, for example from UTF- 8 to UTF- 16 using Transfer CFT mapping:
+To translate a local text file before sending it, for example from UTF-8 to UTF-16 using Transfer CFT mapping:
 
 ```
 CFTUTIL SEND PART = NEWYORK,
-IDF = TEST_UTF- 8,
-FCHARSET = CFT_UTF- 8,
-NCHARSET = CFT_UTF- 16,
+IDF = TEST_UTF-8,
+FCHARSET = CFT_UTF-8,
+NCHARSET = CFT_UTF-16,
 FTYPE = T
 ```
 
 **Example 2**
 
-To translate a local text file before sending it, for example from UTF- 8 to UTF- 16:
+To translate a local text file before sending it, for example from UTF-8 to UTF-16:
 
 ```
 CFTUTIL SEND PART = NEWYORK,
-IDF = TEST_UTF- 8_2,
-FCHARSET = UTF- 8,
-NCHARSET = UTF- 16,
+IDF = TEST_UTF-8_2,
+FCHARSET = UTF-8,
+NCHARSET = UTF-16,
 FTYPE = T
 ```
 

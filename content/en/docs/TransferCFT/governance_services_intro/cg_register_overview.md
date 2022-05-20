@@ -2,7 +2,7 @@
 title: "Registration overview"
 linkTitle: "Registration overview"
 weight: 160
---- This topic describes the {{< TransferCFT/axwayvariablesComponentShortName  >}} to {{< TransferCFT/PrimaryCGorUM  >}} or {{< TransferCFT/suitevariablesFlowManager  >}} registration process.
+---This topic describes the {{< TransferCFT/axwayvariablesComponentShortName  >}} to {{< TransferCFT/PrimaryCGorUM  >}} or {{< TransferCFT/suitevariablesFlowManager  >}} registration process.
 
 There are several types of exchanges that occur between {{< TransferCFT/PrimaryCGorUM  >}} or {{< TransferCFT/suitevariablesFlowManager  >}} and {{< TransferCFT/axwayvariablesComponentShortName  >}}. The first exchange is registration, which begins when Copilot initiates a request to connect with {{< TransferCFT/PrimaryCGorUM  >}} or {{< TransferCFT/suitevariablesFlowManager  >}}.
 
@@ -30,8 +30,8 @@ Starting Copilot after installation begins the connection and registration proce
 
 - Copilot sends a registration request through a simple authenticated SSL connection and submits its registration. Copilot authenticates the Central Governance or {{< TransferCFT/suitevariablesFlowManager >}} server using the CA certificate pointing by the uconf:cg.ca_cert_id parameter. The registration request contains:
 
-    - Information about the {{< TransferCFT/axwayvariablesComponentShortName >}} instance, including its instance name, host, port and version.
-    - Two Certificate Signing Requests (CSRs) for {{< TransferCFT/PrimaryCGorUM >}} to process.
+    -   Information about the {{< TransferCFT/axwayvariablesComponentShortName >}} instance, including its instance name, host, port and version.
+    -   Two Certificate Signing Requests (CSRs) for {{< TransferCFT/PrimaryCGorUM >}} to process.
 
     > **Note**
     >
@@ -70,7 +70,7 @@ Completing the registration process, {{< TransferCFT/PrimaryCGorUM  >}} or {{< T
 - {{< TransferCFT/axwayvariablesComponentShortName >}} is configured to use the {{< TransferCFT/PrimaryCGorUM >}} {{< TransferCFT/suitevariablesPassPortName >}} service for access management.
 - {{< TransferCFT/axwayvariablesComponentShortName >}} is configured to use the {{< TransferCFT/PrimaryCGorUM >}} {{< TransferCFT/PrimarySentinel >}} for transfer monitoring. For Transfer CFT 3.2.2 and higher, a secured connection is used.
 
-These changes create two security profiles (CFTSSL) on the {{< TransferCFT/axwayvariablesComponentShortName  >}} (except when using a SAF- based PKI {{< TransferCFT/axwayvariablesComponentShortName  >}}). The profiles are named SSL_DEFAULT; one profile is of type client and one is of type server. Their SSL version is TLSV1COMP. The configured cipher list is CIPHLIST= ('53','47') for {{< TransferCFT/axwayvariablesComponentShortName  >}} 3.1.2 and 3.1.3. The values represent the following cipher suites:
+These changes create two security profiles (CFTSSL) on the {{< TransferCFT/axwayvariablesComponentShortName  >}} (except when using a SAF-based PKI {{< TransferCFT/axwayvariablesComponentShortName  >}}). The profiles are named SSL_DEFAULT; one profile is of type client and one is of type server. Their SSL version is TLSV1COMP. The configured cipher list is CIPHLIST= ('53','47') for {{< TransferCFT/axwayvariablesComponentShortName  >}} 3.1.2 and 3.1.3. The values represent the following cipher suites:
 
 The values represent the following cipher suites:
 
@@ -94,6 +94,7 @@ The client and server security profiles must be mutually authenticated. However,
 
 {{< TransferCFT/PrimaryCGorUM  >}} or {{< TransferCFT/suitevariablesFlowManager  >}} sends the updated configuration to {{< TransferCFT/axwayvariablesComponentShortName  >}}. The following are the {{< TransferCFT/axwayvariablesComponentShortName  >}} parameters updated in this process. However, you can overwrite certain default values by assigning an existing policy at registration. Please see, below for details.
 
+
 | Parameter  | Value  |
 | --- | --- |
 | am.passport.cg.organization  | Org<br/> <blockquote> **Note**<br/> You must restart both Transfer CFT and Copilot following a change to this parameter.<br/> </blockquote>  |
@@ -109,8 +110,8 @@ The client and server security profiles must be mutually authenticated. However,
 | cft.purge.st  | 10D  |
 | cft.purge.sx  | 10D  |
 | cft.server.bandwitdth.cos  | 4  |
-| cft.server.bandwitdth.cos.0.max_rate_in  | - 1  |
-| cft.server.bandwitdth.cos.0.max_rate_out  | - 1  |
+| cft.server.bandwitdth.cos.0.max_rate_in  | -1  |
+| cft.server.bandwitdth.cos.0.max_rate_out  | -1  |
 | cft.server.bandwitdth.cos.1.weight_in  | 80  |
 | cft.server.bandwitdth.cos.1.weight_out  | 80  |
 | cft.server.bandwitdth.cos.2.weight_in  | 15  |
@@ -120,11 +121,12 @@ The client and server security profiles must be mutually authenticated. However,
 | cft.server.bandwitdth.enable  | No  |
 | cg.mutual_auth_port  | &lt;secured communications port&gt;  |
 | copilot.misc.createprocessasuser  | No  |
-| pki.type  | cft<br/> <blockquote> **Note**<br/> Except when using a SAF- based PKI Transfer CFT, in which case "system" is the value.<br/> </blockquote>  |
-| sentinel.trkipaddr  | &lt;Sentinel – Front- end host &gt;  |
-| sentinel.trkipport  | &lt;Sentinel - Font- end port&gt;  |
+| pki.type  | cft<br/> <blockquote> **Note**<br/> Except when using a SAF-based PKI Transfer CFT, in which case "system" is the value.<br/> </blockquote>  |
+| sentinel.trkipaddr  | &lt;Sentinel – Front-end host &gt;  |
+| sentinel.trkipport  | &lt;Sentinel - Font-end port&gt;  |
 | sentinel.xfb.enable  | Yes  |
 | sentinel.xfb.use_ssl  | Yes  |
+
 
 ### {{< TransferCFT/axwayvariablesComponentShortName  >}} instance id
 

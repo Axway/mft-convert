@@ -2,7 +2,7 @@
 title: "SMP/E: Create the distribution environment"
 linkTitle: "SMP/E: create distribution environment"
 weight: 160
---- System Modification Program/Extended (SMP/E) is a tool developed by IBM to manage the installation of products in z/OS environments, and to apply maintenance to the repository products.
+---System Modification Program/Extended (SMP/E) is a tool developed by IBM to manage the installation of products in z/OS environments, and to apply maintenance to the repository products.
 
 This section is to describe how to use the SMP/E method to manage a Transfer CFT installation. Remember to review the Prerequisites prior to starting this procedure. For SMP/E installations, please review the [SMP/E grant user resource permissions](../../c_about_zos/r_prerequistes_zos#SMP/E) section.
 

@@ -2,7 +2,7 @@
 title: "Transfer CFT logical names"
 linkTitle: "Transfer CFT logical names"
 weight: 300
---- {{< TransferCFT/axwayvariablesComponentShortName  >}} uses a number of logical names to designate the resources or define an operating mode.
+---{{< TransferCFT/axwayvariablesComponentShortName  >}} uses a number of logical names to designate the resources or define an operating mode.
 
 ## Default Transfer CFT directory
 
@@ -15,7 +15,8 @@ This logical name points to a directory containing all {{< TransferCFT/axwayvari
 
 The installation procedure creates a directory structure in which the supplied files are located. Each directory is defined by a logical name to make it easier to use. These logical names are not mandatory, but are used in the examples provided and the CFTLOGIN.COM procedure.
 
-The following table lists the logical names that are defined in the standard {{< TransferCFT/axwayvariablesComponentShortName  >}} product, located in the D$CFT_RUN:profile]CFTLOGIN.COM procedure.
+The following table lists the logical names that are defined in the standard {{< TransferCFT/axwayvariablesComponentShortName  >}} product, located in the D$CFT_RUN:[profile]CFTLOGIN.COM procedure.
+
 
 | Logical Name  | Description  |
 | --- | --- |
@@ -35,11 +36,13 @@ The following table lists the logical names that are defined in the standard {{<
 | CFT_EXIT  | Directory containing exit samples.  |
 | CFT_ACCNT  | Directory containing account files.  |
 
+
 ### Standard {{< TransferCFT/axwayvariablesComponentShortName  >}} service files
 
 All {{< TransferCFT/axwayvariablesComponentShortName  >}} service files are designated by standard logical names known to {{< TransferCFT/axwayvariablesComponentShortName  >}}, or the associated utilities, and used by default.
 
 The following table describes the logical names for {{< TransferCFT/axwayvariablesComponentShortName  >}} standard service files.
+
 
 | Standard Logical Name  | Meaning  |
 | --- | --- |
@@ -50,11 +53,13 @@ The following table describes the logical names for {{< TransferCFT/axwayvariabl
 | CFTCATA | Transfer CFT catalog file. The CFTLOGIN.COM procedure supplied with the product defines it as CFT_DAT:CFTCATA.REL. |
 | CFTCOM | Transfer CFT communication file. The CFTLOGIN.COM procedure supplied with the product defines it as CFT_DAT:CFTCOM.REL. It must be defined with the /JOB attribute. |
 
+
 ### Additional {{< TransferCFT/axwayvariablesComponentShortName  >}} files
 
 By default, the following logical names are not known to {{< TransferCFT/axwayvariablesComponentShortName  >}} or utilities. They are declared explicitly in the configuration. However, they are used by the samples provided and the CFTLOGIN.COM procedure.
 
 The following table lists the logical names that are used in the supplied {{< TransferCFT/axwayvariablesComponentShortName  >}} files.
+
 
 | Logical Name  | Meaning  |
 | --- | --- |
@@ -63,11 +68,13 @@ The following table lists the logical names that are used in the supplied {{< Tr
 | CFTPKU  | PKI base file. The CFTLOGIN.COM procedure supplied with the product defines it as CFT_PKI:CFTPKI.INX.  |
 | CFTEXAM  | VMS Share User API samples. The CFTLOGIN.COM procedure supplied with the product defines it as CFT_EXE:CFTEXAM.EXE.  |
 
+
 ### Submitting {{< TransferCFT/axwayvariablesComponentShortName  >}} procedures
 
-A number of logical names are used to configure the {{< TransferCFT/axwayvariablesComponentShortName  >}} behavior with respect to the various procedures submitted by it. For more information, see the[MONIT_MEM utility  section.
+A number of logical names are used to configure the {{< TransferCFT/axwayvariablesComponentShortName  >}} behavior with respect to the various procedures submitted by it. For more information, see the[MONIT_MEM utility]()  section.
 
 The following table describes the logical names for the procedures that control {{< TransferCFT/axwayvariablesComponentShortName  >}} behavior.
+
 
 | Logical Name  | Description  |
 | --- | --- |
@@ -76,9 +83,11 @@ The following table describes the logical names for the procedures that control 
 | CFT_PRINT | This logical name is used to define a print queue, via which the procedure execution reports are printed. It must be defined with the /JOB attribute. |
 | CFT_LOGDEL | When set to YES, this logical name is used to request VMS to delete the execution reports of the procedures that it submits. Any other value maintains the reports in the SYS$LOGIN directory. It must be defined with the /JOB attribute. |
 
+
 ### Control memory usage
 
-Logical names are used to control {{< TransferCFT/axwayvariablesComponentShortName  >}} memory bottlenecks, refer to the Delivered components](../../security_elements) section. The following table describes the logical names that are used to control {{< TransferCFT/axwayvariablesComponentShortName  >}} memory.
+Logical names are used to control {{< TransferCFT/axwayvariablesComponentShortName  >}} memory bottlenecks, refer to the [Delivered components](../../security_elements) section. The following table describes the logical names that are used to control {{< TransferCFT/axwayvariablesComponentShortName  >}} memory.
+
 
 | Logical Name  | Meaning  |
 | --- | --- |
@@ -88,9 +97,10 @@ Logical names are used to control {{< TransferCFT/axwayvariablesComponentShortNa
 | CFT$MEMDLAY | This logical name is used to define a period after the monitor is no longer in the alert status, during which the monitor refuses any new incoming or outgoing connections, so that it can process the data already received. |
 | CFT$MG_NB | This logical name is used to define the number of 32 KB buffers reserved by Transfer CFT in the global section. |
 
+
 ### Concurrent access to the communication file
 
-If users belonging to a group other than the {{< TransferCFT/axwayvariablesComponentShortName  >}} group want to submit commands in the {{< TransferCFT/axwayvariablesComponentShortName  >}} communication file, you must enable the concurrent access control mechanism at system level. The CFT_LOCK logical name is used to implement this mechanism. For more information, see the [Transfer CFT parameter settings section.
+If users belonging to a group other than the {{< TransferCFT/axwayvariablesComponentShortName  >}} group want to submit commands in the {{< TransferCFT/axwayvariablesComponentShortName  >}} communication file, you must enable the concurrent access control mechanism at system level. The CFT_LOCK logical name is used to implement this mechanism. For more information, see the [Transfer CFT parameter settings]() section.
 
 ### CFT_LOCK
 
@@ -98,7 +108,7 @@ If the CFT_LOCK logical name is set to SYSTEM, the concurrent access control mec
 
 ### Optimize receive file write operations
 
-When receiving files, {{< TransferCFT/axwayvariablesComponentShortName  >}} allows you to optimize the way in which they are written, by performing disk accesses in virtual block mode instead of requesting that RMS write each record. The CFT$BLOCKIO logical name is used to implement this mechanism. The increased performance levels are particularly noticeable when writing files containing small- sized records.
+When receiving files, {{< TransferCFT/axwayvariablesComponentShortName  >}} allows you to optimize the way in which they are written, by performing disk accesses in virtual block mode instead of requesting that RMS write each record. The CFT$BLOCKIO logical name is used to implement this mechanism. The increased performance levels are particularly noticeable when writing files containing small-sized records.
 
 ### CFT$BLOCKIO
 

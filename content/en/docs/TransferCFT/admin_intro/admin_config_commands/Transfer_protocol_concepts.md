@@ -2,7 +2,7 @@
 title: "Transfer  protocol "
 linkTitle: "CFTPROT - Transfer protocol "
 weight: 280
---- For computers to transfer files, a set of transfer rules must
+---For computers to transfer files, a set of transfer rules must
 be established. The CFTPROT object sets up these transfer rules, or file
 transfer protocols. Transfer protocols include:
 

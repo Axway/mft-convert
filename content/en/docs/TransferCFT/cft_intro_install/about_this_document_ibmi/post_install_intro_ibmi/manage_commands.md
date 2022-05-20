@@ -2,9 +2,10 @@
 title: "Manage commands"
 linkTitle: "Manage commands"
 weight: 180
---- This section describes all of the command available to manage your Transfer CFT product.
+---This section describes all of the command available to manage your Transfer CFT product.
 
 ## Standard commands
+
 
 | Command | Comment |
 | --- | --- |
@@ -12,9 +13,11 @@ weight: 180
 | CFTSTOP | Stop Transfer CFT |
 | COPSTART | Start the UI server |
 | COPSTOP | Stop the UI server |
-| CFTMN | This is the procedure to manage Transfer CFT and to configure multi- node. Add the following action(s) to manage your product:<br/> • START<br/> • STOP<br/> • RESTART<br/> • ADD_NODE<br/> • REMOVE_NODE<br/> • ADD_HOST<br/> • REMOVE_HOST<br/> • REMOVE_NODE<br/> • ENABLE_NODE<br/> • DISABLE_NODE<br/> <blockquote> **Note**<br/> CFTMN is the equivalent of cft script for UNIX or Windows.<br/> </blockquote>  |
+| CFTMN | This is the procedure to manage Transfer CFT and to configure multi-node. Add the following action(s) to manage your product:<br/> • START<br/> • STOP<br/> • RESTART<br/> • ADD_NODE<br/> • REMOVE_NODE<br/> • ADD_HOST<br/> • REMOVE_HOST<br/> • REMOVE_NODE<br/> • ENABLE_NODE<br/> • DISABLE_NODE<br/> <blockquote> **Note**<br/> CFTMN is the equivalent of cft script for UNIX or Windows.<br/> </blockquote>  |
+
 
 ## Deprecated commands
+
 
 | Replace this command...  | With the new command...  |
 | --- | --- |
@@ -41,6 +44,7 @@ weight: 180
 | SI_PGM_BT2  | No replacement  |
 | T_QXXCHGDT  | No replacement  |
 
+
 **Example 1**
 
 Send a member:
@@ -57,3 +61,4 @@ Send a spool file:
 CFTUTIL send PART=<PART>, IDF=<IDF>, FNAME=&FILE/&SPLNBR/&WORK/&JOBNBR
 ```
 
+ 

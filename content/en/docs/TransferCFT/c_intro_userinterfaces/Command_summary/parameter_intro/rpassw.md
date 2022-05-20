@@ -2,7 +2,7 @@
 title: "rpasswd"
 linkTitle: "rpasswd"
 weight: 3000
---- ### rpasswd
+---### rpasswd
 
 #### CFTSEND/CFTRECV
 

@@ -2,13 +2,14 @@
 title: "Using PKIEXT"
 linkTitle: "Using PKIEXT"
 weight: 290
---- You can use the PKIEXT command to extract the certificates and keys from the Transfer CFT PKI database. PKIEXT generates as an output the configuration commands used to reconstitute the PKI database, certificates, and keys in the KPRIV format (an internal Transfer CFT format).
+---You can use the PKIEXT command to extract the certificates and keys from the Transfer CFT PKI database. PKIEXT generates as an output the configuration commands used to reconstitute the PKI database, certificates, and keys in the KPRIV format (an internal Transfer CFT format).
 
 Additionally, this page describes how to export an SSH public key for [SFTP](../../../../protocols_start_here/sftp_intro).
 
 ## Parameters
 
 You can use a mix of the ID and TYPE parameters to create extraction filters. See the [examples](#Examples) below for details.
+
 
 | Parameters  | Description  |
 | --- | --- |
@@ -19,6 +20,7 @@ You can use a mix of the ID and TYPE parameters to create extraction filters. 
 | PASSWORD  | The password length must be between 4 and 64 characters.<br/> • When using a password, PKIEXT exports a certificate/key pair in PKCS#12 format instead of DER (certificate) and KPRIV (key). &lt;/li&gt;<br/> • When using a password, PKIEXT exports a key in PKCS#8 format instead of KPRIV. &lt;/li&gt; |
 | ROOTCID  | The certificate authority ID. See an example usage in [ROOTCID](../../../../c_intro_userinterfaces/command_summary/parameter_intro/rootcid).  |
 | TYPE  | This parameter defines the certificate or key type to be extracted.<br/> Possible values:<br/> • ALL: extracts ROOT, INTER, and USER in PKICER, PKIKEY, and PKIENTITY<br/> • USER<br/> • ROOT<br/> • INTER<br/> • ENTITY<br/> • KEY<br/> • CERT: extracts ROOT, INTER, and USER in PKICER |
+
 
 <span id="Examples"></span>
 
@@ -64,7 +66,7 @@ When using SFTP, you can export the public key in an SSH_RSA format to share wit
 
 ## Importing and exporting keys
 
-You can use PKIEXT to export keys from the local database. To perform an extract, you must use the same PKIPASSW (CFTPARM object) as was originally used to import the key. Using the same logic, to re- import a key that you extracted using PKIEXT, you require the same CFTPARM [PKIPASSW](../../../../c_intro_userinterfaces/command_summary/parameter_intro/pkipassw).
+You can use PKIEXT to export keys from the local database. To perform an extract, you must use the same PKIPASSW (CFTPARM object) as was originally used to import the key. Using the same logic, to re-import a key that you extracted using PKIEXT, you require the same CFTPARM [PKIPASSW](../../../../c_intro_userinterfaces/command_summary/parameter_intro/pkipassw).
 
 **Problem**: Due to native OS encoding (for example, ASCII on Linux and EBCDIC on z/OS), when you export a key to a different operating system the decode operation may fail even when both systems are using the same password.
 

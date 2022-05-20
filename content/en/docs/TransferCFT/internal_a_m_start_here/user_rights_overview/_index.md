@@ -2,7 +2,7 @@
 title: "About Transfer CFT system users "
 linkTitle: "Manage user rights"
 weight: 180
---- There are two basic types of rights needed to enable {{< TransferCFT/axwayvariablesComponentLongName  >}} flows: the rights required to perform activities, such as starting or configuring Transfer CFT, and the rights that apply to files themselves.
+---There are two basic types of rights needed to enable {{< TransferCFT/axwayvariablesComponentLongName  >}} flows: the rights required to perform activities, such as starting or configuring Transfer CFT, and the rights that apply to files themselves.
 
 This topic describes the parameters used to manage:
 
@@ -11,9 +11,9 @@ This topic describes the parameters used to manage:
 
 When using {{< TransferCFT/PrimaryCGorUM  >}}, you can create users and assign them roles and privileges, for example the right to create flows or to send files. Additionally though, you can also set the file properties for the local Transfer CFT to enable or restrict certain user’s ability to perform file transfers.
 
-The User rights and privileges use cases](user_rights_security_scenarios) section provides common user rights use cases, and describes parameter combinations that let you achieve your desired level of security. These scenarios feature users with example privileges that are granted in {{< TransferCFT/suitevariablesCentralGovernanceName  >}}, your actual user rights might vary.
+The [User rights and privileges use cases](user_rights_security_scenarios) section provides common user rights use cases, and describes parameter combinations that let you achieve your desired level of security. These scenarios feature users with example privileges that are granted in {{< TransferCFT/suitevariablesCentralGovernanceName  >}}, your actual user rights might vary.
 
-This topic begins with a brief review of key user control parameters, followed by a [Recommendations and troubleshooting.
+This topic begins with a brief review of key user control parameters, followed by a [Recommendations and troubleshooting]().
 
 ## Procedure overview
 

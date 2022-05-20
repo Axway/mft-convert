@@ -2,7 +2,7 @@
 title: "System requirements"
 linkTitle: "System requirements"
 weight: 150
---- The following are the system requirements for {{< TransferCFT/axwayvariablesComponentShortName  >}}.
+---The following are the system requirements for {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
 ## About the {{< TransferCFT/axwayvariablesComponentShortName  >}} environment
 
@@ -22,9 +22,9 @@ Refer to the {{< TransferCFT/axwayvariablesPlatformorSuiteLongName  >}} Supporte
 {{< TransferCFT/axwayvariablesComponentLongName  >}} has the following hardware requirements:
 
 - Disk space requirement
-    - 1.5 to 5 Gigabyte: minimum disk space to allow for future updates, SPs, and continued performance
+    -   1.5 to 5 Gigabyte: minimum disk space to allow for future updates, SPs, and continued performance
 - RAM Requirement
-    - 128 Megabyte: minimum dedicated per host
+    -   128 Megabyte: minimum dedicated per host
 
 ## Java
 

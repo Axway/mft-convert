@@ -2,7 +2,7 @@
 title: "Certificate concepts"
 linkTitle: "Certificate concepts"
 weight: 180
---- This topic describes the following certificate principles:
+---This topic describes the following certificate principles:
 
 - [Establishing
     a trust relationship](#Establishing_a_trust_relationship)
@@ -18,7 +18,7 @@ weight: 180
 Certificate Authorities
 (CAs) are entities that validate identities and issue certificates. They
 can be either independent third parties or organizations running their
-own certificate- issuing server software.
+own certificate-issuing server software.
 
 Any client or server software that supports certificates maintains a
 collection of trusted CA certificates. These CA certificates determine
@@ -44,7 +44,7 @@ different policy requirements, or it may be important for a CA to be physically
 located in the same geographic area as the people to whom it is issuing
 certificates.
 
-You can delegate certificate- issuing responsibilities to subordinate
+You can delegate certificate-issuing responsibilities to subordinate
 CAs. The X.509 standard includes a model for setting up a hierarchy of
 CAs as shown in the following figure.
 
@@ -53,12 +53,12 @@ CAs as shown in the following figure.
 ![Relationship between the Root CA and related certificates, such as Asia and Europe](/Images/TransferCFT/certificates3.gif)
 
 In this model, the root CA is at the top of the hierarchy. The root
-CA certificate is a self- signed
+CA certificate is a self-signed
 certificate. That means the certificate is digitally signed
 by the same entity, the root CA, which the certificate identifies. The
 CAs that are directly subordinate to the root CA have CA certificates
 signed by the root CA. CAs under the subordinate CAs in the hierarchy
-have their CA certificates signed by the higher- level subordinate CAs.
+have their CA certificates signed by the higher-level subordinate CAs.
 
 Organizations have a great deal of flexibility in terms of the way they
 set up their CA hierarchies. The above figure is just one example; many
@@ -127,6 +127,8 @@ The following figure presents an example of this process.
 
 ![Validity checks on Untrusted Authorities, where Root CA is a Trusted Authority](/Images/TransferCFT/certificate1.gif)
 
+ 
+
 <span id="Certificate_syntax_and_formats"></span>
 
 ## Certificate syntax and formats
@@ -139,7 +141,7 @@ this syntax allows the description of objects used by applications in
 heterogeneous environments.
 
 The details of ASN1 is outside the scope of this document but further
-details are available in the ISO /IEC8824- 1. To be exploitable by a remote
+details are available in the ISO /IEC8824-1. To be exploitable by a remote
 application, supported by any kind of machine, transmitted data (described
 with ASN1) must be encoded. The encoding rule must be the same on each
 communicating application but the way this encoding rule is implemented
@@ -156,7 +158,7 @@ with ASN1 syntax a unique encoded value, and therefore reduce ambiguity.
 
 The RSA laboratories have defined various standards about certificates
 based on ASN1 descriptions. Their aim is to provide a means for systems
-participating in Public Key Infrastructures to inter- operate.
+participating in Public Key Infrastructures to inter-operate.
 
 Furthermore, two data structures that are useful when you want to transfer
 Certificate Information have been completely detailed: the PKCS7 and PKCS12
@@ -179,8 +181,8 @@ Commonly used file extensions are p7s.
 #### The PKCS8 Standard
 
 The PKCS8 standard defines a structure used to store private key information.
-Private key information includes a private key for some public- key algorithm
-and a set of attributes. You can use a password- based algorithm to encrypt
+Private key information includes a private key for some public-key algorithm
+and a set of attributes. You can use a password-based algorithm to encrypt
 the key.
 
 #### The PKCS12 Standard
@@ -218,4 +220,4 @@ TLS certificates require the following key usages:
 Where:
 
 - If a certificate does not have a key usage, it is assumed that ALL key usage are applicable
-- Some ciphers, such as Diffie- Hellman, require **Key agreement** for key usage
+- Some ciphers, such as Diffie-Hellman, require **Key agreement** for key usage

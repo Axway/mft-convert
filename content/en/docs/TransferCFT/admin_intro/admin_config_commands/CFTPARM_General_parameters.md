@@ -2,7 +2,7 @@
 title: "General  parameters definition"
 linkTitle: "CFTPARM - General parameters definition "
 weight: 270
---- This topic describes how to define the general {{< TransferCFT/axwayvariablesComponentShortName  >}} parameter, which corresponds to the CFTPARM object
+---This topic describes how to define the general {{< TransferCFT/axwayvariablesComponentShortName  >}} parameter, which corresponds to the CFTPARM object
 in the command line operations.
 
 [What
@@ -31,7 +31,7 @@ The CFTPARM object defines general parameters that:
     parameter setting commands that are taken into account during execution
 
 You can create several CFTPARM objects, but you can only select a single
-CFTPARM for monitor start- up.
+CFTPARM for monitor start-up.
 
 Only the associated CFTNET, CFTCOM, and CFTPROT are listed for a given
 PARM. If you modify the corresponding COM, NET, PROT, or CAT parameters
@@ -41,7 +41,7 @@ The parameters that define the {{< TransferCFT/axwayvariablesComponentShortName 
 
 - Sizing constants
 - File location
-- End- of- transfer
+- End-of-transfer
     actions
 - Product activation
     key
@@ -65,7 +65,7 @@ cannot be modified dynamically.
 
 The *[End
 of transfer procedures](../../../concepts/about_transfer_processing/procedure_examples)* section provides a complete description
-of the use of End- of- transfer procedures EXECSE, EXECSF parameters, and
+of the use of End-of-transfer procedures EXECSE, EXECSF parameters, and
 so on.
 
 <span id="How_does_the_CFTPARM_object_work_"></span>

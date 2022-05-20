@@ -2,7 +2,7 @@
 title: "Access Tokens"
 linkTitle: "Access Tokens "
 weight: 200
---- An access token is a unique identifier, or credential, that an application can use to access an API. The token indicates to the API that the holder is authorized to access the API and the resources available to that user or account.
+---An access token is a unique identifier, or credential, that an application can use to access an API. The token indicates to the API that the holder is authorized to access the API and the resources available to that user or account.
 
 The UCONF `copilot.restapi.api_token_validity` parameter sets the access token's expiration period. By default, the value is set to 0, which disables expiration. You can modify this parameter if you want access tokens to have a specific expiration period. The` token_validity` parameter applies to tokens at the time they are created. Tokens that exist prior to modifying this value retain the expiration date that was set at the time they were created.
 
@@ -24,7 +24,7 @@ All users have the right to create their own tokens as described in the followin
 In the {{< TransferCFT/axwayvariablesComponentLongName  >}} UI:
 
 1. Navigate to your user login in the upper right hand corner.
-1. Select **My Access Tokens** in the drop- down menu.  
+1. Select **My Access Tokens** in the drop-down menu.  
     The **My Access Token** page displays.
 1. Click **Generate Token**.  
     The Action, User, Creation date, and Token fields display. In the **Token** field, click the ![](/Images/TransferCFT/copy_icon.png)copy icon to copy the entire token.

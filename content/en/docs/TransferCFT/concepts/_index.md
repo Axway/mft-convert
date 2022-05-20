@@ -2,7 +2,7 @@
 title: "Managing transfers and partners"
 linkTitle: "Transfers and partners"
 weight: 100
---- ## Transfer concepts
+---## Transfer concepts
 
 This section describes transfers, and how to create and
 manage your transfer operations using {{< TransferCFT/axwayvariablesComponentShortName  >}}.
@@ -24,7 +24,7 @@ a set of *objects* that allow you to define these transfer related parameters. P
 - A common protocol, such as PeSIT ANY
 - A basic partner object on each Transfer CFT (declare each partner)
 
-However, your out- of- the- box Transfer CFT can perform a basic loop transfer without any additional configuration. Additionally, the Transfer CFT installation provides samples that you can use as a templates to get started. For more information on samples and performing a verification transfer, refer to the Post installation section in your OS specific *Transfer CFT Installation Guide*.
+However, your out-of-the-box Transfer CFT can perform a basic loop transfer without any additional configuration. Additionally, the Transfer CFT installation provides samples that you can use as a templates to get started. For more information on samples and performing a verification transfer, refer to the Post installation section in your OS specific *Transfer CFT Installation Guide*.
 
 ## Transfer types
 
@@ -46,15 +46,17 @@ See also, [Transfer command basics.](transfer_command_overview)
 
 Additionally, there are basic [transfer control commands](../c_intro_userinterfaces/web_copilot_ui/operations/managing_transfer_states) that you can use to manage a transfer.
 
+
 | Command  | Action  |
 | --- | --- |
 | [DELETE](../admin_intro/admin_commands_intro/delete_command) | Deletes a catalog entry  |
 | [HALT](../c_intro_userinterfaces/about_cftutil/managing_transfer_states/halt_command) | Stops a transfer and sets it to the HOLD state  |
 | [KEEP](../c_intro_userinterfaces/about_cftutil/managing_transfer_states/keep_command) | Stops a transfer and sets it to the KEEP state  |
 | [START](../c_intro_userinterfaces/about_cftutil/managing_transfer_states/start_command) | Reactivates a transfer  |
-| [SUBMIT](../c_intro_userinterfaces/about_cftutil/managing_transfer_states/submit_command) | Runs a preprocessing, a post- processing or an acknowledgment processing procedure according to the current phase of the transfer request.  |
+| [SUBMIT](../c_intro_userinterfaces/about_cftutil/managing_transfer_states/submit_command) | Runs a preprocessing, a post-processing or an acknowledgment processing procedure according to the current phase of the transfer request.  |
 | [END](../c_intro_userinterfaces/about_cftutil/managing_transfer_states/end_command) | Declares the processing subsequent to the transfer terminated  |
 | [RESUME](../c_intro_userinterfaces/about_cftutil/managing_transfer_states/resume_command) | Retrieves, in the server mode, a blocked send request having the hold status |
+
 
 <span id="Transfer_owners"></span>
 
@@ -91,6 +93,8 @@ The default command is the command whose file identifier corresponds either to t
 
 A message is a character string specified by a SEND command and sent
 by the {{< TransferCFT/axwayvariablesComponentShortName  >}} as a specific transfer. A message transfer does not make reference to a flow definition (a CFTSEND or CFTRECV command).
+
+ 
 
 ![](/Images/TransferCFT/temp_type_data.png)
 

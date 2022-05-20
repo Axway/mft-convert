@@ -2,7 +2,7 @@
 title: "Getting started"
 linkTitle: "Getting started"
 weight: 230
---- This *Getting started* section provides a high level overview on how to create basic flows and check the flow status. For more information on using {{< TransferCFT/PrimaryCGorUM  >}}, refer to the {{< TransferCFT/PrimaryCGorUM  >}} User's Guide.
+---This *Getting started* section provides a high level overview on how to create basic flows and check the flow status. For more information on using {{< TransferCFT/PrimaryCGorUM  >}}, refer to the {{< TransferCFT/PrimaryCGorUM  >}} User's Guide.
 
 Prior to beginning this section, you installed {{< TransferCFT/PrimaryCGorUM  >}} and your {{< TransferCFT/axwayvariablesComponentShortName  >}}s, and checked that the {{< TransferCFT/axwayvariablesComponentShortName  >}}s registration with {{< TransferCFT/PrimaryCGorUM  >}} is complete. Next you can begin setting up your environment for business use.
 
@@ -22,3 +22,4 @@ In this getting started section, you use the following interfaces to configure a
 For each command, CFTUTIL checks the command syntax and enters the command. Refer to *[Typographical
 conventions](../../../c_intro_userinterfaces/command_summary/typographical_conventions)* for the Transfer CFT command syntax conventions used in this document.
 
+ 

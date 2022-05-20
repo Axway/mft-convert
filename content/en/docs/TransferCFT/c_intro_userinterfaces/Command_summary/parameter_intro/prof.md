@@ -2,7 +2,7 @@
 title: "prof"
 linkTitle: "prof"
 weight: 2730
---- <span id="prof"></span>
+---<span id="prof"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
@@ -23,7 +23,7 @@ not manage:
 
 - segmentation:
     the value of the SEGMENT parameter must be set to NO (SEGMENT = NO), or
-- multi- records:
+- multi-records:
     the value of the MULTART parameter must be set to NO (MULTART = NO), or
 - compression:
     the RCOMP and SCOMP parameters are not applicable, or receive
@@ -36,7 +36,7 @@ not manage:
 > FPDUs or group several records sent in the same data FPDU.
 
 ****EXTERN profile****:
-Corresponds to the “non- SIT” (external to SIT network) standardized definition
+Corresponds to the “non-SIT” (external to SIT network) standardized definition
 of the PeSIT version D protocol.
 
 ****CFT profile****: The
@@ -45,7 +45,7 @@ the partner also having a {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 D EXTERN profile specifications.
 
 ****ANY profile****: Corresponds
-to the “non- SIT” (external to SIT network) standardized definition of
+to the “non-SIT” (external to SIT network) standardized definition of
 the PeSIT version E protocol. This profile includes {{< TransferCFT/axwayvariablesComponentShortName  >}} profile facilities
 as standard.
 
@@ -56,8 +56,8 @@ These facilities are based on the use of the PI 99 (free PI).
 > **Note**
 >
 > In server mode, the PROF parameter
-> can take either the EXTERN, CFT, or ANY values (corresponding to the “non- SIT”
+> can take either the EXTERN, CFT, or ANY values (corresponding to the “non-SIT”
 > profiles): indeed, in server mode, the Transfer CFT automatically
-> adapts itself to the “non- SIT” profile proposed by the requesting partner.
+> adapts itself to the “non-SIT” profile proposed by the requesting partner.
 
 [Return to Command index](../../)

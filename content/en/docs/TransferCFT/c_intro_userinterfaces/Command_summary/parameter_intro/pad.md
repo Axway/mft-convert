@@ -2,7 +2,7 @@
 title: "pad"
 linkTitle: "pad"
 weight: 2540
---- <span id="pad"></span>
+---<span id="pad"></span>
 
 ### pad
 
@@ -22,5 +22,7 @@ in requester mode. Default is ****No****.
 Option applying 'special logic' to the data exchange buffers. If the
 option is set to NO for one of the partners, this 'special logic' is not
 applied. Default is ****No****.
+
+ 
 
 [Return to Command index](../../)

@@ -2,7 +2,7 @@
 title: "Transport security concepts:  Start here"
 linkTitle: "Transport security concepts"
 weight: 140
---- This sub- book presents and defines transfer security concepts that are referred
+---This sub-book presents and defines transfer security concepts that are referred
 to further in this document, as well as how these security items work. It is comprised of the following topics:
 
 - [Extended
@@ -84,7 +84,7 @@ function or the hash function.
 
 When using SSL or TLS, a hash code, called MAC (Message
 Authentication Code),
-is added to each message sent. The standard hash functions used are SHA- 1
+is added to each message sent. The standard hash functions used are SHA-1
 or MD5.
 
 ********Hash function********

@@ -2,7 +2,7 @@
 title: "EXIT - Quit CFTUTIL"
 linkTitle: "EXIT - Quit CFTUTIL"
 weight: 220
---- The command EXIT quits the CFTUTIL program.
+---The command EXIT quits the CFTUTIL program.
 
 ## Parameter descriptions &lt;/h2>
 
@@ -14,7 +14,7 @@ By default there is an code that displays when you use the EXIT command to quit
 
 ```
 >CFTUTIL EXIT EXITCODE=3
-
+ 
 EXIT EXITCODE=3
 CFTU00I EXIT _ Correct (EXITCODE=3)
 ```

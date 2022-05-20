@@ -2,7 +2,7 @@
 title: "UCONF: Copilot server"
 linkTitle: "Transfer CFT UI server"
 weight: 280
---- ****UNIX****
+---****UNIX****
 
 Refer to the [UCONF parameters](../uconf_directory) table for information on `copilot.*.unix `parameters.
 
@@ -12,52 +12,64 @@ You can access customized file system directories via the {{< TransferCFT/axwayv
 
 To add a new alias, access the Unified Configuration (uconf) and configure the following:
 
+
 | ID  | Description  |
 | --- | --- |
-| copilot.http.aliases  | List of enabled alias- id  |
-| copilot.http.aliases.(alias- id) alias  | Name of the alias  |
-| copilot.http.aliases.(alias- id).path  | Path that replaces the alias in the URL  |
+| copilot.http.aliases  | List of enabled alias-id  |
+| copilot.http.aliases.(alias-id) alias  | Name of the alias  |
+| copilot.http.aliases.(alias-id).path  | Path that replaces the alias in the URL  |
+
 
 ****Security for Cop**i**lot u****
+
 
 | Parameter  | Description  |
 | --- | --- |
 | copilot.http.onlyssl  | Enter Yes to restrict the access of the {{< TransferCFT/axwayvariablesComponentShortName  >}} user interface with https.  |
 
+
 ****View available drives****
 
 To view available drives from the ****Edit a file**** icon in the graphical user interface, define the following:
 
+
 | Parameter  | Options  | Description  |
 | --- | --- | --- |
 | copilot.nt.rootdrives  | @REMOVABLE_DRIVES  | To view removable drives such as a USB key, CD, and so on.  |
-| - " - | @LOCAL_DRIVES  | To view hard drives.  |
-| - " - | @NET_DRIVES  | To view network drives.  |
+| - " -  | @LOCAL_DRIVES  | To view hard drives.  |
+| - " -  | @NET_DRIVES  | To view network drives.  |
 
-****Client keep- alive****
 
-Use this parameter to define the keep- alive interval in seconds for a client session. By default this occurs every 60 seconds.
+****Client keep-alive****
+
+Use this parameter to define the keep-alive interval in seconds for a client session. By default this occurs every 60 seconds.
+
 
 | Parameter  | Value  |
 | --- | --- |
-| copilot.misc.client_keep_alive_delay  | Enter an integer for the delay in seconds.<br/> 60 = default<br/> 0 = no keep- alive |
+| copilot.misc.client_keep_alive_delay  | Enter an integer for the delay in seconds.<br/> 60 = default<br/> 0 = no keep-alive |
+
 
 ****Client timeout****
 
 Use this parameter to define the client timeout in minutes. The default value is 30 minutes.
 
+
 | Parameter  | Value  |
 | --- | --- |
 | copilot.misc.ClientTimeout  | Enter an integer for the timeout in minutes.<br/> 30 = default<br/> 0 = no timeout |
+
 
 ****Web services****
 
 Use this parameter to define the {{< TransferCFT/axwayvariablesComponentShortName  >}} Web Services. See also [Setting up Web Services](../../../cft_intro_install/about_this_document_ibmi/using_apis/about_web_services).
 
+
 | Parameter  | Value  | Former value  |
 | --- | --- | --- |
 | copilot.webservices.wsicomplience  | (bool) No  | [WEBSERVICES] WsiComplience  |
 | copilot.webservices.upload_directory  | (dir) $(cft.runtime_dir)/conf/ws_upload  | NA  |
+
 
 ****Configure Copilot with HTTPS****
 
@@ -76,6 +88,7 @@ The certificate type is dictated by the file name extension (.p12, .pkcs12, .der
 
 *For native files in a z/OS or IBM i environment*, Transfer CFT first tries to decode the certificate in PEM format. If the format cannot be determined, the last letters of the file name are used as the suffix. IBM i also handles the certificates stored on the IFS partition.
 
+
 | Supported format  | Type  | Extension  |
 | --- | --- | --- |
 | Certificate  | PKCS#12  | p12, pfx, pkcs12  |
@@ -85,9 +98,11 @@ The certificate type is dictated by the file name extension (.p12, .pkcs12, .der
 | Private key  | DER  | der  |
 | Private key  | PKCS#8  | key, pem  |
 
+
 ****How to define a PKCS#12 certificate****
 
 This example uses a single PKCS#12 certificate where you only require the file name and password.
+
 
 | Parameter | Value |
 | --- | --- |
@@ -96,9 +111,11 @@ This example uses a single PKCS#12 certificate where you only require the file n
 | copilot.ssl.SslKeyFile | Not used |
 | copilot.ssl.SslKeyPassword | Not used |
 
+
 ****How to define a DER or PEM certificate****
 
 This example uses a DER(or PEM) certificate with the private key in a separate DER file, where you define the key as well as the certificate.
+
 
 | Parameter | Value |
 | --- | --- |
@@ -107,9 +124,11 @@ This example uses a DER(or PEM) certificate with the private key in a separate D
 | copilot.ssl.SslKeyFile | conf/pki /&lt;my_key&gt;.der *or* .pem |
 | copilot.ssl.SslKeyPassword | Key password, which is mandatory if the key file is encrypted PKCS#8 |
 
+
 #### Additional HTTPS parameters
 
 There are two additional UCONF parameters to use for HTTPS connections:
+
 
 | Parameter | Value |
 | --- | --- |

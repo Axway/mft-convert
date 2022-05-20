@@ -2,7 +2,7 @@
 title: "Update Transfer CFT"
 linkTitle: "Update Transfer CFT"
 weight: 170
---- This section describes how to update Transfer CFT with a patch or service pack. You can manually perform the operation or use {{< TransferCFT/suitevariablesCentralGovernanceName  >}}.
+---This section describes how to update Transfer CFT with a patch or service pack. You can manually perform the operation or use {{< TransferCFT/suitevariablesCentralGovernanceName  >}}.
 
 ## Download the update file
 
@@ -19,7 +19,7 @@ You can easily perform {{< TransferCFT/suitevariablesTransferCFTName  >}} update
 Limitations:
 
 - You cannot remove SP or patches via the {{< TransferCFT/suitevariablesCentralGovernanceName >}} interface.
-- You cannot update {{< TransferCFT/axwayvariablesComponentLongName >}}s installed in multi- node/multi- hosts from {{< TransferCFT/PrimaryCGorUM >}}.
+- You cannot update {{< TransferCFT/axwayvariablesComponentLongName >}}s installed in multi-node/multi-hosts from {{< TransferCFT/PrimaryCGorUM >}}.
 
 ## Windows users
 
@@ -56,7 +56,7 @@ Use the following command to update Transfer CFT in silent mode:
 
 ```
 C:\\axway\\Transfer_CFT_ 3.10
-_<Install\\SP\\Patch>_<OS>_<BN>.exe - - mode unattended - - installdir <installation_directory>
+_<Install\\SP\\Patch>_<OS>_<BN>.exe --mode unattended --installdir <installation_directory>
 ```
 
 ## Uninstall an update
@@ -69,14 +69,14 @@ To uninstall install the previous patch or service pack. For example, to remove 
 
 ```
 C:\\axway\\Transfer_CFT_ 3.10
-_SP1_<OS>_<BN>.exe - - mode unattended
+_SP1_<OS>_<BN>.exe --mode unattended
 ```
 
 To verify, from the Transfer CFT &lt;runtime_dir> run the `about `command.
 
-## Install patches and service packs in a multi- node, multi- host environment
+## Install patches and service packs in a multi-node, multi-host environment
 
-This section describes the procedure to apply a patch or service pack on a multi- node architecture based on *N* hosts. You update a Transfer CFT multi- node architecture with multi- hosts using the same procedure as for a patch or service pack, one host at a time.
+This section describes the procedure to apply a patch or service pack on a multi-node architecture based on *N* hosts. You update a Transfer CFT multi-node architecture with multi-hosts using the same procedure as for a patch or service pack, one host at a time.
 
 > **Note**
 >
@@ -84,8 +84,8 @@ This section describes the procedure to apply a patch or service pack on a multi
 
 1. Connect to the first host.
 1. Stop all nodes running on this host by running the command: `copstop`  
-    Copilot services are stopped, and local nodes are automatically re- started on the other hosts.
-1. Check that the nodes are re- started by using the command: `CFTUTIL listnode`
+    Copilot services are stopped, and local nodes are automatically re-started on the other hosts.
+1. Check that the nodes are re-started by using the command: `CFTUTIL listnode`
 1. Install the patch or the service pack as usual using {{< TransferCFT/suitevariablesTransferCFTName >}} installer as described in [Install a standard update](#Install).
 1. Start Copilot services.
 1. Connect to the next host and repeat the procedure starting as of ****Step 2**** (above).

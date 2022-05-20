@@ -2,7 +2,7 @@
 title: "Configuring  transport security: Start here"
 linkTitle: "Configuring transport security"
 weight: 150
---- This section describes how to configure Transfer CFT objects transport
+---This section describes how to configure Transfer CFT objects transport
 security configuration. The following topics describe the objects that
 are involved in the Transfer CFT transport security configuration. The
 CFTPARM, CFTPROT, and CFTPART objects include parameters that are directly
@@ -46,7 +46,7 @@ and requires the installation of a public key infrastructure.
 The SSL and TLS protocols come in between the file exchange protocol
 (PeSIT, ODETTE) and the communication protocol TCP. All the functions
 provided by the file exchange protocol are therefore conserved when security
-is implemented (compression, additional transfer- associated message, open
+is implemented (compression, additional transfer-associated message, open
 mode,...).
 
 The SSL and TLS protocols define the security suite, or cipher suite,
@@ -62,24 +62,26 @@ concept. A suite is identified by a number and designates one:
 The suites supported by Transfer CFT are described in the following
 table:
 
+
 | Suite  | Order used | Authentication  | Confidentiality  | Integrity  |
 | --- | --- | --- | --- | --- |
-| 49199 **  | 1  | ECDHE + RSA authentication  | AES- 128 GCM  | SHA- 256  |
-| 49200 **  | 2  | ECDHE + RSA authentication  | AES- 256 GCM  | SHA- 384  |
-| 49191 **  | 3  | ECDHE + RSA authentication | AES- 128  | SHA- 256  |
-| 49192**  | 4  | ECDHE + RSA authentication  | AES- 256  | SHA- 384  |
-| 156 **  | 5  | RSA authentication  | AES 128 GCM  | SHA- 256  |
-| 157 **  | 6  | RSA authentication  | AES 256 GCM  | SHA- 384  |
-| 60*  | 7  | RSA authentication (512, 1024, 2048, or 4096)  | AES- 128  | SHA- 256  |
-| 61*  | 8  | RSA authentication (512, 1024, 2048, or 4096)  | AES- 256  | SHA- 256  |
-| 47 &lt;/td&gt;  | 9  | RSA authentication (512, 1024, 2048, or 4096) &lt;/td&gt;  | AES- 128 &lt;/td&gt;  | SHA- 1 &lt;/td&gt;  |
-| 53  | 10  | RSA authentication (512, 1024, 2048, or 4096)  | AES- 256  | SHA- 1  |
-| 10 &lt;/td&gt;  | 11  | RSA authentication (512, 1024, 2048, or 4096) &lt;/td&gt;  | Triple DES &lt;/td&gt;  | SHA- 1 &lt;/td&gt;  |
-| 5 &lt;/td&gt;  | 12  | RSA authentication (512, 1024, 2048, or 4096) &lt;/td&gt;  | RC4 &lt;/td&gt;  | SHA- 1 &lt;/td&gt;  |
+| 49199 **  | 1  | ECDHE + RSA authentication  | AES-128 GCM  | SHA-256  |
+| 49200 **  | 2  | ECDHE + RSA authentication  | AES-256 GCM  | SHA-384  |
+| 49191 **  | 3  | ECDHE + RSA authentication | AES-128  | SHA-256  |
+| 49192**  | 4  | ECDHE + RSA authentication  | AES-256  | SHA-384  |
+| 156 **  | 5  | RSA authentication  | AES 128 GCM  | SHA-256  |
+| 157 **  | 6  | RSA authentication  | AES 256 GCM  | SHA-384  |
+| 60*  | 7  | RSA authentication (512, 1024, 2048, or 4096)  | AES-128  | SHA-256  |
+| 61*  | 8  | RSA authentication (512, 1024, 2048, or 4096)  | AES-256  | SHA-256  |
+| 47 &lt;/td&gt;  | 9  | RSA authentication (512, 1024, 2048, or 4096) &lt;/td&gt;  | AES-128 &lt;/td&gt;  | SHA-1 &lt;/td&gt;  |
+| 53  | 10  | RSA authentication (512, 1024, 2048, or 4096)  | AES-256  | SHA-1  |
+| 10 &lt;/td&gt;  | 11  | RSA authentication (512, 1024, 2048, or 4096) &lt;/td&gt;  | Triple DES &lt;/td&gt;  | SHA-1 &lt;/td&gt;  |
+| 5 &lt;/td&gt;  | 12  | RSA authentication (512, 1024, 2048, or 4096) &lt;/td&gt;  | RC4 &lt;/td&gt;  | SHA-1 &lt;/td&gt;  |
 | 4 &lt;/td&gt;  | 13  | RSA authentication (512, 1024, 2048, or 4096) &lt;/td&gt;  | RC4 &lt;/td&gt;  | MD5 &lt;/td&gt;  |
-| 59*  | 14  | RSA authentication (512, 1024, 2048, or 4096)  | None  | SHA- 256  |
-| 2 &lt;/td&gt;  | 15  | RSA authentication (512, 1024, 2048, or 4096) &lt;/td&gt;  | None &lt;/td&gt;  | SHA- 1 &lt;/td&gt;  |
+| 59*  | 14  | RSA authentication (512, 1024, 2048, or 4096)  | None  | SHA-256  |
+| 2 &lt;/td&gt;  | 15  | RSA authentication (512, 1024, 2048, or 4096) &lt;/td&gt;  | None &lt;/td&gt;  | SHA-1 &lt;/td&gt;  |
 | 1 &lt;/td&gt;  | 16  | RSA authentication (512, 1024, 2048, or 4096) &lt;/td&gt;  | None &lt;/td&gt;  | MD5 &lt;/td&gt;  |
+
 
 > **Note**
 >
@@ -90,7 +92,7 @@ table:
 > \*\* These cipher suites are only available for Transfer CFT 3.2.2 and higher and are restricted to use with TLS 1.2.
 
 Transfer CFT only processes X.509 certificates with an RSA signature.
-Authentication can be one- way or mutual. It is one- way if only the server,
+Authentication can be one-way or mutual. It is one-way if only the server,
 in physical connection terms, is authenticated by the client via its certificate.
 It is mutual if the client is also authenticated by the server via its
 certificate. It is the server that decides whether the client must be
@@ -172,11 +174,11 @@ by the user when the key was imported. This password is not recorded,
 but must be declared in the Transfer CFT configuration.
 
 Transfer CFT also offers an operating mode in which only confidentiality
-and integrity are provided without certificate- based authentication. In
+and integrity are provided without certificate-based authentication. In
 this operating mode, a PKI does not need to be implemented.
 
 <span id="Using"></span>
 
 ### Using delivered SSL templates
 
-Transfer CFT no longer delivers certificates and private key samples in the product packaging. However Transfer CFT does provide a template, which you can update and use as described in the delivered samples (`$CFTDIRRUNTIME\conf`). The file cft- pki.conf describes how to insert a certificate in the local database in the various formats. The file cft- tcp.conf contains general configuration, and commented SSL profiles.
+Transfer CFT no longer delivers certificates and private key samples in the product packaging. However Transfer CFT does provide a template, which you can update and use as described in the delivered samples (`$CFTDIRRUNTIME\conf`). The file cft-pki.conf describes how to insert a certificate in the local database in the various formats. The file cft-tcp.conf contains general configuration, and commented SSL profiles.

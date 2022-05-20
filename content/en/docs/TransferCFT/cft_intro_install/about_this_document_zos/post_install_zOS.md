@@ -2,7 +2,7 @@
 title: "Verify your installation"
 linkTitle: "Verify your installation"
 weight: 150
---- See the installation if you encounter problems when starting {{< TransferCFT/axwayvariablesComponentLongName  >}}.
+---See the installation if you encounter problems when starting {{< TransferCFT/axwayvariablesComponentLongName  >}}.
 
 ## Installed directories
 
@@ -10,6 +10,7 @@ Once you install the product, the following subdirectories are available:
 
 - Bin: Contains the installation procedures. This directory is unique to Axway. This directory also contains trace files after installation.
 - Install: Contains the Transfer CFT product and the configuration file for silent installation.
+
 
 | File Name  | Description  |
 | --- | --- |
@@ -19,6 +20,7 @@ Once you install the product, the following subdirectories are available:
 | Transfer_CFT_mvs_adrdssu_J1IDIST.txt  | JCL that executes the extraction (next step).<br/> Name: distlib.UPLIB(J1IDISTA) |
 | Transfer_CFT_mvs_xmit_J1IDIST.txt  | JCL that executes the extraction (next step).<br/> Name: distlib.UPLIB(J1IDISTX) |
 | Transfer_CFT_mvs_J2IICFT.txt  | JCL that installs Transfer CFT instance environment.<br/> Name: distlib.UPLIB(J2IICFT)mode |
+
 
 > **Note**
 >

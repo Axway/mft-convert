@@ -2,7 +2,7 @@
 title: "otype"
 linkTitle: "otype"
 weight: 2530
---- <span id="otype"></span>
+---<span id="otype"></span>
 
 ### {{< TransferCFT/SystemTitle  >}}
 
@@ -15,5 +15,7 @@ weight: 2530
 
 Refer to the {{< TransferCFT/axwayvariablesComponentShortName  >}} *Operations Guide* corresponding to your
 OS.
+
+ 
 
 [Return to Command index](../../)

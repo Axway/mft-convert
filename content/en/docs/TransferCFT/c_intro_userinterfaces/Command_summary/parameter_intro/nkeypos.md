@@ -2,7 +2,7 @@
 title: "nkeypos"
 linkTitle: "nkeypos"
 weight: 2240
---- <span id="nkeypos"></span>
+---<span id="nkeypos"></span>
 
 ### nkeypos
 
@@ -17,5 +17,7 @@ Location (in bytes) of the key in the records of an indexed file.
 {{< TransferCFT/suitevariablesTransferCFTName  >}} sends this information, transported by the protocol in the
 PI 39, but does not use it. The indexed file is transferred in the form
 of sequential records.
+
+ 
 
 [Return to Command index](../../)

@@ -2,13 +2,13 @@
 title: "HP NonStop: Installation and Operation"
 linkTitle: "Installation and operation HP NonStop"
 weight: 130
---- ## Preface
+---## Preface
 
 This document describes how to install Transfer CFT in a HP NonStop OSS environment.
 
 ## About {{< TransferCFT/axwayvariablesComponentLongName  >}}
 
-Transfer CFT is the file transfer component in the Axway MFT platform, and provides a multi- platform, high- volume, file and message transfer service.
+Transfer CFT is the file transfer component in the Axway MFT platform, and provides a multi-platform, high-volume, file and message transfer service.
 
 For more information on Axway products, visit [www.axway.com](http://www.axway.com/).
 

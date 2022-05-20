@@ -2,7 +2,7 @@
 title: "Start and stop the Copilot server"
 linkTitle: "Start and stop the Transfer CFT UI Copilot server"
 weight: 190
---- When `am.type=passport` or `am.type=cg`, the user that connects to the Transfer CFT Copilot server must be defined in the system as well as in PassPort/{{< TransferCFT/PrimaryCGorUM  >}}.
+---When `am.type=passport` or `am.type=cg`, the user that connects to the Transfer CFT Copilot server must be defined in the system as well as in PassPort/{{< TransferCFT/PrimaryCGorUM  >}}.
 
 ## Start the Copilot server
 

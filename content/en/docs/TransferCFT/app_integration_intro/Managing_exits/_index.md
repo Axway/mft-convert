@@ -2,7 +2,7 @@
 title: "Exit task concepts"
 linkTitle: "Managing exits"
 weight: 270
---- This section begins with this topic
+---This section begins with this topic
 which provides the information about:
 
 - [Exit
@@ -30,9 +30,9 @@ CFTEXIT object as described below:
     at various stages in the transfer of a file
 - Directory type:
     Performed during the protocol connection phase
-- End- of- transfer:
+- End-of-transfer:
     Performed at the end of a transfer
-- Beginning- of- transfer: Performed at the start of a transfer
+- Beginning-of-transfer: Performed at the start of a transfer
 
 The maximum number of EXIT tasks which are active simultaneously depends
 on the operating system.
@@ -62,7 +62,7 @@ task:
     server mode, it can replace the standard checks performed by Transfer
     CFT when a remote partner requests a session to be set up
 
-<!- - - - >
+<!-- -->
 
 - In
     requester mode, it can provide all the parameters required to set
@@ -98,14 +98,14 @@ are fully managed by the {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 An EXIT task is generally activated, or loaded into memory,
 as soon as {{< TransferCFT/axwayvariablesComponentShortName  >}} is started with the Directory EXIT
 task, or else at the first transfer initiating an event to be checked.
-After the event in question has been checked, the task is not de- activated
+After the event in question has been checked, the task is not de-activated
 but stays loaded in memory. It remains active for a time that is defined
 by the EXIT type, such as:
 
 - Throughout the
     {{< TransferCFT/axwayvariablesComponentShortName >}} activity period for the Directory EXIT tasks
 - For an EXIT task
-    maximum inactivity time, only for File and End- of- transfer exits
+    maximum inactivity time, only for File and End-of-transfer exits
 
 An EXIT task consists of:
 

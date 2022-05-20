@@ -2,7 +2,7 @@
 title: "About governance services"
 linkTitle: "About governance services"
 weight: 150
---- In this guide, *flow* refers to the complete interaction between the source and target applications, more specifically Transfer CFT systems, to enable data exchanges between business applications or partners.
+---In this guide, *flow* refers to the complete interaction between the source and target applications, more specifically Transfer CFT systems, to enable data exchanges between business applications or partners.
 
 ## Managed File Transfer services
 
@@ -14,7 +14,7 @@ You can use {{< TransferCFT/suitevariablesFlowManager  >}} or Central Governance
 
 > **Note**
 >
-> Connectivity may include connection to other or third- party products that are outside of the MFT reference solution.
+> Connectivity may include connection to other or third-party products that are outside of the MFT reference solution.
 
 ### Additional documentation
 
@@ -42,8 +42,8 @@ Begin by planning your MFT architecture and deployment strategy. After installi
 - Registration occurs automatically on Copilot start up
 - From {{< TransferCFT/suitevariablesCentralGovernanceName >}} or {{< TransferCFT/suitevariablesFlowManager >}} start the Transfer CFT(s)
 - If you migrated or upgraded, you may want to reference the following sections:
-    - [Manually activate Central Governance connectivity](../register_cg)
-    - Parameter mapping between products
+    -   [Manually activate Central Governance connectivity](../register_cg)
+    -   Parameter mapping between products
 
 <span id="Feature"></span>
 
@@ -51,10 +51,11 @@ Begin by planning your MFT architecture and deployment strategy. After installi
 
 Transfer CFTs running under {{< TransferCFT/suitevariablesCentralGovernanceName  >}} or {{< TransferCFT/suitevariablesFlowManager  >}} can manage or have support for the following features.
 
+
 | Feature  |  Manage using {{< TransferCFT/suitevariablesFlowManager  >}} or {{< TransferCFT/PrimaryCGorUM  >}}  | Supported but not configurable using Central Governance or {{< TransferCFT/suitevariablesFlowManager  >}}  |
 | --- | --- | --- |
 | Folder monitoring  | yes  | yes  |
-| Multi- node architecture  | no  | yes  |
+| Multi-node architecture  | no  | yes  |
 | CRONJOB  | yes  | yes  |
 | Exits  | no  | yes  |
 | Network features  |   |   |
@@ -73,6 +74,7 @@ Transfer CFTs running under {{< TransferCFT/suitevariablesCentralGovernanceName 
 | ODETTE  | no  | yes  |
 | SFTP  | yes  | yes  |
 
+
 \* If you perform a migration or upgrade from a previous version, you must migrate your PassPort AM.
 
 <span id="Legacy"></span>
@@ -82,4 +84,4 @@ Transfer CFTs running under {{< TransferCFT/suitevariablesCentralGovernanceName 
 Legacy flows refer to former flow definitions available in migrated {{< TransferCFT/axwayvariablesComponentLongName  >}} systems. Central Governance or {{< TransferCFT/suitevariablesFlowManager  >}} can manage the following use cases:
 
 - Via the Central Governance or {{< TransferCFT/suitevariablesFlowManager >}} user interface, you can add and manage partners, and use send and receive templates for a given Transfer CFT.
-- You can migrate Transfer CFT flow definitions to the Central Governance or {{< TransferCFT/suitevariablesFlowManager >}} flow- management process.
+- You can migrate Transfer CFT flow definitions to the Central Governance or {{< TransferCFT/suitevariablesFlowManager >}} flow-management process.

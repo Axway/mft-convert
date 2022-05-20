@@ -2,7 +2,7 @@
 title: "Creating  a file exit - OpenVMS"
 linkTitle: "Creating a file exit"
 weight: 250
---- This page describes a delivered sample that you can use as the basis for a file exit.
+---This page describes a delivered sample that you can use as the basis for a file exit.
 
 > **Note**
 >
@@ -14,14 +14,14 @@ The `d$cft_run:[src.exit]` subdirectory contains:
 
 - The `exfxmp1.c` sample source module with its associated `exfus.h` include file. This program
     demonstrates the various user functions:
-    - ALLOC_TYP:
+    -   ALLOC_TYP:
         the EXIT allocates the file
-    - OPEN_TYP: the
+    -   OPEN_TYP: the
         EXIT opens the file
-    - DATA_TYP: the
+    -   DATA_TYP: the
         EXIT writes or reads the file, and so on
 
-<!- - - - >
+<!-- -->
 
 - The `makefile_exit.com`
     compilation procedure, which uses `exfxmp2.c` to generate the CFTEXITF
@@ -41,7 +41,7 @@ To generate the sample CFTEXITF application:
 1. Generate the {{< TransferCFT/axwayvariablesComponentShortName >}} internal datafiles
     using the `cftinit `utility with the configuration file:
 
-    `cftinit cft_scen:cft- tcp.conf`
+    `cftinit cft_scen:cft-tcp.conf`
 
 1. When the `cftinit complete`
     message is displayed, start {{< TransferCFT/axwayvariablesComponentLongName >}}:

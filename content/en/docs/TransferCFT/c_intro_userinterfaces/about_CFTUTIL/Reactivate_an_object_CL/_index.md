@@ -2,7 +2,7 @@
 title: "ACT  - Reactivating objects"
 linkTitle: "Files and configuration"
 weight: 240
---- This topic describes the ACT command and its parameters. You can use
+---This topic describes the ACT command and its parameters. You can use
 the ACT command to reactivate:
 
 - One or more partners (CFTPART)
@@ -12,11 +12,13 @@ the ACT command to reactivate:
 
 ****Command guide: [ACT](../../command_summary#ACT)****
 
+
 | Parameter | Description |
 | --- | --- |
 | [ID](../../command_summary/parameter_intro/id)  | Identifier for the object to be reactivated. To reactivate several objects with a single command, use wildcard characters or meta characters. |
 | [MODE](../../command_summary/parameter_intro/mode) | Mode to be reactivated on partners (only when TYPE=PART object):<br/> • BOTH (default)<br/> • REQUESTER<br/> • SERVER<br/> You can use the shortcuts B, R and S in place of the keywords. |
 | [TYPE](../../command_summary/parameter_intro/type)  | Object to reactivate:<br/> • PART<br/> • TRK<br/> • CRON<br/> • FOLDER |
+
 
 ## Using the ACT command
 
@@ -46,7 +48,7 @@ ACT TYPE=PART, ID=PARIS, MODE=BOTH
 Returning the following output:
 
 ```
-CFTU20I Part=PARIS : NOACTIVE - > ACTIVEBOTH
+CFTU20I Part=PARIS : NOACTIVE -> ACTIVEBOTH
 CFTU00I ACT _ Correct (TYPE=PART,ID=PARIS)
 ```
 
@@ -93,7 +95,7 @@ ACT TYPE=CRON,ID=CRON1
 Returning the following output:
 
 ```
-CFTU20I Cronjob=CRON1 : NOACTIVE - > ACTIVE
+CFTU20I Cronjob=CRON1 : NOACTIVE -> ACTIVE
 CFTU00I ACT _ Correct (TYPE=CRON,ID=CRON1)
 ```
 
@@ -118,7 +120,7 @@ ACT TYPE=FOLDER,ID=USER1
 Returning the following output:
 
 ```
-CFTU20I Folder=USER1 : NOACTIVE - > ACTIVE
+CFTU20I Folder=USER1 : NOACTIVE -> ACTIVE
 CFTU00I ACT _ Correct (type=folder,id=user1)
 ```
 

@@ -2,7 +2,7 @@
 title: "Switching  procedure"
 linkTitle: "Switching procedure"
 weight: 260
---- - [About
+----   [About
     the switching procedure](#About_the_switching_procedure)
 - [Switching
     log files](#Switching_log_procedure)
@@ -90,7 +90,7 @@ you may wish to have a slightly longer archiving period.
 
 The example below describes a simplified procedure that maintains a
 history over four days rather than two. This switching procedure, <span id="switch_cmd"></span>*switch.cmd*, is located
-in the *&lt;installdir>/runtime/conf/* directory and is used in the *cft- tcp.conf*
+in the *&lt;installdir>/runtime/conf/* directory and is used in the *cft-tcp.conf*
 sample configuration.
 
 #### Example: switching log files
@@ -126,6 +126,7 @@ even if it is not essential for this example, it is a good safety measure
     utility is provided in the &lt;installdir>/bin directory. It receives the physical
     name of a file if &flog contains a Transfer CFT logical name. Otherwise,
     it returns the name passed as a parameter  
+      
 
 Example: the *cft2unix log* command returns *log* whereas
 *cft2unix_CFTLOG* returns the value of the CFTLOG environment
@@ -140,18 +141,18 @@ The name of the log file is then stored in the *filename* variable
     to which *filename* points is copied to a new file and given the
     *_sav* extension (*cft_log* becomes *cft_log_sav* for example)
 
-<!- - - - >
+<!-- -->
 
 - CFTUTIL CFTFILE
     TYPE=LOG, FNAME=$filename
 
-<!- - - - >
+<!-- -->
 
 - The initial
     log file is recreated. Do not forget that the log file concerned must
     be empty, so that Transfer CFT can use it for switching
 
-<!- - - - >
+<!-- -->
 
 - rm $0
 
@@ -165,7 +166,7 @@ CFT and Temporary Files*).
 A simplified version of the previous procedure for switching the accounting
 file with the same backup properties is described below. This switching
 procedure, *switchacnt.cmd*, is located in the *&lt;installdir>/runtime/conf/* directory
-and is used in the *cft- tcp.conf* sample
+and is used in the *cft-tcp.conf* sample
 configuration provided.
 
 #### Example: switching accounting files
@@ -179,7 +180,7 @@ filename=`cft2unix &FACCNT`
 mv ${filename} ${filename}_sav
 CFTUTIL CFTFILE TYPE=ACCNT, FNAME=$filename
 rm $0
-
+ 
 ```
 
 This procedure is an example intended to illustrate the concept. It

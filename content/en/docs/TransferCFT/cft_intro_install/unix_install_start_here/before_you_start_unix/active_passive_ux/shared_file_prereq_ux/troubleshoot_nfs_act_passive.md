@@ -2,7 +2,7 @@
 title: "Troubleshoot active passive file systems"
 linkTitle: "Troubleshoot NFS option"
 weight: 230
---- ****Problem****
+---****Problem****
 
 Deploying flows from {{< TransferCFT/suitevariablesCentralGovernanceName  >}} to {{< TransferCFT/suitevariablesTransferCFTName  >}} in an active/passive cluster fails with "Read timed out" error even though there are no connectivity issues.
 

@@ -2,7 +2,7 @@
 title: "About kernel customization"
 linkTitle: "Customize the kernel"
 weight: 170
---- Depending on the operating system, some customization may
+---Depending on the operating system, some customization may
 be mandatory to ensure that {{< TransferCFT/axwayvariablesComponentShortName  >}} operates correctly, and to maintain
 the overall system performance levels.
 
@@ -18,7 +18,7 @@ kernel parameters that you need to upgrade to ensure that the
 System specific
 customization procedures are described for the following systems:
 
-- [HP- UX](customizing_hp_ux)
+- [HP-UX](customizing_hp_ux)
 - [Linux](customizing_linux)
 - [Solaris](customizing_solaris)
 
@@ -50,8 +50,8 @@ the overall system performance levels.
 Note:
 
 - The kernel customization
-    requires an in- depth knowledge of UNIX. To make the recommended changes,
-    you must have super- user privileges (*root*). An incorrect setting
+    requires an in-depth knowledge of UNIX. To make the recommended changes,
+    you must have super-user privileges (*root*). An incorrect setting
     could seriously affect the integrity of your system.
 - The figures indicated
     are based on a standard system, which is the default configuration

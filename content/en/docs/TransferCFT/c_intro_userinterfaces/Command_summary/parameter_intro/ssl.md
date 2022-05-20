@@ -2,7 +2,7 @@
 title: "SSL"
 linkTitle: "ssl"
 weight: 3350
---- <span id="SSL"></span>
+---<span id="SSL"></span>
 
 ### SSL
 
@@ -29,13 +29,13 @@ in server mode.
 
 The SSL parameter is used to associate a security profile with a partner definition.
 
-For incoming calls, the server mode, the SSL parameter value must correspond to the identifier of a DIRECT=SERVER SSL command. In this case, the SSL command does not serve as a security profile, but is used to add additional partner- related controls.
+For incoming calls, the server mode, the SSL parameter value must correspond to the identifier of a DIRECT=SERVER SSL command. In this case, the SSL command does not serve as a security profile, but is used to add additional partner-related controls.
 
 For outgoing calls (client mode), the SSL parameter value must correspond to the identifier of a DIRECT=CLIENT SSL command. [FOR DETAILS see CFTPART]
 
 ****Server mode features****
 
-Due to SSL protocol properties, the security profile in server mode must be known when the incoming network connection is established, prior to protocol- level identification of the partner. Therefore, the security profile in server mode is declared in the CFTPROT object.
+Due to SSL protocol properties, the security profile in server mode must be known when the incoming network connection is established, prior to protocol-level identification of the partner. Therefore, the security profile in server mode is declared in the CFTPROT object.
 
 If the partner has a specific security profile for the server mode, after the partner is identified (the partner network identity is compared with a CFTPART object), additional checks are performed between the profile and open SSL session elements:
 

@@ -2,11 +2,11 @@
 title: "Using system users - UNIX"
 linkTitle: "Using system users"
 weight: 250
---- This section describes two optional UNIX- specific tasks that you can perform to enable system user authentication and file system rights, and which are not mutually exclusive.
+---This section describes two optional UNIX-specific tasks that you can perform to enable system user authentication and file system rights, and which are not mutually exclusive.
 
 - [Enable the file user rights (USERCTRL)](#Manually)
-    - [Transfer CFT starts the CFTSU process](#Automati2)
-    - [User starts the CFTSUD process](#Manually2)
+    -   [Transfer CFT starts the CFTSU process](#Automati2)
+    -   [User starts the CFTSUD process](#Manually2)
 - [How to use system user authentication for the user interfaces](#Enable2)
 
 <span id="Manually"></span>
@@ -103,7 +103,7 @@ The root user now starts the CFTSUD process and sets the AF_UNIX file owner, whi
 
 There are two ways to enable the system user authentication:
 
-- For the current web- based Transfer CFT UI: set `copilot.restapi.authentication_method=system`
+- For the current web-based Transfer CFT UI: set `copilot.restapi.authentication_method=system`
 - For the deprecated Transfer CFT UI (Copilot): set `copilot.misc.createprocessasuser=yes`
 
 > **Note**
@@ -114,7 +114,7 @@ Proceed as follows:
 
 1. Log on as root.
 1. Execute the profile.
-1. Copy the `cftsu` executable to the following directory, where you must first create the `cft `sub- folder:  
+1. Copy the `cftsu` executable to the following directory, where you must first create the `cft `sub-folder:  
     cp $CFTDIRINSTALL/bin/cftsu /opt/cft/cftsu  
     The destination directory, for example `/opt/cft/`, must be outside of the $CFTDIRINSTALL directory to allow automatic updating when apply a SP or product update.
 1. Execute the commands:  

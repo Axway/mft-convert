@@ -2,7 +2,7 @@
 title: "About Directory  exits "
 linkTitle: "Directory exit"
 weight: 310
---- ## What is a directory exit?
+---## What is a directory exit?
 
 You can use the directory exit
 task to modify the parameters used to establish an exit connection with
@@ -12,9 +12,11 @@ opened depending on the {{< TransferCFT/axwayvariablesComponentShortName  >}} pa
 
 Use a directory exit to:
 
-- Server mode - to replace the standard checks performed by {{< TransferCFT/axwayvariablesComponentShortName >}} when a remote
+- Server mode -
+    to replace the standard checks performed by {{< TransferCFT/axwayvariablesComponentShortName >}} when a remote
     partner requests a connection
-- Requester mode - to provide, supplement or modify the parameters {{< TransferCFT/axwayvariablesComponentShortName >}} requires
+- Requester mode -
+    to provide, supplement or modify the parameters {{< TransferCFT/axwayvariablesComponentShortName >}} requires
     to establish network and protocol connections with a remote partner
 
 The directory exit parameters can include:

@@ -2,7 +2,7 @@
 title: "delete"
 linkTitle: "delete"
 weight: 660
---- <span id="Delete"></span>
+---<span id="Delete"></span>
 
 #### delete
 
@@ -13,7 +13,7 @@ weight: 660
 Automatically deletes the catalog entries in the "X" phase
 (done) for the corresponding IDF.
 
-If the user specifies end- of- transfer procedures (EXECSF and EXECRF
+If the user specifies end-of-transfer procedures (EXECSF and EXECRF
 parameters of CFTPARM), the catalog entries are only deleted after these
 procedures are executed.
 

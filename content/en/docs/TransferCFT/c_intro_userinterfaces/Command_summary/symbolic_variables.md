@@ -2,7 +2,7 @@
 title: "Symbolic variables"
 linkTitle: "Symbolic variables"
 weight: 150
---- <span id="About_symbolic_variables"></span>A symbolic variable represents
+---<span id="About_symbolic_variables"></span>A symbolic variable represents
 a data item whose value is not known at the time {{< TransferCFT/axwayvariablesComponentShortName  >}}
 parameters are set, but only at the time of execution. Additionally, the symbolic variable is prefaced by a special character, which is the ‘&’ character in this document. However, you should refer to the {{< TransferCFT/axwayvariablesComponentShortName  >}} *Installation Guide* that corresponds to
 your OS, in order to determine the special character &lt;char_symb>
@@ -17,7 +17,7 @@ of the commands and procedure files associated with transfers. This avoids
 having to repeat the same basic descriptions a considerable number of
 times: a single CFTSEND command can hence be applied to several files
 by using the symbolic variables in the FNAME parameter. This also makes
-it possible to only have to describe one transfer- related procedure applicable
+it possible to only have to describe one transfer-related procedure applicable
 to several transfers. The real value of the parameter is substituted for
 the symbolic variable, at the time the {{< TransferCFT/axwayvariablesComponentShortName  >}} command or the procedure
 is executed.
@@ -38,18 +38,20 @@ The symbolic variable syntax is as follows:
 - Optionally followed
     by the character(s):
 
+
 | Character  | Indicates...  |
 | --- | --- |
 | +  | That the variable toggles to upper case  |
-| - | That the variable toggles to lower case  |
+| -  | That the variable toggles to lower case  |
 | :  | That the right padding of the variable is suppressed  |
 | &lt;  | The left justification of the variable (default value)  |
 | &gt;  | The right justification of the variable  |
 | %  | Indicates use of the [separator syntax](#Separate)  |
 |   | These characters can be used in combination, such as ****+:**** or ****&gt;+:****. <br/> See the [Example using optional characters](#Examples) |
 
+
 - Optionally followed
-    by a character string to be used as a prefix (- string_prefix)
+    by a character string to be used as a prefix (-string_prefix)
     and/or a character string to be used as a suffix (+string_suffix)
     and/or a character string to be used as a substitute/alternate value (=string_alternate)
 - Optionally followed
@@ -81,11 +83,11 @@ According to the syntax used:
     shifted to upper case.
 
 - &nVAR syntax:
-    - The value substituted for the symbolic variable corresponds
+    -   The value substituted for the symbolic variable corresponds
         to a fixed length string of n characters, equal to the string corresponding
         to the effective value of ‘VAR’, truncated as required, or with blank
         characters added to the right.
-    - The first character in this string corresponds to
+    -   The first character in this string corresponds to
         the first character, from the left, of the string corresponding to the
         value of the ‘VAR’ identifier.
 
@@ -95,20 +97,20 @@ According to the syntax used:
     to the character substring formed from the effective value of ‘VAR’ such
     that:
 
-    - The first character
+    -   The first character
         of this substring corresponds to the p th character (from the left) of
         the string corresponding to the value of ‘VAR’
-    - The length
+    -   The length
         corresponds exactly to the length of the effective value of ‘VAR’, the
         character in the i position being equal to the character in the p+i position
         of the value of ‘VAR’. If the length of the value of ‘VAR’ is m characters,
-        the length of the substring will consequently be m- p+1 characters
+        the length of the substring will consequently be m-p+1 characters
 
-<!- - - - >
+<!-- -->
 
 - &p.nVAR syntax:
-    - The value substituted for the symbolic variable corresponds
-        to the character sub- string formed from the effective value of ‘VAR’ such
+    -   The value substituted for the symbolic variable corresponds
+        to the character sub-string formed from the effective value of ‘VAR’ such
         that:
 
         The first character
@@ -121,7 +123,7 @@ According to the syntax used:
         length of the effective value of VAR is less than p+n characters, the
         characters completing the substring are blank characters
 
-&(- string_prefix)
+&(-string_prefix)
 (+string_suffix) (=string_alternate)p.nVAR syntax:
 
 After the &p.nVAR symbolic variable has been substituted:
@@ -162,7 +164,7 @@ For the following example, see the corresponding syntax:
 
 You can combine field extraction with the other filtering methods. The full syntax is:
 
-`&[<&#124;>][+&#124;- ][:][(- string_prefix)(+string_suffix)(=string_alternate)][<position>.][<length>][%<separator>][<start_field>][.[<end_field>]]<VARIABLE>`
+`&[<&#124;>][+&#124;-][:][(-string_prefix)(+string_suffix)(=string_alternate)][<position>.][<length>][%<separator>][<start_field>][.[<end_field>]]<VARIABLE>`
 
 #### Example symbolic variable usage
 
@@ -203,19 +205,19 @@ values are:
 &VAR = ’F2345’
 &3VAR = ’F23’
 &7VAR = ’F2345 ’
-
+ 
 &.VAR = ’&VAR’ (not substituted)
 &.4VAR = 'F2345'
 &1.VAR = ’F2345’
 &2.VAR = ’2345’
 &5.VAR = ’5’
 &6.VAR = ’’
-
+ 
 &1.1VAR = ’F’
 &2.1VAR = ’2’
 &5.1VAR = ’5’
 &6.1VAR = ’ ’
-
+ 
 &1.2VAR = ’F2’
 &2.3VAR = ’234’
 &5.6VAR = ’5 ’ (5 blank characters)
@@ -235,7 +237,7 @@ Depending on the associated symbolic variable format, the substituted values are
 
 #### Example of rebuilding filenames using symbolic variables
 
-Given the syntax FNAME=&FROOT&(- .)FSUF:
+Given the syntax FNAME=&FROOT&(-.)FSUF:
 
 - If &FSUF is empty, FNAME gets the value &FROOT
 - If &FSUF is not empty, FNAME gets the value &FROOT.&FSUF
@@ -249,7 +251,7 @@ Given the syntax FNAME=&(=DUMMY)PARM,
 - If &PARM is empty, FNAME gets the value DUMMY
 - If &PARM is not empty, FNAME gets the value &PARM
 
-Given the syntax FNAME=&(- PREF)(+SUF)(=DUMMY)PARM,
+Given the syntax FNAME=&(-PREF)(+SUF)(=DUMMY)PARM,
 
 - If &PARM is empty, FNAME gets the value DUMMY
 - If &PARM is not empty, FNAME gets the value PREF&PARMSUFF
@@ -259,7 +261,7 @@ Given the syntax FNAME=&(- PREF)(+SUF)(=DUMMY)PARM,
 > To add a closing parenthesis within the str_prefix, str_suffix and str_alternate, it must be preceded by the character ‘&’:
 
 - Given the syntax FNAME=&(+(1234&))PARM
-    - If &PARM is not empty, FNAME gets the value &PARM(1234)
+    -   If &PARM is not empty, FNAME gets the value &PARM(1234)
 
 #### Example of breaking down files names
 
@@ -299,53 +301,54 @@ value         </th>
    </thead>
    <tbody>
       <tr>
-         <td rowspan="8"  data- valign="top" width="21%">PARTNERS          </td>
-         <td  data- valign="top" width="26%"><p>&amp;PART </p>         </td>
+         <td rowspan="8"  data-valign="top" width="21%">PARTNERS          </td>
+         <td  data-valign="top" width="26%"><p>&amp;PART </p>         </td>
          <td  >32         </td>
-         <td  data- valign="top"><p>Partner name (ID of CFTPART) </p>         </td>
+         <td  data-valign="top"><p>Partner name (ID of CFTPART) </p>         </td>
       </tr>
       <tr>
-         <td  data- valign="top" width="26%"><p>&amp;GROUP </p>         </td>
+         <td  data-valign="top" width="26%"><p>&amp;GROUP </p>         </td>
          <td  >32         </td>
-         <td  data- valign="top"><p>Group to which the partner belongs </p>         </td>
+         <td  data-valign="top"><p>Group to which the partner belongs </p>         </td>
       </tr>
       <tr>
-         <td  data- valign="top" width="26%"><p>&amp;SPART </p>         </td>
+         <td  data-valign="top" width="26%"><p>&amp;SPART </p>         </td>
          <td  >32         </td>
-         <td  data- valign="top"><p>Sending partner name </p>         </td>
+         <td  data-valign="top"><p>Sending partner name </p>         </td>
       </tr>
       <tr>
-         <td  data- valign="top" width="26%"><p>&amp;RPART </p>         </td>
+         <td  data-valign="top" width="26%"><p>&amp;RPART </p>         </td>
          <td  >32         </td>
-         <td  data- valign="top"><p>Receiving partner name </p>         </td>
+         <td  data-valign="top"><p>Receiving partner name </p>         </td>
       </tr>
       <tr>
-         <td  data- valign="top" width="26%"><p>&amp;IPART </p>         </td>
+         <td  data-valign="top" width="26%"><p>&amp;IPART </p>         </td>
          <td  >32         </td>
-         <td  data- valign="top"><p>Intermediate partner name </p>         </td>
+         <td  data-valign="top"><p>Intermediate partner name </p>         </td>
       </tr>
       <tr>
-         <td  data- valign="top" width="26%"><p>&amp;NPART </p>         </td>
+         <td  data-valign="top" width="26%"><p>&amp;NPART </p>         </td>
          <td  >32         </td>
-         <td  data- valign="top"><p>Network name of partner sending data (NSPART or NRPART
+         <td  data-valign="top"><p>Network name of partner sending data (NSPART or NRPART
 according to the transfer direction) </p>         </td>
       </tr>
       <tr>
-         <td  data- valign="top" width="26%">&amp;NSPART         </td>
+         <td  data-valign="top" width="26%">&amp;NSPART         </td>
          <td  >24         </td>
-         <td  data- valign="top">Network identifier by which the
+         <td  data-valign="top">Network identifier by which the
 local {{< TransferCFT/axwayvariablesComponentShortName  >}} identifies itself to its partner         </td>
       </tr>
       <tr>
-         <td  data- valign="top" width="26%">&amp;NRPART         </td>
+         <td  data-valign="top" width="26%">&amp;NRPART         </td>
          <td  >24         </td>
-         <td  data- valign="top"><p>Network identifier by which the
+         <td  data-valign="top"><p>Network identifier by which the
 remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComponentLongName  >}}</p>         </td>
       </tr>
    </tbody>
 </table>
 
 #### USER domain
+
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
 | --- | --- | --- |
@@ -357,7 +360,9 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 | &amp;NOTIFY  | 8  | User notified on transfer  |
 | &amp;SJOBNAME  | 15  | {{< TransferCFT/axwayvariablesComponentShortName  >}} job name, can be used in exec and cronjob procedures  |
 
+
 #### APPLICATIONS domain
+
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
 | --- | --- | --- |
@@ -367,7 +372,9 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 | &amp;PARM  | 512  | Parameter  |
 | &amp;PI99  | 512  | PI99 contents (PeSIT E)  |
 
+
 #### TRANSFER domain
+
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
 | --- | --- | --- |
@@ -378,7 +385,7 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 | &amp;PHASE  | 1  | Processing phases to help manage transfer flows  |
 | &amp;PHASESTEP  | 1  | Step in processing phase  |
 | &amp;APPSTATE  | 32  | State step for the processing script to restart if relaunched  |
-| &amp;NSUB  | 4  | Counter for the submitting of end- of- transfer procedures, error procedures and procedures submitted by SUBMIT.<br /> If 4 characters long, the counter is reset to 1 after 9999  |
+| &amp;NSUB  | 4  | Counter for the submitting of end-of-transfer procedures, error procedures and procedures submitted by SUBMIT.<br /> If 4 characters long, the counter is reset to 1 after 9999  |
 | &amp;DIAGI  | 8  | Internal diagnostic code value  |
 | &amp;DIAGP  | 64  | Protocol diagnostic code value  |
 | &amp;DIAGC  | 254  | Complimentary diagnostic code value  |
@@ -394,7 +401,9 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 | &amp;XLATE  | 32  | Transcoding table used during transfer  |
 | &amp;MODE  | 1  | Server mode = ‘S’ transfer<br/> Requester mode = ‘R’ transfer |
 
+
 #### FILE domain
+
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
 | --- | --- | --- |
@@ -415,10 +424,10 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 | Receiving  |   |   |
 | &amp;NFNAME  | 512  | Physical file network name  |
 | &amp;FROOT  | 512  | Root (file name) <br/> Based on the SFNAME (remote sending file) |
-| &amp;FSUF  | 512  | File name suffix - <br/> Based on the SFNAME (remote sending file) |
-| &amp;FPATH  | 512  | Prefix (file path) - <br/> Based on the SFNAME (remote sending file) |
-| &amp;FUNITC  | 512  | Physical file unit (z/OS) - <br/> Based on the SFNAME (remote sending file) |
-| &amp;FUNIT<br/>  | 512  | Physical file volume - <br/> Based on the SFNAME (remote sending file) |
+| &amp;FSUF  | 512  | File name suffix -<br/> Based on the SFNAME (remote sending file) |
+| &amp;FPATH  | 512  | Prefix (file path) -<br/> Based on the SFNAME (remote sending file) |
+| &amp;FUNITC  | 512  | Physical file unit (z/OS) -<br/> Based on the SFNAME (remote sending file) |
+| &amp;FUNIT<br/>  | 512  | Physical file volume -<br/> Based on the SFNAME (remote sending file) |
 | &amp;UNIT  | 512  | Physical file volume name for received file |
 | &amp;UNITC  | 512  | Physical file unit class for received file (z/OS)  |
 | &amp;PATH | 512  | Local file path of the received file |
@@ -432,12 +441,15 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 | &amp;FROOT  | 512  | Root (actual file name) of the sending file |
 | &amp;FSUF  | 512  | Suffix associated with file name of the sending file |
 
+
 #### MESSAGES domain
+
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
 | --- | --- | --- |
 | &amp;IDM | 32  | Message identifier  |
 | &amp;MSG  |  <br/> 80<br/> 512 | Message text <br/> PeSIT D CFT<br/> PeSIT E |
+
 
 #### DATE and TIME associated with a FILE 
 
@@ -446,11 +458,12 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 > Note: The symbolic variable formats concerning dates and times are:
 
 - Time: HHMMSSCC
-
+     
 - Complete date: YYYYMMDD
 - Year: YY
 - Month: MM
 - Day: DD
+
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
 | --- | --- | --- |
@@ -460,7 +473,9 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 | &amp;FMONTH  | 2  | Month associated with the file  |
 | &amp;FDAY  | 2  | Day associated with the file  |
 
+
 #### DATE and TIME associated with a CATALOG 
+
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
 | --- | --- | --- |
@@ -470,7 +485,9 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 | &amp;CMONTH  | 2  | Catalog entry month  |
 | &amp;CDAY  | 2  | Catalog entry day  |
 
+
 #### DATE and TIME associated with a TRANSFER 
+
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
 | --- | --- | --- |
@@ -486,7 +503,9 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 | &amp;EDAY  | 2  | Transfer end day |
 | &amp;TT  | 10  | Transmission duration in seconds (TIMES attribute in the {{< TransferCFT/axwayvariablesComponentShortName  >}} catalog) |
 
+
 #### CONTROL OUTPUT  domain
+
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
 | --- | --- | --- |
@@ -494,16 +513,20 @@ remote partner identifies itself to the local {{< TransferCFT/axwayvariablesComp
 | &amp;FACCNT  | 512  | Name of last statistics file used by {{< TransferCFT/axwayvariablesComponentShortName  >}}  |
 | &amp;FCAT | 512  | Name of catalog used by {{< TransferCFT/axwayvariablesComponentShortName  >}} |
 
+
 #### TRACKING domain
+
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
 | --- | --- | --- |
 | &amp;XFRCYCID  | 250  | Processing cycle identifier (set of tracked instances that concern a single transfer)  |
 | &amp;XFROBJID  | 32  | Tracked object name  |
 
+
 #### SSL domain
 
 These variables are linked to SSL use.
+
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
 | --- | --- | --- |
@@ -517,7 +540,9 @@ These variables are linked to SSL use.
 | &amp;SSLUSER  | 256  | Identifier of the user certificate used locally for authentication by the remote partner  |
 | &amp;SSLCFNAM  | 64  | Physical name of the file in which the certificate chain presented by the remote partner was recorded <br/> This is the same as the CFTSSL CERFNAME parameter value |
 
+
 #### SYSTEM  domain
+
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
 | --- | --- | --- |
@@ -526,7 +551,9 @@ These variables are linked to SSL use.
 | &amp;SYSQQ  | 3  | Number of the day in the year associated with the system date  |
 | &amp;SYSDAY | 1  | Day of the week (Sunday = 0, 6 = Saturday) |
 
+
 #### CAT/ ACCOUNT ENVIRONMENT domain
+
 
 | Symbolic variable  | Maximum length  | Corresponding substituted value  |
 | --- | --- | --- |
@@ -539,6 +566,7 @@ These variables are linked to SSL use.
 | &amp;CFTTARGET  | 16  | The Transfer CFT platform with additional details required for a support ticket, for example  |
 | &amp;CFTHOSTOS  | 64  | The Transfer CFT hostname  |
 | &amp;CFTHOSTMACHINE  | 64  | The machine processor name where Transfer CFT is running  |
+
 
 (2): EXEC in SEND, EXECSF, EXECSM, EXEC in RECV, EXECRF, EXECRM, EXECE, EXECSE, EXECRE, EXECA, EXECSFA, EXECSMA, PREEXEC, EXITEOT, EXECSUB, EXECSUBA, EXECSUBPRE
 
@@ -568,6 +596,7 @@ Symbolic variables can be used:
 - In the processing
     operations defined by the user in the procedures associated with the transfers
 
+
 | Parameter  | Symbolic variables  |
 | --- | --- |
 | WFNAME, NFNAME, FNAME for the CFTSEND/SEND and CFTRECV/RECV commands  |  • &amp;FDATE, &amp;FTIME, &amp;FYEAR, &amp;FMONTH, &amp;FDAY<br /> <br/> • &amp;BDATE, &amp;BTIME, &amp;BYEAR, &amp;BMONTH, &amp;BDAY<br /> <br/> • &amp;SPART, &amp;RPART, &amp;PART, &amp;NPART, &amp;GROUP<br /> <br/> • &amp;SUSER, &amp;RUSER<br /> <br/> • &amp;SAPPL, &amp;RAPPL<br /> <br/> • &amp;IDF, &amp;PARM, &amp;IDA<br /> <br/> • &amp;NIDF<br /> <br/> • &amp;NFNAME (only for FNAME and WFNAME)<br /> <br/> • &amp;IDT (only the FNAME and WFNAME parameters when you receive a file)<br /> <br/> • &amp;SYSQQ<br/> • &amp;WORKINGDIR |
@@ -583,6 +612,7 @@ Symbolic variables can be used:
 | SUSER and RUSER parameters of SEND and CFTSEND  | &amp;USERID, &amp;FNAME, &amp;FUNITC, &amp;FUNIT, &amp;FPATH, &amp;FROOT, &amp;FSUF, &amp;NFNAME, &amp;PART, &amp;IDA, &amp;IDF, &amp;IDTU, &amp;IDT, &amp;IDM, &amp;COMMENT, &amp;SYSDATE, &amp;SYSTIME, &amp;FCHARSET, &amp;NCHARSET |
 | PARM, SAPPL, RAPPL parameters of SEND and CFTSEND  | &amp;FNAME, &amp;FUNITC, &amp;FUNIT, &amp;FPATH, &amp;FROOT, &amp;FSUF, &amp;NFNAME, &amp;PART, &amp;IDA, &amp;IDF, &amp;IDTU, &amp;IDT, &amp;IDM, &amp;COMMENT, &amp;SYSDATE, &amp;SYSTIME, &amp;FCHARSET, &amp;NCHARSET |
 | UCONF sentinel.xfb.cyclelink.metadata  | &amp;IDA, &amp;IDF, &amp;IDTU, &amp;IDT, &amp;NPART, &amp;NIDF, &amp;PART, &amp;PARM, &amp;COMMENT, &amp;RAPPL, &amp;RPART, &amp;RUSER, &amp;SAPPL, &amp;SPART, &amp;SUSER, &amp;SOURCEAPPL, &amp;TARGETAPPL |
+
 
 ******Example******
 
@@ -602,7 +632,7 @@ RECV PART = ALPHSITE, IDF = PAY
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} creates and writes to a file: PAYALPH.14
 
-See the end- of- transfer examples in [Transfer- related
+See the end-of-transfer examples in [Transfer-related
 procedure examples](../../../concepts/about_transfer_processing/procedure_examples).
 
 ## Defining symbolic variable blacklists for processing scripts

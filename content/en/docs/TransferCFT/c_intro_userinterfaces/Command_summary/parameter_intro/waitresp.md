@@ -2,7 +2,7 @@
 title: "waitresp"
 linkTitle: "waitresp"
 weight: 3760
---- <span id="waitresp"></span>
+---<span id="waitresp"></span>
 
 ### waitresp
 
@@ -25,5 +25,7 @@ This parameter is used for a synchronous exchange of requests between
 two monitor tasks during the initialization phase. After ****waitresp****
 seconds without reply, the timeout is interrupted. A CFTS09 message is
 written in the log and the {{< TransferCFT/axwayvariablesComponentShortName  >}} initialization stops.
+
+ 
 
 [Return to Command index](../../)

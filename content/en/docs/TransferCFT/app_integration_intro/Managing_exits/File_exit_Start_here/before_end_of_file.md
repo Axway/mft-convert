@@ -2,10 +2,11 @@
 title: "Before the end of the file"
 linkTitle: "Stage Before the end of the file"
 weight: 390
---- During this stage, you can add a record. To do so, you must modify the
+---During this stage, you can add a record. To do so, you must modify the
 zdata parameter and the ldata field.
 
 ### Fields to define
+
 
 | Field  | Description  |
 | --- | --- |
@@ -14,7 +15,9 @@ zdata parameter and the ldata field.
 | msg | Message sent to the standard output |
 | ldata |  Record length (in bytes) |
 
+
 ### Field values
+
 
 | Field | Sender mode<br /> Before  | Sender mode<br /> After  | Receiver mode<br /> Before  | Receiver mode<br /> After  |
 | --- | --- | --- | --- | --- |
@@ -24,8 +27,8 @@ zdata parameter and the ldata field.
 | retsync | 0 |   | 0 |   |
 | ret1 | 0 | * | 0 | * |
 | ret2 | blank | * | blank | * |
-| us- sem |   |   |   |   |
-| us- ctx |   |   |   |   |
+| us-sem |   |   |   |   |
+| us-ctx |   |   |   |   |
 | idexit | = | = | = | = |
 | exname | = | = | = | = |
 | parmexit | = | = | = | = |

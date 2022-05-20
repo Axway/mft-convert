@@ -2,7 +2,7 @@
 title: "Transfer CFT command guide and syntax "
 linkTitle: "Command guide and parameters"
 weight: 120
---- This topic provides a useful list of {{< TransferCFT/axwayvariablesComponentShortName  >}} commands,
+---This topic provides a useful list of {{< TransferCFT/axwayvariablesComponentShortName  >}} commands,
 syntax, and parameters. For a more detailed description of the Transfer
 CFT commands, refer to the link displayed below each command
 syntax.
@@ -11,7 +11,7 @@ The {{< TransferCFT/axwayvariablesComponentShortName  >}} commands are presented
 summary. Each
 command is presented with possible parameters and default values.
 
-See also, Syntax
+See also, [Syntax
 conventions and symbolic variables.](#Syntax_conventions)
 
 <span id="ABOUT"></span>
@@ -72,6 +72,8 @@ CFTACCNT TYPE = FILE
 
 `[ FORMAT   = { V23   &#124; 23 &#124; V24 &#124; 24} ]`
 
+ 
+
 CFTACCNT TYPE = SYST
 
 `TYPE   = SYST`
@@ -127,7 +129,7 @@ CFTAPPL MODE = DELETE
 
 [CFTAPPL details](../web_copilot_ui/flow_def_intro/cftappl)
 
-[Assign a transfer owner
+[Assign a transfer owner]()
 
 #### CFTAUTH: Defines an Authorized Flow Definition list
 
@@ -137,13 +139,15 @@ Syntax
 
 `ID = identifier`
 
-` COMMENT   = string ]`
+`[ COMMENT   = string ]`
 
 `[ MODE   = { REPLACE   &#124; CREATE &#124; DELETE } ]`
 
 ` `
 
 Or
+
+ 
 
 `IDF = (identifier &#124; mask, identifier &#124; mask, …)`
 
@@ -187,7 +191,7 @@ Syntax
 
 `[ TLVCEXEC   = { n } ]`
 
-`[ TLVCLEAR   = { TLVWARN- 10 &#124; n } ]`
+`[ TLVCLEAR   = { TLVWARN-10 &#124; n } ]`
 
 `[ TLVWEXEC   = { n } ]`
 
@@ -223,7 +227,7 @@ Syntax
 
 `[ TLVCEXEC   = { n } ]`
 
-`[ TLVCLEAR   = { TLVWARN- 20 &#124; n } ]`
+`[ TLVCLEAR   = { TLVWARN-20 &#124; n } ]`
 
 `[ TLVWEXEC   = { n } ]`
 
@@ -329,7 +333,7 @@ CFTDEST PART
 [CFTDEST details](../web_copilot_ui/flow_def_intro/cftdest)
 
 [Broadcast
-list
+list]()
 
 <span id="CFTEXIT"></span>
 
@@ -343,7 +347,7 @@ Syntax
 
 `TYPE   = FILE`
 
-` COMMENT   = string ]`
+`[ COMMENT   = string ]`
 
 `[ FORMAT   = { V23   &#124; 23 &#124; V24 &#124; 24 } ]`
 
@@ -358,6 +362,8 @@ Syntax
 `[ RESERV   = { 16384   &#124; n } ]`
 
 `[ WAITTASK   = { 1441   &#124; n } ]`
+
+ 
 
 #### CFTEXIT TYPE = { FILE &#124; ACCESS &#124; EXEC &#124; BOT}
 
@@ -566,10 +572,10 @@ Syntax
 
 `[ SWITCH   = { 00000000   &#124; time } ]`
 
-[CFTLOG details
+[CFTLOG details]()
 
-Transfer
-Log file
+[Transfer
+Log file]()
 
 <span id="CFTNET"></span>
 
@@ -583,7 +589,7 @@ Syntax
 
 `ID   = { identifier &#124; *identifier } `
 
-` CALL   = { INOUT   &#124; IN &#124; OUT } ]`
+`[ CALL   = { INOUT   &#124; IN &#124; OUT } ]`
 
 `[ CLASS   = { 1 &#124; n } ]`
 
@@ -825,10 +831,10 @@ Syntax
 
 `[ XLATE   = identifier ]`
 
-[CFTPART details
+[CFTPART details]()
 
-Partner
-attribute concepts
+[Partner
+attribute concepts]()
 
 <span id="CFTPROT"></span>
 
@@ -842,7 +848,7 @@ CFTPROT TYPE = ODETTE
 
 `NET   = identifier `
 
-` DISCTD   = { 20   &#124; n } ]`
+`[ DISCTD   = { 20   &#124; n } ]`
 
 `[ DISCTS   = { 65   &#124; n } ]`
 
@@ -962,6 +968,8 @@ CFTPROT TYPE = PESIT
 
 `[ SSL   = identifier ]`
 
+ 
+
 CFTPROT TYPE = PESIT  
 
 `PROF   = CFT`
@@ -1031,6 +1039,8 @@ CFTPROT TYPE = PESIT  
 `[ SSERV   = { CFTPSITX &#124; string } ]`
 
 `[ SSL   = identifier ]`
+
+ 
 
 CFTPROT TYPE = PESIT
 
@@ -1102,6 +1112,8 @@ CFTPROT TYPE = PESIT
 
 `[ SSL   = identifier ]`
 
+ 
+
 CFTPROT TYPE = PESIT
 
 `PROF   = SIT`
@@ -1163,6 +1175,8 @@ CFTPROT TYPE = PESIT
 `[ SRUSIZE   = { 4050 &#124; n } ]`
 
 `[ SSL   = identifier ]`
+
+ 
 
 CFTPROT TYPE = PESIT
 
@@ -1715,6 +1729,8 @@ CONFIG TYPE = COM
 
 `FNAME = filename `
 
+ 
+
 `CONFIG   TYPE = COM`
 
 `MEDIACOM   = TCPIP`
@@ -1737,7 +1753,7 @@ CONFIG TYPE = COM
 
 <span id="COPYFILE"></span>
 
-#### COPYFILE IFNAME = filename: Copy files with an off- line compression or decompression option
+#### COPYFILE IFNAME = filename: Copy files with an off-line compression or decompression option
 
 Syntax
 
@@ -1781,7 +1797,7 @@ Syntax
 
 `[ XLATE = string ]`
 
-[Copying files off- line](../../admin_intro/admin_commands_intro/copyfile_command)
+[Copying files off-line](../../admin_intro/admin_commands_intro/copyfile_command)
 
 <span id="DELETE"></span>
 
@@ -1819,7 +1835,7 @@ Syntax
 
 <span id="DISPLAY"></span>
 
-#### DISPLAY [ CONTENT = { listcat &#124; identifier }]: Display a model- formatted catalog
+#### DISPLAY [ CONTENT = { listcat &#124; identifier }]: Display a model-formatted catalog
 
 Syntax
 
@@ -2115,7 +2131,7 @@ Syntax
 
 `[ LOGLEVEL = { F &#124; E &#124; W &#124; I } ]`
 
-`[ LINES = { - 10000 &#124; - 20 &#124; 10000 } ]`
+`[ LINES = { -10000 &#124; -20 &#124; 10000 } ]`
 
 `[ DATEMAX =  { 0 &#124; 991231 } ]`
 
@@ -2141,7 +2157,7 @@ Syntax
 
 No parameters
 
-[Multi- node commands](../../about_multinode/multi_node_commands)
+[Multi-node commands](../../about_multinode/multi_node_commands)
 
 <span id="LISTPARM"></span>
 
@@ -2580,6 +2596,8 @@ Syntax
 
 `[ XLATE   = identifier ]`
 
+ 
+
 SEND TYPE = MESSAGE  
 
 `IDM   = identifier  `
@@ -2788,7 +2806,7 @@ Syntax
 
 <span id="SUBMIT"></span>
 
-#### SUBMIT: Submit end- of- transfer procedure
+#### SUBMIT: Submit end-of-transfer procedure
 
 Syntax
 
@@ -2855,7 +2873,7 @@ Syntax
 [SWITCH details](../../admin_intro/admin_commands_intro/switching_files_manually)
 
 [Toggle
-log or accounting file
+log or accounting file]()
 
 <span id="UCONFSET"></span>
 
@@ -2961,7 +2979,7 @@ environment:
 - &nVAR:
 - &p.VAR
 - &p.nVAR
-- &(- string_prefix)
+- &(-string_prefix)
     (+string_suffix)
     (=string_alternate)p.nVAR
 
@@ -3042,9 +3060,9 @@ CFT User Interface operations.
 Accepted types include:
 
 - int lower/higher
-
+           
 - bool true/false
-
+              
 - enum (id1 id2 id3
     id4)  
 - identifier      
@@ -3056,7 +3074,7 @@ Accepted types include:
 The ‘$’ sign is a reserved character that is used to reference an environmental
 variable. You have abstract use of environment variables using the $ sign.
 
-For example: $(CFT_INSTALL) - à getenv(“CFT_INSTALL”)
+For example: $(CFT_INSTALL) -à getenv(“CFT_INSTALL”)
 
 Variables containing a period “.” refer to sections in the configuration
 file. Do not modify this file.

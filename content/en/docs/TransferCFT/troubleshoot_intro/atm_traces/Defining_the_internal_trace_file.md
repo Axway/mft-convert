@@ -2,7 +2,7 @@
 title: "Use an internal trace (CFTUTIL command)"
 linkTitle: "Use an internal trace (CFTUTIL command)"
 weight: 320
---- Depending on how the trace is started, the file defined is available:
+---Depending on how the trace is started, the file defined is available:
 
 - When Transfer CFT
     starts up, with the possibility of tracing an initialization sequence
@@ -15,11 +15,13 @@ commands
 CFTUTIL parameter setting commands, grouped by function, are presented in the
 following table.
 
+
 | Action &lt;/th&gt;  | Command &lt;/th&gt;  |
 | --- | --- |
-| Update the general parameters before Transfer CFT start- up  | CFTPARM |
+| Update the general parameters before Transfer CFT start-up  | CFTPARM |
 | Define the trace file or files:<br/> • Before Transfer CFT starts <br/> • During Transfer CFT operations  | CFTTRACE<br />  |
 | Start information collection:<br/> • Transfer CFT start<br/> • During Transfer CFT operations  |  <br/> CFTTRACE<br />  |
+
 
 <span id="Trace_command_overview"></span>
 
@@ -30,15 +32,18 @@ be used for the various trace processes.
 
 #### Defining trace files
 
+
 | Trace file definition | Command &lt;/th&gt;  | Parameter &lt;/th&gt;  | Description &lt;/th&gt;  |
 | --- | --- | --- | --- |
 | Before starting<br /> Transfer CFT  | CFTPARM  | TRACE=identifier  | CFTTRACE command identifier  |
 |   | CFTTRACE  |   |   |
 
+
 (1): TRCFILE is used in environments
 that do not allow dynamic file definition.
 
 #### Start collecting information
+
 
 | Starting information collection &lt;/th&gt;  | Command used to define the file &lt;/th&gt;  | Parameter &lt;/th&gt;  | Command to enter &lt;/th&gt;  |
 | --- | --- | --- | --- |
@@ -47,15 +52,18 @@ that do not allow dynamic file definition.
 | During Transfer CFT<br /> operations  | CFTTRACE  | START=DELAYED  | STARTTRC  |
 |   | SETTRC  |   | STARTTRC  |
 
+
 (1): TRCFILE is used in environments
 that do not allow dynamic file definition.
 
 #### Stop collecting - close the file and shutdown the process
 
+
 | Action &lt;/th&gt;  | Define the file with &lt;/th&gt;  | Enter the command &lt;/th&gt;  |
 | --- | --- | --- |
 | Stop information collection  | CFTTRACE  | STOPTRC |
 | Stop collection, close the files and shutdown the process  | CFTTRACE  | STOPTRC<br />  |
+
 
 ## Trace commands with CFTUTIL
 
@@ -105,7 +113,7 @@ Where **MODE=DELETE**, only the **ID** parameter is useful.
 Starting the trace:
 
 - CFT: at Transfer
-    CFT start- up
+    CFT start-up
 - DELAYED: during
     Transfer CFT operations
 
@@ -126,8 +134,8 @@ Trace file type:
 - STANDARD: sequential
     file written in extend. The new records are written after the old ones.
 - CIRCULAR: direct
-    access file, with a set number of fixed- length records. This file is accessed
-    through a circular up- date, the new records over- writing the old ones
+    access file, with a set number of fixed-length records. This file is accessed
+    through a circular up-date, the new records over-writing the old ones
 
 `[TRCLREC = n]`
 

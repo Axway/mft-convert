@@ -2,7 +2,7 @@
 title: " Housekeeping for log files"
 linkTitle: "Housekeeping for log files "
 weight: 260
---- Transfer CFT logs all events, log messages, in a dedicated log file. While this information helps in detecting problems, it is important to note that the size of the Transfer CFT log files continually increases if no precautions are taken.
+---Transfer CFT logs all events, log messages, in a dedicated log file. While this information helps in detecting problems, it is important to note that the size of the Transfer CFT log files continually increases if no precautions are taken.
 
 It is readable by the user via the Central Governance user interface or the CFTUTIL listlog command.
 
@@ -36,9 +36,9 @@ You can manage the switch procedure using various methods that include, but not 
 
 - File naming: Creates a log file each day using the same file name with a timestamp extension. Existing files are not removed.
 
-<!- - - - >
+<!-- -->
 
-- Archiving: Transfer CFT log files are stored in the runtime directory, log file names are cftlog- &lt;timestamp> where timestamp is the date and time the switch procedure switch.cmd is triggered by {{< TransferCFT/axwayvariablesComponentShortName >}}.
+- Archiving: Transfer CFT log files are stored in the runtime directory, log file names are cftlog-&lt;timestamp> where timestamp is the date and time the switch procedure switch.cmd is triggered by {{< TransferCFT/axwayvariablesComponentShortName >}}.
 
 > **Note**
 >
@@ -88,12 +88,12 @@ UCONFSET id=sentinel.xfb.log,value=F
 {{< TransferCFT/axwayvariablesComponentShortName  >}} can filter log messages according to predefined filters to exclude certain types of messages. To create a filter, customize the following uconf parameters to create the required filter pattern with one or more of the following characteristics:
 
 - cft.server.log.exclude_filters = ID1 ID2 ID3
-    - Space separated list of filter identifiers
-    - Only the log filters in the list are activated
+    -   Space separated list of filter identifiers
+    -   Only the log filters in the list are activated
 - cft.server.log.exclude_filters.ID.pattern=
-    - The pattern matches a Log messages that is to be excluded from all logs (log output, log file and Sentinel)
+    -   The pattern matches a Log messages that is to be excluded from all logs (log output, log file and Sentinel)
 - cft.server.log.exclude_filters.ID.comment=
-    - A free field that you can use to describe the filter
+    -   A free field that you can use to describe the filter
 
 **Example**
 

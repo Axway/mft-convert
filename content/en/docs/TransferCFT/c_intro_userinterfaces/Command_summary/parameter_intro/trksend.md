@@ -2,7 +2,7 @@
 title: "trksend"
 linkTitle: "trksend"
 weight: 3640
---- <span id="trksend"></span>
+---<span id="trksend"></span>
 
 ### trksend
 
@@ -23,5 +23,7 @@ Select one of the following options:
 - ****SUMMARY****:
     for both the initial step and the final step of each transfer process,
     the monitor sends a Tracked Instance to Sentinel
+
+ 
 
 [Return to Command index](../../)

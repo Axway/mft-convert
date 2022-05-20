@@ -2,7 +2,7 @@
 title: "Apply a service pack or patch"
 linkTitle: "Update with a service pack or patch"
 weight: 210
---- This section describes how to apply a patch or Service Pack to Transfer CFT in an IBM i environment.
+---This section describes how to apply a patch or Service Pack to Transfer CFT in an IBM i environment.
 
 ## Display information
 
@@ -65,7 +65,7 @@ When you install a service pack, the contents of the home directory are updated,
     ENDSBS CFTSBS \*IMMED
     ```
 1. Create a SAVF on your IBM i system.
-1. Upload the Transfer_CFT- SPx_Patchz_os400.bin (in binary mode) to the SAVF you created in Step 2.
+1. Upload the Transfer_CFT-SPx_Patchz_os400.bin (in binary mode) to the SAVF you created in Step 2.
 1. Restore the SAVF to a temporary library, add it to the top of your library list, and then launch the `PTCCFT `command.
 1. Complete the required fields:
 
@@ -77,7 +77,7 @@ Module versions impacted by the patch are stored. If the SAVF does not exist, it
 ```
 Install Transfer CFT patch (PTCCFT)
 Type choices, press Enter.
-
+ 
 Program library . . . . . . . . CFTPGM Character value
 SAVF for backup . . . . . . . . PATCHSAV Character value
 ```

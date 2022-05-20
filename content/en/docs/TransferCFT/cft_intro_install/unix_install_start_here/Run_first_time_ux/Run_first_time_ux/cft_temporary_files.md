@@ -2,7 +2,7 @@
 title: "Transfer scripts and  temporary files"
 linkTitle: "Transfer scripts and temporary files"
 weight: 310
---- This topic describes temporary files,
+---This topic describes temporary files,
 which Transfer CFT creates various temporary
 files in the */tmp* directory depending on the script run.
 
@@ -42,7 +42,7 @@ deleting it.
 For example, enter:
 
 ```
-if test - s $0.err
+if test -s $0.err
 then
 echo $0.err contains data to be consulted
 else
@@ -84,7 +84,7 @@ echo "\*\* &msg \*\*" /\* by CFT using the &msg symbolic \*/
 /\* message text \*/
 rm $0 /\* deleting the /tmp/cftsu\* \*/
 /\* temporary file \*/
-if test - s $0.err
+if test -s $0.err
 then
 echo $0.err contains data to be consulted
 else

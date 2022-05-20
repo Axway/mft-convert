@@ -2,7 +2,7 @@
 title: "workingdir"
 linkTitle: "workingdir"
 weight: 3790
---- ### workingdir
+---### workingdir
 
 #### CFTSEND, CFTRECV, SEND, RECV
 
@@ -14,6 +14,8 @@ Enter the name of a working directory for a given flow. The directory name is a 
 - Absolute
 
 This parameter can also use the keyword &HOME. For details, see [&HOME](../home).
+
+ 
 
 See also [Working directory](../../../../concepts/transfer_command_overview/working_directory_allos).
 

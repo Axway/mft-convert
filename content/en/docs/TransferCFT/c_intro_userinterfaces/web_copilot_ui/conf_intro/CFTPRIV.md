@@ -2,11 +2,12 @@
 title: "CFTPRIV"
 linkTitle: "Privileges - CFTPRIV"
 weight: 240
---- Use this procedure to view a list of privileges and descriptions and perform related tasks in the user interface. See also [Access Management using Flow Manager](../../../../internal_a_m_start_here/fm_access_management)
+---Use this procedure to view a list of privileges and descriptions and perform related tasks in the user interface. See also [Access Management using Flow Manager](../../../../internal_a_m_start_here/fm_access_management)
 
 ### Using CFTPRIV
 
 Privileges give users authorization to access and perform actions in the user interface. Examples of actions include CREATE, DELETE, VIEW, EDIT (use \* to assign all actions).
+
 
 | Field | Type | Comment |
 | --- | --- | --- |
@@ -15,6 +16,7 @@ Privileges give users authorization to access and perform actions in the user in
 | resource | String32 | Resource on which this privilege applies |
 | actions | List of String32 | Actions authorized on the resource (1 to 16 actions) |
 | condition | String256 | Condition to check for authorizing ([see below](#Specifyi)) |
+
 
 Example of CFTPRIV in a configuration file:
 

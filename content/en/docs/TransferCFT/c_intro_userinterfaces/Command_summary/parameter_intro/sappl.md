@@ -2,7 +2,7 @@
 title: "sappl"
 linkTitle: "sappl"
 weight: 3070
---- <span id="sappl"></span>
+---<span id="sappl"></span>
 
 ### sappl
 
@@ -22,8 +22,8 @@ The identifier of the application sending the. Depending on the protocol
 profile, it is:
 
 - an
-    eight- character string for PeSIT D CFT, PeSIT E, PeSIT SIT
-- a 48- character
+    eight-character string for PeSIT D CFT, PeSIT E, PeSIT SIT
+- a 48-character
     string for PeSIT E CFT/CFT
 
 This parameter value is case sensitive in CFTUTIL commands if you enclose the value in " " quotes.
@@ -44,7 +44,7 @@ In standard PeSIT E or PeSIT E CFT/CFT, the responder/sender
 partner can send and control this field.
 
 In standard PeSIT E, this value is transported in the PI 03. Its maximum
-length is limited by the eight- character standard. The PI 03 contains
+length is limited by the eight-character standard. The PI 03 contains
 this value concatenated with the value of the ****suser****
 field.
 
@@ -52,3 +52,4 @@ In PeSIT E between two {{< TransferCFT/axwayvariablesComponentShortName  >}}s, t
 
 [Return to Command index](../../)
 
+ 

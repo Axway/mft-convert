@@ -2,7 +2,7 @@
 title: "rcomp"
 linkTitle: "rcomp"
 weight: 2820
---- <span id="rcomp"></span>
+---<span id="rcomp"></span>
 
 ### rcomp
 
@@ -17,10 +17,12 @@ A zero value corresponds to no compression (default).
 
 Default values are:
 
+
 | Protocol  | Default value  |
 | --- | --- |
 | PeSIT ANY profile | 0 |
 | ODETTE  | 1  |
+
 
 See also ****[scomp](../scomp)****.
 

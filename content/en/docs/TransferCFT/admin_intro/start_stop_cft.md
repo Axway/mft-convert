@@ -2,22 +2,22 @@
 title: "Manage the Transfer CFT server"
 linkTitle: "Start, stop, and administration scripts"
 weight: 190
---- ## Server command overview
+---## Server command overview
 
-****This section refers only to non multi- node architecture.****
+****This section refers only to non multi-node architecture.****
 
 You can use Central Governance to stop, start, check status, and restart a Transfer CFT, or alternatively use the administration commands and scripts provided in this section to manage the application.
 
 When opening a new session to manage your {{< TransferCFT/axwayvariablesComponentShortName  >}}, you must first set the environmental parameters. See [Set the Transfer CFT profile](#Set).
 
 - [Start {{< TransferCFT/axwayvariablesComponentShortName >}} server](#Start)
-    - Standard start
-    - Force a start after an abnormal stop
-    - Start and suspend interactive mode
+    -   Standard start
+    -   Force a start after an abnormal stop
+    -   Start and suspend interactive mode
 - [Stop {{< TransferCFT/axwayvariablesComponentShortName >}} server](#Stop__server)
-    - Standard shutdown
-    - Quick stop
-    - Forced shutdown
+    -   Standard shutdown
+    -   Quick stop
+    -   Forced shutdown
 - [Restart {{< TransferCFT/axwayvariablesComponentShortName >}}](#Restart_server)
 - [Check Transfer CFT status](#Check)
 - [Purge on Transfer CFT start](#Purge%20on%20Transfer%20CFT%C2%A0start)
@@ -25,15 +25,15 @@ When opening a new session to manage your {{< TransferCFT/axwayvariablesComponen
 ### OS specific tasks and menus
 
 - Windows
-    - [Service mode](#Service)
-    - [Windows menus](#Windows)
+    -   [Service mode](#Service)
+    -   [Windows menus](#Windows)
 - z/OS
-    - [Start/stop](#Start/st)
-    - [Check status](#Perform)
+    -   [Start/stop](#Start/st)
+    -   [Check status](#Perform)
 
 > **Note**
 >
-> The commands listed in this section apply generally to all supported platforms for this version, except for Transfer CFT z/OS. For more information, please refer to the OS- specific Installation Guide.
+> The commands listed in this section apply generally to all supported platforms for this version, except for Transfer CFT z/OS. For more information, please refer to the OS-specific Installation Guide.
 
 ### Autocomplete command
 
@@ -77,7 +77,7 @@ Transfer CFT working environment.
 
 ```
 Type choices, press Enter.
-
+ 
 Assistance level . . . . . . . . \*SYSVAL \*SAME, \*SYSVAL, \*BASIC...
 Current library . . . . . . . . \*CRTDFT Name, \*SAME, \*CRTDFT
 Initial program to call . . . . CFGINLPGM Name, \*SAME, \*NONE
@@ -85,14 +85,14 @@ Library . . . . . . . . . . . DOICONFIG Name, \*LIBL, \*CURLIB
 Initial menu . . . . . . . . . . MAIN Name, \*SAME, \*SIGNOFF
 Library . . . . . . . . . . . QSYS Name, \*LIBL, \*CURLIB
 Text 'description' . . . . . . . > '<TRANSFER CFT USER PROFILE>'
-
+ 
 Additional Parameters
-
+ 
 Job description . . . . . . . . > CFTJOBD Name, \*SAME
 Library . . . . . . . . . . . > CFTPROD Name, \*LIBL, \*CURLIB
-
+ 
 Additional Parameters
-
+ 
 Job description . . . . . . . . > CFTJOBD Name, \*SAME
 Library . . . . . . . . . . . > CFTPROD Name, \*LIBL, \*CURLIB
 ```
@@ -114,7 +114,7 @@ In Windows only you can also use the Start menu or automatically start the serve
 This mode launches the server, but freezes the session where you executed this start command. Closing this session automatically stops the {{< TransferCFT/axwayvariablesComponentShortName  >}}, and if the server is stopped the initiating session is unfrozen.
 
 ```
-cft start- and- wait
+cft start-and-wait
 ```
 
 #### Force a start after an abnormal stop
@@ -122,7 +122,7 @@ cft start- and- wait
 If {{< TransferCFT/axwayvariablesComponentShortName  >}} was stopped abnormally, you can force a start using the following command. Notice though that this kills any {{< TransferCFT/axwayvariablesComponentShortName  >}} processes that were not previously stopped.
 
 ```
-cft force- start
+cft force-start
 ```
 <span id="Stop__server"></span>
 
@@ -149,7 +149,9 @@ them to D state (available). No pending transfers are activated.
 cft stop
 ```
 
-- or- ```
+-or-
+
+```
 CFTUTIL shut fast=yes
 ```
 
@@ -185,10 +187,10 @@ cft status
 
 ## Purge on Transfer CFT start
 
-To configure the Transfer CFT start- up PURGE option, set the uconf values for:
+To configure the Transfer CFT start-up PURGE option, set the uconf values for:
 
 - cft.purge.enable_on_start: Defines if purge should run when starting Transfer CFT
-- cft.purge.background_on_start: Defines if purging on start- up occurs in the background
+- cft.purge.background_on_start: Defines if purging on start-up occurs in the background
 - cft.purge.quantity: Defines the number of transfers to delete in a step (only applicable for background purging)
 
 <span id="Windows2"></span>
@@ -210,14 +212,14 @@ During installation you can elect to run most {{< TransferCFT/axwayvariablesComp
 If you installed the products in Windows service mode, you can start and stop most products with Windows already running as follows:
 
 1. From the desktop, select ****Start > Settings > Control Panel > Administrative Tools > Services****.
-1. Scroll down the Services list and right- click the product.
+1. Scroll down the Services list and right-click the product.
 1. From the menu, select ****Start****.
 
-<span id="Multi- node_specific"></span>
+<span id="Multi-node_specific"></span>
 
-#### Multi- node specific commands
+#### Multi-node specific commands
 
-To view all commands for multi- node architecture, go to the topic [Multi- node commands](../../about_multinode/multi_node_commands).
+To view all commands for multi-node architecture, go to the topic [Multi-node commands](../../about_multinode/multi_node_commands).
 
 ## z/OS tasks
 
@@ -246,7 +248,9 @@ Enter the operator command:
 Jobname>
 ```
 
-\- or - ```
+\- or -
+
+```
 /F < Transfer CFT
 Jobname>,SHUT FAST=YES
 ```
@@ -275,3 +279,4 @@ Use the CFTPING in the target.INSTALL library to ping your {{< TransferCFT/axw
 
 You can use COPSTATU, for example, as the JCL statement to display the Copilot server status in the current LPAR.
 
+ 

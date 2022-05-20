@@ -2,7 +2,7 @@
 title: "Transfer CFT JPI"
 linkTitle: "Using JPI "
 weight: 280
---- {{< TransferCFT/axwayvariablesComponentShortName  >}} delivers a java programming package in its installation folder. This package includes JPI requests, java configuration examples, and documentation necessary to perform local or remote monitoring via logs, transfer requests and control.
+---{{< TransferCFT/axwayvariablesComponentShortName  >}} delivers a java programming package in its installation folder. This package includes JPI requests, java configuration examples, and documentation necessary to perform local or remote monitoring via logs, transfer requests and control.
 
 > **Note**
 >

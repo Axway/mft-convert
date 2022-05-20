@@ -2,7 +2,7 @@
 title: "Setting up the TCP/IP layer "
 linkTitle: "Setting protocol parameters"
 weight: 220
---- Before starting {{< TransferCFT/axwayvariablesComponentShortName  >}} with TCP/IP for the first time, you must setup your TCP/IP.
+---Before starting {{< TransferCFT/axwayvariablesComponentShortName  >}} with TCP/IP for the first time, you must setup your TCP/IP.
 
 ****Procedure****
 
@@ -23,3 +23,4 @@ weight: 220
 1. From a command prompt on a different Windows, and in the {{< TransferCFT/axwayvariablesComponentShortName >}} root folder, enter the
     command: `> CFTUTIL SEND PART=PART1, IDF=TEST`
 
+ 

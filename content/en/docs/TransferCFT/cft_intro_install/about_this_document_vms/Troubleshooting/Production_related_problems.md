@@ -2,31 +2,31 @@
 title: "Production related problems"
 linkTitle: "Production related problems"
 weight: 240
---- Problems can occur that are not specifically related to a transfer or group of transfers, such as:
+---Problems can occur that are not specifically related to a transfer or group of transfers, such as:
 
 - Cannot start Transfer CFT
 
-<!- - - - >
+<!-- -->
 
 - The dynamic processes cannot be initialized
 
-<!- - - - >
+<!-- -->
 
 - Monitor activities appear to be blocked
 
-<!- - - - >
+<!-- -->
 
 - Some functions are not performed (procedures, and so on)
 
-<!- - - - >
+<!-- -->
 
 - Communications cannot be established with Transfer CFT
 
-<!- - - - >
+<!-- -->
 
 - Certain processes are missing
 
-<!- - - - >
+<!-- -->
 
 - Network errors recur
 
@@ -38,7 +38,7 @@ If the problem is related to the use of an internal system service, you can find
 
 For the main CFTMAIN JOB process, consult either the batch report (CFT_LOG:CFTMAIN.LOG) or the files designated as output and error files if Transfer CFT is created as a detached process.
 
-For {{< TransferCFT/axwayvariablesComponentShortName  >}} sub- processes, consult the .OUT and .ERR files in the {{< TransferCFT/axwayvariablesComponentShortName  >}} account login directory (SYS$LOGIN).
+For {{< TransferCFT/axwayvariablesComponentShortName  >}} sub-processes, consult the .OUT and .ERR files in the {{< TransferCFT/axwayvariablesComponentShortName  >}} account login directory (SYS$LOGIN).
 
 ## System call error messages
 
@@ -48,11 +48,11 @@ This message comprises:
 
 - The date and time at which the error occurred
 
-<!- - - - >
+<!-- -->
 
 - The name of the internal service concerned
 
-<!- - - - >
+<!-- -->
 
 - A specific section of text describing the error
 
@@ -60,31 +60,31 @@ The message text may include the following symbolic variables:
 
 - &cs: code returned by the system service
 
-<!- - - - >
+<!-- -->
 
 - &chan: OpenVMS channel number
 
-<!- - - - >
+<!-- -->
 
-- &cr: monitor- specific return code
+- &cr: monitor-specific return code
 
-<!- - - - >
+<!-- -->
 
 - &str: character string used by the service
 
-<!- - - - >
+<!-- -->
 
 - &evt: character string representing the network event
 
-<!- - - - >
+<!-- -->
 
 - &ref: reference to an internal monitor context
 
-<!- - - - >
+<!-- -->
 
 - &val: decimal value
 
-<!- - - - >
+<!-- -->
 
 - &net: type of network used
 
@@ -110,14 +110,14 @@ The symbolic variables used:
 
 - &NET: indicates that the message can be generated for all types of network
 
-<!- - - - >
+<!-- -->
 
 - &FCT: function processed when the error occurred (generally a network request)
 
-<!- - - - >
+<!-- -->
 
 - &msg: internal interchange block exchanged between the server task and CFTTPRO task
 
-<!- - - - >
+<!-- -->
 
 - &service: label for a system service used by the task

@@ -1,8 +1,8 @@
 ---
-title: "Start the multi- node Transfer CFT"
-linkTitle: "Start multi- node Transfer CFTs"
+title: "Start the multi-node Transfer CFT"
+linkTitle: "Start multi-node Transfer CFTs"
 weight: 220
---- After customizing your installation and executing the required z/OS commands, you are ready to start your multi- node Transfer CFTs. Remember that in a z/OS multi- node environment, Copilot acts as the node manager.
+---After customizing your installation and executing the required z/OS commands, you are ready to start your multi-node Transfer CFTs. Remember that in a z/OS multi-node environment, Copilot acts as the node manager.
 
 ## Start a node
 
@@ -98,13 +98,13 @@ A12345TA, A12345TB, A12345TC, A12345TD
 ### Start the Transfer CFT node manager
 
 1. For each host that you configured (LPAR1, LPAR2, ...), start the node manager.
-    - Submit the JCL MNRMNG.
+    -   Submit the JCL MNRMNG.
 1. Start Transfer CFT.
-    - Submit the JCL MNSTART.
-    - You only need to perform this task once.
-1. Check the status of the multi- node setup.
-    - Submit the JCL MNLNODE.
-    - Check the results and the sysout.
+    -   Submit the JCL MNSTART.
+    -   You only need to perform this task once.
+1. Check the status of the multi-node setup.
+    -   Submit the JCL MNLNODE.
+    -   Check the results and the sysout.
 
 ### Trace the node start
 
@@ -122,7 +122,7 @@ For each start request an entry is created in the file …MONLOG, for example, w
 Start request cftmain Jobname=SOZ113T4 25 Jun 2014 at 15:00:49 by Userid=SOP745
 
 - Plex=PLEX1,Sysname=Z113 ,Version=z/OS 01.13.00 HBB7780
-- Hostname=z- zos111b,Hostid=10.128.60.15
+- Hostname=z-zos111b,Hostid=10.128.60.15
 - Started by console command: S SOP7457A,JOBNAME=SOZ113T4
 
 ```
@@ -133,7 +133,7 @@ For example, when node started by JCL.
 Start request cftmain Jobname=SOP745T4 13 Apr 2015 at 16:10:52 by Userid=SOP745
 
 - Plex=PLEX1,Sysname=Z113 ,Version=z/OS 01.13.00 HBB7780
-- Hostname=z- zos111b,Hostid=10.128.60.15
+- Hostname=z-zos111b,Hostid=10.128.60.15
 - Submitted by JCL IKJ56250I JOB SOP745T4(JOB03462) SUBMITTED
 
 ```

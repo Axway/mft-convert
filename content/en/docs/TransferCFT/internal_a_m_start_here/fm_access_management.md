@@ -2,7 +2,7 @@
 title: "Access Management using Flow Manager"
 linkTitle: "Flow Manager access management "
 weight: 140
---- You can use {{< TransferCFT/suitevariablesFlowManager  >}} to define and control Transfer CFT access management as described in the following sections.
+---You can use {{< TransferCFT/suitevariablesFlowManager  >}} to define and control Transfer CFT access management as described in the following sections.
 
 ****How it works****
 
@@ -37,17 +37,19 @@ Conversely, you can create roles and privileges locally in Transfer CFT, as you 
 
 ### Using CFTROLE
 
-A role is a general profile that can be associated with a user. A role is based on one or more privileges, and a privilege is based on a resource. There are two types of roles: predefined and user- defined. Predefined roles are available by default to assign to users.
+A role is a general profile that can be associated with a user. A role is based on one or more privileges, and a privilege is based on a resource. There are two types of roles: predefined and user-defined. Predefined roles are available by default to assign to users.
 
 You can assign users to one or more roles. Typically, users with multiple roles have more privileges than users with fewer roles.
 
 Examples of roles can be ADMINISTRATOR, PARTNER MANAGER, IT MANAGER, and so on.
+
 
 | Field | Type | Comment |
 | --- | --- | --- |
 | id | String32 | Role identifier |
 | comment | String80 | Comment |
 | privs[] | List of String32 | List of privileges associated to this role (1 to 128) |
+
 
 Example of CFTROLE in a configuration file:
 
@@ -74,6 +76,7 @@ CFTROLE      ID          = 'Application',
 
 Privileges give users authorization to access and perform actions in the user interface. Examples of actions include CREATE, DELETE, VIEW, EDIT (use \* to assign all actions).
 
+
 | Field | Type | Comment |
 | --- | --- | --- |
 | id | String32 | Privilege identifier |
@@ -81,6 +84,7 @@ Privileges give users authorization to access and perform actions in the user in
 | resource | String32 | Resource on which this privilege applies |
 | actions | List of String32 | Actions authorized on the resource (1 to 16 actions) |
 | condition | String256 | Condition to check for authorizing ([see below](#Specifyi)) |
+
 
 Example of CFTPRIV in a configuration file:
 
@@ -123,6 +127,7 @@ Comparison operators include:
 ### Resource properties in privileges
 
 The following table is an exhaustive list of all properties for all resources. These properties are available regardless of the action to be checked. However, if a resource has no properties, setting a condition for it has no impact.
+
 
 | Resource | Actions | Properties |
 | --- | --- | --- |
@@ -172,6 +177,7 @@ The following table is an exhaustive list of all properties for all resources. T
 | FILE <sup>(5)</sup> | CREATE, DELETE, VIEW, EDIT | FNAME |
 | URL <sup>(6)</sup> | VIEW | URL |
 
+
 1. Manage implicit SEND object definitions.
 1. Manage batch files.
 1. Connect to user interface.
@@ -203,13 +209,13 @@ In this use case, you assign the user a role that references a privilege having 
 The following is an example of the {{< TransferCFT/suitevariablesTransferCFTName  >}} configuration for this use case, where the ROLE must exist in {{< TransferCFT/suitevariablesFlowManager  >}}, and be available for required users:
 
 ```
-CFTROLE      ID          = ' TRANSFER- ROLE
+CFTROLE      ID          = ' TRANSFER-ROLE
 ',
              COMMENT     = '',
 /\*           ALIASES     = ( ) ,\*/
-             PRIVS       = ( ' PRIV- XFER- SPE
+             PRIVS       = ( ' PRIV-XFER-SPE
 ',
-                              'PRIV- CONN- INTERFACES',
+                              'PRIV-CONN-INTERFACES',
                               'CONFIGURATION:CFTCOM_VIEW',
                               'CONFIGURATION:CFTPARM_VIEW',
                               'FILTER:CATALOG_ALL',
@@ -243,8 +249,8 @@ CFTROLE      ID          = ' TRANSFER- ROLE
                               'CONFIGURATION:CFTUCONF_VIEW',
                               'SERVICE:COM_VIEW'),
               MODE        = 'REPLACE'
-
-CFTPRIV       ID          = ' PRIV- XFER- SPE
+ 
+CFTPRIV       ID          = ' PRIV-XFER-SPE
 ',
               COMMENT     = 'PRIV limits transfers - no delete condition',
               RESOURCE    = 'TRANSFER',
@@ -267,9 +273,9 @@ In this use case, you assign the user role that refers to a privilege having the
 
 - RESOURCE = SERVICE:UI,
 - ACTIONS = ( 'CONNECT' ),
-- CONDITION = ' GROUP=="PRODUCTION" && ID~=''CFT- PROD- ITEM\*'' '
+- CONDITION = ' GROUP=="PRODUCTION" && ID~=''CFT-PROD-ITEM\*'' '
 
-A user with this privilege can only connect to a Transfer CFT server whose UCONF `cft.instance_group` value is set to PRODUCTION, and whose `cft.instance_id` value begins with CFT- PROD- ITEM.
+A user with this privilege can only connect to a Transfer CFT server whose UCONF `cft.instance_group` value is set to PRODUCTION, and whose `cft.instance_id` value begins with CFT-PROD-ITEM.
 
 The following is an example of the {{< TransferCFT/suitevariablesTransferCFTName  >}} configuration for this use case (the ROLE must exist in {{< TransferCFT/suitevariablesFlowManager  >}}, and be available for required users):
 
@@ -277,7 +283,7 @@ The following is an example of the {{< TransferCFT/suitevariablesTransferCFTName
 CFTROLE      ID          = ' ADMIN_ROLE
 ',
               COMMENT     = 'Administrator role for Production Transfer CFT Windows',
-              PRIVS       = ('PRIV- CONN- INTERFACES',               
+              PRIVS       = ('PRIV-CONN-INTERFACES',               
                               'CONFIGURATION:PKICER_ALL',
                               'CONFIGURATION:PKIENTITY_ALL',
                               'CONFIGURATION:PKIKEY_ALL',
@@ -322,15 +328,15 @@ CFTROLE      ID          = ' ADMIN_ROLE
                               'COMMAND:TURN_ALL',
                               'COMMAND:CFTSUPPORT_ALL'),
               MODE        = 'REPLACE'
-
-CFTPRIV      ID          = ' PRIV- CONN- INTERFACES
+ 
+CFTPRIV      ID          = ' PRIV-CONN-INTERFACES
 ',
               COMMENT     = 'PRIV LIMITs the connection for a given Transfer CFT name',
              RESOURCE    = 'SERVICE:UI',
              ACTIONS     = ( 'CONNECT'),
-             CONDITION   = 'GROUP=="PRODUCTION" && ID~="CFT- PROD- ITEM\*"', 
+             CONDITION   = 'GROUP=="PRODUCTION" && ID~="CFT-PROD-ITEM\*"', 
              MODE        = 'REPLACE'
-
+ 
 ```
 
-A user with this privilege can only connect to a Transfer CFT server whose UCONF `cft.instance_group` value is set to `PRODUCTION`, and whose `cft.instance_id` value begins with `CFT- PROD- ITEM`.
+A user with this privilege can only connect to a Transfer CFT server whose UCONF `cft.instance_group` value is set to `PRODUCTION`, and whose `cft.instance_id` value begins with `CFT-PROD-ITEM`.

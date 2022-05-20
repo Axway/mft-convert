@@ -2,7 +2,7 @@
 title: "Migrate from Transfer CFT 2.4.1"
 linkTitle: "Migrate from Transfer CFT 2.4.1"
 weight: 250
---- This section describes how to migrate from Transfer CFT 2.4 to version {{< TransferCFT/PrimaryTransferCFTversionlong  >}}. Before starting the migration procedure you must perform the steps described in [Before you start](../vms_migrate_before_you_start#Importan).
+---This section describes how to migrate from Transfer CFT 2.4 to version {{< TransferCFT/PrimaryTransferCFTversionlong  >}}. Before starting the migration procedure you must perform the steps described in [Before you start](../vms_migrate_before_you_start#Importan).
 
 ## Migrate the configuration
 
@@ -12,15 +12,15 @@ Migrate the PARM, PART, IDF and other static configuration objects.
 
 1. Load the Transfer CFT 2.4 environment. See the [Before you start](../vms_migrate_before_you_start) for details.
 1. Export your static configuration objects using the CFTUTIL CFTEXT command. Enter:  
-
+      
     ```
-    CFTUTIL CFTEXT type=all, fout=cft- extract.conf
+    CFTUTIL CFTEXT type=all, fout=cft-extract.conf
     ```
-1. Open the extract configuration files, cft- extract.conf, and update the file paths with those of the Transfer CFT {{< TransferCFT/PrimaryTransferCFTversionlong >}} installation.
+1. Open the extract configuration files, cft-extract.conf, and update the file paths with those of the Transfer CFT {{< TransferCFT/PrimaryTransferCFTversionlong >}} installation.
 1. Load the Transfer CFT {{< TransferCFT/PrimaryTransferCFTversionlong >}} environment.
 1. Import your static configuration objects using the cftinit command. Enter:  
     ```
-    cftinit cft- extract.conf
+    cftinit cft-extract.conf
     ```
 
 ### Migrating trkapi.cfg file parameters
@@ -29,7 +29,7 @@ Migrate the parameters from the Transfer CFT 2.4 trkapi.cfg file.
 
 1. In the trkapi.cfg file, select the parameters you want to import in {{< TransferCFT/PrimaryTransferCFTversionlong >}}.
 
-1. Create a script file, for example:`  trkapi- import.com`
+1. Create a script file, for example:`  trkapi-import.com`
 
 1. For each parameter you select, add a UCONF command line to your new script file using the format:  
     ```
@@ -53,6 +53,7 @@ Migrate the parameters from the Transfer CFT 2.4 trkapi.cfg file.
 | XFB.Trace | sentinel.xfb.trace |
 | XFB.Transfer | sentinel.xfb.transfer |
 
+
 1. Load the Transfer CFT 3.2.1 environment.
 
 1. Import the selected UCONF parameters using the `CFTUTIL` command. Replace &lt;script_filename> with the new script file path.  
@@ -61,7 +62,7 @@ Migrate the parameters from the Transfer CFT 2.4 trkapi.cfg file.
     ```
 
 1. ```
-    CFTUTIL @trkapi- import.com
+    CFTUTIL @trkapi-import.com
     ```
 
 ### Migrate copconf.ini parameters
@@ -70,17 +71,23 @@ Migrate parameters from the Transfer CFT 2.4 copconf.ini file.
 
 1. From the copconf.ini file, select the parameters you want to import to version {{< TransferCFT/PrimaryTransferCFTversionlong >}}.
 
-1. Create a script file, for example: `copconf- import.com`
+1. Create a script file, for example: `copconf-import.com`
 
 1. For each selected parameter add a UCONF command line in your new script file using the format:  
     ```
     UCONFSET id=<parameter_id>, value=<value>
     ```
+      
 
     Use the parameters mapping between copconf and UCONF as shown in the following table to specify the correct parameter id.
 
+      
+
     Copconf file to UCONF parameter mapping
 
+      
+
+    
 | Parameter in copconf.ini | UCONF parameter |
 | --- | --- |
 | BatchList | copilot.batches |
@@ -105,6 +112,7 @@ Migrate parameters from the Transfer CFT 2.4 copconf.ini file.
 | wlogParams | copilot.batches.wlog.params |
 | WsiComplience | copilot.webservices.wsicomplience |
 
+
 1. Load the Transfer CFT {{< TransferCFT/PrimaryTransferCFTversionlong >}} environment.
 
 1. Import the selected UCONF parameters using the `CFTUTIL `command. Replace the &lt;script_filename> with the new script file path.  
@@ -113,7 +121,7 @@ Migrate parameters from the Transfer CFT 2.4 copconf.ini file.
     ```
 
 1. ```
-    CFTUTIL @copconf- import.com
+    CFTUTIL @copconf-import.com
     ```
 
 ### Migrate PKI certificates
@@ -123,7 +131,7 @@ You must be at Transfer CFT 2.4.1 SP5 or higher before performing this procedure
 1. Load the Transfer CFT 2.4 environment.
 1. Export your PKI certificates using the `PKIUTIL PKIEXT` command:  
     ```
-    PKIUTIL PKIEXT fout=pki- extract.conf
+    PKIUTIL PKIEXT fout=pki-extract.conf
     ```
 1. Load the new Transfer CFT {{< TransferCFT/PrimaryTransferCFTversionlong >}} environment.
 1. Create a new PKI internal datafile using the command PKIUTIL PKIFILE. Replace &lt;pki_database_filename> with the variable `CFTPKU`.  
@@ -153,7 +161,7 @@ You must be at Transfer CFT 2.4.1 SP5 or higher before performing this procedure
     PKIUTIL <prefix_character><script_filename>
     ```
 1. ```
-    PKIUTIL @pki- extract.com
+    PKIUTIL @pki-extract.com
     ```
 
 ## Migrate the runtime environment

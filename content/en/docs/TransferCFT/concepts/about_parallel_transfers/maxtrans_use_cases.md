@@ -2,7 +2,7 @@
 title: "Client and server recommendations"
 linkTitle: "Client and server recommendations"
 weight: 230
---- This section provides recommendations and examples based on:
+---This section provides recommendations and examples based on:
 
 - [Client mode outgoing transfers](#Client)
 - [Server mode incoming transfers](#Server)
@@ -24,12 +24,13 @@ Transfers having a MAXCNX DIAG are rescheduled in WSCAN minutes (CFTCAT object)
 
 ```
 Partner    DTSAPP  File                Diags
---- - - - - - - - - - - - - - - - - - - - - - - - - - - - DESTSUN SFH TH TEST2 F1517083 0 0 0 DIFFUS
-SUN35- 1 SFT XX TEST2 F1517084 14 14 0 CP NONE
-SUN35- 2 SFT XX TEST2 F1517085 14 14 0 CP NONE
-SUN35- 3 SFT XX TEST2 F1517090 14 14 0 CP NONE
-SUN35- 4 SFT XX TEST2 F1517091 14 14 0 CP NONE
-SUN35- 5 SFD TD TEST2 F1517092 0 0 416 MAXCNX
+-------- ------ -------- --------
+DESTSUN SFH TH TEST2 F1517083 0 0 0 DIFFUS
+SUN35-1 SFT XX TEST2 F1517084 14 14 0 CP NONE
+SUN35-2 SFT XX TEST2 F1517085 14 14 0 CP NONE
+SUN35-3 SFT XX TEST2 F1517090 14 14 0 CP NONE
+SUN35-4 SFT XX TEST2 F1517091 14 14 0 CP NONE
+SUN35-5 SFD TD TEST2 F1517092 0 0 416 MAXCNX
 ```
 <span id="Session"></span>
 
@@ -107,14 +108,16 @@ In addition to simply looking at the maximum number of sessions, connections, an
 
 The following table shows the impact on scheduling once Transfer CFT reaches a file transfer parameter limit.
 
+
 | Reached limit for the ...  | DIAGI - DIAGP  | Reschedules...  | Conditions to be executed..  |
 | --- | --- | --- | --- |
 | Local MAXTRANS  | 0  | Immediately after a transfer is completed  | A transfer slot is available on the local site  |
-| Remote MAXTRANS  | 916- RCO 201  | In WSCAN minutes(CFTCAT)  | When a session is available on the remote site  |
-| Local MAXCNX  | 416- MAXCNX  | In WSCAN minutes (CFTCAT)  | When a session is available on the local site  |
-| Remote MAXCNX  | 302- R 0 2F2  | In RETRYW minutes (CFTTCP)  | When a session is available on the remote site  |
-| Local CNXINOUT or CNXOUT | 418- MAXCV  | Immediately after a transfer with the partner is completed  | When a transfer slot for this partner is available locally  |
-| Remote CNXIN<br/> or CNXINOUT | 916- RCO 309  | Immediately after a transfer with the partner is completed  | When a transfer slot for this partner is available on the remote site  |
+| Remote MAXTRANS  | 916-RCO 201  | In WSCAN minutes(CFTCAT)  | When a session is available on the remote site  |
+| Local MAXCNX  | 416-MAXCNX  | In WSCAN minutes (CFTCAT)  | When a session is available on the local site  |
+| Remote MAXCNX  | 302-R 0 2F2  | In RETRYW minutes (CFTTCP)  | When a session is available on the remote site  |
+| Local CNXINOUT or CNXOUT | 418-MAXCV  | Immediately after a transfer with the partner is completed  | When a transfer slot for this partner is available locally  |
+| Remote CNXIN<br/> or CNXINOUT | 916-RCO 309  | Immediately after a transfer with the partner is completed  | When a transfer slot for this partner is available on the remote site  |
+
 
 ### Scheduling issues
 

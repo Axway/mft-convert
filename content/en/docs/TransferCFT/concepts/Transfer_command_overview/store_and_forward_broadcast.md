@@ -2,7 +2,7 @@
 title: "Broadcasting on a store and forward site"
 linkTitle: "Store and forward broadcasts"
 weight: 270
---- This section describes how to use a partner broadcasting list with store and forward.
+---This section describes how to use a partner broadcasting list with store and forward.
 
 To broadcast a file from a store and forward site:
 
@@ -50,15 +50,15 @@ Set up the intermediate partner B as follows:
 ```
 cftpart id=a,nspart=b,prot=pesitssl,sap=1762
 cfttcp id=a,host=@A
-
+ 
 cftpart id=c,nspart=b,prot=pesitssl,sap=31762
 cfttcp id=c,host=@C
-
+ 
 cftpart id=d,nspart=b,prot=pesitssl,sap=1762
 cfttcp id=d,host=@D
-
+ 
 cftdest id=cd,part=(c,d),for=commut
-
+ 
 cftappl id=commut,userid=&userid,groupid=&groupid NOTE: If you are using access management, you must define the CFTAPPL with the ID=COMMUT.
 ```
 
@@ -68,7 +68,7 @@ Execute the following partner C definition:
 cftpart id=b,nspart=c,prot=pesitssl,sap=1762
 cfttcp id=b,host= @B
 cftrecv id=broadcast,fname=pub/broadcast.rcv,faction=delete
-
+ 
 cftpart id=a,nspart=c, ipart=b, omintime=0, omaxtime=0,prot=pesitssl,sap=1762
 ```
 
@@ -78,9 +78,9 @@ Execute the following partner D definition:
 cftpart id=b,nspart=d,prot=pesitssl,sap=1762
 cfttcp id=b,host=@B
 cftrecv id=broadcast,fname=pub/broadcast.rcv,faction=delete
-
+ 
 cftpart id=a,nspart=c, ipart=b, omintime=0, omaxtime=0,prot=pesitssl,sap=1762
-
+ 
 ```
 
 ****Testing the use case****

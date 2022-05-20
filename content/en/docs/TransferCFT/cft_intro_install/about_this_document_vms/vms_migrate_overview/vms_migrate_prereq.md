@@ -2,7 +2,7 @@
 title: "Migration prerequisites"
 linkTitle: "Migration prerequisites"
 weight: 240
---- This section describes two basic steps that you perform when migrating {{< TransferCFT/headerfootervariableshflongproductname  >}}.
+---This section describes two basic steps that you perform when migrating {{< TransferCFT/headerfootervariableshflongproductname  >}}.
 
 ## Prerequisites
 

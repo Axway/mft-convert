@@ -1,8 +1,8 @@
 ---
-title: "HP- UX: Customize the kernel"
-linkTitle: "HP- UX: Customize the kernel"
+title: "HP-UX: Customize the kernel"
+linkTitle: "HP-UX: Customize the kernel"
 weight: 200
---- This topic provides information on customizing the HP- UX kernel, and how to:
+---This topic provides information on customizing the HP-UX kernel, and how to:
 
 - Modify
     the message queue depth
@@ -13,7 +13,7 @@ weight: 200
 
 ## Modify the message queue depth
 
-By default, HP- UX only allows a maximum of 256 unread messages to transit
+By default, HP-UX only allows a maximum of 256 unread messages to transit
 in a message queue. To customize this information, increase the value
 of the *msgtql* kernel parameter to 8192.
 
@@ -21,11 +21,11 @@ To customize the message queue:
 
 1. Log in as the root and enter
     the sam command.
-1. Select the following sub- menus,
+1. Select the following sub-menus,
     respectively:
-    - Kernel
+    -   Kernel
         Configuration
-    - Configurable
+    -   Configurable
         Parameters
 1. Set the pointer to the *msgtql*
     parameter.
@@ -50,17 +50,17 @@ To customize the message queue:
 
 ## Modify the number of files used by a process
 
-By default, HP- UX allows a process to open only 64 files. To customize
+By default, HP-UX allows a process to open only 64 files. To customize
 this information, increase the value of the maxfiles
 kernel parameter to 1024. To do so:
 
 1. Log in as the *root* and
     enter the sam
     command.
-1. Select the following sub- menus:
-    - Kernel
+1. Select the following sub-menus:
+    -   Kernel
         Configuration
-    - Configurable
+    -   Configurable
         Parameters
 1. Set the pointer to the *maxfiles*
     parameter.

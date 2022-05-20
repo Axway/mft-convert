@@ -2,21 +2,21 @@
 title: "Sending  a group of files "
 linkTitle: "Sending a group of files"
 weight: 190
---- You can use the FNAME parameter in a SEND command, when prefixed with the &lt;file_symb>
+---You can use the FNAME parameter in a SEND command, when prefixed with the &lt;file_symb>
 indirection character, to trigger SEND operations that correspond to:
 
 - A list of file names in an indirection file (SEND FNAME = #LIST for example) in heterogeneous mode only
 - A series of files indicated by a generic name (SEND
     FNAME = #FIL\* for example) or a directory name (SEND FNAME = #DIRECTORY\\\*)
-    - In homogeneous mode
-    - In heterogeneous mode
-    - Using a file name filter
+    -   In homogeneous mode
+    -   In heterogeneous mode
+    -   Using a file name filter
 
 > **Note**
 >
 > If FNAME designates a generic name and the &lt;file_symb>
 > indirection character is omitted, SEND FNAME = FIL\* for example, the SEND
-> command triggers a single transfer, in which pseudo- records each of which corresponds
+> command triggers a single transfer, in which pseudo-records each of which corresponds
 > to a file name are sent.
 
 Additionally, the UCONF `cft.dirdepth` =`yes ` setting indicates that subdirectories and their content should be sent. Set this parameter value to `No `to send only the parent directory.
@@ -74,18 +74,18 @@ If there are N files to be sent, a SEND IDF = ID_EM, FNAME = #GROUP (or @GROUP)
 - A generic (virtual)
     entry, which never triggers an actual transfer but is used locally to
     manage the group of files to be sent
-    - This virtual transfer is identified by a DIAGP code set to LIST_FI,
+    -   This virtual transfer is identified by a DIAGP code set to LIST_FI,
         when the catalog is queried. Its state is immediately set to ****K****
         in the catalog.
-    - The generic entry is set to the ****T****
+    -   The generic entry is set to the ****T****
         or **X** state when all transfers have been set to ******T****** state (or **X** depending on the mode).
-    - The post- processing procedure is activated when all files in
+    -   The post-processing procedure is activated when all files in
         the group have been transferred (LIST_FI entry set to the ****T****
         or **X** state, depending on the mode).
-    - If the group file does not exist or cannot be opened, the generic entry
+    -   If the group file does not exist or cannot be opened, the generic entry
         remains set to the ****K**** state and
         error message CFTT34E is returned.
-    - If one of the files in the group cannot be sent (for example an unknown file), the other transfers are not affected,
+    -   If one of the files in the group cannot be sent (for example an unknown file), the other transfers are not affected,
         but the generic entry for the group is not set to the **T** state (or **X** depending on the mode).
 
 > **Note**
@@ -113,10 +113,10 @@ For example:
 1. CRTLIB MYSEND
 1. CRTPF FILE(MYSEND/REPORTS) RCDLEN(92) FILETYPE(\*DATA)
 1. EDTF FILE(MYSEND/REPORTS)
-    - Add the list of files to transfer:
-        - MYSEND/FILE1
-        - MYSEND/FILE2
-        - MYSEND/FILE3
+    -   Add the list of files to transfer:
+        -   MYSEND/FILE1
+        -   MYSEND/FILE2
+        -   MYSEND/FILE3
 1. CALL PGM(CFTUTIL) PARM(SEND 'part=paris, idf=LISTFI,fname=#MYSEND/REPORTS')
 
 <span id="Sending_generic_name_files"></span>
@@ -143,7 +143,7 @@ Where the FNAME parameter is set to one of the following values:
 
 The processing performed is of two types, depending on the operating
 system of the remote site. The type of remote site is characterized by
-the SYST parameter in the CFTPART command. Sites are said to be mono- platform
+the SYST parameter in the CFTPART command. Sites are said to be mono-platform
 when the same operating system is used by both partners.
 
 ### Types of group file transfers
@@ -154,7 +154,7 @@ These procedure types are described in detail further on in this topic.
 #### Homogeneous send for a group of files
 
 A homogeneous send occurs between two Transfer CFT that run on the same operating
-system. This transfer procedure concatenates at the site sending the group of files and de- concatenates upon reception.
+system. This transfer procedure concatenates at the site sending the group of files and de-concatenates upon reception.
 
 Mandatory parameters for homogeneous sends include:
 
@@ -162,7 +162,8 @@ Mandatory parameters for homogeneous sends include:
     the file resulting from the concatenation is the file that is sent.
 - SYST: Defined for a remote partner, where the default value is the local operating system. Homogeneous transfers are only possible when CFTPART command's SYST value is the same as the local operating system.
 
-| Platform  | UNIX- like environment  | Native  |
+
+| Platform  | UNIX-like environment  | Native  |
 | --- | --- | --- |
 | UNIX  | Available  | Available  |
 | Windows  | Not supported  | Available  |
@@ -170,6 +171,7 @@ Mandatory parameters for homogeneous sends include:
 | IBM i  | Not supported  | Not supported  |
 | HP Nonstop  | Available  | Not supported  |
 | OpenVMS  | Not supported  | Not supported  |
+
 
 ****Example****
 
@@ -214,9 +216,11 @@ To force heterogeneous mode:
 
 ********Unix/Windows********
 
+
 | Parameter  | Default  | Description  |
 | --- | --- | --- |
 | cft.server.force_heterogeneous_mode  | No  | Force heterogeneous mode for group file transfers. This parameter replaces the deprecated environment variable: CFTSFMCPY.<br/> Possible values:<br/> • Yes: Force heterogeneous mode exchanges (override homogeneous mode)<br/> • No: Standard heterogeneous and homogeneous functioning |
+
 
 #### Sending to a remote site in homogeneous mode
 
@@ -232,24 +236,24 @@ created in the catalog:
 
 - A generic entry
     (LIST_FI) with the following attributes:
-    - FNAME =
+    -   FNAME =
         {dirname &#124; mask}
-    - and WFNAME
-        = temp- filename
+    -   and WFNAME
+        = temp-filename
 
 Its state is immediately set to K, once it has been created in the catalog.
 This entry is set to the T (or X) state when all transfers have been set to T (or X depending on the compatibility mode).
 
 - A transfer entry
     with the following attributes:
-    - FNAME =
-        temp- filename
-    - WFNAME
+    -   FNAME =
+        temp-filename
+    -   WFNAME
         = {dirname &#124; mask}
 
 On the receiver side, a single transfer
 entry is created. The data is received in the work file that must be specified
-in the WFNAME parameter and de- concatenated in the directory specified
+in the WFNAME parameter and de-concatenated in the directory specified
 in the FNAME parameter of the receive command.
 
 Once the transfer has been completed, the work file is deleted by each
@@ -330,7 +334,7 @@ You  can use the CFTSEND [FILTER](../../../c_intro_userinterfaces/command_summ
 For example, create a filter that includes all .jpg files that are:
 
 - A word (at least one other word character)
-- Followed by four- digit number
+- Followed by four-digit number
 
 #### Heterogeneous mode
 
@@ -339,9 +343,9 @@ For example, a transfer from a Unix platform to Windows, the following filter wo
 ```
  CFTSEND ID = 'findfile',
  FILTERTYPE = 'EREGEX',
- FILTER = '^[0- 9a- zA- Z]+[0- 9]{4}.jpg'
+ FILTER = '^[0-9a-zA-Z]+[0-9]{4}.jpg'
 ...
-
+ 
 SEND PART = PARIS,
  IDF = 'findfile',
  FNAME = '@myfolder/\*'
@@ -353,9 +357,9 @@ For example on a z/OS platform, the following filter would include the files AXD
 ```
 CFTSEND ID = 'TREGEX03',
 FILTERTYPE = 'EREGEX',
-FILTER = '^- [\\.]+\*\\.- [^\\.]+\*\\.GRPFI(L&#124;M).A(4&#124;5)\\.'
+FILTER = '^-[\\.]+\*\\.-[^\\.]+\*\\.GRPFI(L&#124;M).A(4&#124;5)\\.'
 ...
-
+ 
 SEND PART = PARIS,
 IDF = 'TREGEX03',
 FNAME = '#AXDSYN.TOOLS.\*'
@@ -370,9 +374,9 @@ For example, a transfer between Unix platforms, the following filter would inclu
 ```
  CFTSEND ID = 'findfile',
  FILTERTYPE = 'EREGEX',
- FILTER = '^[0- 9a- zA- Z]+[0- 9]{4}.jpg'
+ FILTER = '^[0-9a-zA-Z]+[0-9]{4}.jpg'
 ...
-
+ 
 SEND PART = PARIS,
  IDF = 'findfile',
  FNAME = '@myfolder/\*'
@@ -382,18 +386,21 @@ WFNAME = '&idtu.tmp'
 
 ## STRJCMP filter
 
-A STRJCMP pattern- matching filter can contain the asterisk (\*) and/or the question mark (?) characters. The STRJCMP filter characters are interpreted as follows:
+A STRJCMP pattern-matching filter can contain the asterisk (\*) and/or the question mark (?) characters. The STRJCMP filter characters are interpreted as follows:
+
 
 | Character  | Description  | Example  |
 | --- | --- | --- |
 | *  | Indicates any sequence of zero or more characters.  | The filter "*.dat" selects any file name that has the extension ".dat".  |
 | ?  | Indicates any single character.  | The filter "T*.???" selects any file name starting with a 'T' and having an extension of exactly three characters.  |
 
+
 ## EREGEX filter
 
 EREGEX (extended regular expressions) is the use of special characters and strings to define a search pattern. In Transfer CFT, you can use these search patterns to create filters.
 
-In POSIX- Extended regular expressions, all characters match themselves meaning they match a sub- string anywhere inside the string to be searched. For example *abc*, matches abc123, 123abc, and 123abcxyz. Some symbols are exceptions though; commonly used symbols and example usages are listed in the following table.
+In POSIX-Extended regular expressions, all characters match themselves meaning they match a sub-string anywhere inside the string to be searched. For example *abc*, matches abc123, 123abc, and 123abcxyz. Some symbols are exceptions though; commonly used symbols and example usages are listed in the following table.
+
 
 | Symbol  | Indicates  | Example  |
 | --- | --- | --- |
@@ -406,8 +413,9 @@ In POSIX- Extended regular expressions, all characters match themselves meaning 
 | ?  | Zero or one occurrence of the preceding element  | *plurals?* matches plural  |
 | &#124;  | Alternation (matches either the right side or the left) / OR operand  | *ab&#124;cd&#124;ef* matches ab or cd or ef  |
 | ^  | Start of a string  | *^a* matches any file that starts with an a  |
-| [^ ...]  | Any single character that is **not** in the class  | *[^/]** matches zero or more occurrences of any character that is not a forward- slash, such as http://  |
+| [^ ...]  | Any single character that is **not** in the class  | *[^/]** matches zero or more occurrences of any character that is not a forward-slash, such as http://  |
 | $  | End of string  | *.*? the end$* matches this is the end  |
+
 
 > **Note**
 >
@@ -415,7 +423,7 @@ In POSIX- Extended regular expressions, all characters match themselves meaning 
 
 <span id="SNDINDFILEERR"></span>
 
-## Define the catalog details policy for group- of- files transfers
+## Define the catalog details policy for group-of-files transfers
 
 If you execute a SEND transfer request for a group of files that uses a sequential file as input, it creates as many transfer requests as there are lines in the input file, possibly causing the catalog to overfill.
 
@@ -430,6 +438,7 @@ Parameter values:
 
 Simplified catalog view when set to CONTINUE
 
+
 | Transfer type  | IDTU  | PIDTU  | Phasestep  | Diagi  |
 | --- | --- | --- | --- | --- |
 | Parent  | 1  |   | H  | 0  |
@@ -437,7 +446,9 @@ Simplified catalog view when set to CONTINUE
 | Child  | 3  | 1  | C  | 0  |
 | Child  | N  | 1  | C  | 0  |
 
+
 Simplified catalog view when set to ABORT
+
 
 | Transfer type  | IDTU  | PIDTU  | Phasestep  | Diagi  |
 | --- | --- | --- | --- | --- |

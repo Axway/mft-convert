@@ -2,14 +2,14 @@
 title: "Creating  a directory exit"
 linkTitle: "Creating a directory exit"
 weight: 240
---- The following example was designed from a modified version of the ****cft- tcp.conf**** configuration example, located in ****&lt;installdir>/runtime/conf****. For this example, you should have customized
-at least one of these files, using the instructions in Running Transfer
-CFT for the first time.
+---The following example was designed from a modified version of the ****cft-tcp.conf**** configuration example, located in ****&lt;installdir>/runtime/conf****. For this example, you should have customized
+at least one of these files, using the instructions in [Running Transfer
+CFT for the first time.]()
 
 ## Prerequisites
 
 Before running the directory exit test, you must make a few changes
-to the cft- tcp.conf file, depending on the
+to the cft-tcp.conf file, depending on the
 type of network used.
 
 1. Edit the relevant file using
@@ -71,11 +71,11 @@ MODE      = REPLACE
 1. Locate the communication properties
     of your site, which appear at the end of the file.
 
-<!- - - - >
+<!-- -->
 
 - If you are
-    modifying the cft- tcp.conf file, you must also find every occurrence
-    of the HOST string located in cfttcp- type commands and replace the X character
+    modifying the cft-tcp.conf file, you must also find every occurrence
+    of the HOST string located in cfttcp-type commands and replace the X character
     strings with your system name or address
 
 ### Application components
@@ -93,7 +93,7 @@ The *&lt;installdir>/runtime/src/exit/* subdirectory contains:
     of a transfer to a partner not known to either {{< TransferCFT/axwayvariablesComponentShortName >}} or the directory
     EXIT
 
-<!- - - - >
+<!-- -->
 
 - The *mk_cftexita*
     compilation procedure used to generate the CFTEXITA program
@@ -108,14 +108,14 @@ To generate the sample CFTEXITA application, proceed as follows.
 1. Access the *&lt;installdir>/runtime/src/exit/* directory.
 1. Enter the command:
 
-`       make - f mk_cftexita`
+`       make -f mk_cftexita`
 
 ## Running the test
 
 1. Access the *&lt;installdir>/runtime/conf* directory.
 1. Generate the {{< TransferCFT/axwayvariablesComponentShortName >}} databases
     using *cftinit* the configuration file provided
-    and modified for this EXIT:` cft- tcp.conf`
+    and modified for this EXIT:` cft-tcp.conf`
 1. When the *cftinit complete*
     message is displayed, run {{< TransferCFT/axwayvariablesComponentShortName >}} using the *cftstart* utility: `cftstart`
 1. When the *CFTMAIN process

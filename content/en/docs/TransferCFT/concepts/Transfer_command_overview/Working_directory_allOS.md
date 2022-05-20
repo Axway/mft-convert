@@ -2,25 +2,25 @@
 title: "Working directory"
 linkTitle: "Working directory"
 weight: 290
---- This section describes how to specify a working directory to use other than the default (runtime) directory for file transfer flows.
+---This section describes how to specify a working directory to use other than the default (runtime) directory for file transfer flows.
 
 Information is presented by platform:
 
 - Using a working directory in UNIX or Windows
-    - Conventions and recommendations
-    - Configuration examples
+    -   Conventions and recommendations
+    -   Configuration examples
 
-<!- - - - >
+<!-- -->
 
 - Using a working directory in IBM i or z/OS
-    - Conventions and recommendations
-    - Configuration examples
+    -   Conventions and recommendations
+    -   Configuration examples
 
-<!- - - - >
+<!-- -->
 
 - Using a working directory in OpenVMS
-    - Conventions and recommendations
-    - Configuration examples
+    -   Conventions and recommendations
+    -   Configuration examples
 
 When you define a working directory for a given transfer flow, all files related to this transfer flow - meaning sent, received, or temporary files - must be part of the working directory tree. Additionally, scripts that are related to the file transfer flow are executed within the defined working directory (as this is the current working directory).
 
@@ -42,19 +42,19 @@ Note the following conventions and recommendations:
 
 - All working files - sent, received, and temporary files - must be part of the working directory tree. Transfer CFT does not access files that are outside of the defined working directory tree.
 
-<!- - - - >
+<!-- -->
 
 - The maximum size for a complete file name is 512 characters. This value includes the total length of the workingdir added to any relative values.
 
-<!- - - - >
+<!-- -->
 
 - The workingdir has no impact on either the &PATH or &FPATH symbolic variables. Transfer CFT uses only the FNAME contents to fill those variables.
 
-<!- - - - >
+<!-- -->
 
 - The processing script's path (PREEXEC, EXEC, EXECE, ACKEXEC) if relative, is relative to the default directory (the runtime directory).
 
-<!- - - - >
+<!-- -->
 
 - Processing scripts are executed inside the workingdir.
 
@@ -180,17 +180,17 @@ In IBM i and z/OS environments, the working directory feature lets you specify e
 Three scenarios are possible on these platforms:
 
 - UNIX file system  
-    - If a WORKINGDIR Unix file system is defined, it should be either fully qualified (‘/home/user01’ for example) or include the symbolic variable &HOME (z/OS) or ?HOME (IBM i).  
-    - For example, if the working directory parameter equals &HOME or ?HOME, the working directory is the home directory for the user ID on z/OS or on IBM i.
+    -   If a WORKINGDIR Unix file system is defined, it should be either fully qualified (‘/home/user01’ for example) or include the symbolic variable &HOME (z/OS) or ?HOME (IBM i).  
+    -   For example, if the working directory parameter equals &HOME or ?HOME, the working directory is the home directory for the user ID on z/OS or on IBM i.
 - Data set on z/OS  
     WORKINGDIR z/OS data set the syntax is as follows:  
-    - If the segment name ends with a period, for example ‘USER01.PROD.’, then the workingdir refers simply to the data set.  
-    - If the segment name does not end with a final period, for example ‘USER01.PROD.FILE’, then the workingdir refers to a partitioned data set.  
-    - We advise you to include the symbolic variable &USERID in the working directory. For example, if the working directory parameter is ‘&USERID.’, the working directory is the user ID followed by a period.
+    -   If the segment name ends with a period, for example ‘USER01.PROD.’, then the workingdir refers simply to the data set.  
+    -   If the segment name does not end with a final period, for example ‘USER01.PROD.FILE’, then the workingdir refers to a partitioned data set.  
+    -   We advise you to include the symbolic variable &USERID in the working directory. For example, if the working directory parameter is ‘&USERID.’, the working directory is the user ID followed by a period.
 - Database on IBM i  
     WORKINGDIR IBM i syntax is as follows:
-    - If there is a slash character (/) in the working directory, it refers to a member of a database file. For example WORKINGDIR= PROD/NEWFILE, FNAME=MEMBER creates PROD/NEWFILE(MEMBER).
-    - Otherwise, if there is no slash, it refers to a database file. For example WORKINGDIR= PROD, FNAME=FILE creates PROD/FILE.  
+    -   If there is a slash character (/) in the working directory, it refers to a member of a database file. For example WORKINGDIR= PROD/NEWFILE, FNAME=MEMBER creates PROD/NEWFILE(MEMBER).
+    -   Otherwise, if there is no slash, it refers to a database file. For example WORKINGDIR= PROD, FNAME=FILE creates PROD/FILE.  
 
 ### Conventions and recommendations
 

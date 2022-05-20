@@ -2,7 +2,8 @@
 title: " Transfer CFT configuration concepts: Start here"
 linkTitle: "Concepts"
 weight: 120
---- This section describes {{< TransferCFT/axwayvariablesComponentShortName  >}} configuration concepts topics.
+---This section describes {{< TransferCFT/axwayvariablesComponentShortName  >}} configuration concepts topics.
+
 
 | Topic | Contents |
 | --- | --- |

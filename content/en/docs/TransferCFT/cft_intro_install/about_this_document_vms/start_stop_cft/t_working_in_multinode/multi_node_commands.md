@@ -1,8 +1,8 @@
 ---
-title: "Multi- node commands"
-linkTitle: "Multi- node commands"
+title: "Multi-node commands"
+linkTitle: "Multi-node commands"
 weight: 270
---- This topic describes how to mange Transfer CFT nodes, and related actions such as restarting a stopped node, or rebalancing after a fail over.
+---This topic describes how to mange Transfer CFT nodes, and related actions such as restarting a stopped node, or rebalancing after a fail over.
 
 ## cftinit
 
@@ -14,17 +14,17 @@ The cftinit command initializes Transfer CFT internal datafiles. If nothing is s
 
 #### Options
 
-- c&#124;- common only common internal datafiles are initialized (PARM, PART, main COM)
+-c&#124;-common only common internal datafiles are initialized (PARM, PART, main COM)
 
-- n&#124;- node only node specific internal datafiles are initialized (CATALOG, COM, LOG)
+-n&#124;-node only node specific internal datafiles are initialized (CATALOG, COM, LOG)
 
 ### Usage
 
-`cftinit conf/cft- tcp.conf con/cft- tcp- part.conf`
+`cftinit conf/cft-tcp.conf con/cft-tcp-part.conf`
 
 All internal datafiles are initialized using provided configuration files.
 
-`cftinit –c conf/cft- tcp.conf con/cft- tcp- part.conf`
+`cftinit –c conf/cft-tcp.conf con/cft-tcp-part.conf`
 
 Common internal datafiles are initialized using provided configuration files.
 
@@ -46,7 +46,7 @@ The `copsmng `command starts the Copilot (Node Manager, Connection Dispatcher, U
 
 ## copstop
 
-The `copstop `command stops the Copilot (Node Manager, Connection Dispatcher, UI server). When stopping a Copilot on a host, all nodes running on this host are stopped and re- started on the other hosts in the cluster.
+The `copstop `command stops the Copilot (Node Manager, Connection Dispatcher, UI server). When stopping a Copilot on a host, all nodes running on this host are stopped and re-started on the other hosts in the cluster.
 
 ### Syntax
 
@@ -70,7 +70,7 @@ The `cft start `command starts one or all nodes. If no node is specified, all no
 
 #### Options
 
-The - n&#124;- node &lt;node_id> starts the node &lt;node_id>.
+The -n&#124;-node &lt;node_id> starts the node &lt;node_id>.
 
 ### Usage
 
@@ -92,7 +92,7 @@ The `cft stop` command stops one or all nodes. If no node is specified, all node
 
 #### Options
 
-The - n&#124;- node &lt;node_id> stops the node &lt;node_id>.
+The -n&#124;-node &lt;node_id> stops the node &lt;node_id>.
 
 ### Usage
 
@@ -106,7 +106,7 @@ Stops node 0.
 
 ## cft restart
 
-The` cft restart` command re- stars one or all nodes. If no node is specified all nodes are re- started.
+The` cft restart` command re-stars one or all nodes. If no node is specified all nodes are re-started.
 
 > **Note**
 >
@@ -118,23 +118,23 @@ The` cft restart` command re- stars one or all nodes. If no node is specified al
 
 #### Options
 
-The `- n&#124;- node <node_id>` re- starts the node &lt;node_id>.
+The `-n&#124;-node <node_id>` re-starts the node &lt;node_id>.
 
-The `- ln&#124;- local_node` re- starts all nodes hosted locally that are running on the host from where the command is performed.
+The `-ln&#124;-local_node` re-starts all nodes hosted locally that are running on the host from where the command is performed.
 
 ### Usage
 
 `cft restart`
 
-All nodes are re- started by the node managers.
+All nodes are re-started by the node managers.
 
 `cft restart –n 0`
 
-Node 0 is re- started by a node manager.
+Node 0 is re-started by a node manager.
 
 `cft restart –ln`
 
-All nodes hosted locally are re- started by the node manager.
+All nodes hosted locally are re-started by the node manager.
 
 ## cft add_host
 
@@ -183,11 +183,11 @@ The `cft enable_node` command enables the specified node. The node state is set 
 
 ### Syntax
 
-`cft enable_node - n - <node_id>`
+`cft enable_node -n -<node_id>`
 
 ### Usage
 
-`cft enable_node - n - <node_id>`
+`cft enable_node -n -<node_id>`
 
 ## cft disable_node
 
@@ -199,11 +199,11 @@ The `cft disable_node` command disables the specified node. The parameter uconf:
 
 ### Syntax
 
-`cft disable_node - n - <node_id>`
+`cft disable_node -n -<node_id>`
 
 ### Usage
 
-`cft disable_node - n - <node_id>`
+`cft disable_node -n -<node_id>`
 
 ## cftping
 
@@ -221,23 +221,23 @@ Return values:
 
 #### Options
 
-- n&#124;- node &lt;node_id> checks the status of the node &lt;node_id>
+-n&#124;-node &lt;node_id> checks the status of the node &lt;node_id>
 
-- v verbose mode
+-v verbose mode
 
-- p shows PID (Process IDs) of all CFTMAIN processes
+-p shows PID (Process IDs) of all CFTMAIN processes
 
-- h shows the help
+-h shows the help
 
 ## Listlog
 
 Use the CFTUTIL `listlog `command to display the log content, which can be defined according to certain criteria, such as date or node. Additionally, you can filter the log according to multiple criteria, or view a log that is merged for several nodes in cluster mode.
 
-Cftutil listlog LINES=- 200, cftutil listlog node=2
+Cftutil listlog LINES=-200, cftutil listlog node=2
 
 ## Display/Listcat
 
-Use the CFTUTIL `display `or CFTUTIL `listcat `to show catalog transfer records. In multi- node, these commands aggregate all catalog internal datafiles to show catalog transfer records as a unique catalog.
+Use the CFTUTIL `display `or CFTUTIL `listcat `to show catalog transfer records. In multi-node, these commands aggregate all catalog internal datafiles to show catalog transfer records as a unique catalog.
 
 > **Note**
 >
@@ -245,7 +245,7 @@ Use the CFTUTIL `display `or CFTUTIL `listcat `to show catalog transfer records.
 
 ## Listnode
 
-The CFTUTIL `listnode `displays the status of the Transfer CFT cluster, including information about hosts and nodes that are part of the Transfer CFT multi- node architecture.
+The CFTUTIL `listnode `displays the status of the Transfer CFT cluster, including information about hosts and nodes that are part of the Transfer CFT multi-node architecture.
 
 ****Example****
 

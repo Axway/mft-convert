@@ -2,7 +2,7 @@
 title: "CFTUTIL catalog commands"
 linkTitle: "CFTUTIL catalog commands"
 weight: 270
---- This section describes the following Transfer CFT commands:
+---This section describes the following Transfer CFT commands:
 
 - QUERY
 - WAITCAT
@@ -50,7 +50,7 @@ NAME=IDT,FIELD=IDT
 
 ### WAITCAT
 
-The WAITCAT command scans the catalog searching for a record that corresponds to the criteria specified in the command parameters. If a record matches the selected criteria, the result is a return code of 0. If there are no matches, the result is a non- zero return code. The return code is stored in the predefined variable _CMDRET.
+The WAITCAT command scans the catalog searching for a record that corresponds to the criteria specified in the command parameters. If a record matches the selected criteria, the result is a return code of 0. If there are no matches, the result is a non-zero return code. The return code is stored in the predefined variable _CMDRET.
 
 You can specify a maximum wait time as well as a scanning range for the catalog.
 
@@ -108,7 +108,7 @@ PRINT MSG='The return code for WAIT is : %_CMDRET%'
 
 #### Syntax
 
-The TEST command searches in the catalog records for criteria that matches the command parameters. If a record matches the criteria, the TEST command has a return code of 0, otherwise it results in a non- zero value return code.
+The TEST command searches in the catalog records for criteria that matches the command parameters. If a record matches the criteria, the TEST command has a return code of 0, otherwise it results in a non-zero value return code.
 
 The return code is stored in the predefined variable _CMDRET.FTEMOIN field sets the name of a file to be used as a control to compare the transferred file. The control file is opened with the same file attributes that were defined in the catalog for the transferred file.
 

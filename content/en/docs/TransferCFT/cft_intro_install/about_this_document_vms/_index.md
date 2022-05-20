@@ -2,11 +2,11 @@
 title: "OpenVMS: Installation and operation"
 linkTitle: "Installation and operation OpenVMS"
 weight: 140
---- This documentation provides information to aide you in installing, updating, upgrading, or migrating {{< TransferCFT/axwayvariablesComponentShortName  >}}.
+---This documentation provides information to aide you in installing, updating, upgrading, or migrating {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
 ## About {{< TransferCFT/axwayvariablesComponentLongName  >}}
 
-Transfer CFT is the file transfer component in the Axway Managed File Transfer solution, and provides a multi- platform, high- volume, file and message transfer service. This documentation explains how to install, configure, and manage Transfer CFT.
+Transfer CFT is the file transfer component in the Axway Managed File Transfer solution, and provides a multi-platform, high-volume, file and message transfer service. This documentation explains how to install, configure, and manage Transfer CFT.
 
 For more information on Axway products, visit [www.axway.com](https://www.axway.com/en).
 
@@ -26,7 +26,7 @@ This guide explains how to perform a full installation of {{< TransferCFT/axwayv
 
 **Uninstall** – Describes how you can uninstall {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
-**Troubleshoot the installation or registration process** – Describes the different types of troubleshooting errors you can encounter during installation, upgrade and post- installation.
+**Troubleshoot the installation or registration process** – Describes the different types of troubleshooting errors you can encounter during installation, upgrade and post-installation.
 
 ## Who should read this guide
 

@@ -1,10 +1,10 @@
 ---
-    title: "Transfer CFT 3.10 User Guide "
+title: "Transfer CFT 3.10 User Guide "
 linkTitle: "Transfer CFT User Guide"
 weight: 20
 ---Welcome to the Axway {{< TransferCFT/axwayvariablesPlatformorSuiteShortName  >}} Transfer CFT documentation. {{< TransferCFT/axwayvariablesComponentShortName  >}} is the file transfer component in the Axway Managed File Transfer platform, and provides a multi-platform, high-volume, file transfer service. This documentation explains how to install, configure, and manage {{< TransferCFT/axwayvariablesComponentShortName  >}}.
 
-You can configure {{< TransferCFT/suitevariablesTransferCFTName  >}} and manage flows using {{< TransferCFT/suitevariablesCentralGovernanceName  >}} or Flow Manager. These governance products simplify Transfer CFT usage, and provide services such as identity and access management, certificate management, monitoring, alerting, and a web dashboard. For more information, visit www.axway.com](http://www.axway.com/).
+You can configure {{< TransferCFT/suitevariablesTransferCFTName  >}} and manage flows using {{< TransferCFT/suitevariablesCentralGovernanceName  >}} or Flow Manager. These governance products simplify Transfer CFT usage, and provide services such as identity and access management, certificate management, monitoring, alerting, and a web dashboard. For more information, visit [www.axway.com](http://www.axway.com/).
 
 Additionally, the Transfer CFT {{< TransferCFT/suitevariablesDocTypeUser  >}} explains standalone options for users who have not yet activated {{< TransferCFT/PrimaryCGorUM  >}} or Flow Manager. Axway encourages {{< TransferCFT/axwayvariablesComponentLongName  >}} users to discover the benefits of centralized management.
 
@@ -36,9 +36,9 @@ Additionally, the Transfer CFT {{< TransferCFT/suitevariablesDocTypeUser  >}} e
 
 [Use API services](cft_intro_install/about_this_document_zos/using_apis)
 
-[Check platform specifics
+[Check platform specifics]()
 
-Set UCONF parameters](admin_intro/uconf/uconf_directory)
+[Set UCONF parameters](admin_intro/uconf/uconf_directory)
 
 ## Migration and upgrades
 
@@ -60,7 +60,7 @@ Set UCONF parameters](admin_intro/uconf/uconf_directory)
 
 ## Documentation
 
-Transfer CFT User Guide [PDF](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_PDF/resource/Transfer_CFT_UsersGuide_allOS_en.pdf) &#124; [Webhelp (Download)
+Transfer CFT User Guide [PDF](https://docs.axway.com/bundle/TransferCFT_38_UsersGuide_allOS_en_PDF/resource/Transfer_CFT_UsersGuide_allOS_en.pdf) &#124; [Webhelp (Download)]()
 
 Release Notes [HTML](https://docs.axway.com/bundle/TransferCFT_38_ReleaseNotes_allOS_en_HTML5/page/Content/release_notes/Transfer_CFT_ReleaseNotes_allOS_en.htm) &#124; [PDF](https://docs.axway.com/bundle/TransferCFT_38_ReleaseNotes_allOS_en_PDF/resource/Transfer_CFT_ReleaseNotes_allOS_en.pdf)
 

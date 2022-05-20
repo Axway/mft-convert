@@ -2,7 +2,7 @@
 title: "Automatic Transfer CFT start on system start up"
 linkTitle: "Automatic start on operating system start up"
 weight: 200
---- This section describes automatic Transfer CFT start procedures.
+---This section describes automatic Transfer CFT start procedures.
 However, the method used to run Transfer CFT when the system starts can vary
 according to the operating system. For more information on the various parameters' syntax, refer to your operating system documentation.
 
@@ -16,7 +16,7 @@ The examples in this section assume the following:
     installed in the `cft `user account
 - Transfer CFT is
     installed as standard in the `Axway/Transfer_CFT` directory for this account
-- In a multi- node environment, the {{< TransferCFT/headerfootervariableshflongproductname >}} runtime is located in `/mnt/axway/cft/runtime`
+- In a multi-node environment, the {{< TransferCFT/headerfootervariableshflongproductname >}} runtime is located in `/mnt/axway/cft/runtime`
 - The `home `directory
     for this user is `/home/cft`
 - Transfer CFT is
@@ -31,7 +31,7 @@ The examples in this section assume the following:
 
 `Systemd `is a system and service manager for Linux operating systems.
 
-### Define the Transfer CFT Copilot service (non multi- node)
+### Define the Transfer CFT Copilot service (non multi-node)
 
 Use a standard editor to create the `cftcopilot.service` file in the `/etc/systemd/system` directory for a standalone installation as follows:
 
@@ -39,21 +39,21 @@ Use a standard editor to create the `cftcopilot.service` file in the `/etc/syste
 [Unit]
 Description=Axway Transfer CFT Copilot
 After=syslog.target network.target
-
+ 
 [Service]
 Type=forking
 WorkingDirectory=/home/cft/Axway/Transfer_CFT/runtime
-ExecStart=/bin/sh - c '. ./profile && copstart'
-ExecStop=/bin/sh - c '. ./profile && copstop'
+ExecStart=/bin/sh -c '. ./profile && copstart'
+ExecStop=/bin/sh -c '. ./profile && copstop'
 Group=cft
 User=cft
 KillMode=process
-
+ 
 [Install]
-WantedBy=multi- user.target
+WantedBy=multi-user.target
 ```
 
-#### Define the Transfer CFT service (non multi- node)
+#### Define the Transfer CFT service (non multi-node)
 
 Use a standard editor to create the `cft.service` file in the `/etc/systemd/system` directory for a standalone installation as follows:
 
@@ -61,39 +61,39 @@ Use a standard editor to create the `cft.service` file in the `/etc/systemd/syst
 [Unit]
 Description=Axway Transfer CFT
 After=syslog.target network.target
-
+ 
 [Service]
 Type=forking
 WorkingDirectory=/home/cft/Axway/Transfer_CFT/runtime
-ExecStart=/bin/sh - c '. ./profile && cft start'
-ExecStop=/bin/sh - c '. ./profile && cft stop'
+ExecStart=/bin/sh -c '. ./profile && cft start'
+ExecStop=/bin/sh -c '. ./profile && cft stop'
 Group=cft
 User=cft
-
+ 
 [Install]
-WantedBy=multi- user.target
+WantedBy=multi-user.target
 ```
 
-#### Define the Transfer CFT Copilot service (multi- node)
+#### Define the Transfer CFT Copilot service (multi-node)
 
-In a multi- node environment, you only need to define the Transfer CFT Copilot as a service. Copilot automatically starts the nodes. Use a standard editor to create the `cftcopilot.service` file in the `/etc/systemd/system` directory as follows:
+In a multi-node environment, you only need to define the Transfer CFT Copilot as a service. Copilot automatically starts the nodes. Use a standard editor to create the `cftcopilot.service` file in the `/etc/systemd/system` directory as follows:
 
 ```
 [Unit]
 Description=Axway Transfer CFT Copilot
 After=syslog.target network.target
-
+ 
 [Service]
 Type=forking
 WorkingDirectory=/mnt/axway/cft/runtime
-ExecStart=/bin/sh - c '. ./profile && copstart && cft start'
-ExecStop=/bin/sh - c '. ./profile && copstop - w'
+ExecStart=/bin/sh -c '. ./profile && copstart && cft start'
+ExecStop=/bin/sh -c '. ./profile && copstop -w'
 Group=cft
 User=cft
 KillMode=process
-
+ 
 [Install]
-WantedBy=multi- user.target
+WantedBy=multi-user.target
 ```
 
 Once you have validated that the service starts and stops correctly, you can enable it for automatic starts.
@@ -149,7 +149,7 @@ Use a standard editor to add the following line
 at the end of the `/etc/inittab` file:
 
 ```
-cft:2:once:/bin/su - cft - c ’. Axway/Transfer_CFT/runtime//profile; cft start –batch’
+cft:2:once:/bin/su - cft -c ’. Axway/Transfer_CFT/runtime//profile; cft start –batch’
 ```
 
 ****Define the Transfer CFT Copilot service****
@@ -157,7 +157,7 @@ cft:2:once:/bin/su - cft - c ’. Axway/Transfer_CFT/runtime//profile; cft start
 Use a standard editor to add the following line to the end of the `/etc/inittab` file:
 
 ```
-cftcopilot:2:once:/bin/su - cft - c ’. Axway/Transfer_CFT/runtime//profile; copstart’
+cftcopilot:2:once:/bin/su - cft -c ’. Axway/Transfer_CFT/runtime//profile; copstart’
 ```
 
 ### Adding a file to /etc/rc2.d
@@ -193,10 +193,10 @@ file. The following shell script provides a basic example:
 ```
 #!bin/sh
 # Starting Transfer CFT
-
-if [ - f /home/cft/Axway/Transfer_CFT/runtime/profile]
+ 
+if [ -f /home/cft/Axway/Transfer_CFT/runtime/profile]
 then
-/bin/su - mycft - c ’. Axway/Transfer_CFT/runtime/profile; cft start –batch’
+/bin/su - mycft -c ’. Axway/Transfer_CFT/runtime/profile; cft start –batch’
 fi
 ```
 
@@ -209,8 +209,8 @@ Add the appropriate operating system start shell script to this file. The follow
 ```
 #!bin/sh
 # Starting Transfer CFT Copilot
-if [ - f /home/cft/Axway/Transfer_CFT/runtime/profile]
+if [ -f /home/cft/Axway/Transfer_CFT/runtime/profile]
 then
-/bin/su - mycft - c ’. Axway/Transfer_CFT/runtime/profile; copstart’
+/bin/su - mycft -c ’. Axway/Transfer_CFT/runtime/profile; copstart’
 fi
 ```

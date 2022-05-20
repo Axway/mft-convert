@@ -2,7 +2,7 @@
 title: "Starting Transfer CFT"
 linkTitle: "Starting Transfer CFT"
 weight: 290
---- Select ****Option **1.****** **Common Transfer CFT commands**, then **3. Start Transfer CFT** in the Operations screen. Once Transfer CFT starts, the product is operational. You can perform transfer operations after the startup messages are displayed.
+---Select ****Option **1.****** **Common Transfer CFT commands**, then **3. Start Transfer CFT** in the Operations screen. Once Transfer CFT starts, the product is operational. You can perform transfer operations after the startup messages are displayed.
 
 ```
 From . . . : CFT 04/02/15 17:04:56
@@ -22,7 +22,7 @@ CFTI18I+Version 3.0.1 2015/03/12
 From . . . : CFT 04/02/15 17:04:59
 CFTI18I+Version 3.2.1
 From . . . : CFT 04/02/15 17:04:59
-CFTI18I+(C) Copyright AXWAY 1989- 2015
+CFTI18I+(C) Copyright AXWAY 1989-2015
 From . . . : CFT 04/02/15 17:04:59
 CFTI18I+
 From . . . : CFT 04/02/15 17:04:59
@@ -44,7 +44,7 @@ CFTC08I Catalog: Size=5000, Used=3(0%)
 From . . . : CFT 04/02/13 17:05:02
 CFTC08I Purge Started.
 From . . . : CFT 04/02/13 17:05:02
-CFTC08I Purge catalog- size=5000 in- use=3 pre- filtered=0(0%)
+CFTC08I Purge catalog-size=5000 in-use=3 pre-filtered=0(0%)
 From . . . : CFT 04/02/15 17:05:03
 CFTI34I PID=4 CFTTCOM Task started successfully
 From . . . : CFT 04/02/13 17:05:03
@@ -80,7 +80,7 @@ CFTI18I+File Transfer Acceleration Option is authorized
 From . . . : CFT 04/02/15 17:05:05
 CFTI18I+Bandwidth Priority Option is authorized
 From . . . : CFT 04/02/15 17:05:05
-CFTI18I+Multi- node Option is authorized
+CFTI18I+Multi-node Option is authorized
 From . . . : CFT 04/02/15 17:05:05
 CFTI18I+X25 Network Access Method Option is authorized
 From . . . : CFT 04/02/15 17:05:05

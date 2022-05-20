@@ -2,7 +2,7 @@
 title: " Planning"
 linkTitle: "Prerequisites"
 weight: 160
---- This document describes how to prepare for and install {{< TransferCFT/axwayvariablesComponentShortName  >}} in an OpenVMS environment.
+---This document describes how to prepare for and install {{< TransferCFT/axwayvariablesComponentShortName  >}} in an OpenVMS environment.
 
 ## Important information
 
@@ -47,18 +47,19 @@ You should read and accept the End User License Agreement (EULA) prior to instal
 Product license key.
 Enter the product license key. Alternatively, you can set the Transfer CFT key in the CFT_SCEN:CFT.KEY.
 \* Enter the license key:
-- - > Type M to modify, ENTER to continue
+--> Type M to modify, ENTER to continue
 :
 Generate Encryption Key
 Please specify a seed password to generate the encryption key:
 Warning: The password must contains at least 8 characters, contain upper and lower
-case characters as well as numeric and special characters (\*#$!?+- @
+case characters as well as numeric and special characters (\*#$!?+-@
 \* Password:
 \* Confirm password:
 Choose a location to store the generated key and salt files:
 \* Key file .......... [CRYPKEY.KEY]:
 \* Salt file .......... [CRYPSALT.KEY]:
-- - > Type M to modify, ENTER to continue
+--> Type M to modify, ENTER to continue
 :
 ```
 
+ 

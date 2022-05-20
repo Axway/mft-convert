@@ -2,22 +2,22 @@
 title: "UCONF: Transfer acceleration"
 linkTitle: "Transfer acceleration"
 weight: 310
---- To enable acceleration set the uconf values as recommended in this section.
+---To enable acceleration set the uconf values as recommended in this section.
 
 ## About transfer acceleration
 
 **UNIX/Windows only**
 
-The {{< TransferCFT/axwayvariablesComponentShortName  >}} acceleration feature offers significantly faster transfer rates for large- file transfers, traveling long- distances over high bandwidth networks.
+The {{< TransferCFT/axwayvariablesComponentShortName  >}} acceleration feature offers significantly faster transfer rates for large-file transfers, traveling long-distances over high bandwidth networks.
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} achieves this transfer acceleration using two methods:
 
-- UDT: a UDP- based protocol (User Datagram Protocol)
+- UDT: a UDP-based protocol (User Datagram Protocol)
 - pTCP: parallel TCP, which uses multiple parallel connections
 
 ### UDT description
 
-UDT is a transport protocol that {{< TransferCFT/axwayvariablesComponentShortName  >}} can use to manage applications over high- speed networks. UDT uses UDP, a lower layer message, to transfer bulk data.
+UDT is a transport protocol that {{< TransferCFT/axwayvariablesComponentShortName  >}} can use to manage applications over high-speed networks. UDT uses UDP, a lower layer message, to transfer bulk data.
 
 ## Configuring accelerated communication
 
@@ -29,11 +29,13 @@ You can globally enable or disable the acceleration function in the {{< Transfer
 
 #### Parameters
 
+
 | Parameter  | Description  |
 | --- | --- |
 | acceleration.enable  | Activate/deactivate the acceleration option.  |
 | acceleration.udt  | UDT default peer definition.  |
 | acceleration.ptcp  | pTCP default peer definition.  |
+
 
 #### Example in CFTUTIL
 
@@ -52,19 +54,19 @@ Network resources that are scheduled to use acceleration functionality should ha
 ```
 CFTNET ID=NET0,CLASS=4,...
 CFTNET ID=NET1,CLASS=5,...
-
+ 
 CFTPROT ID=PESITANY,TYPE=PESIT,NET=NET1,SAP=1761,...
 CFTPROT ID=PESITSSL,TYPE=PESIT,NET=NET0,SAP=1762,SSL=SSLSERVER,...
-
+ 
 CFTPART ID=PART1,PROT=PESITANY,sap=part1_remote_sap...
 CFTTCP ID=PART1,host=@part1,CLASS=5,...
-
+ 
 CFTPART ID=PART0,PROT=PESITSSL,sap=part0_remote_sap...
 CFTTCP ID=PART0,host=@part0,CLASS=4,...
-
+ 
 CFTPART ID=PART2,PROT=PESITANY,sap=part2_remote_sap...
 CFTTCP ID=PART2,host=@part2,CLASS=1,...
-
+ 
 ```
 
 **Results**
@@ -82,7 +84,7 @@ Additional attribute parameters are available for advanced users. The default va
 
 #### UDT parameters
 
-Refer to the UCONF parameters](../../../admin_intro/uconf/uconf_directory) table `acceleration.udt.<logicalID>`.
+Refer to the [UCONF parameters](../../../admin_intro/uconf/uconf_directory) table `acceleration.udt.<logicalID>`.
 
 #### pTCP parameters
 
@@ -98,12 +100,12 @@ Refer to the [UCONF parameters](../../../admin_intro/uconf/uconf_directory) tab
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} 3.0.1 SP2 and higher, and {{< TransferCFT/axwayvariablesComponentShortName  >}} 2.7.1 SP6, support a more recent version of the pTCP protocol than previously supported by {{< TransferCFT/axwayvariablesComponentShortName  >}}. This newer version of pTCP offers the following advantages:
 
-- Multi- node architecture support
+- Multi-node architecture support
 - Exchange capability with Axway SecureTransport
 
 Note that the new pTCP support is ****not**** compatible with the previously used version of pTCP. This means that {{< TransferCFT/axwayvariablesComponentShortName  >}} 3.0.1 SP2 and higher, and {{< TransferCFT/axwayvariablesComponentShortName  >}} 2.7.1 SP6, ****cannot**** exchange files with earlier versions of {{< TransferCFT/axwayvariablesComponentShortName  >}} using the pTCP protocol.
 
-For more information on supported platforms and transfer acceleration, refer to [Platform- specific functionality.
+For more information on supported platforms and transfer acceleration, refer to [Platform-specific functionality]().
 
 ****Related topics****
 

@@ -2,14 +2,14 @@
 title: "Store  and forward "
 linkTitle: "Store and forward relays"
 weight: 340
---- Store and forward, or transfer routing, allows you to define and automate file transfer using an intermediate site. This page describes using store- and- forward services either in a {{< TransferCFT/suitevariablesCentralGovernanceName  >}} context or using a standalone {{< TransferCFT/suitevariablesTransferCFTName  >}}.
+---Store and forward, or transfer routing, allows you to define and automate file transfer using an intermediate site. This page describes using store-and-forward services either in a {{< TransferCFT/suitevariablesCentralGovernanceName  >}} context or using a standalone {{< TransferCFT/suitevariablesTransferCFTName  >}}.
 
 - [Store and forward with {{< TransferCFT/suitevariablesCentralGovernanceName >}}](#Store)
 - [Store and forward standalone {{< TransferCFT/suitevariablesTransferCFTName >}}](#Store2)
-    - [Intentional
+    -   [Intentional
         store and forward](#Intentional_Store_and_Forward)
-    - [Intentional VAN store and forward](#Intentional_VAN_store_and_forward)
-    - [Forced
+    -   [Intentional VAN store and forward](#Intentional_VAN_store_and_forward)
+    -   [Forced
         store and forward](#Forced_Store_and_Forward)
 
 <span id="Store"></span>
@@ -22,14 +22,14 @@ To implement a relay in conjunction with {{< TransferCFT/PrimaryCGorUM  >}}:
 
 1. Create the flow as described in the [Central Governance User Guide](https://docs.axway.com/bundle/CentralGovernance_113_UsersGuide_allOS_en_HTML5/page/Content/AxwayStartPage.htm).
 1. In the SEND command include at a minimum:
-    - The name of the final receiver, for example TARGET_APPLICATION.
-    - The name of the flow, for example TEST_RELAY.
-    - The file to be transferred, for example `report`.
+    -   The name of the final receiver, for example TARGET_APPLICATION.
+    -   The name of the flow, for example TEST_RELAY.
+    -   The file to be transferred, for example `report`.
 
     ```
     cftutil send part=target_application, idf=test_relay, fname=report
     ```
-1. Optionally you can configure target post- processing to automatically send a reply.
+1. Optionally you can configure target post-processing to automatically send a reply.
 
 > **Note**
 >
@@ -117,9 +117,9 @@ Configure the following for the store and forward (Site B):
 - Define both the initiator and the receiver CFTPART partner definitions.
 - Set COMMUT=SERVER.
 - Define a procedure to execute and reference in the CFTPARM (in this example).
-    - In the store and forward example below, the procedure identified by `myproc `
+    -   In the store and forward example below, the procedure identified by `myproc `
         includes the following command on completion of processing: `CFTUTIL SEND PART= &RPART, SPART= &SPART, FNAME= &FNAME, IDF=   &IDF`
-    - When the symbolic variables are replaced: `CFTUTIL SEND PART=ID_C,SPART=ID_A,FNAME=frecv, IDF=test`
+    -   When the symbolic variables are replaced: `CFTUTIL SEND PART=ID_C,SPART=ID_A,FNAME=frecv, IDF=test`
 
 ****Configure the receiver****
 
@@ -158,7 +158,7 @@ Configure the following for the store and forward Intermediate Site 1:
 - Define the sender and the second relay (Site 2) = 2 CFTPARTs.
 - Set COMMUT=PART.
 
-<!- - - - >
+<!-- -->
 
 - In the CFTPART for the sender site, make a reference to the second relay using the IPART=&lt;Site 2>.
 

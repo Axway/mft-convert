@@ -2,10 +2,10 @@
 title: "Creating  an exit file"
 linkTitle: "Creating an exit file"
 weight: 230
---- The example described in this topic was designed to operate using the ****cft- tcp.conf**** configuration example located in ****&lt;installdir>/runtime/conf****.
+---The example described in this topic was designed to operate using the ****cft-tcp.conf**** configuration example located in ****&lt;installdir>/runtime/conf****.
 For this example, you should have already customized the
-file using the instructions in *Running Transfer
-CFT for the First Time*.
+file using the instructions in [*Running Transfer
+CFT for the First Time*]().
 
 ## Application components
 
@@ -22,11 +22,11 @@ The *&lt;installdir>/runtime/src/exit/* subdirectory contains:
 - DATA_TYP: the
     EXIT writes or reads the file
 
-<!- - - - >
+<!-- -->
 
 - And so on
 
-<!- - - - >
+<!-- -->
 
 - The *mk_cftexitf*
     compilation procedure, which uses *exfxmp2.c* to generate the *CFTEXITF*
@@ -42,7 +42,7 @@ To generate the sample CFTEXITF application, proceed as follows:
 1. Access the *&lt;installdir>/runtime/src/exit/* directory.
 1. Enter the command:
 
-`     make   - f mk_cftexitf`
+`     make   -f mk_cftexitf`
 
 ## Testing the exit
 
@@ -51,7 +51,7 @@ To generate the sample CFTEXITF application, proceed as follows:
 1. Generate the {{< TransferCFT/axwayvariablesComponentShortName >}} internal datafiles
     using the *cftinit* utility with the configuration file:
 
-    `cftinit cft- tcp.conf`
+    `cftinit cft-tcp.conf`
 
 1. When the *cftinit complete*
     message is displayed, run {{< TransferCFT/axwayvariablesComponentShortName >}} using the cftstart utility:
@@ -76,6 +76,6 @@ To generate the sample CFTEXITF application, proceed as follows:
 1. Examine the contents of the
     *cft_log. sav* file in the *&lt;installdir>/runtime/log/* directory and locate the
     messages inserted by the EXIT.  
-
+      
     The files created in *&lt;installdir>/runtime/* are empty, as the sample EXIT is
     only a simulation.

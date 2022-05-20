@@ -2,7 +2,7 @@
 title: "About the INSTALL command"
 linkTitle: "About the INSTALL command"
 weight: 190
---- The INSTALL command enables you to install:
+---The INSTALL command enables you to install:
 
 - Transfer CFT binary objects, such as programs, to the Transfer CFT program library
 - Transfer CFT files to production library
@@ -35,7 +35,7 @@ During the installation you are prompted to configure your installation, for exa
 
 You can also enable:
 
-- Multi- node architecture
+- Multi-node architecture
 - Central Governance connectivity
 - REST API server
 - Sentinel
@@ -60,7 +60,7 @@ Enter the INSTALL command and press PF4 to display the Transfer CFT IBM i instal
 
 ```
 INSTALL CFT (INSTALL)
-
+ 
 Install on an independent ASP. . . . . . . '2' 1:Yes / 2:No
 ```
 

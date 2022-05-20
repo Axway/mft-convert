@@ -2,7 +2,7 @@
 title: "Data models and partners"
 linkTitle: "About data models and partners "
 weight: 170
---- The purpose of {{< TransferCFT/axwayvariablesComponentShortName  >}} is to exchange and
+---The purpose of {{< TransferCFT/axwayvariablesComponentShortName  >}} is to exchange and
 manage files transfers, meaning a file
 exchange between two or more computers. In any file exchange, one computer is the sender,
 and another is the receiver. The two computers are linked together by
@@ -97,7 +97,7 @@ Additional parameters define attributes for scanning folders for files, updating
 
 ## Model files
 
-Every file transfer requires a model as part of the data flow definition. By default, {{< TransferCFT/axwayvariablesComponentShortName  >}} provides a model so that you do not have to create this object, the IDF (logical file identifier), in order to perform your first file transfers. Once you feel comfortable with {{< TransferCFT/axwayvariablesComponentShortName  >}} commands and configuration concepts, you can modify the model attributes, such as the file name, translation, compression, end- of- transfer scripts, and so on.
+Every file transfer requires a model as part of the data flow definition. By default, {{< TransferCFT/axwayvariablesComponentShortName  >}} provides a model so that you do not have to create this object, the IDF (logical file identifier), in order to perform your first file transfers. Once you feel comfortable with {{< TransferCFT/axwayvariablesComponentShortName  >}} commands and configuration concepts, you can modify the model attributes, such as the file name, translation, compression, end-of-transfer scripts, and so on.
 
 - When sending, the CFTSEND ID describes the characteristics of the local file to send
 - When receiving, the CFTRECV ID describes the characteristics of the file to receive locally
@@ -136,7 +136,7 @@ Application to
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} to application:
 
-- An end- of- transfer
+- An end-of-transfer
     or transfer error procedure is activated
 - A log file
     or statistics file switching procedure is activated
@@ -175,7 +175,7 @@ CFTSEND template object, used to specify the default values for:
     of the file to send to the partner
 - The actions to
     perform locally during and after a transfer (translation, compression,
-    call to a user EXIT, an end- of- transfer procedure...)
+    call to a user EXIT, an end-of-transfer procedure...)
 - An authorized time
     slot and default user associated with the transfers
 
@@ -190,6 +190,6 @@ CFTRECV template object, used to specify the default values for:
     name and local physical characteristics of the file to receive
 - Define the default
     actions to perform locally during and after the transfer (translation,
-    compression, call to a user EXIT, an end- of- transfer procedure...)
+    compression, call to a user EXIT, an end-of-transfer procedure...)
 - Authorize the default
     time slot and default user associated with the transfers

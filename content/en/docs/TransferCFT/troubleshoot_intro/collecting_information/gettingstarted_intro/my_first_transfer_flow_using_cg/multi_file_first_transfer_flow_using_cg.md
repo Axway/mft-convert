@@ -2,9 +2,10 @@
 title: "Create a flow to transfer multiple files"
 linkTitle: "Create a flow to transfer multiple files"
 weight: 300
---- This flow allows you to send multiple files to a defined application. In this scenario, the Store_66 application sends several files to the MainOffice target.
+---This flow allows you to send multiple files to a defined application. In this scenario, the Store_66 application sends several files to the MainOffice target.
 
 ![](/Images/TransferCFT/TransferCFT_Multiple_send_w_CG.png)
+
 
 |   | Task  | Description  | Details  |
 | --- | --- | --- | --- |

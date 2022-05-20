@@ -1,5 +1,5 @@
 ---
-    title: "Monitoring"
+title: "Monitoring"
 linkTitle: "Monitoring"
 weight: 170
 ---## Monitoring Transfer CFT with Sentinel

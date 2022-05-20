@@ -2,7 +2,8 @@
 title: "Transfer CFT z/OS files "
 linkTitle: "Transfer CFT z/OS files list"
 weight: 370
---- The Transfer CFT z/OS file types are listed and defined below.
+---The Transfer CFT z/OS file types are listed and defined below.
+
 
 | File  | Definition  | Note  | Grpaprm  | Grpdesk  | Grptrf  |
 | --- | --- | --- | --- | --- | --- |
@@ -47,6 +48,6 @@ weight: 370
 | Dist.COPY | Copy Cobol | Read | None | None | None |
 | Dist.SCR | - | Read | None | None | None |
 | Dist.UPLIB | Upload library | Read | None | None | None |
-| Dist.CNTL | Link- edit plan | Read | None | None | None |
+| Dist.CNTL | Link-edit plan | Read | None | None | None |
 | Dist.LOG | Installation product LOG | Read | None | None | None |
 

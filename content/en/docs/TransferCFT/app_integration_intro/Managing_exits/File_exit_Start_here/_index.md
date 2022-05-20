@@ -2,7 +2,7 @@
 title: "About File  exits"
 linkTitle: "File exit"
 weight: 300
---- This sub- book describes a file exit and how to use this exit.
+---This sub-book describes a file exit and how to use this exit.
 
 The file exit task enables you to take control at various stages in
 a file transfer. Nine topics in this section describe the stages in a file transfer. These are:

@@ -2,7 +2,7 @@
 title: "Frequently asked questions"
 linkTitle: "Frequently asked questions"
 weight: 280
---- This topic focuses on questions related to maximizing transfer volume and adapting the configuration settings to meet specific needs.
+---This topic focuses on questions related to maximizing transfer volume and adapting the configuration settings to meet specific needs.
 
 ****Q: Can I use a MAXTRANS value that is greater than MAXTASK value multiplied by the TRANTASK value?****
 
@@ -28,7 +28,7 @@ CFTI18I On 1000 authorized simultaneous transfer(s), 256 is(are) active
 
 **Answer** **1**: The "authorized simultaneous transfers" value comes from the license key, while the number of active transfers comes from the parameter MAXTRANS.
 
-**Answer** **2**: You can override the MAXTRANS value when starting {{< TransferCFT/axwayvariablesComponentLongName  >}} using the following parameter: cft.run.maxtrans (only when using cft start- and- wait)
+**Answer** **2**: You can override the MAXTRANS value when starting {{< TransferCFT/axwayvariablesComponentLongName  >}} using the following parameter: cft.run.maxtrans (only when using cft start-and-wait)
 
 **Fix**: Check and update the OS specific UCONF value to match the license key limit and appropriate MAXTRANS for simultaneous transfers.
 

@@ -2,7 +2,7 @@
 title: "Enable flows with multiple files"
 linkTitle: "Enable flows with multiple files"
 weight: 490
---- 1.  In this simple flow, select the Source.
+---1.  In this simple flow, select the Source.
 1. Select ****File properties****.
 1. Select ****Multiple files****.
 

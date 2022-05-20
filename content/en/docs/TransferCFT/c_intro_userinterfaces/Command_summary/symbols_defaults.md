@@ -2,7 +2,7 @@
 title: "Symbols, environmental variables, and the Transfer CFT profile "
 linkTitle: "Symbols, environmental variables, and the profile "
 weight: 140
---- This
+---This
 page describes the symbols, default values, and variables used by Transfer
 CFT that are specific to each operating system and comprises:
 
@@ -14,6 +14,7 @@ CFT that are specific to each operating system and comprises:
 
 ## Specific symbols
 
+
 | Description  | Windows  | Unix  | z/OS  | IBM i  | **OpenVMS  |
 | --- | --- | --- | --- | --- | --- |
 | Logical name prefix (the character used to specify an environmental variable)<br/> If the file name begins with this character, this is a logical name interpreted by Transfer CFT. | $  | $ or _  | x'5B'<br/> 285 = £<br/> 297 = $ | x'4E'<br/> 285 = +<br/> 297 = + | No specific character;<br/> logical names are<br/> processed transparently by RMS |
@@ -23,7 +24,9 @@ CFT that are specific to each operating system and comprises:
 | Indirection file name prefix<br/> Used in a group of files or for an indirection file.<br/> For example, FNAME=&lt;Indirection prefix&gt;file name | #  | @  | x'7B’<br/> 285 = #<br/> 297 = £ | x'B1'<br/> 285 = [<br/> 297 = # | Either # or @  |
 | Character introducing the path name of the FNAME parameter (CFTRECV) from which a tree structure is created.<br/> On Windows, for example, FNAME=pub\+dir1\dir2\ftest | +  | +  | +<br/> Limited to USS files | +<br/> Limited to HFS files | +  |
 
+
 ## Default files used by CFTUTIL
+
 
 | File | Default<br/> Windows | Unix | z/OS | IBM i | OpenVMS |
 | --- | --- | --- | --- | --- | --- |
@@ -36,14 +39,15 @@ CFT that are specific to each operating system and comprises:
 | Log file  | $CFTLOG  | $CFTLOG  | $CFTLOG  | +CFTLOG  | CFTLOG  |
 | PKI database file  | $CFTPKU  | $CFTPKU  | $CFTPKU  | +CFTPKU  | CFTPKU  |
 
+
 ## Setting the profile
 
 In order to run {{< TransferCFT/axwayvariablesComponentLongName  >}} components, you must execute the profile. When loading the Transfer CFT profile, files that are stored in the profile.d directory are also executed, and all defined environment variables are then available in the current environment. This enables you to use these variables in the Transfer CFT configuration or processing scripts.
 
 You can regenerate the profile after executing the profile from the runtime directory as follows:
 
-- Unix: cftruntime - p $CFTDIRINSTALL $CFTDIRRUNTIME
-- Windows: cftruntime %CFTDIRINSTALL% %CFTDIRRUNTIME% - profile
+- Unix: cftruntime -p $CFTDIRINSTALL $CFTDIRRUNTIME
+- Windows: cftruntime %CFTDIRINSTALL% %CFTDIRRUNTIME% -profile
 
 For other platforms, please refer to the operating specific installation guide.
 

@@ -2,11 +2,11 @@
 title: "Network  codes"
 linkTitle: "Network codes"
 weight: 360
---- ## NCR Common return code - Network interface
+---## NCR Common return code - Network interface
 
 The NCR code corresponds to the "cr" code returned by the
 network interface {{< TransferCFT/axwayvariablesComponentShortName  >}} functions, using
-the formula: ****ncr = - (cr+20)****
+the formula: ****ncr = -(cr+20)****
 
 Supply this value to Product Support for troubleshooting operations.
 
@@ -27,6 +27,7 @@ it concerns the "errno" variable provided by the TCP/IP resource.
 In this case, refer to the manufacturer's documentation for the meaning
 of this code.
 
+
 | Hexadecimal Code  | Decimal Code  | Meaning  |
 | --- | --- | --- |
 | 23a | 570 | Reception of a Define Resource request concerning an already registered resource |
@@ -36,11 +37,11 @@ of this code.
 | 244 | 580 | Cannot find an available port for the CFTTPRO polling socket |
 | 245 | 581 | Reply to a synchronous request of incorrect length |
 | 246 | 582 | CFTTPRO polling socket closed remotely during the TCP/IP server activation confirmation phase |
-| 247 | 583 | Time- out while waiting for TCP/IP server activation confirmation message |
-| 248 | 584 | Time- out while waiting for a synchronous request reply |
+| 247 | 583 | Time-out while waiting for TCP/IP server activation confirmation message |
+| 248 | 584 | Time-out while waiting for a synchronous request reply |
 | 249 | 585 | CFTTPRO polling socket closed by remote end during the synchronous request reply wait phase |
-| 26d | 621 | Invalid parameter received in response to a synchronous request (socket- based communication between CFTTCP and CFTTPRO) |
-| 26e | 622 | Invalid parameter received in response to a synchronous request (queue- based communication between CFTTCP and CFTTPRO) |
+| 26d | 621 | Invalid parameter received in response to a synchronous request (socket-based communication between CFTTCP and CFTTPRO) |
+| 26e | 622 | Invalid parameter received in response to a synchronous request (queue-based communication between CFTTCP and CFTTPRO) |
 | 26f | 623 | Flow control is active when it should not be |
 | 270 | 624 | Host identifier invalid in a Define Resource request |
 | 271 | 625 | Host identifier invalid in an Undefine Resource request |
@@ -49,7 +50,7 @@ of this code.
 | 274 | 628 | Host identifier invalid in a Register Request |
 | 275 | 629 | Unknown request type provided by CFTTPRO |
 | 276 | 630 | Define Resource request denied because maximum number of resources reached |
-| 280 | 640 | Time- out when establishing the outgoing connection |
+| 280 | 640 | Time-out when establishing the outgoing connection |
 | 2b2 | 690 | Remote polling closed during datagram transmission |
 | 2ef | 751 | Link socket between CFTTPRO and CFTTCPS closed (in the case of a socket connection) |
 | 2f0 | 752 | Socket closed by remote end (L1 byte write phase) |
@@ -75,7 +76,7 @@ of this code.
 | 3d6 | 982 | Undefine Resource request for an unknown resource |
 | 3de | 990 | Register Request request for an unknown polling port name |
 | 44e | 00001102 | Deregister Request request for an unknown reference: dynamic table allocation |
-| 44f | 00001103 | De- register Request request for an unknown reference: dynamic allocation of the data area |
+| 44f | 00001103 | De-register Request request for an unknown reference: dynamic allocation of the data area |
 | 450 | 00001104 | Deregister Request request for an unknown reference: attribute string incorrect |
 | 451 | 00001105 | Deregister Request request for an unknown reference: call parameter |
 | 452 | 00001106 | Deregister Request request for an unknown reference: manager not running |
@@ -259,10 +260,10 @@ of this code.
 | bba | 00003002 | Error during TCP/IP process creation: definition error |
 | bbb | 00003003 | Error during TCP/IP process creation: insufficient memory |
 | bc1 | 00003009 | Error during TCP/IP process creation: general problem |
-| c1d | 00003101 | Queue acquisition error (queue- based communication between CFTTCP and CFTTPRO): invalid queue |
-| c1e | 00003102 | Queue acquisition error (queue- based communication between CFTTCP and CFTTPRO): time- out |
-| c1f | 00003103 | Queue acquisition error (queue- based communication between CFTTCP and CFTTPRO): queue deleted |
-| c25 | 00003109 | Queue acquisition error (queue- based communication between CFTTCP and CFTTPRO): general problem |
+| c1d | 00003101 | Queue acquisition error (queue-based communication between CFTTCP and CFTTPRO): invalid queue |
+| c1e | 00003102 | Queue acquisition error (queue-based communication between CFTTCP and CFTTPRO): time-out |
+| c1f | 00003103 | Queue acquisition error (queue-based communication between CFTTCP and CFTTPRO): queue deleted |
+| c25 | 00003109 | Queue acquisition error (queue-based communication between CFTTCP and CFTTPRO): general problem |
 | c80 | 00003200 | CFTTCP initialization error (tmbeg) |
 | ce5 | 00003301 | CFTTCP initialization error (tmstat): incorrect task |
 | ced | 00003309 | CFTTCP initialization error (tmstat): general problem |

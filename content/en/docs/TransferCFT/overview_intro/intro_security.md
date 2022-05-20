@@ -2,7 +2,7 @@
 title: "Security  services "
 linkTitle: "Security services "
 weight: 150
---- Transfer CFT offers different types of security services in order to secure communication, protect data, and control user access:
+---Transfer CFT offers different types of security services in order to secure communication, protect data, and control user access:
 
 - Transport security
 - Access management

@@ -2,16 +2,16 @@
 title: "Post installation"
 linkTitle: "Post installation"
 weight: 170
---- ## Verify your installation
+---## Verify your installation
 
-You can check the installation log in the &lt;span class="code">&lt;code>&lt;installation directory>/install.log&lt;/code>&lt;/span> file. See the installation&lt;madcap:conditionaltext data- mc- conditions="axway_conditions.ScreenOnly"> &lt;a href="../../troubleshoot_registration">troubleshooting section&lt;/a>&lt;/madcap:conditionaltext> if you encounter problems with starting &lt;span class="mc- variable axway_variables.Component_Long_Name variable">Transfer CFT&lt;/span> or registering with &lt;span class="mc- variable suite_variables.Central_GovernanceName variable">Central Governance&lt;/span>.
+You can check the installation log in the &lt;span class="code">&lt;code>&lt;installation directory>/install.log&lt;/code>&lt;/span> file. See the installation&lt;madcap:conditionaltext data-mc-conditions="axway_conditions.ScreenOnly"> &lt;a href="../../troubleshoot_registration">troubleshooting section&lt;/a>&lt;/madcap:conditionaltext> if you encounter problems with starting &lt;span class="mc-variable axway_variables.Component_Long_Name variable">Transfer CFT&lt;/span> or registering with &lt;span class="mc-variable suite_variables.Central_GovernanceName variable">Central Governance&lt;/span>.
 &lt;/p>
 
 ### Installed directories
 
 When you install Transfer CFT, the `home` directory is created and populated under the `Transfer_CFT` installation directory. This `home `directory contains installation libraries, binaries, and templates. Do not store any personal files in the `home `directory, as they are erased during updates.
 
-### Installer- generated files
+### Installer-generated files
 
 During the installation, the Transfer CFT installer creates two files in the installation directory that are working files for the installer. Do not modify these files unless instructed to do so by Axway. While they are not used for Transfer CFT operations, they are necessary for installer functions such as upgrades.
 
@@ -20,7 +20,7 @@ During the installation, the Transfer CFT installer creates two files in the ins
 
 ## Standalone installations
 
-If you are not using {{< TransferCFT/suitevariablesTransferCFTName  >}} with {{< TransferCFT/suitevariablesCentralGovernanceName  >}}, you must provide a certificate to be able to use the {{< TransferCFT/suitevariablesTransferCFTName  >}} UI. . See [Using the web- based browser UI](../../../../c_intro_userinterfaces/web_copilot_ui#Connect2) page for details.
+If you are not using {{< TransferCFT/suitevariablesTransferCFTName  >}} with {{< TransferCFT/suitevariablesCentralGovernanceName  >}}, you must provide a certificate to be able to use the {{< TransferCFT/suitevariablesTransferCFTName  >}} UI. . See [Using the web-based browser UI](../../../../c_intro_userinterfaces/web_copilot_ui#Connect2) page for details.
 
 ## Register with {{< TransferCFT/suitevariablesCentralGovernanceName  >}}
 

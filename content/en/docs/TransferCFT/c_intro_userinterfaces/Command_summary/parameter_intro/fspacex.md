@@ -2,7 +2,7 @@
 title: "fspacex"
 linkTitle: "fspacex"
 weight: 1360
---- <span id="fspacex"></span>
+---<span id="fspacex"></span>
 
 ### fspacex
 
@@ -25,6 +25,7 @@ the FSPACEX does not need to be defined.<span id="FSPACEX_Table"></span>
 
 QQQ_QQQ_QQQ removed top row fspacex
 
+
 | OS  | PARM  | PART  | CAT  | COM  | LOG  | ACCNT  |
 | --- | --- | --- | --- | --- | --- | --- |
 | z/OS (MVS) | 50  | 100  | 0  | 0  | 50  | 50  |
@@ -32,5 +33,6 @@ QQQ_QQQ_QQQ removed top row fspacex
 | UNIX  | no  | no  | no  | no  | no  | no  |
 | VMS  | no  | no  | no  | no  | no  | no  |
 | Windows | no  | no  | no  | no  | no  | no  |
+
 
 [Return to Command index](../../)

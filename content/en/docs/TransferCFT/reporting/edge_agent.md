@@ -2,7 +2,7 @@
 title: "Implement the Edge Agent"
 linkTitle: "Implement the Edge Agent"
 weight: 200
---- This page describes how to configure the Edge Agent for AMPLIFY MFT implementations and configure {{< TransferCFT/headerfootervariableshflongproductname  >}} for the following use cases:
+---This page describes how to configure the Edge Agent for AMPLIFY MFT implementations and configure {{< TransferCFT/headerfootervariableshflongproductname  >}} for the following use cases:
 
 - Usage tracking only
 - Usage tracking and Sentinel monitoring
@@ -25,7 +25,7 @@ Perform the following steps on the Edge Agent for MFT implementations that use 
 
 1. Download the `AMPLIFY_Edge_Agent_MFT_<version>_configuration_<BNxxx>.zip `package from the [Axway Support Site](https://support.axway.com/).
 1. Extract the zip locally.
-1. Upload the `MFT- usage.json` file from the package to the `<Edge_Agent_install_dir>/aggregator/usage_tracking/``conf/agent/aggregation` directory.
+1. Upload the `MFT-usage.json` file from the package to the `<Edge_Agent_install_dir>/aggregator/usage_tracking/``conf/agent/aggregation` directory.
 1. Upload the `MFT.json` file from the package to the `<Edge_Agent_install_dir>/conf/agent/report` directory.
 1. Restart the Edge Agent. Refer to the [AMPLIFY Usage Metering and Reporting Guide](https://docs.axway.com/bundle/subusage_en).
 
@@ -44,7 +44,7 @@ In this use case, Transfer CFT sends the usage report directly to the Edge Agent
 Set the following `uconf `parameters to the Edge Agent values:
 
 - sentinel.trkipaddr: Edge Agent IP address
-- sentinel.trkipport: 8002 (by default, the non- SSL port for the Edge Agent)
+- sentinel.trkipport: 8002 (by default, the non-SSL port for the Edge Agent)
 - sentinel.xfb.use_ssl: No
 
 ### Usage tracking with the Edge Agent and monitoring with Sentinel

@@ -2,7 +2,7 @@
 title: "Migrate from Transfer CFT 2.7        "
 linkTitle: "Migrate from Transfer CFT 2.7.1"
 weight: 260
---- This section describes how to migrate Transfer CFT 2.7 to version {{< TransferCFT/PrimaryTransferCFTversionlong  >}}.
+---This section describes how to migrate Transfer CFT 2.7 to version {{< TransferCFT/PrimaryTransferCFTversionlong  >}}.
 
 > **Note**
 >
@@ -16,13 +16,13 @@ You can migrate the PARM, PART, IDF, other static configuration objects, and UCO
 1. Export your static configuration objects using the `CFTUTIL CFTEXT` command. Enter:
     &lt;/li>
 1. ```
-    CFTUTIL CFTEXT type=all, fout=cft- extract.conf
+    CFTUTIL CFTEXT type=all, fout=cft-extract.conf
     ```
-1. Open the extract configuration files, `cft- extract.conf`, and update the file paths with those of the new Transfer CFT {{< TransferCFT/PrimaryTransferCFTversionlong >}} installation.
+1. Open the extract configuration files, `cft-extract.conf`, and update the file paths with those of the new Transfer CFT {{< TransferCFT/PrimaryTransferCFTversionlong >}} installation.
 1. Load the new Transfer CFT {{< TransferCFT/PrimaryTransferCFTversionlong >}} environment.
 1. Import your static configuration objects using the `cftinit `command. Enter:  
     ```
-    cftinit cft- extract.conf
+    cftinit cft-extract.conf
     ```
 
 ## Migrate the PKI certificates
@@ -30,7 +30,7 @@ You can migrate the PARM, PART, IDF, other static configuration objects, and UCO
 1. Load the former Transfer CFT 2.7 environment.
 1. Export your PKI certificates using the command PKIUTIL PKIEXT. Enter:  
     ```
-    PKIUTIL PKIEXT fout=pki- extract.conf
+    PKIUTIL PKIEXT fout=pki-extract.conf
     ```
 1. Load the new Transfer CFT {{< TransferCFT/PrimaryTransferCFTversionlong >}} environment.
     &lt;/li>
@@ -48,7 +48,7 @@ You can migrate the PARM, PART, IDF, other static configuration objects, and UCO
     PKIUTIL <prefix_character><script_filename>
     ```
 1. ```
-    PKIUTIL @pki- extract.conf
+    PKIUTIL @pki-extract.conf
     ```
 
 ## Migrate the runtime environment

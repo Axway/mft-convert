@@ -2,7 +2,7 @@
 title: "Processing  accounting files"
 linkTitle: "Processing accounting files"
 weight: 240
---- You can write the statistical data for successful transfers to a file by defining the CFTACCNT type=file command as described in [Recording mode for statistical data](../../admin_intro/admin_config_commands/cftaccnt_concepts). You can then extract this data to use with other applications. The extracted data is available in C language for all platforms and in COBOL for z/OS and IBM i systems.
+---You can write the statistical data for successful transfers to a file by defining the CFTACCNT type=file command as described in [Recording mode for statistical data](../../admin_intro/admin_config_commands/cftaccnt_concepts). You can then extract this data to use with other applications. The extracted data is available in C language for all platforms and in COBOL for z/OS and IBM i systems.
 
 ## Delivered files
 
@@ -18,14 +18,16 @@ weight: 240
 
 Transfer CFT delivers a sample source written in C language called `exacct.c` as well as a compilation procedure, which is system dependent.
 
+
 | System  | File location  | Build command  |
 | --- | --- | --- |
 | UNIX  | &lt;install_dir&gt;/home/distrib/template/src/exit  | makefile  |
 | Windows  | &lt;install_dir&gt;\home\distrib\template\src\exit  | exit.mak  |
-| z/OS  | Distrib..SAMPLEC(EXACCT)  | Compilation: Runtime..INSTALL(I91APICP)<br/> Link- edit: Runtime..INSTALL(I92APILK) |
+| z/OS  | Distrib..SAMPLEC(EXACCT)  | Compilation: Runtime..INSTALL(I91APICP)<br/> Link-edit: Runtime..INSTALL(I92APILK) |
 | IBM i (IFS)  | &lt;install_dir&gt;/home/distrib/template/src/exit  | gmake  |
 | HP NonStop  | &lt;install_dir&gt;/home/distrib/template/src/exit  | makefile  |
-| OpenVMS  | D$CFT_INST:[DISTRIB.TEMPLATE.SRC.EXIT]  | Compilation and link- edit  |
+| OpenVMS  | D$CFT_INST:[DISTRIB.TEMPLATE.SRC.EXIT]  | Compilation and link-edit  |
+
 
 > **Note**
 >
@@ -99,14 +101,15 @@ All operating systems should have a resulting file similar to the following:
 
 ```
 ACCOUNT FILE
---- - - - - - - - - - Transfer id. IDT
+------------
+Transfer id. IDT
 B2508304
 Direct DIRECT = RECV
 Mode MODE = REQUESTER
 Type TYPE = FILE
-
+ 
 Item type DIFTYP = SINGLE
-
+ 
 Logic file identifier IDF = TEST
 Logic file network id NIDF = TEST
 Protocol identifier PROT = PESITSSL
@@ -114,7 +117,7 @@ File Name FNAME =
 \*recv/FTEST
 ...
 \*
-
+ 
 Receiver application RAPPL =
 \*
 Record format FRECFM = U

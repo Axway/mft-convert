@@ -2,7 +2,7 @@
 title: "Trace  functions in CFT Windows"
 linkTitle: "Trace functions"
 weight: 270
---- This topic introduces trace functions in Transfer CFT Windows. Trace
+---This topic introduces trace functions in Transfer CFT Windows. Trace
 functions are processes that concern the system and network sections of
 Transfer CFT. These functions do not concern the application traces implemented
 in common by all the existing Transfer CFT products and described in the
@@ -18,12 +18,14 @@ Transfer CFT/Windows products.
 Depending on the origin of the problem it has detected, these traces
 are recorded in one of the following files:
 
+
 | Name of the Trace file  | Source of the problem  |
 | --- | --- |
 | CFTSYSP.TRC  | Intermediate system section  |
 | CFTSYSS.TRC  | Specific Windows system section  |
 | CFTNET.TRC  | Network section  |
 | TCPCLI.TRC and TCPSRV.TRC  | TCP/IP network section  |
+
 
 By default Transfer CFT automatically generates these trace files in the folder:`runtime\run folder`
 

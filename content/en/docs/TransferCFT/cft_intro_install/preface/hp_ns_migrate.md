@@ -2,9 +2,9 @@
 title: "Migrate or upgrade Transfer CFT"
 linkTitle: "Migrate or upgrade Transfer CFT"
 weight: 220
---- This chapter is designed to assist administrators or users who are tasked with upgrading or migrating from an existing Transfer CFT version to Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}}.
+---This chapter is designed to assist administrators or users who are tasked with upgrading or migrating from an existing Transfer CFT version to Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}}.
 
-- Migrate](#Migrate): Use this procedure to migrate an existing Transfer CFT 2.3.2 installation
+- [Migrate](#Migrate): Use this procedure to migrate an existing Transfer CFT 2.3.2 installation
 - [Upgrade](#Upgrade): Use this procedure to automatically upgrade an existing Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber >}}
 
 <span id="Importan"></span>
@@ -14,7 +14,7 @@ weight: 220
 Before performing a migration or upgrade procedure, you must:
 
 - Update your Transfer CFT to the most recent service pack version.
-- Back up Transfer CFT.
+- Back up Transfer CFT.
 - Set the Transfer CFT profile.
 - Stop the existing version of Transfer CFT and the UI server.
 
@@ -92,7 +92,7 @@ CFTDEF  CFTHINI   $DATA00.moncfg.SECINI
 CFTDEF  CFTHPARM  $DATA00.monfiles.SECPARM
 CFTDEF  CFTHACT   $DATA00.monfiles.SECFRACT
 CFTDEF  CFTHOBJ   $DATA00.monfiles.SECFROBJ
-KW     [MANAGER](#MANAGER)   [NB- ATTACH- SET](#NB)
+KW     [MANAGER](#MANAGER)   [NB-ATTACH-SET](#NB)
 CFTBT    TACL     NBASCFTLI
 KW       PARM                  VAL
 TCPPARM  TCPIP^HOST^FILE       $SYSTEM.ZTCPIP.HOSTS
@@ -117,12 +117,12 @@ NONSTOP^PLIST^TEMP^FILE         $DATA00.montemp.PTMPLIST
 - <span id="PRI"></span>PRI: [cft.guardian.priority](../intro_os_features/hp_ns_batch#cft.guardian.priority)
 - <span id="CFTTERM"></span>CFTTERM is no longer supported.
 - <span id="parameters"></span>CFTDEF:
-    - Most parameters have become environment variables that are accessible under OSS.
-    - <span id="CFGSYS"></span>CFGSYS is deprecated.
-    - <span id="TRKCNF"></span>TRKCNF is replaced by the Sentinel configuration in UCONF.
-    - <span id="CFTXFB"></span>CFTXFB is deprecated.
+    -   Most parameters have become environment variables that are accessible under OSS.
+    -   <span id="CFGSYS"></span>CFGSYS is deprecated.
+    -   <span id="TRKCNF"></span>TRKCNF is replaced by the Sentinel configuration in UCONF.
+    -   <span id="CFTXFB"></span>CFTXFB is deprecated.
 - <span id="MANAGER"></span>MANAGER: TACL is the default manager.
-- <span id="NB"></span>NB- ATTACH- SET: [cft.guardian.netbatch.attachment_set](../intro_os_features/hp_ns_batch#cft.guardian.netbatch.attachment_set).
+- <span id="NB"></span>NB-ATTACH-SET: [cft.guardian.netbatch.attachment_set](../intro_os_features/hp_ns_batch#cft.guardian.netbatch.attachment_set).
 - <span id="X25PARAM"></span>X25PARAM is not supported.
 
 <span id="Upgrade"></span>
@@ -133,17 +133,18 @@ Before performing an upgrade be certain to review the section [Important informa
 
 ### Overview
 
-You can perform an upgrade by installing Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}} over an existing Transfer CFT 3.2.4 installation using the procedure described in [Install Transfer CFT . However, the installation directory `<installation_directory>` should point to the installation directory of the existing Transfer CFT 3.2.4 installation. You can then provide the same additional parameters.
+You can perform an upgrade by installing Transfer CFT {{< TransferCFT/axwayvariablesReleaseNumber  >}} over an existing Transfer CFT 3.2.4 installation using the procedure described in [Install Transfer CFT]() . However, the installation directory `<installation_directory>` should point to the installation directory of the existing Transfer CFT 3.2.4 installation. You can then provide the same additional parameters.
 
-The installation procedure upgrades Transfer CFT, where the configuration of the existing installation is exported, and is automatically re- imported after the upgrade.
+The installation procedure upgrades Transfer CFT, where the configuration of the existing installation is exported, and is automatically re-imported after the upgrade.
 
-### After auto- importing
+### After auto-importing
 
-The installation creates a new directory called `up- <version>` in the runtime directory. This directory stores all of the information used during the auto- import process. You can modify the extracted files and directory, and manually re- import this data at any time.
+The installation creates a new directory called `up-<version>` in the runtime directory. This directory stores all of the information used during the auto-import process. You can modify the extracted files and directory, and manually re-import this data at any time.
 
 ****Extracted data****
 
-The auto- import directory contains the following:
+The auto-import directory contains the following:
+
 
 | File  | Directory  | Description  |
 | --- | --- | --- |
@@ -153,6 +154,7 @@ The auto- import directory contains the following:
 | cftpki.cfg  |   | The PKI configuration that is applied to the new installation  |
 |   | PKI directory  | The extracted SSL certificates  |
 
+
 ## Client exits and applications
 
 The following rules apply to migrating client exits and client applications:
@@ -160,6 +162,6 @@ The following rules apply to migrating client exits and client applications:
 - The use of client exits and applications have not changed, but you must recompile the client programs to take into account the new data structure.
 - The new data structures are described in a DDL format, have the same name as in version 2.3.2, and are located in $volume.&lt;subversion>IH.
 
-<!- - - - >
+<!-- -->
 
 - Additionally, the C language definition derived from the DDL definition is also part of the packaging.

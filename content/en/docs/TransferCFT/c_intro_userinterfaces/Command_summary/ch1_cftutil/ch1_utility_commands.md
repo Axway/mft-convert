@@ -2,7 +2,7 @@
 title: "Utility commands"
 linkTitle: "Utility commands"
 weight: 240
---- This section describes the utility commands.
+---This section describes the utility commands.
 
 - Capture
 - Dump
@@ -23,11 +23,11 @@ CAPTURE FNAME = NAME,
 
 - NAME: Character string indicating the name of the output file. This file is a standard text file variable.
 - FACTION: Character string indicating the method of opening the output file. The possible values ​​for FACTION are:
-    - APPEND
-    - ERASE
-    - DELETE
+    -   APPEND
+    -   ERASE
+    -   DELETE
 - NNN: Number 0 to 255 as a mask. This number can hide some output screens.
-    - 128 displays only the messages from the PRINT command.
+    -   128 displays only the messages from the PRINT command.
 
 #### Example
 
@@ -63,14 +63,14 @@ DUMP NAME = name,
 - Fname: The explicit name of the file to display.
 - Mode: Display mode HEX, OCTAL or TEXT.
 - The following parameters can only display the contents of a file.
-    - Org: File organization.
-    - lrecl: Length of file record.
-    - Recm: Record file format.
-    - Srecnum: The registration number from which the file contents are posted.
-    - Erecnum: The registration number from which the display is stopped.
-    - Keypos: The key position in the record (only one organization indexed).
-    - Keylen: The key length (only for an indexed organization).
-    - Type: File type for one character. The file type is system- dependent.
+    -   Org: File organization.
+    -   lrecl: Length of file record.
+    -   Recm: Record file format.
+    -   Srecnum: The registration number from which the file contents are posted.
+    -   Erecnum: The registration number from which the display is stopped.
+    -   Keypos: The key position in the record (only one organization indexed).
+    -   Keylen: The key length (only for an indexed organization).
+    -   Type: File type for one character. The file type is system-dependent.
 
 #### Features
 

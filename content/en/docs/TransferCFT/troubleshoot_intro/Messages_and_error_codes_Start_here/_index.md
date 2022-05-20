@@ -2,7 +2,7 @@
 title: "Transfer CFT messages  and error codes"
 linkTitle: "Messages "
 weight: 250
---- This section lists the different types of messages that {{< TransferCFT/axwayvariablesComponentLongName  >}} generates, and corrective actions when applicable. It begins with this section, which describes message formats, severity, and additional conventions used in this documentation.
+---This section lists the different types of messages that {{< TransferCFT/axwayvariablesComponentLongName  >}} generates, and corrective actions when applicable. It begins with this section, which describes message formats, severity, and additional conventions used in this documentation.
 
 ## Message format
 
@@ -10,11 +10,13 @@ weight: 250
 
 {{< TransferCFT/axwayvariablesComponentShortName  >}} messages provide information on the status of the {{< TransferCFT/axwayvariablesComponentShortName  >}}. Messages have the general format and supporting information:
 
+
 | The message severity is displayed | CFTxxx: the actual message that is displayed on {{< TransferCFT/axwayvariablesComponentShortName  >}} |
 | --- | --- |
 | Explanation | The elements, such as variables, in the above message are detailed. |
 | Consequence | Description of what happens to the {{< TransferCFT/axwayvariablesComponentShortName  >}}, or lists corrective actions. |
 | Action  | If applicable, add corrective action here.  |
+
 
 <span id="Message_format"></span>
 
@@ -41,7 +43,7 @@ CFTXXX: fixed text message <variables>
 
 ### Auto documented messages
 
-Certain messages that are auto- documented, for example CFTA01I, CFTA02W, CFTA03E, CFTA04F, may not appear in this documentation. These messages are considered self- explanatory.
+Certain messages that are auto-documented, for example CFTA01I, CFTA02W, CFTA03E, CFTA04F, may not appear in this documentation. These messages are considered self-explanatory.
 
 ## Writing conventions
 
@@ -59,12 +61,13 @@ Where:
 
 ### Message source
 
+
 | Code  | Meaning  |
 | --- | --- |
 | C  | Catalog: Access to the catalog  |
 | E  | End: {{< TransferCFT/axwayvariablesComponentShortName  >}} shutdown phase  |
 | F  | File: Access to files  |
-| H  | External PeSIT: PeSIT protocol, non- SIT profile and CFT profile  |
+| H  | External PeSIT: PeSIT protocol, non-SIT profile and CFT profile  |
 | I  | Init: {{< TransferCFT/axwayvariablesComponentShortName  >}} initialization phase  |
 | N  | Network  |
 | P  | Parameter: Access to parameter files |
@@ -76,6 +79,7 @@ Where:
 | X  | Security: Security system (only in the log)  |
 | Y  | SSL: SSL protocol  |
 
+
 ### Sequence number
 
 The sequence number is an index characterizing the message within a given class.
@@ -84,6 +88,7 @@ The sequence number is an index characterizing the message within a given class.
 
 The severity code is described in the following table.
 
+
 | Code  | Indicates  |
 | --- | --- |
 | I  | Informational message only  |
@@ -91,18 +96,20 @@ The severity code is described in the following table.
 | E  | An error requiring correction (parameter setting or environment error)  |
 | F  | A serious system error requiring the intervention of Product Support  |
 
+
 ### Categories
 
 Transfer CFT messages belong to either a system or operating category:
 
 - Operating: Includes all messages related to transfers and CRON jobs.
-- System: Includes all internal messages, such as Transfer CFT start, stop, catalog, tasks, multi- node, and so on.
+- System: Includes all internal messages, such as Transfer CFT start, stop, catalog, tasks, multi-node, and so on.
 
 This applies to messages sent to the user defined in the notify parameter in CFTLOG object.
 
 ### Symbolic variables used in message text
 
 The table below lists the symbolic variables used in message text.
+
 
 | Code | Description |
 | --- | --- |

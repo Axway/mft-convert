@@ -2,7 +2,7 @@
 title: "Developing  exits"
 linkTitle: "Developing exits"
 weight: 270
---- This topic describes using exits
+---This topic describes using exits
 in Transfer CFT Windows. Every Transfer CFT is supplied
 with a toolkit that enables you to develop your own EXITs
 in C. This topic provides additional information
@@ -48,7 +48,7 @@ This section describes:
 - Exit list
 - Directory exits
 
-<!- - - - >
+<!-- -->
 
 - How to proceed
     when developing an exit
@@ -121,7 +121,7 @@ on condition that the file name for the selection criteria is *exitlist.txt.*
 
 ****Exit example****
 
-Exit- list
+Exit-list
 : on server
 
 `cftexit id      = exitl,`
@@ -142,7 +142,7 @@ Exit- list
 
 `mode = replace`
 
-****Exit- list remote partner side****
+****Exit-list remote partner side****
 
 `cftrecv id = texit,`
 
@@ -156,3 +156,4 @@ Exit- list
 
 `     mode = replace`
 
+ 

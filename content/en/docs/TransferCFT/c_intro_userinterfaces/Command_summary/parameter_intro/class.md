@@ -2,7 +2,7 @@
 title: "class"
 linkTitle: "class"
 weight: 400
---- <span id="class"></span>
+---<span id="class"></span>
 
 ### class
 

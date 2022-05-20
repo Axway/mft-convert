@@ -2,7 +2,7 @@
 title: "Submit CFTUTIL commands "
 linkTitle: "Submit CFTUTIL commands"
 weight: 250
---- Select **Option 1** then **Option 5** to start a CFTUTIL session.
+---Select **Option 1** then **Option 5** to start a CFTUTIL session.
 
 This enables you to submit CFTUTIL commands via the keyboard.
 

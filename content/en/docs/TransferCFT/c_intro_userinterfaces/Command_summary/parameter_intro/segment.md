@@ -2,7 +2,7 @@
 title: "segment"
 linkTitle: "segment"
 weight: 3140
---- <span id="segment"></span>
+---<span id="segment"></span>
 
 ## segment
 
@@ -22,7 +22,7 @@ This option is not negotiated.
     Remember that the size of NSDUs being sent is negotiated using the SRUSIZE
     parameter of CFTPROT.
 
-<!- - - - >
+<!-- -->
 
 - **YES** (default): "Systematic"
     segmentation, which is implemented by {{< TransferCFT/suitevariablesTransferCFTName >}} to complete a "data unit" (NSDU).
@@ -40,3 +40,4 @@ parameter.
 
 [Return to Command index](../../)
 
+ 

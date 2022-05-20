@@ -2,13 +2,13 @@
 title: "Update, upgrade, or migrate"
 linkTitle: "Update, upgrade or migrate "
 weight: 120
---- This section is designed to assist administrators or users who are tasked with updating {{< TransferCFT/suitevariablesTransferCFTName  >}}, or upgrading or migrating from an existing {{< TransferCFT/axwayvariablesComponentShortName  >}} version to {{< TransferCFT/axwayvariablesComponentShortName  >}} {{< TransferCFT/axwayvariablesComponentVersion  >}}.
+---This section is designed to assist administrators or users who are tasked with updating {{< TransferCFT/suitevariablesTransferCFTName  >}}, or upgrading or migrating from an existing {{< TransferCFT/axwayvariablesComponentShortName  >}} version to {{< TransferCFT/axwayvariablesComponentShortName  >}} {{< TransferCFT/axwayvariablesComponentVersion  >}}.
 
 ## Updates versus upgrade or migrate
 
 ### About updates
 
-An update brings Transfer CFT up- to- date with a patch or service pack offering fixes and minor enhancements. For example, you can update a Transfer CFT 3.1.3 SP3 to Transfer CFT 3.1.3 SP8. See [Updating Transfer CFT](update_cft_unix).
+An update brings Transfer CFT up-to-date with a patch or service pack offering fixes and minor enhancements. For example, you can update a Transfer CFT 3.1.3 SP3 to Transfer CFT 3.1.3 SP8. See [Updating Transfer CFT](update_cft_unix).
 
 ### About upgrades
 
@@ -60,7 +60,7 @@ Central governance allows you to update to the latest Transfer CFT Service Pack 
 
 ## Prerequisites
 
-Important information before performing an upgrade or install auto- import procedure:
+Important information before performing an upgrade or install auto-import procedure:
 
 - You must update your {{< TransferCFT/axwayvariablesComponentShortName >}} to the most recent service pack version.
 - For {{< TransferCFT/axwayvariablesComponentLongName >}} versions lower than 3.4, upgrade the {{< TransferCFT/axwayvariablesCompanyName >}} Installer to {{< TransferCFT/PrimaryInstallerversion >}} (or higher) prior to upgrading your {{< TransferCFT/axwayvariablesComponentShortName >}} {{< TransferCFT/PrimaryTransferCFTversionlong >}}.

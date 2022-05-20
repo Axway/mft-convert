@@ -2,7 +2,7 @@
 title: "concat"
 linkTitle: "concat"
 weight: 480
---- <span id="concat"></span>
+---<span id="concat"></span>
 
 ### concat
 

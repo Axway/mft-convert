@@ -2,7 +2,7 @@
 title: "ctrlpart"
 linkTitle: "ctrlpart"
 weight: 520
---- <span id="ctrlpart"></span>
+---<span id="ctrlpart"></span>
 
 ### ctrlpart
 
@@ -19,5 +19,7 @@ Optional parameter that is relevant only in server mode. When a transfer is init
 - SPART
 
 CFTT15E NPART=&part _ Not found
+
+ 
 
 [Return to Command index](../../)

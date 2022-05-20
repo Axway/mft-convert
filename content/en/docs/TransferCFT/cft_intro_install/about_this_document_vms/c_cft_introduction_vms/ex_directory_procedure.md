@@ -2,9 +2,10 @@
 title: "Transfer CFT internal datafile directory"
 linkTitle: "Installed directories"
 weight: 200
---- Logical name CFT_DAT points to D$CFT:[CFT.RUNTIME.DATA] directory.
+---Logical name CFT_DAT points to D$CFT:[CFT.RUNTIME.DATA] directory.
 
 It contains the internal datafile files used by Transfer CFT.
+
 
 | File | Contents |
 | --- | --- |
@@ -15,6 +16,7 @@ It contains the internal datafile files used by Transfer CFT.
 | CFTKEY.PARM  | This file contains the CFT license key  |
 | SEND.DIR  | Directory with default file (sample) to send when it is not specified.  |
 | RECV.DIR  | Default directory to receive the transferred files.  |
+
 
 ### X.509 certificate directory
 
@@ -28,6 +30,7 @@ Logical name CFT_LOG points to D$CFT:[CFT.RUNTIME.LOG] directory.
 
 It stores Transfer CFT log files.
 
+
 | File | Contents |
 | --- | --- |
 | CFTLOG.LOG | CFT LOG file.<br /> This file is not supplied. It is created by CFTUTIL in the CFTDAT procedure. |
@@ -38,16 +41,19 @@ It stores Transfer CFT log files.
 | COPSMNG.LOG  | Log of Copilot task.  |
 | TRKTRACE.LOG  | Log of Sentinel task.  |
 
+
 ### Files to send directory
 
 The D$CFT:[CFT.CFTSEND] => CFT_SEND directory used to store the files to be sent in the sample configurations.
 
 `D$CFT:[CFT.CFTSEND] => CFT_SEND directory         </code></p>`
 
+
 | File | Contents |
 | --- | --- |
 | TEST.SND | Variable sequential file. |
 | FIXED.SND | Fixed sequential file. |
+
 
 ### Rebuild Transfer CFT directory
 

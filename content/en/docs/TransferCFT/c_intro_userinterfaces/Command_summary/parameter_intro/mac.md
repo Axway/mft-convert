@@ -2,7 +2,7 @@
 title: "mac"
 linkTitle: "mac"
 weight: 1870
---- ### mac
+---### mac
 
 #### CFTFILE, PKIFILE, CFTINIT
 
@@ -35,11 +35,11 @@ PKIUTIL PKIFILE FNAME=<database_file>, MODE=CREATE, MAC=NO
 You can implement integrity control while performing the `cftinit `command as follows:
 
 ```
-cftinit [- check] [- mac=yes&#124;no] - c (- common) [filename] [filename] [...]
+cftinit [-check] [-mac=yes&#124;no] -c (-common) [filename] [filename] [...]
 ```
 
-Or, in multi- node:
+Or, in multi-node:
 
 ```
-cftinit [- check] [- mac=yes&#124;no] - n (- node) <node_id>
+cftinit [-check] [-mac=yes&#124;no] -n (-node) <node_id>
 ```

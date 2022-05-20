@@ -1,14 +1,15 @@
 ---
-title: "Unix- specific  values"
+title: "Unix-specific  values"
 linkTitle: "Unix specifics"
 weight: 330
---- This topic summarizes {{< TransferCFT/axwayvariablesComponentShortName  >}} characteristics that differ from
+---This topic summarizes {{< TransferCFT/axwayvariablesComponentShortName  >}} characteristics that differ from
 other operating systems:
 
 - specific values
 - default files
 
 ## Specific values tables
+
 
 | Notation  | Object  | Value  |
 | --- | --- | --- |
@@ -19,7 +20,9 @@ other operating systems:
 | char_directory  | Character introduced in the path name of the FNAME parameter (CFTRECV) from which a tree structure can be created  | +  |
 | file_symb  | Character introducing a file name sent to CFTUTIL in parameter form  | @  |
 
+
 ## Names of default files used by CFTUTIL
+
 
 | **Objet**  | ****Default name****  |
 | --- | --- |
